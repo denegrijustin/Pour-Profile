@@ -11328,6 +11328,7 @@
 
   function syncBreadcrumbLayers(map = homeMap) {
     if (!map || !map.getStyle) return;
+    registerFootprintIcon(map);
     const visible = isMapProfile() && state.breadcrumbVisible && state.breadcrumbTrail.length > 0;
     const geo = getBreadcrumbGeoJson();
     try {
@@ -11342,7 +11343,8 @@
           id: "elsie-breadcrumb-line",
           type: "line",
           source: "elsie-breadcrumb-line",
-          paint: { "line-color": "#6b4f3a", "line-width": 2, "line-opacity": 0.45, "line-dasharray": [2, 3] }
+          layout: { "line-cap": "round" },
+          paint: { "line-pattern": "elsie-footprint", "line-width": 22, "line-opacity": 0.9 }
         }, map.getLayer("home-clusters") ? "home-clusters" : undefined);
         map.addSource("elsie-breadcrumb-steps", { type: "geojson", data: geo.points });
         map.addLayer({
@@ -11350,10 +11352,10 @@
           type: "circle",
           source: "elsie-breadcrumb-steps",
           paint: {
-            "circle-color": "#6b4f3a",
-            "circle-radius": ["case", ["==", ["get", "rank"], 0], 9, 5],
-            "circle-stroke-width": 2,
-            "circle-stroke-color": "#fffdf7"
+            "circle-color": "#ff2fb3",
+            "circle-radius": ["case", ["==", ["get", "rank"], 0], 12, 8],
+            "circle-stroke-width": 3,
+            "circle-stroke-color": "#141414"
           }
         });
         map.on("click", "elsie-breadcrumb-steps", (event) => {
