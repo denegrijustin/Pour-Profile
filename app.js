@@ -11331,7 +11331,11 @@
     const geo = getBreadcrumbGeoJson();
     try {
       if (!map.getSource("elsie-breadcrumb-line")) {
-        if (!map.isStyleLoaded || !map.isStyleLoaded()) return;
+        if (!map.isStyleLoaded || !map.isStyleLoaded()) {
+          // Style isn't ready yet: retry once it is, instead of silently never creating the layer.
+          if (map.once) map.once("idle", () => syncBreadcrumbLayers(map));
+          return;
+        }
         map.addSource("elsie-breadcrumb-line", { type: "geojson", data: geo.line });
         map.addLayer({
           id: "elsie-breadcrumb-line",

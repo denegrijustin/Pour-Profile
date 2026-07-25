@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v127-65mph-eta";
+const CACHE_NAME = "elskatemm-trip-v128-footprint-style-load-retry";
 const CORE_ASSETS = [
   "/",
   "/index.html",
