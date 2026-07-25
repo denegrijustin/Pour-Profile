@@ -11630,7 +11630,7 @@
 
   function elsieEtaPillText() {
     if (isElsieIslandMode()) {
-      return `<b>Bois Blanc</b><span>Island mode</span><em>On Island</em>`;
+      return `<em>On Island</em>`;
     }
     const target = getActiveTripTarget();
     const route = currentRouteResult();

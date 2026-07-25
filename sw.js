@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v138-island-default-compact-cards";
+const CACHE_NAME = "elskatemm-trip-v139-simplify-pill-fix-overlap";
 const CORE_ASSETS = [
   "/",
   "/index.html",
