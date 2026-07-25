@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v137-controls-to-top-verified";
+const CACHE_NAME = "elskatemm-trip-v138-island-default-compact-cards";
 const CORE_ASSETS = [
   "/",
   "/index.html",

@@ -2397,22 +2397,26 @@ body.elsie-map-active #bottomDrawer { display: none; }
 /* Island mode focus card, per profile */
 .elsie-island-focus {
   margin-top: 6px;
-  padding: 10px 12px;
-  border-radius: 14px;
+  padding: 6px 8px;
+  border-radius: 10px;
   border: 2px solid #10265c;
   background: #fffdf7;
-  max-width: 320px;
-  font-size: 0.82rem;
+  max-width: 190px;
+  font-size: 0.66rem;
+  line-height: 1.25;
 }
-.elsie-island-focus strong { display: block; margin-bottom: 3px; }
+.elsie-island-focus strong { display: block; margin-bottom: 2px; font-size: 0.72rem; }
 .elsie-island-focus button {
-  margin-top: 6px;
+  margin-top: 4px;
   border: 2px solid #10265c;
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 3px 8px;
   background: #fffdf7;
   font-weight: 700;
+  font-size: 0.64rem;
 }
+.elsie-island-focus .jules-ispy-grid { grid-template-columns: repeat(4, minmax(32px, 1fr)); gap: 4px; }
+.elsie-island-focus .jules-ispy-item { font-size: 1rem; padding: 4px 2px; }
 .elsie-island-focus--elsie { background: #10171f; color: #e8e8e8; border-color: #000; }
 .elsie-island-focus--katrina { background: #f3e9d2; }
 .elsie-island-focus--emma { background: #eaf3ff; }

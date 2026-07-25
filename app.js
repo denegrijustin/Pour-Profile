@@ -5842,6 +5842,12 @@
   ];
   const julesFlow = ["Captain Today", "Weather", "Ferry / Boats", "Big Machines", "Stars", "Badges", "Photos", "Done / Next choice"];
 
+  // Manual day/island phase-advance buttons: the underlying logic stays fully intact and working,
+  // but the buttons themselves are hidden from the UI until explicitly asked for again (the family
+  // is already confirmed on the island as of this build, so there's nothing to manually advance
+  // right now). Flip this back to true to re-show them.
+  const MANUAL_PHASE_CONTROLS_VISIBLE = false;
+
   function day1SeedBreadcrumbs() {
     const DAY1_ROUTE = [
       { lat: 38.8814, lon: -94.8191, label: "Home", time: "2026-07-31T08:00:00-05:00" },
@@ -5867,8 +5873,8 @@
 
   function defaultState() {
     return {
-      phase: "pretrip",
-      phaseUpdatedAt: 0,
+      phase: "island",
+      phaseUpdatedAt: Date.now(),
       progress: 0,
       returnProgress: 0,
       profile: "elsie",
@@ -7607,9 +7613,9 @@
     return `
       <section id="elsieRouteTracker" class="elsie-route-tracker" aria-label="Elsie route and ETA">
         <div class="elsie-route-heading"><span>NEXT: ${escapeHtml(target.label)}</span><b>${status}</b></div>
-        ${state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance elsie-island-arrive" data-arrive-island>\ud83c\udfdd\ufe0f We're on Bois Blanc Island now</button>` : ""}
-        ${state.tripLeg !== "day2" && state.tripLeg !== "return" && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-advance-day2>We're done with Day 1 \u2192 show Day 2 route</button>` : ""}
-        ${(state.tripLeg === "day2" || selectedDayDate() === "2026-08-01") && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-reset-day>Back to Day 1</button>` : ""}
+        ${MANUAL_PHASE_CONTROLS_VISIBLE && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance elsie-island-arrive" data-arrive-island>\ud83c\udfdd\ufe0f We're on Bois Blanc Island now</button>` : ""}
+        ${MANUAL_PHASE_CONTROLS_VISIBLE && state.tripLeg !== "day2" && state.tripLeg !== "return" && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-advance-day2>We're done with Day 1 \u2192 show Day 2 route</button>` : ""}
+        ${MANUAL_PHASE_CONTROLS_VISIBLE && (state.tripLeg === "day2" || selectedDayDate() === "2026-08-01") && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-reset-day>Back to Day 1</button>` : ""}
         <div class="elsie-route-metrics" aria-live="polite"><strong>${formatRouteDuration(route.durationSeconds)}</strong><span>${Number(miles || 0).toLocaleString()} miles</span></div>
         <p>${routeArrivalText(route, target)}</p>
         <div class="elsie-progress" role="progressbar" aria-label="Active route progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(progress)}"><span style="width:${progress}%"></span></div>
