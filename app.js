@@ -11348,7 +11348,6 @@
           id: "elsie-breadcrumb-steps",
           type: "symbol",
           source: "elsie-breadcrumb-steps",
-          filter: ["<=", ["get", "rank"], ["step", ["zoom"], 1, 7, 2, 10, 3]],
           layout: {
             "icon-image": "elsie-footprint",
             "icon-size": ["case", ["==", ["get", "rank"], 0], 0.5, 0.32],
