@@ -11326,7 +11326,6 @@
 
   function syncBreadcrumbLayers(map = homeMap) {
     if (!map || !map.getStyle) return;
-    registerFootprintIcon(map);
     const visible = isMapProfile() && state.breadcrumbVisible && state.breadcrumbTrail.length > 0;
     const geo = getBreadcrumbGeoJson();
     try {
@@ -11346,13 +11345,13 @@
         map.addSource("elsie-breadcrumb-steps", { type: "geojson", data: geo.points });
         map.addLayer({
           id: "elsie-breadcrumb-steps",
-          type: "symbol",
+          type: "circle",
           source: "elsie-breadcrumb-steps",
-          layout: {
-            "icon-image": "elsie-footprint",
-            "icon-size": ["case", ["==", ["get", "rank"], 0], 0.5, 0.32],
-            "icon-allow-overlap": true,
-            "icon-ignore-placement": true
+          paint: {
+            "circle-color": "#6b4f3a",
+            "circle-radius": ["case", ["==", ["get", "rank"], 0], 9, 5],
+            "circle-stroke-width": 2,
+            "circle-stroke-color": "#fffdf7"
           }
         });
         map.on("click", "elsie-breadcrumb-steps", (event) => {

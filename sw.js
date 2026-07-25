@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v129-remove-footprint-zoom-filter";
+const CACHE_NAME = "elskatemm-trip-v130-footprint-circle-fallback";
 const CORE_ASSETS = [
   "/",
   "/index.html",
