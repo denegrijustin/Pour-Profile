@@ -5956,6 +5956,7 @@
     state.badges ||= {};
     state.weather ||= {};
     if (!Array.isArray(state.breadcrumbTrail)) state.breadcrumbTrail = [];
+    if (!Number.isFinite(Number(state.islandActivityCount))) state.islandActivityCount = 0;
     if (!state.breadcrumbTrail.some((crumb) => crumb.id && crumb.id.startsWith("crumb-day1-"))) {
       state.breadcrumbTrail.push(...day1SeedBreadcrumbs());
     }
@@ -7589,6 +7590,7 @@
           <button type="button" data-refresh-route>Refresh ETA</button>
           <a href="${googleMapsNavigationUrl(target)}" target="_blank" rel="noopener">Navigate</a>
         </div>
+        ${state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance elsie-island-arrive" data-arrive-island>\ud83c\udfdd\ufe0f We're on Bois Blanc Island now</button>` : ""}
         ${state.tripLeg !== "day2" && state.tripLeg !== "return" && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-advance-day2>We're done with Day 1 \u2192 show Day 2 route</button>` : ""}
         ${(state.tripLeg === "day2" || selectedDayDate() === "2026-08-01") && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-reset-day>Back to Day 1</button>` : ""}
         ${selectedDayDate() === "2026-08-01" || state.tripLeg === "day2" ? `<label class="dunes-toggle"><input type="checkbox" data-include-dunes ${state.includeIndianaDunes ? "checked" : ""}> Include Indiana Dunes</label>` : ""}
@@ -11543,6 +11545,53 @@
     return isMapProfile() && (state.phase === "island" || state.phase === "complete");
   }
 
+  let julesCritterCount = 0;
+  const JULES_CRITTERS = ["\ud83e\udd8c", "\ud83e\udd83", "\ud83e\udd85", "\ud83e\udd9c"];
+
+  function renderIslandFocusCard() {
+    if (!isElsieIslandMode()) return "";
+    if (activeProfile === "elsie") {
+      return `<div class="elsie-island-focus elsie-island-focus--elsie">
+        <strong>\ud83d\udcf5 No Signal</strong>
+        <p>Bois Blanc has almost no cell service and no stoplights anywhere on the island. You are, genuinely, cut off from the rest of the world right now.</p>
+      </div>`;
+    }
+    if (activeProfile === "katrina") {
+      return `<div class="elsie-island-focus elsie-island-focus--katrina">
+        <strong>\ud83d\udcd6 Write the Island Chapter</strong>
+        <p>Every road trip story needs a quiet chapter. What's one small, specific moment from the island so far you'd want a future version of yourself to remember?</p>
+      </div>`;
+    }
+    if (activeProfile === "emma") {
+      const count = state.islandActivityCount || 0;
+      return `<div class="elsie-island-focus elsie-island-focus--emma">
+        <strong>\ud83c\udfc3 Island Athletics</strong>
+        <p>No stadiums out here \u2014 the island itself is the venue. Tap each time you swim, hike, bike, or fish.</p>
+        <button type="button" data-island-activity-tap>Log an activity (${count} so far)</button>
+      </div>`;
+    }
+    if (activeProfile === "eliette") {
+      return `<div class="elsie-island-focus elsie-island-focus--eliette">
+        <strong>\ud83e\ude99 Island Economy</strong>
+        <p>Everything on this island \u2014 every grocery, every tool, every part \u2014 arrives by ferry. There's no big supply chain here, just a small year-round community making do with what actually gets delivered.</p>
+      </div>`;
+    }
+    if (activeProfile === "jules") {
+      return `<div class="elsie-island-focus elsie-island-focus--jules">
+        <strong>\ud83e\udd8c Island Critter Hunt!</strong>
+        <p>Tap to spot island animals! Found: ${julesCritterCount}</p>
+        <div class="jules-ispy-grid">${JULES_CRITTERS.map((c, i) => `<button type="button" class="jules-ispy-item" data-jules-critter="${i}">${c}</button>`).join("")}</div>
+      </div>`;
+    }
+    if (activeProfile === "momdad") {
+      return `<div class="elsie-island-focus elsie-island-focus--momdad">
+        <strong>\u26f4\ufe0f Island Logistics</strong>
+        <p>Plaunt Transportation runs the ferry back to Cheboygan \u2014 confirm the return schedule before you need it. Cell service is minimal islandwide, so plan check-ins accordingly.</p>
+      </div>`;
+    }
+    return "";
+  }
+
   function elsieShortLabel(label) {
     return String(label || "").replace(/\s*overnight$/i, "").replace(/\s*ferry$/i, "").trim();
   }
@@ -11667,6 +11716,7 @@
         </div>
         <div class="elsie-float-top">
           <button type="button" id="elsieEtaPill" class="elsie-eta-pill" data-elsie-sheet="eta" aria-haspopup="dialog" aria-label="Route and ETA details">${elsieEtaPillText()}</button>
+          ${renderIslandFocusCard()}
         </div>
         <div class="elsie-float-right">
           <button type="button" class="elsie-map-fab ${state.radarEnabled ? "is-on" : ""}" data-elsie-sheet="radar" aria-haspopup="dialog" aria-label="Weather radar controls">🌦</button>
@@ -13647,6 +13697,30 @@
     if (target.dataset.refreshRoute !== undefined) {
       event.preventDefault();
       refreshActiveRoute(true);
+      return;
+    }
+    if (target.dataset.islandActivityTap !== undefined) {
+      event.preventDefault();
+      state.islandActivityCount = (state.islandActivityCount || 0) + 1;
+      saveState();
+      renderHomeMapPanel();
+      return;
+    }
+    const critter = target.closest("[data-jules-critter]");
+    if (critter) {
+      event.preventDefault();
+      julesCritterCount++;
+      renderHomeMapPanel();
+      return;
+    }
+    if (target.dataset.arriveIsland !== undefined) {
+      event.preventDefault();
+      state.phase = "island";
+      liveRouteResults = {};
+      saveState();
+      refreshElsieEtaPill();
+      renderElsieRouteTracker();
+      render();
       return;
     }
     if (target.dataset.advanceDay2 !== undefined) {
