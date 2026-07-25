@@ -6189,7 +6189,7 @@
 
   function plannedRouteResult(target = getActiveTripTarget()) {
     const miles = Number(target.plannedMiles || 0);
-    const hours = Number(target.plannedHours || (miles ? miles / 58 : 0));
+    const hours = Number(target.plannedHours || (miles ? miles / 65 : 0));
     return {
       distanceMeters: miles * 1609.344,
       durationSeconds: hours * 3600,
@@ -6216,9 +6216,10 @@
       const payload = await response.json();
       const route = payload.routes?.[0];
       if (!route) throw new Error("route missing");
+      const milesFor65 = route.distance / 1609.344;
       const normalized = {
         distanceMeters: route.distance,
-        durationSeconds: route.duration,
+        durationSeconds: (milesFor65 / 65) * 3600,
         trafficDurationSeconds: null,
         encodedPolyline: null,
         coordinates: route.geometry?.coordinates || [],
