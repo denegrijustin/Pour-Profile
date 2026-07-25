@@ -5971,6 +5971,23 @@
     ensureCollections();
     state.profile = activeProfile;
     try {
+      // Guard against a stale background tab overwriting newer breadcrumbs recorded by a
+      // more recently active tab: merge by id with whatever is currently on disk instead of
+      // blindly replacing it, so nobody's recorded points can be silently erased.
+      try {
+        const onDisk = JSON.parse(localStorage.getItem("tripState") || "null");
+        if (onDisk && Array.isArray(onDisk.breadcrumbTrail) && Array.isArray(state.breadcrumbTrail)) {
+          const seen = new Set(state.breadcrumbTrail.map((c) => c.id));
+          const merged = state.breadcrumbTrail.slice();
+          onDisk.breadcrumbTrail.forEach((crumb) => {
+            if (crumb && crumb.id && !seen.has(crumb.id)) {
+              merged.push(crumb);
+              seen.add(crumb.id);
+            }
+          });
+          state.breadcrumbTrail = merged.sort((a, b) => Date.parse(a.recordedAt || 0) - Date.parse(b.recordedAt || 0));
+        }
+      } catch { /* if on-disk state is unreadable, just proceed with what we have in memory */ }
       localStorage.setItem("tripState", JSON.stringify(state));
       state.storageWarning = "";
     } catch {

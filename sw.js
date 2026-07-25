@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v134-island-mode-focus";
+const CACHE_NAME = "elskatemm-trip-v135-breadcrumb-merge-on-save";
 const CORE_ASSETS = [
   "/",
   "/index.html",
