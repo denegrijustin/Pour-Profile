@@ -6257,24 +6257,43 @@
     return "day1";
   }
 
+  function dropPassedWaypoints(waypoints) {
+    const point = state.lastPosition;
+    if (!point || !waypoints.length) return waypoints;
+    const target = getActiveTripTarget();
+    const distToTarget = haversineMiles(point, { lat: target.lat, lon: target.lon });
+    return waypoints.filter((wp) => {
+      const distToWaypoint = haversineMiles(point, wp);
+      // If we're already closer to the destination than to this waypoint, we've passed it —
+      // routing through it now would mean backtracking, so drop it.
+      return distToWaypoint <= distToTarget + 15; // small buffer so we don't drop a waypoint just ahead
+    });
+  }
+
   function activeLegWaypoints() {
     const day = selectedDayDate();
     const stops = data.route.coordinates;
+    let waypoints;
     if (state.phase === "return" || day === "2026-08-08" || state.tripLeg === "return") {
-      return [{ lat: stops.merrillville.lat, lon: stops.merrillville.lon }];
-    }
-    if (state.phase === "island" || state.phase === "complete") return [];
-    if (day === "2026-08-01" || state.tripLeg === "day2") {
-      if (state.includeIndianaDunes && !state.completedStops["indiana-dunes"]) return [];
-      return [
-        { lat: stops.grandRapids.lat, lon: stops.grandRapids.lon },
-        { lat: stops.grayling.lat, lon: stops.grayling.lon }
+      waypoints = [{ lat: stops.merrillville.lat, lon: stops.merrillville.lon }];
+    } else if (state.phase === "island" || state.phase === "complete") {
+      waypoints = [];
+    } else if (day === "2026-08-01" || state.tripLeg === "day2") {
+      if (state.includeIndianaDunes && !state.completedStops["indiana-dunes"]) {
+        waypoints = [];
+      } else {
+        waypoints = [
+          { lat: stops.grandRapids.lat, lon: stops.grandRapids.lon },
+          { lat: stops.grayling.lat, lon: stops.grayling.lon }
+        ];
+      }
+    } else {
+      waypoints = [
+        { lat: stops.columbia.lat, lon: stops.columbia.lon },
+        { lat: stops.stLouis.lat, lon: stops.stLouis.lon }
       ];
     }
-    return [
-      { lat: stops.columbia.lat, lon: stops.columbia.lon },
-      { lat: stops.stLouis.lat, lon: stops.stLouis.lon }
-    ];
+    return dropPassedWaypoints(waypoints);
   }
 
   function refreshActiveRoute(force = false) {
@@ -11529,8 +11548,7 @@
     const route = currentRouteResult();
     const miles = route.distanceMeters ? Math.round(route.distanceMeters / 1609.344) : target.plannedMiles;
     const status = route.isFallback ? (route.source === "planned" ? "Planned" : "Cached") : route.isLive ? "Live" : "Approx";
-    const debugLine = `<div style="font-size:10px;color:#a00;background:#fff3f3;padding:2px 6px;border-radius:4px;margin-top:2px;">DEBUG — day: ${escapeHtml(selectedDayDate())} · GPS: ${escapeHtml(state.gpsStatus || "never set")} · last fix: ${state.lastPosition ? escapeHtml(new Date(state.lastPosition.updatedAt).toLocaleTimeString()) : "NEVER"} · source: ${escapeHtml(route.source || "none")}</div>`;
-    return `<b>${escapeHtml(elsieShortLabel(target.label))}</b><span>${formatRouteDuration(route.durationSeconds)} · ${Number(miles || 0).toLocaleString()} mi</span><em>${status}</em>${debugLine}`;
+    return `<b>${escapeHtml(elsieShortLabel(target.label))}</b><span>${formatRouteDuration(route.durationSeconds)} · ${Number(miles || 0).toLocaleString()} mi</span><em>${status}</em>`;
   }
 
   function elsieIslandActivities() {

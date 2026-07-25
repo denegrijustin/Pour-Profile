@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v124-temp-debug-line";
+const CACHE_NAME = "elskatemm-trip-v125-drop-passed-waypoints-fix";
 const CORE_ASSETS = [
   "/",
   "/index.html",
