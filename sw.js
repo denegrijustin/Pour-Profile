@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v132-footprint-line-pattern";
+const CACHE_NAME = "elskatemm-trip-v133-narrower-footprint-trail";
 const CORE_ASSETS = [
   "/",
   "/index.html",

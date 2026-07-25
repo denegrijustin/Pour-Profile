@@ -11344,7 +11344,7 @@
           type: "line",
           source: "elsie-breadcrumb-line",
           layout: { "line-cap": "round" },
-          paint: { "line-pattern": "elsie-footprint", "line-width": 22, "line-opacity": 0.9 }
+          paint: { "line-pattern": "elsie-footprint", "line-width": 11, "line-opacity": 0.95 }
         }, map.getLayer("home-clusters") ? "home-clusters" : undefined);
         map.addSource("elsie-breadcrumb-steps", { type: "geojson", data: geo.points });
         map.addLayer({
