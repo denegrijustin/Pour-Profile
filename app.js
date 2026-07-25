@@ -11610,8 +11610,7 @@
     }
     if (activeProfile === "jules") {
       return `<div class="elsie-island-focus elsie-island-focus--jules">
-        <strong>\ud83e\udd8c Island Critter Hunt!</strong>
-        <p>Tap to spot island animals! Found: ${julesCritterCount}</p>
+        <strong>\ud83e\udd8c Critter Hunt \u00b7 ${julesCritterCount}</strong>
         <div class="jules-ispy-grid">${JULES_CRITTERS.map((c, i) => `<button type="button" class="jules-ispy-item" data-jules-critter="${i}">${c}</button>`).join("")}</div>
       </div>`;
     }

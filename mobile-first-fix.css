@@ -2398,27 +2398,28 @@ body.elsie-map-active #bottomDrawer { display: none; }
 
 /* Island mode focus card, per profile */
 .elsie-island-focus {
-  margin-top: 6px;
-  padding: 6px 8px;
-  border-radius: 10px;
-  border: 2px solid #10265c;
-  background: #fffdf7;
-  max-width: 150px;
-  font-size: 0.66rem;
-  line-height: 1.25;
-}
-.elsie-island-focus strong { display: block; margin-bottom: 2px; font-size: 0.72rem; }
-.elsie-island-focus button {
   margin-top: 4px;
-  border: 2px solid #10265c;
+  padding: 4px 6px;
+  border-radius: 8px;
+  border: 1.5px solid #10265c;
+  background: #fffdf7;
+  max-width: 130px;
+  font-size: 0.56rem;
+  line-height: 1.15;
+}
+.elsie-island-focus strong { display: block; margin-bottom: 1px; font-size: 0.6rem; }
+.elsie-island-focus p { margin: 0; }
+.elsie-island-focus button {
+  margin-top: 2px;
+  border: 1.5px solid #10265c;
   border-radius: 999px;
-  padding: 3px 8px;
+  padding: 2px 6px;
   background: #fffdf7;
   font-weight: 700;
-  font-size: 0.64rem;
+  font-size: 0.54rem;
 }
-.elsie-island-focus .jules-ispy-grid { grid-template-columns: repeat(2, minmax(28px, 1fr)); gap: 4px; }
-.elsie-island-focus .jules-ispy-item { font-size: 0.9rem; padding: 3px 2px; }
+.elsie-island-focus .jules-ispy-grid { grid-template-columns: repeat(4, minmax(16px, 1fr)); gap: 2px; margin: 2px 0 0; }
+.elsie-island-focus .jules-ispy-item { font-size: 0.6rem; padding: 1px; line-height: 1; border-width: 1px; }
 .elsie-island-focus--elsie { background: #10171f; color: #e8e8e8; border-color: #000; }
 .elsie-island-focus--katrina { background: #f3e9d2; }
 .elsie-island-focus--emma { background: #eaf3ff; }
