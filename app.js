@@ -5956,7 +5956,7 @@
     state.badges ||= {};
     state.weather ||= {};
     if (!Array.isArray(state.breadcrumbTrail)) state.breadcrumbTrail = [];
-    if (!state.breadcrumbTrail.some((crumb) => crumb.tripLeg === "day1")) {
+    if (!state.breadcrumbTrail.some((crumb) => crumb.id && crumb.id.startsWith("crumb-day1-"))) {
       state.breadcrumbTrail.push(...day1SeedBreadcrumbs());
     }
     if (typeof state.breadcrumbVisible !== "boolean") state.breadcrumbVisible = true;
@@ -5995,10 +5995,15 @@
 
   function selectedDay() {
     const now = new Date();
-    const depart = new Date(data.dates.depart);
-    const dayMs = 24 * 60 * 60 * 1000;
-    const index = clamp(Math.floor((now - depart) / dayMs), 0, data.days.length - 1);
-    return data.days[index] || data.days[0];
+    const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+    const exactMatch = data.days.find((d) => d.date === todayStr);
+    if (exactMatch) return exactMatch;
+    // No exact calendar match: use the most recent day at or before today, clamped to the
+    // trip's actual date range (handles days before departure or after the trip ends).
+    const sorted = [...data.days].sort((a, b) => a.date.localeCompare(b.date));
+    if (todayStr < sorted[0].date) return sorted[0];
+    const pastDays = sorted.filter((d) => d.date <= todayStr);
+    return pastDays.length ? pastDays[pastDays.length - 1] : sorted[sorted.length - 1];
   }
 
   function selectedDayDate() {

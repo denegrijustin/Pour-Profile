@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v121-day1-historical-breadcrumbs";
+const CACHE_NAME = "elskatemm-trip-v122-day-detection-and-footprint-fix";
 const CORE_ASSETS = [
   "/",
   "/index.html",
