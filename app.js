@@ -11663,7 +11663,7 @@
         </div>
         <div class="elsie-float-right">
           <button type="button" class="elsie-map-fab ${state.radarEnabled ? "is-on" : ""}" data-elsie-sheet="radar" aria-haspopup="dialog" aria-label="Weather radar controls">🌦</button>
-          <button type="button" class="elsie-map-fab" data-elsie-sheet="breadcrumb" aria-haspopup="dialog" aria-label="Sasquatch trail controls">👣</button>
+          <button type="button" class="elsie-map-fab" data-elsie-sheet="breadcrumb" data-crumb-count="${state.breadcrumbTrail.length}" aria-haspopup="dialog" aria-label="Sasquatch trail controls, ${state.breadcrumbTrail.length} points recorded">👣</button>
           <button type="button" class="elsie-map-fab elsie-gps-fab" data-gps-locate aria-label="Find my location">📍</button>
           <button type="button" class="elsie-map-fab elsie-theme-fab" data-map-theme-toggle aria-label="Switch map to ${state.mapTheme === "dark" ? "light" : "dark"} mode">${state.mapTheme === "dark" ? "☀️" : "🌙"}</button>
           <button type="button" class="elsie-map-fab elsie-smoke-fab ${state.smokeEnabled ? "is-on" : ""}" data-smoke-toggle aria-pressed="${state.smokeEnabled}" aria-label="Smoke and haze layer ${state.smokeEnabled ? "on" : "off"}">💨</button>

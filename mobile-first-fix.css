@@ -2357,3 +2357,26 @@ body.elsie-map-active #bottomDrawer { display: none; }
 }
 .jules-memory-card.is-revealed { background: #fffdf7; }
 .jules-memory-card.is-matched { background: #a5eab9; }
+
+/* Footprint fab: visible count badge (diagnostic) */
+.elsie-map-fab[data-crumb-count] { position: relative; }
+.elsie-map-fab[data-crumb-count]::after {
+  content: attr(data-crumb-count);
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #6b4f3a;
+  color: #fffdf7;
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  border: 1.5px solid #fffdf7;
+}
+.elsie-map-fab[data-crumb-count="0"]::after {
+  background: #8a8a8a;
+}

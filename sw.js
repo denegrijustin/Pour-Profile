@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v125-drop-passed-waypoints-fix";
+const CACHE_NAME = "elskatemm-trip-v126-footprint-count-badge";
 const CORE_ASSETS = [
   "/",
   "/index.html",
