@@ -5842,6 +5842,29 @@
   ];
   const julesFlow = ["Captain Today", "Weather", "Ferry / Boats", "Big Machines", "Stars", "Badges", "Photos", "Done / Next choice"];
 
+  function day1SeedBreadcrumbs() {
+    const DAY1_ROUTE = [
+      { lat: 38.8814, lon: -94.8191, label: "Home", time: "2026-07-31T08:00:00-05:00" },
+      { lat: 38.9517, lon: -92.3341, label: "Columbia, MO", time: "2026-07-31T10:30:00-05:00" },
+      { lat: 38.6270, lon: -90.1994, label: "St. Louis, MO", time: "2026-07-31T12:30:00-05:00" },
+      { lat: 39.7817, lon: -89.6501, label: "Springfield, IL", time: "2026-07-31T15:00:00-05:00" },
+      { lat: 40.4842, lon: -88.9937, label: "Bloomington-Normal, IL", time: "2026-07-31T16:15:00-05:00" },
+      { lat: 40.7692, lon: -87.7320, label: "Watseka, IL", time: "2026-07-31T17:30:00-05:00" },
+      { lat: 41.4828, lon: -87.3328, label: "Merrillville, IN", time: "2026-07-31T19:30:00-05:00" }
+    ];
+    return DAY1_ROUTE.map((point) => ({
+      id: `crumb-day1-${point.lat}-${point.lon}`,
+      latitude: point.lat,
+      longitude: point.lon,
+      recordedAt: point.time,
+      tripLeg: "day1",
+      reason: "waypoint-arrival",
+      accuracy: null,
+      profile: "all",
+      label: point.label
+    }));
+  }
+
   function defaultState() {
     return {
       phase: "pretrip",
@@ -5875,7 +5898,7 @@
       actionMessage: "No action yet.",
       gpsStatus: "Off",
       trackingStatus: "Off",
-      breadcrumbTrail: [],
+      breadcrumbTrail: day1SeedBreadcrumbs(),
       breadcrumbVisible: true,
       radarEnabled: false,
       radarOpacity: 0.45,
@@ -5933,6 +5956,9 @@
     state.badges ||= {};
     state.weather ||= {};
     if (!Array.isArray(state.breadcrumbTrail)) state.breadcrumbTrail = [];
+    if (!state.breadcrumbTrail.some((crumb) => crumb.tripLeg === "day1")) {
+      state.breadcrumbTrail.push(...day1SeedBreadcrumbs());
+    }
     if (typeof state.breadcrumbVisible !== "boolean") state.breadcrumbVisible = true;
     if (typeof state.radarEnabled !== "boolean") state.radarEnabled = false;
     if (!Number.isFinite(Number(state.radarOpacity))) state.radarOpacity = 0.45;
