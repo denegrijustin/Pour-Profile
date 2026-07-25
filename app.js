@@ -11529,7 +11529,8 @@
     const route = currentRouteResult();
     const miles = route.distanceMeters ? Math.round(route.distanceMeters / 1609.344) : target.plannedMiles;
     const status = route.isFallback ? (route.source === "planned" ? "Planned" : "Cached") : route.isLive ? "Live" : "Approx";
-    return `<b>${escapeHtml(elsieShortLabel(target.label))}</b><span>${formatRouteDuration(route.durationSeconds)} · ${Number(miles || 0).toLocaleString()} mi</span><em>${status}</em>`;
+    const debugLine = `<div style="font-size:10px;color:#a00;background:#fff3f3;padding:2px 6px;border-radius:4px;margin-top:2px;">DEBUG — day: ${escapeHtml(selectedDayDate())} · GPS: ${escapeHtml(state.gpsStatus || "never set")} · last fix: ${state.lastPosition ? escapeHtml(new Date(state.lastPosition.updatedAt).toLocaleTimeString()) : "NEVER"} · source: ${escapeHtml(route.source || "none")}</div>`;
+    return `<b>${escapeHtml(elsieShortLabel(target.label))}</b><span>${formatRouteDuration(route.durationSeconds)} · ${Number(miles || 0).toLocaleString()} mi</span><em>${status}</em>${debugLine}`;
   }
 
   function elsieIslandActivities() {
