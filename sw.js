@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v136-phase-timestamp-protection";
+const CACHE_NAME = "elskatemm-trip-v137-controls-to-top-verified";
 const CORE_ASSETS = [
   "/",
   "/index.html",

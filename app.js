@@ -7607,6 +7607,9 @@
     return `
       <section id="elsieRouteTracker" class="elsie-route-tracker" aria-label="Elsie route and ETA">
         <div class="elsie-route-heading"><span>NEXT: ${escapeHtml(target.label)}</span><b>${status}</b></div>
+        ${state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance elsie-island-arrive" data-arrive-island>\ud83c\udfdd\ufe0f We're on Bois Blanc Island now</button>` : ""}
+        ${state.tripLeg !== "day2" && state.tripLeg !== "return" && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-advance-day2>We're done with Day 1 \u2192 show Day 2 route</button>` : ""}
+        ${(state.tripLeg === "day2" || selectedDayDate() === "2026-08-01") && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-reset-day>Back to Day 1</button>` : ""}
         <div class="elsie-route-metrics" aria-live="polite"><strong>${formatRouteDuration(route.durationSeconds)}</strong><span>${Number(miles || 0).toLocaleString()} miles</span></div>
         <p>${routeArrivalText(route, target)}</p>
         <div class="elsie-progress" role="progressbar" aria-label="Active route progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(progress)}"><span style="width:${progress}%"></span></div>
@@ -7616,9 +7619,6 @@
           <button type="button" data-refresh-route>Refresh ETA</button>
           <a href="${googleMapsNavigationUrl(target)}" target="_blank" rel="noopener">Navigate</a>
         </div>
-        ${state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance elsie-island-arrive" data-arrive-island>\ud83c\udfdd\ufe0f We're on Bois Blanc Island now</button>` : ""}
-        ${state.tripLeg !== "day2" && state.tripLeg !== "return" && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-advance-day2>We're done with Day 1 \u2192 show Day 2 route</button>` : ""}
-        ${(state.tripLeg === "day2" || selectedDayDate() === "2026-08-01") && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-reset-day>Back to Day 1</button>` : ""}
         ${selectedDayDate() === "2026-08-01" || state.tripLeg === "day2" ? `<label class="dunes-toggle"><input type="checkbox" data-include-dunes ${state.includeIndianaDunes ? "checked" : ""}> Include Indiana Dunes</label>` : ""}
       </section>`;
   }
