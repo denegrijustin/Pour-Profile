@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v135-breadcrumb-merge-on-save";
+const CACHE_NAME = "elskatemm-trip-v136-phase-timestamp-protection";
 const CORE_ASSETS = [
   "/",
   "/index.html",

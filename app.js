@@ -5868,6 +5868,7 @@
   function defaultState() {
     return {
       phase: "pretrip",
+      phaseUpdatedAt: 0,
       progress: 0,
       returnProgress: 0,
       profile: "elsie",
@@ -5986,6 +5987,14 @@
             }
           });
           state.breadcrumbTrail = merged.sort((a, b) => Date.parse(a.recordedAt || 0) - Date.parse(b.recordedAt || 0));
+        }
+        // A stale background tab may still be running with an older phase/tripLeg in memory.
+        // Whichever change happened most recently (by timestamp) wins, regardless of which
+        // tab is doing the saving right now.
+        if (onDisk && Number(onDisk.phaseUpdatedAt || 0) > Number(state.phaseUpdatedAt || 0)) {
+          state.phase = onDisk.phase;
+          state.tripLeg = onDisk.tripLeg;
+          state.phaseUpdatedAt = onDisk.phaseUpdatedAt;
         }
       } catch { /* if on-disk state is unreadable, just proceed with what we have in memory */ }
       localStorage.setItem("tripState", JSON.stringify(state));
@@ -13733,6 +13742,7 @@
     if (target.dataset.arriveIsland !== undefined) {
       event.preventDefault();
       state.phase = "island";
+      state.phaseUpdatedAt = Date.now();
       liveRouteResults = {};
       saveState();
       refreshElsieEtaPill();
@@ -13743,6 +13753,7 @@
     if (target.dataset.advanceDay2 !== undefined) {
       event.preventDefault();
       state.tripLeg = "day2";
+      state.phaseUpdatedAt = Date.now();
       liveRouteResults = {};
       state.initialLegDistanceMeters = null;
       saveState();
@@ -13754,6 +13765,7 @@
     if (target.dataset.resetDay !== undefined) {
       event.preventDefault();
       state.tripLeg = "day1";
+      state.phaseUpdatedAt = Date.now();
       liveRouteResults = {};
       state.initialLegDistanceMeters = null;
       saveState();
