@@ -11328,7 +11328,8 @@
           layout: {
             "icon-image": "elsie-footprint",
             "icon-size": ["case", ["==", ["get", "rank"], 0], 0.5, 0.32],
-            "icon-allow-overlap": false
+            "icon-allow-overlap": true,
+            "icon-ignore-placement": true
           }
         });
         map.on("click", "elsie-breadcrumb-steps", (event) => {

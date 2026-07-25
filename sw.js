@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v122-day-detection-and-footprint-fix";
+const CACHE_NAME = "elskatemm-trip-v123-footprint-overlap-culling-fix";
 const CORE_ASSETS = [
   "/",
   "/index.html",
