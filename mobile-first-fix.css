@@ -2380,3 +2380,16 @@ body.elsie-map-active #bottomDrawer { display: none; }
 .elsie-map-fab[data-crumb-count="0"]::after {
   background: #8a8a8a;
 }
+
+/* Manual day-advance control */
+.elsie-day-advance {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border: 2px solid #10265c;
+  border-radius: 12px;
+  background: #fffdf7;
+  font-weight: 700;
+  text-align: center;
+}

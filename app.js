@@ -7589,6 +7589,8 @@
           <button type="button" data-refresh-route>Refresh ETA</button>
           <a href="${googleMapsNavigationUrl(target)}" target="_blank" rel="noopener">Navigate</a>
         </div>
+        ${state.tripLeg !== "day2" && state.tripLeg !== "return" && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-advance-day2>We're done with Day 1 \u2192 show Day 2 route</button>` : ""}
+        ${(state.tripLeg === "day2" || selectedDayDate() === "2026-08-01") && state.phase !== "island" && state.phase !== "complete" ? `<button type="button" class="elsie-day-advance" data-reset-day>Back to Day 1</button>` : ""}
         ${selectedDayDate() === "2026-08-01" || state.tripLeg === "day2" ? `<label class="dunes-toggle"><input type="checkbox" data-include-dunes ${state.includeIndianaDunes ? "checked" : ""}> Include Indiana Dunes</label>` : ""}
       </section>`;
   }
@@ -13643,6 +13645,28 @@
     if (target.dataset.refreshRoute !== undefined) {
       event.preventDefault();
       refreshActiveRoute(true);
+      return;
+    }
+    if (target.dataset.advanceDay2 !== undefined) {
+      event.preventDefault();
+      state.tripLeg = "day2";
+      liveRouteResults = {};
+      state.initialLegDistanceMeters = null;
+      saveState();
+      refreshActiveRoute(true);
+      renderElsieRouteTracker();
+      refreshElsieEtaPill();
+      return;
+    }
+    if (target.dataset.resetDay !== undefined) {
+      event.preventDefault();
+      state.tripLeg = "day1";
+      liveRouteResults = {};
+      state.initialLegDistanceMeters = null;
+      saveState();
+      refreshActiveRoute(true);
+      renderElsieRouteTracker();
+      refreshElsieEtaPill();
       return;
     }
     if (target.dataset.toggleElsieRadar !== undefined) {
