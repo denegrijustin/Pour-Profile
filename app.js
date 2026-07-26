@@ -6199,7 +6199,14 @@
   }
 
   function attractionForName(name) {
-    return allAttractions().find((item) => item.name === name || item.title === name);
+    const shared = allAttractions().find((item) => item.name === name || item.title === name);
+    if (shared) return shared;
+    const dedicatedPools = [hauntedStops(), katrinaQuestStops(), emmaRouteStops(), julesRouteStops()];
+    for (const pool of dedicatedPools) {
+      const match = pool.find((item) => item.name === name || item.title === name);
+      if (match) return match;
+    }
+    return undefined;
   }
 
   function makeId(prefix = "item") {
@@ -6894,9 +6901,18 @@
     });
   }
 
+  function profileDedicatedStops(profile = activeProfile) {
+    if (profile === "elsie") return hauntedStops();
+    if (profile === "katrina") return katrinaQuestStops();
+    if (profile === "emma") return emmaRouteStops();
+    if (profile === "jules") return julesRouteStops();
+    return [];
+  }
+
   function relatedStopsForAdventureBadge(badge, limit = 12) {
     const pattern = new RegExp(badge.match, "i");
-    return allAttractions().filter((item) => pattern.test(`${item.title} ${item.category} ${item.routeSegment} ${item.summary} ${item.why}`)).slice(0, limit);
+    const pool = [...allAttractions(), ...profileDedicatedStops()];
+    return pool.filter((item) => pattern.test(`${item.title} ${item.category || ""} ${item.routeSegment || ""} ${item.summary || ""} ${item.why || ""}`)).slice(0, limit);
   }
 
   function adventureBadgeProgress(badge) {
@@ -11586,7 +11602,6 @@
     return isMapProfile() && (state.phase === "island" || state.phase === "complete");
   }
 
-  let julesCritterCount = 0;
   const JULES_CRITTERS = ["\ud83e\udd8c", "\ud83e\udd83", "\ud83e\udd85", "\ud83e\udd9c"];
 
   function renderIslandFocusCard() {
@@ -11619,7 +11634,7 @@
     }
     if (activeProfile === "jules") {
       return `<div class="elsie-island-focus elsie-island-focus--jules">
-        <strong>\ud83e\udd8c Critter Hunt \u00b7 ${julesCritterCount}</strong>
+        <strong>\ud83e\udd8c Critter Hunt \u00b7 ${(state.julesCritterCount || 0)}</strong>
         <div class="jules-ispy-grid">${JULES_CRITTERS.map((c, i) => `<button type="button" class="jules-ispy-item" data-jules-critter="${i}">${c}</button>`).join("")}</div>
       </div>`;
     }
@@ -13743,14 +13758,17 @@
       event.preventDefault();
       state.islandActivityCount = (state.islandActivityCount || 0) + 1;
       saveState();
-      renderHomeMapPanel();
+      const focusCard = document.querySelector(".elsie-island-focus");
+      if (focusCard) focusCard.outerHTML = renderIslandFocusCard();
       return;
     }
     const critter = target.closest("[data-jules-critter]");
     if (critter) {
       event.preventDefault();
-      julesCritterCount++;
-      renderHomeMapPanel();
+      state.julesCritterCount = (state.julesCritterCount || 0) + 1;
+      saveState();
+      const focusCard = document.querySelector(".elsie-island-focus");
+      if (focusCard) focusCard.outerHTML = renderIslandFocusCard();
       return;
     }
     if (target.dataset.arriveIsland !== undefined) {
