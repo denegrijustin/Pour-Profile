@@ -5963,6 +5963,15 @@
     state.badges ||= {};
     state.weather ||= {};
     if (!Array.isArray(state.breadcrumbTrail)) state.breadcrumbTrail = [];
+    // One-time forced correction: the family is confirmed on the island as of this build, so
+    // every device (even ones with existing saved state from earlier in the trip) gets moved
+    // there once, regardless of whatever phase they'd previously saved. After this runs once,
+    // it won't fire again, so it won't fight with any later manual phase change.
+    if (!state.appliedIslandForceV1) {
+      state.phase = "island";
+      state.phaseUpdatedAt = Date.now();
+      state.appliedIslandForceV1 = true;
+    }
     if (!Number.isFinite(Number(state.islandActivityCount))) state.islandActivityCount = 0;
     if (!state.breadcrumbTrail.some((crumb) => crumb.id && crumb.id.startsWith("crumb-day1-"))) {
       state.breadcrumbTrail.push(...day1SeedBreadcrumbs());
