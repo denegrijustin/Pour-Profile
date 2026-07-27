@@ -6325,7 +6325,13 @@
     const stops = data.route.coordinates;
     let waypoints;
     if (state.phase === "return" || day === "2026-08-08" || state.tripLeg === "return") {
-      waypoints = [{ lat: stops.merrillville.lat, lon: stops.merrillville.lon }];
+      waypoints = [
+        { lat: 45.8671, lon: -84.7273 },  // St. Ignace, MI (just north of the Mackinac Bridge)
+        { lat: 44.5013, lon: -88.0622 },  // Green Bay, WI (Lambeau Field)
+        { lat: 43.0747, lon: -89.3844 },  // Madison, WI
+        { lat: 42.5006, lon: -90.6646 },  // Dubuque, IA (Mississippi River crossing)
+        { lat: 41.5868, lon: -93.6250 }   // Des Moines, IA
+      ];
     } else if (state.phase === "island" || state.phase === "complete") {
       waypoints = [];
     } else if (day === "2026-08-01" || state.tripLeg === "day2") {
