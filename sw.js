@@ -1,4 +1,4 @@
-const CACHE_NAME = "elskatemm-trip-v142-jules-fixes";
+const CACHE_NAME = "elskatemm-trip-v143-return-route-up-wisconsin";
 const CORE_ASSETS = [
   "/",
   "/index.html",
