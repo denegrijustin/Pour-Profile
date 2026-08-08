@@ -1,10 +1,17 @@
 {
-  "name": "michigan-trip",
+  "name": "pour-profile",
   "main": "worker.js",
   "compatibility_date": "2026-05-30",
   "assets": {
     "binding": "ASSETS",
     "directory": "./dist",
     "not_found_handling": "single-page-application"
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "pour-profile-db",
+      "database_id": "ea0adeb6-f586-4984-a57a-4039a8ca9093"
+    }
+  ]
 }

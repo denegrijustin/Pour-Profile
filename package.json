@@ -1,7 +1,9 @@
 {
+  "name": "pour-profile",
   "scripts": {
-    "build": "mkdir -p dist && cp index.html styles.css mobile-first-fix.css app.js trip-data.js trip-stops.js haunted-stops.js emma-stops.js katrina-stops.js jules-stops.js jules-gps.png canada-wildfires.js jules-gps-f1.png family-gps-marker.png eliette-gps-jeep.png elsie-gps-photo.png emma-gps-agent.png golden-egg.png nasa-badge.png momdad-gps-photo.png italian-heritage-icon.png national-park-icon.png sasquatch-footprint.png island-deco-icon.png manifest.json sw.js icon.svg README.md dist/",
-    "deploy": "wrangler deploy"
+    "build": "mkdir -p dist && cp index.html styles.css app.js api.js ui.js spirit-taxonomy.js log-pour.js view-home.js view-spirits.js view-scan.js view-discover.js view-map.js view-profile.js view-bottle.js view-compare.js manifest.json sw.js icon.svg README.md dist/",
+    "deploy": "npm run build && wrangler deploy",
+    "db:migrate": "wrangler d1 execute pour-profile-db --remote --file=./migrations/0001_init.sql && wrangler d1 execute pour-profile-db --remote --file=./migrations/0002_flavor_tags.sql && wrangler d1 execute pour-profile-db --remote --file=./migrations/0003_seed_data.sql"
   },
   "devDependencies": {
     "wrangler": "^4.19.1"

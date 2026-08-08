@@ -1,186 +1,94 @@
-# Elskatemm Travel Companion
+# Pour Profile
 
-Cloudflare-ready static road-trip companion for the family trip from Olathe, Kansas to South Bend, Cheboygan, and Bois Blanc Island.
+A personal bourbon and spirits tracker: log every pour, learn your palate, and get
+explainable recommendations on what to try or buy next. Built as a mobile-first
+Cloudflare Workers app (no build tooling required beyond a `cp` step).
 
-## What This Build Includes
+> The previous life of this repository — a family road-trip companion for Upper
+> Michigan — is preserved on the `archive/michigan-trip-2026` branch.
 
-- Hash-routed profile dashboards for Elsie, Katrina, Emma Grace, Eliette, and Mom/Dad
-- Simple scroll-based Jules flow with short captain-style cards
-- MapLibre live route map using OpenFreeMap tiles, with no Google API key needed
-- Self-contained illustrated route images, so key content visuals still work offline
-- Browser GPS controls with off/requesting/active/error states, accuracy, last updated, and Mom/Dad detail
-- Open-Meteo weather with no API key, 30-minute local cache, GPS-following location, 12-hour hourly outlook, and imperial units
-- Ferry section with Plaunt Transportation official link and honest schedule fallback
-- STARZ/stargazing guidance using Clear Dark Sky as the verification source and Open-Meteo cloud risk
-- Trip Shortlist replacing decorative favorites
-- Family Vote choices: Yes, Maybe, Skip
-- Captured photo/video trip story with delete buttons and local size safeguards
-- Data-driven badge catalog with 60 starter badges, including 30+ route/place/milestone badges
-- Service worker cache bumped to `elskatemm-trip-v26-elsie`
-- Wrangler deployment using a generated `dist` folder
+## Architecture
 
-## File Structure
+- **Frontend**: vanilla JS ES modules, no bundler. `index.html` + `styles.css` +
+  a set of `view-*.js` modules wired together by `app.js`. Served as static
+  assets by Cloudflare Workers.
+- **Backend**: `worker.js`, a single Cloudflare Worker that serves the static
+  assets and a REST API under `/api/*`, backed by **D1** (`pour-profile-db`).
+- **Map**: MapLibre GL JS (loaded from unpkg) rendering free [OpenFreeMap](https://openfreemap.org)
+  vector tiles — no API key required.
+- **Barcode scanning**: the browser's native `BarcodeDetector` API, with manual
+  entry always available as a fallback (notably on iOS Safari, which doesn't
+  support `BarcodeDetector` as of this build).
+- **Barcode/product lookup**: `worker.js` proxies UPCitemdb (trial tier) and
+  Open Food Facts server-side, so no API keys ship to the client. Every
+  externally-sourced field is shown with its source and confidence, and is
+  never silently trusted.
+- **Palate engine**: `palate-engine.js` — a small, deterministic, fully
+  explainable weighted-affinity scorer (no opaque ML). Shared logic used by
+  the Worker to compute `/api/palate` and `/api/match`.
 
-Root files:
+## Data model
 
-- `index.html`
-- `styles.css`
-- `app.js`
-- `trip-data.js`
-- `manifest.json`
-- `sw.js`
-- `icon.svg`
-- `README.md`
-- `package.json`
-- `wrangler.jsonc`
+- `bottles` — the product (brand, expression, category, distillery, proof,
+  mash bill, barcode, image + provenance, status tags like `favorite`/`want_to_try`).
+- `tastings` — a specific pour (date, rating, serving style, venue, price,
+  notes, flavor tags, would-order-again). A bottle can have many tastings.
+- `venues` — where you drank it (bar, restaurant, distillery tasting room,
+  home/private).
+- `distilleries` — where a spirit is *from*, tracked separately from where you
+  drank it, with an `is_sourced_whiskey` flag and a `confidence` field so a
+  producer's headquarters is never casually treated as its distillation origin.
+- `flavor_tags` / `bottle_flavor_tags` / `tasting_flavor_tags` — the flavor
+  taxonomy (see `flavor-taxonomy.js`), attachable at the bottle level
+  (producer/detected profile) or the tasting level (your personal experience).
+- `brand_signals` — brand-level preference notes independent of any one bottle
+  (e.g. "generally likes Rabbit Hole").
 
-Cloudflare builds `dist/` from the eight app assets and deploys only that folder.
+See `migrations/` for the full schema and the seeded starting data (Justin's
+known favorites/dislikes and initial discovery queue — every fact there is
+either something he explicitly said or public distillery metadata marked with
+a confidence level; no ratings or tasting notes are fabricated).
 
-## Local Development
+## Local development
 
-```bash
-bun install
-bun run build
-python3 -m http.server 8788
+```
+npm install
+npm run build      # copies frontend files into dist/
+npx wrangler dev    # serves dist/ + worker.js locally, with live D1 binding
 ```
 
-Then open `http://localhost:8788`.
+## Deploying
 
-## Cloudflare Deployment
+```
+npm run deploy      # build + wrangler deploy
+```
 
-Working settings:
+Requires the `pour-profile-db` D1 database bound in `wrangler.jsonc` (already
+provisioned) and, optionally, an `OPENAI_API_KEY` Worker secret if you want
+the label-photo-read helper (`/api/analyze-image`) to work — this is optional
+and the rest of the app functions fully without it.
 
-- Build command: `bun run build`
-- Deploy command: `npx wrangler deploy`
-- Root/path: repository root
-- Wrangler assets directory: `./dist`
+## What's built (Milestone 1)
 
-`wrangler.jsonc` uses the Cloudflare Worker name `michigan-trip`.
+- Bottom nav: Home, My Spirits, Scan, Discover (incl. Map), Profile
+- Bottle vs. tasting data model, with status tags (`favorite`, `want_to_try`, etc.)
+- Quick Log Pour (rating only required, everything else optional) + full tasting form
+- Barcode scanning with manual fallback, provider-abstracted lookup, and a
+  confirm/edit screen before anything saves — never trusts external data silently
+- Deterministic, explainable palate engine with per-flavor confidence bands
+- "Would I like this?" match scoring, reused for Liquor Store Mode (scan → BUY / TRY A POUR / PROBABLY SKIP)
+- Bottle detail (tastings timeline, flavor experience, match explanation), 2–4 bottle comparison
+- Map with My Tastings / Spirit Origins / Both toggle, map analytics (top venue, states/countries represented)
+- PWA install, offline browsing of the last-synced collection, offline pour queueing with auto-sync
+- JSON/CSV export
+- Seeded with Justin's known favorites, dislikes, and starting discovery queue
 
-## Weather
+## Phase 2 backlog
 
-Primary weather source: Open-Meteo.
-
-No API key is required. The app fetches current, 12-hour hourly, and daily sunrise/sunset/daylight forecast data in Fahrenheit, mph, and inches for:
-
-- Olathe / home
-- South Bend
-- Cheboygan / Plaunt ferry
-- Bois Blanc Island
-- Current GPS location when available
-
-Weather is cached in `localStorage` for 30 minutes and labeled as live, cached, or unavailable.
-
-Future optional enhancement: National Weather Service alerts.
-
-## Maps And GPS
-
-The in-app map uses MapLibre and OpenFreeMap, so there is no map API key or billing setup. The map draws the planned trip route and adds the current GPS location when permission is enabled. Phone-map links are provided for turn-by-turn driving outside the app.
-
-GPS uses browser geolocation. If permission is denied, the app stays useful with route-phase context and source links.
-
-### Elsie route experience
-
-Elsie's route/explore view uses the existing clustered MapLibre attraction dataset with a compact route tracker, three-item Radar, profile-specific previews/details, mature badge language, ratings, and collections. Other profiles keep their existing presentation.
-
-The shared active route is now Olathe → Merrillville Overnight, followed by Merrillville → Indiana Dunes Visitor Center → Cheboygan ferry when the Indiana Dunes setting is enabled. The return target is Olathe. Private street addresses are not shown in the interface.
-
-Road distance and duration use the public OSRM routing service through a client-side normalization layer. No API key or environment variable is required. OSRM does not provide traffic-aware durations and its public demo service has no production SLA, so the tracker retains and clearly labels cached or planned estimates whenever routing is unavailable. Google Maps links handle full turn-by-turn navigation.
-
-Live route refreshes occur only after the user starts tracking and while the page is visible. The app stores only the latest position, not a location trail. Elsie's precise GPS point is sent only to OSRM when calculating the active road route.
-
-## Ferry
-
-The app links to Plaunt Transportation and does not fake schedule data.
-
-Fallback copy:
-
-“Live ferry schedule is not embedded yet. Verify times on the official Plaunt Transportation site before departure.”
-
-## Badges
-
-The badge catalog is data-driven in `trip-data.js`.
-
-Badges are awarded for:
-
-- trip milestones
-- route/place/source interactions
-- activities
-- photo/video captures
-- Trip Shortlist saves
-- Family Votes
-- ferry actions
-- weather and stargazing actions
-
-Child profile badge details do not show “who earned it.” Mom/Dad can view family badge progress.
-
-## Offline And Storage Notes
-
-The service worker caches local app assets for offline use. Live weather is not cached forever.
-
-Captured media is stored on this device with size limits. The app includes delete controls. Very large videos should be kept outside the app.
-
-## Known Limitations
-
-- No private API keys are required or committed.
-- The in-app map is a planned route context map, not a turn-by-turn navigation engine.
-- Ferry schedules are not embedded live; verify on the official Plaunt site.
-- Dark-sky guidance links to Clear Dark Sky and uses Open-Meteo cloud cover as the live-friendly support signal.
-- Captured media uses local browser storage safeguards rather than a cloud media backend.
-
-## Manual QA Checklist
-
-General:
-
-- [ ] App loads locally.
-- [ ] App works as a static site.
-- [ ] No secrets committed.
-- [ ] Service worker cache version bumped.
-- [ ] README updated.
-- [ ] Cloudflare deployment notes included.
-
-Profiles/navigation:
-
-- [ ] Profile selection works.
-- [ ] Day selector works.
-- [ ] Elsie opens to a dashboard.
-- [ ] Katrina opens to a dashboard.
-- [ ] Emma Grace opens to a dashboard.
-- [ ] Eliette opens to a dashboard.
-- [ ] Mom/Dad opens to a logistics dashboard.
-- [ ] Jules keeps a simple scroll experience.
-- [ ] Dashboard tiles open focused subpages.
-- [ ] Back/Profile Home navigation works.
-- [ ] Browser back button works.
-- [ ] Invalid hash routes fall back gracefully.
-
-Route/GPS/weather:
-
-- [ ] Phone driving route link works.
-- [ ] Return route link works.
-- [ ] MapLibre route panel loads without a Google key.
-- [ ] GPS denied, active, and stop states work.
-- [ ] Weather fetch from Open-Meteo works.
-- [ ] Weather cached fallback is labeled.
-- [ ] Ferry weather risk uses Cheboygan/Bois Blanc data when available.
-- [ ] Stargazing cloud risk uses cloud cover when available.
-
-Interactions:
-
-- [ ] Photo capture works.
-- [ ] Photo delete works.
-- [ ] Trip Shortlist works.
-- [ ] Saved items can be removed.
-- [ ] Family Vote works.
-- [ ] Mom/Dad can approve voted/saved items into plan.
-- [ ] Badge state initializes safely.
-- [ ] Badge catalog includes 50+ starter badges.
-- [ ] Badges do not duplicate endlessly.
-- [ ] Clicking/tapping a badge opens an explanation.
-
-Sources:
-
-- [ ] Gateway Arch opens the official NPS page.
-- [ ] Ferry opens the official Plaunt site.
-- [ ] Major factual cards include official source links.
-- [ ] Source/data status is visible for live and semi-live features.
+- True pixel-based map clustering (currently one marker per venue/distillery, each already showing an aggregate count)
+- R2-backed user bottle photo uploads (currently image URL only, with source/provenance tracked)
+- Venue/business lookup during "Use Current Location" pour logging (currently manual venue entry)
+- JSON import UI (the `/api/import` endpoint exists; needs a Profile-page file picker)
+- LLM-assisted free-text tasting note parsing and flavor tag suggestion (`/api/analyze-image` exists for label photos; note-parsing is not yet wired up)
+- Category-specific attribute editing UI for tequila/mezcal/scotch/rum/gin fields (`category_attrs` is modeled and stored; no dedicated edit form yet)
+- Per-field "user corrected" provenance tracking in the UI (the `user_edited_fields` column is populated on every edit; nothing surfaces it yet)

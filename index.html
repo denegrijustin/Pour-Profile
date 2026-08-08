@@ -4,157 +4,59 @@
     <script>if (location.protocol === "http:" && location.hostname !== "localhost") location.replace(location.href.replace("http:", "https:"));</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#1f4f3a">
-    <title>Elskatemm Travel Companion</title>
+    <meta name="theme-color" content="#96592a">
+    <title>Pour Profile</title>
     <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/mobile-first-fix.css">
   </head>
   <body>
-    <section id="splash" class="splash-screen" aria-labelledby="splashTitle">
-      <div class="splash-visual" aria-hidden="true">
-        <span class="sun"></span>
-        <span class="road"></span>
-        <span class="lake-shape"></span>
-      </div>
-      <div class="splash-content">
-        <p class="eyebrow">Elskatemm road trip</p>
-        <h1 id="splashTitle">Who's viewing?</h1>
-        <p class="splash-copy">Choose your name first. The app will open a version of the trip made for that person, with Mom/Dad context included where it matters.</p>
-        <div id="splashProfiles" class="splash-profiles" aria-label="Choose traveler">
-          <button type="button" class="splash-profile" data-profile-choice="elsie" style="--profile-accent:#5b4aa0">
-            <strong>Elsie</strong><em>Age 14 view</em><span>Facts, suspense-light stories, teaching moments, and small-animal discoveries.</span>
-          </button>
-          <button type="button" class="splash-profile" data-profile-choice="katrina" style="--profile-accent:#a35d2d">
-            <strong>Katrina</strong><em>Age 12 view</em><span>Hidden facts, historical-fiction thinking, why questions, and quiz-the-car energy.</span>
-          </button>
-          <button type="button" class="splash-profile" data-profile-choice="emma" style="--profile-accent:#2f7d5f">
-            <strong>Emma Grace</strong><em>Age 11 view</em><span>Sports, real-life routines, communities, and what everyday life looks like along the way.</span>
-          </button>
-          <button type="button" class="splash-profile" data-profile-choice="eliette" style="--profile-accent:#b87b20">
-            <strong>Eliette</strong><em>Age 11 view</em><span>Details, stories, crafts, shiny things, nicknacks, and “I didn’t know that was there” finds.</span>
-          </button>
-          <button type="button" class="splash-profile" data-profile-choice="jules" style="--profile-accent:#2368a2">
-            <strong>Jules</strong><em>Age 6 view</em><span>Captain choices, trucks, boats, dinosaurs, big machines, and why things work.</span>
-          </button>
-          <button type="button" class="splash-profile" data-profile-choice="momdad" style="--profile-accent:#163f33">
-            <strong>Mom & Dad</strong><em>Adult full-detail view</em><span>Route, weather, ferry, GPS, family choices, and full planning context.</span>
-          </button>
-        </div>
-      </div>
-    </section>
+    <div id="app">
+      <div id="offlineBanner" class="offline-banner" hidden>You're offline — showing your last synced collection. Pours you log now will sync when you're back online.</div>
 
-    <div class="app-shell">
       <header class="topbar">
-        <div class="topbar-identity">
-          <h1 id="topbarTitle">Family Trip</h1>
-          <p class="topbar-meta" id="topbarMeta">Choose a traveler to begin</p>
+        <div>
+          <p class="eyebrow" id="topbarEyebrow">Pour Profile</p>
+          <h1 id="topbarTitle">Home</h1>
         </div>
-        <div class="top-actions">
-          <button id="mainMenuButton" class="icon-menu-button" type="button" aria-expanded="false" aria-controls="mainMenu">Menu</button>
-          <span id="onlineStatus" class="status-pill">Checking</span>
-          <button id="activeTraveler" class="traveler-chip" type="button">Choose traveler</button>
+        <div class="topbar-actions" id="topbarActions">
+          <button class="icon-btn" data-action="open-search" aria-label="Search" type="button">🔍</button>
         </div>
       </header>
 
-      <aside id="mainMenu" class="main-menu" hidden aria-label="Trip menu">
-        <div class="main-menu-card">
-          <div class="section-head compact-head">
-            <strong>Trip menu</strong>
-            <button type="button" data-close-menu>Close</button>
-          </div>
-          <div id="mainMenuLinks" class="menu-link-grid"></div>
-        </div>
-      </aside>
-
-      <main>
-        <section class="today-summary-card" aria-labelledby="heroTitle">
-          <div class="today-summary-left">
-            <p class="eyebrow" id="phaseLabel">Pre-trip</p>
-            <h2 id="heroTitle">Bois Blanc Bound</h2>
-            <p id="heroText" hidden></p>
-            <div class="today-stats">
-              <span><strong id="daysUntil">--</strong><small>days to launch</small></span>
-              <span><strong id="milesLeft">--</strong><small>miles left</small></span>
-              <span><strong id="percentLeft">--</strong><small>route left</small></span>
-            </div>
-          </div>
-          <div class="today-summary-right">
-            <div class="next-action-card">
-              <p class="eyebrow">Next action</p>
-              <p id="nextStop">Trip has not started.</p>
-              <div id="kidTravelUpdate" class="kid-travel-update-compact"></div>
-              <div class="today-primary-actions">
-                <button id="useLocation" type="button" class="primary-action">Start GPS</button>
-                <button type="button" class="today-route-btn" data-nav-global="route">Route</button>
-                <button type="button" class="today-plan-btn" data-nav-global="today">Today's Plan</button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="topBadgePreview" class="top-badge-preview" aria-label="Badge preview"></section>
-
-        <section class="map-first-shell" aria-label="Explore map and discovery">
-          <div class="map-stage">
-            <div class="section-head compact-head map-stage-head">
-              <div>
-                <p class="eyebrow">Explore Map</p>
-                <h2>Trip Stops</h2>
-              </div>
-              <div class="map-stage-actions">
-                <span id="mapStopCount" class="map-stop-count">Loading stops</span>
-                <button type="button" data-start-gps="true">GPS</button>
-              </div>
-            </div>
-            <div id="homeRouteMapPanel" class="route-map-home"></div>
-            <div id="homeAttractionPreview" class="map-preview-card" hidden></div>
-          </div>
-          <aside id="bottomDrawer" class="bottom-drawer" aria-label="Trip drawer"></aside>
-        </section>
-
-        <section class="progress-band" aria-label="Trip progress">
-          <article>
-            <div><strong id="primaryProgressLabel">Launch countdown</strong><span id="primaryProgressText">--</span></div>
-            <div class="progress-track"><span id="primaryProgressBar"></span></div>
-          </article>
-          <article>
-            <div><strong id="phaseProgressLabel">Current phase</strong><span id="phaseProgressText">--</span></div>
-            <div class="progress-track"><span id="phaseProgressBar"></span></div>
-          </article>
-        </section>
-
-        <section class="profile-section" aria-labelledby="profileTitle">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Personal views</p>
-              <h2 id="profileTitle">Today's experience</h2>
-            </div>
-          </div>
-          <div id="profileView" class="profile-view"></div>
-        </section>
-
+      <main id="views">
+        <section id="view-home" class="view" aria-labelledby="topbarTitle"></section>
+        <section id="view-spirits" class="view"></section>
+        <section id="view-scan" class="view"></section>
+        <section id="view-discover" class="view"></section>
+        <section id="view-map" class="view"></section>
+        <section id="view-profile" class="view"></section>
+        <section id="view-bottle" class="view"></section>
+        <section id="view-compare" class="view"></section>
+        <section id="view-store-mode" class="view"></section>
       </main>
 
-      <nav class="bottom-nav" id="bottomNav" aria-label="Primary navigation"></nav>
+      <nav class="bottom-nav" aria-label="Primary">
+        <button class="nav-btn" data-nav="home" type="button"><span class="nav-icon" aria-hidden="true">🏠</span>Home</button>
+        <button class="nav-btn" data-nav="spirits" type="button"><span class="nav-icon" aria-hidden="true">🥃</span>My Spirits</button>
+        <button class="nav-btn scan-btn" data-nav="scan" type="button"><span class="nav-icon-circle" aria-hidden="true">📷</span>Scan</button>
+        <button class="nav-btn" data-nav="discover" type="button"><span class="nav-icon" aria-hidden="true">✨</span>Discover</button>
+        <button class="nav-btn" data-nav="profile" type="button"><span class="nav-icon" aria-hidden="true">👤</span>Profile</button>
+      </nav>
+
+      <div id="sheetBackdrop" class="sheet-backdrop" data-action="close-sheet"></div>
+      <div id="sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+        <div class="sheet-handle"></div>
+        <div id="sheetContent"></div>
+      </div>
+
+      <div id="toast" class="toast" hidden></div>
     </div>
 
-    <div id="statusPanelData" hidden>
-      <div id="actionStatus"></div>
-      <div id="gpsStatus"></div>
-      <div id="destinationStatus"></div>
-      <div id="trackingStatus"></div>
-      <div id="needResults"></div>
-    </div>
-
-    <input id="captureInput" type="file" accept="image/*,video/*" capture="environment" multiple hidden>
-    <script src="/trip-stops.js"></script>
-    <script src="/haunted-stops.js"></script>
-    <script src="/emma-stops.js"></script>
-    <script src="/katrina-stops.js"></script>
-    <script src="/jules-stops.js"></script>
-    <script src="/canada-wildfires.js"></script>
-    <script src="/trip-data.js"></script>
-    <script src="/app.js"></script>
+    <script type="module" src="/app.js"></script>
   </body>
 </html>

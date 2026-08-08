@@ -1,31 +1,21 @@
-const CACHE_NAME = "elskatemm-trip-v144-return-route-waypoints-fixed";
+const CACHE_NAME = "pour-profile-v1";
 const CORE_ASSETS = [
   "/",
   "/index.html",
   "/styles.css",
-  "/mobile-first-fix.css",
   "/app.js",
-  "/trip-data.js",
-  "/trip-stops.js",
-  "/haunted-stops.js",
-  "/emma-stops.js",
-  "/katrina-stops.js",
-  "/jules-stops.js",
-  "/canada-wildfires.js",
-  "/golden-egg.png",
-  "/nasa-badge.png",
-  "/momdad-gps-photo.png",
-  "/italian-heritage-icon.png",
-  "/national-park-icon.png",
-  "/sasquatch-footprint.png",
-  "/island-deco-icon.png",
-  "/jules-gps.png",
-  "/jules-gps-f1.png",
-  "/family-gps-marker.png",
-  "/eliette-gps-jeep.png",
-  "/wildfire-marker.png",
-  "/elsie-gps-photo.png",
-  "/emma-gps-agent.png",
+  "/api.js",
+  "/ui.js",
+  "/spirit-taxonomy.js",
+  "/log-pour.js",
+  "/view-home.js",
+  "/view-spirits.js",
+  "/view-scan.js",
+  "/view-discover.js",
+  "/view-map.js",
+  "/view-profile.js",
+  "/view-bottle.js",
+  "/view-compare.js",
   "/manifest.json",
   "/icon.svg"
 ];
@@ -47,8 +37,11 @@ self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
+  if (url.pathname.startsWith("/api/")) return; // API reads/writes always hit the network; api.js handles offline fallback itself.
+
   const appShell = ["/", "/index.html"].includes(url.pathname);
-  const staticAsset = ["/styles.css", "/mobile-first-fix.css", "/app.js", "/trip-data.js", "/trip-stops.js", "/haunted-stops.js", "/emma-stops.js", "/katrina-stops.js", "/jules-stops.js", "/jules-gps.png", "/jules-gps-f1.png", "/family-gps-marker.png", "/eliette-gps-jeep.png", "/elsie-gps-photo.png", "/emma-gps-agent.png", "/wildfire-marker.png", "/manifest.json", "/icon.svg"].includes(url.pathname);
+  const staticAsset = CORE_ASSETS.includes(url.pathname);
+
   if (appShell) {
     event.respondWith(
       fetch(event.request)
@@ -72,11 +65,5 @@ self.addEventListener("fetch", (event) => {
         return cached || update;
       })
     );
-  }
-});
-
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "CACHE_TRIP_PACK") {
-    event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS)));
   }
 });

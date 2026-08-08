@@ -1,11 +1,11 @@
 {
-  "name": "Elskatemm Travel Companion",
-  "short_name": "Family Trip",
+  "name": "Pour Profile — Bourbon & Spirits Tracker",
+  "short_name": "Pour Profile",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#fbf4df",
-  "theme_color": "#1f4f3a",
-  "description": "Offline-first family road trip companion for Bois Blanc Island.",
+  "background_color": "#faf6ee",
+  "theme_color": "#96592a",
+  "description": "A personal bourbon and spirits journal that learns your palate and tells you what to try next.",
   "icons": [
     {
       "src": "/icon.svg",
