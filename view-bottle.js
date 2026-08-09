@@ -85,7 +85,7 @@ export async function renderBottleDetail(id, dispatchNav) {
     <div style="display:flex;align-items:center;gap:16px;margin:14px 0">
       ${matchBadgeHtml(match?.matchPercent)}
       <div>
-        <div class="rating-display">${bottle.avg_rating != null ? formatRating(bottle.avg_rating) : "—"}<span style="font-size:13px;color:var(--charcoal-soft);font-weight:400"> / 10 avg</span></div>
+        <div class="rating-display">${bottle.avg_rating != null ? formatRating(bottle.avg_rating) : "—"}<span style="font-size:13px;color:var(--ink-soft);font-weight:400"> / 10 avg</span></div>
         <div class="field-hint">${bottle.tasting_count || 0} tasting${bottle.tasting_count === 1 ? "" : "s"} logged</div>
       </div>
     </div>

@@ -91,12 +91,12 @@ function updateMarkers() {
 
   if (mode === "tastings" || mode === "both") {
     for (const v of venues) {
-      const marker = new maplibregl.Marker({ color: "#c07a3e" })
+      const marker = new maplibregl.Marker({ color: "#37799f" })
         .setLngLat([v.lon, v.lat])
         .setPopup(new maplibregl.Popup().setHTML(`
           <strong>🥃 ${escapeHtml(v.name)}</strong>
           <p style="margin:4px 0;font-size:13px">${v.tasting_count} tasting${v.tasting_count === 1 ? "" : "s"}${v.avg_rating != null ? ` · avg ${formatRating(v.avg_rating)}★` : ""}</p>
-          ${v.city ? `<p style="margin:0;font-size:12px;color:#6b6156">${escapeHtml([v.city, v.state_region].filter(Boolean).join(", "))}</p>` : ""}
+          ${v.city ? `<p style="margin:0;font-size:12px;color:var(--ink-soft)">${escapeHtml([v.city, v.state_region].filter(Boolean).join(", "))}</p>` : ""}
         `))
         .addTo(mapInstance);
       markers.push(marker);
@@ -104,13 +104,13 @@ function updateMarkers() {
   }
   if (mode === "origins" || mode === "both") {
     for (const d of distilleries) {
-      const marker = new maplibregl.Marker({ color: "#6f4a2c" })
+      const marker = new maplibregl.Marker({ color: "#2c5a4a" })
         .setLngLat([d.lon, d.lat])
         .setPopup(new maplibregl.Popup().setHTML(`
           <strong>🏭 ${escapeHtml(d.name)}</strong>
           <p style="margin:4px 0;font-size:13px">${d.bottle_count} bottle${d.bottle_count === 1 ? "" : "s"} from here</p>
-          ${d.is_sourced_whiskey ? `<p style="margin:0;font-size:11.5px;color:#ab5238">Sourced whiskey — origin confidence: ${escapeHtml(d.confidence)}</p>` : ""}
-          <p style="margin:0;font-size:12px;color:#6b6156">${escapeHtml([d.city, d.state_region, d.country].filter(Boolean).join(", "))}</p>
+          ${d.is_sourced_whiskey ? `<p style="margin:0;font-size:11.5px;color:var(--negative)">Sourced whiskey — origin confidence: ${escapeHtml(d.confidence)}</p>` : ""}
+          <p style="margin:0;font-size:12px;color:var(--ink-soft)">${escapeHtml([d.city, d.state_region, d.country].filter(Boolean).join(", "))}</p>
         `))
         .addTo(mapInstance);
       markers.push(marker);

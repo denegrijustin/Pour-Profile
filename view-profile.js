@@ -16,10 +16,10 @@ export async function renderProfile() {
     <div style="margin-bottom:10px">
       <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:3px">
         <span>${escapeHtml(titleize(tag))}</span>
-        <span style="color:var(--charcoal-soft)">${v.affinity}% · ${v.confidence} confidence</span>
+        <span style="color:var(--ink-soft)">${v.affinity}% · ${v.confidence} confidence</span>
       </div>
       <div style="height:8px;border-radius:999px;background:var(--paper-sunk);overflow:hidden">
-        <div style="height:100%;width:${v.affinity}%;background:${positive ? "linear-gradient(90deg,var(--amber),var(--amber-deep))" : "var(--negative)"}"></div>
+        <div style="height:100%;width:${v.affinity}%;background:${positive ? "linear-gradient(90deg,var(--accent),var(--accent-deep))" : "var(--negative)"}"></div>
       </div>
     </div>`;
 
@@ -59,15 +59,6 @@ export async function renderProfile() {
       </div>
     </div>` : ""}
 
-    <div class="section-title"><h2>Appearance</h2></div>
-    <div class="card">
-      <div class="toggle-row" style="border-bottom:none">
-        <span style="font-size:13.5px">Photo background</span>
-        <button type="button" class="toggle" id="bgToggle" data-on="${localStorage.getItem("pourProfile.plainBackground") === "1" ? "0" : "1"}"></button>
-      </div>
-      <p class="field-hint">Turn off for a plain cream background — easier to read in very dim light.</p>
-    </div>
-
     <div class="section-title"><h2>Your Data</h2></div>
     <div class="card">
       <p class="field-hint">Your data always stays exportable — you're never locked in.</p>
@@ -77,18 +68,6 @@ export async function renderProfile() {
       </div>
     </div>
   `;
-
-  const bgToggle = view.querySelector("#bgToggle");
-  if (bgToggle) {
-    bgToggle.classList.toggle("on", bgToggle.dataset.on === "1");
-    bgToggle.addEventListener("click", () => {
-      const nowOn = bgToggle.dataset.on !== "1";
-      bgToggle.dataset.on = nowOn ? "1" : "0";
-      bgToggle.classList.toggle("on", nowOn);
-      localStorage.setItem("pourProfile.plainBackground", nowOn ? "0" : "1");
-      document.documentElement.toggleAttribute("data-plain-bg", !nowOn);
-    });
-  }
 
   const wineBtn = view.querySelector("[data-action='open-wine']");
   if (wineBtn) wineBtn.addEventListener("click", () => {

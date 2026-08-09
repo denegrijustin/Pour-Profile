@@ -142,7 +142,7 @@ async function wireProfileSwitcher() {
         ${profiles.map((p) => `
           <button type="button" class="btn ${p.slug === getActiveProfile() ? "btn-primary" : "btn-secondary"} btn-block" data-pick-profile="${escapeHtml(p.slug)}" style="margin-bottom:8px;justify-content:space-between">
             <span>${escapeHtml(p.display_name)}</span>
-            <span style="font-size:12px;font-weight:500;opacity:0.8">${escapeHtml(p.person || "")}</span>
+            <span style="font-size:12px;font-weight:500;opacity:0.8">${escapeHtml(p.focus === "wine" ? "Wine only" : "Whiskey, tequila, rum…")}</span>
           </button>`).join("")}
       </div>
     `, {
@@ -181,20 +181,12 @@ function wireOfflineBanner() {
   update();
 }
 
-const BG_KEY = "pourProfile.plainBackground";
-
-export function applyBackgroundPref() {
-  const plain = localStorage.getItem(BG_KEY) === "1";
-  document.documentElement.toggleAttribute("data-plain-bg", plain);
-}
-
 function registerServiceWorker() {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/sw.js").catch(() => {});
   }
 }
 
-applyBackgroundPref();
 applyProfileLabels();
 wireNav();
 wireProfileSwitcher();

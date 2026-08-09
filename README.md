@@ -1,4 +1,4 @@
-# Pour Profile
+# Pour Decisions
 
 A personal bourbon and spirits tracker: log every pour, learn your palate, and get
 explainable recommendations on what to try or buy next. Built as a mobile-first

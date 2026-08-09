@@ -1,10 +1,10 @@
 {
-  "name": "Pour Profile — Bourbon & Spirits Tracker",
-  "short_name": "Pour Profile",
+  "name": "Pour Decisions \u2014 Spirits & Wine Tracker",
+  "short_name": "Pour Decisions",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#faf6ee",
-  "theme_color": "#96592a",
+  "background_color": "#eef3f7",
+  "theme_color": "#1d5878",
   "description": "A personal bourbon and spirits journal that learns your palate and tells you what to try next.",
   "icons": [
     {

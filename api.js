@@ -56,6 +56,8 @@ const LEGACY_PROFILE_SLUGS = { justin: "spirits", lady: "wine" };
 let activeProfile = LEGACY_PROFILE_SLUGS[localStorage.getItem(PROFILE_KEY)]
   || localStorage.getItem(PROFILE_KEY)
   || "spirits";
+// Write the migrated value straight back, so the legacy slug doesn't linger.
+try { localStorage.setItem(PROFILE_KEY, activeProfile); } catch { /* ignore */ }
 
 export function getActiveProfile() { return activeProfile; }
 export function setActiveProfile(slug) {

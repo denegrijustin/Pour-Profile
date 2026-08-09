@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-profile-v8-category-profiles";
+const CACHE_NAME = "pour-decisions-v9-winter";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -20,8 +20,6 @@ const CORE_ASSETS = [
   "/wine-engine.js",
   "/wine-form.js",
   "/rating-sources.js",
-  "/brand-hero.jpg",
-  "/brand-ambient.jpg",
   "/manifest.json",
   "/icon.svg"
 ];

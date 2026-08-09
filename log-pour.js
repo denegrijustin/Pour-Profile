@@ -80,13 +80,13 @@ export async function openLogPourSheet(bottle, { onSaved } = {}) {
     ${wineStatusPickerHtml(bottle.status_tags || [])}
 
     <details style="margin-top:14px" open>
-      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--amber-deep)">Describe the wine (drives your palate model)</summary>
+      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Describe the wine (drives your palate model)</summary>
       <p class="field-hint" style="margin-top:6px">Only set the ones you're confident about — anything you skip is treated as unknown, not average.</p>
       <div id="wineDims">${dimensionSlidersHtml(bottle.wine_dimensions || {})}</div>
     </details>` : ""}
 
     <details style="margin-top:16px">
-      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--amber-deep)">Add more detail (optional)</summary>
+      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Add more detail (optional)</summary>
       <div style="margin-top:10px">
         <label>Serving style</label>
         <select id="pourServingStyle">
