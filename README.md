@@ -109,6 +109,29 @@ do. Photograph them as you go, or paste producer URLs.
 
 Only JPEG/PNG/WEBP are accepted — SVG is rejected, since SVG can carry script.
 
+## External ratings (outside opinion)
+
+Community/critic scores live in `external_ratings` and are **never fed into the
+palate engines**. The app's value is learning what *you* like, and the crowd
+disagreeing with you is signal rather than error — Four Roses reviews well and
+Justin dislikes it. Instead the bottle page shows both numbers side by side
+("outside scores average 91, your palate says 30"), which is the
+"good wine" vs "good wine *for me*" distinction from Lady's profile.
+
+Entry is **manual by design**. No free API supplies community ratings with
+tasting descriptions across both spirits and wine: Whiskybase, Whiskystats,
+Grapeminds and Wine-Searcher are paid, and Vivino has no public API (the
+"Vivino APIs" in circulation are scrapers that breach its terms, so they are
+deliberately not used). Type in what you see on a shelf talker or back label.
+Scores record their scale and are only averaged within the same scale.
+
+`POST /api/bottles/:id/enrich` adds free *factual* enrichment from Wikidata
+(CC0, no key) — producer/entity identification only, never ratings, returned
+with low confidence and an explicit "matched by name only" caveat.
+
+The schema is provider-agnostic, so a paid source can be added later without
+migrations.
+
 ## Cloudflare setup
 
 - **D1**: `pour-profile-db` (binding `DB`)

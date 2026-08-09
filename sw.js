@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-profile-v4-wine-form";
+const CACHE_NAME = "pour-profile-v5-external-ratings";
 const CORE_ASSETS = [
   "/",
   "/index.html",

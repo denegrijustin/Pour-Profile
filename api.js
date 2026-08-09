@@ -116,6 +116,10 @@ export const api = {
   match: (payload) => request("/api/match", { method: "POST", body: payload }),
 
   profiles: () => request("/api/profiles"),
+  externalRatings: (bottleId) => request(`/api/bottles/${bottleId}/external-ratings`),
+  addExternalRating: (bottleId, payload) => request(`/api/bottles/${bottleId}/external-ratings`, { method: "POST", body: payload }),
+  deleteExternalRating: (id) => request(`/api/external-ratings/${id}`, { method: "DELETE" }),
+  enrichBottle: (bottleId) => request(`/api/bottles/${bottleId}/enrich`, { method: "POST", body: {} }),
   winePalate: () => request("/api/wine/palate"),
   wineMatch: (payload) => request("/api/wine/match", { method: "POST", body: payload }),
   putWineDimension: (payload) => request("/api/wine/dimensions", { method: "PUT", body: payload }),

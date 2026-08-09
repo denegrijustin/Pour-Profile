@@ -21,6 +21,7 @@ export async function renderBottleDetail(id, dispatchNav) {
   let data;
   try { data = await api.bottle(id); } catch (err) { view.innerHTML = `<p>Couldn't load this bottle: ${escapeHtml(err.message)}</p>`; return; }
   const { bottle, tastings, match } = data;
+  const external = await api.externalRatings(id).then((r) => r.external_ratings || []).catch(() => []);
 
   const isWine = bottle.category === "wine";
   // Wine and spirits don't share meaningful specs — don't show mash bill for a
@@ -60,6 +61,8 @@ export async function renderBottleDetail(id, dispatchNav) {
       </div>`).join("")
     : `<p class="field-hint">No tastings logged yet.</p>`;
 
+  const personalScore = isWine ? (data.wineMatch ? data.wineMatch.score : null) : (match ? match.matchPercent : null);
+
   const flavorCounts = {};
   for (const t of tastings) for (const f of (t.flavor_tags || [])) flavorCounts[f] = (flavorCounts[f] || 0) + 1;
   const flavorExperience = Object.entries(flavorCounts).sort((a, b) => b[1] - a[1]);
@@ -98,6 +101,22 @@ export async function renderBottleDetail(id, dispatchNav) {
     <div class="card"><dl class="spec-grid">${specs.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(String(v))}</dd></div>`).join("")}</dl></div>
     ${bottle.description ? `<div class="card"><strong>Notes on this bottle</strong><p style="margin-top:6px">${escapeHtml(bottle.description)}</p></div>` : ""}
 
+    <div class="section-title"><h2>Outside Opinion</h2><span class="link" data-action="add-external">+ Add</span></div>
+    <div class="card">
+      ${external.length ? external.map((r) => `
+        <div class="ext-rating">
+          <div>
+            <strong>${escapeHtml(r.source)}</strong>
+            ${r.score != null ? `<span class="ext-score">${r.score}${r.scale === "100" ? "" : `/${escapeHtml(r.scale)}`}</span>` : ""}
+            ${r.review_count ? `<span class="field-hint"> · ${r.review_count} reviews</span>` : ""}
+            ${r.description ? `<p class="field-hint" style="margin-top:4px">${escapeHtml(r.description)}</p>` : ""}
+            ${r.source_url ? `<a class="field-hint" href="${escapeHtml(r.source_url)}" target="_blank" rel="noopener">source</a>` : ""}
+          </div>
+          <button class="btn-ghost btn-sm" data-del-external="${r.id}" aria-label="Remove">✕</button>
+        </div>`).join("") : `<p class="field-hint">Nothing recorded. If you see a score on a shelf talker or in another app, add it here — it stays separate from your palate score and never influences it.</p>`}
+      ${external.length && personalScore != null ? `<p class="field-hint" style="margin-top:10px">${escapeHtml(contrastLine(external, personalScore))}</p>` : ""}
+    </div>
+
     <div class="section-title"><h2>My Tastings</h2></div>
     <div class="card">${tastingsHtml}</div>
 
@@ -107,6 +126,18 @@ export async function renderBottleDetail(id, dispatchNav) {
   `;
 
   wireBottleDetail(bottle);
+}
+
+// The point of showing both numbers is the gap between them.
+function contrastLine(external, personalScore) {
+  const hundred = external.filter((r) => r.score != null && r.scale === "100");
+  if (!hundred.length) return "";
+  const avg = Math.round(hundred.reduce((a, r) => a + r.score, 0) / hundred.length);
+  const gap = personalScore - avg;
+  if (Math.abs(gap) < 10) return `Outside scores average ${avg}; your palate says ${personalScore}. Broad agreement.`;
+  return gap > 0
+    ? `Outside scores average ${avg}, but your palate says ${personalScore} — you may like this more than the consensus does.`
+    : `Outside scores average ${avg}, but your palate says ${personalScore} — well reviewed, yet not obviously your style.`;
 }
 
 function wineMatchHtml(wm) {
@@ -156,6 +187,13 @@ function wireBottleDetail(bottle) {
       toast(`Couldn't save photo: ${err.message}`);
     }
   });
+  const addExt = view.querySelector("[data-action='add-external']");
+  if (addExt) addExt.addEventListener("click", () => openExternalRatingSheet(bottle));
+  view.querySelectorAll("[data-del-external]").forEach((btn) => btn.addEventListener("click", async () => {
+    await api.deleteExternalRating(Number(btn.dataset.delExternal));
+    toast("Removed.");
+    renderBottleDetail(bottle.id, currentDispatchNav);
+  }));
   view.querySelector("[data-action='log-pour']").addEventListener("click", () => openLogPourSheet(bottle));
   view.querySelector("[data-action='edit-bottle']").addEventListener("click", () => openEditSheet(bottle));
   view.querySelector("[data-action='add-compare']").addEventListener("click", () => {
@@ -266,3 +304,46 @@ export function removeFromCompare(id) {
   saveCompareList();
 }
 export function clearCompare() { compareList = []; saveCompareList(); }
+
+
+function openExternalRatingSheet(bottle) {
+  openSheet(`
+    <div class="sheet-header"><h2>Outside Opinion</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
+    <p class="field-hint">Type in what you saw — a shelf talker, a back label, another app. This is stored separately and never affects your palate match.</p>
+    <label>Source</label>
+    <input type="text" id="extSource" placeholder="e.g. Vivino, Wine Spectator, shelf talker">
+    <div class="field-row">
+      <div><label>Score</label><input type="number" step="0.1" id="extScore" placeholder="e.g. 91"></div>
+      <div><label>Out of</label>
+        <select id="extScale"><option value="100">100</option><option value="10">10</option><option value="5">5</option></select>
+      </div>
+    </div>
+    <label>Published description (optional)</label>
+    <textarea id="extDescription" placeholder="Their tasting notes, if shown"></textarea>
+    <label>Link (optional)</label>
+    <input type="text" id="extUrl" placeholder="https://">
+    <button class="btn btn-primary btn-block" id="extSaveBtn" style="margin-top:16px">Save</button>
+  `, {
+    onOpen: () => {
+      document.getElementById("extSaveBtn").addEventListener("click", async () => {
+        const source = document.getElementById("extSource").value.trim();
+        const scoreRaw = document.getElementById("extScore").value;
+        const description = document.getElementById("extDescription").value.trim();
+        if (!source) { toast("Source is required."); return; }
+        if (!scoreRaw && !description) { toast("Add a score or a description."); return; }
+        try {
+          await api.addExternalRating(bottle.id, {
+            source,
+            score: scoreRaw ? Number(scoreRaw) : null,
+            scale: document.getElementById("extScale").value,
+            description: description || null,
+            source_url: document.getElementById("extUrl").value.trim() || null
+          });
+          closeSheet();
+          toast("Saved.");
+          renderBottleDetail(bottle.id, currentDispatchNav);
+        } catch (err) { toast(`Couldn't save: ${err.message}`); }
+      });
+    }
+  });
+}

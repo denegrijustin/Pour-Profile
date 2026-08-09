@@ -59,6 +59,14 @@ async function routeApi(request, url, env) {
   const imageMatch = pathname.match(/^\/api\/images\/(\d+)$/);
   if (imageMatch && method === "GET") return getBottleImage(Number(imageMatch[1]), env);
 
+  const extMatch = pathname.match(/^\/api\/bottles\/(\d+)\/external-ratings$/);
+  if (extMatch && method === "GET") return listExternalRatings(Number(extMatch[1]), env);
+  if (extMatch && method === "POST") return addExternalRating(Number(extMatch[1]), request, env);
+  const extDelMatch = pathname.match(/^\/api\/external-ratings\/(\d+)$/);
+  if (extDelMatch && method === "DELETE") return deleteExternalRating(Number(extDelMatch[1]), env);
+  const enrichMatch = pathname.match(/^\/api\/bottles\/(\d+)\/enrich$/);
+  if (enrichMatch && method === "POST") return enrichBottle(Number(enrichMatch[1]), env);
+
   const barcodeMatch = pathname.match(/^\/api\/barcode\/([A-Za-z0-9]+)$/);
   if (barcodeMatch && method === "GET") return lookupBarcode(barcodeMatch[1], env);
 
@@ -676,6 +684,69 @@ async function getBottleImage(id, env) {
     return new Response(obj.body, { headers });
   }
   return new Response(base64ToBytes(row.data), { headers });
+}
+
+// ---------- external ratings (outside opinion) ----------
+// Never mixed into the palate engines — see migrations/0006 for why.
+
+async function listExternalRatings(bottleId, env) {
+  const ratings = await all(env, "SELECT * FROM external_ratings WHERE bottle_id = ? ORDER BY fetched_at DESC", bottleId);
+  return json({ external_ratings: ratings });
+}
+
+async function addExternalRating(bottleId, request, env) {
+  const b = await body(request);
+  if (!b.source) return json({ error: "source is required" }, 400);
+  if (b.score == null && !b.description) return json({ error: "Provide a score, a description, or both." }, 400);
+  const res = await run(env,
+    `INSERT INTO external_ratings (bottle_id, source, source_url, score, scale, review_count, description, is_manual)
+     VALUES (?,?,?,?,?,?,?,?)`,
+    bottleId, b.source, b.source_url || null, b.score ?? null, b.scale || "100",
+    b.review_count ?? null, b.description || null, b.is_manual === false ? 0 : 1);
+  const rating = await first(env, "SELECT * FROM external_ratings WHERE id = ?", res.meta.last_row_id);
+  return json({ rating });
+}
+
+async function deleteExternalRating(id, env) {
+  await run(env, "DELETE FROM external_ratings WHERE id = ?", id);
+  return json({ ok: true });
+}
+
+// ---------- free factual enrichment ----------
+// Wikidata only: CC0-licensed, no key, no rate-limit games, and it supplies
+// *facts* (producer, country, founding, region) rather than ratings. It will not
+// know most individual expressions — that is expected, and reported honestly
+// rather than guessed at.
+
+async function enrichBottle(bottleId, env) {
+  const bottle = await first(env, "SELECT id, name, brand FROM bottles WHERE id = ?", bottleId);
+  if (!bottle) return json({ error: "Not found" }, 404);
+  const term = bottle.brand || bottle.name;
+  if (!term) return json({ found: false, reason: "No brand or name to search on." });
+
+  try {
+    const searchUrl = `https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=1&origin=*&search=${encodeURIComponent(term)}`;
+    const searchRes = await fetch(searchUrl, { headers: { "User-Agent": "PourProfile/1.0 (personal spirits tracker)" } });
+    if (!searchRes.ok) return json({ found: false, reason: `Wikidata search failed (${searchRes.status}).` });
+    const searchData = await searchRes.json();
+    const hit = searchData.search && searchData.search[0];
+    if (!hit) return json({ found: false, reason: `No Wikidata entry for "${term}".` });
+
+    return json({
+      found: true,
+      source: "wikidata",
+      confidence: "low",   // a name match is not proof this is the same product
+      suggestion: {
+        label: hit.label || null,
+        description: hit.description || null,
+        wikidata_id: hit.id,
+        url: `https://www.wikidata.org/wiki/${hit.id}`
+      },
+      note: "Matched by name only — confirm it refers to this producer before saving anything."
+    });
+  } catch (err) {
+    return json({ found: false, reason: `Enrichment unavailable: ${String(err && err.message || err)}` });
+  }
 }
 
 // ---------- barcode lookup ----------

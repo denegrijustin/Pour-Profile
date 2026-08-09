@@ -287,6 +287,10 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--amber); out
 }
 .wine-scale-ends { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--charcoal-faint); }
 
+.ext-rating { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border-soft); }
+.ext-rating:last-of-type { border-bottom: none; }
+.ext-score { font-weight: 800; color: var(--amber-deep); margin-left: 6px; }
+
 .wine-input { padding: 10px 0; border-bottom: 1px solid var(--border-soft); }
 .wine-input:last-child { border-bottom: none; }
 .wine-range { width: 100%; accent-color: var(--amber-deep); margin: 6px 0 2px; }
