@@ -5,7 +5,12 @@ import { titleize } from "./spirit-taxonomy.js";
 export async function renderProfile() {
   const view = el("view-profile");
   view.innerHTML = `<p class="field-hint">Building your palate profile…</p>`;
-  const [palateRes, statsRes] = await Promise.all([api.palate().catch(() => null), api.stats().catch(() => null)]);
+  const [palateRes, statsRes, wineRes] = await Promise.all([
+    api.palate().catch(() => null),
+    api.stats().catch(() => null),
+    api.winePalate().catch(() => null)
+  ]);
+  const wineVarietals = wineRes ? Object.keys(wineRes.byVarietal || {}) : [];
 
   const barRow = ([tag, v], positive) => `
     <div style="margin-bottom:10px">
@@ -34,6 +39,14 @@ export async function renderProfile() {
 
     ${!palateRes || (!palateRes.topPositive?.length && !palateRes.topNegative?.length) ? `<div class="card"><p class="field-hint">Log a few pours and your flavor affinities will start showing up here, each with a confidence level based on how many tastings back it up.</p></div>` : ""}
 
+    ${wineVarietals.length ? `
+    <div class="section-title"><h2>Wine</h2></div>
+    <div class="card">
+      <p class="field-hint">Wine is profiled separately per varietal, since preferences don't carry across grapes.</p>
+      <p style="margin:8px 0 10px;font-size:13.5px">${wineVarietals.map((v) => escapeHtml(v.replace(/_/g, " "))).join(" · ")}</p>
+      <button class="btn btn-secondary btn-sm" data-action="open-wine">Open wine palate</button>
+    </div>` : ""}
+
     ${statsRes ? `
     <div class="section-title"><h2>Statistics</h2></div>
     <div class="card">
@@ -55,4 +68,9 @@ export async function renderProfile() {
       </div>
     </div>
   `;
+
+  const wineBtn = view.querySelector("[data-action='open-wine']");
+  if (wineBtn) wineBtn.addEventListener("click", () => {
+    document.dispatchEvent(new CustomEvent("pourprofile:navigate", { detail: { view: "wine" } }));
+  });
 }

@@ -264,6 +264,29 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--amber); out
 
 .insight-card { background: linear-gradient(160deg, var(--amber-tint), var(--paper)); border: 1px solid var(--border-soft); }
 
+.profile-chip {
+  display: inline-flex; align-items: center; gap: 4px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--paper); color: var(--charcoal);
+  padding: 8px 12px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.profile-chip:active { background: var(--paper-sunk); }
+
+.wine-dim { padding: 10px 0; border-bottom: 1px solid var(--border-soft); }
+.wine-dim:last-child { border-bottom: none; }
+.wine-dim-unknown { opacity: 0.72; }
+.wine-dim-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 13.5px; font-weight: 600; gap: 10px; }
+.wine-dim-conf { color: var(--charcoal-soft); font-weight: 500; font-size: 12px; letter-spacing: 0.5px; }
+.wine-scale {
+  position: relative; height: 8px; border-radius: 999px; margin: 7px 0 3px;
+  background: linear-gradient(90deg, var(--paper-sunk), var(--amber-tint));
+}
+.wine-scale-marker {
+  position: absolute; top: 50%; width: 13px; height: 13px; border-radius: 50%;
+  background: var(--amber-deep); border: 2px solid #fff; transform: translate(-50%, -50%);
+  box-shadow: 0 1px 3px rgba(42,36,30,0.3);
+}
+.wine-scale-ends { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--charcoal-faint); }
+
 .hero-photo {
   position: relative; height: 240px; border-radius: var(--radius-lg); overflow: hidden;
   background: var(--paper-sunk); margin-bottom: 12px; display: flex; align-items: center; justify-content: center;

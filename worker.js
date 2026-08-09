@@ -1,4 +1,5 @@
 import { buildPalateProfile, scoreMatch } from "./palate-engine.js";
+import { scoreWine, learnFromTasting } from "./wine-engine.js";
 
 const JSON_HEADERS = { "Content-Type": "application/json", "Cache-Control": "no-store" };
 
@@ -19,15 +20,21 @@ async function routeApi(request, url, env) {
   const { pathname } = url;
   const method = request.method;
 
+  if (pathname === "/api/profiles" && method === "GET") return listProfiles(env);
+  if (pathname === "/api/wine/palate" && method === "GET") return getWinePalate(url, env);
+  if (pathname === "/api/wine/match" && method === "POST") return postWineMatch(request, url, env);
+  const wineDimMatch = pathname.match(/^\/api\/wine\/dimensions$/);
+  if (wineDimMatch && method === "PUT") return putWineDimension(request, url, env);
+
   if (pathname === "/api/bottles" && method === "GET") return listBottles(url, env);
-  if (pathname === "/api/bottles" && method === "POST") return createBottle(request, env);
+  if (pathname === "/api/bottles" && method === "POST") return createBottle(request, env, url);
   const bottleMatch = pathname.match(/^\/api\/bottles\/(\d+)$/);
-  if (bottleMatch && method === "GET") return getBottle(Number(bottleMatch[1]), env);
-  if (bottleMatch && method === "PATCH") return updateBottle(Number(bottleMatch[1]), request, env);
+  if (bottleMatch && method === "GET") return getBottle(Number(bottleMatch[1]), env, url);
+  if (bottleMatch && method === "PATCH") return updateBottle(Number(bottleMatch[1]), request, env, url);
   if (bottleMatch && method === "DELETE") return deleteBottle(Number(bottleMatch[1]), env);
 
   if (pathname === "/api/tastings" && method === "GET") return listTastings(url, env);
-  if (pathname === "/api/tastings" && method === "POST") return createTasting(request, env);
+  if (pathname === "/api/tastings" && method === "POST") return createTasting(request, env, url);
   const tastingMatch = pathname.match(/^\/api\/tastings\/(\d+)$/);
   if (tastingMatch && method === "PATCH") return updateTasting(Number(tastingMatch[1]), request, env);
   if (tastingMatch && method === "DELETE") return deleteTasting(Number(tastingMatch[1]), env);
@@ -43,8 +50,8 @@ async function routeApi(request, url, env) {
   if (pathname === "/api/flavor-tags" && method === "GET") return listFlavorTags(env);
   if (pathname === "/api/brand-signals" && method === "GET") return listBrandSignals(env);
 
-  if (pathname === "/api/palate" && method === "GET") return getPalateProfile(env);
-  if (pathname === "/api/match" && method === "POST") return postMatch(request, env);
+  if (pathname === "/api/palate" && method === "GET") return getPalateProfile(env, url);
+  if (pathname === "/api/match" && method === "POST") return postMatch(request, env, url);
 
   const photoMatch = pathname.match(/^\/api\/bottles\/(\d+)\/photo$/);
   if (photoMatch && method === "PUT") return putBottlePhoto(Number(photoMatch[1]), request, env);
@@ -56,7 +63,7 @@ async function routeApi(request, url, env) {
   if (barcodeMatch && method === "GET") return lookupBarcode(barcodeMatch[1], env);
 
   if (pathname === "/api/search" && method === "GET") return globalSearch(url, env);
-  if (pathname === "/api/stats" && method === "GET") return getStats(env);
+  if (pathname === "/api/stats" && method === "GET") return getStats(env, url);
 
   if (pathname === "/api/export.json" && method === "GET") return exportJson(env, url);
   if (pathname === "/api/export.csv" && method === "GET") return exportCsv(env);
@@ -99,6 +106,41 @@ async function run(env, sql, ...params) {
   return await stmt.run();
 }
 
+// ---------- profiles ----------
+// Every opinion (status, tasting, palate) belongs to a profile. Bottles themselves
+// are a shared catalog, so Justin and Lady can each hold their own view of the
+// same bottle without their palates contaminating each other.
+
+const DEFAULT_PROFILE_SLUG = "justin";
+
+async function resolveProfileId(url, env) {
+  const slug = (url.searchParams.get("profile") || DEFAULT_PROFILE_SLUG).toLowerCase();
+  const row = await first(env, "SELECT id FROM profiles WHERE slug = ?", slug);
+  if (row) return row.id;
+  const fallback = await first(env, "SELECT id FROM profiles WHERE slug = ?", DEFAULT_PROFILE_SLUG);
+  return fallback ? fallback.id : 1;
+}
+
+async function listProfiles(env) {
+  const profiles = await all(env, "SELECT * FROM profiles ORDER BY id");
+  return json({ profiles });
+}
+
+async function attachStatus(env, bottles, profileId) {
+  if (!bottles.length) return bottles;
+  const ids = bottles.map((b) => b.id);
+  const placeholders = ids.map(() => "?").join(",");
+  const rows = await all(env, `SELECT bottle_id, status_tags FROM bottle_status WHERE profile_id = ? AND bottle_id IN (${placeholders})`, profileId, ...ids);
+  const byBottle = new Map(rows.map((r) => [r.bottle_id, safeParse(r.status_tags, [])]));
+  return bottles.map((b) => ({ ...b, status_tags: byBottle.get(b.id) || [] }));
+}
+
+async function setBottleStatus(env, profileId, bottleId, statusTags) {
+  await run(env, `INSERT INTO bottle_status (profile_id, bottle_id, status_tags, updated_at) VALUES (?,?,?, datetime('now'))
+    ON CONFLICT(profile_id, bottle_id) DO UPDATE SET status_tags = excluded.status_tags, updated_at = datetime('now')`,
+    profileId, bottleId, JSON.stringify(statusTags || []));
+}
+
 async function attachFlavorTags(env, bottles) {
   if (!bottles.length) return bottles;
   const ids = bottles.map((b) => b.id);
@@ -113,17 +155,25 @@ async function attachFlavorTags(env, bottles) {
     if (!byBottle.has(r.bottle_id)) byBottle.set(r.bottle_id, []);
     byBottle.get(r.bottle_id).push(r.name);
   }
-  return bottles.map((b) => ({ ...b, flavor_tags: byBottle.get(b.id) || [], status_tags: safeParse(b.status_tags, []), category_attrs: safeParse(b.category_attrs, {}) }));
+  // status_tags is intentionally NOT set here — it is per-profile, so it comes
+  // from attachStatus() instead of the legacy bottles.status_tags column.
+  return bottles.map((b) => ({
+    ...b,
+    flavor_tags: byBottle.get(b.id) || [],
+    category_attrs: safeParse(b.category_attrs, {}),
+    wine_dimensions: safeParse(b.wine_dimensions, {})
+  }));
 }
 
-async function attachTastingSummary(env, bottles) {
+async function attachTastingSummary(env, bottles, profileId) {
   if (!bottles.length) return bottles;
   const ids = bottles.map((b) => b.id);
   const placeholders = ids.map(() => "?").join(",");
   const rows = await all(
     env,
-    `SELECT bottle_id, AVG(rating) as avg_rating, COUNT(*) as tasting_count, MAX(tasted_at) as last_tasted FROM tastings WHERE bottle_id IN (${placeholders}) GROUP BY bottle_id`,
-    ...ids
+    `SELECT bottle_id, AVG(rating) as avg_rating, COUNT(*) as tasting_count, MAX(tasted_at) as last_tasted
+     FROM tastings WHERE profile_id = ? AND bottle_id IN (${placeholders}) GROUP BY bottle_id`,
+    profileId, ...ids
   );
   const byBottle = new Map(rows.map((r) => [r.bottle_id, r]));
   return bottles.map((b) => {
@@ -141,11 +191,17 @@ async function listBottles(url, env) {
   const sort = url.searchParams.get("sort") || "newest";
   const distilleryId = url.searchParams.get("distillery_id");
 
-  let sql = "SELECT b.*, d.name as distillery_name, d.city as distillery_city, d.state_region as distillery_state, d.country as distillery_country FROM bottles b LEFT JOIN distilleries d ON d.id = b.distillery_id WHERE 1=1";
+  const profileId = await resolveProfileId(url, env);
+  const varietal = url.searchParams.get("varietal");
+
+  let sql = `SELECT b.*, d.name as distillery_name, d.city as distillery_city, d.state_region as distillery_state, d.country as distillery_country
+             FROM bottles b LEFT JOIN distilleries d ON d.id = b.distillery_id WHERE 1=1`;
   const params = [];
   if (distilleryId) { sql += " AND b.distillery_id = ?"; params.push(Number(distilleryId)); }
   if (category) { sql += " AND b.category = ?"; params.push(category); }
-  if (status) { sql += " AND b.status_tags LIKE ?"; params.push(`%"${status}"%`); }
+  if (varietal) { sql += " AND b.varietal = ?"; params.push(varietal); }
+  // Status lives per profile, so filter through bottle_status rather than the bottle row.
+  if (status) { sql += " AND EXISTS (SELECT 1 FROM bottle_status bs WHERE bs.bottle_id = b.id AND bs.profile_id = ? AND bs.status_tags LIKE ?)"; params.push(profileId, `%"${status}"%`); }
   if (q) { sql += " AND (b.name LIKE ? OR b.brand LIKE ? OR b.expression LIKE ?)"; params.push(`%${q}%`, `%${q}%`, `%${q}%`); }
   sql += {
     newest: " ORDER BY b.created_at DESC",
@@ -156,27 +212,39 @@ async function listBottles(url, env) {
 
   let bottles = await all(env, sql, ...params);
   bottles = await attachFlavorTags(env, bottles);
-  bottles = await attachTastingSummary(env, bottles);
+  bottles = await attachStatus(env, bottles, profileId);
+  bottles = await attachTastingSummary(env, bottles, profileId);
 
   if (sort === "highest_rated") bottles.sort((a, b) => (b.avg_rating || -1) - (a.avg_rating || -1));
 
-  const profile = await computeProfile(env);
+  const profile = await computeProfile(env, profileId);
   const brandSignals = await all(env, "SELECT brand, sentiment FROM brand_signals");
-  bottles = bottles.map((b) => ({ ...b, palate_match: matchForBottle(b, profile, brandSignals, []).matchPercent }));
-  if (sort === "highest_match") bottles.sort((a, b) => b.palate_match - a.palate_match);
+  const wineRows = await all(env, "SELECT * FROM wine_palate_dimensions WHERE profile_id = ?", profileId);
+  const wineRefs = await likedWineReferences(env, profileId);
+
+  bottles = bottles.map((b) => {
+    if (b.category === "wine") {
+      const r = scoreWine({ varietal: b.varietal, dimensions: b.wine_dimensions }, wineRows, wineRefs);
+      return { ...b, palate_match: r.score, match_band: r.band.label };
+    }
+    return { ...b, palate_match: matchForBottle(b, profile, brandSignals, []).matchPercent };
+  });
+  if (sort === "highest_match") bottles.sort((a, b) => (b.palate_match ?? -1) - (a.palate_match ?? -1));
 
   return json({ bottles });
 }
 
-async function getBottle(id, env) {
+async function getBottle(id, env, url) {
+  const profileId = url ? await resolveProfileId(url, env) : 1;
   const bottle = await first(env, "SELECT b.*, d.name as distillery_name, d.city as distillery_city, d.state_region as distillery_state, d.country as distillery_country, d.lat as distillery_lat, d.lon as distillery_lon, d.is_sourced_whiskey, d.confidence as distillery_confidence, d.notes as distillery_notes FROM bottles b LEFT JOIN distilleries d ON d.id = b.distillery_id WHERE b.id = ?", id);
   if (!bottle) return json({ error: "Not found" }, 404);
-  const [withTags] = await attachFlavorTags(env, [bottle]);
+  let [withTags] = await attachFlavorTags(env, [bottle]);
+  [withTags] = await attachStatus(env, [withTags], profileId);
   const tastings = await all(
     env,
     `SELECT t.*, v.name as venue_name, v.city as venue_city, v.state_region as venue_state, v.lat as venue_lat, v.lon as venue_lon, v.is_private as venue_is_private
-     FROM tastings t LEFT JOIN venues v ON v.id = t.venue_id WHERE t.bottle_id = ? ORDER BY t.tasted_at DESC, t.id DESC`,
-    id
+     FROM tastings t LEFT JOIN venues v ON v.id = t.venue_id WHERE t.bottle_id = ? AND t.profile_id = ? ORDER BY t.tasted_at DESC, t.id DESC`,
+    id, profileId
   );
   const tastingIds = tastings.map((t) => t.id);
   let tagsByTasting = new Map();
@@ -190,25 +258,38 @@ async function getBottle(id, env) {
   }
   const fullTastings = tastings.map((t) => ({ ...t, flavor_tags: tagsByTasting.get(t.id) || [] }));
 
-  const profile = await computeProfile(env);
+  const profile = await computeProfile(env, profileId);
   const brandSignals = await all(env, "SELECT brand, sentiment FROM brand_signals");
-  const liked = await all(env, "SELECT id, name, category, status_tags FROM bottles WHERE status_tags LIKE '%favorite%' OR status_tags LIKE '%\"like\"%'");
-  const disliked = await all(env, "SELECT id, name, category, status_tags FROM bottles WHERE status_tags LIKE '%dislike%' OR status_tags LIKE '%avoid%'");
+  const liked = await all(env, "SELECT b.id, b.name, b.category, bs.status_tags FROM bottles b JOIN bottle_status bs ON bs.bottle_id = b.id WHERE bs.profile_id = ? AND (bs.status_tags LIKE '%favorite%' OR bs.status_tags LIKE '%\"like\"%' OR bs.status_tags LIKE '%love%')", profileId);
+  const disliked = await all(env, "SELECT b.id, b.name, b.category, bs.status_tags FROM bottles b JOIN bottle_status bs ON bs.bottle_id = b.id WHERE bs.profile_id = ? AND (bs.status_tags LIKE '%dislike%' OR bs.status_tags LIKE '%avoid%' OR bs.status_tags LIKE '%hate%')", profileId);
   const likedWithTags = await attachFlavorTags(env, liked);
   const dislikedWithTags = await attachFlavorTags(env, disliked);
-  const match = scoreMatch({ flavorTags: withTags.flavor_tags, proof: withTags.proof, brand: withTags.brand, category: withTags.category }, profile, brandSignals, likedWithTags.filter((b) => b.id !== id), dislikedWithTags.filter((b) => b.id !== id));
 
-  return json({ bottle: withTags, tastings: fullTastings, match });
+  // Wine uses the per-varietal dimensional engine; everything else uses the
+  // spirits tag-affinity engine. They are not interchangeable.
+  let match, wineMatch = null;
+  if (withTags.category === "wine") {
+    const wineRows = await all(env, "SELECT * FROM wine_palate_dimensions WHERE profile_id = ?", profileId);
+    const refs = (await likedWineReferences(env, profileId)).filter((w) => w.id !== id);
+    wineMatch = scoreWine({ varietal: withTags.varietal, dimensions: withTags.wine_dimensions }, wineRows, refs);
+    match = { matchPercent: wineMatch.score, confidenceLevel: wineMatch.confidenceLevel, decision: wineMatch.band.label, whyItFits: [], possibleConcerns: [], similarToLiked: [], differentFromDisliked: [] };
+  } else {
+    match = scoreMatch({ flavorTags: withTags.flavor_tags, proof: withTags.proof, brand: withTags.brand, category: withTags.category }, profile, brandSignals, likedWithTags.filter((b) => b.id !== id), dislikedWithTags.filter((b) => b.id !== id));
+  }
+
+  return json({ bottle: withTags, tastings: fullTastings, match, wineMatch });
 }
 
 function matchForBottle(bottle, profile, brandSignals, likedBottles) {
   return scoreMatch({ flavorTags: bottle.flavor_tags || [], proof: bottle.proof, brand: bottle.brand, category: bottle.category }, profile, brandSignals, likedBottles, []);
 }
 
-async function computeProfile(env) {
-  const bottles = await all(env, "SELECT id, status_tags FROM bottles");
-  const bottlesWithTags = await attachFlavorTags(env, bottles);
-  const tastings = await all(env, "SELECT id, bottle_id, rating, would_drink_again, would_order_again, would_buy_bottle FROM tastings");
+async function computeProfile(env, profileId) {
+  // Scoped to one profile: pooling two people's ratings would corrupt both palates.
+  const bottles = await all(env, `SELECT b.id, COALESCE(bs.status_tags, '[]') as status_tags
+    FROM bottles b LEFT JOIN bottle_status bs ON bs.bottle_id = b.id AND bs.profile_id = ?`, profileId);
+  const bottlesWithTags = (await attachFlavorTags(env, bottles)).map((b) => ({ ...b, status_tags: safeParse(b.status_tags, []) }));
+  const tastings = await all(env, "SELECT id, bottle_id, rating, would_drink_again, would_order_again, would_buy_bottle FROM tastings WHERE profile_id = ?", profileId);
   const tastingIds = tastings.map((t) => t.id);
   let tagsByTasting = new Map();
   if (tastingIds.length) {
@@ -230,19 +311,22 @@ function fieldsFromBody(b) {
   return out;
 }
 
-async function createBottle(request, env) {
+async function createBottle(request, env, url) {
+  const profileId = url ? await resolveProfileId(url, env) : 1;
   const b = await body(request);
   if (!b.name) return json({ error: "name is required" }, 400);
   const f = fieldsFromBody(b);
   const cols = Object.keys(f);
-  const statusTags = JSON.stringify(b.status_tags || []);
   const categoryAttrs = JSON.stringify(b.category_attrs || {});
+  const wineDimensions = JSON.stringify(b.wine_dimensions || {});
   const dataSource = b.data_source || "manual";
-  const sql = `INSERT INTO bottles (${cols.join(",")}, status_tags, category_attrs, data_source, source_confidence) VALUES (${cols.map(() => "?").join(",")}, ?, ?, ?, ?)`;
-  const res = await run(env, sql, ...cols.map((c) => f[c]), statusTags, categoryAttrs, dataSource, b.source_confidence || "medium");
+  const sql = `INSERT INTO bottles (${cols.join(",")}, status_tags, category_attrs, wine_dimensions, data_source, source_confidence) VALUES (${cols.map(() => "?").join(",")}, ?, ?, ?, ?, ?)`;
+  const res = await run(env, sql, ...cols.map((c) => f[c]), "[]", categoryAttrs, wineDimensions, dataSource, b.source_confidence || "medium");
   const id = res.meta.last_row_id;
   if (Array.isArray(b.flavor_tags) && b.flavor_tags.length) await setBottleFlavorTags(env, id, b.flavor_tags);
-  return getBottle(id, env);
+  // Status belongs to the profile that created it, not to the shared bottle row.
+  await setBottleStatus(env, profileId, id, b.status_tags || []);
+  return getBottle(id, env, url);
 }
 
 async function setBottleFlavorTags(env, bottleId, tagNames) {
@@ -253,7 +337,8 @@ async function setBottleFlavorTags(env, bottleId, tagNames) {
   }
 }
 
-async function updateBottle(id, request, env) {
+async function updateBottle(id, request, env, url) {
+  const profileId = url ? await resolveProfileId(url, env) : 1;
   const existing = await first(env, "SELECT * FROM bottles WHERE id = ?", id);
   if (!existing) return json({ error: "Not found" }, 404);
   const b = await body(request);
@@ -262,15 +347,16 @@ async function updateBottle(id, request, env) {
   const setClauses = [];
   const params = [];
   for (const [k, v] of Object.entries(f)) { setClauses.push(`${k} = ?`); params.push(v); editedFields.add(k); }
-  if (b.status_tags) { setClauses.push("status_tags = ?"); params.push(JSON.stringify(b.status_tags)); }
   if (b.category_attrs) { setClauses.push("category_attrs = ?"); params.push(JSON.stringify(b.category_attrs)); }
+  if (b.wine_dimensions) { setClauses.push("wine_dimensions = ?"); params.push(JSON.stringify(b.wine_dimensions)); }
   setClauses.push("user_edited_fields = ?"); params.push(JSON.stringify([...editedFields]));
   setClauses.push("updated_at = datetime('now')");
   if (setClauses.length) {
     await run(env, `UPDATE bottles SET ${setClauses.join(", ")} WHERE id = ?`, ...params, id);
   }
   if (Array.isArray(b.flavor_tags)) await setBottleFlavorTags(env, id, b.flavor_tags);
-  return getBottle(id, env);
+  if (b.status_tags) await setBottleStatus(env, profileId, id, b.status_tags);
+  return getBottle(id, env, url);
 }
 
 async function deleteBottle(id, env) {
@@ -288,9 +374,10 @@ async function deleteBottle(id, env) {
 
 async function listTastings(url, env) {
   const bottleId = url.searchParams.get("bottle_id");
-  let sql = "SELECT t.*, b.name as bottle_name, v.name as venue_name FROM tastings t JOIN bottles b ON b.id = t.bottle_id LEFT JOIN venues v ON v.id = t.venue_id";
-  const params = [];
-  if (bottleId) { sql += " WHERE t.bottle_id = ?"; params.push(Number(bottleId)); }
+  const profileId = await resolveProfileId(url, env);
+  let sql = "SELECT t.*, b.name as bottle_name, v.name as venue_name FROM tastings t JOIN bottles b ON b.id = t.bottle_id LEFT JOIN venues v ON v.id = t.venue_id WHERE t.profile_id = ?";
+  const params = [profileId];
+  if (bottleId) { sql += " AND t.bottle_id = ?"; params.push(Number(bottleId)); }
   sql += " ORDER BY t.tasted_at DESC, t.id DESC";
   const tastings = await all(env, sql, ...params);
   return json({ tastings });
@@ -318,18 +405,38 @@ async function resolveVenue(env, b) {
   return null;
 }
 
-async function createTasting(request, env) {
+async function createTasting(request, env, url) {
+  const profileId = url ? await resolveProfileId(url, env) : 1;
   const b = await body(request);
   if (!b.bottle_id) return json({ error: "bottle_id is required" }, 400);
   const venueId = await resolveVenue(env, b);
   const f = tastingFieldsFromBody(b);
   f.venue_id = venueId;
+  f.profile_id = profileId;
   const cols = Object.keys(f);
   const res = await run(env, `INSERT INTO tastings (${cols.join(",")}, data_source) VALUES (${cols.map(() => "?").join(",")}, ?)`, ...cols.map((c) => f[c]), "user");
   const id = res.meta.last_row_id;
   if (Array.isArray(b.flavor_tags) && b.flavor_tags.length) await setTastingFlavorTags(env, id, b.flavor_tags);
+
+  // For wine, a rated tasting is evidence: fold it back into the per-varietal
+  // dimensional profile. Returned to the caller so the UI can show what moved.
+  let palateUpdates = [];
+  const bottle = await first(env, "SELECT category, varietal FROM bottles WHERE id = ?", b.bottle_id);
+  if (bottle && bottle.category === "wine" && b.rating != null && b.wine_dimensions) {
+    const rows = await all(env, "SELECT * FROM wine_palate_dimensions WHERE profile_id = ?", profileId);
+    palateUpdates = learnFromTasting({ rating: b.rating, dimensions: b.wine_dimensions }, rows, bottle.varietal);
+    for (const u of palateUpdates) {
+      await run(env, `INSERT INTO wine_palate_dimensions (profile_id, varietal, dimension, target_value, confidence, notes, source, updated_at)
+        VALUES (?,?,?,?,?,?, 'learned', datetime('now'))
+        ON CONFLICT(profile_id, varietal, dimension) DO UPDATE SET
+          target_value = excluded.target_value, confidence = excluded.confidence,
+          source = 'learned', updated_at = datetime('now')`,
+        profileId, u.varietal, u.dimension, u.target_value, u.confidence, u.reason);
+    }
+  }
+
   const tasting = await first(env, "SELECT * FROM tastings WHERE id = ?", id);
-  return json({ tasting });
+  return json({ tasting, palateUpdates });
 }
 
 async function setTastingFlavorTags(env, tastingId, tagNames) {
@@ -423,18 +530,20 @@ async function listBrandSignals(env) {
 
 // ---------- palate / match ----------
 
-async function getPalateProfile(env) {
-  const profile = await computeProfile(env);
+async function getPalateProfile(env, url) {
+  const profileId = await resolveProfileId(url, env);
+  const profile = await computeProfile(env, profileId);
   const entries = Object.entries(profile).sort((a, b) => b[1].affinity - a[1].affinity);
   return json({ profile: Object.fromEntries(entries), topPositive: entries.filter(([, v]) => v.affinity >= 60).slice(0, 10), topNegative: entries.filter(([, v]) => v.affinity <= 40).slice(0, 10) });
 }
 
-async function postMatch(request, env) {
+async function postMatch(request, env, url) {
+  const profileId = await resolveProfileId(url, env);
   const b = await body(request);
-  const profile = await computeProfile(env);
+  const profile = await computeProfile(env, profileId);
   const brandSignals = await all(env, "SELECT brand, sentiment FROM brand_signals");
-  const liked = await attachFlavorTags(env, await all(env, "SELECT id, name, category, status_tags FROM bottles WHERE status_tags LIKE '%favorite%' OR status_tags LIKE '%\"like\"%'"));
-  const disliked = await attachFlavorTags(env, await all(env, "SELECT id, name, category, status_tags FROM bottles WHERE status_tags LIKE '%dislike%' OR status_tags LIKE '%avoid%'"));
+  const liked = await attachFlavorTags(env, await all(env, "SELECT b.id, b.name, b.category, bs.status_tags FROM bottles b JOIN bottle_status bs ON bs.bottle_id = b.id WHERE bs.profile_id = ? AND (bs.status_tags LIKE '%favorite%' OR bs.status_tags LIKE '%\"like\"%' OR bs.status_tags LIKE '%love%')", profileId));
+  const disliked = await attachFlavorTags(env, await all(env, "SELECT b.id, b.name, b.category, bs.status_tags FROM bottles b JOIN bottle_status bs ON bs.bottle_id = b.id WHERE bs.profile_id = ? AND (bs.status_tags LIKE '%dislike%' OR bs.status_tags LIKE '%avoid%' OR bs.status_tags LIKE '%hate%')", profileId));
 
   let candidate = b.candidate;
   if (!candidate && b.bottleId) {
@@ -447,6 +556,61 @@ async function postMatch(request, env) {
 
   const match = scoreMatch(candidate, profile, brandSignals, liked, disliked);
   return json({ match });
+}
+
+// ---------- wine ----------
+
+// Wines this profile has marked positively, used for the "similarity to known
+// favorites" subscore. Only wines with recorded dimensions are useful here.
+async function likedWineReferences(env, profileId) {
+  const rows = await all(env, `SELECT b.id, b.name, b.varietal, b.wine_dimensions
+    FROM bottles b JOIN bottle_status bs ON bs.bottle_id = b.id
+    WHERE bs.profile_id = ? AND b.category = 'wine'
+      AND (bs.status_tags LIKE '%love%' OR bs.status_tags LIKE '%"like"%' OR bs.status_tags LIKE '%favorite%')`, profileId);
+  return rows.map((r) => ({ id: r.id, name: r.name, varietal: r.varietal, dimensions: safeParse(r.wine_dimensions, {}) }));
+}
+
+async function getWinePalate(url, env) {
+  const profileId = await resolveProfileId(url, env);
+  const rows = await all(env, "SELECT * FROM wine_palate_dimensions WHERE profile_id = ? ORDER BY varietal, dimension", profileId);
+  const byVarietal = {};
+  for (const r of rows) {
+    (byVarietal[r.varietal] = byVarietal[r.varietal] || []).push(r);
+  }
+  // How many rated wines back each varietal, so the UI can be honest about depth.
+  const counts = await all(env, `SELECT b.varietal, COUNT(t.id) as rated_count
+    FROM tastings t JOIN bottles b ON b.id = t.bottle_id
+    WHERE t.profile_id = ? AND t.rating IS NOT NULL AND b.category = 'wine'
+    GROUP BY b.varietal`, profileId);
+  return json({ byVarietal, ratedCounts: Object.fromEntries(counts.map((c) => [c.varietal, c.rated_count])) });
+}
+
+async function postWineMatch(request, url, env) {
+  const profileId = await resolveProfileId(url, env);
+  const b = await body(request);
+  let candidate = b.candidate;
+  if (!candidate && b.bottleId) {
+    const bottle = await first(env, "SELECT varietal, wine_dimensions FROM bottles WHERE id = ?", b.bottleId);
+    if (!bottle) return json({ error: "bottle not found" }, 404);
+    candidate = { varietal: bottle.varietal, dimensions: safeParse(bottle.wine_dimensions, {}) };
+  }
+  if (!candidate) return json({ error: "candidate or bottleId required" }, 400);
+  const rows = await all(env, "SELECT * FROM wine_palate_dimensions WHERE profile_id = ?", profileId);
+  const refs = await likedWineReferences(env, profileId);
+  return json({ match: scoreWine(candidate, rows, refs) });
+}
+
+async function putWineDimension(request, url, env) {
+  const profileId = await resolveProfileId(url, env);
+  const b = await body(request);
+  if (!b.varietal || !b.dimension) return json({ error: "varietal and dimension are required" }, 400);
+  await run(env, `INSERT INTO wine_palate_dimensions (profile_id, varietal, dimension, target_value, confidence, notes, source, updated_at)
+    VALUES (?,?,?,?,?,?,?, datetime('now'))
+    ON CONFLICT(profile_id, varietal, dimension) DO UPDATE SET
+      target_value = excluded.target_value, confidence = excluded.confidence,
+      notes = excluded.notes, source = excluded.source, updated_at = datetime('now')`,
+    profileId, b.varietal, b.dimension, b.target_value ?? null, b.confidence ?? 0, b.notes || null, b.source || "manual");
+  return json({ ok: true });
 }
 
 // ---------- bottle photos ----------
@@ -571,14 +735,15 @@ async function globalSearch(url, env) {
 
 // ---------- stats ----------
 
-async function getStats(env) {
+async function getStats(env, url) {
+  const profileId = await resolveProfileId(url, env);
   const [bottleCount] = await all(env, "SELECT COUNT(*) as n FROM bottles");
-  const [tastingCount] = await all(env, "SELECT COUNT(*) as n FROM tastings WHERE rating IS NOT NULL");
+  const [tastingCount] = await all(env, "SELECT COUNT(*) as n FROM tastings WHERE rating IS NOT NULL AND profile_id = ?", profileId);
   const [distilleryCount] = await all(env, "SELECT COUNT(DISTINCT distillery_id) as n FROM bottles WHERE distillery_id IS NOT NULL");
   const [stateCount] = await all(env, "SELECT COUNT(DISTINCT origin_state) as n FROM bottles WHERE origin_state IS NOT NULL");
   const [countryCount] = await all(env, "SELECT COUNT(DISTINCT origin_country) as n FROM bottles WHERE origin_country IS NOT NULL");
-  const topVenues = await all(env, `SELECT v.name, COUNT(t.id) as tasting_count, AVG(t.rating) as avg_rating FROM tastings t JOIN venues v ON v.id = t.venue_id GROUP BY v.id ORDER BY tasting_count DESC LIMIT 5`);
-  const topStates = await all(env, `SELECT origin_state, AVG(avg_rating) as avg_rating, COUNT(*) as n FROM (SELECT b.origin_state, b.id, AVG(t.rating) as avg_rating FROM bottles b JOIN tastings t ON t.bottle_id = b.id WHERE t.rating IS NOT NULL AND b.origin_state IS NOT NULL GROUP BY b.id) GROUP BY origin_state ORDER BY avg_rating DESC LIMIT 5`);
+  const topVenues = await all(env, `SELECT v.name, COUNT(t.id) as tasting_count, AVG(t.rating) as avg_rating FROM tastings t JOIN venues v ON v.id = t.venue_id WHERE t.profile_id = ? GROUP BY v.id ORDER BY tasting_count DESC LIMIT 5`, profileId);
+  const topStates = await all(env, `SELECT origin_state, AVG(avg_rating) as avg_rating, COUNT(*) as n FROM (SELECT b.origin_state, b.id, AVG(t.rating) as avg_rating FROM bottles b JOIN tastings t ON t.bottle_id = b.id WHERE t.rating IS NOT NULL AND b.origin_state IS NOT NULL AND t.profile_id = ? GROUP BY b.id) GROUP BY origin_state ORDER BY avg_rating DESC LIMIT 5`, profileId);
   return json({
     bottleCount: bottleCount.n, tastingCount: tastingCount.n, distilleryCount: distilleryCount.n,
     stateCount: stateCount.n, countryCount: countryCount.n, topVenues, topStates

@@ -1,5 +1,5 @@
 import { el, closeSheet, toast, escapeHtml } from "./ui.js";
-import { api, flushQueue, pendingQueueCount } from "./api.js";
+import { api, flushQueue, pendingQueueCount, getActiveProfile, setActiveProfile } from "./api.js";
 import { renderHome, wireHomeActions } from "./view-home.js";
 import { renderSpirits } from "./view-spirits.js";
 import { renderScan, stopScan } from "./view-scan.js";
@@ -8,12 +8,13 @@ import { renderMapView } from "./view-map.js";
 import { renderProfile } from "./view-profile.js";
 import { renderBottleDetail } from "./view-bottle.js";
 import { renderCompare } from "./view-compare.js";
+import { renderWinePalate } from "./view-wine-palate.js";
 
 const NAV_VIEWS = ["home", "spirits", "scan", "discover", "profile"];
 const TITLES = {
   home: ["Pour Profile", "Home"], spirits: ["Your Collection", "My Spirits"], scan: ["Add a Bottle", "Scan"],
   discover: ["Recommendations", "Discover"], map: ["Geographic Journal", "Map"], profile: ["Your Palate", "Profile"],
-  bottle: ["Bottle", ""], compare: ["Comparison", "Compare"]
+  bottle: ["Bottle", ""], compare: ["Comparison", "Compare"], wine: ["Wine Palate", "Wine"]
 };
 
 let currentView = "home";
@@ -44,6 +45,7 @@ async function navigate(view, param) {
   if (view === "profile") return renderProfile();
   if (view === "bottle") return renderBottleDetail(param, navigate);
   if (view === "compare") return renderCompare(navigate);
+  if (view === "wine") return renderWinePalate();
 }
 
 function wireNav() {
@@ -107,6 +109,48 @@ function renderSearchResults(results) {
   return sections.join("") || `<p class="field-hint">No matches.</p>`;
 }
 
+async function wireProfileSwitcher() {
+  const chip = el("profileChip");
+  let profiles = [];
+  try {
+    const res = await api.profiles();
+    profiles = res.profiles || [];
+  } catch { /* offline: keep whatever is cached in the chip */ }
+
+  const paint = () => {
+    const active = profiles.find((p) => p.slug === getActiveProfile());
+    el("profileChipName").textContent = active ? active.display_name : getActiveProfile();
+  };
+  paint();
+
+  chip.addEventListener("click", async () => {
+    const { openSheet } = await import("./ui.js");
+    openSheet(`
+      <div class="sheet-header"><h2>Whose palate?</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
+      <p class="field-hint">Bottles are shared, but ratings, statuses, and palate models are kept completely separate per person.</p>
+      <div style="margin-top:12px">
+        ${profiles.map((p) => `
+          <button type="button" class="btn ${p.slug === getActiveProfile() ? "btn-primary" : "btn-secondary"} btn-block" data-pick-profile="${escapeHtml(p.slug)}" style="margin-bottom:8px;justify-content:space-between">
+            <span>${escapeHtml(p.display_name)}</span>
+            <span style="font-size:12px;font-weight:500;opacity:0.8">${escapeHtml(p.focus === "wine" ? "Wine" : p.focus === "spirits" ? "Spirits" : "Spirits & Wine")}</span>
+          </button>`).join("")}
+      </div>
+    `, {
+      onOpen: () => {
+        document.querySelectorAll("[data-pick-profile]").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            setActiveProfile(btn.dataset.pickProfile);
+            paint();
+            closeSheet();
+            toast(`Switched to ${el("profileChipName").textContent}.`);
+            navigate(currentView);
+          });
+        });
+      }
+    });
+  });
+}
+
 function wireOfflineBanner() {
   const banner = el("offlineBanner");
   const update = () => {
@@ -133,6 +177,7 @@ function registerServiceWorker() {
 }
 
 wireNav();
+wireProfileSwitcher();
 wireGlobalDelegation();
 wireSearch();
 wireHomeActions(navigate);

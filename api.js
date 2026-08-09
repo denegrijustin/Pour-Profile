@@ -45,7 +45,25 @@ export function downscaleImage(file, maxDimension = 700, quality = 0.72) {
   });
 }
 
+// ---------- active profile ----------
+// Every opinion in this app belongs to a person. The active profile is appended
+// to every API call so Justin's spirits palate and Lady's wine palate never mix.
+const PROFILE_KEY = "pourProfile.activeProfile";
+let activeProfile = localStorage.getItem(PROFILE_KEY) || "justin";
+
+export function getActiveProfile() { return activeProfile; }
+export function setActiveProfile(slug) {
+  activeProfile = slug;
+  try { localStorage.setItem(PROFILE_KEY, slug); } catch { /* ignore */ }
+}
+
+function withProfile(path) {
+  const sep = path.includes("?") ? "&" : "?";
+  return `${path}${sep}profile=${encodeURIComponent(activeProfile)}`;
+}
+
 async function request(path, options = {}) {
+  path = withProfile(path);
   const method = options.method || "GET";
   try {
     const res = await fetch(path, {
@@ -96,6 +114,11 @@ export const api = {
 
   palate: () => request("/api/palate"),
   match: (payload) => request("/api/match", { method: "POST", body: payload }),
+
+  profiles: () => request("/api/profiles"),
+  winePalate: () => request("/api/wine/palate"),
+  wineMatch: (payload) => request("/api/wine/match", { method: "POST", body: payload }),
+  putWineDimension: (payload) => request("/api/wine/dimensions", { method: "PUT", body: payload }),
 
   barcode: (code) => request(`/api/barcode/${encodeURIComponent(code)}`),
   search: (q) => request(`/api/search?${new URLSearchParams({ q })}`),
