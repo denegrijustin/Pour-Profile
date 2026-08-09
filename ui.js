@@ -86,7 +86,7 @@ export function whyConcernsHtml(match) {
 
 export function bottleThumbHtml(bottle) {
   if (bottle.image_url) return `<img src="${escapeHtml(bottle.image_url)}" alt="${escapeHtml(bottle.name)} bottle" loading="lazy">`;
-  return `<span aria-hidden="true">🥃</span>`;
+  return `<span aria-hidden="true">${bottle.category === "wine" ? "🍷" : "🥃"}</span>`;
 }
 
 export function bottleCardHtml(bottle) {

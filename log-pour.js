@@ -1,10 +1,13 @@
 import { api } from "./api.js";
 import { openSheet, closeSheet, toast, escapeHtml, ratingPickerHtml, flavorTagPickerHtml } from "./ui.js";
 import { SERVING_STYLES, VENUE_TYPES } from "./spirit-taxonomy.js";
+import { dimensionSlidersHtml, wireDimensionSliders, wineStatusPickerHtml, wireWineStatusPicker } from "./wine-form.js";
 
 let selectedRating = null;
 let selectedTags = [];
 let selectedBottle = null;
+let wineDims = null;
+let winStatus = null;
 let flavorTagsCache = null;
 
 async function getFlavorTags() {
@@ -35,9 +38,9 @@ export async function openBottlePickerSheet() {
           if (q.length < 2) { results.innerHTML = ""; return; }
           const res = await api.bottles({ q });
           results.innerHTML = (res.bottles || []).slice(0, 8).map((b) => `
-            <div class="bottle-row" data-pick-bottle='${escapeHtml(JSON.stringify({ id: b.id, name: b.name, brand: b.brand }))}'>
-              <div class="thumb-sm">🥃</div>
-              <div class="info"><div class="name">${escapeHtml(b.name)}</div><div class="sub">${escapeHtml(b.brand || "")}</div></div>
+            <div class="bottle-row" data-pick-bottle='${escapeHtml(JSON.stringify({ id: b.id, name: b.name, brand: b.brand, category: b.category, varietal: b.varietal, wine_dimensions: b.wine_dimensions || {}, status_tags: b.status_tags || [] }))}'>
+              <div class="thumb-sm">${b.category === "wine" ? "🍷" : "🥃"}</div>
+              <div class="info"><div class="name">${escapeHtml(b.name)}</div><div class="sub">${escapeHtml([b.brand, b.category === "wine" ? "Wine" : null].filter(Boolean).join(" · "))}</div></div>
             </div>`).join("") || `<p class="field-hint">No matches — try New Bottle below.</p>`;
         }, 220);
       });
@@ -60,6 +63,7 @@ export async function openLogPourSheet(bottle, { onSaved } = {}) {
   selectedTags = [];
   selectedBottle = bottle;
   const tags = await getFlavorTags();
+  const isWine = bottle.category === "wine";
 
   openSheet(`
     <div class="sheet-header"><h2>Log a Pour</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
@@ -70,6 +74,16 @@ export async function openLogPourSheet(bottle, { onSaved } = {}) {
 
     <label>Rating (required)</label>
     <div id="pourRatingPicker">${ratingPickerHtml(null)}</div>
+
+    ${isWine ? `
+    <label style="margin-top:16px">How did it land?</label>
+    ${wineStatusPickerHtml(bottle.status_tags || [])}
+
+    <details style="margin-top:14px" open>
+      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--amber-deep)">Describe the wine (drives your palate model)</summary>
+      <p class="field-hint" style="margin-top:6px">Only set the ones you're confident about — anything you skip is treated as unknown, not average.</p>
+      <div id="wineDims">${dimensionSlidersHtml(bottle.wine_dimensions || {})}</div>
+    </details>` : ""}
 
     <details style="margin-top:16px">
       <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--amber-deep)">Add more detail (optional)</summary>
@@ -149,6 +163,9 @@ function wireSheet() {
     });
   });
 
+  wineDims = document.getElementById("wineDims") ? wireDimensionSliders(document) : null;
+  winStatus = document.getElementById("wineStatusPicker") ? wireWineStatusPicker(document, selectedBottle.status_tags || []) : null;
+
   document.getElementById("pourSaveBtn").addEventListener("click", savePour);
 }
 
@@ -176,10 +193,18 @@ async function savePour() {
       is_private: document.getElementById("pourVenuePrivate").dataset.on === "1"
     };
   }
+  if (wineDims) payload.wine_dimensions = wineDims.get();
   try {
+    if (winStatus) {
+      const statuses = winStatus.get();
+      if (statuses.length) await api.updateBottle(selectedBottle.id, { status_tags: [...new Set(["tried", ...statuses])] });
+    }
     const res = await api.createTasting(payload);
     closeSheet();
-    toast(res.queued ? "Saved offline — will sync when you're back online." : "Pour logged.");
+    const moved = res.palateUpdates && res.palateUpdates.length;
+    toast(res.queued
+      ? "Saved offline — will sync when you're back online."
+      : moved ? `Logged — palate updated on ${moved} dimension${moved === 1 ? "" : "s"}.` : "Pour logged.");
     document.dispatchEvent(new CustomEvent("pourprofile:refresh"));
   } catch (err) {
     toast(`Couldn't save: ${err.message}`);

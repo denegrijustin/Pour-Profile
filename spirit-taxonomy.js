@@ -15,6 +15,7 @@ export const CATEGORIES = [
   { id: "cognac", label: "Cognac" },
   { id: "armagnac", label: "Armagnac" },
   { id: "cachaca", label: "Cachaça" },
+  { id: "wine", label: "Wine" },
   { id: "other", label: "Other" }
 ];
 

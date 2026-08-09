@@ -5,6 +5,7 @@ import {
 } from "./ui.js";
 import { CATEGORIES, STATUS_TAGS, categoryLabel, titleize } from "./spirit-taxonomy.js";
 import { openLogPourSheet } from "./log-pour.js";
+import { varietalSelectHtml, dimensionSlidersHtml, wireDimensionSliders } from "./wine-form.js";
 
 let currentBottleId = null;
 let currentDispatchNav = () => {};
@@ -21,7 +22,18 @@ export async function renderBottleDetail(id, dispatchNav) {
   try { data = await api.bottle(id); } catch (err) { view.innerHTML = `<p>Couldn't load this bottle: ${escapeHtml(err.message)}</p>`; return; }
   const { bottle, tastings, match } = data;
 
-  const specs = [
+  const isWine = bottle.category === "wine";
+  // Wine and spirits don't share meaningful specs — don't show mash bill for a
+  // Sauvignon Blanc or a varietal for a bourbon.
+  const specs = isWine ? [
+    ["Category", "Wine"],
+    ["Varietal", bottle.varietal ? titleize(bottle.varietal) : "Unknown"],
+    ["Vintage", bottle.vintage ?? "Non-vintage / unknown"],
+    ["Producer", bottle.brand || "Unknown"],
+    ["Region", [bottle.appellation, bottle.origin_state, bottle.origin_country].filter(Boolean).join(", ") || "Unknown"],
+    ["ABV", bottle.abv ? `${bottle.abv}%` : "Unknown"],
+    ["Price", formatMoney(bottle.msrp) || "Unknown"]
+  ] : [
     ["Category", categoryLabel(bottle.category)],
     ["Proof / ABV", bottle.proof ? `${bottle.proof} proof${bottle.abv ? ` / ${bottle.abv}% ABV` : ""}` : "Unknown"],
     ["Distillery", bottle.distillery_name || "Unknown"],
@@ -57,7 +69,7 @@ export async function renderBottleDetail(id, dispatchNav) {
     <div class="hero-photo">
       ${bottle.image_url
         ? `<img src="${escapeHtml(bottle.image_url)}" alt="${escapeHtml(bottle.name)}">`
-        : `<div class="hero-photo-empty"><span style="font-size:46px" aria-hidden="true">🥃</span><span class="field-hint">No photo yet</span></div>`}
+        : `<div class="hero-photo-empty"><span style="font-size:46px" aria-hidden="true">${bottle.category === "wine" ? "🍷" : "🥃"}</span><span class="field-hint">No photo yet</span></div>`}
       <button class="hero-photo-btn" data-action="photo" type="button">${bottle.image_url ? "Change photo" : "📷 Add photo"}</button>
     </div>
     <input type="file" id="bottlePhotoInput" accept="image/*" capture="environment" hidden>
@@ -80,9 +92,7 @@ export async function renderBottleDetail(id, dispatchNav) {
       <button class="btn btn-secondary" data-action="add-compare">⇄</button>
     </div>
 
-    ${decisionBannerHtml(match)}
-    ${whyConcernsHtml(match)}
-    ${sourcedNote}
+    ${isWine ? wineMatchHtml(data.wineMatch) : `${decisionBannerHtml(match)}${whyConcernsHtml(match)}${sourcedNote}`}
 
     <div class="section-title"><h2>Details</h2></div>
     <div class="card"><dl class="spec-grid">${specs.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(String(v))}</dd></div>`).join("")}</dl></div>
@@ -97,6 +107,34 @@ export async function renderBottleDetail(id, dispatchNav) {
   `;
 
   wireBottleDetail(bottle);
+}
+
+function wineMatchHtml(wm) {
+  if (!wm) return "";
+  const tone = wm.band.tone === "buy" ? "buy" : wm.band.tone === "try" ? "try" : wm.band.tone === "skip" ? "skip" : "";
+  const head = wm.score == null
+    ? `<div class="decision-banner"><span>${escapeHtml(wm.band.label)}</span></div>`
+    : `<div class="decision-banner ${tone}"><span>${wm.score}/100 — ${escapeHtml(wm.band.label)}</span><span style="font-size:12px;font-weight:600;opacity:0.75">${escapeHtml(wm.confidenceLabel)} confidence</span></div>`;
+
+  const sub = wm.subscores || {};
+  const subRows = [
+    ["Fruit", sub.fruit], ["Acidity", sub.acidity], ["Body", sub.body],
+    ["Green/herbal risk", sub.greenHerbalRisk], ["Similarity to favorites", sub.similarityToFavorites]
+  ].filter(([, v]) => v != null);
+
+  return `
+    ${head}
+    <p class="field-hint" style="margin-top:8px">${escapeHtml(wm.band.blurb)}</p>
+    ${subRows.length ? `<div class="card" style="margin-top:10px"><dl class="spec-grid">
+      ${subRows.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${v}/10</dd></div>`).join("")}
+    </dl></div>` : ""}
+    ${wm.stretches && wm.stretches.length ? `<div style="font-size:13.5px;display:flex;flex-direction:column;gap:4px;margin-top:6px">
+      ${wm.stretches.map((d) => `<div>⚠ Expect ${escapeHtml(d.direction)} ${escapeHtml(titleize(d.dimension).toLowerCase())} than your usual (${d.actual} vs ${d.target})</div>`).join("")}
+    </div>` : ""}
+    ${wm.fits && wm.fits.length ? `<div style="font-size:13.5px;display:flex;flex-direction:column;gap:4px;margin-top:4px">
+      ${wm.fits.slice(0, 4).map((d) => `<div>✓ ${escapeHtml(titleize(d.dimension))} right in your range</div>`).join("")}
+    </div>` : ""}
+  `;
 }
 
 function wireBottleDetail(bottle) {
@@ -144,6 +182,15 @@ function openEditSheet(bottle) {
     <div class="tag-cloud" id="editStatusTags">
       ${STATUS_TAGS.map((s) => `<button type="button" class="tag-chip${(bottle.status_tags || []).includes(s.id) ? " selected" : ""}" data-toggle-status="${s.id}">${s.label}</button>`).join("")}
     </div>
+    ${bottle.category === "wine" ? `
+      <label>Varietal</label>
+      ${varietalSelectHtml("editVarietal", bottle.varietal)}
+      <label>Vintage</label>
+      <input type="number" id="editVintage" value="${bottle.vintage ?? ""}" placeholder="e.g. 2023">
+      <label style="margin-top:16px">Wine character</label>
+      <p class="field-hint">These 0-10 values are what the palate model scores against. Leave anything you're unsure of unset.</p>
+      <div id="editWineDims">${dimensionSlidersHtml(bottle.wine_dimensions || {})}</div>
+    ` : ""}
     <label>Description</label><textarea id="editDescription">${escapeHtml(bottle.description || "")}</textarea>
     <label>Image URL</label>
     <input type="text" id="editImageUrl" value="${escapeHtml(bottle.image_url || "")}" placeholder="https://… (or use Add photo on the bottle page)">
@@ -154,6 +201,7 @@ function openEditSheet(bottle) {
   `, {
     onOpen: () => {
       let statusTags = [...(bottle.status_tags || [])];
+      const editWineDims = document.getElementById("editWineDims") ? wireDimensionSliders(document) : null;
       document.getElementById("editStatusTags").addEventListener("click", (e) => {
         const btn = e.target.closest("[data-toggle-status]");
         if (!btn) return;
@@ -182,6 +230,12 @@ function openEditSheet(bottle) {
           description: document.getElementById("editDescription").value.trim() || null,
           status_tags: statusTags
         };
+        if (bottle.category === "wine") {
+          payload.varietal = document.getElementById("editVarietal").value || null;
+          const vintage = document.getElementById("editVintage").value;
+          payload.vintage = vintage ? Number(vintage) : null;
+          payload.wine_dimensions = editWineDims ? editWineDims.get() : {};
+        }
         // Only touch image fields if the URL actually changed, so a user photo
         // saved from the bottle page isn't clobbered by an untouched form field.
         if (imageUrl !== (bottle.image_url || "")) {

@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-profile-v3-profiles-wine";
+const CACHE_NAME = "pour-profile-v4-wine-form";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -18,6 +18,7 @@ const CORE_ASSETS = [
   "/view-compare.js",
   "/view-wine-palate.js",
   "/wine-engine.js",
+  "/wine-form.js",
   "/manifest.json",
   "/icon.svg"
 ];
