@@ -1,6 +1,7 @@
 import { api } from "./api.js";
 import { el, formatRating, formatDate, escapeHtml, bottleCardHtml, emptyStateHtml } from "./ui.js";
 import { openBottlePickerSheet } from "./log-pour.js";
+import { getActiveProfile } from "./api.js";
 import { titleize } from "./spirit-taxonomy.js";
 
 export async function renderHome() {
@@ -23,7 +24,21 @@ export async function renderHome() {
     insight = `Your strongest emerging preference is <strong>${escapeHtml(titleize(topTag))}</strong> (${topVal.affinity}% affinity, ${topVal.confidence} confidence, from ${topVal.sampleCount} tasting${topVal.sampleCount === 1 ? "" : "s"}).`;
   }
 
+  const who = getActiveProfile() === "lady" ? "Lady" : "Justin";
+  const heroLine = tried.length
+    ? `${tried.length} tried · ${wantToTry.length} on the list`
+    : "Rate · Track · Enjoy";
+
   view.innerHTML = `
+    <figure class="brand-hero" style="margin-top:0">
+      <img src="/brand-hero.jpg" alt="Justin and Lady at a bar, with a backbar of bottles behind them" loading="eager" fetchpriority="high" width="1400" height="788">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <figcaption class="hero-copy">
+        <p class="hero-eyebrow">Pour Decisions</p>
+        <h2>Welcome back, ${escapeHtml(who)}</h2>
+        <p class="hero-eyebrow" style="margin-top:2px;letter-spacing:0.06em;opacity:0.85">${escapeHtml(heroLine)}</p>
+      </figcaption>
+    </figure>
     ${bottlesRes._stale ? `<p class="field-hint">Showing your last saved data.</p>` : ""}
     <div class="quick-actions">
       <div class="quick-action" data-action="nav-scan"><span class="qa-icon">📷</span>Scan Bottle</div>

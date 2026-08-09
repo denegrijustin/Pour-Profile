@@ -170,12 +170,20 @@ function wireOfflineBanner() {
   update();
 }
 
+const BG_KEY = "pourProfile.plainBackground";
+
+export function applyBackgroundPref() {
+  const plain = localStorage.getItem(BG_KEY) === "1";
+  document.documentElement.toggleAttribute("data-plain-bg", plain);
+}
+
 function registerServiceWorker() {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/sw.js").catch(() => {});
   }
 }
 
+applyBackgroundPref();
 wireNav();
 wireProfileSwitcher();
 wireGlobalDelegation();
