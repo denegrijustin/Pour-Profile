@@ -13,5 +13,14 @@
       "database_name": "pour-profile-db",
       "database_id": "ea0adeb6-f586-4984-a57a-4039a8ca9093"
     }
+  ],
+  // Bottle photos. Accessed only through this binding — the bucket is private and
+  // deliberately has no public custom domain; images are served by the Worker at
+  // /api/images/:bottleId so access goes through our own code.
+  "r2_buckets": [
+    {
+      "binding": "PHOTOS",
+      "bucket_name": "pour-tracker"
+    }
   ]
 }

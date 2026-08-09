@@ -617,6 +617,15 @@ async function putWineDimension(request, url, env) {
 
 const MAX_PHOTO_BYTES = 3 * 1024 * 1024;
 
+const photoKey = (bottleId) => `bottles/${bottleId}`;
+
+function base64ToBytes(base64) {
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  return bytes;
+}
+
 async function putBottlePhoto(id, request, env) {
   const bottle = await first(env, "SELECT id FROM bottles WHERE id = ?", id);
   if (!bottle) return json({ error: "Not found" }, 404);
@@ -628,9 +637,19 @@ async function putBottlePhoto(id, request, env) {
   const [, mime, base64] = match;
   if (Math.ceil((base64.length * 3) / 4) > MAX_PHOTO_BYTES) return json({ error: "Image must be 3 MB or smaller after downscaling." }, 413);
 
-  await run(env, `INSERT INTO bottle_images (bottle_id, mime, data, source, updated_at) VALUES (?,?,?,?, datetime('now'))
-    ON CONFLICT(bottle_id) DO UPDATE SET mime = excluded.mime, data = excluded.data, source = excluded.source, updated_at = datetime('now')`,
-    id, mime, base64, "user_photo");
+  // Prefer R2; fall back to D1 if the binding isn't present (e.g. a local dev run
+  // without the bucket configured), so photo upload never hard-fails.
+  if (env.PHOTOS) {
+    const bytes = base64ToBytes(base64);
+    await env.PHOTOS.put(photoKey(id), bytes, { httpMetadata: { contentType: mime } });
+    await run(env, `INSERT INTO bottle_images (bottle_id, mime, data, source, updated_at) VALUES (?,?,?,?, datetime('now'))
+      ON CONFLICT(bottle_id) DO UPDATE SET mime = excluded.mime, data = excluded.data, source = excluded.source, updated_at = datetime('now')`,
+      id, mime, "", "r2");
+  } else {
+    await run(env, `INSERT INTO bottle_images (bottle_id, mime, data, source, updated_at) VALUES (?,?,?,?, datetime('now'))
+      ON CONFLICT(bottle_id) DO UPDATE SET mime = excluded.mime, data = excluded.data, source = excluded.source, updated_at = datetime('now')`,
+      id, mime, base64, "user_photo");
+  }
 
   // Cache-bust so an updated photo replaces the old one in already-loaded views.
   const url = `/api/images/${id}?v=${Date.now()}`;
@@ -639,20 +658,24 @@ async function putBottlePhoto(id, request, env) {
 }
 
 async function deleteBottlePhoto(id, env) {
+  if (env.PHOTOS) await env.PHOTOS.delete(photoKey(id));
   await run(env, "DELETE FROM bottle_images WHERE bottle_id = ?", id);
   await run(env, "UPDATE bottles SET image_url = NULL, image_source = NULL, image_confidence = NULL, updated_at = datetime('now') WHERE id = ?", id);
   return json({ ok: true });
 }
 
 async function getBottleImage(id, env) {
-  const row = await first(env, "SELECT mime, data FROM bottle_images WHERE bottle_id = ?", id);
+  const row = await first(env, "SELECT mime, data, source FROM bottle_images WHERE bottle_id = ?", id);
   if (!row) return json({ error: "Not found" }, 404);
-  const binary = atob(row.data);
-  const bytes = new Uint8Array(binary.length);
-  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-  return new Response(bytes, {
-    headers: { "Content-Type": row.mime, "Cache-Control": "public, max-age=31536000, immutable" }
-  });
+
+  const headers = { "Content-Type": row.mime, "Cache-Control": "public, max-age=31536000, immutable" };
+  if (row.source === "r2") {
+    if (!env.PHOTOS) return json({ error: "Photo storage unavailable" }, 503);
+    const obj = await env.PHOTOS.get(photoKey(id));
+    if (!obj) return json({ error: "Not found" }, 404);
+    return new Response(obj.body, { headers });
+  }
+  return new Response(base64ToBytes(row.data), { headers });
 }
 
 // ---------- barcode lookup ----------
@@ -760,7 +783,16 @@ async function exportJson(env, url) {
   const payload = { exported_at: new Date().toISOString(), bottles, tastings, venues, distilleries, flavor_tags: flavorTags, brand_signals: brandSignals };
   // Photos are opt-in: they're base64 and would dominate the file size otherwise.
   if (url && url.searchParams.get("include_images") === "1") {
-    payload.bottle_images = await all(env, "SELECT * FROM bottle_images");
+    const rows = await all(env, "SELECT * FROM bottle_images");
+    payload.bottle_images = await Promise.all(rows.map(async (r) => {
+      if (r.source !== "r2" || !env.PHOTOS) return r;
+      const obj = await env.PHOTOS.get(photoKey(r.bottle_id));
+      if (!obj) return { ...r, data: "" };
+      const buf = new Uint8Array(await obj.arrayBuffer());
+      let binary = "";
+      for (let i = 0; i < buf.length; i++) binary += String.fromCharCode(buf[i]);
+      return { ...r, data: btoa(binary) };
+    }));
   }
   return json(payload);
 }
