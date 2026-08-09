@@ -3,16 +3,30 @@ import { el, escapeHtml, decisionBannerHtml, whyConcernsHtml, toast, matchBadgeH
 import { CATEGORIES } from "./spirit-taxonomy.js";
 import { openLogPourSheet } from "./log-pour.js";
 
+// Barcode decoding has two paths on purpose:
+//   1. BarcodeDetector — native, fast, no download. Chrome/Android, some others.
+//   2. ZXing (loaded on demand) — the fallback that actually covers iOS Safari,
+//      which still ships no BarcodeDetector. Without this, iPhone users got a
+//      dead black rectangle, which is the platform this app is primarily for.
+const ZXING_URL = "https://unpkg.com/@zxing/library@0.21.3/umd/index.min.js";
+const BARCODE_FORMATS = ["upc_a", "upc_e", "ean_13", "ean_8"];
+
 let stream = null;
 let detectLoop = null;
+let zxingReader = null;
+// ZXing fires its callback continuously; without this a second frame can
+// re-enter handleBarcode before teardown finishes and double-navigate.
+let handlingCode = false;
 
 export async function renderScan(dispatchNav) {
+  handlingCode = false;
   const view = el("view-scan");
   view.innerHTML = `
     <p class="field-hint">Point your camera at the barcode, or enter it manually.</p>
     <div class="scan-frame" id="scanFrame">
-      <video id="scanVideo" playsinline muted></video>
+      <video id="scanVideo" playsinline muted autoplay></video>
       <div class="scan-reticle"></div>
+      <button type="button" class="scan-torch" id="scanTorch" hidden aria-pressed="false">🔦 Light</button>
     </div>
     <div id="scanStatus" class="field-hint" style="margin-top:8px">Starting camera…</div>
     <div class="field-row" style="margin-top:14px">
@@ -27,6 +41,12 @@ export async function renderScan(dispatchNav) {
     const code = document.getElementById("manualBarcode").value.trim();
     if (code) handleBarcode(code, dispatchNav);
   });
+  document.getElementById("manualBarcode").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      const code = e.target.value.trim();
+      if (code) handleBarcode(code, dispatchNav);
+    }
+  });
   document.getElementById("manualNewBtn").addEventListener("click", () => renderDraftForm(null, dispatchNav));
 
   await startCamera(dispatchNav);
@@ -35,48 +55,164 @@ export async function renderScan(dispatchNav) {
 export function stopScan() {
   if (detectLoop) cancelAnimationFrame(detectLoop);
   detectLoop = null;
+  // decodeFromStream resolves to void, not a controls object — teardown is on the
+  // reader itself. Getting this wrong leaves the camera running after you leave.
+  if (zxingReader) {
+    try { zxingReader.reset(); } catch { /* already torn down */ }
+    zxingReader = null;
+  }
   if (stream) { stream.getTracks().forEach((t) => t.stop()); stream = null; }
 }
 
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    const el = document.createElement("script");
+    el.src = src;
+    el.onload = resolve;
+    el.onerror = () => reject(new Error("Couldn't load the barcode decoder."));
+    document.head.appendChild(el);
+  });
+}
+
+function setStatus(msg) {
+  const s = el("scanStatus");
+  if (s) s.textContent = msg;
+}
+
+// Some phones expose a torch on the rear camera; a bar is exactly where it's needed.
+function wireTorch(track) {
+  const btn = document.getElementById("scanTorch");
+  if (!btn || !track) return;
+  const caps = typeof track.getCapabilities === "function" ? track.getCapabilities() : {};
+  if (!caps || !caps.torch) return;
+  btn.hidden = false;
+  let on = false;
+  btn.addEventListener("click", async () => {
+    on = !on;
+    try {
+      await track.applyConstraints({ advanced: [{ torch: on }] });
+      btn.setAttribute("aria-pressed", String(on));
+      btn.classList.toggle("on", on);
+    } catch { /* torch refused; leave the button as-is */ }
+  });
+}
+
 async function startCamera(dispatchNav) {
-  const status = el("scanStatus");
-  if (!("BarcodeDetector" in window)) {
-    status.textContent = "Camera scanning isn't supported in this browser — use manual entry below.";
+  const video = document.getElementById("scanVideo");
+  if (!video) return;
+
+  if (!window.isSecureContext) {
+    setStatus("Camera needs a secure (https) connection — use manual entry below.");
     return;
   }
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+    setStatus("This browser won't share the camera — use manual entry below.");
+    return;
+  }
+
+  // Show the preview FIRST, independent of which decoder we end up using, so the
+  // frame is never just a dead black box.
   try {
-    stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
-    const video = document.getElementById("scanVideo");
-    if (!video) return;
-    video.srcObject = stream;
-    await video.play();
-    status.textContent = "Scanning…";
-    const detector = new BarcodeDetector({ formats: ["upc_a", "upc_e", "ean_13", "ean_8"] });
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-    let busy = false;
-    const tick = async () => {
-      if (!stream) return;
-      if (!busy && video.videoWidth) {
-        busy = true;
-        canvas.width = video.videoWidth; canvas.height = video.videoHeight;
-        ctx.drawImage(video, 0, 0);
-        try {
-          const codes = await detector.detect(canvas);
-          if (codes.length) { stopScan(); handleBarcode(codes[0].rawValue, dispatchNav); return; }
-        } catch { /* keep scanning */ }
-        busy = false;
-      }
-      detectLoop = requestAnimationFrame(tick);
-    };
-    detectLoop = requestAnimationFrame(tick);
+    stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: { ideal: "environment" }, width: { ideal: 1280 }, height: { ideal: 720 } },
+      audio: false
+    });
   } catch (err) {
-    status.textContent = "Couldn't access the camera — use manual entry below.";
+    const name = err && err.name;
+    if (name === "NotAllowedError" || name === "SecurityError") {
+      setStatus("Camera permission denied. On iPhone: Settings → Safari → Camera → Allow, then reload. Manual entry works below meanwhile.");
+    } else if (name === "NotFoundError" || name === "OverconstrainedError") {
+      setStatus("No usable camera found — use manual entry below.");
+    } else {
+      setStatus(`Couldn't start the camera (${escapeHtml(name || "unknown")}). Use manual entry below.`);
+    }
+    return;
+  }
+
+  video.srcObject = stream;
+  video.setAttribute("playsinline", "");
+  try { await video.play(); } catch { /* iOS resolves this on the next tick */ }
+  wireTorch(stream.getVideoTracks()[0]);
+
+  if ("BarcodeDetector" in window) {
+    try {
+      await startNativeDetection(video, dispatchNav);
+      return;
+    } catch {
+      // fall through to ZXing
+    }
+  }
+  await startZxingDetection(video, dispatchNav);
+}
+
+async function startNativeDetection(video, dispatchNav) {
+  let formats = BARCODE_FORMATS;
+  if (typeof BarcodeDetector.getSupportedFormats === "function") {
+    const supported = await BarcodeDetector.getSupportedFormats();
+    formats = BARCODE_FORMATS.filter((f) => supported.includes(f));
+    if (!formats.length) throw new Error("no supported formats");
+  }
+  const detector = new BarcodeDetector({ formats });
+  setStatus("Scanning…");
+
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  let busy = false;
+  const tick = async () => {
+    if (!stream) return;
+    if (!busy && video.videoWidth) {
+      busy = true;
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      ctx.drawImage(video, 0, 0);
+      try {
+        const codes = await detector.detect(canvas);
+        if (codes.length && codes[0].rawValue) { handleBarcode(codes[0].rawValue, dispatchNav); return; }
+      } catch { /* keep scanning */ }
+      busy = false;
+    }
+    detectLoop = requestAnimationFrame(tick);
+  };
+  detectLoop = requestAnimationFrame(tick);
+}
+
+async function startZxingDetection(video, dispatchNav) {
+  setStatus("Loading scanner…");
+  try {
+    if (!window.ZXing) await loadScript(ZXING_URL);
+  } catch {
+    setStatus("Couldn't load the scanner (offline?). Enter the barcode manually below.");
+    return;
+  }
+  if (!window.ZXing || !window.ZXing.BrowserMultiFormatReader) {
+    setStatus("Scanner unavailable — enter the barcode manually below.");
+    return;
+  }
+
+  const { BrowserMultiFormatReader, DecodeHintType, BarcodeFormat } = window.ZXing;
+  const hints = new Map();
+  hints.set(DecodeHintType.POSSIBLE_FORMATS, [
+    BarcodeFormat.UPC_A, BarcodeFormat.UPC_E, BarcodeFormat.EAN_13, BarcodeFormat.EAN_8
+  ]);
+  zxingReader = new BrowserMultiFormatReader(hints);
+  setStatus("Scanning…");
+
+  try {
+    // Reuse the stream already previewing, so the camera isn't opened twice.
+    // Returns void; the reader is what gets reset() on teardown.
+    await zxingReader.decodeFromStream(stream, video, (result) => {
+      if (result) handleBarcode(result.getText(), dispatchNav);
+    });
+  } catch {
+    setStatus("Scanner couldn't start — enter the barcode manually below.");
   }
 }
 
 async function handleBarcode(code, dispatchNav) {
+  if (handlingCode) return;
+  handlingCode = true;
   stopScan();
+  if (navigator.vibrate) navigator.vibrate(40);
   const status = el("scanStatus");
   if (status) status.textContent = `Looking up ${code}…`;
   let result;

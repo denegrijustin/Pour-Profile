@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-decisions-v9-winter";
+const CACHE_NAME = "pour-decisions-v10-scanner";
 const CORE_ASSETS = [
   "/",
   "/index.html",

@@ -16,9 +16,14 @@ Cloudflare Workers app (no build tooling required beyond a `cp` step).
   assets and a REST API under `/api/*`, backed by **D1** (`pour-profile-db`).
 - **Map**: MapLibre GL JS (loaded from unpkg) rendering free [OpenFreeMap](https://openfreemap.org)
   vector tiles — no API key required.
-- **Barcode scanning**: the browser's native `BarcodeDetector` API, with manual
-  entry always available as a fallback (notably on iOS Safari, which doesn't
-  support `BarcodeDetector` as of this build).
+- **Barcode scanning**: two decoders. `BarcodeDetector` where the browser has it
+  (Chrome/Android), and **ZXing** loaded on demand from a CDN everywhere else —
+  which is what makes scanning work on **iOS Safari**, since it still ships no
+  `BarcodeDetector`. The camera preview starts before either decoder is chosen,
+  so the frame is never a dead black box, and a torch button appears when the
+  camera reports one (useful in a dim bar). Manual barcode entry is always
+  available, and is the only path that works offline, since ZXing and the
+  product lookup both need the network.
 - **Barcode/product lookup**: `worker.js` proxies UPCitemdb (trial tier) and
   Open Food Facts server-side, so no API keys ship to the client. Every
   externally-sourced field is shown with its source and confidence, and is
