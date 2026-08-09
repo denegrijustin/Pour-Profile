@@ -7,20 +7,23 @@
 -- your palate 42"), which is exactly the "good wine" vs "good wine for me"
 -- distinction in Lady's profile.
 --
--- is_manual = 1 means a human typed it in (shelf talker, back label, an app they
--- were looking at). That is the primary path, because no free API supplies
--- community ratings with tasting notes across both spirits and wine:
--- Whiskybase/Whiskystats/Grapeminds/Wine-Searcher are paid, and Vivino has no
--- public API. Automated providers can be added later without schema changes.
+-- Everything here is DISCRETE — a source from a closed enum, a numeric score on
+-- that source's own scale, and descriptors drawn from the existing flavor
+-- taxonomy / wine dimensions. No free text, so entries stay aggregatable.
+--
+-- Note the split: a SCORE is an outside verdict and never touches the palate
+-- models, but DESCRIPTORS describe the bottle itself, so they seed the bottle's
+-- flavor tags / wine dimensions (without overwriting the user's own). That is
+-- what makes a never-tasted bottle scoreable at all.
 CREATE TABLE IF NOT EXISTS external_ratings (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   bottle_id INTEGER NOT NULL,
-  source TEXT NOT NULL,             -- e.g. 'Vivino (typed in)', 'Wine Spectator', 'Distiller'
+  source TEXT NOT NULL,             -- closed enum, see rating-sources.js
   source_url TEXT,
   score REAL,
-  scale TEXT NOT NULL DEFAULT '100',-- '100', '5', '10' — scores are not comparable across scales
+  scale TEXT NOT NULL DEFAULT '100',-- taken from the source definition, never from input
   review_count INTEGER,
-  description TEXT,                 -- published tasting description, if any
+  descriptors TEXT NOT NULL DEFAULT '{}', -- discrete only: {"dimensions":{...}} or {"flavor_tags":[...]}
   is_manual INTEGER NOT NULL DEFAULT 1,
   fetched_at TEXT DEFAULT (datetime('now'))
 );

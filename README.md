@@ -118,12 +118,24 @@ Justin dislikes it. Instead the bottle page shows both numbers side by side
 ("outside scores average 91, your palate says 30"), which is the
 "good wine" vs "good wine *for me*" distinction from Lady's profile.
 
-Entry is **manual by design**. No free API supplies community ratings with
-tasting descriptions across both spirits and wine: Whiskybase, Whiskystats,
-Grapeminds and Wine-Searcher are paid, and Vivino has no public API (the
-"Vivino APIs" in circulation are scrapers that breach its terms, so they are
-deliberately not used). Type in what you see on a shelf talker or back label.
-Scores record their scale and are only averaged within the same scale.
+Entry is manual (no free API supplies this data — Whiskybase, Whiskystats,
+Grapeminds and Wine-Searcher are paid, and Vivino has no public API; the
+"Vivino APIs" in circulation are scrapers that breach its terms and are
+deliberately not used) but it is **fully discrete — there is no free-text
+field**:
+
+- **Source** comes from a closed enum (`rating-sources.js`), so entries stay
+  groupable; "Vivino" can't fragment into three spellings.
+- **Scale** is taken from the source definition rather than from input, so a
+  Vivino 4.2 can never be stored as if it were out of 100. Scores are
+  normalized to a percentage only because that scale is authoritative.
+- **Descriptors** are picked from the existing flavor taxonomy (spirits) or the
+  0-10 wine dimensions — the same vocabulary the engines already speak.
+
+The score/descriptor split matters: the *score* is an outside verdict and never
+touches a palate model, but the *descriptors* describe the bottle, so they seed
+its flavor tags / wine dimensions when it has none. That is what lets the app
+answer "would I like this?" for a bottle nobody has tasted yet.
 
 `POST /api/bottles/:id/enrich` adds free *factual* enrichment from Wikidata
 (CC0, no key) — producer/entity identification only, never ratings, returned

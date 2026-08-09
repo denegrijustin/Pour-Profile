@@ -6,6 +6,7 @@ import {
 import { CATEGORIES, STATUS_TAGS, categoryLabel, titleize } from "./spirit-taxonomy.js";
 import { openLogPourSheet } from "./log-pour.js";
 import { varietalSelectHtml, dimensionSlidersHtml, wireDimensionSliders } from "./wine-form.js";
+import { sourcesFor, sourceLabel, sourceScale } from "./rating-sources.js";
 
 let currentBottleId = null;
 let currentDispatchNav = () => {};
@@ -106,11 +107,9 @@ export async function renderBottleDetail(id, dispatchNav) {
       ${external.length ? external.map((r) => `
         <div class="ext-rating">
           <div>
-            <strong>${escapeHtml(r.source)}</strong>
-            ${r.score != null ? `<span class="ext-score">${r.score}${r.scale === "100" ? "" : `/${escapeHtml(r.scale)}`}</span>` : ""}
-            ${r.review_count ? `<span class="field-hint"> · ${r.review_count} reviews</span>` : ""}
-            ${r.description ? `<p class="field-hint" style="margin-top:4px">${escapeHtml(r.description)}</p>` : ""}
-            ${r.source_url ? `<a class="field-hint" href="${escapeHtml(r.source_url)}" target="_blank" rel="noopener">source</a>` : ""}
+            <strong>${escapeHtml(sourceLabel(r.source))}</strong>
+            ${r.score != null ? `<span class="ext-score">${r.score}<span style="font-weight:500;font-size:12px">/${escapeHtml(r.scale)}</span></span>` : ""}
+            ${descriptorChips(r)}
           </div>
           <button class="btn-ghost btn-sm" data-del-external="${r.id}" aria-label="Remove">✕</button>
         </div>`).join("") : `<p class="field-hint">Nothing recorded. If you see a score on a shelf talker or in another app, add it here — it stays separate from your palate score and never influences it.</p>`}
@@ -128,16 +127,33 @@ export async function renderBottleDetail(id, dispatchNav) {
   wireBottleDetail(bottle);
 }
 
+function descriptorChips(r) {
+  let d = r.descriptors;
+  if (typeof d === "string") { try { d = JSON.parse(d); } catch { d = {}; } }
+  if (!d) return "";
+  const items = [];
+  if (d.dimensions) for (const [k, v] of Object.entries(d.dimensions)) items.push(`${titleize(k)} ${v}/10`);
+  if (Array.isArray(d.flavor_tags)) for (const t of d.flavor_tags) items.push(titleize(t));
+  if (!items.length) return "";
+  return `<div class="tag-cloud" style="margin-top:6px">${items.map((i) => `<span class="tag-chip" style="cursor:default;font-size:11.5px">${escapeHtml(i)}</span>`).join("")}</div>`;
+}
+
 // The point of showing both numbers is the gap between them.
+// Scales are normalized to a percentage, which is only safe because the scale
+// comes from the source definition rather than from typed input.
 function contrastLine(external, personalScore) {
-  const hundred = external.filter((r) => r.score != null && r.scale === "100");
-  if (!hundred.length) return "";
-  const avg = Math.round(hundred.reduce((a, r) => a + r.score, 0) / hundred.length);
+  const scored = external.filter((r) => r.score != null && Number(r.scale) > 0);
+  if (!scored.length || personalScore == null) return "";
+  const pct = scored.map((r) => (Number(r.score) / Number(r.scale)) * 100);
+  const avg = Math.round(pct.reduce((a, v) => a + v, 0) / pct.length);
   const gap = personalScore - avg;
-  if (Math.abs(gap) < 10) return `Outside scores average ${avg}; your palate says ${personalScore}. Broad agreement.`;
+  const basis = scored.length === 1
+    ? sourceLabel(scored[0].source)
+    : `${scored.length} sources`;
+  if (Math.abs(gap) < 10) return `${basis} average ${avg}%; your palate says ${personalScore}. Broad agreement.`;
   return gap > 0
-    ? `Outside scores average ${avg}, but your palate says ${personalScore} — you may like this more than the consensus does.`
-    : `Outside scores average ${avg}, but your palate says ${personalScore} — well reviewed, yet not obviously your style.`;
+    ? `${basis} average ${avg}%, but your palate says ${personalScore} — you may like this more than the consensus does.`
+    : `${basis} average ${avg}%, but your palate says ${personalScore} — well reviewed, yet not obviously your style.`;
 }
 
 function wineMatchHtml(wm) {
@@ -307,40 +323,77 @@ export function clearCompare() { compareList = []; saveCompareList(); }
 
 
 function openExternalRatingSheet(bottle) {
+  const isWine = bottle.category === "wine";
+  const sources = sourcesFor(bottle.category);
   openSheet(`
     <div class="sheet-header"><h2>Outside Opinion</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
-    <p class="field-hint">Type in what you saw — a shelf talker, a back label, another app. This is stored separately and never affects your palate match.</p>
+    <p class="field-hint">All structured — no free text, so it stays comparable and can feed scoring.</p>
+
     <label>Source</label>
-    <input type="text" id="extSource" placeholder="e.g. Vivino, Wine Spectator, shelf talker">
-    <div class="field-row">
-      <div><label>Score</label><input type="number" step="0.1" id="extScore" placeholder="e.g. 91"></div>
-      <div><label>Out of</label>
-        <select id="extScale"><option value="100">100</option><option value="10">10</option><option value="5">5</option></select>
-      </div>
-    </div>
-    <label>Published description (optional)</label>
-    <textarea id="extDescription" placeholder="Their tasting notes, if shown"></textarea>
-    <label>Link (optional)</label>
-    <input type="text" id="extUrl" placeholder="https://">
+    <select id="extSource">
+      ${sources.map((sc) => `<option value="${sc.id}" data-scale="${sc.scale}">${escapeHtml(sc.label)}</option>`).join("")}
+    </select>
+
+    <label>Score <span class="field-hint" id="extScaleHint"></span></label>
+    <input type="number" step="0.1" id="extScore" inputmode="decimal" placeholder="Leave blank if none shown">
+
+    <label style="margin-top:16px">What they said it tastes like</label>
+    <p class="field-hint">Pick only what the source actually states. These describe the bottle, so they help score it before you've tried it — they never change your palate.</p>
+    ${isWine
+      ? `<div id="extWineDims">${dimensionSlidersHtml({})}</div>`
+      : `<div id="extFlavorTags"></div>`}
+
     <button class="btn btn-primary btn-block" id="extSaveBtn" style="margin-top:16px">Save</button>
   `, {
-    onOpen: () => {
+    onOpen: async () => {
+      const sourceSel = document.getElementById("extSource");
+      const hint = document.getElementById("extScaleHint");
+      const scoreInput = document.getElementById("extScore");
+      const syncScale = () => {
+        const scale = sourceSel.selectedOptions[0].dataset.scale;
+        hint.textContent = `(out of ${scale})`;
+        scoreInput.max = scale;
+        scoreInput.placeholder = `0–${scale}, or leave blank`;
+      };
+      sourceSel.addEventListener("change", syncScale);
+      syncScale();
+
+      let dims = null;
+      let selectedTags = [];
+      if (isWine) {
+        dims = wireDimensionSliders(document);
+      } else {
+        const res = await api.flavorTags().catch(() => ({ flavor_tags: [] }));
+        const host = document.getElementById("extFlavorTags");
+        host.innerHTML = flavorTagPickerHtml(res.flavor_tags || [], []);
+        host.addEventListener("click", (e) => {
+          const btn = e.target.closest("[data-toggle-tag]");
+          if (!btn) return;
+          const tag = btn.dataset.toggleTag;
+          selectedTags = selectedTags.includes(tag) ? selectedTags.filter((t) => t !== tag) : [...selectedTags, tag];
+          btn.classList.toggle("selected");
+        });
+      }
+
       document.getElementById("extSaveBtn").addEventListener("click", async () => {
-        const source = document.getElementById("extSource").value.trim();
-        const scoreRaw = document.getElementById("extScore").value;
-        const description = document.getElementById("extDescription").value.trim();
-        if (!source) { toast("Source is required."); return; }
-        if (!scoreRaw && !description) { toast("Add a score or a description."); return; }
+        const scoreRaw = scoreInput.value;
+        const descriptors = isWine
+          ? (Object.keys(dims.get()).length ? { dimensions: dims.get() } : {})
+          : (selectedTags.length ? { flavor_tags: selectedTags } : {});
+        if (!scoreRaw && !Object.keys(descriptors).length) {
+          toast("Add a score or pick some descriptors.");
+          return;
+        }
         try {
-          await api.addExternalRating(bottle.id, {
-            source,
+          const res = await api.addExternalRating(bottle.id, {
+            source: sourceSel.value,
             score: scoreRaw ? Number(scoreRaw) : null,
-            scale: document.getElementById("extScale").value,
-            description: description || null,
-            source_url: document.getElementById("extUrl").value.trim() || null
+            descriptors
           });
           closeSheet();
-          toast("Saved.");
+          const a = res.applied || {};
+          const seeded = (a.dimensions || 0) + (a.flavorTags || 0);
+          toast(seeded ? `Saved — filled in ${seeded} bottle attribute${seeded === 1 ? "" : "s"}.` : "Saved.");
           renderBottleDetail(bottle.id, currentDispatchNav);
         } catch (err) { toast(`Couldn't save: ${err.message}`); }
       });

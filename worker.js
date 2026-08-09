@@ -1,5 +1,6 @@
 import { buildPalateProfile, scoreMatch } from "./palate-engine.js";
 import { scoreWine, learnFromTasting } from "./wine-engine.js";
+import { RATING_SOURCES } from "./rating-sources.js";
 
 const JSON_HEADERS = { "Content-Type": "application/json", "Cache-Control": "no-store" };
 
@@ -696,15 +697,62 @@ async function listExternalRatings(bottleId, env) {
 
 async function addExternalRating(bottleId, request, env) {
   const b = await body(request);
-  if (!b.source) return json({ error: "source is required" }, 400);
-  if (b.score == null && !b.description) return json({ error: "Provide a score, a description, or both." }, 400);
+  const source = RATING_SOURCES.find((s) => s.id === b.source);
+  if (!source) return json({ error: "Unknown source. Pick one from the list." }, 400);
+
+  const descriptors = b.descriptors && typeof b.descriptors === "object" ? b.descriptors : {};
+  const hasDescriptors = Object.keys(descriptors).length > 0;
+  if (b.score == null && !hasDescriptors) return json({ error: "Record a score, some descriptors, or both." }, 400);
+
+  // The scale belongs to the source, not to whoever is typing — a Vivino 4.2
+  // must never be stored as if it were out of 100.
+  const scale = source.scale;
+  if (b.score != null) {
+    const max = Number(scale);
+    if (!(b.score >= 0 && b.score <= max)) return json({ error: `Score must be between 0 and ${max} for ${source.label}.` }, 400);
+  }
+
   const res = await run(env,
-    `INSERT INTO external_ratings (bottle_id, source, source_url, score, scale, review_count, description, is_manual)
+    `INSERT INTO external_ratings (bottle_id, source, source_url, score, scale, review_count, descriptors, is_manual)
      VALUES (?,?,?,?,?,?,?,?)`,
-    bottleId, b.source, b.source_url || null, b.score ?? null, b.scale || "100",
-    b.review_count ?? null, b.description || null, b.is_manual === false ? 0 : 1);
+    bottleId, source.id, b.source_url || null, b.score ?? null, scale,
+    b.review_count ?? null, JSON.stringify(descriptors), b.is_manual === false ? 0 : 1);
+
+  // Descriptors describe the BOTTLE, not the reviewer's verdict, so they can
+  // seed the bottle's own attributes — this is what lets an untried bottle be
+  // scored at all. Never overwrite values the user recorded themselves.
+  const applied = await applyDescriptorsToBottle(env, bottleId, descriptors);
+
   const rating = await first(env, "SELECT * FROM external_ratings WHERE id = ?", res.meta.last_row_id);
-  return json({ rating });
+  return json({ rating, applied });
+}
+
+async function applyDescriptorsToBottle(env, bottleId, descriptors) {
+  const bottle = await first(env, "SELECT id, category, wine_dimensions FROM bottles WHERE id = ?", bottleId);
+  if (!bottle) return { dimensions: 0, flavorTags: 0 };
+  const applied = { dimensions: 0, flavorTags: 0 };
+
+  if (bottle.category === "wine" && descriptors.dimensions) {
+    const existing = safeParse(bottle.wine_dimensions, {});
+    const merged = { ...existing };
+    for (const [dim, val] of Object.entries(descriptors.dimensions)) {
+      if (existing[dim] == null && val != null) { merged[dim] = val; applied.dimensions++; }
+    }
+    if (applied.dimensions) {
+      await run(env, "UPDATE bottles SET wine_dimensions = ?, updated_at = datetime('now') WHERE id = ?", JSON.stringify(merged), bottleId);
+    }
+  }
+
+  if (bottle.category !== "wine" && Array.isArray(descriptors.flavor_tags)) {
+    const existing = await all(env, "SELECT flavor_tag_id FROM bottle_flavor_tags WHERE bottle_id = ?", bottleId);
+    if (!existing.length) {
+      for (const name of descriptors.flavor_tags) {
+        const tag = await first(env, "SELECT id FROM flavor_tags WHERE name = ?", name);
+        if (tag) { await run(env, "INSERT OR IGNORE INTO bottle_flavor_tags (bottle_id, flavor_tag_id) VALUES (?, ?)", bottleId, tag.id); applied.flavorTags++; }
+      }
+    }
+  }
+  return applied;
 }
 
 async function deleteExternalRating(id, env) {

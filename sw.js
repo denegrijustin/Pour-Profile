@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-profile-v5-external-ratings";
+const CACHE_NAME = "pour-profile-v6-discrete-ratings";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -19,6 +19,7 @@ const CORE_ASSETS = [
   "/view-wine-palate.js",
   "/wine-engine.js",
   "/wine-form.js",
+  "/rating-sources.js",
   "/manifest.json",
   "/icon.svg"
 ];
