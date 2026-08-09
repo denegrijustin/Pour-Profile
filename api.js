@@ -124,6 +124,9 @@ export const api = {
   match: (payload) => request("/api/match", { method: "POST", body: payload }),
 
   profiles: () => request("/api/profiles"),
+  catalogSearch: (q) => request(`/api/catalog/search?${new URLSearchParams({ q })}`),
+  catalogRecommended: () => request("/api/catalog/recommended"),
+  catalogAdopt: (payload) => request("/api/catalog/adopt", { method: "POST", body: payload }),
   externalRatings: (bottleId) => request(`/api/bottles/${bottleId}/external-ratings`),
   addExternalRating: (bottleId, payload) => request(`/api/bottles/${bottleId}/external-ratings`, { method: "POST", body: payload }),
   deleteExternalRating: (id) => request(`/api/external-ratings/${id}`, { method: "DELETE" }),

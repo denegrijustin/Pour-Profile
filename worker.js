@@ -1,6 +1,16 @@
 import { buildPalateProfile, scoreMatch } from "./palate-engine.js";
 import { scoreWine, learnFromTasting } from "./wine-engine.js";
 import { RATING_SOURCES } from "./rating-sources.js";
+import { CATALOG } from "./catalog-seed.js";
+import { refreshCatalog, computeFit, isVisible } from "./catalog-engine.js";
+
+// The reference catalog is read-only data, so it ships with the Worker rather
+// than living in D1. Scored once per isolate, not per request.
+let CATALOG_CACHE = null;
+function catalog() {
+  if (!CATALOG_CACHE) CATALOG_CACHE = refreshCatalog(CATALOG);
+  return CATALOG_CACHE;
+}
 
 const JSON_HEADERS = { "Content-Type": "application/json", "Cache-Control": "no-store" };
 
@@ -22,6 +32,9 @@ async function routeApi(request, url, env) {
   const method = request.method;
 
   if (pathname === "/api/profiles" && method === "GET") return listProfiles(env);
+  if (pathname === "/api/catalog/search" && method === "GET") return catalogSearch(url);
+  if (pathname === "/api/catalog/recommended" && method === "GET") return catalogRecommended(url);
+  if (pathname === "/api/catalog/adopt" && method === "POST") return catalogAdopt(request, env, url);
   if (pathname === "/api/wine/palate" && method === "GET") return getWinePalate(url, env);
   if (pathname === "/api/wine/match" && method === "POST") return postWineMatch(request, url, env);
   const wineDimMatch = pathname.match(/^\/api\/wine\/dimensions$/);
@@ -706,6 +719,89 @@ async function getBottleImage(id, env) {
     return new Response(obj.body, { headers });
   }
   return new Response(base64ToBytes(row.data), { headers });
+}
+
+// ---------- reference catalog ----------
+// Hidden by default; surfaced through explicit search or as a recommendation.
+// This is the primary way to add a bottle when barcode scanning isn't practical.
+
+function catalogFor(url) {
+  const focus = (url.searchParams.get("profile") || "spirits").toLowerCase();
+  const wantWine = focus === "wine" || focus === "lady";
+  return catalog().filter((r) => (r.category === "sauvignon_blanc") === wantWine);
+}
+
+function catalogPublic(r) {
+  return {
+    id: r.id, name: r.name, producer: r.producer, category: r.category,
+    subcategory: r.subcategory, country: r.country, region: r.region,
+    proof: r.proof, abv: r.abv,
+    jd_fit: r.ratings.jd_fit, fit_label: r.ratings.fit_label,
+    summary: r.tasting_profile?.summary || null,
+    profile_source: r.tasting_profile?.profile_source || null,
+    availability: r.regional_availability?.label || null,
+    availability_confidence: r.regional_availability?.confidence ?? null,
+    recommended: r.recommendation?.recommended || false,
+    reason: r.recommendation?.reason || null,
+    image_url: r.image?.primary_url || null,
+    lifecycle: r.lifecycle
+  };
+}
+
+// Explicit search reaches hidden records on purpose — that is the point of a
+// reference catalog. Browsing does not.
+async function catalogSearch(url) {
+  const q = (url.searchParams.get("q") || "").trim().toLowerCase();
+  if (q.length < 2) return json({ results: [] });
+  const results = catalogFor(url)
+    .filter((r) => `${r.name} ${r.producer} ${r.region || ""} ${r.subcategory || ""}`.toLowerCase().includes(q))
+    .sort((a, b) => (b.ratings.jd_fit ?? -1) - (a.ratings.jd_fit ?? -1))
+    .slice(0, 25)
+    .map(catalogPublic);
+  return json({ results, catalog_size: catalogFor(url).length });
+}
+
+async function catalogRecommended(url) {
+  const results = catalogFor(url)
+    .filter((r) => r.recommendation.recommended)
+    .sort((a, b) => (b.ratings.jd_fit ?? -1) - (a.ratings.jd_fit ?? -1))
+    .map(catalogPublic);
+  return json({ results });
+}
+
+// Copy a catalog record into the user's real bottle table. Once adopted and
+// tasted it lives in the normal collection and is never hidden again.
+async function catalogAdopt(request, env, url) {
+  const profileId = await resolveProfileId(url, env);
+  const b = await body(request);
+  const rec = catalog().find((r) => r.id === b.catalog_id);
+  if (!rec) return json({ error: "Unknown catalog id" }, 404);
+
+  const existing = await first(env, "SELECT id FROM bottles WHERE catalog_id = ?", rec.id);
+  if (existing) {
+    await setBottleStatus(env, profileId, existing.id, b.status_tags || ["want_to_try"]);
+    return json({ bottle_id: existing.id, adopted: false, already_present: true });
+  }
+
+  const category = rec.category === "sauvignon_blanc" ? "wine" : rec.category;
+  const tp = rec.tasting_profile || {};
+  const wineDims = rec.category === "sauvignon_blanc"
+    ? { fruit_intensity: tp.fruit, acidity: tp.acidity, citrus: tp.citrus, tropical: tp.tropical,
+        herbal_green: tp.grassy_herbal, minerality: tp.minerality, body: tp.body, finish: tp.finish_intensity }
+    : {};
+
+  const res = await run(env,
+    `INSERT INTO bottles (name, brand, category, subcategory, varietal, origin_country, origin_state, proof, abv,
+       description, wine_dimensions, status_tags, data_source, source_confidence, catalog_id)
+     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+    rec.name, rec.producer, category, rec.subcategory,
+    rec.category === "sauvignon_blanc" ? "sauvignon_blanc" : null,
+    rec.country, rec.region, rec.proof, rec.abv,
+    tp.summary, JSON.stringify(wineDims), "[]", "catalog", "medium", rec.id);
+
+  const id = res.meta.last_row_id;
+  await setBottleStatus(env, profileId, id, b.status_tags || ["want_to_try"]);
+  return json({ bottle_id: id, adopted: true });
 }
 
 // ---------- external ratings (outside opinion) ----------

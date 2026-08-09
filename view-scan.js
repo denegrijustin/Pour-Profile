@@ -22,8 +22,14 @@ export async function renderScan(dispatchNav) {
   handlingCode = false;
   const view = el("view-scan");
   view.innerHTML = `
-    <p class="field-hint">Point your camera at the barcode, or enter it manually.</p>
-    <div class="scan-frame" id="scanFrame">
+    <label style="margin-top:0">Find a bottle</label>
+    <input type="search" id="catalogSearch" placeholder="Search 90+ known bottles by name or producer…" autocomplete="off">
+    <div id="catalogResults"></div>
+    <p class="field-hint" style="margin-top:10px">Searching the reference catalog is usually faster than scanning, and works when a barcode won't read.</p>
+
+    <details style="margin-top:14px">
+      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Scan a barcode instead</summary>
+    <div class="scan-frame" id="scanFrame" style="margin-top:10px">
       <video id="scanVideo" playsinline muted autoplay></video>
       <div class="scan-reticle"></div>
       <button type="button" class="scan-torch" id="scanTorch" hidden aria-pressed="false">🔦 Light</button>
@@ -33,7 +39,8 @@ export async function renderScan(dispatchNav) {
       <input type="text" id="manualBarcode" inputmode="numeric" placeholder="Enter barcode manually">
       <button class="btn btn-secondary" id="manualBarcodeBtn">Look Up</button>
     </div>
-    <button class="btn btn-ghost btn-block" id="manualNewBtn" style="margin-top:6px">Skip scanning — add bottle manually</button>
+    </details>
+    <button class="btn btn-ghost btn-block" id="manualNewBtn" style="margin-top:10px">Not listed — add it manually</button>
     <div id="scanResult"></div>
   `;
 
@@ -49,7 +56,50 @@ export async function renderScan(dispatchNav) {
   });
   document.getElementById("manualNewBtn").addEventListener("click", () => renderDraftForm(null, dispatchNav));
 
-  await startCamera(dispatchNav);
+  wireCatalogSearch(dispatchNav);
+  // The camera only starts if the user opens the barcode section, so we don't
+  // grab it (or prompt for permission) on every visit to this screen.
+  const details = view.querySelector("details");
+  if (details) details.addEventListener("toggle", () => {
+    if (details.open) startCamera(dispatchNav); else stopScan();
+  });
+}
+
+function wireCatalogSearch(dispatchNav) {
+  const input = document.getElementById("catalogSearch");
+  const results = document.getElementById("catalogResults");
+  if (!input || !results) return;
+  let timer;
+  input.addEventListener("input", () => {
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      const q = input.value.trim();
+      if (q.length < 2) { results.innerHTML = ""; return; }
+      let res;
+      try { res = await api.catalogSearch(q); } catch { results.innerHTML = `<p class="field-hint">Search unavailable offline.</p>`; return; }
+      const rows = res.results || [];
+      results.innerHTML = rows.length ? rows.map((r) => `
+        <div class="bottle-row" data-adopt='${escapeHtml(JSON.stringify({ id: r.id, name: r.name }))}'>
+          <div class="thumb-sm">${r.category === "sauvignon_blanc" ? "🍷" : "🥃"}</div>
+          <div class="info">
+            <div class="name">${escapeHtml(r.name)}</div>
+            <div class="sub">${escapeHtml([r.producer, r.region, r.proof ? r.proof + " proof" : null].filter(Boolean).join(" · "))}</div>
+          </div>
+          ${r.jd_fit != null ? `<div style="text-align:right"><div style="font-weight:800;color:var(--accent-deep)">${r.jd_fit}</div><div class="field-hint" style="font-size:10px">${escapeHtml(r.fit_label || "")}</div></div>` : ""}
+        </div>`).join("") : `<p class="field-hint">Nothing in the catalog matches. Use "add it manually" below.</p>`;
+    }, 220);
+  });
+
+  results.addEventListener("click", async (e) => {
+    const row = e.target.closest("[data-adopt]");
+    if (!row) return;
+    const { id, name } = JSON.parse(row.dataset.adopt);
+    try {
+      const res = await api.catalogAdopt({ catalog_id: id, status_tags: ["want_to_try"] });
+      toast(res.already_present ? `${name} is already in your collection.` : `Added ${name} to Want to Try.`);
+      dispatchNav("bottle", res.bottle_id);
+    } catch (err) { toast(`Couldn't add: ${err.message}`); }
+  });
 }
 
 export function stopScan() {

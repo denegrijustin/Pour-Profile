@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-decisions-v10-scanner";
+const CACHE_NAME = "pour-decisions-v11-catalog";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -20,6 +20,8 @@ const CORE_ASSETS = [
   "/wine-engine.js",
   "/wine-form.js",
   "/rating-sources.js",
+  "/catalog-engine.js",
+  "/catalog-seed.js",
   "/manifest.json",
   "/icon.svg"
 ];
