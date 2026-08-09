@@ -12,12 +12,22 @@ import { renderWinePalate } from "./view-wine-palate.js";
 
 const NAV_VIEWS = ["home", "spirits", "scan", "discover", "profile"];
 const TITLES = {
-  home: ["Pour Profile", "Home"], spirits: ["Your Collection", "My Spirits"], scan: ["Add a Bottle", "Scan"],
+  home: ["Pour Decisions", "Home"], spirits: ["Your Collection", "My Bottles"], scan: ["Add a Bottle", "Scan"],
   discover: ["Recommendations", "Discover"], map: ["Geographic Journal", "Map"], profile: ["Your Palate", "Profile"],
   bottle: ["Bottle", ""], compare: ["Comparison", "Compare"], wine: ["Wine Palate", "Wine"]
 };
 
 let currentView = "home";
+
+function applyProfileLabels() {
+  const isWine = getActiveProfile() === "wine";
+  const label = isWine ? "My Wines" : "My Spirits";
+  const btn = document.querySelector('[data-nav="spirits"]');
+  if (btn) btn.lastChild.textContent = label;
+  const icon = btn && btn.querySelector(".nav-icon");
+  if (icon) icon.textContent = isWine ? "🍷" : "🥃";
+  TITLES.spirits = ["Your Collection", label];
+}
 
 function setActiveNav(view) {
   document.querySelectorAll(".nav-btn").forEach((b) => b.classList.toggle("active", b.dataset.nav === view));
@@ -126,13 +136,13 @@ async function wireProfileSwitcher() {
   chip.addEventListener("click", async () => {
     const { openSheet } = await import("./ui.js");
     openSheet(`
-      <div class="sheet-header"><h2>Whose palate?</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
-      <p class="field-hint">Bottles are shared, but ratings, statuses, and palate models are kept completely separate per person.</p>
+      <div class="sheet-header"><h2>What are you drinking?</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
+      <p class="field-hint">Each profile covers one drink family and keeps its own ratings, statuses, and palate model — spirits preferences never bleed into wine.</p>
       <div style="margin-top:12px">
         ${profiles.map((p) => `
           <button type="button" class="btn ${p.slug === getActiveProfile() ? "btn-primary" : "btn-secondary"} btn-block" data-pick-profile="${escapeHtml(p.slug)}" style="margin-bottom:8px;justify-content:space-between">
             <span>${escapeHtml(p.display_name)}</span>
-            <span style="font-size:12px;font-weight:500;opacity:0.8">${escapeHtml(p.focus === "wine" ? "Wine" : p.focus === "spirits" ? "Spirits" : "Spirits & Wine")}</span>
+            <span style="font-size:12px;font-weight:500;opacity:0.8">${escapeHtml(p.person || "")}</span>
           </button>`).join("")}
       </div>
     `, {
@@ -141,6 +151,7 @@ async function wireProfileSwitcher() {
           btn.addEventListener("click", () => {
             setActiveProfile(btn.dataset.pickProfile);
             paint();
+            applyProfileLabels();
             closeSheet();
             toast(`Switched to ${el("profileChipName").textContent}.`);
             navigate(currentView);
@@ -184,6 +195,7 @@ function registerServiceWorker() {
 }
 
 applyBackgroundPref();
+applyProfileLabels();
 wireNav();
 wireProfileSwitcher();
 wireGlobalDelegation();

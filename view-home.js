@@ -24,7 +24,7 @@ export async function renderHome() {
     insight = `Your strongest emerging preference is <strong>${escapeHtml(titleize(topTag))}</strong> (${topVal.affinity}% affinity, ${topVal.confidence} confidence, from ${topVal.sampleCount} tasting${topVal.sampleCount === 1 ? "" : "s"}).`;
   }
 
-  const who = getActiveProfile() === "lady" ? "Lady" : "Justin";
+  const isWine = getActiveProfile() === "wine";
   const heroLine = tried.length
     ? `${tried.length} tried · ${wantToTry.length} on the list`
     : "Rate · Track · Enjoy";
@@ -35,7 +35,7 @@ export async function renderHome() {
       <div class="hero-scrim" aria-hidden="true"></div>
       <figcaption class="hero-copy">
         <p class="hero-eyebrow">Pour Decisions</p>
-        <h2>Welcome back, ${escapeHtml(who)}</h2>
+        <h2>${isWine ? "Wine" : "Spirits"}</h2>
         <p class="hero-eyebrow" style="margin-top:2px;letter-spacing:0.06em;opacity:0.85">${escapeHtml(heroLine)}</p>
       </figcaption>
     </figure>

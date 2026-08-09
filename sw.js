@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-profile-v7-brand-imagery";
+const CACHE_NAME = "pour-profile-v8-category-profiles";
 const CORE_ASSETS = [
   "/",
   "/index.html",

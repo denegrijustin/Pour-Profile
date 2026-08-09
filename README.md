@@ -43,6 +43,11 @@ Cloudflare Workers app (no build tooling required beyond a `cp` step).
   (producer/detected profile) or the tasting level (your personal experience).
 - `brand_signals` — brand-level preference notes independent of any one bottle
   (e.g. "generally likes Rabbit Hole").
+- `profiles` — one per drink family (**Spirits**, **Wine**), each with an
+  enforced `focus` so the spirits profile never lists wine and vice versa. The
+  `person` column records whose palate it represents (Justin / Lady) without
+  making the switcher person-based. Status (`bottle_status`) and tastings are
+  scoped per profile, while `bottles` stays a shared catalog.
 
 See `migrations/` for the full schema and the seeded starting data (Justin's
 known favorites/dislikes and initial discovery queue — every fact there is

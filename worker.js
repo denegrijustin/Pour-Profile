@@ -120,14 +120,33 @@ async function run(env, sql, ...params) {
 // are a shared catalog, so Justin and Lady can each hold their own view of the
 // same bottle without their palates contaminating each other.
 
-const DEFAULT_PROFILE_SLUG = "justin";
+const DEFAULT_PROFILE_SLUG = "spirits";
+
+// Legacy slugs from when profiles were named after people. Kept so a phone with
+// the old value in localStorage still resolves instead of silently falling back.
+const LEGACY_PROFILE_SLUGS = { justin: "spirits", lady: "wine" };
+
+async function resolveProfile(url, env) {
+  let slug = (url.searchParams.get("profile") || DEFAULT_PROFILE_SLUG).toLowerCase();
+  slug = LEGACY_PROFILE_SLUGS[slug] || slug;
+  const row = await first(env, "SELECT * FROM profiles WHERE slug = ?", slug);
+  if (row) return row;
+  return await first(env, "SELECT * FROM profiles WHERE slug = ?", DEFAULT_PROFILE_SLUG);
+}
 
 async function resolveProfileId(url, env) {
-  const slug = (url.searchParams.get("profile") || DEFAULT_PROFILE_SLUG).toLowerCase();
-  const row = await first(env, "SELECT id FROM profiles WHERE slug = ?", slug);
-  if (row) return row.id;
-  const fallback = await first(env, "SELECT id FROM profiles WHERE slug = ?", DEFAULT_PROFILE_SLUG);
-  return fallback ? fallback.id : 1;
+  const p = await resolveProfile(url, env);
+  return p ? p.id : 1;
+}
+
+// Each profile is scoped to one drink family: the Wine profile shows only wine,
+// the Spirits profile shows everything else. Without this the browse list
+// returned every bottle regardless of which profile was active.
+function focusClause(profile, alias = "b") {
+  if (!profile || !profile.focus) return { sql: "", params: [] };
+  if (profile.focus === "wine") return { sql: ` AND ${alias}.category = 'wine'`, params: [] };
+  if (profile.focus === "spirits") return { sql: ` AND ${alias}.category != 'wine'`, params: [] };
+  return { sql: "", params: [] };
 }
 
 async function listProfiles(env) {
@@ -200,12 +219,14 @@ async function listBottles(url, env) {
   const sort = url.searchParams.get("sort") || "newest";
   const distilleryId = url.searchParams.get("distillery_id");
 
-  const profileId = await resolveProfileId(url, env);
+  const activeProfile = await resolveProfile(url, env);
+  const profileId = activeProfile ? activeProfile.id : 1;
   const varietal = url.searchParams.get("varietal");
 
   let sql = `SELECT b.*, d.name as distillery_name, d.city as distillery_city, d.state_region as distillery_state, d.country as distillery_country
              FROM bottles b LEFT JOIN distilleries d ON d.id = b.distillery_id WHERE 1=1`;
   const params = [];
+  sql += focusClause(activeProfile).sql;
   if (distilleryId) { sql += " AND b.distillery_id = ?"; params.push(Number(distilleryId)); }
   if (category) { sql += " AND b.category = ?"; params.push(category); }
   if (varietal) { sql += " AND b.varietal = ?"; params.push(varietal); }
@@ -864,9 +885,11 @@ async function lookupOpenFoodFacts(code) {
 async function globalSearch(url, env) {
   const q = url.searchParams.get("q");
   if (!q || q.length < 2) return json({ results: [] });
+  const profile = await resolveProfile(url, env);
+  const focus = focusClause(profile).sql;
   const like = `%${q}%`;
   const [bottles, distilleries, venues, tastings, flavorTags] = await Promise.all([
-    all(env, "SELECT id, name, brand, category FROM bottles WHERE name LIKE ? OR brand LIKE ? OR barcode = ? LIMIT 10", like, like, q),
+    all(env, `SELECT id, name, brand, category FROM bottles b WHERE (name LIKE ? OR brand LIKE ? OR barcode = ?)${focus} LIMIT 10`, like, like, q),
     all(env, "SELECT id, name, city, state_region FROM distilleries WHERE name LIKE ? OR city LIKE ? OR state_region LIKE ? LIMIT 10", like, like, like),
     all(env, "SELECT id, name, city FROM venues WHERE name LIKE ? OR city LIKE ? LIMIT 10", like, like),
     all(env, "SELECT t.id, t.bottle_id, b.name as bottle_name, t.notes FROM tastings t JOIN bottles b ON b.id = t.bottle_id WHERE t.notes LIKE ? LIMIT 10", like),
@@ -879,7 +902,8 @@ async function globalSearch(url, env) {
 
 async function getStats(env, url) {
   const profileId = await resolveProfileId(url, env);
-  const [bottleCount] = await all(env, "SELECT COUNT(*) as n FROM bottles");
+  const profile = await resolveProfile(url, env);
+  const [bottleCount] = await all(env, `SELECT COUNT(*) as n FROM bottles b WHERE 1=1${focusClause(profile).sql}`);
   const [tastingCount] = await all(env, "SELECT COUNT(*) as n FROM tastings WHERE rating IS NOT NULL AND profile_id = ?", profileId);
   const [distilleryCount] = await all(env, "SELECT COUNT(DISTINCT distillery_id) as n FROM bottles WHERE distillery_id IS NOT NULL");
   const [stateCount] = await all(env, "SELECT COUNT(DISTINCT origin_state) as n FROM bottles WHERE origin_state IS NOT NULL");

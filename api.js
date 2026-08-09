@@ -49,7 +49,13 @@ export function downscaleImage(file, maxDimension = 700, quality = 0.72) {
 // Every opinion in this app belongs to a person. The active profile is appended
 // to every API call so Justin's spirits palate and Lady's wine palate never mix.
 const PROFILE_KEY = "pourProfile.activeProfile";
-let activeProfile = localStorage.getItem(PROFILE_KEY) || "justin";
+// Profiles were originally named after people; they're now named after the drink
+// family each one covers. Map any stored legacy value so existing phones don't
+// wake up pointing at a slug that no longer exists.
+const LEGACY_PROFILE_SLUGS = { justin: "spirits", lady: "wine" };
+let activeProfile = LEGACY_PROFILE_SLUGS[localStorage.getItem(PROFILE_KEY)]
+  || localStorage.getItem(PROFILE_KEY)
+  || "spirits";
 
 export function getActiveProfile() { return activeProfile; }
 export function setActiveProfile(slug) {
