@@ -46,13 +46,19 @@ async function routeApi(request, url, env) {
   if (pathname === "/api/palate" && method === "GET") return getPalateProfile(env);
   if (pathname === "/api/match" && method === "POST") return postMatch(request, env);
 
+  const photoMatch = pathname.match(/^\/api\/bottles\/(\d+)\/photo$/);
+  if (photoMatch && method === "PUT") return putBottlePhoto(Number(photoMatch[1]), request, env);
+  if (photoMatch && method === "DELETE") return deleteBottlePhoto(Number(photoMatch[1]), env);
+  const imageMatch = pathname.match(/^\/api\/images\/(\d+)$/);
+  if (imageMatch && method === "GET") return getBottleImage(Number(imageMatch[1]), env);
+
   const barcodeMatch = pathname.match(/^\/api\/barcode\/([A-Za-z0-9]+)$/);
   if (barcodeMatch && method === "GET") return lookupBarcode(barcodeMatch[1], env);
 
   if (pathname === "/api/search" && method === "GET") return globalSearch(url, env);
   if (pathname === "/api/stats" && method === "GET") return getStats(env);
 
-  if (pathname === "/api/export.json" && method === "GET") return exportJson(env);
+  if (pathname === "/api/export.json" && method === "GET") return exportJson(env, url);
   if (pathname === "/api/export.csv" && method === "GET") return exportCsv(env);
   if (pathname === "/api/import" && method === "POST") return importJson(request, env);
 
@@ -273,6 +279,7 @@ async function deleteBottle(id, env) {
   for (const tastingId of tastingIds) await run(env, "DELETE FROM tasting_flavor_tags WHERE tasting_id = ?", tastingId);
   await run(env, "DELETE FROM tastings WHERE bottle_id = ?", id);
   await run(env, "DELETE FROM bottle_flavor_tags WHERE bottle_id = ?", id);
+  await run(env, "DELETE FROM bottle_images WHERE bottle_id = ?", id);
   await run(env, "DELETE FROM bottles WHERE id = ?", id);
   return json({ ok: true });
 }
@@ -442,6 +449,48 @@ async function postMatch(request, env) {
   return json({ match });
 }
 
+// ---------- bottle photos ----------
+
+const MAX_PHOTO_BYTES = 3 * 1024 * 1024;
+
+async function putBottlePhoto(id, request, env) {
+  const bottle = await first(env, "SELECT id FROM bottles WHERE id = ?", id);
+  if (!bottle) return json({ error: "Not found" }, 404);
+
+  const b = await body(request);
+  const dataUrl = String(b.dataUrl || "");
+  const match = dataUrl.match(/^data:(image\/(?:jpeg|jpg|png|webp));base64,(.+)$/i);
+  if (!match) return json({ error: "Send a JPEG, PNG, or WEBP image as a base64 data URL." }, 400);
+  const [, mime, base64] = match;
+  if (Math.ceil((base64.length * 3) / 4) > MAX_PHOTO_BYTES) return json({ error: "Image must be 3 MB or smaller after downscaling." }, 413);
+
+  await run(env, `INSERT INTO bottle_images (bottle_id, mime, data, source, updated_at) VALUES (?,?,?,?, datetime('now'))
+    ON CONFLICT(bottle_id) DO UPDATE SET mime = excluded.mime, data = excluded.data, source = excluded.source, updated_at = datetime('now')`,
+    id, mime, base64, "user_photo");
+
+  // Cache-bust so an updated photo replaces the old one in already-loaded views.
+  const url = `/api/images/${id}?v=${Date.now()}`;
+  await run(env, "UPDATE bottles SET image_url = ?, image_source = 'user_photo', image_confidence = 'high', updated_at = datetime('now') WHERE id = ?", url, id);
+  return json({ ok: true, image_url: url });
+}
+
+async function deleteBottlePhoto(id, env) {
+  await run(env, "DELETE FROM bottle_images WHERE bottle_id = ?", id);
+  await run(env, "UPDATE bottles SET image_url = NULL, image_source = NULL, image_confidence = NULL, updated_at = datetime('now') WHERE id = ?", id);
+  return json({ ok: true });
+}
+
+async function getBottleImage(id, env) {
+  const row = await first(env, "SELECT mime, data FROM bottle_images WHERE bottle_id = ?", id);
+  if (!row) return json({ error: "Not found" }, 404);
+  const binary = atob(row.data);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  return new Response(bytes, {
+    headers: { "Content-Type": row.mime, "Cache-Control": "public, max-age=31536000, immutable" }
+  });
+}
+
 // ---------- barcode lookup ----------
 
 async function lookupBarcode(code, env) {
@@ -538,12 +587,17 @@ async function getStats(env) {
 
 // ---------- export / import ----------
 
-async function exportJson(env) {
+async function exportJson(env, url) {
   const [bottles, tastings, venues, distilleries, flavorTags, brandSignals] = await Promise.all([
     all(env, "SELECT * FROM bottles"), all(env, "SELECT * FROM tastings"), all(env, "SELECT * FROM venues"),
     all(env, "SELECT * FROM distilleries"), all(env, "SELECT * FROM flavor_tags"), all(env, "SELECT * FROM brand_signals")
   ]);
-  return json({ exported_at: new Date().toISOString(), bottles, tastings, venues, distilleries, flavor_tags: flavorTags, brand_signals: brandSignals });
+  const payload = { exported_at: new Date().toISOString(), bottles, tastings, venues, distilleries, flavor_tags: flavorTags, brand_signals: brandSignals };
+  // Photos are opt-in: they're base64 and would dominate the file size otherwise.
+  if (url && url.searchParams.get("include_images") === "1") {
+    payload.bottle_images = await all(env, "SELECT * FROM bottle_images");
+  }
+  return json(payload);
 }
 
 async function exportCsv(env) {

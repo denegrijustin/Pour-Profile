@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-profile-v1";
+const CACHE_NAME = "pour-profile-v2-bottle-photos";
 const CORE_ASSETS = [
   "/",
   "/index.html",

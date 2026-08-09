@@ -264,6 +264,19 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--amber); out
 
 .insight-card { background: linear-gradient(160deg, var(--amber-tint), var(--paper)); border: 1px solid var(--border-soft); }
 
+.hero-photo {
+  position: relative; height: 240px; border-radius: var(--radius-lg); overflow: hidden;
+  background: var(--paper-sunk); margin-bottom: 12px; display: flex; align-items: center; justify-content: center;
+}
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-photo-empty { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.hero-photo-btn {
+  position: absolute; right: 10px; bottom: 10px; border: 1px solid var(--border);
+  background: rgba(255,255,255,0.94); color: var(--charcoal); border-radius: 999px;
+  padding: 8px 14px; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.hero-photo-btn:active { background: var(--paper-sunk); }
+
 #mapCanvas { width: 100%; height: 56vh; border-radius: var(--radius-lg); overflow: hidden; background: var(--paper-sunk); }
 .map-legend { display: flex; gap: 14px; font-size: 12px; margin: 8px 0; color: var(--charcoal-soft); }
 .map-legend span { display: inline-flex; align-items: center; gap: 5px; }

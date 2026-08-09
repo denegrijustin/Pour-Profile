@@ -18,6 +18,33 @@ function writeQueue(q) {
   try { localStorage.setItem(QUEUE_KEY, JSON.stringify(q)); } catch { /* ignore */ }
 }
 
+/**
+ * Downscale + re-encode a picked photo before upload. Phone camera shots are
+ * 3-5 MB; bottle cards never render larger than ~700px, so this keeps rows small
+ * and uploads fast on bar wifi.
+ */
+export function downscaleImage(file, maxDimension = 700, quality = 0.72) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error("Couldn't read that image."));
+    reader.onload = () => {
+      const img = new Image();
+      img.onerror = () => reject(new Error("That file isn't a readable image."));
+      img.onload = () => {
+        const scale = Math.min(1, maxDimension / Math.max(img.width, img.height));
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.round(img.width * scale);
+        canvas.height = Math.round(img.height * scale);
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        resolve(canvas.toDataURL("image/jpeg", quality));
+      };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
 async function request(path, options = {}) {
   const method = options.method || "GET";
   try {
@@ -46,6 +73,8 @@ async function request(path, options = {}) {
 export const api = {
   bottles: (params = {}) => request(`/api/bottles?${new URLSearchParams(params)}`),
   bottle: (id) => request(`/api/bottles/${id}`),
+  putBottlePhoto: (id, dataUrl) => request(`/api/bottles/${id}/photo`, { method: "PUT", body: { dataUrl } }),
+  deleteBottlePhoto: (id) => request(`/api/bottles/${id}/photo`, { method: "DELETE" }),
   createBottle: (b) => request("/api/bottles", { method: "POST", body: b }),
   updateBottle: (id, b) => request(`/api/bottles/${id}`, { method: "PATCH", body: b }),
   deleteBottle: (id) => request(`/api/bottles/${id}`, { method: "DELETE" }),

@@ -1,4 +1,4 @@
-import { api } from "./api.js";
+import { api, downscaleImage } from "./api.js";
 import {
   el, escapeHtml, formatRating, formatDate, formatMoney, statusPillsHtml, matchBadgeHtml,
   decisionBannerHtml, whyConcernsHtml, openSheet, closeSheet, toast, flavorTagPickerHtml
@@ -7,12 +7,14 @@ import { CATEGORIES, STATUS_TAGS, categoryLabel, titleize } from "./spirit-taxon
 import { openLogPourSheet } from "./log-pour.js";
 
 let currentBottleId = null;
+let currentDispatchNav = () => {};
 export let compareList = JSON.parse(sessionStorage.getItem("pourProfile.compare") || "[]");
 
 function saveCompareList() { sessionStorage.setItem("pourProfile.compare", JSON.stringify(compareList)); }
 
 export async function renderBottleDetail(id, dispatchNav) {
   currentBottleId = id;
+  if (dispatchNav) currentDispatchNav = dispatchNav;
   const view = el("view-bottle");
   view.innerHTML = `<p class="field-hint">Loading bottle…</p>`;
   let data;
@@ -52,9 +54,14 @@ export async function renderBottleDetail(id, dispatchNav) {
 
   view.innerHTML = `
     <button class="btn-ghost" data-action="back" style="padding-left:0">← Back</button>
-    <div class="thumb" style="border-radius:var(--radius-lg);height:220px;margin-bottom:14px">
-      ${bottle.image_url ? `<img src="${escapeHtml(bottle.image_url)}" alt="${escapeHtml(bottle.name)}" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg)">` : `<span style="font-size:52px">🥃</span>`}
+    <div class="hero-photo">
+      ${bottle.image_url
+        ? `<img src="${escapeHtml(bottle.image_url)}" alt="${escapeHtml(bottle.name)}">`
+        : `<div class="hero-photo-empty"><span style="font-size:46px" aria-hidden="true">🥃</span><span class="field-hint">No photo yet</span></div>`}
+      <button class="hero-photo-btn" data-action="photo" type="button">${bottle.image_url ? "Change photo" : "📷 Add photo"}</button>
     </div>
+    <input type="file" id="bottlePhotoInput" accept="image/*" capture="environment" hidden>
+    ${bottle.image_source ? `<p class="field-hint">Image source: ${escapeHtml(titleize(bottle.image_source))}${bottle.image_confidence ? ` (${escapeHtml(bottle.image_confidence)} confidence)` : ""}</p>` : ""}
     <h1>${escapeHtml(bottle.name)}</h1>
     <p class="field-hint">${escapeHtml([bottle.brand, bottle.expression].filter(Boolean).join(" · "))}</p>
     <div class="status-pills" style="margin:10px 0">${statusPillsHtml(bottle.status_tags)}</div>
@@ -89,12 +96,28 @@ export async function renderBottleDetail(id, dispatchNav) {
     <div class="card"><div class="tag-cloud">${flavorExperience.map(([f, n]) => `<span class="tag-chip" style="cursor:default">${escapeHtml(titleize(f))} × ${n}</span>`).join("")}</div></div>` : ""}
   `;
 
-  wireBottleDetail(bottle, dispatchNav);
+  wireBottleDetail(bottle);
 }
 
-function wireBottleDetail(bottle, dispatchNav) {
+function wireBottleDetail(bottle) {
   const view = el("view-bottle");
-  view.querySelector("[data-action='back']").addEventListener("click", () => dispatchNav("spirits"));
+  view.querySelector("[data-action='back']").addEventListener("click", () => currentDispatchNav("spirits"));
+
+  const photoInput = view.querySelector("#bottlePhotoInput");
+  view.querySelector("[data-action='photo']").addEventListener("click", () => photoInput.click());
+  photoInput.addEventListener("change", async () => {
+    const file = photoInput.files && photoInput.files[0];
+    if (!file) return;
+    toast("Processing photo…");
+    try {
+      const dataUrl = await downscaleImage(file);
+      await api.putBottlePhoto(bottle.id, dataUrl);
+      toast("Photo saved.");
+      renderBottleDetail(bottle.id, currentDispatchNav);
+    } catch (err) {
+      toast(`Couldn't save photo: ${err.message}`);
+    }
+  });
   view.querySelector("[data-action='log-pour']").addEventListener("click", () => openLogPourSheet(bottle));
   view.querySelector("[data-action='edit-bottle']").addEventListener("click", () => openEditSheet(bottle));
   view.querySelector("[data-action='add-compare']").addEventListener("click", () => {
@@ -122,6 +145,10 @@ function openEditSheet(bottle) {
       ${STATUS_TAGS.map((s) => `<button type="button" class="tag-chip${(bottle.status_tags || []).includes(s.id) ? " selected" : ""}" data-toggle-status="${s.id}">${s.label}</button>`).join("")}
     </div>
     <label>Description</label><textarea id="editDescription">${escapeHtml(bottle.description || "")}</textarea>
+    <label>Image URL</label>
+    <input type="text" id="editImageUrl" value="${escapeHtml(bottle.image_url || "")}" placeholder="https://… (or use Add photo on the bottle page)">
+    <p class="field-hint">Paste an official producer image URL, or take your own photo from the bottle page. Your own photo always wins.</p>
+    ${bottle.image_url ? `<button class="btn btn-secondary btn-sm" id="editRemovePhotoBtn" style="margin-top:8px">Remove image</button>` : ""}
     <button class="btn btn-primary btn-block" id="editSaveBtn" style="margin-top:16px">Save Changes</button>
     <button class="btn btn-danger btn-block" id="editDeleteBtn" style="margin-top:8px">Delete Bottle</button>
   `, {
@@ -134,20 +161,39 @@ function openEditSheet(bottle) {
         statusTags = statusTags.includes(s) ? statusTags.filter((x) => x !== s) : [...statusTags, s];
         btn.classList.toggle("selected");
       });
-      document.getElementById("editSaveBtn").addEventListener("click", async () => {
+      const removeBtn = document.getElementById("editRemovePhotoBtn");
+      if (removeBtn) removeBtn.addEventListener("click", async () => {
         try {
-          await api.updateBottle(bottle.id, {
-            name: document.getElementById("editName").value.trim(),
-            brand: document.getElementById("editBrand").value.trim() || null,
-            category: document.getElementById("editCategory").value,
-            proof: document.getElementById("editProof").value ? Number(document.getElementById("editProof").value) : null,
-            msrp: document.getElementById("editMsrp").value ? Number(document.getElementById("editMsrp").value) : null,
-            description: document.getElementById("editDescription").value.trim() || null,
-            status_tags: statusTags
-          });
+          await api.deleteBottlePhoto(bottle.id);
+          closeSheet();
+          toast("Image removed.");
+          renderBottleDetail(bottle.id, currentDispatchNav);
+        } catch (err) { toast(`Couldn't remove: ${err.message}`); }
+      });
+
+      document.getElementById("editSaveBtn").addEventListener("click", async () => {
+        const imageUrl = document.getElementById("editImageUrl").value.trim();
+        const payload = {
+          name: document.getElementById("editName").value.trim(),
+          brand: document.getElementById("editBrand").value.trim() || null,
+          category: document.getElementById("editCategory").value,
+          proof: document.getElementById("editProof").value ? Number(document.getElementById("editProof").value) : null,
+          msrp: document.getElementById("editMsrp").value ? Number(document.getElementById("editMsrp").value) : null,
+          description: document.getElementById("editDescription").value.trim() || null,
+          status_tags: statusTags
+        };
+        // Only touch image fields if the URL actually changed, so a user photo
+        // saved from the bottle page isn't clobbered by an untouched form field.
+        if (imageUrl !== (bottle.image_url || "")) {
+          payload.image_url = imageUrl || null;
+          payload.image_source = imageUrl ? "manual_url" : null;
+          payload.image_confidence = imageUrl ? "medium" : null;
+        }
+        try {
+          await api.updateBottle(bottle.id, payload);
           closeSheet();
           toast("Bottle updated.");
-          renderBottleDetail(bottle.id, () => {});
+          renderBottleDetail(bottle.id, currentDispatchNav);
         } catch (err) { toast(`Couldn't save: ${err.message}`); }
       });
       document.getElementById("editDeleteBtn").addEventListener("click", async () => {

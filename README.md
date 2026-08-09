@@ -83,10 +83,33 @@ and the rest of the app functions fully without it.
 - JSON/CSV export
 - Seeded with Justin's known favorites, dislikes, and starting discovery queue
 
+## Bottle images
+
+Three sources, each recorded with its provenance in `image_source` / `image_confidence`:
+
+1. **Your own photo** (`user_photo`, high confidence) — tap "Add photo" on any bottle
+   page. The image is downscaled to ~700px JPEG in the browser before upload, stored
+   in D1 (`bottle_images`), and served from `GET /api/images/:bottleId` with a
+   long cache lifetime. R2 would be the natural home for these, but R2 is not
+   enabled on this Cloudflare account; because the stored `image_url` is just a
+   path, moving to R2 later only means changing the read/write in `worker.js`.
+2. **Barcode lookup image** (`barcode_api`, medium/low confidence) — populated
+   automatically when a scan matches a product database, always shown for
+   confirmation before saving.
+3. **Manual URL** (`manual_url`, medium confidence) — paste an official producer
+   image URL in the bottle's Edit sheet.
+
+Seeded bottles deliberately ship with **no** image: guessing at retailer image
+URLs risks showing the wrong bottle, which the app is explicitly designed not to
+do. Photograph them as you go, or paste producer URLs.
+
+Only JPEG/PNG/WEBP are accepted — SVG is rejected, since SVG can carry script.
+
 ## Phase 2 backlog
 
 - True pixel-based map clustering (currently one marker per venue/distillery, each already showing an aggregate count)
-- R2-backed user bottle photo uploads (currently image URL only, with source/provenance tracked)
+- Move bottle photos from D1 to R2 once R2 is enabled on the account (`image_url` already abstracts storage)
+- Automatic producer-image lookup with a verification step before saving
 - Venue/business lookup during "Use Current Location" pour logging (currently manual venue entry)
 - JSON import UI (the `/api/import` endpoint exists; needs a Profile-page file picker)
 - LLM-assisted free-text tasting note parsing and flavor tag suggestion (`/api/analyze-image` exists for label photos; note-parsing is not yet wired up)
