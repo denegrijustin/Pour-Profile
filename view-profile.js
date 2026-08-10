@@ -1,6 +1,7 @@
 import { api } from "./api.js";
 import { el, escapeHtml } from "./ui.js";
 import { titleize } from "./spirit-taxonomy.js";
+import { imagesCardHtml, wireImagesCard } from "./image-tools.js";
 
 export async function renderProfile() {
   const view = el("view-profile");
@@ -59,6 +60,8 @@ export async function renderProfile() {
       </div>
     </div>` : ""}
 
+    ${imagesCardHtml()}
+
     <div class="section-title"><h2>Your Data</h2></div>
     <div class="card">
       <p class="field-hint">Your data always stays exportable — you're never locked in.</p>
@@ -68,6 +71,8 @@ export async function renderProfile() {
       </div>
     </div>
   `;
+
+  wireImagesCard(view);
 
   const wineBtn = view.querySelector("[data-action='open-wine']");
   if (wineBtn) wineBtn.addEventListener("click", () => {

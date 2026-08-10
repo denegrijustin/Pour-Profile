@@ -3,6 +3,7 @@ import { scoreWine, learnFromTasting } from "./wine-engine.js";
 import { RATING_SOURCES } from "./rating-sources.js";
 import { RESEARCH_CATALOG } from "./catalog-research.js";
 import { refreshCatalog, computeFit, isVisible } from "./catalog-engine.js";
+import { enrichOne, downloadImage } from "./image-enrich.js";
 
 // The reference catalog is read-only data, so it ships with the Worker rather
 // than living in D1. Scored once per isolate, not per request.
@@ -32,9 +33,15 @@ async function routeApi(request, url, env) {
   const method = request.method;
 
   if (pathname === "/api/profiles" && method === "GET") return listProfiles(env);
-  if (pathname === "/api/catalog/search" && method === "GET") return catalogSearch(url);
-  if (pathname === "/api/catalog/recommended" && method === "GET") return catalogRecommended(url);
+  if (pathname === "/api/catalog/search" && method === "GET") return catalogSearch(url, env);
+  if (pathname === "/api/catalog/recommended" && method === "GET") return catalogRecommended(url, env);
   if (pathname === "/api/catalog/adopt" && method === "POST") return catalogAdopt(request, env, url);
+  if (pathname === "/api/images/status" && method === "GET") return imageStatus(env, url.searchParams.get("scope") || "visible");
+  if (pathname === "/api/images/review" && method === "GET") return imageReview(env);
+  if (pathname === "/api/images/enrich" && method === "POST") return enrichImages(request, env);
+  if (pathname === "/api/images/accept" && method === "POST") return acceptImage(request, env);
+  const catImgMatch = pathname.match(/^\/api\/catalog\/images\/([A-Za-z0-9._-]+)$/);
+  if (catImgMatch && method === "GET") return getCatalogImage(catImgMatch[1], env);
   if (pathname === "/api/wine/palate" && method === "GET") return getWinePalate(url, env);
   if (pathname === "/api/wine/match" && method === "POST") return postWineMatch(request, url, env);
   const wineDimMatch = pathname.match(/^\/api\/wine\/dimensions$/);
@@ -669,6 +676,16 @@ function base64ToBytes(base64) {
   return bytes;
 }
 
+// Only used on the D1 fallback path (no R2 binding). Chunked because
+// String.fromCharCode(...bytes) blows the argument limit on a real photo.
+function bytesToBase64(bytes) {
+  let binary = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  }
+  return btoa(binary);
+}
+
 async function putBottlePhoto(id, request, env) {
   const bottle = await first(env, "SELECT id FROM bottles WHERE id = ?", id);
   if (!bottle) return json({ error: "Not found" }, 404);
@@ -750,7 +767,22 @@ function catalogPublic(r) {
 
 // Explicit search reaches hidden records on purpose — that is the point of a
 // reference catalog. Browsing does not.
-async function catalogSearch(url) {
+/**
+ * Attach resolved images to catalog results. The research exports carry no
+ * image URLs at all, so a record's picture only ever comes from the enrichment
+ * table — which means one lookup keyed by the ids actually being returned.
+ */
+async function withCatalogImages(env, results) {
+  if (!env || !results.length) return results;
+  const placeholders = results.map(() => "?").join(",");
+  const rows = await all(env,
+    `SELECT subject_id AS catalog_id FROM image_lookups WHERE subject_kind = 'catalog' AND status = 'ok' AND subject_id IN (${placeholders})`,
+    ...results.map((r) => r.id)).catch(() => []);
+  const have = new Set(rows.map((r) => r.catalog_id));
+  return results.map((r) => (have.has(r.id) ? { ...r, image_url: `/api/catalog/images/${r.id}` } : r));
+}
+
+async function catalogSearch(url, env) {
   const q = (url.searchParams.get("q") || "").trim().toLowerCase();
   if (q.length < 2) return json({ results: [] });
   const results = catalogFor(url)
@@ -758,15 +790,15 @@ async function catalogSearch(url) {
     .sort((a, b) => (b.ratings.jd_fit ?? -1) - (a.ratings.jd_fit ?? -1))
     .slice(0, 25)
     .map(catalogPublic);
-  return json({ results, catalog_size: catalogFor(url).length });
+  return json({ results: await withCatalogImages(env, results), catalog_size: catalogFor(url).length });
 }
 
-async function catalogRecommended(url) {
+async function catalogRecommended(url, env) {
   const results = catalogFor(url)
     .filter((r) => r.recommendation.recommended)
     .sort((a, b) => (b.ratings.jd_fit ?? -1) - (a.ratings.jd_fit ?? -1))
     .map(catalogPublic);
-  return json({ results });
+  return json({ results: await withCatalogImages(env, results) });
 }
 
 // Copy a catalog record into the user's real bottle table. Once adopted and
@@ -790,18 +822,277 @@ async function catalogAdopt(request, env, url) {
         herbal_green: tp.grassy_herbal, minerality: tp.minerality, body: tp.body, finish: tp.finish_intensity }
     : {};
 
+  // If enrichment already resolved a photo for this catalog record, the adopted
+  // bottle inherits it immediately rather than waiting for the next pass.
+  const enriched = await first(env, "SELECT subject_id FROM image_lookups WHERE subject_kind = 'catalog' AND subject_id = ? AND status = 'ok'", rec.id).catch(() => null);
+  const imageUrl = enriched ? `/api/catalog/images/${rec.id}` : null;
+
   const res = await run(env,
     `INSERT INTO bottles (name, brand, category, subcategory, varietal, origin_country, origin_state, proof, abv,
-       description, wine_dimensions, status_tags, data_source, source_confidence, catalog_id)
-     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+       description, wine_dimensions, status_tags, data_source, source_confidence, catalog_id,
+       image_url, image_source, image_confidence)
+     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
     rec.name, rec.producer, category, rec.subcategory,
     rec.category === "sauvignon_blanc" ? "sauvignon_blanc" : null,
     rec.country, rec.region, rec.proof, rec.abv,
-    tp.summary, JSON.stringify(wineDims), "[]", "catalog", "medium", rec.id);
+    tp.summary, JSON.stringify(wineDims), "[]", "catalog", "medium", rec.id,
+    imageUrl, imageUrl ? "catalog_enrichment" : null, imageUrl ? "medium" : null);
 
   const id = res.meta.last_row_id;
   await setBottleStatus(env, profileId, id, b.status_tags || ["want_to_try"]);
   return json({ bottle_id: id, adopted: true });
+}
+
+// ---------- image enrichment ----------
+// Runs in the Worker because the Worker has unrestricted outbound fetch. Covers
+// two kinds of subject with one pipeline:
+//   bottle  -- rows in `bottles` with no photo. Most of these are seeded, so
+//              they have no catalog_id and nothing else would ever reach them.
+//   catalog -- reference records, whose research export shipped no image URLs.
+// Bytes land in each kind's normal home so an enriched photo behaves exactly
+// like one the user took.
+
+const OFF_SEARCH_SPACING_MS = 6000;   // Open Food Facts asks for ~10 lookups/min
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/** Bottles still missing a photo — the ones actually showing "No photo yet". */
+async function bottleSubjects(env) {
+  const rows = await all(env,
+    `SELECT id, name, brand FROM bottles
+     WHERE image_url IS NULL OR image_url = '' OR image_source = 'auto_lookup'
+     ORDER BY id`);
+  return rows.map((r) => ({ kind: "bottle", id: String(r.id), name: r.name, producer: r.brand }));
+}
+
+/**
+ * Catalog records that need a photo.
+ *
+ * Most of the 317-record catalog is deliberately hidden — a record only surfaces
+ * once it is recommended, tasted, or adopted. Fetching images for the other ~290
+ * would mean hundreds of third-party lookups for pictures nobody can see, so
+ * "visible" is the default scope and "all" is opt-in.
+ */
+async function catalogSubjects(env, scope) {
+  let records = catalog();
+  if (scope !== "all") {
+    const adopted = await all(env, "SELECT DISTINCT catalog_id FROM bottles WHERE catalog_id IS NOT NULL").catch(() => []);
+    const ids = new Set(adopted.map((r) => r.catalog_id));
+    records = records.filter((r) => ids.has(r.id) || r.recommendation?.recommended || r.user_state?.tasted);
+  }
+  // `image` is carried through so the resolver can explain that this record's
+  // only link is a search-engine lookup rather than a product page.
+  return records.map((r) => ({ kind: "catalog", id: r.id, name: r.name, producer: r.producer, image: r.image }));
+}
+
+async function imageSubjects(env, scope) {
+  return [...await bottleSubjects(env), ...await catalogSubjects(env, scope)];
+}
+
+async function imageStatus(env, scope = "visible") {
+  const subjects = await imageSubjects(env, scope);
+  const key = (kind, id) => `${kind}:${id}`;
+  const wanted = new Map(subjects.map((s) => [key(s.kind, s.id), s]));
+
+  const rows = await all(env, "SELECT subject_kind, subject_id, status FROM image_lookups");
+  const counts = { ok: 0, needs_review: 0, failed: 0 };
+  let attempted = 0;
+  for (const row of rows) {
+    if (!wanted.has(key(row.subject_kind, row.subject_id))) continue;
+    if (counts[row.status] !== undefined) counts[row.status]++;
+    attempted++;
+  }
+
+  const total = subjects.length;
+  return json({
+    scope,
+    total,
+    bottles: subjects.filter((s) => s.kind === "bottle").length,
+    catalog: subjects.filter((s) => s.kind === "catalog").length,
+    catalog_size: catalog().length,
+    ok: counts.ok,
+    needs_review: counts.needs_review,
+    failed: counts.failed,
+    remaining: total - attempted,
+    percent: total ? Math.round((counts.ok / total) * 100) : 0
+  });
+}
+
+async function recordLookup(env, subject, r) {
+  await run(env, `INSERT INTO image_lookups
+      (subject_kind, subject_id, status, image_url, source_page, r2_key, mime, bytes, confidence, match_reason, candidates, attempted_at, updated_at)
+    VALUES (?,?,?,?,?,?,?,?,?,?,?, datetime('now'), datetime('now'))
+    ON CONFLICT(subject_kind, subject_id) DO UPDATE SET status=excluded.status, image_url=excluded.image_url,
+      source_page=excluded.source_page, r2_key=excluded.r2_key, mime=excluded.mime, bytes=excluded.bytes,
+      confidence=excluded.confidence, match_reason=excluded.match_reason, candidates=excluded.candidates,
+      attempted_at=datetime('now'), updated_at=datetime('now')`,
+    subject.kind, subject.id, r.status, r.image_url || null, r.source_page || null, r.r2_key || null,
+    r.mime || null, r.bytes || null, r.confidence || 0, r.match_reason || null, JSON.stringify(r.candidates || []));
+}
+
+/**
+ * Put the bytes wherever this kind of subject keeps its photo, and point the
+ * subject at them. Returns the r2 key so the lookup row can record it.
+ *
+ * A photo the user took always wins: `image_source` is checked so enrichment
+ * only ever fills an empty slot or replaces its own earlier guess.
+ */
+async function storeSubjectImage(env, subject, mime, buf) {
+  if (subject.kind === "bottle") {
+    const id = Number(subject.id);
+    // Checked before writing anything, not just in the UPDATE's WHERE clause:
+    // the bytes and the bottle_images row share one key per bottle, so writing
+    // first and guarding second would destroy a photo the user took while
+    // leaving the bottle still pointing at it.
+    const current = await first(env, "SELECT image_url, image_source FROM bottles WHERE id = ?", id);
+    if (!current) throw new Error("bottle no longer exists");
+    const slotIsFree = !current.image_url || current.image_source === "auto_lookup" || current.image_source === "catalog_enrichment";
+    if (!slotIsFree) throw new Error("this bottle already has your own photo");
+
+    if (env.PHOTOS) {
+      await env.PHOTOS.put(photoKey(id), buf, { httpMetadata: { contentType: mime } });
+      await run(env, `INSERT INTO bottle_images (bottle_id, mime, data, source, updated_at) VALUES (?,?,?,?, datetime('now'))
+        ON CONFLICT(bottle_id) DO UPDATE SET mime = excluded.mime, data = excluded.data, source = excluded.source, updated_at = datetime('now')`,
+        id, mime, "", "r2");
+    } else {
+      await run(env, `INSERT INTO bottle_images (bottle_id, mime, data, source, updated_at) VALUES (?,?,?,?, datetime('now'))
+        ON CONFLICT(bottle_id) DO UPDATE SET mime = excluded.mime, data = excluded.data, source = excluded.source, updated_at = datetime('now')`,
+        id, mime, bytesToBase64(buf), "auto_lookup");
+    }
+    await run(env,
+      `UPDATE bottles SET image_url = ?, image_source = 'auto_lookup', image_confidence = 'medium', updated_at = datetime('now')
+       WHERE id = ? AND (image_url IS NULL OR image_url = '' OR image_source IN ('auto_lookup', 'catalog_enrichment'))`,
+      `/api/images/${id}?v=${Date.now()}`, id);
+    return env.PHOTOS ? photoKey(id) : null;
+  }
+
+  const key = `catalog/${subject.id}`;
+  if (env.PHOTOS) await env.PHOTOS.put(key, buf, { httpMetadata: { contentType: mime } });
+  await backfillBottleImage(env, subject.id);
+  return env.PHOTOS ? key : null;
+}
+
+/**
+ * Push a resolved catalog image onto any bottle adopted from that record. A
+ * photo the user took themselves always wins, so only empty slots and
+ * previously-enriched slots are touched.
+ */
+async function backfillBottleImage(env, catalogId) {
+  await run(env,
+    `UPDATE bottles SET image_url = ?, image_source = 'catalog_enrichment', image_confidence = 'medium', updated_at = datetime('now')
+     WHERE catalog_id = ? AND (image_url IS NULL OR image_url = '' OR image_source IN ('catalog_enrichment', 'auto_lookup'))`,
+    `/api/catalog/images/${catalogId}`, catalogId);
+}
+
+async function enrichImages(request, env) {
+  const b = await body(request);
+  // Small batches on purpose: Workers cap subrequests per invocation, each
+  // subject costs two fetches, and the run is paced. The UI loops until done.
+  const limit = Math.min(Math.max(Number(b.limit) || 6, 1), 12);
+  const retryFailed = b.retry_failed === true;
+  const scope = b.scope === "all" ? "all" : "visible";
+
+  const attempted = await all(env, "SELECT subject_kind, subject_id, status FROM image_lookups");
+  // Never re-run a subject that already resolved. `failed` is the only status
+  // worth retrying — scoring is deterministic, so re-running a `needs_review`
+  // subject just produces the same weak candidates again; those are resolved by
+  // the user confirming one, not by another pass.
+  const skip = new Set(
+    attempted.filter((r) => !(retryFailed && r.status === "failed")).map((r) => `${r.subject_kind}:${r.subject_id}`)
+  );
+  const queue = (await imageSubjects(env, scope))
+    .filter((s) => !skip.has(`${s.kind}:${s.id}`))
+    .slice(0, limit);
+
+  const results = [];
+  for (const [i, subject] of queue.entries()) {
+    if (i > 0) await sleep(OFF_SEARCH_SPACING_MS);
+    const r = await enrichOne(subject);
+    if (r.status === "ok") {
+      try {
+        r.r2_key = await storeSubjectImage(env, subject, r.mime, r.buf);
+      } catch (err) {
+        r.status = "needs_review";
+        r.match_reason = `found a photo but could not store it: ${String(err.message || err)}`;
+      }
+    }
+    delete r.buf;
+    await recordLookup(env, subject, r);
+    results.push({ kind: subject.kind, id: subject.id, name: subject.name, status: r.status, confidence: r.confidence, reason: r.match_reason });
+  }
+
+  const status = await imageStatus(env, scope).then((res) => res.json());
+  return json({ processed: results.length, results, status });
+}
+
+// Subjects whose best candidate wasn't trustworthy enough to auto-accept, plus
+// the ones that found nothing. The candidate list travels with them so the user
+// can pick the right bottle shot instead of the engine guessing.
+async function imageReview(env) {
+  const rows = await all(env,
+    `SELECT subject_kind, subject_id, status, source_page, confidence, match_reason, candidates
+     FROM image_lookups WHERE status IN ('needs_review','failed') ORDER BY confidence DESC`);
+  const byCatalogId = new Map(catalog().map((r) => [r.id, r]));
+  const bottles = await all(env, "SELECT id, name, brand FROM bottles");
+  const byBottleId = new Map(bottles.map((r) => [String(r.id), r]));
+
+  const items = rows.map((row) => {
+    const isBottle = row.subject_kind === "bottle";
+    const subject = isBottle ? byBottleId.get(row.subject_id) : byCatalogId.get(row.subject_id);
+    if (!subject) return null;
+    let candidates = [];
+    try { candidates = JSON.parse(row.candidates || "[]"); } catch { /* stored blob unreadable; show none */ }
+    return {
+      kind: row.subject_kind,
+      id: row.subject_id,
+      name: subject.name,
+      producer: isBottle ? subject.brand : subject.producer,
+      status: row.status,
+      source_page: row.source_page,
+      confidence: row.confidence,
+      reason: row.match_reason,
+      candidates
+    };
+  }).filter(Boolean);
+
+  return json({ items });
+}
+
+// Confirming a reviewed candidate: the user picks which image is actually right,
+// which is the only path by which a low-confidence match ever gets applied.
+async function acceptImage(request, env) {
+  const b = await body(request);
+  const kind = b.kind === "bottle" ? "bottle" : "catalog";
+  const id = String(b.id || "");
+  if (!id) return json({ error: "id is required" }, 400);
+  if (!b.image_url) return json({ error: "image_url is required" }, 400);
+
+  const subject = kind === "bottle"
+    ? await first(env, "SELECT id, name, brand FROM bottles WHERE id = ?", Number(id))
+        .then((r) => (r ? { kind, id, name: r.name, producer: r.brand } : null))
+    : (() => { const r = catalog().find((x) => x.id === id); return r ? { kind, id, name: r.name, producer: r.producer } : null; })();
+  if (!subject) return json({ error: "Unknown subject" }, 404);
+
+  try {
+    const { mime, buf } = await downloadImage(b.image_url);
+    const r2Key = await storeSubjectImage(env, subject, mime, buf);
+    await recordLookup(env, subject, {
+      status: "ok", image_url: b.image_url, source_page: b.source_page || null, r2_key: r2Key,
+      mime, bytes: buf.length, confidence: 1, match_reason: "confirmed by user", candidates: []
+    });
+    return json({ ok: true, image_url: kind === "bottle" ? `/api/images/${id}?v=${Date.now()}` : `/api/catalog/images/${id}` });
+  } catch (err) {
+    return json({ error: String(err.message || err) }, 400);
+  }
+}
+
+async function getCatalogImage(catalogId, env) {
+  const row = await first(env, "SELECT r2_key, mime FROM image_lookups WHERE subject_kind = 'catalog' AND subject_id = ? AND status = 'ok'", catalogId);
+  if (!row || !row.r2_key || !env.PHOTOS) return json({ error: "Not found" }, 404);
+  const obj = await env.PHOTOS.get(row.r2_key);
+  if (!obj) return json({ error: "Not found" }, 404);
+  return new Response(obj.body, {
+    headers: { "Content-Type": row.mime || "image/jpeg", "Cache-Control": "public, max-age=604800" }
+  });
 }
 
 // ---------- external ratings (outside opinion) ----------

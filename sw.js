@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-decisions-v12-research-catalog";
+const CACHE_NAME = "pour-decisions-v13-catalog-images";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -8,6 +8,7 @@ const CORE_ASSETS = [
   "/ui.js",
   "/spirit-taxonomy.js",
   "/log-pour.js",
+  "/image-tools.js",
   "/view-home.js",
   "/view-spirits.js",
   "/view-scan.js",

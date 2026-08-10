@@ -127,6 +127,12 @@ export const api = {
   catalogSearch: (q) => request(`/api/catalog/search?${new URLSearchParams({ q })}`),
   catalogRecommended: () => request("/api/catalog/recommended"),
   catalogAdopt: (payload) => request("/api/catalog/adopt", { method: "POST", body: payload }),
+  // Image enrichment runs server-side: the Worker does the outbound lookups, the
+  // phone just drives the loop and shows progress.
+  imageStatus: (scope = "visible") => request(`/api/images/status?${new URLSearchParams({ scope })}`),
+  imageReview: () => request("/api/images/review"),
+  enrichImages: (payload = {}) => request("/api/images/enrich", { method: "POST", body: payload }),
+  acceptImage: (payload) => request("/api/images/accept", { method: "POST", body: payload }),
   externalRatings: (bottleId) => request(`/api/bottles/${bottleId}/external-ratings`),
   addExternalRating: (bottleId, payload) => request(`/api/bottles/${bottleId}/external-ratings`, { method: "POST", body: payload }),
   deleteExternalRating: (id) => request(`/api/external-ratings/${id}`, { method: "DELETE" }),

@@ -359,3 +359,17 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); ou
   .bottle-grid { grid-template-columns: repeat(3, 1fr); }
   .quick-actions { grid-template-columns: repeat(4, 1fr); max-width: 480px; }
 }
+
+/* Candidate picker for catalog image review. Weak matches are shown, never
+   auto-applied — the score is on the chip so it's obvious which one the engine
+   thought was closest without that being treated as a decision. */
+.candidate-chip {
+  flex: 0 0 auto; width: 84px; padding: 0; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); background: var(--paper); cursor: pointer;
+  overflow: hidden; display: flex; flex-direction: column; align-items: stretch;
+}
+.candidate-chip:focus-visible { outline: 2px solid var(--accent-deep); outline-offset: 2px; }
+.candidate-chip:active { border-color: var(--accent); }
+.candidate-chip[disabled] { opacity: 0.5; cursor: default; }
+.candidate-chip img { width: 100%; height: 84px; object-fit: contain; background: var(--paper-sunk); display: block; }
+.candidate-chip span { font-size: 11.5px; color: var(--ink-soft); padding: 4px 0; text-align: center; }
