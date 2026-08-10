@@ -1,14 +1,14 @@
 import { buildPalateProfile, scoreMatch } from "./palate-engine.js";
 import { scoreWine, learnFromTasting } from "./wine-engine.js";
 import { RATING_SOURCES } from "./rating-sources.js";
-import { CATALOG } from "./catalog-seed.js";
+import { RESEARCH_CATALOG } from "./catalog-research.js";
 import { refreshCatalog, computeFit, isVisible } from "./catalog-engine.js";
 
 // The reference catalog is read-only data, so it ships with the Worker rather
 // than living in D1. Scored once per isolate, not per request.
 let CATALOG_CACHE = null;
 function catalog() {
-  if (!CATALOG_CACHE) CATALOG_CACHE = refreshCatalog(CATALOG);
+  if (!CATALOG_CACHE) CATALOG_CACHE = refreshCatalog(RESEARCH_CATALOG);
   return CATALOG_CACHE;
 }
 

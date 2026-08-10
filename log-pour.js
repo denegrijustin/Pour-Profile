@@ -1,13 +1,13 @@
 import { api } from "./api.js";
-import { openSheet, closeSheet, toast, escapeHtml, ratingPickerHtml, flavorTagPickerHtml } from "./ui.js";
+import { openSheet, closeSheet, toast, escapeHtml, verdictPickerHtml, VERDICTS, flavorTagPickerHtml } from "./ui.js";
 import { SERVING_STYLES, VENUE_TYPES } from "./spirit-taxonomy.js";
-import { dimensionSlidersHtml, wireDimensionSliders, wineStatusPickerHtml, wireWineStatusPicker } from "./wine-form.js";
+import { dimensionSlidersHtml, wireDimensionSliders } from "./wine-form.js";
 
 let selectedRating = null;
 let selectedTags = [];
 let selectedBottle = null;
 let wineDims = null;
-let winStatus = null;
+let selectedVerdict = null;
 let flavorTagsCache = null;
 
 async function getFlavorTags() {
@@ -60,6 +60,7 @@ export async function openBottlePickerSheet() {
 
 export async function openLogPourSheet(bottle, { onSaved } = {}) {
   selectedRating = null;
+  selectedVerdict = null;
   selectedTags = [];
   selectedBottle = bottle;
   const tags = await getFlavorTags();
@@ -72,16 +73,13 @@ export async function openLogPourSheet(bottle, { onSaved } = {}) {
       ${bottle.brand ? `<div class="field-hint">${escapeHtml(bottle.brand)}</div>` : ""}
     </div>
 
-    <label>Rating (required)</label>
-    <div id="pourRatingPicker">${ratingPickerHtml(null)}</div>
+    <label>How was it?</label>
+    ${verdictPickerHtml(null)}
 
     ${isWine ? `
-    <label style="margin-top:16px">How did it land?</label>
-    ${wineStatusPickerHtml(bottle.status_tags || [])}
-
-    <details style="margin-top:14px" open>
-      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Describe the wine (drives your palate model)</summary>
-      <p class="field-hint" style="margin-top:6px">Only set the ones you're confident about — anything you skip is treated as unknown, not average.</p>
+    <details style="margin-top:14px">
+      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Describe the wine (optional — sharpens your palate model)</summary>
+      <p class="field-hint" style="margin-top:6px">Only set what you're sure of; anything skipped stays unknown rather than average.</p>
       <div id="wineDims">${dimensionSlidersHtml(bottle.wine_dimensions || {})}</div>
     </details>` : ""}
 
@@ -133,17 +131,41 @@ export async function openLogPourSheet(bottle, { onSaved } = {}) {
       </div>
     </details>
 
-    <button class="btn btn-primary btn-block" id="pourSaveBtn" style="margin-top:18px" disabled>Save Pour</button>
+    <button class="btn btn-primary btn-block" id="pourSaveBtn" style="margin-top:18px" disabled>Tap a reaction to save</button>
   `, { onOpen: wireSheet });
 }
 
 function wireSheet() {
-  document.getElementById("pourRatingPicker").addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-rating]");
+  const fine = document.getElementById("verdictFine");
+  const fineInput = document.getElementById("ratingFine");
+  const fineValue = document.getElementById("ratingFineValue");
+  const saveBtn = document.getElementById("pourSaveBtn");
+
+  const showRating = () => { if (fineValue) fineValue.textContent = `${Number(selectedRating).toFixed(1)} / 10`; };
+
+  document.querySelector(".verdict-row").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-verdict]");
     if (!btn) return;
-    selectedRating = Number(btn.dataset.rating);
-    document.querySelectorAll("#pourRatingPicker button").forEach((b) => b.classList.toggle("selected", Number(b.dataset.rating) === selectedRating));
-    document.getElementById("pourSaveBtn").disabled = false;
+    const v = VERDICTS.find((x) => x.id === btn.dataset.verdict);
+    if (!v) return;
+    selectedVerdict = v;
+    selectedRating = v.rating;
+    document.querySelectorAll("[data-verdict]").forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle("selected", on);
+      b.setAttribute("aria-checked", String(on));
+    });
+    if (fine) fine.hidden = false;
+    if (fineInput) fineInput.value = String(v.rating);
+    showRating();
+    saveBtn.disabled = false;
+    saveBtn.textContent = `Save — ${v.label}`;
+    if (navigator.vibrate) navigator.vibrate(15);
+  });
+
+  if (fineInput) fineInput.addEventListener("input", () => {
+    selectedRating = Number(fineInput.value);
+    showRating();
   });
 
   document.getElementById("pourFlavorTags").addEventListener("click", (e) => {
@@ -164,7 +186,6 @@ function wireSheet() {
   });
 
   wineDims = document.getElementById("wineDims") ? wireDimensionSliders(document) : null;
-  winStatus = document.getElementById("wineStatusPicker") ? wireWineStatusPicker(document, selectedBottle.status_tags || []) : null;
 
   document.getElementById("pourSaveBtn").addEventListener("click", savePour);
 }
@@ -195,9 +216,11 @@ async function savePour() {
   }
   if (wineDims) payload.wine_dimensions = wineDims.get();
   try {
-    if (winStatus) {
-      const statuses = winStatus.get();
-      if (statuses.length) await api.updateBottle(selectedBottle.id, { status_tags: [...new Set(["tried", ...statuses])] });
+    if (selectedVerdict) {
+      // The verdict answers "how good" and "would you again" at once, so the
+      // status tag comes from the same tap rather than a second control.
+      const existing = (selectedBottle.status_tags || []).filter((t) => !["favorite", "like", "neutral", "dislike", "avoid"].includes(t));
+      await api.updateBottle(selectedBottle.id, { status_tags: [...new Set(["tried", ...existing, selectedVerdict.status])] });
     }
     const res = await api.createTasting(payload);
     closeSheet();
@@ -209,6 +232,6 @@ async function savePour() {
   } catch (err) {
     toast(`Couldn't save: ${err.message}`);
     btn.disabled = false;
-    btn.textContent = "Save Pour";
+    btn.textContent = selectedVerdict ? `Save — ${selectedVerdict.label}` : "Tap a reaction to save";
   }
 }

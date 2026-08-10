@@ -121,24 +121,35 @@ function toEngineProfile(g, row, scaleMax) {
   const viscosity = s(numCell(row, g("viscosity"), { max: scaleMax }));
   const finishLength = s(numCell(row, g("finish_length", "finishlength", "finish"), { max: scaleMax }));
 
-  // Wine-side columns (present in the Sauvignon Blanc export).
+  // Wine-side columns. The Sauvignon Blanc export names individual fruits rather
+  // than shipping "citrus"/"tropical" composites, so build those from the parts.
   const acidity = s(numCell(row, g("acidity"), { max: scaleMax }));
-  const citrus = s(numCell(row, g("citrus"), { max: scaleMax }));
-  const tropical = s(numCell(row, g("tropical"), { max: scaleMax }));
-  const grassy = s(numCell(row, g("grass_herbal", "grassy_herbal", "grassherbal"), { max: scaleMax }));
-  const mineral = s(numCell(row, g("mineral", "minerality"), { max: scaleMax }));
+  const citrusParts = ["grapefruit", "lemon", "lime"].map((c) => s(numCell(row, g(c), { max: scaleMax })));
+  const tropicalParts = ["passionfruit", "pineapple", "mango", "guava"].map((c) => s(numCell(row, g(c), { max: scaleMax })));
+  const orchardParts = ["peach_stonefruit", "apple", "pear", "melon"].map((c) => s(numCell(row, g(c), { max: scaleMax })));
+  const herbParts = ["grass", "fresh_herbs", "jalapeno_pyrazine", "gooseberry"].map((c) => s(numCell(row, g(c), { max: scaleMax })));
+  const mineralParts = ["minerality", "flint_smoke", "saline"].map((c) => s(numCell(row, g(c), { max: scaleMax })));
 
+  const citrus = mean(citrusParts.filter((v) => v !== null).length ? citrusParts : [s(numCell(row, g("citrus"), { max: scaleMax }))]);
+  const tropical = mean(tropicalParts.filter((v) => v !== null).length ? tropicalParts : [s(numCell(row, g("tropical"), { max: scaleMax }))]);
+  const grassy = mean(herbParts.filter((v) => v !== null).length ? herbParts : [s(numCell(row, g("grass_herbal", "grassy_herbal"), { max: scaleMax }))]);
+  const mineral = mean(mineralParts.filter((v) => v !== null).length ? mineralParts : [s(numCell(row, g("mineral"), { max: scaleMax }))]);
+  // Overall ripe-fruit intensity across every fruit family the export names.
+  const wineFruit = mean([...citrusParts, ...tropicalParts, ...orchardParts].filter((v) => v !== null));
+  const wineBody = mean([s(numCell(row, g("body"), { max: scaleMax })), s(numCell(row, g("texture"), { max: scaleMax })), s(numCell(row, g("lees_creaminess"), { max: scaleMax }))]);
+
+  const isWineRow = wineFruit !== null || acidity !== null;
   return {
     profile_source: "deep_research_import",
-    sweetness,
-    oak: mean([toastedOak, char]),
-    toast_char: toastedOak,
-    vanilla_caramel: mean([caramel, vanilla, brownSugar, maple]),
-    spice: mean([cinnamon, bakingSpice, ryeSpice]),
-    fruit: mean([cherry, darkFruit]),
-    body: mean([body, viscosity]),
+    sweetness: isWineRow ? s(numCell(row, g("fruit_sweetness"), { max: scaleMax })) : sweetness,
+    oak: isWineRow ? s(numCell(row, g("oak"), { max: scaleMax })) : mean([toastedOak, char]),
+    toast_char: isWineRow ? null : toastedOak,
+    vanilla_caramel: isWineRow ? null : mean([caramel, vanilla, brownSugar, maple]),
+    spice: isWineRow ? null : mean([cinnamon, bakingSpice, ryeSpice]),
+    fruit: isWineRow ? wineFruit : mean([cherry, darkFruit]),
+    body: isWineRow ? wineBody : mean([body, viscosity]),
     finish_intensity: finishLength,
-    medicinal_cherry: medicinal,
+    medicinal_cherry: isWineRow ? null : medicinal,
     acidity, citrus, tropical, grassy_herbal: grassy, minerality: mineral
   };
 }
@@ -174,56 +185,61 @@ export function importCsv(text) {
     if (!name) continue;
     const producer = cell(row, g("producer", "bottle_producer", "brand")) || "Unknown";
 
-    let id = slug(cell(row, g("candidate_id", "id")) || `${producer}-${name}`);
+    let id = slug(cell(row, g("candidate_id", "bottle_id", "wine_id", "id")) || `${producer}-${name}`);
     if (seen.has(id)) { let n = 2; while (seen.has(`${id}-${n}`)) n++; id = `${id}-${n}`; }
     seen.add(id);
 
-    const rawCategory = (cell(row, g("category")) || "").toLowerCase();
+    const rawCategory = (cell(row, g("category")) || cell(row, g("style_family")) || "").toLowerCase();
+    const looksLikeWine = g("wine_id") >= 0 || g("courtney_fit_score") >= 0 || g("varietal_composition") >= 0;
     const category =
-      rawCategory.includes("sauvignon") ? "sauvignon_blanc" :
+      looksLikeWine || rawCategory.includes("sauvignon") ? "sauvignon_blanc" :
       rawCategory.includes("rye") ? "rye" :
       rawCategory.includes("bourbon") ? "bourbon" :
       rawCategory.includes("wine") ? "sauvignon_blanc" : "american_whiskey";
 
     const tasting_profile = toEngineProfile(g, row, scaleMax);
-    tasting_profile.summary = cell(row, g("short_tasting_summary", "why_you_ll_like_it", "individual_profile", "tasting_summary"));
+    tasting_profile.summary = cell(row, g("individual_summary", "short_tasting_summary", "individual_profile", "tasting_summary"));
 
     const proof = numCell(row, g("proof"));
-    const availability01 = numCell(row, g("kansas_kc_regional_availability_score", "regional_availability_score"), { max: 1 });
-    const availability010 = numCell(row, g("kc_regional_availability_score_0_10", "kc_regional_availability_score"), { max: 10 });
-    const availScore = availability010 !== null ? availability010 * 10
-      : availability01 !== null ? availability01 * 100
-      : null;
+    // Availability arrives on three different scales across exports (0-1, 0-10,
+    // 0-100). Infer from magnitude rather than trusting the column name, since
+    // the same header has meant different ranges in different research passes.
+    const availRaw = numCell(row, g("availability_score", "kc_regional_availability_score_0_10", "kc_regional_availability_score", "kansas_kc_regional_availability_score", "regional_availability_score"));
+    const availScore = availRaw === null ? null
+      : availRaw <= 1 ? availRaw * 100
+      : availRaw <= 10 ? availRaw * 10
+      : Math.min(availRaw, 100);
 
-    const researchFit = numCell(row, g("JD_fit_score", "jd_fit_score", "personalized_fit_score", "jd_fit"), { max: 100 });
-    const imageUrl = cell(row, g("bottle_image_URL", "bottle_image_url", "image_primary_url"));
-    const imageVerified = (cell(row, g("image_verification_status")) || "").toLowerCase().startsWith("verif");
+    const researchFit = numCell(row, g("jd_fit_score", "courtney_fit_score", "JD_fit_score", "personalized_fit_score", "jd_fit"), { max: 100 });
+    const imageUrl = cell(row, g("direct_image_url", "bottle_image_URL", "bottle_image_url", "image_primary_url"));
+    const verifiedStatus = (cell(row, g("image_verification_status")) || "").toLowerCase();
+    const imageVerified = verifiedStatus.startsWith("verif") || boolCell(row, g("image_verified"));
 
     const rec = {
       id, name, producer,
       category,
-      subcategory: cell(row, g("subcategory_style", "subcategory", "barrel_treatment_finishing")),
+      subcategory: cell(row, g("subcategory_style", "subcategory", "style_family", "barrel_finish", "barrel_treatment_finishing")),
       country: cell(row, g("country")),
-      region: cell(row, g("region_appellation_distillery", "region", "distillery_source")),
-      appellation_or_distillery: cell(row, g("distillery_source", "region_appellation_distillery")),
-      vintage: numCell(row, g("vintage")),
+      region: cell(row, g("region_appellation", "region_appellation_distillery", "region", "origin", "distillery_source", "distillery_or_source")),
+      appellation_or_distillery: cell(row, g("distillery_or_source", "distillery_source", "region_appellation")),
+      vintage: numCell(row, g("representative_vintage", "vintage")),
       age_statement: cell(row, g("age_statement", "age")),
       proof,
-      abv: numCell(row, g("abv")) ?? (proof !== null ? proof / 2 : null),
-      mash_bill: cell(row, g("mash_bill", "mash_bill_or_grape_composition")),
+      abv: numCell(row, g("abv_pct", "abv")) ?? (proof !== null ? proof / 2 : null),
+      mash_bill: cell(row, g("mash_bill_or_grain", "mash_bill", "varietal_composition", "mash_bill_or_grape_composition")),
       grape: category === "sauvignon_blanc" ? "Sauvignon Blanc" : null,
       typical_price_usd: (() => {
-        const t = numCell(row, g("realistic_street_price_usd", "typical_street_price_usd", "street_price"));
-        const m = numCell(row, g("msrp_usd", "msrp"));
+        const t = numCell(row, g("realistic_street_price_usd", "typical_street_price_usd", "street_price", "street_price_low"));
+        const m = numCell(row, g("msrp_est_usd", "msrp_usd", "msrp"));
         return t === null && m === null ? null : { typical: t ?? m, msrp: m, street: t };
       })(),
       regional_availability: {
         score: availScore,
-        label: cell(row, g("kc_regional_availability", "kansas_kc_availability", "availability_label")),
+        label: cell(row, g("availability_label", "kc_regional_availability", "kansas_kc_availability")),
         kansas: null, kansas_city_metro: null, regional: null,
         confidence: numCell(row, g("research_confidence"), { max: 1 }),
-        allocation_difficulty: numCell(row, g("allocation_difficulty")),
-        sources: [cell(row, g("availability_source_url"))].filter(Boolean).map((url) => ({ name: "availability", url }))
+        allocation_difficulty: numCell(row, g("allocation_difficulty", "scarcity")),
+        sources: [cell(row, g("regional_availability_source", "kc_regional_availability_source", "availability_source_url"))].filter(Boolean).map((url) => ({ name: "availability", url }))
       },
       ratings: {
         // Kept distinct exactly as the research insists: three different questions.
@@ -236,24 +252,28 @@ export function importCsv(text) {
         confidence: numCell(row, g("research_confidence"), { max: 1 })
       },
       research: {
-        overall_rank: numCell(row, g("overall_rank")),
+        overall_rank: numCell(row, g("jd_match_rank", "courtney_match_rank", "overall_rank")),
         quality_rank: numCell(row, g("quality_rank")),
         buy_rank: numCell(row, g("buy_rank")),
         value_score: numCell(row, g("value_score")),
-        recommendation_score: numCell(row, g("overall_recommendation_score")),
-        verdict: cell(row, g("buy_try_at_bar_skip")),
+        recommendation_score: numCell(row, g("buy_score", "overall_recommendation_score")),
+        verdict: cell(row, g("buy_try_skip", "buy_try_at_bar_skip")),
         critic_consensus: cell(row, g("critic_consensus")),
-        why: cell(row, g("why_you_ll_like_it")),
-        concern: cell(row, g("why_you_might_not", "potential_concern")),
-        nearest: cell(row, g("nearest_known_bottles")),
-        serving: cell(row, g("recommended_serving"))
+        why: cell(row, g("why_jd_likely_likes", "why_courtney_likely_likes", "why_you_ll_like_it")),
+        concern: cell(row, g("why_jd_might_not", "why_courtney_might_not", "why_you_might_not", "potential_concern")),
+        nearest: cell(row, g("closest_comparables", "nearest_known_bottles")),
+        serving: cell(row, g("recommended_serving", "serving"))
       },
       tasting_profile,
       recommendation: {
-        recommended: false,
+        // The research made its own promotion call; treat it as authoritative
+        // input rather than recomputing from scratch, but the negative-trait
+        // veto in the engine still gets the final say.
+        recommended: boolCell(row, g("recommended")),
+        research_recommended: boolCell(row, g("recommended")),
         reason: null,
-        concern: cell(row, g("why_you_might_not", "potential_concern")),
-        best_for: (cell(row, g("recommended_serving")) || "").split(/[,;/]/).map((x) => x.trim()).filter(Boolean)
+        concern: cell(row, g("why_jd_might_not", "why_courtney_might_not", "why_you_might_not", "potential_concern")),
+        best_for: (cell(row, g("recommended_serving", "serving")) || "").split(/[,;/]/).map((x) => x.trim()).filter(Boolean)
       },
       user_state: {
         tasted: boolCell(row, g("tasted", "tasted_")),
@@ -266,20 +286,20 @@ export function importCsv(text) {
       image: {
         // Only trust an image the research actually verified.
         primary_url: imageVerified ? imageUrl : null,
-        source_url: cell(row, g("image_source", "image_source_url")),
+        source_url: cell(row, g("image_source_page", "image_source", "image_source_url")),
         source_name: cell(row, g("image_source")),
-        alt: cell(row, g("bottle_image_alt_text", "image_alt")) || `${name} bottle`,
+        alt: cell(row, g("image_alt", "bottle_image_alt_text")) || `${name} bottle`,
         verified: imageVerified && !!imageUrl,
         cached_image_path: null,
         unverified_candidate_url: !imageVerified ? imageUrl : null,
-        lookup_url: cell(row, g("photo_lookup_URL", "photo_lookup_url"))
+        lookup_url: cell(row, g("photo_lookup_url", "photo_lookup_URL"))
       },
       barcode: (() => {
         const upc = cell(row, g("barcode_upc", "upc", "barcode"));
         // Only accept something that actually looks like a UPC/EAN.
         return { upc: upc && /^\d{8,14}$/.test(upc) ? upc : null, ean: null, source: null, verified: false };
       })(),
-      sources: [cell(row, g("source_URLs", "research_sources", "tasting_source_url"))].filter(Boolean).map((url) => ({ type: "research", name: "research", url })),
+      sources: [cell(row, g("official_product_source", "source_URLs", "research_sources", "tasting_source_url"))].filter(Boolean).map((url) => ({ type: "research", name: "research", url })),
       last_verified: cell(row, g("date_researched", "research_date", "last_verified"))
     };
 

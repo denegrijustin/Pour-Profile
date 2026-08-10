@@ -134,6 +134,35 @@ export function flavorTagPickerHtml(allTags, selected = []) {
   `).join("");
 }
 
+// Rating in the moment is a gut reaction, not an arithmetic exercise. Five large
+// targets beat twenty-one small ones when you're one-handed in a dim bar, and
+// each verdict carries the status tag too, so a single tap answers both
+// "how good was it" and "would you have it again".
+export const VERDICTS = [
+  { id: "loved",   icon: "\u{1F929}", label: "Loved it",   rating: 9.0, status: "favorite", tone: "buy" },
+  { id: "liked",   icon: "\u{1F642}", label: "Liked it",   rating: 7.5, status: "like",     tone: "buy" },
+  { id: "fine",    icon: "\u{1F610}", label: "Fine",       rating: 6.0, status: "neutral",  tone: "try" },
+  { id: "meh",     icon: "\u{1F615}", label: "Not for me", rating: 4.0, status: "dislike",  tone: "skip" },
+  { id: "no",      icon: "\u{1F922}", label: "Nope",       rating: 2.0, status: "avoid",    tone: "skip" }
+];
+
+export function verdictPickerHtml(selected = null) {
+  return `
+    <div class="verdict-row" role="radiogroup" aria-label="How was it?">
+      ${VERDICTS.map((v) => `
+        <button type="button" class="verdict${selected === v.id ? " selected" : ""}" data-verdict="${v.id}"
+                role="radio" aria-checked="${selected === v.id}" aria-label="${escapeHtml(v.label)}">
+          <span class="verdict-icon" aria-hidden="true">${v.icon}</span>
+          <span class="verdict-label">${escapeHtml(v.label)}</span>
+        </button>`).join("")}
+    </div>
+    <div class="verdict-fine" id="verdictFine" hidden>
+      <label for="ratingFine" style="margin:0">Fine-tune <span id="ratingFineValue"></span></label>
+      <input type="range" id="ratingFine" class="wine-range" min="0" max="10" step="0.5" value="7.5">
+    </div>`;
+}
+
+/** Legacy precise picker, still used where a considered rating makes sense. */
 export function ratingPickerHtml(selected) {
   const values = [];
   for (let v = 0; v <= 10; v += 0.5) values.push(v);

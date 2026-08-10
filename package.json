@@ -1,7 +1,7 @@
 {
   "name": "pour-profile",
   "scripts": {
-    "build": "mkdir -p dist && cp index.html styles.css app.js api.js ui.js spirit-taxonomy.js log-pour.js view-home.js view-spirits.js view-scan.js view-discover.js view-map.js view-profile.js view-bottle.js view-compare.js view-wine-palate.js wine-engine.js wine-form.js rating-sources.js catalog-engine.js catalog-seed.js manifest.json sw.js icon.svg README.md dist/",
+    "build": "mkdir -p dist && cp index.html styles.css app.js api.js ui.js spirit-taxonomy.js log-pour.js view-home.js view-spirits.js view-scan.js view-discover.js view-map.js view-profile.js view-bottle.js view-compare.js view-wine-palate.js wine-engine.js wine-form.js rating-sources.js manifest.json sw.js icon.svg README.md dist/",
     "deploy": "npm run build && wrangler deploy",
     "db:migrate": "wrangler d1 execute pour-profile-db --remote --file=./migrations/0001_init.sql && wrangler d1 execute pour-profile-db --remote --file=./migrations/0002_flavor_tags.sql && wrangler d1 execute pour-profile-db --remote --file=./migrations/0003_seed_data.sql && wrangler d1 execute pour-profile-db --remote --file=./migrations/0004_bottle_images.sql && wrangler d1 execute pour-profile-db --remote --file=./migrations/0005_profiles_and_wine.sql && wrangler d1 execute pour-profile-db --remote --file=./migrations/0006_external_ratings.sql && wrangler d1 execute pour-profile-db --remote --file=./migrations/0007_profiles_by_category.sql",
     "test": "node --test test/catalog.test.mjs",
