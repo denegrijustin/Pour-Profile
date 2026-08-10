@@ -212,3 +212,42 @@ test("the known anchors score in the expected direction", () => {
   assert.ok(penelope.ratings.jd_fit > makers.ratings.jd_fit, "a stated favorite should beat a stated dislike");
   assert.ok(penelope.ratings.jd_fit > rieger.ratings.jd_fit, "a stated favorite should beat the strongest dislike");
 });
+
+// ---------- research import ----------
+
+test("a researched fit score stays authoritative over the model score", () => {
+  const [out] = refreshCatalog([rec({
+    ratings: { research_fit: 98, research_fit_label: "Exceptional", jd_fit_source: "research" },
+    tasting_profile: { oak: 5, toast_char: 5, sweetness: 5, vanilla_caramel: 5, body: 5, spice: 5, finish_intensity: 5, fruit: 5 }
+  })]);
+  assert.equal(out.ratings.jd_fit, 98, "research value wins");
+  assert.equal(out.ratings.fit_label, "Exceptional");
+  assert.ok(out.ratings.model_fit != null, "model score is still computed alongside");
+  assert.notEqual(out.ratings.model_fit, 98, "and is genuinely independent");
+});
+
+test("records without a research fit fall back to the model score", () => {
+  const [out] = refreshCatalog([rec({
+    tasting_profile: { oak: 8, toast_char: 8, sweetness: 7, vanilla_caramel: 8, body: 8, spice: 6, finish_intensity: 8, fruit: 5 }
+  })]);
+  assert.equal(out.ratings.jd_fit_source, "model");
+  assert.equal(out.ratings.jd_fit, out.ratings.model_fit);
+});
+
+test("a high-quality bottle with mediocre personal fit stays hidden", () => {
+  // The Russell's Reserve 13 case: Quality #1, JD #49 — must not surface.
+  const [out] = refreshCatalog([rec({
+    ratings: { general: 99, research_fit: 78, jd_fit_source: "research" },
+    regional_availability: { score: 20 }
+  })], { topNPerCategory: 0 });
+  assert.equal(out.recommendation.recommended, false);
+  assert.equal(out.visibility.show_in_app, false);
+});
+
+test("absence of fruit is not scored as a fault", () => {
+  const base = { oak: 9, toast_char: 9, sweetness: 8, vanilla_caramel: 9, body: 8, spice: 6, finish_intensity: 8 };
+  const lowFruit = computeFit(rec({ tasting_profile: { ...base, fruit: 2, medicinal_cherry: 0 } }));
+  const medFruit = computeFit(rec({ tasting_profile: { ...base, fruit: 6, medicinal_cherry: 0 } }));
+  assert.ok(lowFruit.score >= medFruit.score - 8, `low fruit ${lowFruit.score} should not crater vs ${medFruit.score}`);
+  assert.ok(lowFruit.score >= 70, `a toasted-oak bourbon with little fruit should still score well, got ${lowFruit.score}`);
+});

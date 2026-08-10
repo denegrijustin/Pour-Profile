@@ -100,8 +100,13 @@ export function whiskeyDimensions(tp = {}) {
   const sweetToastedOak = avg([toast, oak, sweetness]);
   // Spice is a positive only when it is integrated; runaway spice is not.
   const controlledSpice = spice == null ? null : 10 - Math.abs(spice - 6) * 1.6;
-  // Fruit counts for you only when it isn't the medicinal kind.
-  const compatibleFruit = fruit == null ? null : clamp(fruit - medicinal * 0.9, 0, 10);
+  // Fruit counts only when it isn't the medicinal kind. Note the neutral baseline:
+  // ABSENCE of fruit is not a fault in a toasted-oak bourbon, it's simply not a
+  // factor. An earlier version scored low-fruit bottles near zero here, which
+  // dragged otherwise-excellent matches down by ~10 points on 10% of the weight.
+  const compatibleFruit = fruit == null
+    ? null
+    : clamp(6 + ((fruit - medicinal * 0.9) - 4) * 0.6, 0, 10);
 
   return {
     sweet_toasted_oak: sweetToastedOak,
@@ -283,9 +288,23 @@ export function shouldRecommend(rec, { manualOverride = null } = {}) {
 export function refreshCatalog(records, { manualOverrides = {}, topNPerCategory = 8, relativeFloor = 72, availabilityFloor = 45 } = {}) {
   const scored = records.map((rec) => {
     const fit = computeFit(rec);
+    const prev = rec.ratings || {};
+    // A researched fit score is expert-calibrated against the known anchors, so
+    // it stays authoritative; the model score is always recomputed alongside it
+    // so divergence stays visible and so bottles with no research value still
+    // get scored. Once real tastings accumulate, the model score is what moves.
+    const useResearch = prev.jd_fit_source === "research" && prev.research_fit != null;
     const next = {
       ...rec,
-      ratings: { ...(rec.ratings || {}), jd_fit: fit.score, fit_label: fit.fit_label, confidence: fit.confidence }
+      ratings: {
+        ...prev,
+        model_fit: fit.score,
+        model_fit_label: fit.fit_label,
+        jd_fit: useResearch ? prev.research_fit : fit.score,
+        fit_label: useResearch ? (prev.research_fit_label || fitLabel(prev.research_fit)) : fit.fit_label,
+        jd_fit_source: useResearch ? "research" : "model",
+        confidence: prev.confidence ?? fit.confidence
+      }
     };
     const decision = shouldRecommend(next, { manualOverride: rec.id in manualOverrides ? manualOverrides[rec.id] : null });
     next.recommendation = { ...(rec.recommendation || {}), recommended: decision.recommended, reason: decision.reason };
