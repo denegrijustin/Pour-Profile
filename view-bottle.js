@@ -6,6 +6,7 @@ import {
 import { CATEGORIES, STATUS_TAGS, categoryLabel, titleize } from "./spirit-taxonomy.js";
 import { openLogPourSheet } from "./log-pour.js";
 import { varietalSelectHtml, dimensionSlidersHtml, wireDimensionSliders } from "./wine-form.js";
+import { verdictForRating } from "./tasting-feed.js";
 import { sourcesFor, sourceLabel, sourceScale } from "./rating-sources.js";
 
 let currentBottleId = null;
@@ -51,15 +52,21 @@ export async function renderBottleDetail(id, dispatchNav) {
     : "";
 
   const tastingsHtml = tastings.length
-    ? tastings.map((t) => `
+    ? tastings.map((t) => {
+      const v = verdictForRating(t.rating);
+      return `
       <div class="timeline-item">
-        <div class="td-rating">${t.rating != null ? formatRating(t.rating) : "—"}</div>
+        <div class="td-rating">
+          <span class="td-verdict-icon" aria-hidden="true">${v ? v.icon : "•"}</span>
+          ${t.rating != null ? formatRating(t.rating) : "—"}
+        </div>
         <div class="td-body">
-          <div class="td-meta">${formatDate(t.tasted_at)}${t.venue_name ? ` · ${escapeHtml(t.venue_name)}` : ""}${t.serving_style ? ` · ${escapeHtml(titleize(t.serving_style))}` : ""}</div>
+          <div class="td-meta">${v ? `<strong>${escapeHtml(v.label)}</strong> · ` : ""}${formatDate(t.tasted_at)}${t.venue_name ? ` · ${escapeHtml(t.venue_name)}` : ""}${t.serving_style ? ` · ${escapeHtml(titleize(t.serving_style))}` : ""}</div>
           ${t.notes ? `<p style="margin:4px 0">${escapeHtml(t.notes)}</p>` : ""}
           ${t.flavor_tags && t.flavor_tags.length ? `<div class="tag-cloud" style="margin-top:4px">${t.flavor_tags.map((f) => `<span class="tag-chip" style="cursor:default">${escapeHtml(titleize(f))}</span>`).join("")}</div>` : ""}
         </div>
-      </div>`).join("")
+      </div>`;
+    }).join("")
     : `<p class="field-hint">No tastings logged yet.</p>`;
 
   const personalScore = isWine ? (data.wineMatch ? data.wineMatch.score : null) : (match ? match.matchPercent : null);

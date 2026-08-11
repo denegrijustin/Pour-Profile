@@ -1,3 +1,6 @@
 node_modules/
 package-lock.json
 dist/
+
+# Local wrangler state (local D1/R2 for dev runs)
+.wrangler/

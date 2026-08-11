@@ -126,6 +126,7 @@ export const api = {
   profiles: () => request("/api/profiles"),
   catalogSearch: (q) => request(`/api/catalog/search?${new URLSearchParams({ q })}`),
   catalogRecommended: () => request("/api/catalog/recommended"),
+  catalogBrowse: (params = {}) => request(`/api/catalog/browse?${new URLSearchParams(params)}`),
   catalogAdopt: (payload) => request("/api/catalog/adopt", { method: "POST", body: payload }),
   // Image enrichment runs server-side: the Worker does the outbound lookups, the
   // phone just drives the loop and shows progress.

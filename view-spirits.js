@@ -2,12 +2,21 @@ import { api } from "./api.js";
 import { el, bottleCardHtml, emptyStateHtml } from "./ui.js";
 import { CATEGORIES, STATUS_TAGS } from "./spirit-taxonomy.js";
 import { openBottlePickerSheet } from "./log-pour.js";
+import { tastingFeedHtml } from "./tasting-feed.js";
 
-const state = { category: "", status: "", q: "", sort: "newest" };
+const state = { category: "", status: "", q: "", sort: "newest", tab: "bottles" };
+
+/** Jump straight to the pour history — used by "See all" on Home. */
+export function showPoursTab() { state.tab = "pours"; }
 
 export async function renderSpirits() {
   const view = el("view-spirits");
+  if (state.tab === "pours") return renderPours(view);
   view.innerHTML = `
+    <div class="filter-bar">
+      <button class="filter-chip active" data-tab="bottles">Bottles</button>
+      <button class="filter-chip" data-tab="pours">Pours</button>
+    </div>
     <div class="search-bar">
       <input type="search" id="spiritsSearch" placeholder="Search your spirits…" value="${state.q}">
     </div>
@@ -50,7 +59,31 @@ async function loadResults() {
     : emptyStateHtml("🔍", "No bottles match", "Try a different filter, or add a new bottle.");
 }
 
+// Every pour, newest first — the history that a grid of bottle cards can't show.
+async function renderPours(view) {
+  view.innerHTML = `
+    <div class="filter-bar">
+      <button class="filter-chip" data-tab="bottles">Bottles</button>
+      <button class="filter-chip active" data-tab="pours">Pours</button>
+    </div>
+    <div id="poursResults"><p class="field-hint">Loading your pours…</p></div>`;
+  wireTabs(view);
+
+  const res = await api.tastings().catch(() => ({ tastings: [] }));
+  const tastings = res.tastings || [];
+  el("poursResults").innerHTML = tastings.length
+    ? `<p class="field-hint" style="margin-bottom:10px">${tastings.length} pour${tastings.length === 1 ? "" : "s"} logged. Tap one to open its bottle.</p>${tastingFeedHtml(tastings)}`
+    : emptyStateHtml("🥃", "No pours yet", "Every pour you log shows up here with your rating, where you had it, and what you thought.");
+}
+
+function wireTabs(view) {
+  view.querySelectorAll("[data-tab]").forEach((btn) => {
+    btn.addEventListener("click", () => { state.tab = btn.dataset.tab; renderSpirits(); });
+  });
+}
+
 function wire() {
+  wireTabs(el("view-spirits"));
   document.getElementById("spiritsSearch").addEventListener("input", (e) => {
     state.q = e.target.value.trim();
     debounceLoad();

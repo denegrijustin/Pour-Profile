@@ -25,19 +25,29 @@ const OK_MIME = /^image\/(jpeg|jpg|png|webp|avif)$/i;
 const UA = "PourDecisions/1.0 (personal bottle tracker; image enrichment)";
 
 // Category words carry no identifying information — every bourbon record
-// contains "bourbon". Age/size/proof noise on the candidate side is stripped for
-// the same reason: "750ml" appearing in a shop's product title is not evidence.
-const STOPWORDS = new Set([
+// contains "bourbon". Size/proof noise is stripped for the same reason: "750ml"
+// in a shop's product title is not evidence about which bottle this is.
+const CATEGORY_WORDS = [
   "the", "a", "an", "of", "and", "with",
   "bourbon", "whiskey", "whisky", "wine", "bottle", "spirits", "distillery", "distilling",
-  "straight", "kentucky", "tennessee", "small", "batch", "single", "barrel",
+  "straight", "kentucky", "tennessee",
   "sauvignon", "blanc", "vin", "vino", "750ml", "700ml", "ml", "cl", "proof", "abv", "alc"
-]);
+];
+
+// Dropped when matching IMAGES only. On a retailer page these words are shelf
+// boilerplate, so ignoring them finds more photos. They must NOT be dropped when
+// deciding whether two records are the same bottle: "Single Barrel" versus
+// "Small Batch" is precisely the difference between two expressions.
+const IMAGE_NOISE = ["small", "batch", "single", "barrel", "reserve"];
+
+const STOPWORDS = new Set([...CATEGORY_WORDS, ...IMAGE_NOISE]);
+const IDENTITY_STOPWORDS = new Set(CATEGORY_WORDS);
 
 // A search-engine results page is a lookup hint, never a source to scrape.
 const SEARCH_ENGINE = /(^|\.)(bing|google|duckduckgo|yahoo|yandex|baidu)\.[a-z.]+$/i;
 
-export function tokens(text) {
+export function tokens(text, { identity = false } = {}) {
+  const stop = identity ? IDENTITY_STOPWORDS : STOPWORDS;
   const words = String(text || "")
     .normalize("NFD")
     // Fold accents rather than shredding the word: without this "Rosé" becomes
@@ -48,11 +58,14 @@ export function tokens(text) {
     .split(/\s+/)
     .filter(Boolean);
 
-  const kept = words.filter((t) => t.length > 2 && !STOPWORDS.has(t));
+  // Age and batch numbers are short but among the most distinguishing things in
+  // a whiskey name — "46", "12 Year", "1910". They survive the length filter.
+  const keep = (t) => !stop.has(t) && (t.length > 2 || (identity && /^\d+$/.test(t)));
+  const kept = words.filter(keep);
   // Two-letter words are usually noise, but some producers are nothing else
   // ("Te Pa"). Dropping them there would leave the record unmatchable forever,
   // so the short-word filter only applies when something survives it.
-  return kept.length ? kept : words.filter((t) => t.length >= 2 && !STOPWORDS.has(t));
+  return kept.length ? kept : words.filter((t) => t.length >= 2 && !stop.has(t));
 }
 
 export function isSearchEnginePage(url) {
@@ -73,9 +86,9 @@ export function isSearchEnginePage(url) {
  * A one-directional score passes both of those, which is how the wrong bottle
  * ends up on a record.
  */
-export function scoreNameMatch(wantName, wantProducer, candidateText) {
-  const want = new Set([...tokens(wantName), ...tokens(wantProducer)]);
-  const got = new Set(tokens(candidateText));
+export function scoreNameMatch(wantName, wantProducer, candidateText, opts = {}) {
+  const want = new Set([...tokens(wantName, opts), ...tokens(wantProducer, opts)]);
+  const got = new Set(tokens(candidateText, opts));
   if (!want.size || !got.size) return { score: 0, coverage: 0, precision: 0 };
 
   let shared = 0;
@@ -87,6 +100,41 @@ export function scoreNameMatch(wantName, wantProducer, candidateText) {
   const precision = backShared / got.size;
 
   return { score: coverage * 0.75 + precision * 0.25, coverage, precision };
+}
+
+/**
+ * Are these two records the same bottle?
+ *
+ * Distinct from image matching, which tolerates a looser match to find more
+ * photos. Here both kinds of error hurt: a false positive hides a bottle from
+ * recommendations by claiming you own a different expression of it, and a false
+ * negative recommends something already sitting on your shelf.
+ *
+ * The two directions read different fields, which is what makes it work:
+ *
+ *  - *coverage* — every distinguishing word of the catalog record must appear
+ *    somewhere on the bottle, brand included, since catalogs and collections
+ *    split the producer between fields inconsistently.
+ *  - *precision* — measured against the bottle's NAME only. Brand fields carry
+ *    corporate baggage ("Unshackled (The Prisoner Wine Company)"), and counting
+ *    that against the match rejected a bottle the user demonstrably owned.
+ */
+export function isSameBottle(a, b) {
+  const opts = { identity: true };
+  const want = new Set([...tokens(a.name, opts), ...tokens(a.producer, opts)]);
+  const haystack = new Set([...tokens(b.name, opts), ...tokens(b.producer, opts)]);
+  const identity = new Set(tokens(b.name, opts));
+  if (!want.size || !identity.size) return false;
+
+  let covered = 0;
+  for (const t of want) if (haystack.has(t)) covered++;
+  const coverage = covered / want.size;
+
+  let accounted = 0;
+  for (const t of identity) if (want.has(t)) accounted++;
+  const precision = accounted / identity.size;
+
+  return coverage >= 0.8 && precision >= 0.6;
 }
 
 /**

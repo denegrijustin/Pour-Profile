@@ -3,7 +3,7 @@ import { scoreWine, learnFromTasting } from "./wine-engine.js";
 import { RATING_SOURCES } from "./rating-sources.js";
 import { RESEARCH_CATALOG } from "./catalog-research.js";
 import { refreshCatalog, computeFit, isVisible } from "./catalog-engine.js";
-import { enrichOne, downloadImage } from "./image-enrich.js";
+import { enrichOne, downloadImage, isSameBottle } from "./image-enrich.js";
 
 // The reference catalog is read-only data, so it ships with the Worker rather
 // than living in D1. Scored once per isolate, not per request.
@@ -35,6 +35,7 @@ async function routeApi(request, url, env) {
   if (pathname === "/api/profiles" && method === "GET") return listProfiles(env);
   if (pathname === "/api/catalog/search" && method === "GET") return catalogSearch(url, env);
   if (pathname === "/api/catalog/recommended" && method === "GET") return catalogRecommended(url, env);
+  if (pathname === "/api/catalog/browse" && method === "GET") return catalogBrowse(url, env);
   if (pathname === "/api/catalog/adopt" && method === "POST") return catalogAdopt(request, env, url);
   if (pathname === "/api/images/status" && method === "GET") return imageStatus(env, url.searchParams.get("scope") || "visible");
   if (pathname === "/api/images/review" && method === "GET") return imageReview(env);
@@ -425,11 +426,20 @@ async function deleteBottle(id, env) {
 async function listTastings(url, env) {
   const bottleId = url.searchParams.get("bottle_id");
   const profileId = await resolveProfileId(url, env);
-  let sql = "SELECT t.*, b.name as bottle_name, v.name as venue_name FROM tastings t JOIN bottles b ON b.id = t.bottle_id LEFT JOIN venues v ON v.id = t.venue_id WHERE t.profile_id = ?";
+  // The bottle's status tags travel with the tasting so the feed can say
+  // something true about a seeded like/dislike that was deliberately left
+  // unrated, instead of rendering it as an empty "logged" row.
+  let sql = `SELECT t.*, b.name as bottle_name, b.category as bottle_category, v.name as venue_name,
+      (SELECT bs.status_tags FROM bottle_status bs WHERE bs.bottle_id = t.bottle_id AND bs.profile_id = t.profile_id) as status_tags
+    FROM tastings t JOIN bottles b ON b.id = t.bottle_id LEFT JOIN venues v ON v.id = t.venue_id WHERE t.profile_id = ?`;
   const params = [profileId];
   if (bottleId) { sql += " AND t.bottle_id = ?"; params.push(Number(bottleId)); }
   sql += " ORDER BY t.tasted_at DESC, t.id DESC";
-  const tastings = await all(env, sql, ...params);
+  const rows = await all(env, sql, ...params);
+  const tastings = rows.map((t) => ({
+    ...t,
+    status_tags: safeParse(t.status_tags, [])
+  }));
   return json({ tastings });
 }
 
@@ -759,7 +769,13 @@ function catalogPublic(r) {
     availability: r.regional_availability?.label || null,
     availability_confidence: r.regional_availability?.confidence ?? null,
     recommended: r.recommendation?.recommended || false,
+    // `why` is the research verdict's rationale; `reason` is the promotion note.
+    // Either can be absent, and an absent one is left null rather than filled in.
     reason: r.recommendation?.reason || null,
+    why: r.research?.why || null,
+    concern: r.recommendation?.concern || r.research?.concern || null,
+    serving: r.research?.serving || null,
+    price: r.typical_price_usd?.typical ?? null,
     image_url: r.image?.primary_url || null,
     lifecycle: r.lifecycle
   };
@@ -794,11 +810,86 @@ async function catalogSearch(url, env) {
 }
 
 async function catalogRecommended(url, env) {
-  const results = catalogFor(url)
+  const scored = await markAdopted(env, catalogFor(url)
     .filter((r) => r.recommendation.recommended)
     .sort((a, b) => (b.ratings.jd_fit ?? -1) - (a.ratings.jd_fit ?? -1))
-    .map(catalogPublic);
-  return json({ results: await withCatalogImages(env, results) });
+    .map(catalogPublic));
+
+  // A recommendation you already own is not a recommendation. They stay
+  // reachable under Browse, labelled — they just don't lead the list of things
+  // to go and try.
+  const results = scored.filter((r) => !r.adopted_bottle_id);
+  return json({
+    results: await withCatalogImages(env, results),
+    already_have: scored.length - results.length
+  });
+}
+
+/**
+ * Browse the catalog without a search query.
+ *
+ * The original rule kept the catalog hidden so the app wouldn't look full of
+ * bottles nobody had tasted. That rule cost more than it saved: it made the
+ * recommendation engine's output unreachable, which is the whole point of having
+ * a scored catalog. Browsing is now allowed, but a catalog entry is always
+ * labelled as a suggestion and never mixed into the collection — the separation
+ * that actually mattered is preserved.
+ */
+async function catalogBrowse(url, env) {
+  const category = (url.searchParams.get("category") || "").toLowerCase();
+  const sort = url.searchParams.get("sort") || "best_fit";
+  const limit = Math.min(Math.max(Number(url.searchParams.get("limit")) || 40, 1), 200);
+
+  let records = catalogFor(url);
+  if (category) records = records.filter((r) => (r.category || "").toLowerCase() === category);
+
+  const sorters = {
+    // Unscored records sort last rather than being treated as mid-range.
+    best_fit: (a, b) => (b.ratings.jd_fit ?? -1) - (a.ratings.jd_fit ?? -1),
+    alphabetical: (a, b) => a.name.localeCompare(b.name),
+    available: (a, b) => (b.regional_availability?.score ?? -1) - (a.regional_availability?.score ?? -1),
+    price: (a, b) => (a.typical_price_usd?.typical ?? Infinity) - (b.typical_price_usd?.typical ?? Infinity)
+  };
+  records = [...records].sort(sorters[sort] || sorters.best_fit).slice(0, limit);
+
+  const categories = [...new Set(catalogFor(url).map((r) => r.category).filter(Boolean))].sort();
+  const results = records.map(catalogPublic);
+  return json({
+    results: await withCatalogImages(env, await markAdopted(env, results)),
+    categories,
+    total: catalogFor(url).length
+  });
+}
+
+/**
+ * Flag catalog entries the user already has, so recommendations never re-offer
+ * a bottle from the collection.
+ *
+ * `catalog_id` alone is not enough. The seeded bottles — including the stated
+ * favourites and the known dislikes — predate catalog adoption and carry no
+ * catalog_id, so a pure id join recommended Angel's Envy Rye to someone who had
+ * already logged it as a favourite. Matching therefore falls back to the name,
+ * using a stricter tokenizer than image lookup: `coverage` demands the
+ * catalog record's distinguishing words all appear on the bottle, which is what
+ * keeps "Jim Beam Black 7 Year" from binding to "Jim Beam Green Label".
+ */
+async function markAdopted(env, results) {
+  if (!env || !results.length) return results;
+  const rows = await all(env, "SELECT id, name, brand, catalog_id FROM bottles").catch(() => []);
+  if (!rows.length) return results;
+
+  const byCatalogId = new Map(rows.filter((r) => r.catalog_id).map((r) => [r.catalog_id, r.id]));
+
+  return results.map((r) => {
+    if (byCatalogId.has(r.id)) return { ...r, adopted_bottle_id: byCatalogId.get(r.id) };
+    for (const b of rows) {
+      if (b.catalog_id) continue;   // already keyed above
+      if (isSameBottle(r, { name: b.name, producer: b.brand })) {
+        return { ...r, adopted_bottle_id: b.id, matched_by: "name" };
+      }
+    }
+    return r;
+  });
 }
 
 // Copy a catalog record into the user's real bottle table. Once adopted and

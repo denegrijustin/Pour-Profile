@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   tokens, isSearchEnginePage, scoreNameMatch, extractImageCandidates,
-  scorePageCandidates, searchOpenFoodFacts, gatherCandidates, enrichOne, downloadImage
+  scorePageCandidates, searchOpenFoodFacts, gatherCandidates, enrichOne, downloadImage, isSameBottle
 } from "../image-enrich.js";
 
 const REC = { id: "angels-envy-rye", name: "Angel's Envy Rye", producer: "Angel's Envy" };
@@ -174,4 +174,81 @@ test("a producer made only of short words stays matchable", () => {
   // would otherwise leave it with no tokens and permanently unmatchable.
   assert.deepEqual(tokens("Te Pa Sauvignon Blanc"), ["te", "pa"]);
   assert.ok(scoreNameMatch("Te Pa Sauvignon Blanc", "Te Pa", "Te Pa Sauvignon Blanc").coverage === 1);
+});
+
+// ---------- identity matching (is this the same bottle?) ----------
+// Looser matching is fine for finding a photo, but here a false positive hides a
+// bottle from recommendations by claiming you already own a different expression.
+
+test("age and batch numbers survive tokenizing in identity mode", () => {
+  assert.deepEqual(tokens("Knob Creek 12 Year", { identity: true }), ["knob", "creek", "12", "year"]);
+  assert.deepEqual(tokens("Maker's Mark 46", { identity: true }), ["maker", "mark", "46"]);
+});
+
+test("expression words are kept for identity and dropped for images", () => {
+  // "Single Barrel" is shelf boilerplate when hunting a photo, and the whole
+  // difference between two bottlings when deciding what you own.
+  assert.ok(!tokens("Four Roses Single Barrel").includes("single"));
+  assert.ok(tokens("Four Roses Single Barrel", { identity: true }).includes("single"));
+});
+
+test("different ages of the same line are not treated as the same bottle", () => {
+  const owned = { name: "Knob Creek 12 Year", producer: "Knob Creek" };
+  assert.equal(isSameBottle({ name: "Knob Creek 12 Year", producer: "Knob Creek" }, owned), true);
+  assert.equal(isSameBottle({ name: "Knob Creek 9 Year", producer: "Knob Creek" }, owned), false);
+  assert.equal(isSameBottle({ name: "Knob Creek 18 Year", producer: "Knob Creek" }, owned), false);
+});
+
+test("a numbered variant is not the same bottle as the standard bottling", () => {
+  const owned = { name: "Maker's Mark", producer: "Maker's Mark" };
+  assert.equal(isSameBottle({ name: "Maker's Mark", producer: "Maker's Mark" }, owned), true);
+  assert.equal(isSameBottle({ name: "Maker's Mark 46", producer: "Maker's Mark" }, owned), false);
+});
+
+test("single barrel and small batch are distinct from the standard bottling", () => {
+  const owned = { name: "Four Roses", producer: "Four Roses" };
+  assert.equal(isSameBottle({ name: "Four Roses Bourbon", producer: "Four Roses" }, owned), true);
+  assert.equal(isSameBottle({ name: "Four Roses Single Barrel", producer: "Four Roses" }, owned), false);
+  assert.equal(isSameBottle({ name: "Four Roses Small Batch", producer: "Four Roses" }, owned), false);
+});
+
+test("the same bottle spelled differently still matches", () => {
+  // The seeded bottle is "Penelope Toasted" under brand "Penelope Bourbon";
+  // the catalog calls it "Penelope Toasted Bourbon" by producer "Penelope".
+  assert.equal(isSameBottle(
+    { name: "Penelope Toasted Bourbon", producer: "Penelope" },
+    { name: "Penelope Toasted", producer: "Penelope Bourbon" }), true);
+  assert.equal(isSameBottle(
+    { name: "Angel's Envy Rye", producer: "Angel's Envy" },
+    { name: "Angel's Envy Rye", producer: "Angel's Envy" }), true);
+});
+
+test("unrelated bottles from the same producer do not match", () => {
+  assert.equal(isSameBottle(
+    { name: "Jim Beam Black 7 Year", producer: "Jim Beam" },
+    { name: "Jim Beam Green Label", producer: "Jim Beam" }), false);
+});
+
+test("a verbose corporate brand field does not reject a bottle you own", () => {
+  // Regression: "Unshackled Sauvignon Blanc" was recommended to someone who had
+  // it seeded as a known like, because the bottle's brand reads
+  // "Unshackled (The Prisoner Wine Company)" and those extra words were being
+  // counted against the match.
+  assert.equal(isSameBottle(
+    { name: "Unshackled Sauvignon Blanc", producer: "Unshackled" },
+    { name: "Unshackled Sauvignon Blanc", producer: "Unshackled (The Prisoner Wine Company)" }), true);
+  assert.equal(isSameBottle(
+    { name: "Matanzas Creek Sauvignon Blanc", producer: "Matanzas Creek" },
+    { name: "Matanzas Creek Sauvignon Blanc", producer: "Matanzas Creek Winery" }), true);
+});
+
+test("a different wine from the same producer is still not a match", () => {
+  assert.equal(isSameBottle(
+    { name: "Cloudy Bay Te Koko Sauvignon Blanc", producer: "Cloudy Bay Te Koko" },
+    { name: "Cloudy Bay Sauvignon Blanc", producer: "Cloudy Bay" }), false);
+});
+
+test("identity matching is empty-safe", () => {
+  assert.equal(isSameBottle({ name: "", producer: "" }, { name: "Anything", producer: "" }), false);
+  assert.equal(isSameBottle({ name: "Something", producer: "" }, { name: "", producer: "" }), false);
 });

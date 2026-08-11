@@ -228,7 +228,12 @@ async function savePour() {
     toast(res.queued
       ? "Saved offline — will sync when you're back online."
       : moved ? `Logged — palate updated on ${moved} dimension${moved === 1 ? "" : "s"}.` : "Pour logged.");
-    document.dispatchEvent(new CustomEvent("pourprofile:refresh"));
+    // Land on the bottle so the pour you just logged is visibly *there*, in its
+    // history, with the rating you gave it. A toast alone left people wondering
+    // where the tasting had gone.
+    document.dispatchEvent(new CustomEvent("pourprofile:navigate", {
+      detail: { view: "bottle", param: selectedBottle.id }
+    }));
   } catch (err) {
     toast(`Couldn't save: ${err.message}`);
     btn.disabled = false;

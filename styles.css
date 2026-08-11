@@ -373,3 +373,67 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); ou
 .candidate-chip[disabled] { opacity: 0.5; cursor: default; }
 .candidate-chip img { width: 100%; height: 84px; object-fit: contain; background: var(--paper-sunk); display: block; }
 .candidate-chip span { font-size: 11.5px; color: var(--ink-soft); padding: 4px 0; text-align: center; }
+
+/* ---------- Recommendation cards ---------- */
+/* A pick is an argument, not just a name: the fit number, the band it falls in,
+   why it fits, and what might not. Bands are named because a bare percentage
+   reads as more precise than the underlying data supports. */
+.pick-list { display: flex; flex-direction: column; gap: 12px; }
+.pick-card {
+  display: flex; gap: 12px; background: var(--paper); border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md); padding: 12px; box-shadow: var(--shadow-sm);
+}
+.pick-thumb {
+  flex: 0 0 64px; width: 64px; height: 84px; border-radius: var(--radius-sm);
+  background: var(--paper-sunk); display: flex; align-items: center; justify-content: center;
+  font-size: 26px; overflow: hidden;
+}
+.pick-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.pick-body { flex: 1; min-width: 0; }
+.pick-head { display: flex; gap: 8px; align-items: flex-start; justify-content: space-between; }
+.pick-name { font-weight: 700; font-size: 15px; line-height: 1.25; }
+.pick-sub { font-size: 12.5px; color: var(--ink-soft); margin-top: 2px; }
+.fit-chip {
+  flex: 0 0 auto; font-size: 13px; font-weight: 800; border-radius: 999px;
+  padding: 3px 9px; background: var(--paper-sunk); color: var(--ink);
+}
+.pick-band { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 6px; }
+.fit-strong { background: var(--positive-tint); color: var(--positive); }
+.fit-good   { background: var(--accent-tint);   color: var(--accent-deep); }
+.fit-maybe  { background: var(--paper-sunk);    color: var(--ink-soft); }
+.fit-weak   { background: var(--negative-tint); color: var(--negative); }
+.fit-unknown{ background: var(--paper-sunk);    color: var(--ink-faint); }
+.pick-band.fit-strong, .pick-band.fit-good, .pick-band.fit-maybe,
+.pick-band.fit-weak, .pick-band.fit-unknown { background: none; padding: 0; }
+.pick-why { font-size: 13px; color: var(--ink-soft); margin: 6px 0 0; line-height: 1.4; }
+.pick-concern { font-size: 12.5px; color: var(--negative); margin: 6px 0 0; line-height: 1.4; }
+.pick-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; font-size: 12px; color: var(--ink-faint); }
+.pick-actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+
+.tonight-card { cursor: pointer; border-left: 3px solid var(--accent); }
+.tonight-name { font-family: var(--font-display, inherit); font-size: 18px; font-weight: 700; }
+.tonight-sub { font-size: 12.5px; color: var(--ink-soft); margin-top: 2px; }
+.tonight-why { font-size: 13px; color: var(--ink-soft); margin: 8px 0 0; line-height: 1.4; }
+
+/* ---------- Tasting feed ---------- */
+/* A pour is an event — a reaction, a date, a place, a thought. Bottle cards
+   can't carry any of that, which is why a logged pour used to seem to vanish. */
+.tasting-feed { display: flex; flex-direction: column; gap: 2px; }
+.tasting-row {
+  display: flex; gap: 12px; align-items: flex-start; background: var(--paper);
+  border: 1px solid var(--border-soft); border-radius: var(--radius-md);
+  padding: 12px; cursor: pointer;
+}
+.tasting-row:not([data-open-bottle]) { cursor: default; }
+.tasting-row:focus-visible { outline: 2px solid var(--accent-deep); outline-offset: 2px; }
+.tasting-verdict { flex: 0 0 44px; text-align: center; }
+.tv-icon { display: block; font-size: 24px; line-height: 1.1; }
+.tv-score { display: block; font-size: 12px; font-weight: 800; color: var(--accent-deep); }
+.tasting-body { flex: 1; min-width: 0; }
+.tasting-name { font-weight: 700; font-size: 14.5px; }
+.tasting-verdict-label { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); margin-top: 1px; }
+.tasting-meta { font-size: 12px; color: var(--ink-faint); margin-top: 3px; }
+.tasting-notes { font-size: 13px; color: var(--ink-soft); margin: 6px 0 0; line-height: 1.4; }
+.tasting-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+
+.td-verdict-icon { display: block; font-size: 20px; line-height: 1.1; }

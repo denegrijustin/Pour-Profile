@@ -53,7 +53,7 @@ export async function renderProfile() {
     <div class="card">
       <div class="spec-grid">
         <div><dt>Bottles</dt><dd>${statsRes.bottleCount}</dd></div>
-        <div><dt>Tastings Rated</dt><dd>${statsRes.tastingCount}</dd></div>
+        <div><dt>Pours Rated</dt><dd>${statsRes.tastingCount}</dd></div>
         <div><dt>Distilleries</dt><dd>${statsRes.distilleryCount}</dd></div>
         <div><dt>States</dt><dd>${statsRes.stateCount}</dd></div>
         <div><dt>Countries</dt><dd>${statsRes.countryCount}</dd></div>

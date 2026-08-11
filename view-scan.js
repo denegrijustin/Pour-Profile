@@ -22,10 +22,11 @@ export async function renderScan(dispatchNav) {
   handlingCode = false;
   const view = el("view-scan");
   view.innerHTML = `
-    <label style="margin-top:0">Find a bottle</label>
-    <input type="search" id="catalogSearch" placeholder="Search 90+ known bottles by name or producer…" autocomplete="off">
+    <label style="margin-top:0">Add a bottle</label>
+    <input type="search" id="catalogSearch" placeholder="Type any bottle name…" autocomplete="off">
     <div id="catalogResults"></div>
-    <p class="field-hint" style="margin-top:10px">Searching the reference catalog is usually faster than scanning, and works when a barcode won't read.</p>
+    <p class="field-hint" style="margin-top:10px">We'll check the reference catalog as you type — but you're not limited to it. Anything not listed, you can add yourself in a few taps.</p>
+    <button class="btn btn-primary btn-block" id="manualNewTopBtn" style="margin-top:10px">✍️ Add a bottle myself</button>
 
     <details style="margin-top:14px">
       <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Scan a barcode instead</summary>
@@ -40,9 +41,10 @@ export async function renderScan(dispatchNav) {
       <button class="btn btn-secondary" id="manualBarcodeBtn">Look Up</button>
     </div>
     </details>
-    <button class="btn btn-ghost btn-block" id="manualNewBtn" style="margin-top:10px">Not listed — add it manually</button>
     <div id="scanResult"></div>
   `;
+
+  document.getElementById("manualNewTopBtn").addEventListener("click", () => renderDraftForm(null, dispatchNav));
 
   document.getElementById("manualBarcodeBtn").addEventListener("click", () => {
     const code = document.getElementById("manualBarcode").value.trim();
@@ -54,7 +56,6 @@ export async function renderScan(dispatchNav) {
       if (code) handleBarcode(code, dispatchNav);
     }
   });
-  document.getElementById("manualNewBtn").addEventListener("click", () => renderDraftForm(null, dispatchNav));
 
   wireCatalogSearch(dispatchNav);
   // The camera only starts if the user opens the barcode section, so we don't
@@ -86,7 +87,7 @@ function wireCatalogSearch(dispatchNav) {
             <div class="sub">${escapeHtml([r.producer, r.region, r.proof ? r.proof + " proof" : null].filter(Boolean).join(" · "))}</div>
           </div>
           ${r.jd_fit != null ? `<div style="text-align:right"><div style="font-weight:800;color:var(--accent-deep)">${r.jd_fit}</div><div class="field-hint" style="font-size:10px">${escapeHtml(r.fit_label || "")}</div></div>` : ""}
-        </div>`).join("") : `<p class="field-hint">Nothing in the catalog matches. Use "add it manually" below.</p>`;
+        </div>`).join("") : `<p class="field-hint">Not in the catalog — that's fine. Tap “Add a bottle myself” to enter it.</p>`;
     }, 220);
   });
 
