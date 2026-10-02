@@ -148,6 +148,8 @@ export const api = {
   putWineDimension: (payload) => request("/api/wine/dimensions", { method: "PUT", body: payload }),
 
   barcode: (code) => request(`/api/barcode/${encodeURIComponent(code)}`),
+  barcodeLookup: (code) => request(`/api/barcodes/${encodeURIComponent(code)}`),
+  saveBarcode: (payload) => request("/api/barcodes", { method: "POST", body: payload }),
   search: (q) => request(`/api/search?${new URLSearchParams({ q })}`),
   stats: () => request("/api/stats"),
 
