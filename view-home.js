@@ -1,3 +1,4 @@
+import { FEATURE_BOTTLES } from "./bottle-images.js";
 import { api } from "./api.js";
 import { el, escapeHtml, bottleCardHtml, emptyStateHtml } from "./ui.js";
 import { openBottlePickerSheet } from "./log-pour.js";
@@ -31,13 +32,18 @@ export async function renderHome() {
 
   view.innerHTML = `
     ${bottlesRes._stale ? `<p class="field-hint">Showing your last saved data.</p>` : ""}
+    <section class="home-hero">
+      <div class="hero-copy"><p class="eyebrow">YOUR TASTE. YOUR COLLECTION.</p><h2>Find your<br>next great pour.</h2><p>Discover what you love, one bottle at a time.</p><button class="btn btn-primary" data-action="nav-scan">Add & rate a drink <span aria-hidden="true">↗</span></button></div>
+      <div class="hero-bottles">${FEATURE_BOTTLES.map(b=>`<img src="${escapeHtml(b.image_url)}" alt="${escapeHtml(b.name)}" fetchpriority="high">`).join('')}</div>
+    </section>
     <div class="quick-actions">
-      <div class="quick-action" data-action="log-pour"><span class="qa-icon">🥃</span>Log a Pour</div>
-      <div class="quick-action" data-action="nav-discover"><span class="qa-icon">✨</span>What Next?</div>
-      <div class="quick-action" data-action="nav-spirits"><span class="qa-icon">🔎</span>My Bottles</div>
-      <div class="quick-action" data-action="nav-scan"><span class="qa-icon">➕</span>Add Drink</div>
+      <button type="button" class="quick-action" data-action="log-pour"><span class="qa-icon">◉</span>Rate a Pour</button>
+      <button type="button" class="quick-action" data-action="nav-discover"><span class="qa-icon">✧</span>Discover</button>
+      <button type="button" class="quick-action" data-action="nav-spirits"><span class="qa-icon">▤</span>My Bottles</button>
+      <button type="button" class="quick-action" data-action="nav-scan"><span class="qa-icon">＋</span>Add Drink</button>
     </div>
 
+    ${bottles.length ? `<div class="section-title"><h2>Your bottles</h2><button class="btn-ghost" data-action="nav-spirits">View collection →</button></div><div class="home-bottle-shelf">${[...bottles].sort((a,b)=>Number(!!b.image_url)-Number(!!a.image_url)).slice(0,4).map(bottleCardHtml).join('')}</div>` : ""}
     ${topPick ? `
     <div class="section-title"><h2>Tonight's Pick</h2><span class="link" data-action="nav-discover">More</span></div>
     <div class="card tonight-card" data-action="nav-discover">

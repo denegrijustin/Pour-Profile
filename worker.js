@@ -1,3 +1,4 @@
+import { withBottleImage } from "./bottle-images.js";
 import { VERIFIED_DRINKS } from "./verified-ratings.js";
 import { QUESTIONS, AXES, AXIS_LABELS, validateAnswers, parseAnswers, observations, scorePour, tastingEvidence } from "./pour-model.js";
 import { buildPalateProfile, scoreMatch } from "./palate-engine.js";
@@ -290,14 +291,14 @@ async function listBottles(url, env) {
   });
   if (sort === "highest_match") bottles.sort((a, b) => (b.palate_match ?? -1) - (a.palate_match ?? -1));
 
-  return json({ bottles });
+  return json({ bottles: bottles.map(withBottleImage) });
 }
 
 async function getBottle(id, env, url) {
   const profileId = url ? await resolveProfileId(url, env) : 1;
   const bottle = await first(env, "SELECT b.*, d.name as distillery_name, d.city as distillery_city, d.state_region as distillery_state, d.country as distillery_country, d.lat as distillery_lat, d.lon as distillery_lon, d.is_sourced_whiskey, d.confidence as distillery_confidence, d.notes as distillery_notes FROM bottles b LEFT JOIN distilleries d ON d.id = b.distillery_id WHERE b.id = ?", id);
   if (!bottle) return json({ error: "Not found" }, 404);
-  let [withTags] = await attachFlavorTags(env, [bottle]);
+  let [withTags] = await attachFlavorTags(env, [withBottleImage(bottle)]);
   [withTags] = await attachStatus(env, [withTags], profileId);
   const tastings = await all(
     env,
@@ -829,7 +830,7 @@ async function withCatalogImages(env, results) {
     `SELECT subject_id AS catalog_id FROM image_lookups WHERE subject_kind = 'catalog' AND status = 'ok' AND subject_id IN (${placeholders})`,
     ...results.map((r) => r.id)).catch(() => []);
   const have = new Set(rows.map((r) => r.catalog_id));
-  return results.map((r) => (have.has(r.id) ? { ...r, image_url: `/api/catalog/images/${r.id}` } : r));
+  return results.map((r) => withBottleImage(have.has(r.id) ? { ...r, image_url: `/api/catalog/images/${r.id}` } : r));
 }
 
 async function catalogSearch(url, env) {
@@ -968,7 +969,7 @@ async function bottleSubjects(env) {
     `SELECT id, name, brand FROM bottles
      WHERE image_url IS NULL OR image_url = '' OR image_source = 'auto_lookup'
      ORDER BY id`);
-  return rows.map((r) => ({ kind: "bottle", id: String(r.id), name: r.name, producer: r.brand }));
+  return rows.filter(r => !withBottleImage(r).image_url).map((r) => ({ kind: "bottle", id: String(r.id), name: r.name, producer: r.brand }));
 }
 
 /**
@@ -1107,7 +1108,7 @@ async function enrichImages(request, env) {
     attempted.filter((r) => !(retryFailed && r.status === "failed")).map((r) => `${r.subject_kind}:${r.subject_id}`)
   );
   const queue = (await imageSubjects(env, scope))
-    .filter((s) => !skip.has(`${s.kind}:${s.id}`))
+    .filter((s) => !skip.has(`${s.kind}:${s.id}`) && (!b.bottles_only || s.kind === "bottle") && (!b.bottle_id || (s.kind === "bottle" && Number(s.id) === Number(b.bottle_id))))
     .slice(0, limit);
 
   const results = [];
@@ -1668,8 +1669,8 @@ async function drinkSearch(url, env) {
   const saved = await all(env, "SELECT id, name, brand AS producer, category, proof FROM bottles");
   const records = [...saved.map(r=>({...r,kind:"bottle"})), ...VERIFIED_DRINKS.map(r=>({...r,kind:"reference"})), ...catalogFor(url).map(r=>({...catalogPublic(r),kind:"catalog"}))];
   const seen = new Set();
-  const results = records.filter(r=>`${r.name} ${r.producer || ''}`.toLowerCase().includes(q)).filter(r=>{ const key = `${r.category}:${r.name.toLowerCase()}`; if(seen.has(key))return false; seen.add(key); return true; }).slice(0,30);
-  return json({results, rating_source_count:new Set(VERIFIED_DRINKS.flatMap(r=>r.ratings.map(s=>s.source))).size});
+  const results = records.filter(r=>`${r.name} ${r.producer || ''}`.toLowerCase().includes(q)).filter(r=>{ const key = `${r.category === "sauvignon_blanc" ? "wine" : r.category}:${r.name.toLowerCase()}`; if(seen.has(key))return false; seen.add(key); return true; }).slice(0,30);
+  return json({results:results.map(withBottleImage), rating_source_count:new Set(VERIFIED_DRINKS.flatMap(r=>r.ratings.map(s=>s.source))).size});
 }
 async function drinkAdopt(request, url, env) {
   const b = await body(request);

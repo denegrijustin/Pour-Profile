@@ -1,6 +1,6 @@
 import { questionnaireHtml, readQuestionnaire, wireQuestionnaire } from "./questionnaire-form.js";
 import { api, getActiveProfile } from "./api.js";
-import { openSheet, closeSheet, toast, escapeHtml, verdictPickerHtml, VERDICTS, flavorTagPickerHtml } from "./ui.js";
+import { openSheet, closeSheet, toast, escapeHtml, bottleThumbHtml, verdictPickerHtml, VERDICTS, flavorTagPickerHtml } from "./ui.js";
 import { SERVING_STYLES, VENUE_TYPES } from "./spirit-taxonomy.js";
 import { dimensionSlidersHtml, wireDimensionSliders } from "./wine-form.js";
 
@@ -60,7 +60,7 @@ export async function openBottlePickerSheet() {
   });
 }
 
-export async function openLogPourSheet(bottle, { onSaved } = {}) {
+export async function openLogPourSheet(bottle, { onSaved, fromAdd = false } = {}) {
   pourProfile = getActiveProfile();
   selectedRating = null;
   selectedVerdict = null;
@@ -70,16 +70,17 @@ export async function openLogPourSheet(bottle, { onSaved } = {}) {
   const isWine = bottle.category === "wine";
 
   openSheet(`
-    <div class="sheet-header"><h2>Log a Pour</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
-    <div class="card" style="margin-bottom:12px;padding:12px 14px">
+    <div class="sheet-header"><div>${fromAdd ? `<span class="eyebrow">STEP 02 · RATE YOUR POUR</span>` : ""}<h2>${fromAdd ? "Rate your drink" : "Rate a pour"}</h2></div><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
+    <div class="rating-bottle-card"><div class="rating-photo">${bottleThumbHtml(bottle)}</div><div>
       <strong>${escapeHtml(bottle.name)}</strong>
       ${bottle.brand ? `<div class="field-hint">${escapeHtml(bottle.brand)}</div>` : ""}
     </div>
 
-    <label>How was it?</label>
-    ${verdictPickerHtml(null)}
-
+    </div><p class="field-hint">Saving this tasting for <strong>${pourProfile === "lady" ? "Lady" : "JDAD"}</strong></p>
     ${questionnaireHtml(bottle.category)}
+
+    <label>Overall impression</label>
+    ${verdictPickerHtml(null)}
 
     <details style="margin-top:16px">
       <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Add more detail (optional)</summary>

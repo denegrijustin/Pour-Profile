@@ -1,3 +1,4 @@
+import { withBottleImage } from "./bottle-images.js";
 import { STATUS_TAGS, categoryLabel, titleize } from "./spirit-taxonomy.js";
 
 export function escapeHtml(str) {
@@ -86,8 +87,9 @@ export function whyConcernsHtml(match) {
 }
 
 export function bottleThumbHtml(bottle) {
+  bottle = withBottleImage(bottle);
   if (bottle.image_url) return `<img src="${escapeHtml(bottle.image_url)}" alt="${escapeHtml(bottle.name)} bottle" loading="lazy">`;
-  return `<span aria-hidden="true">${bottle.category === "wine" ? "🍷" : "🥃"}</span>`;
+  return `<div class="photo-placeholder"><svg viewBox="0 0 32 64" aria-hidden="true"><path d="M12 3h8v17l6 9v29H6V29l6-9V3Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 36h12v14H10z" fill="none" stroke="currentColor"/></svg><span>Photo pending</span></div>`;
 }
 
 export function bottleCardHtml(bottle) {

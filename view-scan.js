@@ -1,5 +1,5 @@
 import { api, downscaleImage } from "./api.js";
-import { el, escapeHtml, decisionBannerHtml, whyConcernsHtml, toast, matchBadgeHtml } from "./ui.js";
+import { el, escapeHtml, decisionBannerHtml, whyConcernsHtml, toast, matchBadgeHtml, bottleThumbHtml } from "./ui.js";
 import { CATEGORIES } from "./spirit-taxonomy.js";
 import { openLogPourSheet } from "./log-pour.js";
 
@@ -22,12 +22,13 @@ export async function renderScan(dispatchNav) {
   handlingCode = false;
   const view = el("view-scan");
   view.innerHTML = `
-    <h2>Add Drink</h2><p>Choose how to find your drink.</p>
-    <div class="field-row" style="margin:16px 0;gap:8px">
-      <button class="btn btn-primary" id="chooseManual">✍️ Manual</button>
-      <button class="btn btn-secondary" id="chooseBarcode">▥ Barcode</button>
-      <button class="btn btn-secondary" id="chooseLabel">📷 Label photo</button>
+    <div class="add-flow-heading"><span class="eyebrow">BUILD YOUR POUR PROFILE</span><h2>Add & rate a drink</h2><p>Find your bottle, then answer ten questions tailored to your drink.</p><div class="flow-steps"><span class="active">01 · Find drink</span><span>02 · Rate your pour</span></div></div>
+    <div class="add-methods">
+      <button class="btn btn-primary" id="chooseManual">Manual</button>
+      <button class="btn btn-secondary" id="chooseBarcode">Barcode</button>
+      <button class="btn btn-secondary" id="chooseLabel">Label photo</button>
     </div>
+    <label class="add-intent"><input type="checkbox" id="rateAfterAdd" checked> Rate this drink after adding <span>10 tasting questions</span></label>
     <div id="labelPanel" hidden><label>Photograph or upload one bottle label</label>
       <input id="labelPhoto" type="file" accept="image/*" capture="environment">
       <p id="labelStatus" class="field-hint">We’ll read the label, then let you confirm the drink.</p></div>
@@ -53,7 +54,7 @@ export async function renderScan(dispatchNav) {
     <div id="scanResult"></div>
   `;
 
-  document.getElementById("manualNewTopBtn").addEventListener("click", () => renderDraftForm(null, dispatchNav));
+  document.getElementById("manualNewTopBtn").addEventListener("click", () => renderDraftForm(null, dispatchNav, null, document.getElementById("rateAfterAdd").checked));
 
   document.getElementById("manualBarcodeBtn").addEventListener("click", () => {
     const code = document.getElementById("manualBarcode").value.trim();
@@ -76,7 +77,7 @@ export async function renderScan(dispatchNav) {
       const imageDataUrl = await downscaleImage(file, 1600, .85);
       const result = await api.analyzeImage({ imageDataUrl, mimeType: "image/jpeg" });
       if (!result.brand && !result.expression) throw new Error("No drink identified. Try a clearer label or use Manual.");
-      renderDraftForm({ name: [result.brand, result.expression].filter(Boolean).join(" "), brand: result.brand, category: result.category }, dispatchNav);
+      renderDraftForm({ name: [result.brand, result.expression].filter(Boolean).join(" "), brand: result.brand, category: result.category }, dispatchNav, null, document.getElementById("rateAfterAdd").checked);
     } catch (err) { status.textContent = `${err.message} You can still add this drink using Manual.`; }
   };
   wireCatalogSearch(dispatchNav);
@@ -104,7 +105,7 @@ function wireCatalogSearch(dispatchNav) {
       const rows = res.results || [];
       results.innerHTML = rows.length ? rows.map((r) => `
         <div class="bottle-row" data-adopt='${escapeHtml(JSON.stringify({ id: r.id, name: r.name, kind: r.kind }))}'>
-          <div class="thumb-sm">${["sauvignon_blanc", "wine"].includes(r.category) ? "🍷" : "🥃"}</div>
+          <div class="thumb-sm">${bottleThumbHtml(r)}</div>
           <div class="info">
             <div class="name">${escapeHtml(r.name)}</div>
             <div class="sub">${escapeHtml([r.producer, r.region, r.proof ? r.proof + " proof" : null].filter(Boolean).join(" · "))}</div>
@@ -122,7 +123,9 @@ function wireCatalogSearch(dispatchNav) {
     try {
       const res = await api.drinkAdopt({ id, kind });
       toast(res.already_present ? `${name} is already in your collection.` : `Added ${name} to Want to Try.`);
-      dispatchNav("bottle", res.bottle_id);
+      const shouldRate = document.getElementById("rateAfterAdd")?.checked;
+      await dispatchNav("bottle", res.bottle_id);
+      if (shouldRate) { const detail = await api.bottle(res.bottle_id); await openLogPourSheet(detail.bottle, { fromAdd:true }); }
     } catch (err) { toast(`Couldn't add: ${err.message}`); }
   });
 }
@@ -286,6 +289,7 @@ async function startZxingDetection(video, dispatchNav) {
 async function handleBarcode(code, dispatchNav) {
   if (handlingCode) return;
   handlingCode = true;
+  const shouldRate = document.getElementById("rateAfterAdd")?.checked ?? true;
   stopScan();
   if (navigator.vibrate) navigator.vibrate(40);
   const status = el("scanStatus");
@@ -295,12 +299,12 @@ async function handleBarcode(code, dispatchNav) {
 
   if (result.found && result.source === "internal") {
     const detail = await api.bottle(result.bottle.id);
-    renderStoreModeResult(detail, dispatchNav);
+    if (shouldRate) { await dispatchNav("bottle", detail.bottle.id); await openLogPourSheet(detail.bottle, { fromAdd:true }); } else renderStoreModeResult(detail, dispatchNav);
   } else if (result.found && result.draft) {
-    renderDraftForm({ ...result.draft, barcode: code }, dispatchNav, { source: result.source, sourceUrl: result.sourceUrl, confidence: result.confidence });
+    renderDraftForm({ ...result.draft, barcode: code }, dispatchNav, { source: result.source, sourceUrl: result.sourceUrl, confidence: result.confidence }, shouldRate);
   } else {
     toast("No match found — add it manually.");
-    renderDraftForm({ barcode: code }, dispatchNav);
+    renderDraftForm({ barcode: code }, dispatchNav, null, shouldRate);
   }
 }
 
@@ -324,12 +328,12 @@ function renderStoreModeResult(detail, dispatchNav) {
   document.getElementById("storeViewBtn").addEventListener("click", () => dispatchNav("bottle", bottle.id));
 }
 
-function renderDraftForm(draft, dispatchNav, provenance) {
+function renderDraftForm(draft, dispatchNav, provenance, shouldRate = true) {
   draft = draft || {};
   const view = el("view-scan");
   view.innerHTML = `
     <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Add Drink</button>
-    <h2>Confirm Bottle</h2>
+    <span class="eyebrow">STEP 01 · FIND DRINK</span><h2>Confirm your drink</h2>
     ${provenance ? `<p class="field-hint">Pulled from ${escapeHtml(provenance.source)} (${escapeHtml(provenance.confidence)} confidence) — <a href="${escapeHtml(provenance.sourceUrl || "#")}" target="_blank" rel="noopener">source</a>. Double-check everything below before saving.</p>` : `<p class="field-hint">No external match — fill in what you know. Everything else can be added later.</p>`}
     ${draft.image_url ? `<img src="${escapeHtml(draft.image_url)}" alt="" style="width:100px;border-radius:10px;margin-bottom:10px">` : ""}
     <label>Name</label><input type="text" id="draftName" value="${escapeHtml(draft.name || "")}" placeholder="Bottle name">
@@ -338,7 +342,7 @@ function renderDraftForm(draft, dispatchNav, provenance) {
     <select id="draftCategory">${draft.category === "unknown" ? `<option value="" selected>Choose category</option>` : ""}${CATEGORIES.map((c) => `<option value="${c.id}" ${c.id === draft.category ? "selected" : ""}>${c.label}</option>`).join("")}</select>
     <label>Barcode</label><input type="text" id="draftBarcode" value="${escapeHtml(draft.barcode || "")}" readonly>
     ${draft.description ? `<label>Description (from source)</label><textarea id="draftDescription">${escapeHtml(draft.description)}</textarea>` : ""}
-    <button class="btn btn-primary btn-block" id="draftSaveBtn" style="margin-top:16px">Save Bottle</button>
+    <button class="btn btn-primary btn-block" id="draftSaveBtn" style="margin-top:16px">${shouldRate ? "Continue to 10 tasting questions →" : "Save to collection"}</button>
   `;
   view.querySelector("[data-action='rescan']").addEventListener("click", () => renderScan(dispatchNav));
   document.getElementById("draftSaveBtn").addEventListener("click", async () => {
@@ -360,7 +364,8 @@ function renderDraftForm(draft, dispatchNav, provenance) {
         status_tags: ["want_to_try"]
       });
       toast("Bottle saved.");
-      dispatchNav("bottle", res.bottle.id);
+      await dispatchNav("bottle", res.bottle.id);
+      if (shouldRate) await openLogPourSheet(res.bottle, { fromAdd:true });
     } catch (err) { toast(`Couldn't save: ${err.message}`); }
   });
 }

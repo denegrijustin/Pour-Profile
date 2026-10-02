@@ -169,3 +169,14 @@ export function wireImagesCard(root) {
   card.querySelector("[data-action='images-stop']").addEventListener("click", () => { running = false; });
   card.querySelector("[data-action='images-review']").addEventListener("click", () => renderReview(root));
 }
+
+// Resolve missing collection photos automatically in paced, bounded batches.
+let automaticPhotoLookup = false;
+let lastAutomaticPhotoLookup = 0;
+export async function autoBottlePhotos() {
+  if (automaticPhotoLookup || Date.now() - lastAutomaticPhotoLookup < 60000) return false;
+  automaticPhotoLookup = true; lastAutomaticPhotoLookup = Date.now();
+  try { const result = await api.enrichImages({limit:3,bottles_only:true}); return result.results?.some(r=>r.status === "ok") || false; }
+  catch { return false; }
+  finally { automaticPhotoLookup = false; }
+}

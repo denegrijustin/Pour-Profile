@@ -456,3 +456,119 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); ou
 .profile-axis { display: grid; grid-template-columns: 1fr auto; gap: 3px; padding: 10px 0; border-top: 1px solid var(--paper-sunk); }
 .profile-axis .field-hint { grid-column: 1/-1; }
 .saved-questions { margin: 8px 0; cursor: pointer; }
+
+/* Pour Profile — bottle photography, quiet surfaces, clear hierarchy. */
+:root {
+  --frost:#f7f7f3; --paper:#fff; --paper-sunk:#eeeee7;
+  --ink:#19251f; --ink-soft:#576159; --ink-faint:#667168;
+  --accent:#a47b38; --accent-deep:#253b2e; --accent-tint:#e9eee6;
+  --border:#d8ded5; --border-soft:#e5e8df;
+  --radius-lg:12px; --radius-md:10px; --radius-sm:7px;
+  --shadow:none; --shadow-sm:none; --font-display:var(--font-ui);
+}
+h1,h2,h3 { font-weight:700; letter-spacing:-.035em; }
+button,a,input,select { touch-action:manipulation; }
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { outline:2px solid #a47b38; outline-offset:3px; }
+.view { max-width:1100px; padding-top:28px; }
+.topbar { background:rgba(247,247,243,.96); padding:16px max(20px,calc((100vw - 1068px)/2)); }
+.topbar .eyebrow,.eyebrow { font-size:10px; font-weight:700; letter-spacing:.14em; color:var(--ink-soft); }
+.topbar h1 { font-size:22px; }
+.btn { border-radius:8px; min-height:44px; font-weight:650; box-shadow:none; }
+.btn-primary { background:#253b2e; color:white; border-color:#253b2e; }
+.btn-secondary { background:white; color:var(--ink); border:1px solid var(--border); }
+.bottom-nav { background:rgba(255,255,255,.98); border-top:1px solid var(--border); box-shadow:none; }
+.nav-btn { font-weight:600; font-size:11px; }
+.nav-icon-circle { background:#253b2e; box-shadow:none; }
+.card { box-shadow:none; }
+.section-title { margin:30px 0 14px; }
+.section-title h2 { font-size:20px; }
+.home-hero { display:grid; grid-template-columns:1fr 1fr; min-height:300px; background:#eaece2; border-radius:14px; overflow:hidden; padding:36px; gap:12px; align-items:center; }
+.hero-copy { position:relative; z-index:1; }
+.hero-copy h2 { font-size:clamp(32px,4vw,54px); line-height:1.02; margin:14px 0 18px; }
+.hero-copy>p:not(.eyebrow) { font-size:14px; max-width:270px; color:var(--ink-soft); margin-bottom:24px; }
+.hero-copy .btn { display:inline-flex; gap:22px; align-items:center; }
+.hero-bottles { display:flex; align-items:flex-end; justify-content:center; height:280px; gap:4px; }
+.hero-bottles img { width:32%; height:90%; object-fit:contain; filter:drop-shadow(4px 10px 6px rgba(0,0,0,.1)); }
+.hero-bottles img:nth-child(2) { height:100%; }
+.quick-actions { max-width:none; gap:10px; margin:16px 0 28px; }
+.quick-action { border:1px solid var(--border-soft); border-radius:10px; background:white; padding:15px 8px; color:var(--ink); cursor:pointer; font-weight:600; }
+.quick-action .qa-icon { font-size:18px; margin-bottom:4px; }
+.home-bottle-shelf { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+.bottle-card { border:1px solid var(--border-soft); border-radius:10px; box-shadow:none; transition:transform .15s ease,border-color .15s ease; }
+.bottle-card:hover { transform:translateY(-3px); border-color:#aebaaa; }
+.bottle-card .thumb { background:#f0f1eb; aspect-ratio:1/1.15; padding:20px; }
+.bottle-card .thumb img { object-fit:contain; mix-blend-mode:multiply; }
+.bottle-card .body { padding:16px; gap:6px; }
+.bottle-card .name { font-size:15px; line-height:1.3; }
+.bottle-card .sub { font-size:11px; }
+.bottle-card .meta-row { padding-top:12px; color:var(--ink-soft); font-size:12px; }
+.bottle-card .match-pill { background:#253b2e; color:white; top:12px; right:12px; padding:5px 9px; font-size:10px; }
+.photo-placeholder { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:#879484; }
+.photo-placeholder svg { height:90px; width:45px; }
+.photo-placeholder span { font-size:10px; font-weight:500; letter-spacing:.03em; }
+.thumb-sm { width:54px; height:66px; border-radius:6px; padding:6px; background:#f0f1eb; flex-shrink:0; }
+.thumb-sm img { width:100%; height:100%; object-fit:contain; }
+.thumb-sm .photo-placeholder svg { height:32px; }
+.thumb-sm .photo-placeholder span { display:none; }
+.bottle-row { padding:12px 0; border-bottom:1px solid var(--border-soft); }
+.hero-photo { background:#eeefe8; height:320px; border-radius:12px; }
+.hero-photo img { object-fit:contain; padding:24px; }
+.tonight-card { border-left:3px solid #a47b38; background:white; }
+.add-flow-heading { margin-bottom:24px; }
+.add-flow-heading h2 { font-size:32px; margin:10px 0; }
+.add-flow-heading>p { color:var(--ink-soft); max-width:460px; font-size:14px; }
+.flow-steps { display:flex; gap:24px; margin-top:24px; border-bottom:1px solid var(--border); font-size:12px; color:var(--ink-faint); }
+.flow-steps span { padding:0 0 12px; }
+.flow-steps .active { color:var(--ink); border-bottom:2px solid var(--ink); font-weight:700; }
+.add-methods { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:20px 0; }
+.add-methods .btn { min-height:60px; font-size:14px; }
+.add-intent { display:flex; align-items:center; gap:10px; font-size:13px; margin:0 0 24px; font-weight:500; }
+.add-intent input { width:18px; height:18px; accent-color:#253b2e; }
+.add-intent span { margin-left:auto; font-size:11px; color:var(--ink-soft); }
+#manualPanel,#labelPanel,#barcodePanel { background:white; border:1px solid var(--border-soft); padding:20px; border-radius:12px; }
+[hidden] { display:none!important; }
+.rating-bottle-card { display:flex; align-items:center; gap:18px; background:#f0f1eb; padding:16px; border-radius:10px; margin:16px 0; }
+.rating-photo { width:65px; height:90px; flex-shrink:0; }
+.rating-photo img { width:100%; height:100%; object-fit:contain; }
+.sheet-header h2 { font-size:26px; margin-top:6px; }
+.pour-questionnaire h3 { font-size:22px; margin-top:26px; }
+.tasting-question { background:#f7f8f3; border:1px solid var(--border-soft); border-radius:10px; padding:16px; margin-top:16px; }
+.tasting-question legend { padding:0 6px; font-size:14px; }
+.tasting-question label { font-size:11px; }
+#questionProgress { position:sticky; bottom:0; background:#253b2e; color:white; padding:10px 16px; margin-top:18px; border-radius:7px; }
+.pick-card { border-radius:12px; box-shadow:none; background:white; }
+.pick-thumb { background:#eeefe8; }
+.pick-thumb img { object-fit:contain; padding:16px; }
+@media(min-width:900px) { .bottle-grid { grid-template-columns:repeat(4,1fr); } }
+@media(min-width:600px) { .sheet { width:620px; max-width:calc(100vw - 40px); margin-left:0; transform:translate(-50%,100%); } .sheet.open { transform:translate(-50%,0); } }
+@media(max-width:599px) {
+ .view { padding-top:20px; }
+ .home-hero { grid-template-columns:1fr 1fr; padding:24px 18px; min-height:245px; gap:0; }
+ .hero-copy h2 { font-size:31px; }
+ .hero-copy>p:not(.eyebrow) { font-size:12px; }
+ .hero-copy .eyebrow { font-size:8px; }
+ .hero-copy .btn { font-size:12px; gap:8px; padding:10px 12px; }
+ .hero-bottles { height:205px; gap:0; }
+ .hero-bottles img { width:43%; } .hero-bottles img:last-child { display:none; }
+ .home-bottle-shelf { grid-template-columns:repeat(2,1fr); gap:10px; }
+ .bottle-card .thumb { padding:16px; }
+ .bottle-card .body { padding:12px; }
+ .bottle-card .name { font-size:13px; }
+ .add-flow-heading h2 { font-size:28px; }
+ .add-methods { gap:6px; } .add-methods .btn { min-height:52px; padding:10px 4px; font-size:12px; }
+ .add-intent { flex-wrap:wrap; } .add-intent span { margin-left:28px; }
+ .sheet-header h2 { font-size:23px; }
+}
+.hero-bottles img[src*="makers-mark-bottle"] { transform:scale(1.65); }
+.thumb img[src*="makers-mark-bottle"],.rating-photo img[src*="makers-mark-bottle"] { transform:scale(1.55); }
+.rating-bottle-card { padding:12px; margin:12px 0; }
+.rating-photo { width:48px; height:65px; }
+.pour-questionnaire { margin-top:10px; }
+.pour-questionnaire h3 { margin-top:12px; font-size:20px; }
+.verdict .verdict-icon { display:none; }
+.verdict { min-height:48px; }
+.btn-ghost { border:0; border-radius:7px; cursor:pointer; font-weight:600; }
+.nav-btn.scan-btn .nav-icon-circle,.nav-btn.scan-btn.active .nav-icon-circle { background:#253b2e; box-shadow:none; }
+.pick-thumb { flex-basis:100px; width:100px; height:155px; }
+.pick-thumb img { padding:10px; }
+@media(max-width:599px) { .pick-thumb { flex-basis:78px; width:78px; height:130px; } .pick-thumb img { padding:8px; } }

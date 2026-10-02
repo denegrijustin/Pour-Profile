@@ -24,6 +24,14 @@ export async function renderBottleDetail(id, dispatchNav) {
   let data;
   try { data = await api.bottle(id); } catch (err) { view.innerHTML = `<p>Couldn't load this bottle: ${escapeHtml(err.message)}</p>`; return; }
   const { bottle, tastings, match } = data;
+  if (!bottle.image_url) api.enrichImages({limit:1,bottle_id:Number(id)}).then(async result => {
+    if (!result.results?.some(r=>r.status === "ok") || currentBottleId !== id || !view.classList.contains("active")) return;
+    const fresh = await api.bottle(id);
+    if (!fresh.bottle.image_url || currentBottleId !== id) return;
+    const hero = view.querySelector(".hero-photo");
+    const placeholder = hero?.querySelector(".hero-photo-empty");
+    if (placeholder) { const image = document.createElement("img"); image.src = fresh.bottle.image_url; image.alt = fresh.bottle.name; placeholder.replaceWith(image); }
+  }).catch(()=>{});
   const external = await api.externalRatings(id).then((r) => r.external_ratings || []).catch(() => []);
 
   const isWine = bottle.category === "wine";
@@ -100,7 +108,7 @@ export async function renderBottleDetail(id, dispatchNav) {
     </div>
 
     <div style="display:flex;gap:8px;margin-bottom:10px">
-      <button class="btn btn-primary" data-action="log-pour" style="flex:1">Log a Pour</button>
+      <button class="btn btn-primary" data-action="log-pour" style="flex:1">Rate this drink</button>
       <button class="btn btn-secondary" data-action="edit-bottle">Edit</button>
       <button class="btn btn-secondary" data-action="add-compare">⇄</button>
     </div>
@@ -109,6 +117,7 @@ export async function renderBottleDetail(id, dispatchNav) {
 
     <div class="section-title"><h2>Details</h2></div>
     <div class="card"><dl class="spec-grid">${specs.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(String(v))}</dd></div>`).join("")}</dl></div>
+    ${bottle.image_source_url ? `<p class="field-hint"><a href="${escapeHtml(bottle.image_source_url)}" target="_blank" rel="noopener noreferrer">Producer bottle photo</a> · Packaging may vary by release.</p>` : ""}
     ${bottle.description ? `<div class="card"><strong>Notes on this bottle</strong><p style="margin-top:6px">${escapeHtml(bottle.description)}</p></div>` : ""}
 
     <div class="section-title"><h2>Outside Opinion</h2><span class="link" data-action="add-external">+ Add</span></div>

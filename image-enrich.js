@@ -163,7 +163,7 @@ export async function searchOpenFoodFacts(record, { fetchImpl = fetch } = {}) {
       const imageUrl = p.image_front_url || p.image_url;
       if (!imageUrl) return null;
       const label = `${p.brands || ""} ${p.product_name || ""}`.trim();
-      const m = scoreNameMatch(record.name, record.producer, label);
+      const m = scoreNameMatch(record.name, record.producer, label, {identity:true});
       return { url: imageUrl, origin: "openfoodfacts", label, ...m };
     })
     .filter(Boolean)
@@ -309,13 +309,13 @@ export async function enrichOne(record, opts = {}) {
   const best = candidates[0];
   result.confidence = Math.round(best.score * 100) / 100;
 
-  if (best.score < autoAcceptAt || best.coverage < minCoverage) {
+  if (best.score < autoAcceptAt || best.coverage < minCoverage || best.precision < 0.8) {
     // Deliberately does NOT guess. A partial name match is exactly how the
     // wrong expression ends up on a record, which the brief forbids.
     result.status = "needs_review";
     result.match_reason = best.coverage < minCoverage
       ? `closest match "${best.label || best.alt || "unnamed"}" only accounts for ${Math.round(best.coverage * 100)}% of this bottle's name; left for confirmation`
-      : `best candidate only scored ${result.confidence}; left for confirmation`;
+      : best.precision < 0.8 ? "candidate contains additional expression details; left for confirmation" : `best candidate only scored ${result.confidence}; left for confirmation`;
     return result;
   }
 

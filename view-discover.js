@@ -8,7 +8,7 @@ import { photoRecommendationHtml, wirePhotoRecommendations } from "./photo-recom
 // the reason attached, and your own shortlist sits below it.
 
 import { api } from "./api.js";
-import { el, escapeHtml, bottleCardHtml, emptyStateHtml, toast } from "./ui.js";
+import { el, escapeHtml, bottleCardHtml, bottleThumbHtml, emptyStateHtml, toast } from "./ui.js";
 import { compareList } from "./view-bottle.js";
 
 const state = { category: "", sort: "best_fit", mode: "picks" };
@@ -29,9 +29,7 @@ function pickCardHtml(r) {
   return `
     <article class="pick-card" data-catalog-id="${escapeHtml(r.id)}">
       <div class="pick-thumb">
-        ${r.image_url
-          ? `<img src="${escapeHtml(r.image_url)}" alt="" loading="lazy">`
-          : `<span aria-hidden="true">${r.category === "sauvignon_blanc" ? "🍷" : "🥃"}</span>`}
+        ${bottleThumbHtml(r)}
       </div>
       <div class="pick-body">
         <div class="pick-head">

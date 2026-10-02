@@ -1,9 +1,10 @@
-const CACHE_NAME = "pour-decisions-v16-add-drink";
+const CACHE_NAME = "pour-decisions-v17-photo-design";
 const CORE_ASSETS = [
   "/",
   "/index.html",
   "/styles.css",
   "/app.js",
+  "/bottle-images.js",
   "/pour-model.js",
   "/questionnaire-form.js",
   "/photo-recommendations.js",
