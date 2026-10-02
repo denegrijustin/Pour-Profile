@@ -20,13 +20,9 @@ const TITLES = {
 let currentView = "home";
 
 function applyProfileLabels() {
-  const isWine = getActiveProfile() === "wine";
-  const label = isWine ? "My Wines" : "My Spirits";
   const btn = document.querySelector('[data-nav="spirits"]');
-  if (btn) btn.lastChild.textContent = label;
-  const icon = btn && btn.querySelector(".nav-icon");
-  if (icon) icon.textContent = isWine ? "🍷" : "🥃";
-  TITLES.spirits = ["Your Collection", label];
+  if (btn) btn.lastChild.textContent = "My Bottles";
+  TITLES.spirits = ["Your Collection", "My Bottles"];
 }
 
 function setActiveNav(view) {
@@ -136,19 +132,20 @@ async function wireProfileSwitcher() {
   chip.addEventListener("click", async () => {
     const { openSheet } = await import("./ui.js");
     openSheet(`
-      <div class="sheet-header"><h2>What are you drinking?</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
-      <p class="field-hint">Each profile covers one drink family and keeps its own ratings, statuses, and palate model — spirits preferences never bleed into wine.</p>
+      <div class="sheet-header"><h2>Whose pour profile?</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
+      <p class="field-hint">Lady and JDAD each have their own ratings and recommendations across bourbon, wine, tequila, rum and scotch.</p>
       <div style="margin-top:12px">
         ${profiles.map((p) => `
           <button type="button" class="btn ${p.slug === getActiveProfile() ? "btn-primary" : "btn-secondary"} btn-block" data-pick-profile="${escapeHtml(p.slug)}" style="margin-bottom:8px;justify-content:space-between">
             <span>${escapeHtml(p.display_name)}</span>
-            <span style="font-size:12px;font-weight:500;opacity:0.8">${escapeHtml(p.focus === "wine" ? "Wine only" : "Whiskey, tequila, rum…")}</span>
+            <span style="font-size:12px;font-weight:500;opacity:0.8">All five categories</span>
           </button>`).join("")}
       </div>
     `, {
       onOpen: () => {
         document.querySelectorAll("[data-pick-profile]").forEach((btn) => {
           btn.addEventListener("click", () => {
+            if (currentView === "scan") stopScan();
             setActiveProfile(btn.dataset.pickProfile);
             paint();
             applyProfileLabels();

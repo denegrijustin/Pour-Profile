@@ -18,7 +18,7 @@ export async function renderSpirits() {
       <button class="filter-chip" data-tab="pours">Pours</button>
     </div>
     <div class="search-bar">
-      <input type="search" id="spiritsSearch" placeholder="Search your spirits…" value="${state.q}">
+      <input type="search" id="spiritsSearch" placeholder="Search all your bottles…" value="${state.q}">
     </div>
     <div class="filter-bar" id="spiritsCategoryFilter">
       <button class="filter-chip${state.category === "" ? " active" : ""}" data-cat="">All</button>

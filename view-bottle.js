@@ -1,3 +1,4 @@
+import { savedAnswersHtml } from "./questionnaire-form.js";
 import { api, downscaleImage } from "./api.js";
 import {
   el, escapeHtml, formatRating, formatDate, formatMoney, statusPillsHtml, matchBadgeHtml,
@@ -62,6 +63,7 @@ export async function renderBottleDetail(id, dispatchNav) {
         </div>
         <div class="td-body">
           <div class="td-meta">${v ? `<strong>${escapeHtml(v.label)}</strong> · ` : ""}${formatDate(t.tasted_at)}${t.venue_name ? ` · ${escapeHtml(t.venue_name)}` : ""}${t.serving_style ? ` · ${escapeHtml(titleize(t.serving_style))}` : ""}</div>
+          ${savedAnswersHtml(bottle.category,t.questionnaire_answers,t.tasting_style)}
           ${t.notes ? `<p style="margin:4px 0">${escapeHtml(t.notes)}</p>` : ""}
           ${t.flavor_tags && t.flavor_tags.length ? `<div class="tag-cloud" style="margin-top:4px">${t.flavor_tags.map((f) => `<span class="tag-chip" style="cursor:default">${escapeHtml(titleize(f))}</span>`).join("")}</div>` : ""}
         </div>

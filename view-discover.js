@@ -1,3 +1,4 @@
+import { photoRecommendationHtml, wirePhotoRecommendations } from "./photo-recommendations.js";
 // Discover is the recommendation surface.
 //
 // It used to list only bottles you had already flagged "want to try", which made
@@ -73,6 +74,7 @@ export async function renderDiscover(dispatchNav) {
   const categories = picksRes.categories || [];
 
   view.innerHTML = `
+    ${photoRecommendationHtml()}
     <div class="filter-bar">
       <button class="filter-chip${state.mode === "picks" ? " active" : ""}" data-mode="picks">For you</button>
       <button class="filter-chip${state.mode === "browse" ? " active" : ""}" data-mode="browse">Browse all</button>
@@ -107,6 +109,7 @@ export async function renderDiscover(dispatchNav) {
       <div class="bottle-grid">${mine.map(bottleCardHtml).join("")}</div>` : ""}
   `;
 
+  wirePhotoRecommendations(view);
   wire(view, dispatchNav);
 }
 
