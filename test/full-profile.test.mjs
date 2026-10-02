@@ -1,24 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { DatabaseSync } from 'node:sqlite';
-import { readFileSync, readdirSync } from 'node:fs';
-import worker from '../worker.js';
+import { readFileSync } from 'node:fs';
+import { setup } from './harness.mjs';
 import {QUESTIONS,AXES,scorePour,validateAnswers} from '../pour-model.js';
-function setup() {
-  const db=new DatabaseSync(':memory:');
-  for (const file of readdirSync(new URL('../migrations/',import.meta.url)).sort()) db.exec(readFileSync(new URL('../migrations/'+file,import.meta.url),'utf8'));
-  const DB={prepare(sql) {
-    let params=[];
-    const stmt={bind(...p){params=p;return stmt;},async all(){return {results:db.prepare(sql).all(...params)};},async first(){return db.prepare(sql).get(...params)||null;},async run(){const r=db.prepare(sql).run(...params);return {meta:{last_row_id:Number(r.lastInsertRowid),changes:r.changes}};}};
-    return stmt;
-  }};
-  const env={DB};
-  const call=async (path,body,profile='jdad',method=body?'POST':'GET') => {
-    const response=await worker.fetch(new Request(`https://test${path}${path.includes('?')?'&':'?'}profile=${profile}`,{method,headers:{'Content-Type':'application/json'},body:body?JSON.stringify(body):undefined}),env);
-    return {status:response.status,data:await response.json()};
-  };
-  return {db,env,call};
-}
 const answers=(category,intensity=7,enjoyment=5) => Object.fromEntries(QUESTIONS[category].map(q => [q.id,{intensity,enjoyment}]));
 test('all five categories have ten distinct questions with explicit intensity and enjoyment',()=>{
   assert.equal(Object.keys(QUESTIONS).length,5);
