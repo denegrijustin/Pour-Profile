@@ -1,3 +1,4 @@
+import { savedAnswersHtml } from "./questionnaire-form.js";
 // The tasting feed.
 //
 // Logging a pour used to produce a toast and nothing else: the tasting itself
@@ -55,6 +56,7 @@ export function tastingRowHtml(t, { showBottle = true } = {}) {
         ${showBottle ? `<div class="tasting-name">${escapeHtml(t.bottle_name || "Unknown bottle")}</div>` : ""}
         <div class="tasting-verdict-label">${escapeHtml(r.label)}</div>
         ${meta ? `<div class="tasting-meta">${escapeHtml(meta)}</div>` : ""}
+        ${savedAnswersHtml(t.bottle_category,t.questionnaire_answers,t.tasting_style)}
         ${t.notes ? `<p class="tasting-notes">${escapeHtml(t.notes)}</p>` : ""}
         ${t.serving_style || t.would_buy_bottle ? `
           <div class="tasting-chips">

@@ -1,8 +1,10 @@
-import { api } from "./api.js";
+import { questionnaireHtml, readQuestionnaire, wireQuestionnaire } from "./questionnaire-form.js";
+import { api, getActiveProfile } from "./api.js";
 import { openSheet, closeSheet, toast, escapeHtml, verdictPickerHtml, VERDICTS, flavorTagPickerHtml } from "./ui.js";
 import { SERVING_STYLES, VENUE_TYPES } from "./spirit-taxonomy.js";
 import { dimensionSlidersHtml, wireDimensionSliders } from "./wine-form.js";
 
+let pourProfile = null;
 let selectedRating = null;
 let selectedTags = [];
 let selectedBottle = null;
@@ -59,6 +61,7 @@ export async function openBottlePickerSheet() {
 }
 
 export async function openLogPourSheet(bottle, { onSaved } = {}) {
+  pourProfile = getActiveProfile();
   selectedRating = null;
   selectedVerdict = null;
   selectedTags = [];
@@ -76,12 +79,7 @@ export async function openLogPourSheet(bottle, { onSaved } = {}) {
     <label>How was it?</label>
     ${verdictPickerHtml(null)}
 
-    ${isWine ? `
-    <details style="margin-top:14px">
-      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Describe the wine (optional — sharpens your palate model)</summary>
-      <p class="field-hint" style="margin-top:6px">Only set what you're sure of; anything skipped stays unknown rather than average.</p>
-      <div id="wineDims">${dimensionSlidersHtml(bottle.wine_dimensions || {})}</div>
-    </details>` : ""}
+    ${questionnaireHtml(bottle.category)}
 
     <details style="margin-top:16px">
       <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Add more detail (optional)</summary>
@@ -136,6 +134,7 @@ export async function openLogPourSheet(bottle, { onSaved } = {}) {
 }
 
 function wireSheet() {
+  wireQuestionnaire();
   const fine = document.getElementById("verdictFine");
   const fineInput = document.getElementById("ratingFine");
   const fineValue = document.getElementById("ratingFineValue");
@@ -192,6 +191,9 @@ function wireSheet() {
 
 async function savePour() {
   const btn = document.getElementById("pourSaveBtn");
+  if (pourProfile !== getActiveProfile()) { toast("Profile changed. Reopen this pour for the selected person."); return; }
+  let answers;
+  try { answers = readQuestionnaire(); } catch (err) { toast(err.message); return; }
   btn.disabled = true;
   btn.textContent = "Saving…";
   const venueName = document.getElementById("pourVenueName").value.trim();
@@ -204,7 +206,12 @@ async function savePour() {
     notes: document.getElementById("pourNotes").value.trim() || null,
     would_drink_again: document.getElementById("pourAgain").dataset.on === "1" ? 1 : null,
     would_buy_bottle: document.getElementById("pourBuy").dataset.on === "1" ? 1 : null,
-    flavor_tags: selectedTags
+    flavor_tags: selectedTags,
+    questionnaire_version: 1,
+    questionnaire_answers: answers,
+    tasting_style: document.getElementById("tastingStyle")?.value || null,
+    client_request_id: crypto.randomUUID(),
+    status_tag: selectedVerdict?.status
   };
   if (venueName) {
     payload.venue = {
@@ -216,12 +223,6 @@ async function savePour() {
   }
   if (wineDims) payload.wine_dimensions = wineDims.get();
   try {
-    if (selectedVerdict) {
-      // The verdict answers "how good" and "would you again" at once, so the
-      // status tag comes from the same tap rather than a second control.
-      const existing = (selectedBottle.status_tags || []).filter((t) => !["favorite", "like", "neutral", "dislike", "avoid"].includes(t));
-      await api.updateBottle(selectedBottle.id, { status_tags: [...new Set(["tried", ...existing, selectedVerdict.status])] });
-    }
     const res = await api.createTasting(payload);
     closeSheet();
     const moved = res.palateUpdates && res.palateUpdates.length;

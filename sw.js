@@ -1,9 +1,12 @@
-const CACHE_NAME = "pour-decisions-v14-recommendations";
+const CACHE_NAME = "pour-decisions-v15-full-profiles";
 const CORE_ASSETS = [
   "/",
   "/index.html",
   "/styles.css",
   "/app.js",
+  "/pour-model.js",
+  "/questionnaire-form.js",
+  "/photo-recommendations.js",
   "/api.js",
   "/ui.js",
   "/spirit-taxonomy.js",

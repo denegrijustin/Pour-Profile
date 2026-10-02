@@ -35,6 +35,7 @@ export function openSheet(html, { onOpen } = {}) {
   el("sheetContent").innerHTML = html;
   el("sheetBackdrop").classList.add("open");
   el("sheet").classList.add("open");
+  el("sheet").scrollTop = 0;
   document.body.style.overflow = "hidden";
   if (onOpen) onOpen();
 }
