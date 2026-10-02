@@ -4,3 +4,8 @@ dist/
 
 # Local wrangler state (local D1/R2 for dev runs)
 .wrangler/
+
+# API credentials remain local or in encrypted Worker secrets.
+.dev.vars*
+.env*
+!.env.example
