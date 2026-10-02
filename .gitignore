@@ -9,3 +9,6 @@ dist/
 .dev.vars*
 .env*
 !.env.example
+
+# Generated catalog seed SQL (tools/seed-catalog-db.mjs, tools/expand-barcodes.mjs)
+seed/
