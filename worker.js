@@ -7,6 +7,7 @@ import { RATING_SOURCES } from "./rating-sources.js";
 import { hydrateCatalog } from "./catalog-pack.js";
 import { refreshCatalog, computeFit, isVisible } from "./catalog-engine.js";
 import { enrichOne, downloadImage, isSameBottle } from "./image-enrich.js";
+import { parseBarcode, lookupOpenFoodFacts as fetchOffProduct } from "./barcode.js";
 
 // The reference catalog is read-only data. It used to be compiled into this script
 // (~700 KB of literals parsed on every cold start); it now ships as the static
@@ -123,6 +124,9 @@ async function routeApi(request, url, env) {
   const enrichMatch = pathname.match(/^\/api\/bottles\/(\d+)\/enrich$/);
   if (enrichMatch && method === "POST") return enrichBottle(Number(enrichMatch[1]), env);
 
+  const barcodesMatch = pathname.match(/^\/api\/barcodes\/([A-Za-z0-9]+)$/);
+  if (barcodesMatch && method === "GET") return getBarcode(barcodesMatch[1], env);
+  if (pathname === "/api/barcodes" && method === "POST") return saveBarcode(request, env);
   const barcodeMatch = pathname.match(/^\/api\/barcode\/([A-Za-z0-9]+)$/);
   if (barcodeMatch && method === "GET") return lookupBarcode(barcodeMatch[1], env);
 
@@ -1482,7 +1486,120 @@ async function enrichBottle(bottleId, env) {
   }
 }
 
-// ---------- barcode lookup ----------
+// ---------- barcode scan-to-save ----------
+// GET  /api/barcodes/:code  resolve a scan: saved link -> bottle/catalog match, else Open Food
+//                           Facts (cached into `barcodes`). 1 D1 trip on a hit, 2 on a fresh OFF hit.
+// POST /api/barcodes        save/replace a link from a code to a bottle or catalog item. 2 trips.
+// Codes are stored normalised (see barcode.js) so UPC-A and EAN-13 spellings share a row.
+
+const bottleBrief = (r) => r && { id: r.id, name: r.name, brand: r.brand, category: r.category, image_url: r.image_url || null };
+
+async function getBarcode(rawCode, env) {
+  const parsed = parseBarcode(rawCode);
+  if (!parsed.ok) return json({ error: parsed.error, barcode: rawCode }, 400);
+  const { normalized, format, variants } = parsed;
+
+  // One trip: the saved link (with its bottle, or the bottle adopted from its catalog
+  // item) and any legacy bottles.barcode match. The catalog itself is in memory.
+  const [linkRows, legacyRows] = await batch(env, [
+    [`SELECT br.bottle_id, br.catalog_id, br.source, br.confidence, br.product_name, br.brand AS product_brand,
+             br.size_ml, br.image_url AS product_image, br.verified,
+             b.id AS b_id, b.name AS b_name, b.brand AS b_brand, b.category AS b_category, b.image_url AS b_image,
+             cb.id AS cb_id, cb.name AS cb_name, cb.brand AS cb_brand, cb.category AS cb_category, cb.image_url AS cb_image
+      FROM barcodes br
+      LEFT JOIN bottles b ON b.id = br.bottle_id
+      LEFT JOIN bottles cb ON br.catalog_id IS NOT NULL AND cb.catalog_id = br.catalog_id
+      WHERE br.barcode = ? LIMIT 1`, normalized],
+    [`SELECT id, name, brand, category, image_url FROM bottles WHERE barcode IN (${marks(variants.length)}) LIMIT 1`, ...variants]
+  ]);
+  const base = { barcode: rawCode, normalized, format };
+  const link = linkRows[0];
+
+  if (link) {
+    const bottle = link.b_id != null ? bottleBrief({ id: link.b_id, name: link.b_name, brand: link.b_brand, category: link.b_category, image_url: link.b_image })
+      : link.cb_id != null ? bottleBrief({ id: link.cb_id, name: link.cb_name, brand: link.cb_brand, category: link.cb_category, image_url: link.cb_image }) : null;
+    const rec = link.catalog_id ? (await catalog(env)).find((r) => r.id === link.catalog_id) : null;
+    const product = link.product_name ? { name: link.product_name, brand: link.product_brand, size_ml: link.size_ml, image_url: link.product_image } : null;
+    const match = bottle ? "bottle" : rec ? "catalog" : product ? "product" : null;
+    if (match) {
+      return json({ ...base, found: true, match, cached: true, source: link.source, confidence: link.confidence, verified: !!link.verified,
+        bottle, catalog: rec ? catalogPublic(rec) : null, product });
+    }
+  }
+  if (legacyRows[0]) {
+    return json({ ...base, found: true, match: "bottle", cached: true, source: "internal", confidence: "high", verified: true,
+      bottle: bottleBrief(legacyRows[0]), catalog: null, product: null });
+  }
+
+  const off = await fetchOffProduct(normalized);
+  if (off.status === "hit") {
+    const p = off.product;
+    // Cache so the next scan of this code costs no outbound call. A concurrent user link wins.
+    await run(env, `INSERT OR IGNORE INTO barcodes (barcode, source, confidence, product_name, brand, size_ml, image_url, verified)
+                    VALUES (?,?,?,?,?,?,?,0)`, normalized, "openfoodfacts", "low", p.product_name, p.brand, p.size_ml, p.image_url);
+    return json({ ...base, found: true, match: "product", cached: false, source: "openfoodfacts", confidence: "low", verified: false,
+      bottle: null, catalog: null,
+      product: { name: p.product_name, brand: p.brand, size_ml: p.size_ml, image_url: p.image_url },
+      sourceUrl: `https://world.openfoodfacts.org/product/${normalized}` });
+  }
+  return json({ ...base, found: false, match: null, bottle: null, catalog: null, product: null,
+    lookup: off.status === "error" ? "unavailable" : "miss" });
+}
+
+async function saveBarcode(request, env) {
+  const b = await body(request);
+  const parsed = parseBarcode(b.barcode);
+  if (!parsed.ok) return json({ error: parsed.error }, 400);
+  const { normalized, format } = parsed;
+
+  const wantBottle = b.bottle_id != null;
+  const bottleId = Number(b.bottle_id);
+  if (wantBottle && (!Number.isInteger(bottleId) || bottleId < 1)) return json({ error: "bottle_id must be a positive integer" }, 400);
+  if (b.catalog_id != null && (typeof b.catalog_id !== "string" || !b.catalog_id || b.catalog_id.length > 120)) return json({ error: "catalog_id must be a string" }, 400);
+  if (!wantBottle && b.catalog_id == null) return json({ error: "bottle_id or catalog_id is required" }, 400);
+  if (b.catalog_id != null && !(await catalog(env)).some((r) => r.id === b.catalog_id)) return json({ error: "Unknown catalog id" }, 404);
+
+  const text = (v, max) => (typeof v === "string" && v.trim() ? v.trim().slice(0, max) : null);
+  const sizeMl = Number.isInteger(b.size_ml) && b.size_ml > 0 && b.size_ml <= 20000 ? b.size_ml : null;
+  const imageUrl = typeof b.image_url === "string" && /^(https:\/\/|\/api\/)/.test(b.image_url) ? b.image_url.slice(0, 500) : null;
+
+  // One trip for everything the write depends on.
+  const reads = [["SELECT * FROM barcodes WHERE barcode = ?", normalized]];
+  if (wantBottle) reads.push(["SELECT id, catalog_id, barcode FROM bottles WHERE id = ?", bottleId]);
+  else reads.push(["SELECT id, catalog_id, barcode FROM bottles WHERE catalog_id = ? LIMIT 1", b.catalog_id]);
+  const [[existing], [bottle]] = await batch(env, reads);
+
+  if (wantBottle && !bottle) return json({ error: "Bottle not found" }, 404);
+  if (wantBottle && b.catalog_id != null && bottle.catalog_id && bottle.catalog_id !== b.catalog_id) {
+    return json({ error: "catalog_id does not match that bottle" }, 400);
+  }
+  const linkBottle = bottle ? bottle.id : null;
+  const linkCatalog = (wantBottle ? bottle.catalog_id : null) || b.catalog_id || null;
+
+  if (existing && existing.verified && !b.replace
+      && ((existing.bottle_id != null && linkBottle != null && existing.bottle_id !== linkBottle)
+        || (existing.catalog_id != null && linkCatalog != null && existing.catalog_id !== linkCatalog))) {
+    return json({ error: "This barcode is already linked to a different item.", existing: { bottle_id: existing.bottle_id, catalog_id: existing.catalog_id } }, 409);
+  }
+
+  const writes = [[
+    `INSERT INTO barcodes (barcode, bottle_id, catalog_id, source, confidence, product_name, brand, size_ml, image_url, verified)
+     VALUES (?,?,?,?,?,?,?,?,?,1)
+     ON CONFLICT(barcode) DO UPDATE SET bottle_id = excluded.bottle_id, catalog_id = excluded.catalog_id,
+       source = 'user', confidence = 'high', verified = 1,
+       product_name = COALESCE(excluded.product_name, product_name), brand = COALESCE(excluded.brand, brand),
+       size_ml = COALESCE(excluded.size_ml, size_ml), image_url = COALESCE(excluded.image_url, image_url)`,
+    normalized, linkBottle, linkCatalog, "user", "high", text(b.product_name, 200), text(b.brand, 120), sizeMl, imageUrl
+  ]];
+  // Keep the legacy per-bottle column populated for bottles that have none, so search-by-barcode works.
+  if (bottle && !bottle.barcode) writes.push(["UPDATE bottles SET barcode = ? WHERE id = ? AND barcode IS NULL", normalized, bottle.id]);
+  await batch(env, writes);
+
+  return json({ ok: true, barcode: normalized, format, created: !existing, replaced: !!(existing && existing.verified),
+    link: { bottle_id: linkBottle, catalog_id: linkCatalog }, verified: true }, existing ? 200 : 201);
+}
+
+// ---------- barcode lookup (legacy) ----------
 
 async function lookupBarcode(code, env) {
   const existing = await first(env, "SELECT * FROM bottles WHERE barcode = ?", code);
