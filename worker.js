@@ -1582,7 +1582,15 @@ async function saveBarcode(request, env) {
     return json({ error: "This barcode is already linked to a different item.", existing: { bottle_id: existing.bottle_id, catalog_id: existing.catalog_id } }, 409);
   }
 
-  const writes = [[
+  const writes = [];
+  // barcodes.catalog_id is a foreign key into catalog_items. If the catalog table has not been
+  // seeded with this record yet, create a minimal row first (same batch = same transaction).
+  if (linkCatalog) {
+    const rec = (await catalog(env)).find((r) => r.id === linkCatalog);
+    writes.push(["INSERT OR IGNORE INTO catalog_items (id, name, producer, category, subcategory) VALUES (?,?,?,?,?)",
+      linkCatalog, rec?.name || linkCatalog, rec?.producer ?? null, rec?.category || "other", rec?.subcategory ?? null]);
+  }
+  writes.push([
     `INSERT INTO barcodes (barcode, bottle_id, catalog_id, source, confidence, product_name, brand, size_ml, image_url, verified)
      VALUES (?,?,?,?,?,?,?,?,?,1)
      ON CONFLICT(barcode) DO UPDATE SET bottle_id = excluded.bottle_id, catalog_id = excluded.catalog_id,
@@ -1590,7 +1598,7 @@ async function saveBarcode(request, env) {
        product_name = COALESCE(excluded.product_name, product_name), brand = COALESCE(excluded.brand, brand),
        size_ml = COALESCE(excluded.size_ml, size_ml), image_url = COALESCE(excluded.image_url, image_url)`,
     normalized, linkBottle, linkCatalog, "user", "high", text(b.product_name, 200), text(b.brand, 120), sizeMl, imageUrl
-  ]];
+  ]);
   // Keep the legacy per-bottle column populated for bottles that have none, so search-by-barcode works.
   if (bottle && !bottle.barcode) writes.push(["UPDATE bottles SET barcode = ? WHERE id = ? AND barcode IS NULL", normalized, bottle.id]);
   await batch(env, writes);
