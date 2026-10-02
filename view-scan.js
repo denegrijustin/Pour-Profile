@@ -66,9 +66,9 @@ export async function renderScan(dispatchNav) {
     }
   });
 
-  document.getElementById("chooseManual").onclick = () => { stopScan(); document.getElementById("manualPanel").hidden = false; document.getElementById("labelPanel").hidden = true; document.getElementById("barcodePanel").hidden = true; };
+  document.getElementById("chooseManual").onclick = () => { stopScan(); document.getElementById("manualPanel").hidden = false; document.getElementById("labelPanel").hidden = true; document.getElementById("barcodePanel").open = false; document.getElementById("barcodePanel").hidden = true; };
   document.getElementById("chooseBarcode").onclick = () => { document.getElementById("manualPanel").hidden = true; document.getElementById("labelPanel").hidden = true; const panel = document.getElementById("barcodePanel"); panel.hidden = false; panel.open = true; };
-  document.getElementById("chooseLabel").onclick = () => { stopScan(); document.getElementById("manualPanel").hidden = true; document.getElementById("barcodePanel").hidden = true; document.getElementById("labelPanel").hidden = false; };
+  document.getElementById("chooseLabel").onclick = () => { stopScan(); document.getElementById("manualPanel").hidden = true; document.getElementById("barcodePanel").open = false; document.getElementById("barcodePanel").hidden = true; document.getElementById("labelPanel").hidden = false; };
   document.getElementById("labelPhoto").onchange = async (event) => {
     const file = event.target.files?.[0]; if (!file) return;
     const status = document.getElementById("labelStatus"); status.textContent = "Reading the label…";
@@ -335,7 +335,7 @@ function renderDraftForm(draft, dispatchNav, provenance) {
     <label>Name</label><input type="text" id="draftName" value="${escapeHtml(draft.name || "")}" placeholder="Bottle name">
     <label>Brand</label><input type="text" id="draftBrand" value="${escapeHtml(draft.brand || "")}">
     <label>Category</label>
-    <select id="draftCategory">${CATEGORIES.map((c) => `<option value="${c.id}" ${c.id === draft.category ? "selected" : ""}>${c.label}</option>`).join("")}</select>
+    <select id="draftCategory">${draft.category === "unknown" ? `<option value="" selected>Choose category</option>` : ""}${CATEGORIES.map((c) => `<option value="${c.id}" ${c.id === draft.category ? "selected" : ""}>${c.label}</option>`).join("")}</select>
     <label>Barcode</label><input type="text" id="draftBarcode" value="${escapeHtml(draft.barcode || "")}" readonly>
     ${draft.description ? `<label>Description (from source)</label><textarea id="draftDescription">${escapeHtml(draft.description)}</textarea>` : ""}
     <button class="btn btn-primary btn-block" id="draftSaveBtn" style="margin-top:16px">Save Bottle</button>
@@ -344,6 +344,7 @@ function renderDraftForm(draft, dispatchNav, provenance) {
   document.getElementById("draftSaveBtn").addEventListener("click", async () => {
     const name = document.getElementById("draftName").value.trim();
     if (!name) { toast("Name is required."); return; }
+    if (!document.getElementById("draftCategory").value) { toast("Choose a category."); return; }
     try {
       const res = await api.createBottle({
         name,
