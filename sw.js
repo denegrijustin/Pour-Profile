@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-decisions-v15-full-profiles";
+const CACHE_NAME = "pour-decisions-v16-add-drink";
 const CORE_ASSETS = [
   "/",
   "/index.html",

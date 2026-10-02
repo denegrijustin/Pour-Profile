@@ -5,6 +5,10 @@
 // Each source declares its native scale, so the entry form can't record a
 // 4.2 as if it were out of 100.
 export const RATING_SOURCES = [
+  { id: "halliday", label: "Halliday Wine Companion", scale: "100", kind: "wine" },
+  { id: "whiskyfun", label: "Whiskyfun", scale: "100", kind: "spirits" },
+  { id: "whisky_magazine", label: "Whisky Magazine", scale: "10", kind: "spirits" },
+  { id: "distiller_expert", label: "Distiller expert review", scale: "100", kind: "spirits" },
   { id: "vivino", label: "Vivino", scale: "5", kind: "wine" },
   { id: "wine_spectator", label: "Wine Spectator", scale: "100", kind: "wine" },
   { id: "wine_enthusiast", label: "Wine Enthusiast", scale: "100", kind: "wine" },

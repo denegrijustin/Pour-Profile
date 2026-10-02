@@ -1,3 +1,4 @@
+import { VERIFIED_DRINKS } from "./verified-ratings.js";
 import { QUESTIONS, AXES, AXIS_LABELS, validateAnswers, parseAnswers, observations, scorePour, tastingEvidence } from "./pour-model.js";
 import { buildPalateProfile, scoreMatch } from "./palate-engine.js";
 import { scoreWine, learnFromTasting } from "./wine-engine.js";
@@ -33,6 +34,8 @@ async function routeApi(request, url, env) {
   const { pathname } = url;
   const method = request.method;
 
+  if (pathname === "/api/drinks/search" && method === "GET") return drinkSearch(url, env);
+  if (pathname === "/api/drinks/adopt" && method === "POST") return drinkAdopt(request, url, env);
   if (pathname === "/api/profile/full" && method === "GET") return fullPourProfile(url, env);
   if (pathname === "/api/recommendations/photo" && method === "POST") return recommendPhoto(request, url, env);
   if (pathname === "/api/profiles" && method === "GET") return listProfiles(env);
@@ -371,6 +374,10 @@ async function createBottle(request, env, url) {
   const profileId = url ? await resolveProfileId(url, env) : 1;
   const b = await body(request);
   if (!b.name) return json({ error: "name is required" }, 400);
+  if (typeof b.name !== "string" || !b.name.trim()) return json({error:"Name is required"},400);
+  b.name = b.name.trim();
+  const duplicate = await first(env, "SELECT id FROM bottles WHERE lower(trim(name)) = lower(?) AND category = ?", b.name, b.category || "bourbon");
+  if (duplicate) return getBottle(duplicate.id, env, url);
   const f = fieldsFromBody(b);
   const cols = Object.keys(f);
   const categoryAttrs = JSON.stringify(b.category_attrs || {});
@@ -1531,7 +1538,7 @@ async function analyzeImage(request, env) {
       input: [{
         role: "user",
         content: [
-          { type: "input_text", text: "You are reading a photo of a spirits bottle label for a personal bourbon/whiskey/spirits tracking app. Extract what you can read. Return concise JSON." },
+          { type: "input_text", text: "Read one drink bottle label. Supported categories: bourbon, wine, tequila, rum, scotch. Return category using exactly one of those values, or unknown when unclear. Preserve wine vintage and distinguishing expression in expression. Extract only readable facts; use empty strings for unknown facts. Do not invent a bottle or vintage." },
           { type: "input_image", image_url: imageDataUrl }
         ]
       }],
@@ -1652,4 +1659,34 @@ async function recommendPhoto(request,url,env) {
   const best = ranked.find(b => b.fit.score != null && !b.needs_confirmation);
   return json({person:person.display_name,bottles:ranked,best:best?.name || null,notes:identified.notes || '', evidence_pours:evidence.length,
     guidance:best ? 'Ranked only among bottles identified in your photo. Flavor descriptions are estimates; check the exact label before choosing.' : 'No confident personalized match yet. Log some pours or take a closer photo of readable labels.'});
+}
+
+// Manual entry searches the saved database and both reference catalogs.
+async function drinkSearch(url, env) {
+  const q = (url.searchParams.get("q") || "").trim().toLowerCase();
+  if (q.length < 2) return json({results:[]});
+  const saved = await all(env, "SELECT id, name, brand AS producer, category, proof FROM bottles");
+  const records = [...saved.map(r=>({...r,kind:"bottle"})), ...VERIFIED_DRINKS.map(r=>({...r,kind:"reference"})), ...catalogFor(url).map(r=>({...catalogPublic(r),kind:"catalog"}))];
+  const seen = new Set();
+  const results = records.filter(r=>`${r.name} ${r.producer || ''}`.toLowerCase().includes(q)).filter(r=>{ const key = `${r.category}:${r.name.toLowerCase()}`; if(seen.has(key))return false; seen.add(key); return true; }).slice(0,30);
+  return json({results, rating_source_count:new Set(VERIFIED_DRINKS.flatMap(r=>r.ratings.map(s=>s.source))).size});
+}
+async function drinkAdopt(request, url, env) {
+  const b = await body(request);
+  if (b.kind === "bottle") {
+    const bottle = await first(env,"SELECT id FROM bottles WHERE id=?",b.id);
+    return bottle ? json({bottle_id:bottle.id,already_present:true}) : json({error:"Drink not found"},404);
+  }
+  if (b.kind === "catalog") return catalogAdopt(new Request(request.url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({catalog_id:b.id,status_tags:["want_to_try"]})}),env,url);
+  const rec = VERIFIED_DRINKS.find(r=>r.id === b.id);
+  if (b.kind !== "reference" || !rec) return json({error:"Drink not found"},404);
+  const existed = await first(env,"SELECT id FROM bottles WHERE lower(trim(name))=lower(?) AND category=?",rec.name,rec.category);
+  const response = await createBottle(new Request(request.url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:rec.name,brand:rec.producer,category:rec.category,abv:rec.abv ?? null,proof:rec.proof ?? null,status_tags:["want_to_try"],data_source:"verified_reference"})}),env,url);
+  if (!response.ok) return response;
+  const detail = await response.json();
+  for (const rating of rec.ratings) {
+    const found = await first(env,"SELECT id FROM external_ratings WHERE bottle_id=? AND source=? AND source_url=?",detail.bottle.id,rating.source,rating.source_url);
+    if (!found) await run(env,"INSERT INTO external_ratings (bottle_id,source,source_url,score,scale,descriptors,is_manual) VALUES (?,?,?,?,?,?,0)",detail.bottle.id,rating.source,rating.source_url,rating.score,rating.scale,JSON.stringify({review_scope:rating.scope,verified_at:"2026-10-02"}));
+  }
+  return json({bottle_id:detail.bottle.id,already_present:!!existed});
 }

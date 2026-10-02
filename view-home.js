@@ -35,7 +35,7 @@ export async function renderHome() {
       <div class="quick-action" data-action="log-pour"><span class="qa-icon">🥃</span>Log a Pour</div>
       <div class="quick-action" data-action="nav-discover"><span class="qa-icon">✨</span>What Next?</div>
       <div class="quick-action" data-action="nav-spirits"><span class="qa-icon">🔎</span>My Bottles</div>
-      <div class="quick-action" data-action="nav-scan"><span class="qa-icon">➕</span>Add Bottle</div>
+      <div class="quick-action" data-action="nav-scan"><span class="qa-icon">➕</span>Add Drink</div>
     </div>
 
     ${topPick ? `

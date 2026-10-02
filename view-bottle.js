@@ -118,6 +118,8 @@ export async function renderBottleDetail(id, dispatchNav) {
           <div>
             <strong>${escapeHtml(sourceLabel(r.source))}</strong>
             ${r.score != null ? `<span class="ext-score">${r.score}<span style="font-weight:500;font-size:12px">/${escapeHtml(r.scale)}</span></span>` : ""}
+            ${r.source_url && /^https?:\/\//.test(r.source_url) ? `<a href="${escapeHtml(r.source_url)}" target="_blank" rel="noopener noreferrer">Rating source</a>` : ""}
+            ${(() => { const d = typeof r.descriptors === "string" ? JSON.parse(r.descriptors || "{}") : r.descriptors || {}; return d.review_scope ? `<p class="field-hint">${escapeHtml(d.review_scope)} · Checked ${escapeHtml(d.verified_at || "")}</p>` : ""; })()}
             ${descriptorChips(r)}
           </div>
           <button class="btn-ghost btn-sm" data-del-external="${r.id}" aria-label="Remove">✕</button>

@@ -12,7 +12,7 @@ import { renderWinePalate } from "./view-wine-palate.js";
 
 const NAV_VIEWS = ["home", "spirits", "scan", "discover", "profile"];
 const TITLES = {
-  home: ["Pour Decisions", "Home"], spirits: ["Your Collection", "My Bottles"], scan: ["Add a Bottle", "Scan"],
+  home: ["Pour Decisions", "Home"], spirits: ["Your Collection", "My Bottles"], scan: ["Your Collection", "Add Drink"],
   discover: ["Recommendations", "Discover"], map: ["Geographic Journal", "Map"], profile: ["Your Palate", "Profile"],
   bottle: ["Bottle", ""], compare: ["Comparison", "Compare"], wine: ["Wine Palate", "Wine"]
 };

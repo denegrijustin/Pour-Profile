@@ -1,4 +1,4 @@
-import { api } from "./api.js";
+import { api, downscaleImage } from "./api.js";
 import { el, escapeHtml, decisionBannerHtml, whyConcernsHtml, toast, matchBadgeHtml } from "./ui.js";
 import { CATEGORIES } from "./spirit-taxonomy.js";
 import { openLogPourSheet } from "./log-pour.js";
@@ -22,13 +22,22 @@ export async function renderScan(dispatchNav) {
   handlingCode = false;
   const view = el("view-scan");
   view.innerHTML = `
-    <label style="margin-top:0">Add a bottle</label>
+    <h2>Add Drink</h2><p>Choose how to find your drink.</p>
+    <div class="field-row" style="margin:16px 0;gap:8px">
+      <button class="btn btn-primary" id="chooseManual">✍️ Manual</button>
+      <button class="btn btn-secondary" id="chooseBarcode">▥ Barcode</button>
+      <button class="btn btn-secondary" id="chooseLabel">📷 Label photo</button>
+    </div>
+    <div id="labelPanel" hidden><label>Photograph or upload one bottle label</label>
+      <input id="labelPhoto" type="file" accept="image/*" capture="environment">
+      <p id="labelStatus" class="field-hint">We’ll read the label, then let you confirm the drink.</p></div>
+    <div id="manualPanel"><label style="margin-top:0">Find a drink in the database</label>
     <input type="search" id="catalogSearch" placeholder="Type any bottle name…" autocomplete="off">
     <div id="catalogResults"></div>
-    <p class="field-hint" style="margin-top:10px">We'll check the reference catalog as you type — but you're not limited to it. Anything not listed, you can add yourself in a few taps.</p>
+    <p class="field-hint" style="margin-top:10px">We'll check the reference catalog as you type — but you're not limited to it. Curated ratings cover 10 publishers across the catalog. Scores apply only to the listed bottle and vintage. Anything not listed can be added manually.</p>
     <button class="btn btn-primary btn-block" id="manualNewTopBtn" style="margin-top:10px">✍️ Add a bottle myself</button>
 
-    <details style="margin-top:14px">
+    </div><details style="margin-top:14px" id="barcodePanel" hidden>
       <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Scan a barcode instead</summary>
     <div class="scan-frame" id="scanFrame" style="margin-top:10px">
       <video id="scanVideo" playsinline muted autoplay></video>
@@ -57,6 +66,19 @@ export async function renderScan(dispatchNav) {
     }
   });
 
+  document.getElementById("chooseManual").onclick = () => { stopScan(); document.getElementById("manualPanel").hidden = false; document.getElementById("labelPanel").hidden = true; document.getElementById("barcodePanel").hidden = true; };
+  document.getElementById("chooseBarcode").onclick = () => { document.getElementById("manualPanel").hidden = true; document.getElementById("labelPanel").hidden = true; const panel = document.getElementById("barcodePanel"); panel.hidden = false; panel.open = true; };
+  document.getElementById("chooseLabel").onclick = () => { stopScan(); document.getElementById("manualPanel").hidden = true; document.getElementById("barcodePanel").hidden = true; document.getElementById("labelPanel").hidden = false; };
+  document.getElementById("labelPhoto").onchange = async (event) => {
+    const file = event.target.files?.[0]; if (!file) return;
+    const status = document.getElementById("labelStatus"); status.textContent = "Reading the label…";
+    try {
+      const imageDataUrl = await downscaleImage(file, 1600, .85);
+      const result = await api.analyzeImage({ imageDataUrl, mimeType: "image/jpeg" });
+      if (!result.brand && !result.expression) throw new Error("No drink identified. Try a clearer label or use Manual.");
+      renderDraftForm({ name: [result.brand, result.expression].filter(Boolean).join(" "), brand: result.brand, category: result.category }, dispatchNav);
+    } catch (err) { status.textContent = `${err.message} You can still add this drink using Manual.`; }
+  };
   wireCatalogSearch(dispatchNav);
   // The camera only starts if the user opens the barcode section, so we don't
   // grab it (or prompt for permission) on every visit to this screen.
@@ -77,26 +99,28 @@ function wireCatalogSearch(dispatchNav) {
       const q = input.value.trim();
       if (q.length < 2) { results.innerHTML = ""; return; }
       let res;
-      try { res = await api.catalogSearch(q); } catch { results.innerHTML = `<p class="field-hint">Search unavailable offline.</p>`; return; }
+      try { res = await api.drinkSearch(q); } catch { results.innerHTML = `<p class="field-hint">Search unavailable offline.</p>`; return; }
+      if (input.value.trim() !== q || !results.isConnected) return;
       const rows = res.results || [];
       results.innerHTML = rows.length ? rows.map((r) => `
-        <div class="bottle-row" data-adopt='${escapeHtml(JSON.stringify({ id: r.id, name: r.name }))}'>
-          <div class="thumb-sm">${r.category === "sauvignon_blanc" ? "🍷" : "🥃"}</div>
+        <div class="bottle-row" data-adopt='${escapeHtml(JSON.stringify({ id: r.id, name: r.name, kind: r.kind }))}'>
+          <div class="thumb-sm">${["sauvignon_blanc", "wine"].includes(r.category) ? "🍷" : "🥃"}</div>
           <div class="info">
             <div class="name">${escapeHtml(r.name)}</div>
             <div class="sub">${escapeHtml([r.producer, r.region, r.proof ? r.proof + " proof" : null].filter(Boolean).join(" · "))}</div>
           </div>
+          ${r.kind === "reference" ? `<span class="field-hint">${r.ratings.length} sourced rating${r.ratings.length === 1 ? "" : "s"}</span>` : ""}
           ${r.jd_fit != null ? `<div style="text-align:right"><div style="font-weight:800;color:var(--accent-deep)">${r.jd_fit}</div><div class="field-hint" style="font-size:10px">${escapeHtml(r.fit_label || "")}</div></div>` : ""}
-        </div>`).join("") : `<p class="field-hint">Not in the catalog — that's fine. Tap “Add a bottle myself” to enter it.</p>`;
+        </div>`).join("") : `<p class="field-hint">Not in the database — that's fine. Tap “Add a bottle myself” to enter it.</p>`;
     }, 220);
   });
 
   results.addEventListener("click", async (e) => {
     const row = e.target.closest("[data-adopt]");
     if (!row) return;
-    const { id, name } = JSON.parse(row.dataset.adopt);
+    const { id, name, kind } = JSON.parse(row.dataset.adopt);
     try {
-      const res = await api.catalogAdopt({ catalog_id: id, status_tags: ["want_to_try"] });
+      const res = await api.drinkAdopt({ id, kind });
       toast(res.already_present ? `${name} is already in your collection.` : `Added ${name} to Want to Try.`);
       dispatchNav("bottle", res.bottle_id);
     } catch (err) { toast(`Couldn't add: ${err.message}`); }
@@ -267,7 +291,7 @@ async function handleBarcode(code, dispatchNav) {
   const status = el("scanStatus");
   if (status) status.textContent = `Looking up ${code}…`;
   let result;
-  try { result = await api.barcode(code); } catch (err) { toast(`Lookup failed: ${err.message}`); return; }
+  try { result = await api.barcode(code); } catch (err) { handlingCode = false; toast(`Lookup failed: ${err.message}`); return; }
 
   if (result.found && result.source === "internal") {
     const detail = await api.bottle(result.bottle.id);
@@ -284,7 +308,7 @@ function renderStoreModeResult(detail, dispatchNav) {
   const view = el("view-scan");
   const { bottle, match } = detail;
   view.innerHTML = `
-    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Scan another</button>
+    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Add Drink</button>
     <h2>${escapeHtml(bottle.name)}</h2>
     <p class="field-hint">${escapeHtml([bottle.brand, bottle.category].filter(Boolean).join(" · "))} — already in your collection</p>
     ${decisionBannerHtml(match)}
@@ -304,14 +328,14 @@ function renderDraftForm(draft, dispatchNav, provenance) {
   draft = draft || {};
   const view = el("view-scan");
   view.innerHTML = `
-    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Scan another</button>
+    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Add Drink</button>
     <h2>Confirm Bottle</h2>
     ${provenance ? `<p class="field-hint">Pulled from ${escapeHtml(provenance.source)} (${escapeHtml(provenance.confidence)} confidence) — <a href="${escapeHtml(provenance.sourceUrl || "#")}" target="_blank" rel="noopener">source</a>. Double-check everything below before saving.</p>` : `<p class="field-hint">No external match — fill in what you know. Everything else can be added later.</p>`}
     ${draft.image_url ? `<img src="${escapeHtml(draft.image_url)}" alt="" style="width:100px;border-radius:10px;margin-bottom:10px">` : ""}
     <label>Name</label><input type="text" id="draftName" value="${escapeHtml(draft.name || "")}" placeholder="Bottle name">
     <label>Brand</label><input type="text" id="draftBrand" value="${escapeHtml(draft.brand || "")}">
     <label>Category</label>
-    <select id="draftCategory">${CATEGORIES.map((c) => `<option value="${c.id}">${c.label}</option>`).join("")}</select>
+    <select id="draftCategory">${CATEGORIES.map((c) => `<option value="${c.id}" ${c.id === draft.category ? "selected" : ""}>${c.label}</option>`).join("")}</select>
     <label>Barcode</label><input type="text" id="draftBarcode" value="${escapeHtml(draft.barcode || "")}" readonly>
     ${draft.description ? `<label>Description (from source)</label><textarea id="draftDescription">${escapeHtml(draft.description)}</textarea>` : ""}
     <button class="btn btn-primary btn-block" id="draftSaveBtn" style="margin-top:16px">Save Bottle</button>
@@ -332,7 +356,7 @@ function renderDraftForm(draft, dispatchNav, provenance) {
         description: document.getElementById("draftDescription")?.value.trim() || null,
         data_source: provenance ? provenance.source : "manual",
         source_confidence: provenance ? provenance.confidence : "medium",
-        status_tags: ["tried"]
+        status_tags: ["want_to_try"]
       });
       toast("Bottle saved.");
       dispatchNav("bottle", res.bottle.id);
