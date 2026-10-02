@@ -133,3 +133,18 @@ test('photo provider errors, refusals and incomplete output never expose upstrea
     assert.equal(logged.length,0);
   } finally {globalThis.fetch=original;console.error=originalLog;}
 });
+
+test('manual search covers saved drinks and ten actual rating publishers; adoption persists exact-release scores',async()=>{
+ const {db,call}=setup();
+ const search=await call('/api/drinks/search?q=Greywacke');
+ assert.equal(search.status,200);assert.equal(search.data.rating_source_count,10);
+ const wine=search.data.results.find(r=>r.id==='grey-2023');assert.ok(wine);
+ const adopted=await call('/api/drinks/adopt',{kind:'reference',id:wine.id});assert.equal(adopted.status,200);
+ const id=adopted.data.bottle_id;
+ assert.equal(db.prepare('SELECT count(*) n FROM external_ratings WHERE bottle_id=?').get(id).n,3);
+ assert.equal(db.prepare('SELECT count(*) n FROM tastings WHERE bottle_id=?').get(id).n,0);
+ const repeat=await call('/api/drinks/adopt',{kind:'reference',id:wine.id});assert.equal(repeat.data.bottle_id,id);
+ assert.equal(db.prepare('SELECT count(*) n FROM external_ratings WHERE bottle_id=?').get(id).n,3);
+ const manual=await call('/api/bottles',{name:'  Greywacke Chardonnay 2023  ',category:'wine'});assert.equal(manual.data.bottle.id,id);
+ const saved=await call('/api/drinks/search?q=Greywacke');assert.equal(saved.data.results.find(r=>r.id===id).kind,'bottle');
+});
