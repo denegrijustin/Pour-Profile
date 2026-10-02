@@ -87,3 +87,49 @@ test('photo endpoint handles missing configuration, invalid images, mixed walls 
     assert.equal(hers.data.person,'Lady');assert.equal(hers.data.evidence_pours,0);
   } finally {globalThis.fetch=original;}
 });
+test('both photo endpoints use only the Worker credential and the Responses image schema',async()=>{
+  const {call,env}=setup();env.OPENAI_API_KEY='fixture-only-credential';
+  const imageDataUrl='data:image/png;base64,AAAA';
+  const original=globalThis.fetch;
+  globalThis.fetch=async(url,opts)=>{
+    assert.equal(url,'https://api.openai.com/v1/responses');
+    assert.equal(opts.headers.Authorization,'Bearer fixture-only-credential');
+    const payload=JSON.parse(opts.body);
+    assert.equal(payload.model,'gpt-4.1-mini');assert.equal(payload.store,false);
+    assert.equal(payload.text.format.type,'json_schema');assert.equal(payload.text.format.strict,true);
+    assert.equal(payload.input[0].content.find(p=>p.type==='input_image').image_url,imageDataUrl);
+    assert.ok(opts.signal instanceof AbortSignal);
+    assert.ok(!opts.body.includes('fixture-only-credential'));
+    const answer=payload.text.format.name==='shelf_bottles'?{notes:'No readable bottles',bottles:[]}:{brand:'Test',expression:'Bottle',category:'bourbon',proof:'',ageStatement:'',notes:'',confidence:0.9};
+    return new Response(JSON.stringify({status:'completed',output:[{type:'message',content:[{type:'output_text',text:JSON.stringify(answer)}]}]}));
+  };
+  try {
+    for(const path of ['/api/recommendations/photo','/api/analyze-image']) {
+      const res=await call(path,{imageDataUrl,mimeType:'image/png',OPENAI_API_KEY:'client-injection'});
+      assert.equal(res.status,200);assert.ok(!JSON.stringify(res.data).includes('credential'));
+    }
+  } finally {globalThis.fetch=original;}
+});
+test('photo provider errors, refusals and incomplete output never expose upstream text or credentials',async()=>{
+  const {call,env}=setup();env.OPENAI_API_KEY='fixture-only-credential';
+  const payload={imageDataUrl:'data:image/png;base64,AAAA',mimeType:'image/png'};
+  const original=globalThis.fetch; const logged=[];const originalLog=console.error;
+  console.error=(...args)=>logged.push(args);
+  try {
+    for(const path of ['/api/recommendations/photo','/api/analyze-image']) {
+      for(const [status,expected] of [[401,503],[403,503],[429,429],[500,502]]) {
+        globalThis.fetch=async()=>new Response(JSON.stringify({error:{message:'fixture-only-credential upstream sensitive text'}}),{status});
+        const res=await call(path,payload);assert.equal(res.status,expected);assert.ok(!JSON.stringify(res.data).includes('fixture-only-credential'));
+      }
+      for(const [response,expected] of [[{status:'incomplete',output_text:'{}'},502],[{status:'completed',output:[{content:[{type:'refusal',refusal:'sensitive text'}]}]},422],[{output_text:'invalid sensitive text'},502]]) {
+        globalThis.fetch=async()=>new Response(JSON.stringify(response));
+        const res=await call(path,payload);assert.equal(res.status,expected);assert.ok(!JSON.stringify(res.data).includes('sensitive text'));
+      }
+      globalThis.fetch=async()=>{throw new Error('fixture-only-credential network detail');};
+      assert.equal((await call(path,payload)).status,502);
+      globalThis.fetch=async()=>{throw new DOMException('private timeout detail','TimeoutError');};
+      assert.equal((await call(path,payload)).status,504);
+    }
+    assert.equal(logged.length,0);
+  } finally {globalThis.fetch=original;console.error=originalLog;}
+});
