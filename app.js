@@ -1,14 +1,21 @@
 import { el, closeSheet, toast, escapeHtml } from "./ui.js";
 import { api, flushQueue, pendingQueueCount, getActiveProfile, setActiveProfile } from "./api.js";
-import { renderHome, wireHomeActions } from "./view-home.js";
-import { renderSpirits } from "./view-spirits.js";
-import { renderScan, stopScan } from "./view-scan.js";
-import { renderDiscover } from "./view-discover.js";
-import { renderMapView } from "./view-map.js";
-import { renderProfile } from "./view-profile.js";
-import { renderBottleDetail } from "./view-bottle.js";
-import { renderCompare } from "./view-compare.js";
-import { renderWinePalate } from "./view-wine-palate.js";
+import { wireHomeActions } from "./view-home.js";
+
+// Views other than Home load on first visit, so the first paint ships only what Home needs.
+const VIEWS = {
+  spirits: () => import("./view-spirits.js"),
+  scan: () => import("./view-scan.js"),
+  discover: () => import("./view-discover.js"),
+  map: () => import("./view-map.js"),
+  profile: () => import("./view-profile.js"),
+  bottle: () => import("./view-bottle.js"),
+  compare: () => import("./view-compare.js"),
+  wine: () => import("./view-wine-palate.js"),
+  home: () => import("./view-home.js")
+};
+let scanModule = null;
+const stopScan = () => { if (scanModule) scanModule.stopScan(); };
 
 const NAV_VIEWS = ["home", "spirits", "scan", "discover", "profile"];
 const TITLES = {
@@ -43,15 +50,19 @@ async function navigate(view, param) {
 
   window.scrollTo(0, 0);
 
-  if (view === "home") return renderHome();
-  if (view === "spirits") return renderSpirits();
-  if (view === "scan") return renderScan(navigate);
-  if (view === "discover") return renderDiscover(navigate);
-  if (view === "map") return renderMapView(navigate);
-  if (view === "profile") return renderProfile();
-  if (view === "bottle") return renderBottleDetail(param, navigate);
-  if (view === "compare") return renderCompare(navigate);
-  if (view === "wine") return renderWinePalate();
+  const load = VIEWS[view];
+  if (!load) return;
+  const mod = await load();
+  if (view !== currentView) return; // user navigated away while the view was loading
+  if (view === "home") return mod.renderHome();
+  if (view === "spirits") return mod.renderSpirits();
+  if (view === "scan") { scanModule = mod; return mod.renderScan(navigate); }
+  if (view === "discover") return mod.renderDiscover(navigate);
+  if (view === "map") return mod.renderMapView(navigate);
+  if (view === "profile") return mod.renderProfile();
+  if (view === "bottle") return mod.renderBottleDetail(param, navigate);
+  if (view === "compare") return mod.renderCompare(navigate);
+  if (view === "wine") return mod.renderWinePalate();
 }
 
 function wireNav() {

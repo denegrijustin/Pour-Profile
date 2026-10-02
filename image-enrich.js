@@ -31,7 +31,11 @@ const CATEGORY_WORDS = [
   "the", "a", "an", "of", "and", "with",
   "bourbon", "whiskey", "whisky", "wine", "bottle", "spirits", "distillery", "distilling",
   "straight", "kentucky", "tennessee",
-  "sauvignon", "blanc", "vin", "vino", "750ml", "700ml", "ml", "cl", "proof", "abv", "alc"
+  "sauvignon", "blanc", "vin", "vino", "750ml", "700ml", "ml", "cl", "proof", "abv", "alc",
+  // Product-type words retailers/OFF append to every spirit. Like "bourbon" they
+  // say what the thing is, not which one it is, and left in they sink precision.
+  "scotch", "cognac", "vodka", "gin", "rum", "tequila", "liqueur", "liquor", "spirit",
+  "alcohol", "alcoholic", "beverage", "litre", "liter"
 ];
 
 // Dropped when matching IMAGES only. On a retailer page these words are shelf
@@ -46,9 +50,27 @@ const IDENTITY_STOPWORDS = new Set(CATEGORY_WORDS);
 // A search-engine results page is a lookup hint, never a source to scrape.
 const SEARCH_ENGINE = /(^|\.)(bing|google|duckduckgo|yahoo|yandex|baidu)\.[a-z.]+$/i;
 
+/**
+ * Fold the many spellings of the same fact onto one form BEFORE tokenizing, so
+ * "12 Years Old", "12-year-old" and "12yo" all read as "12 year", and pack-size /
+ * strength noise ("70cl", "40% vol", "750 ml") disappears. Open Food Facts titles
+ * are full of both, and the old tokenizer counted every one of them against
+ * precision, which pushed correct bottles under the 0.8 floor.
+ */
+export function normalizeNameText(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/(\d+)\s*[- ]?\s*(?:years?|yrs?|y\.?o\.?|yo)(?:[- ]?olds?)?\b/g, "$1 year ")
+    .replace(/\b\d+(?:[.,]\d+)?\s*(?:cl|ml|l|oz|fl\.?\s?oz|ltr|litres?|liters?)\b/g, " ")
+    // Strength as a percentage is noise; a PROOF number is not ("Old Forester 86
+    // Proof" and "100 Proof" are different bottlings), so it is left alone.
+    .replace(/\b\d+(?:[.,]\d+)?\s*(?:%|percent)(?:\s*(?:vol|abv|alc)\b\.?)?/g, " ")
+    .replace(/%/g, " ");
+}
+
 export function tokens(text, { identity = false } = {}) {
   const stop = identity ? IDENTITY_STOPWORDS : STOPWORDS;
-  const words = String(text || "")
+  const words = normalizeNameText(text)
     .normalize("NFD")
     // Fold accents rather than shredding the word: without this "Rosé" becomes
     // "ros" and stops matching a catalogue that spells it "Rose".
@@ -137,37 +159,134 @@ export function isSameBottle(a, b) {
   return coverage >= 0.8 && precision >= 0.6;
 }
 
-/**
- * Look a record up in Open Food Facts and return scored candidates.
- * Never throws — a resolver that fails just yields nothing.
- */
-export async function searchOpenFoodFacts(record, { fetchImpl = fetch } = {}) {
-  const terms = [record.producer, record.name].filter(Boolean).join(" ").trim();
-  if (!terms) return [];
-  const url = "https://world.openfoodfacts.org/cgi/search.pl"
-    + `?search_terms=${encodeURIComponent(terms)}`
-    + "&search_simple=1&action=process&json=1&page_size=12"
-    + "&fields=code,product_name,brands,image_front_url,image_url,countries";
+const WIKI_UA = `${UA} (https://pourprofile.elskatemm.com)`;
 
-  let data;
-  try {
-    const res = await fetchImpl(url, { headers: { "User-Agent": UA, Accept: "application/json" } });
-    if (!res.ok) return [];
-    data = await res.json();
-  } catch {
-    return [];
-  }
+// The single acceptance gate. enrichOne uses it to pick the winner and the
+// resolvers use it to decide whether another source is worth a subrequest.
+export function passesGate(c, { autoAcceptAt = 0.7, minCoverage = 0.8, minPrecision = 0.8 } = {}) {
+  return !!c && c.score >= autoAcceptAt && c.coverage >= minCoverage && c.precision >= minPrecision;
+}
 
-  return (data.products || [])
+function labelFromOff(p) {
+  const brands = Array.isArray(p.brands) ? p.brands.join(" ") : String(p.brands || "");
+  return `${brands} ${p.product_name || p.product_name_en || ""}`.trim();
+}
+
+function scoreOffProducts(products, record) {
+  return (Array.isArray(products) ? products : [])
     .map((p) => {
-      const imageUrl = p.image_front_url || p.image_url;
-      if (!imageUrl) return null;
-      const label = `${p.brands || ""} ${p.product_name || ""}`.trim();
-      const m = scoreNameMatch(record.name, record.producer, label, {identity:true});
+      if (!p || typeof p !== "object") return null;
+      const imageUrl = p.image_front_url || p.image_url || p.image_front_small_url;
+      if (!imageUrl || !/^https?:/i.test(imageUrl)) return null;
+      const label = labelFromOff(p);
+      const m = scoreNameMatch(record.name, record.producer, label, { identity: true });
       return { url: imageUrl, origin: "openfoodfacts", label, ...m };
     })
-    .filter(Boolean)
+    .filter(Boolean);
+}
+
+async function getJson(url, fetchImpl, notes, what, ua = UA) {
+  try {
+    const res = await fetchImpl(url, { headers: { "User-Agent": ua, Accept: "application/json" } });
+    if (!res.ok) { notes?.push(`${what} answered HTTP ${res.status}`); return null; }
+    return await res.json();
+  } catch (err) {
+    notes?.push(`${what} unreachable: ${String((err && err.message) || err)}`);
+    return null;
+  }
+}
+
+/**
+ * Look a record up in Open Food Facts and return scored candidates.
+ * Never throws — a resolver that fails just yields nothing, but WHY it yielded
+ * nothing is pushed onto `notes` (an HTTP 429/503 used to be indistinguishable
+ * from "not in the database", which hid the real failure).
+ *
+ * Two endpoints are tried, newest first: the search-a-licious service (what OFF
+ * points API users at; relevance-ranked) and the legacy cgi/search.pl (slow and
+ * prone to 503s, but it covers older products). Each is tried with "producer
+ * name" and then the bare name (OFF often files the parent company as the
+ * brand). Later attempts only run while nothing verifiable has been found, to
+ * spare the Worker's subrequest budget.
+ */
+export async function searchOpenFoodFacts(record, { fetchImpl = fetch, notes } = {}) {
+  const queries = [...new Set(
+    [[record.producer, record.name], [record.name]].map((p) => p.filter(Boolean).join(" ").trim()).filter(Boolean)
+  )];
+  if (!queries.length) return [];
+
+  const fields = "code,product_name,brands,image_front_url,image_url";
+  const endpoints = [
+    (q) => ({
+      what: "Open Food Facts search",
+      url: `https://search.openfoodfacts.org/search?q=${encodeURIComponent(q)}&page_size=15&fields=${fields}`
+    }),
+    (q) => ({
+      what: "Open Food Facts legacy search",
+      url: "https://world.openfoodfacts.org/cgi/search.pl"
+        + `?search_terms=${encodeURIComponent(q)}`
+        + `&search_simple=1&action=process&json=1&page_size=24&fields=${fields}`
+    })
+  ];
+
+  let found = [];
+  outer:
+  for (const endpoint of endpoints) {
+    for (const q of queries) {
+      const { what, url } = endpoint(q);
+      const data = await getJson(url, fetchImpl, notes, what);
+      if (!data) continue;
+      found = found.concat(scoreOffProducts(data.hits || data.products, record));
+      if (found.some((c) => passesGate(c))) break outer;
+    }
+  }
+
+  const seen = new Set();
+  return found
+    .filter((c) => (seen.has(c.url) ? false : (seen.add(c.url), true)))
     .sort((a, b) => b.score - a.score);
+}
+
+// Commons file titles are free text ("Eagle Rare bourbon bottle 2.jpg"): strip
+// the extension and photo-description boilerplate before scoring, and refuse
+// titles that are obviously not a product shot.
+const COMMONS_NOISE = /\b(file|bottles?|photo|photograph|image|img|dsc|front|jpe?g|png|webp|cropped|crop|display|shelf|tasting)\b/gi;
+const COMMONS_REJECT = /logo|label|advert|poster|sign\b|map\b|building|museum|distillery|factory|cocktail|glass|barrels?\b|cask|flag|stamp|coat of arms|\bcan\b|collage/i;
+
+/**
+ * Wikimedia Commons file search. Second-tier source for bottles OFF does not
+ * carry (most craft/limited spirits and wines). Same strictness as everything
+ * else: the file's TITLE must account for the whole bottle name and add nothing
+ * distinguishing of its own, and only raster images of a sane size are offered.
+ */
+export async function searchWikimediaCommons(record, { fetchImpl = fetch, notes } = {}) {
+  const terms = [record.producer, record.name].filter(Boolean).join(" ").trim();
+  if (!terms) return [];
+  const url = "https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2"
+    + "&generator=search&gsrnamespace=6&gsrlimit=10"
+    + `&gsrsearch=${encodeURIComponent(`${terms} bottle`)}`
+    + "&prop=imageinfo&iiprop=url%7Cmime%7Csize&iiurlwidth=600";
+  const data = await getJson(url, fetchImpl, notes, "Wikimedia Commons search", WIKI_UA);
+  const pages = data?.query?.pages;
+  const list = Array.isArray(pages) ? pages : Object.values(pages || {});
+
+  return list.map((pg) => {
+    const info = pg.imageinfo?.[0];
+    const title = String(pg.title || "");
+    if (!info || !/^image\/(jpeg|png|webp)$/i.test(info.mime || "")) return null;
+    if (COMMONS_REJECT.test(title)) return null;
+    if (info.width && info.height && Math.min(info.width, info.height) < 200) return null;
+    const imageUrl = info.thumburl || info.url;
+    if (!imageUrl) return null;
+    const label = title.replace(/^file:/i, "").replace(/\.[a-z0-9]+$/i, "").replace(/_+/g, " ")
+      .replace(COMMONS_NOISE, " ").replace(/\s+/g, " ").trim();
+    const m = scoreNameMatch(record.name, record.producer, label, { identity: true });
+    return {
+      url: imageUrl, origin: "wikimedia-commons", label,
+      sourcePage: info.descriptionurl || `https://commons.wikimedia.org/wiki/${encodeURIComponent(title.replace(/ /g, "_"))}`,
+      ...m
+    };
+  }).filter(Boolean).sort((a, b) => b.score - a.score);
 }
 
 /** Pull image candidates out of an HTML document, best-signal first. */
@@ -254,8 +373,16 @@ async function fetchText(url, fetchImpl) {
 /** Collect candidates from every resolver that applies to this record. */
 export async function gatherCandidates(record, { fetchImpl = fetch } = {}) {
   const notes = [];
-  const candidates = [...await searchOpenFoodFacts(record, { fetchImpl })];
+  const candidates = [...await searchOpenFoodFacts(record, { fetchImpl, notes })];
   if (!candidates.length) notes.push("no Open Food Facts match");
+
+  // Open Food Facts is a grocery database; plenty of craft spirits and wines are
+  // simply not in it. Only reach for Commons when OFF gave nothing verifiable.
+  if (!candidates.some((c) => passesGate(c))) {
+    const commons = await searchWikimediaCommons(record, { fetchImpl, notes });
+    if (!commons.length) notes.push("no Wikimedia Commons match");
+    candidates.push(...commons);
+  }
 
   // A real producer/product page, if the record ever gets one. Today every
   // record's only URL is a Bing search, which is skipped by design.
@@ -271,7 +398,10 @@ export async function gatherCandidates(record, { fetchImpl = fetch } = {}) {
     notes.push("catalog only has a search-engine lookup link, not a product page");
   }
 
-  return { candidates: candidates.sort((a, b) => b.score - a.score).slice(0, 6), notes };
+  // Verified candidates first (then by score), so a lower-scored but fully
+  // verified image is never crowded out of the list by near-misses.
+  candidates.sort((a, b) => (passesGate(b) - passesGate(a)) || (b.score - a.score));
+  return { candidates: candidates.slice(0, 6), notes };
 }
 
 /**
@@ -306,10 +436,12 @@ export async function enrichOne(record, opts = {}) {
     return result;
   }
 
+  // gatherCandidates puts verified candidates first, so this is the best
+  // verified one if any exists, otherwise the closest miss (for the review note).
   const best = candidates[0];
   result.confidence = Math.round(best.score * 100) / 100;
 
-  if (best.score < autoAcceptAt || best.coverage < minCoverage || best.precision < 0.8) {
+  if (!passesGate(best, { autoAcceptAt, minCoverage })) {
     // Deliberately does NOT guess. A partial name match is exactly how the
     // wrong expression ends up on a record, which the brief forbids.
     result.status = "needs_review";
@@ -323,7 +455,7 @@ export async function enrichOne(record, opts = {}) {
     const { mime, buf } = await downloadImage(best.url, fetchImpl);
     result.status = "ok";
     result.image_url = best.url;
-    result.source_page = best.origin === "openfoodfacts" ? "https://world.openfoodfacts.org/" : best.url;
+    result.source_page = best.origin === "openfoodfacts" ? "https://world.openfoodfacts.org/" : (best.sourcePage || best.url);
     result.mime = mime;
     result.buf = buf;
     result.bytes = buf.length;

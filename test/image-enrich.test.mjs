@@ -252,3 +252,106 @@ test("identity matching is empty-safe", () => {
   assert.equal(isSameBottle({ name: "", producer: "" }, { name: "Anything", producer: "" }), false);
   assert.equal(isSameBottle({ name: "Something", producer: "" }, { name: "", producer: "" }), false);
 });
+
+// ---------- lookup-rate fixes (mocked network) ----------
+import { normalizeNameText, searchWikimediaCommons, passesGate } from "../image-enrich.js";
+
+// Router-style mock: each host answers independently, as the live services do.
+function router({ offHits = [], offLegacy = [], commons = null, offStatus = 200, seen = [] } = {}) {
+  return (url) => {
+    const u = String(url);
+    seen.push(u);
+    if (u.includes("search.openfoodfacts.org")) {
+      return Promise.resolve(offStatus === 200 ? jsonResponse({ hits: offHits }) : { ok: false, status: offStatus, headers: { get: () => "" } });
+    }
+    if (u.includes("world.openfoodfacts.org/cgi/search.pl")) return Promise.resolve(jsonResponse({ products: offLegacy }));
+    if (u.includes("commons.wikimedia.org")) return Promise.resolve(jsonResponse(commons || { query: { pages: [] } }));
+    return Promise.resolve(imageResponse([1, 2, 3, 4]));
+  };
+}
+const commonsPage = (title, extra = {}) => ({
+  query: { pages: [{ title, imageinfo: [{ thumburl: `https://upload.wikimedia.org/thumb/${encodeURIComponent(title)}.jpg`, mime: "image/jpeg", width: 600, height: 800, descriptionurl: `https://commons.wikimedia.org/wiki/${encodeURIComponent(title)}`, ...extra }] }] }
+});
+
+test("volume, strength and age-spelling noise no longer sinks precision", () => {
+  assert.equal(normalizeNameText("Eagle Rare 10 Years Old 70cl 45% vol").replace(/\s+/g, " ").trim(), "eagle rare 10 year");
+  assert.equal(normalizeNameText("Glenfiddich 12-year-old").trim(), "glenfiddich 12 year");
+  // proof is a real expression difference and must survive
+  assert.ok(tokens("Old Forester 86 Proof", { identity: true }).includes("86"));
+  const m = scoreNameMatch("Eagle Rare 10 Year", "Buffalo Trace", "Buffalo Trace Eagle Rare 10 Years Old Kentucky Straight Bourbon Whiskey 750 ml 45%", { identity: true });
+  assert.equal(m.coverage, 1);
+  assert.ok(m.precision >= 0.8, `precision ${m.precision}`);
+});
+
+test("product-type words (tequila, scotch, vodka...) are not identity", () => {
+  const m = scoreNameMatch("Patron Silver", "Patron", "Patron Silver Tequila 40% 70cl", { identity: true });
+  assert.ok(passesGate(m), JSON.stringify(m));
+});
+
+test("search-a-licious hits (array brands) are parsed", async () => {
+  const res = await enrichOne({ id: "er", name: "Eagle Rare 10 Year", producer: "Buffalo Trace" }, {
+    fetchImpl: router({ offHits: [{ product_name: "Eagle Rare 10 Years Old Bourbon Whiskey 70cl", brands: ["Buffalo Trace"], image_front_url: "https://img.off/er10.jpg" }] })
+  });
+  assert.equal(res.status, "ok", res.match_reason);
+  assert.equal(res.candidates[0].origin, "openfoodfacts");
+});
+
+test("falls back to the legacy endpoint when the new one fails, and says why when nothing works", async () => {
+  const seen = [];
+  const res = await enrichOne(REC, {
+    fetchImpl: router({ offStatus: 503, offLegacy: [{ product_name: "Angel's Envy Rye", brands: "Angel's Envy", image_front_url: "https://img.off/ae.jpg" }], seen })
+  });
+  assert.equal(res.status, "ok", res.match_reason);
+  assert.ok(seen.some((u) => u.includes("cgi/search.pl")));
+  assert.ok(!seen.some((u) => u.includes("commons.wikimedia.org")), "no need to query Commons once OFF verified a match");
+
+  const down = await enrichOne(REC, { fetchImpl: router({ offStatus: 429 }) });
+  assert.match(down.match_reason, /HTTP 429/, "an outage must be reported, not read as 'not in the database'");
+});
+
+test("Commons rescues bottles OFF lacks, with the file page as provenance", async () => {
+  const res = await enrichOne({ id: "p", name: "Penelope Toasted", producer: "Penelope" }, {
+    fetchImpl: router({ commons: commonsPage("File:Penelope Toasted bottle.jpg") })
+  });
+  assert.equal(res.status, "ok", res.match_reason);
+  assert.equal(res.candidates[0].origin, "wikimedia-commons");
+  assert.match(res.source_page, /commons\.wikimedia\.org\/wiki\//);
+});
+
+test("Commons stays strict: wrong expression, logos, tiny files and svgs are never accepted", async () => {
+  const want = { id: "ae", name: "Angel's Envy Rye", producer: "Angel's Envy" };
+  const wrong = await enrichOne(want, { fetchImpl: router({ commons: commonsPage("File:Angel's Envy Bourbon bottle.jpg") }) });
+  assert.equal(wrong.status, "needs_review");
+  assert.equal(wrong.buf, undefined);
+
+  assert.deepEqual(await searchWikimediaCommons(want, { fetchImpl: router({ commons: commonsPage("File:Angel's Envy Rye logo.png") }) }), []);
+  assert.deepEqual(await searchWikimediaCommons(want, { fetchImpl: router({ commons: commonsPage("File:Angel's Envy Rye.jpg", { width: 90, height: 90 }) }) }), []);
+  assert.deepEqual(await searchWikimediaCommons(want, { fetchImpl: router({ commons: commonsPage("File:Angel's Envy Rye.svg", { mime: "image/svg+xml" }) }) }), []);
+});
+
+test("a verified lower-ranked candidate beats a higher-scored near-miss", async () => {
+  const res = await enrichOne(REC, {
+    fetchImpl: router({ offHits: [
+      { product_name: "Angel's Envy Rye Cask Strength Limited", brands: "Angel's Envy", image_front_url: "https://img.off/cs.jpg" },
+      { product_name: "Angel's Envy Rye", brands: "Angel's Envy", image_front_url: "https://img.off/rye.jpg" }
+    ] })
+  });
+  assert.equal(res.status, "ok", res.match_reason);
+  assert.equal(res.image_url, "https://img.off/rye.jpg");
+});
+
+test("common spirits and wines resolve against realistic OFF titles", async () => {
+  const cases = [
+    [{ name: "Maker's Mark", producer: "Maker's Mark" }, "Maker's Mark Kentucky Straight Bourbon Whisky 70cl 45%"],
+    [{ name: "Woodford Reserve", producer: "Woodford Reserve" }, "Woodford Reserve Kentucky Straight Bourbon 750ml"],
+    [{ name: "Hendrick's Gin", producer: "Hendrick's" }, "Hendrick's Gin 41.4% vol 70 cl"],
+    [{ name: "Patron Silver", producer: "Patron" }, "Patron Silver Tequila 40%"],
+    [{ name: "Kim Crawford Sauvignon Blanc", producer: "Kim Crawford" }, "Kim Crawford Sauvignon Blanc 75cl 13% vol"]
+  ];
+  for (const [rec, title] of cases) {
+    const res = await enrichOne({ id: rec.name, ...rec }, {
+      fetchImpl: router({ offHits: [{ product_name: title, brands: rec.producer, image_front_url: "https://img.off/x.jpg" }] })
+    });
+    assert.equal(res.status, "ok", `${rec.name}: ${res.match_reason}`);
+  }
+});
