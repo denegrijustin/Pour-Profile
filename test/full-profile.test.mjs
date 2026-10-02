@@ -148,3 +148,14 @@ test('manual search covers saved drinks and ten actual rating publishers; adopti
  const manual=await call('/api/bottles',{name:'  Greywacke Chardonnay 2023  ',category:'wine'});assert.equal(manual.data.bottle.id,id);
  const saved=await call('/api/drinks/search?q=Greywacke');assert.equal(saved.data.results.find(r=>r.id===id).kind,'bottle');
 });
+
+test('producer images resolve exact expressions and preserve user photos',async()=>{
+ const {withBottleImage}=await import('../bottle-images.js');
+ assert.equal(withBottleImage({name:'Penelope Toasted'}).image_source,'producer');
+ assert.equal(withBottleImage({name:'Penelope Toasted Rye'}).image_url,undefined);
+ assert.equal(withBottleImage({name:'Woodford Reserve Double Double Oaked'}).image_url,undefined);
+ assert.equal(withBottleImage({name:'Penelope Toasted',image_url:'/my-photo',image_source:'user_photo'}).image_url,'/my-photo');
+ const {call}=setup(); const saved=await call('/api/bottles');
+ assert.ok(saved.data.bottles.find(b=>b.name==='Woodford Reserve Double Oaked').image_url.startsWith('https://www.woodfordreserve.com/'));
+ assert.ok((await call('/api/bottles/8')).data.bottle.image_url);
+});
