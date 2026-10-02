@@ -1,4 +1,4 @@
-const CACHE_NAME = "pour-decisions-v17-photo-design";
+const CACHE_NAME = "pour-decisions-v18-quiet-hero";
 const CORE_ASSETS = [
   "/",
   "/index.html",

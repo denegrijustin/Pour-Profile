@@ -33,7 +33,7 @@ export async function renderHome() {
   view.innerHTML = `
     ${bottlesRes._stale ? `<p class="field-hint">Showing your last saved data.</p>` : ""}
     <section class="home-hero">
-      <div class="hero-copy"><p class="eyebrow">YOUR TASTE. YOUR COLLECTION.</p><h2>Find your<br>next great pour.</h2><p>Discover what you love, one bottle at a time.</p><button class="btn btn-primary" data-action="nav-scan">Add & rate a drink <span aria-hidden="true">↗</span></button></div>
+      <div class="hero-copy"><button class="btn btn-primary" data-action="nav-scan">Add & rate a drink <span aria-hidden="true">↗</span></button></div>
       <div class="hero-bottles">${FEATURE_BOTTLES.map(b=>`<img src="${escapeHtml(b.image_url)}" alt="${escapeHtml(b.name)}" fetchpriority="high">`).join('')}</div>
     </section>
     <div class="quick-actions">
