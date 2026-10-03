@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { setup } from './harness.mjs';
 import { RESEARCH_CATALOG } from '../catalog-research.js';
+import { fullCatalog } from '../tools/catalog-sources.mjs';
+const CATALOG = fullCatalog();
 import { classifyTerm, termsToTags, criticSummary, explainFromNotes, axisTargets, linkCatalogRecord, expertBrief } from '../expert-match.js';
 import { cleanEntry } from '../tools/merge-notes.mjs';
 import { FLAVOR_TAGS } from '../flavor-taxonomy.js';
@@ -13,8 +15,8 @@ const isUrl = (u) => typeof u === 'string' && /^https?:\/\/\S+\.\S+/.test(u);
 // ---------- the data itself ----------
 
 test('every catalog record has an entry, and every claim carries a source link', () => {
-  assert.equal(Object.keys(NOTES).length, RESEARCH_CATALOG.length);
-  for (const r of RESEARCH_CATALOG) assert.ok(NOTES[r.id], `missing ${r.id}`);
+  assert.equal(Object.keys(NOTES).length, CATALOG.length);
+  for (const r of CATALOG) assert.ok(NOTES[r.id], `missing ${r.id}`);
   for (const [id, e] of Object.entries(NOTES)) {
     assert.ok(['high', 'medium', 'low', 'none'].includes(e.confidence), id);
     if (e.producer) assert.ok(isUrl(e.producer.source_url), `${id} producer source`);

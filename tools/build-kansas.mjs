@@ -99,12 +99,16 @@ export function buildKansas(snapshot) {
   return out;
 }
 
+export { packKansas } from "../kansas-pack.js";
+import { packKansas } from "../kansas-pack.js";
+
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
   const snapshot = JSON.parse(fs.readFileSync(path.join(root, "data/kansas/registry.json"), "utf8"));
   const items = buildKansas(snapshot);
-  const payload = { source: snapshot.source, fetched: snapshot.fetched, count: items.length, items };
+  const payload = packKansas(snapshot, items);
   fs.mkdirSync(path.join(root, "dist"), { recursive: true });
-  fs.writeFileSync(path.join(root, "dist/kansas.json"), JSON.stringify(payload));
+  fs.rmSync(path.join(root, "dist/kansas.json"), { force: true });
+  fs.writeFileSync(path.join(root, "dist/kansas.tsv"), payload);
   const by = {};
   for (const i of items) by[i.category] = (by[i.category] || 0) + 1;
   console.log(`kansas: ${items.length} registered bottles (${items.filter((i) => i.store_pick).length} store picks, ${items.filter((i) => i.gift_pack).length} gift packs) ${JSON.stringify(by)}`);

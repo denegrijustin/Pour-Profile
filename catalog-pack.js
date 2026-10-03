@@ -101,11 +101,35 @@ export function hydrateCatalog(packed) {
  * Attach cited expert notes (data/expert-notes.json, keyed by id) to packed records as
  * `expert`. Records with nothing reliable get no field. Shared by the build and tests.
  */
-export function attachExpertNotes(packed, notes = {}) {
+export function attachExpertNotes(packed, notes = {}, { slim = false } = {}) {
   return packed.map((r) => {
-    const e = notes[r.id];
-    if (!e || e.confidence === "none") return r;
-    const { notes: caveat, corrected, ...expert } = e;
-    return { ...r, expert: { ...expert, caveat: caveat || null } };
+    const full = fullExpert(notes[r.id]);
+    if (!full) return r;
+    return { ...r, expert: slim ? slimExpert(full) : full };
   });
+}
+
+/** The full notes block served for one bottle (bottle page, detail sheet). */
+export function fullExpert(e) {
+  if (!e || e.confidence === "none") return null;
+  const { notes: caveat, corrected, ...expert } = e;
+  return { ...expert, caveat: caveat || null };
+}
+
+/**
+ * What the catalog itself carries per record: just enough for list cards and matching.
+ * The paraphrased notes live in /notes/<id>.json and are fetched only for the bottle being
+ * viewed, which keeps the catalog small enough to parse well inside a Worker's CPU budget.
+ */
+export function slimExpert(full) {
+  const scored = full.critics.filter((c) => c.score != null && c.scale);
+  const hundred = scored.filter((c) => c.scale === "100");
+  return {
+    confidence: full.confidence,
+    flavor_terms: full.flavor_terms,
+    critic_summary: {
+      count: full.critics.length, scored: scored.length, n100: hundred.length,
+      avg100: hundred.length ? Math.round(hundred.reduce((s, c) => s + c.score, 0) / hundred.length) : null
+    }
+  };
 }

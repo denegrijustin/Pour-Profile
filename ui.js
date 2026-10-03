@@ -209,7 +209,7 @@ export function expertNotesHtml(expert, match = null) {
   const p = expert.producer;
   const producerHtml = p ? `
     <div class="note-block">
-      <div class="note-head"><strong>From the producer</strong>${safeUrl(p.source_url) ? `<a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(hostOf(p.source_url))}</a>` : ""}</div>
+      <div class="note-head"><strong>${/\b(retailer|via|relayed|importer|distributor)\b/i.test(p.summary || "") || expert.confidence === "low" ? "Producer notes (as relayed by a retailer)" : "From the producer"}</strong>${safeUrl(p.source_url) ? `<a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(hostOf(p.source_url))}</a>` : ""}</div>
       ${noteRowsHtml(p)}
       ${p.summary ? `<p class="note-summary">${escapeHtml(p.summary)}</p>` : ""}
     </div>` : "";

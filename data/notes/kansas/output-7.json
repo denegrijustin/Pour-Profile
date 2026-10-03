@@ -1,0 +1,316 @@
+[
+  {
+    "id": "ks-appleton-estate-15-year-black-river-casks-jamaica-rum",
+    "producer": {
+      "nose": "Roasted nuts lead into orange zest, vanilla, coffee and molasses.",
+      "palate": null,
+      "finish": "Gentle spice, fruit and restrained oak linger with a creamy character.",
+      "summary": "A blend of pot-distilled and column-distilled Jamaican rums, each matured for at least 15 years.",
+      "source_url": "https://www.appletonestate.com/rums/15-year-old-black-river-casks/"
+    },
+    "critics": [
+      {
+        "source": "Beverage Testing Institute / Tastings.com",
+        "source_url": "https://www.tastings.com/Spirits-Review/APPLETON-ESTATE-Black-River-Casks-15-Year-Old-Rum-Jamaica-86-Proof-05-01-2024.aspx",
+        "score": 93,
+        "scale": "100",
+        "nose": "Very ripe tropical fruit, custard, honeyed cake, coconut, raisins and leather.",
+        "palate": "The aromatic fruit and dessert character continues, joined by cooked cherries, chocolate, coffee, nuts, tobacco and tea.",
+        "finish": "Moderately long and gently tingling, with layered fruit, roasted flavors and baking spice.",
+        "summary": "A dry, medium-bodied aged rum particularly suited to drinkers who enjoy pronounced Jamaican fermentation character.",
+        "year": 2024
+      }
+    ],
+    "facts": {
+      "abv": 43,
+      "proof": null,
+      "age": "At least 15 years",
+      "mash_bill": null,
+      "cask": null,
+      "region": "Nassau Valley, Jamaica",
+      "source_url": "https://www.appletonestate.com/rums/15-year-old-black-river-casks/"
+    },
+    "flavor_terms": ["hazelnut", "orange peel", "vanilla", "roasted coffee", "molasses", "pineapple", "coconut", "leather", "dark chocolate", "pecans"],
+    "confidence": "high",
+    "notes": "Producer does not separate palate notes or specify cask construction. Critic explicitly identifies the 15-year expression at 43%."
+  },
+  {
+    "id": "ks-chateau-la-freynelle-sauvignon-blanc-semillon-muscadelle-blanc",
+    "producer": {
+      "nose": null,
+      "palate": null,
+      "finish": null,
+      "summary": null,
+      "source_url": null
+    },
+    "critics": [],
+    "facts": {
+      "abv": null,
+      "proof": null,
+      "age": null,
+      "mash_bill": null,
+      "cask": null,
+      "region": null,
+      "source_url": null
+    },
+    "flavor_terms": [],
+    "confidence": "none",
+    "notes": "Could not verify the requested 2025 vintage at 13.5%. Wine Enthusiast identifies its 2025 review as 13%, so it was excluded: https://www.wineenthusiast.com/buying-guide/chateau-la-freynelle-2025-bordeaux-style-white-blend-bordeaux-blanc/ . Andreas Larsson reviews 2025 but gives no ABV, preventing an exact-strength match: https://www.andreas-larsson.com/tasting/chateau-la-freynelle-2025/ . The producer's technical sheet is not explicitly for 2025 and was not applied: https://vbarthe.com/wp-content/uploads/2018/06/fiche-chateau-la-freynelle-blanc.pdf ."
+  },
+  {
+    "id": "ks-volcan-x-a-tequila",
+    "producer": {
+      "nose": null,
+      "palate": null,
+      "finish": null,
+      "summary": "The brand describes X.A as smooth and balanced, combining reposado, añejo and extra-añejo components without additives.",
+      "source_url": "https://volcancraftedcocktails.com/"
+    },
+    "critics": [
+      {
+        "source": "Distiller / Amanda Schuster",
+        "source_url": "https://distiller.com/spirits/volcan-xa-tequila",
+        "score": null,
+        "scale": null,
+        "nose": "Grapefruit, lime and tangerine peel accompany roasted agave and grassy nuances.",
+        "palate": "Medium-bodied roasted agave with sweet spice, rosemary and a suggestion of pineapple skin.",
+        "finish": "Sweetness is counterbalanced by earthiness, citrus and mild warmth.",
+        "summary": "The page displays an expert score of 89 but does not explicitly state its scale.",
+        "year": null
+      }
+    ],
+    "facts": {
+      "abv": 40,
+      "proof": null,
+      "age": null,
+      "mash_bill": "100% Blue Weber agave",
+      "cask": null,
+      "region": null,
+      "source_url": "https://volcancraftedcocktails.com/"
+    },
+    "flavor_terms": ["grapefruit", "lime", "tangerine", "roasted agave", "baking spices", "rosemary", "pineapple rind", "citrus"],
+    "confidence": "high",
+    "notes": "Producer source is a Volcán promotional site carrying Moët Hennessy USA attribution. It provides an overall profile rather than separate sensory stages. No numeric age statement was verified."
+  },
+  {
+    "id": "ks-arette-artesanal-suave-reposado-tequila",
+    "producer": {
+      "nose": null,
+      "palate": null,
+      "finish": null,
+      "summary": "The producer describes its artisanal range as using prolonged oven cooking, concrete fermentation vessels and double distillation.",
+      "source_url": "https://www.tequilaarette.com/"
+    },
+    "critics": [
+      {
+        "source": "The Tequila Report / Jay Baer",
+        "source_url": "https://www.tequilareport.com/p/arette-reposado-artesenal-suave",
+        "score": null,
+        "scale": null,
+        "nose": "Cooked agave accompanied by vanilla, oak, caramel and restrained pepper.",
+        "palate": "Agave remains prominent alongside butterscotch, cinnamon-like spice, wood and fruit.",
+        "finish": null,
+        "summary": "An approachable, balanced sipping tequila with restrained intensity. The review displays 88 without explicitly stating the scoring scale.",
+        "year": 2026
+      }
+    ],
+    "facts": {
+      "abv": 40,
+      "proof": null,
+      "age": "11 months",
+      "mash_bill": "Agave from the Tequila Valley; cooked in stone ovens, roller-milled and fermented in concrete vessels.",
+      "cask": "American white-oak bourbon barrels; stainless-steel pot distillation with a copper coil.",
+      "region": "Tequila, Mexico",
+      "source_url": "https://www.tequilareport.com/p/arette-reposado-artesenal-suave"
+    },
+    "flavor_terms": ["cooked agave", "vanilla", "oak", "caramel", "black pepper", "butterscotch", "cinnamon", "baking spice"],
+    "confidence": "medium",
+    "notes": "The critic explicitly reviews Artesanal Suave Reposado at 40%, aged 11 months. Producer sensory fields remain empty: its own page supplies range-level production information. Japanese importer-operated brand notes were not treated as producer-authored notes."
+  },
+  {
+    "id": "ks-g4-reposado-premium-tequila",
+    "producer": {
+      "nose": null,
+      "palate": null,
+      "finish": null,
+      "summary": "The official brand partner describes a profile combining flowers, herbs and citrus after maturation in whiskey barrels.",
+      "source_url": "https://shop.pkgdgroup.com/products/g4-reposado"
+    },
+    "critics": [
+      {
+        "source": "Beverage Testing Institute / Tastings.com",
+        "source_url": "https://www.tastings.com/Spirits-Review/G4-Tequila-Reposado-Tequila-Mexico-06-17-2025.aspx?Id=WS",
+        "score": 94,
+        "scale": "100",
+        "nose": "Grilled citrus, pale chocolate, pastry and white pepper, with floral and herbal nuances.",
+        "palate": "Velvety and lively, relatively dry despite its fruit character, with cashew, caramel, cinnamon and almond-confection flavors.",
+        "finish": "Long, warming and layered, carrying nutty, caramelized and spiced flavors.",
+        "summary": "The panel praises the combination of mature complexity and a bright, mineral-agave character.",
+        "year": 2025
+      }
+    ],
+    "facts": {
+      "abv": 40,
+      "proof": null,
+      "age": null,
+      "mash_bill": null,
+      "cask": null,
+      "region": "Mexico",
+      "source_url": "https://www.tastings.com/Spirits-Review/G4-Tequila-Reposado-Tequila-Mexico-06-17-2025.aspx?Id=WS"
+    },
+    "flavor_terms": ["citrus", "grilled pomelo", "white chocolate", "pastry", "white peppercorns", "salted cashews", "caramel", "cinnamon bark", "marzipan", "agave"],
+    "confidence": "high",
+    "notes": "Standard Reposado only; Single Barrel and Throwback releases were excluded. Official G4 partner page supplies the producer profile. Its aging text conflicts internally: introductory text says six months, while production details say three to six months in American-oak bourbon barrels; no single age was assigned."
+  },
+  {
+    "id": "ks-siete-leguas-reposado-tequila-7",
+    "producer": {
+      "nose": null,
+      "palate": null,
+      "finish": "A restrained impression of barrel maturation.",
+      "summary": "The producer emphasizes cooked-agave character with a gentle wood-influenced ending.",
+      "source_url": "https://casasieteleguas.com/nuestros-tequilas/"
+    },
+    "critics": [
+      {
+        "source": "Difford's Guide",
+        "source_url": "https://www.diffordsguide.com/beer-wine-spirits/1324/7-siete-leguas-reposado",
+        "score": null,
+        "scale": null,
+        "nose": "Peach and pear mingle with pine, dill and agave.",
+        "palate": "Rounded and slightly sweet, with apple-like fruit, vanilla, tropical fruit, citrus and warming spice.",
+        "finish": "Long and herbal, retaining agave, citrus and a lightly salty, peppery character.",
+        "summary": "A full, rounded reposado whose citrus and spice balance the sweeter fruit notes.",
+        "year": 2011
+      }
+    ],
+    "facts": {
+      "abv": 40,
+      "proof": 80,
+      "age": "8–10 months",
+      "mash_bill": "100% highland agave; brick-oven cooking. Combines tahona processing with fiber fermentation and roller-mill production.",
+      "cask": "Previously used bourbon casks.",
+      "region": "Mexican Highlands",
+      "source_url": "https://www.diffordsguide.com/beer-wine-spirits/1324/7-siete-leguas-reposado"
+    },
+    "flavor_terms": ["cooked agave", "peach", "pear", "pine", "fresh dill", "vanilla", "mango", "banana", "cinnamon", "black pepper"],
+    "confidence": "high",
+    "notes": "Producer notes are translated from Spanish and are not strength-specific. Critic explicitly identifies 40% and 80 proof; its tasting dates to 2011. Aging is a production duration in the review, despite its separate metadata saying no age statement."
+  },
+  {
+    "id": "ks-tapatio-reposado-tequila",
+    "producer": {
+      "nose": null,
+      "palate": null,
+      "finish": null,
+      "summary": null,
+      "source_url": null
+    },
+    "critics": [
+      {
+        "source": "Wine Enthusiast / Kara Newman",
+        "source_url": "https://www.wineenthusiast.com/buying-guide/tequila-tapatio-reposado/",
+        "score": 93,
+        "scale": "100",
+        "nose": "Lively pepper and spice.",
+        "palate": "Pepper leads, followed by a brief savory, meat-like impression.",
+        "finish": "Long, with ginger and cayenne warmth.",
+        "summary": "Despite its pale appearance, the reviewer finds substantial flavor and complexity.",
+        "year": 2015
+      }
+    ],
+    "facts": {
+      "abv": 40,
+      "proof": null,
+      "age": "8 months",
+      "mash_bill": "100% Blue Weber agave from the Jalisco Highlands.",
+      "cask": "Previously used Jim Beam barrels.",
+      "region": "Jalisco Highlands, Mexico",
+      "source_url": "https://charbay.com/wp-content/uploads/2025/02/Tapatio-tequila-collection-flyer-feb-2025-website.pdf"
+    },
+    "flavor_terms": ["black pepper", "spice", "umami", "ginger", "cayenne"],
+    "confidence": "medium",
+    "notes": "Facts come from exclusive US importer Charbay. Its sensory quotations are explicitly attributed to critics and were not placed in producer fields. Wine Enthusiast reviews the 40%, eight-month expression; Difford's 38% bottling was excluded."
+  },
+  {
+    "id": "ks-del-maguey-san-luis-del-rio-single-village-mezcal",
+    "producer": {
+      "nose": null,
+      "palate": null,
+      "finish": null,
+      "summary": "Mango-led fruit combines with peppery spice and earthy depth; the producer also identifies cocoa and dried-chile nuances.",
+      "source_url": "https://delmaguey.com/wp-content/uploads/2024/01/San_Luis_del_Rio_New_BA_Sell_sheet_Del_Maguey.pdf"
+    },
+    "critics": [
+      {
+        "source": "Distiller / Stephanie Moreno",
+        "source_url": "https://distiller.com/spirits/del-maguey-san-luis-del-rio-mezcal",
+        "score": null,
+        "scale": null,
+        "nose": "Citrus, sweet agave and smoke with an earthy character.",
+        "palate": "Soft and creamy, repeating the aromatic flavors with an additional clay-like nuance.",
+        "finish": null,
+        "summary": "The page displays an expert score of 90 without explicitly stating its scale.",
+        "year": null
+      }
+    ],
+    "facts": {
+      "abv": 47,
+      "proof": null,
+      "age": null,
+      "mash_bill": "Espadín agave; electric milling. Palenqueros: Paciano Cruz Nolasco and Marcos Cruz Mendez.",
+      "cask": "Copper stills.",
+      "region": "San Luis del Rio, Oaxaca, Mexico",
+      "source_url": "https://delmaguey.com/wp-content/uploads/2024/01/San_Luis_del_Rio_New_BA_Sell_sheet_Del_Maguey.pdf"
+    },
+    "flavor_terms": ["mango", "cocoa", "dried chile", "earth", "jalapeño", "green pepper", "citrus", "sweet agave", "clay", "smoke"],
+    "confidence": "high",
+    "notes": "Standard Single Village Espadín expression at 47%; Vida and Azul were excluded. Producer sheet provides an overall descriptor list rather than separate sensory stages. Individual production batches are not identified by the critic."
+  },
+  {
+    "id": "ks-del-maguey-minero-single-village-mezcal",
+    "producer": {
+      "nose": null,
+      "palate": null,
+      "finish": null,
+      "summary": "Floral character, vanilla, fig, caramelized honey and lemon peel accompany minerality and an unusual fruit-driven funk.",
+      "source_url": "https://delmaguey.com/wp-content/uploads/2024/01/Santa_Catarina_Minas_Minero_New_BA_Sell_sheet_Del_Maguey.pdf"
+    },
+    "critics": [
+      {
+        "source": "Mezcalistas",
+        "source_url": "https://www.mezcalistas.com/del-maguey-minero-tasting-notes/",
+        "score": null,
+        "scale": null,
+        "nose": "Coffee with smoky, meat-like aromas.",
+        "palate": "Savory pepper and smoked-meat flavors, with spice, astringency and tart cranberry and currant fruit balanced by restrained smoke.",
+        "finish": "Delicate lemon zest and a creamy clay-like impression.",
+        "summary": "The review explicitly identifies 50% and distinguishes it from earlier 49% batches.",
+        "year": 2022
+      },
+      {
+        "source": "Beverage Testing Institute / Tastings.com",
+        "source_url": "https://www.tastings.com/Spirits-Review/Del-Maguey-Minero-Single-Village-Blanco-Mezcal-Mexico-100-Proof-06-01-2023.aspx",
+        "score": 96,
+        "scale": "100",
+        "nose": "Grilled mint, berry dessert, orange, plum, leather and buttery smoked banana.",
+        "palate": "Vibrant and very dry, with layered fruit, nuts, savory impressions and ripe plantain.",
+        "finish": "Very long and warming, retaining complex fruit, roasted-nut and savory flavors.",
+        "summary": "The panel highlights exceptional complexity, including cocoa, smoky leather, citrus and roasted berries.",
+        "year": 2023
+      }
+    ],
+    "facts": {
+      "abv": 50,
+      "proof": null,
+      "age": null,
+      "mash_bill": "Espadín agave, hand-milled with wooden bats and subjected to extended wild fermentation. Listed palenqueros: Florencio Carlos Sarmiento, Florencio Carlos Vasquez, Luis Carlos Vasquez and Luis Carlos Martinez.",
+      "cask": "Clay stills incorporating bamboo tubing.",
+      "region": "Santa Catarina Minas, Oaxaca, Mexico",
+      "source_url": "https://delmaguey.com/wp-content/uploads/2024/01/Santa_Catarina_Minas_Minero_New_BA_Sell_sheet_Del_Maguey.pdf"
+    },
+    "flavor_terms": ["vanilla", "figs", "burnt honey", "lemon rind", "minerality", "coffee", "smoked meat", "cranberry", "red currants", "clay"],
+    "confidence": "high",
+    "notes": "Used the producer's 50% sheet and critics explicitly reviewing 50%. The older producer sheet specifying 49% was excluded. Current producer descriptors are not separated into nose, palate and finish; exact batch identifiers were unavailable."
+  }
+]

@@ -62,3 +62,28 @@ test('Kansas search filters by category, hides gift packs, lists store picks las
   const wine = await t.call('/api/kansas/search?q=sauvignon blanc&category=sauvignon_blanc');
   assert.ok(wine.data.results.length > 10);
 });
+
+test('researched Kansas bottles join the catalog with notes, availability and their own recommendation pool', async () => {
+  const t = setup();
+  const tequila = await t.call('/api/catalog/browse?category=tequila&limit=200');
+  assert.ok(tequila.data.total >= 25, `only ${tequila.data.total} tequilas`);
+  const withNotes = tequila.data.results.filter((r) => r.expert);
+  assert.ok(withNotes.length >= 20);
+  assert.ok(tequila.data.results.every((r) => r.kansas && r.kansas.distributors.length));
+  for (const c of ['mezcal', 'rum', 'gin', 'cognac', 'sauvignon_blanc', 'bourbon']) assert.ok(tequila.data.categories.includes(c), c);
+  // Original records that are registered in Kansas are flagged too.
+  const bourbon = await t.call('/api/catalog/browse?category=bourbon&limit=200');
+  assert.ok(bourbon.data.results.some((r) => r.id === 'knob-creek-12-year' && r.kansas));
+  const item = await t.call('/api/catalog/item/' + withNotes[0].id);
+  assert.equal(item.status, 200);
+  assert.ok(item.data.expert);
+});
+
+test('recommendation pools are per family', async () => {
+  const { categoryFamily } = await import('../catalog-engine.js');
+  assert.equal(categoryFamily('mezcal'), 'agave');
+  assert.equal(categoryFamily('rye'), 'whiskey');
+  assert.equal(categoryFamily('armagnac'), 'brandy');
+  assert.equal(categoryFamily('sauvignon_blanc'), 'wine');
+  assert.equal(categoryFamily('gin'), 'gin');
+});

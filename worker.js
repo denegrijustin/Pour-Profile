@@ -8,6 +8,7 @@ import { hydrateCatalog } from "./catalog-pack.js";
 import { refreshCatalog, computeFit, isVisible } from "./catalog-engine.js";
 import { enrichOne, downloadImage, isSameBottle } from "./image-enrich.js";
 import { parseBarcode, lookupOpenFoodFacts as fetchOffProduct } from "./barcode.js";
+import { openKansas, kansasRow, kansasById, searchRows, rowFlags, searchKey } from "./kansas-pack.js";
 import { expertBrief, explainFromNotes, axisTargets, linkCatalogRecord, nameKey } from "./expert-match.js";
 
 // The reference catalog is read-only data. It used to be compiled into this script
@@ -473,8 +474,8 @@ async function getBottle(id, env, url) {
   // Cited producer/critic notes for this bottle, when it maps to a researched catalog record.
   const link = linkCatalogRecord(await catalog(env).catch(() => []), withTags);
   const rec = link?.record || null;
-  const expert = rec?.expert || null;
-  const notesMatch = expert ? explainFromNotes(expert, {
+  const expert = rec ? await expertNotes(env, rec.id) : null;
+  const notesMatch = rec?.expert ? explainFromNotes(rec.expert, {
     palate: profile, targets: axisTargets(evidenceFromRows(evidenceRows), withTags.category), category: withTags.category
   }) : null;
 
@@ -981,7 +982,9 @@ function catalogPublic(r) {
     price: r.typical_price_usd?.typical ?? null,
     image_url: r.image?.primary_url || null,
     lifecycle: r.lifecycle,
-    expert: expertBrief(r.expert)
+    expert: expertBrief(r.expert),
+    // Registered for sale in Kansas, i.e. orderable through a Johnson County store.
+    kansas: r.kansas ? { distributors: r.kansas.distributors } : null
   };
 }
 
@@ -1943,6 +1946,13 @@ function referenceCandidate(r) {
   for (const [key,axis] of Object.entries(map)) if (typeof tp[key] === 'number') dimensions[axis] = tp[key];
   return { name:r.name, category, style:category === 'wine' ? 'Sauvignon Blanc' : r.subcategory, dimensions };
 }
+/** Full cited notes for one catalog record (dist/notes/<id>.json), or null. */
+async function expertNotes(env, id) {
+  if (!/^[a-z0-9-]{1,140}$/.test(id)) return null;
+  const res = await env.ASSETS.fetch(new Request(new URL(`/notes/${id}.json`, env._origin))).catch(() => null);
+  if (!res || !res.ok) return null;
+  return res.json().catch(() => null);
+}
 async function catalogItem(id, url, env) {
   const records = await catalog(env);
   const rec = records.find((r) => r.id === id);
@@ -1950,7 +1960,7 @@ async function catalogItem(id, url, env) {
   const ctx = await catalogContext(env, await resolveProfileId(url, env));
   const [item] = markAdoptedFrom(await personalizedCatalog(url, env, [rec], ctx), ctx.owned);
   const [withImage] = withImagesFrom([item], ctx.have);
-  return json({ item: withImage, expert: rec.expert || null });
+  return json({ item: withImage, expert: await expertNotes(env, rec.id) });
 }
 async function personalizedCatalog(url,env,records,ctx = null) {
   const { evidence, legacy, wineRows } = ctx || await catalogContext(env, await resolveProfileId(url, env));
@@ -1975,8 +1985,9 @@ async function personalizedCatalog(url,env,records,ctx = null) {
       // Sourced flavors nudge a dimension-model score by at most ±5, never override it.
       score = Math.max(0, Math.min(100, Math.round(score + notes.signal * 5)));
     }
-    if (notes.reasons.length) why = [why, ...notes.reasons].filter(Boolean).join('. ');
-    if (notes.concerns.length) concern = [concern, ...notes.concerns].filter(Boolean).join('. ');
+    const joinSentences = (parts) => parts.filter(Boolean).map((t) => String(t).replace(/\.\s*$/, '')).join('. ');
+    if (notes.reasons.length) why = joinSentences([why, ...notes.reasons]);
+    if (notes.concerns.length) concern = joinSentences([concern, ...notes.concerns]);
     return {...catalogPublic(r), jd_fit:score, why:why || 'No matching taste evidence yet. Rate this category to learn your preferences.', concern:concern || null, summary:null, fit_label:fit.confidence, notes_reasons:notes.reasons, notes_concerns:notes.concerns};
   });
 }
@@ -2030,15 +2041,15 @@ async function recommendPhoto(request,url,env) {
 }
 
 // Manual entry searches the saved database and both reference catalogs.
-// ---------- Kansas availability list (dist/kansas.json, see tools/build-kansas.mjs) ----------
+// ---------- Kansas availability list (dist/kansas.tsv, see tools/build-kansas.mjs and kansas-pack.js) ----------
 // Every bottle registered for sale in Kansas in the categories the app tracks, with the
 // distributor that carries it. Loaded once per isolate, like the catalog.
 let KANSAS_PROMISE = null;
 function kansas(env) {
   if (!KANSAS_PROMISE) {
-    KANSAS_PROMISE = env.ASSETS.fetch(new Request(new URL("/kansas.json", env._origin)))
-      .then((res) => { if (!res.ok) throw new Error(`Kansas list unavailable (kansas.json returned ${res.status})`); return res.json(); })
-      .then((p) => ({ ...p, items: p.items.map((i) => ({ ...i, _key: ` ${i.name} ${i.brand}`.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ") + " " })) }))
+    KANSAS_PROMISE = env.ASSETS.fetch(new Request(new URL("/kansas.tsv", env._origin)))
+      .then((res) => { if (!res.ok) throw new Error(`Kansas list unavailable (kansas.tsv returned ${res.status})`); return res.text(); })
+      .then(openKansas)
       .catch((err) => { KANSAS_PROMISE = null; throw err; });
   }
   return KANSAS_PROMISE;
@@ -2053,21 +2064,23 @@ function kansasPublic(i) {
 }
 /** All query words must appear; regular bottles before store picks; gift packs never. */
 async function kansasSearch(env, q, { limit = 15, category = "" } = {}) {
-  const words = q.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim().split(" ").filter(Boolean);
+  const words = searchKey(q).trim().split(" ").filter(Boolean);
   if (!words.length) return [];
-  const list = (await kansas(env).catch(() => ({ items: [] }))).items;
-  return list
-    .filter((i) => !i.gift_pack && (!category || i.category === category) && words.every((w) => i._key.includes(` ${w}`)))
-    .sort((a, b) => (a.store_pick - b.store_pick) || (a.name.length - b.name.length))
+  const k = await kansas(env).catch(() => null);
+  if (!k) return [];
+  const rows = searchRows(k, words).map((n) => ({ n, ...rowFlags(k, n) }))
+    .filter((r) => !(r.flags & 2) && (!category || r.category === category));          // no gift packs
+  return rows
+    .sort((a, b) => ((a.flags & 1) - (b.flags & 1)) || (a.nameLength - b.nameLength))
     .slice(0, limit)
-    .map(kansasPublic);
+    .map((r) => kansasPublic(kansasRow(k, r.n)));
 }
 async function kansasSearchRoute(url, env) {
   const q = (url.searchParams.get("q") || "").trim();
   if (q.length < 2) return json({ results: [] });
   const results = await kansasSearch(env, q, { limit: 50, category: (url.searchParams.get("category") || "").toLowerCase() });
   const meta = await kansas(env).catch(() => null);
-  return json({ results, source: meta?.source || null, fetched: meta?.fetched || null });
+  return json({ results, source: meta?.source || null, fetched: meta?.fetched || null, count: meta?.count ?? null });
 }
 
 async function drinkSearch(url, env) {
@@ -2089,7 +2102,7 @@ async function drinkAdopt(request, url, env) {
     return bottle ? json({bottle_id:bottle.id,already_present:true}) : json({error:"Drink not found"},404);
   }
   if (b.kind === "kansas") {
-    const item = (await kansas(env)).items.find((i) => i.id === b.id);
+    const item = kansasById(await kansas(env), b.id);
     if (!item) return json({ error: "Drink not found" }, 404);
     const category = KANSAS_CATEGORY[item.category] || item.category;
     const existed = await first(env, "SELECT id FROM bottles WHERE lower(trim(name))=lower(?) AND category=?", item.name, category);

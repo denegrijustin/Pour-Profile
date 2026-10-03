@@ -4,14 +4,14 @@
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync, readdirSync } from 'node:fs';
 import worker from '../worker.js';
-import { RESEARCH_CATALOG } from '../catalog-research.js';
-import { packCatalog, attachExpertNotes } from '../catalog-pack.js';
-import { buildKansas } from '../tools/build-kansas.mjs';
+import { fullCatalog, withKansas } from '../tools/catalog-sources.mjs';
+import { packCatalog, attachExpertNotes, fullExpert } from '../catalog-pack.js';
+import { buildKansas, packKansas } from '../tools/build-kansas.mjs';
 
 const NOTES = JSON.parse(readFileSync(new URL('../data/expert-notes.json', import.meta.url), 'utf8'));
 // Served exactly as the build produces it: packed records plus their cited notes.
-const KANSAS = JSON.stringify((() => { const snap = JSON.parse(readFileSync(new URL('../data/kansas/registry.json', import.meta.url), 'utf8')); return { source: snap.source, fetched: snap.fetched, items: buildKansas(snap) }; })());
-const PACKED_CATALOG = JSON.stringify(attachExpertNotes(packCatalog(RESEARCH_CATALOG), NOTES));
+const KANSAS = (() => { const snap = JSON.parse(readFileSync(new URL('../data/kansas/registry.json', import.meta.url), 'utf8')); return packKansas(snap, buildKansas(snap)); })();
+const PACKED_CATALOG = JSON.stringify(attachExpertNotes(packCatalog(withKansas(fullCatalog(), buildKansas(JSON.parse(readFileSync(new URL('../data/kansas/registry.json', import.meta.url), 'utf8'))))), NOTES, { slim: true }));
 
 export function setup() {
   const db = new DatabaseSync(':memory:');
@@ -53,7 +53,9 @@ export function setup() {
     async fetch(request) {
       const { pathname } = new URL(request.url);
       if (pathname === '/catalog.json') return new Response(PACKED_CATALOG, { headers: { 'Content-Type': 'application/json' } });
-      if (pathname === '/kansas.json') return new Response(KANSAS, { headers: { 'Content-Type': 'application/json' } });
+      if (pathname === '/kansas.tsv') return new Response(KANSAS, { headers: { 'Content-Type': 'text/plain' } });
+      const note = pathname.match(/^\/notes\/([a-z0-9-]+)\.json$/);
+      if (note) { const full = fullExpert(NOTES[note[1]]); return full ? new Response(JSON.stringify(full), { headers: { 'Content-Type': 'application/json' } }) : new Response('not found', { status: 404 }); }
       return new Response('not found', { status: 404 });
     }
   };
