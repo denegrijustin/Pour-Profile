@@ -1,0 +1,314 @@
+[
+ {
+  "id": "penelope-toasted-bourbon",
+  "producer": {"nose": "brown sugar and cinnamon, like a breakfast pastry", "palate": "vanilla and graham cracker with a touch of dried cherry", "finish": "toasted marshmallow with light spice", "summary": "Straight bourbon finished in a hand-toasted barrel (heavy toast), non-chill-filtered; toasting is said to add vanilla depth and vary bottle to bottle.", "source_url": "https://shop.penelopebourbon.com/products/toasted-series"},
+  "critics": [
+   {"source": "Bourbon Inspector", "source_url": "https://bourboninspector.com/penelope-toasted-straight-bourbon-review/", "score": 4, "scale": "5", "nose": "sweet: vanilla, honey, caramelized sugar, molasses; no rye spice detected", "palate": "unexpected white pepper heat, then tart apple pie; viscous texture", "finish": "warm, smooth and long; toasting balances nose and palate", "summary": "Gold-rated, good but better value at a lower price than the $70 MSRP.", "year": 2025},
+   {"source": "The Barrel Burner", "source_url": "https://www.thebarrelburner.com/bourbon-review-penelope-toasted-barrel-finish/", "score": 94, "scale": "100", "nose": "sweeter than expected: vanilla, honey, caramel, lemon peel", "palate": "thick start, building cinnamon spice; later vanilla, honey, toasted oak, lemongrass", "finish": "lingering cinnamon bite", "summary": "Reviewer would rebuy; says toasting lifts it above typical MGP character.", "year": null},
+   {"source": "The Bourbon Culture", "source_url": "https://thebourbonculture.com/whiskey-reviews/penelope-toasted-barrel-finish-bourbon/", "score": null, "scale": null, "nose": "young, grainy, soot and charred wood, raw dough, burnt sugar", "palate": "hot; cinnamon candy and cherry, then dry burnt char, pepper, burnt caramel", "finish": "sooty, burnt marshmallow and charcoal", "summary": "Scored 3.5/10 (a 10-point scale, not recorded in numeric field); a negative outlier blaming the heavy Char 5 level.", "year": 2023}
+  ],
+  "facts": {"abv": 50, "proof": 100, "age": "4 to 5 years per reviewers (producer lists no years)", "mash_bill": "75% corn / 21% rye / 4% malted barley", "cask": "charred new American oak (Char 5), finished in a hand-toasted heavy-toast barrel", "region": null, "source_url": "https://shop.penelopebourbon.com/products/toasted-series"},
+  "flavor_terms": ["brown sugar","cinnamon","vanilla","graham cracker","dried cherry","marshmallow","caramel","honey","white pepper","toasted oak"],
+  "confidence": "high",
+  "notes": "Critics diverge widely (94/100 vs 3.5/10). ABV of 50 is stated by Barrel Burner."
+ },
+ {
+  "id": "angel-s-envy-rye",
+  "producer": {"nose": "citrus, caramel candy, maple sugar, vanilla, oak, hazelnut, spice and sherry-wood character", "palate": "sweet rum, sherry wood, soft oak", "finish": "both sweet and dry, quick and easy", "summary": "Rye finished up to 18 months in Caribbean rum casks, pairing earthy spicy rye with mellow rum sweetness.", "source_url": "https://www.angelsenvy.com/us/en/whiskeys/signature-series/rum-cask-finished-rye/"},
+  "critics": [
+   {"source": "Breaking Bourbon (Nick Beiter)", "source_url": "https://breakingbourbon.com/review/angels-envy-finished-rye", "score": 3.5, "scale": "5", "nose": "sweet: maple sugar candy, gingerbread, brown sugar, faint rye spice", "palate": "brown sugar and maple syrup, molasses, gingerbread, toasted marshmallow; light oak and rye", "finish": "rye spice fading to burnt brown sugar and tobacco", "summary": "Called the original rum-finished whiskey; dessert-forward with little rye emphasis.", "year": 2024},
+   {"source": "The Bourbon Culture", "source_url": "https://thebourbonculture.com/whiskey-reviews/angels-envy-rye-whiskey-finished-in-caribbean-rum-casks/", "score": null, "scale": null, "nose": "snickerdoodle and maple French toast with faint rye spice", "palate": "tropical: coconut, pineapple, mango, orange rind; syrupy, with berries, cream, allspice, nutmeg", "finish": "maple, cinnamon, allspice, ginger, hibiscus tea, leather, coconut", "summary": "Rated 8/10 (10-point scale, not recorded numerically); best as a summer sipper.", "year": 2022},
+   {"source": "Spokane Whiskey Club", "source_url": "https://spokanewhiskeyclub.com/2018/11/01/angels-envy-finished-rye-rum-cask-review/", "score": 86, "scale": "100", "nose": "big vanilla sweetness, nutmeg, cinnamon, maple sugar, clove", "palate": "ginger, vanilla bean, black pepper, rum-forward", "finish": "dark and fruity, medium length, burnt sugar", "summary": "Reviewer skeptical of finishing but found the rum complemented the rye; recommended.", "year": 2018}
+  ],
+  "facts": {"abv": 50, "proof": 100, "age": "NAS; base rye roughly 6 years per reviewers (MGP sourced)", "mash_bill": "95% rye / 5% malted barley", "cask": "finished up to 18 months in Caribbean rum casks", "region": null, "source_url": "https://breakingbourbon.com/review/angels-envy-finished-rye"},
+  "flavor_terms": ["maple","caramel","vanilla","brown sugar","gingerbread","rum","cinnamon","rye spice","oak","burnt sugar"],
+  "confidence": "high",
+  "notes": "Producer page did not state proof; proof/mash bill come from Breaking Bourbon and RyeCentral. Age is reviewer-reported."
+ },
+ {
+  "id": "penelope-toasted-rye",
+  "producer": {"nose": "caramel, cocoa, roasted nuts, vanilla", "palate": "vanilla, toffee, leather with light fruit", "finish": "toasted oak and brown sugar with lingering spice", "summary": "Annual-release straight rye finished in freshly toasted barrels; described as toasted marshmallow, warm caramel and gentle spice.", "source_url": "https://shop.penelopebourbon.com/products/penelope-toasted-rye"},
+  "critics": [
+   {"source": "The Whiskey Wash (Nino Kilgore-Marchetti)", "source_url": "https://thewhiskeywash.com/american-whiskey/whiskey-review-penelope-toasted-rye-whiskey-2024/", "score": null, "scale": null, "nose": "baking spice, banana, milk chocolate, gingerbread, clove, brown sugar cookie, pear", "palate": "mellow spice with molasses and oak; clove, strawberry bubble gum, cherry, milk chocolate", "finish": "slightly spicy and sweet, moderate length", "summary": "Light, refreshing rye that suits chilling in warm weather.", "year": 2024},
+   {"source": "Breaking Bourbon (Nick Beiter)", "source_url": "https://www.breakingbourbon.com/review/penelope-toasted-rye-batch-23-303", "score": 3, "scale": "5", "nose": "rye spice, vanilla, mint, anise", "palate": "seasoned oak, waves of rye spice, toasted marshmallow, caramel, light tobacco", "finish": "rye spice, spearmint, light dill, caramel", "summary": "Approachable and more complex than typical for its age; batch 23-303 reportedly used a 100% rye mash bill.", "year": 2023}
+  ],
+  "facts": {"abv": 50, "proof": 100, "age": "6 years (producer)", "mash_bill": "95% rye / 5% malted barley (producer; batch 23-303 reported as 100% rye by Breaking Bourbon)", "cask": "finished in freshly toasted barrels (Char 2 / heavy toast)", "region": null, "source_url": "https://shop.penelopebourbon.com/products/penelope-toasted-rye"},
+  "flavor_terms": ["caramel","cocoa","roasted nuts","vanilla","toffee","leather","brown sugar","rye spice","marshmallow","mint"],
+  "confidence": "high",
+  "notes": "Input lists 90 proof / undisclosed mash bill; producer page says 100 proof and 95/5 rye. Batch-to-batch variation exists."
+ },
+ {
+  "id": "penelope-barrel-strength-bourbon",
+  "producer": {"nose": "pecans, dried apricot, hint of vanilla", "palate": "caramel, toffee, leather and pecan with a hint of orange zest", "finish": "white pepper, cinnamon and brown sugar with lingering caramel", "summary": "Uncut, non-chill-filtered blend of three bourbon mash bills in new American oak, more intense than their Four Grain.", "source_url": "https://shop.penelopebourbon.com/products/barrel-strength"},
+  "critics": [
+   {"source": "Breaking Bourbon (Nick Beiter, Batch 12)", "source_url": "https://www.breakingbourbon.com/review/penelope-bourbon-barrel-strength-batch-12", "score": 3.5, "scale": "5", "nose": "heat, seasoned oak, stone fruit, vanilla", "palate": "black pepper, Honey Nut Cheerios, caramel, punchy spice", "finish": "stone fruit, hint of leather, rye spice, very long", "summary": "Spicy and bold; good for fans of assertive barrel-proof bourbon.", "year": 2022},
+   {"source": "Bourbon Obsessed (Ray Marcano, Batch 18)", "source_url": "https://bourbonobsessed.com/penelope-barrel-strength-bourbon-review/", "score": null, "scale": null, "nose": "light rye, sweet vanilla, cinnamon", "palate": "sweet vanilla, cherry licorice, caramel, barrel char", "finish": "cherry licorice, brown sugar, cinnamon, pepper", "summary": "Initially underwhelmed, then warmed to the sweeter, candied profile.", "year": 2024}
+  ],
+  "facts": {"abv": null, "proof": 114, "age": "4-6 years", "mash_bill": "82% corn / 8% wheat / 7% rye / 3% malted barley (producer); reviewers report slightly different blends by batch", "cask": "new American oak", "region": null, "source_url": "https://shop.penelopebourbon.com/products/barrel-strength"},
+  "flavor_terms": ["pecan","dried apricot","vanilla","caramel","toffee","leather","orange zest","white pepper","cinnamon","stone fruit"],
+  "confidence": "high",
+  "notes": "Batch-dependent: reviewed batches 12 and 18 (proof 113.9 / 114)."
+ },
+ {
+  "id": "penelope-architect",
+  "producer": {"nose": "sweet candied cream and floral, hints of creme brulee", "palate": "creamy sweetness with herbal and floral notes", "finish": "rich vanilla with lingering heat", "summary": "Straight bourbon finished with medium-tannin French oak staves, developed with Radoux using OakScan technology.", "source_url": "https://shop.penelopebourbon.com/products/architect-series"},
+  "critics": [
+   {"source": "Breaking Bourbon (Eric Hasman)", "source_url": "https://www.breakingbourbon.com/review/penelope-architect-straight-bourbon", "score": 3.5, "scale": "5", "nose": "wet stone, moss, toasted oak, slight herbal, touch of citrus", "palate": "French oak, lightly charred French toast, white grape, light malt, faint orange", "finish": "French oak, smoke, charcoal, dry, pecan pie aftertaste", "summary": "Oak-forward but restrained at 104 proof.", "year": 2022},
+   {"source": "Bourbon Obsessed (Ray Marcano)", "source_url": "https://bourbonobsessed.com/penelope-architect-bourbon-review/", "score": null, "scale": null, "nose": "sweet cherry, butterscotch, maple", "palate": "sweet cream, caramel candy, butterscotch, pepper, oak", "finish": "long, deep caramel, creamy, coffee", "summary": "Called a flavor bomb with minimal burn; this reviewer reports a 75/15/7/3 mash bill and ~5 years.", "year": 2024}
+  ],
+  "facts": {"abv": null, "proof": 104, "age": "minimum 4 years (producer)", "mash_bill": "75% corn / 21% rye / 4% malted barley (producer); Bourbon Obsessed reports 75/15/7/3", "cask": "finished with medium-tannin French oak staves", "region": null, "source_url": "https://shop.penelopebourbon.com/products/architect-series"},
+  "flavor_terms": ["creme brulee","floral","vanilla","french oak","toasted oak","butterscotch","caramel","herbal","pecan","cherry"],
+  "confidence": "high",
+  "notes": "Input says 90 proof; producer and reviewers say 104. Architect releases are numbered builds that vary; Bourbon Obsessed review may be a different build."
+ },
+ {
+  "id": "penelope-four-grain",
+  "producer": {"nose": "corn sweetness, caramel, light oak, syrup, subtle savory edge", "palate": "fruity, candied sweetness with vanilla and hints of berry and citrus", "finish": "buttercream icing and cornbread with lingering vanilla spice", "summary": "Blend of three mash bills featuring four grains, positioned as smooth for sipping or cocktails.", "source_url": "https://shop.penelopebourbon.com/products/penelope-four-grain-straight-bourbon"},
+  "critics": [
+   {"source": "Breaking Bourbon (Eric Hasman)", "source_url": "https://www.breakingbourbon.com/review/penelope-four-grain-bourbon", "score": 3, "scale": "5", "nose": "ripe apricot, peach, mango alongside vanilla and caramel", "palate": "soft; butterscotch, honey, stone fruit, subtle floral", "finish": "mild rye spice, toasted oak, caramel candy", "summary": "Approachable entry-level, fruit-forward bourbon; not exciting for veterans but not watery at 80 proof.", "year": 2025},
+   {"source": "Whiskey Consensus (Bourbon in Indiana)", "source_url": "https://whiskeyconsensus.com/penelope-four-grain-straight-bourbon-whiskey-review/", "score": null, "scale": null, "nose": "herbal tea, pine, tabasco-like note, dark fruit and cherry", "palate": "stewed fruit and brewed tea; thin but not diluted", "finish": "short, refreshing, tea note", "summary": "Rated 7.7/10 (10-point scale); an early 2019 review, unusual flavor but low complexity.", "year": 2019}
+  ],
+  "facts": {"abv": null, "proof": 80, "age": "4 years (producer)", "mash_bill": "75% corn / 15% wheat / 7% rye / 3% malted barley", "cask": null, "region": null, "source_url": "https://shop.penelopebourbon.com/products/penelope-four-grain-straight-bourbon"},
+  "flavor_terms": ["caramel","vanilla","corn","berry","citrus","buttercream","apricot","peach","honey","stone fruit"],
+  "confidence": "high",
+  "notes": "Input lists 90 proof / undisclosed mash bill; producer and reviewers say 80 proof and give the mash bill above. 2019 review predates current batches."
+ },
+ {
+  "id": "penelope-wheated-bourbon",
+  "producer": {"nose": "light oak, sweet corn, apple and pear", "palate": "vanilla, honey, caramel apple, hint of orange zest", "finish": "brown sugar, toasted oak, a touch of cinnamon", "summary": "Four-grain wheated straight bourbon, non-chill-filtered, pitched as balanced and versatile for neat or cocktails.", "source_url": "https://shop.penelopebourbon.com/products/wheated"},
+  "critics": [
+   {"source": "The Whiskey Wash (Phil Dwyer)", "source_url": "https://thewhiskeywash.com/whiskey-reviews/review-penelope-wheated-bourbon-review-2026/", "score": null, "scale": null, "nose": "caramel chews and toffee, subtle dried fruit and citrus, condensed milk, toasted oak", "palate": "sweet opening turning dry; toffee, brown sugar, caramel with gentle wood spice", "finish": "moderately long; mint fading to wheat and wood spice, milk chocolate, orange oil, ginger, bitters", "summary": "Rated 7/10 (10-point scale); judged more complex than Maker's 46 at about $30.", "year": 2026},
+   {"source": "Men's Journal (Jonah Flicker)", "source_url": "https://www.mensjournal.com/drink/penelope-wheated-bourbon-review", "score": null, "scale": null, "nose": null, "palate": "caramel, brown sugar, maple, oak, fresh and dried fruit, vanilla, hint of pepper and baking spice", "finish": null, "summary": "Competent, accessible whiskey that works neat or in an Old Fashioned.", "year": 2025}
+  ],
+  "facts": {"abv": null, "proof": 95, "age": "4-6 years", "mash_bill": "74% corn / 16% wheat / 7% rye / 3% malted barley", "cask": null, "region": null, "source_url": "https://shop.penelopebourbon.com/products/wheated"},
+  "flavor_terms": ["light oak","sweet corn","apple","pear","vanilla","honey","caramel apple","orange zest","brown sugar","toffee"],
+  "confidence": "high",
+  "notes": "Input lists 90 proof / undisclosed mash bill; producer says 95 proof with the mash bill above."
+ },
+ {
+  "id": "penelope-ros-cask-finish",
+  "producer": {"nose": "candied fruit with floral, herbal notes", "palate": "sweet vanilla, cream, strawberry jam", "finish": "rich leather, ripe berry, slight spice", "summary": "Straight bourbon finished in French Southern Rhone rose wine casks.", "source_url": "https://shop.penelopebourbon.com/products/rose-cask-finish"},
+  "critics": [
+   {"source": "The Whiskey Wash (Nino Kilgore-Marchetti, Batch 8)", "source_url": "https://thewhiskeywash.com/whiskey-reviews/whiskey-review-penelope-rose-cask-finish-batch-8/", "score": null, "scale": null, "nose": "light, floral, jammy; vanilla, strawberry, toasted almond, subtle oak", "palate": "smooth and easy; vanilla, strawberry, bubble gum, marzipan, coriander", "finish": "mild and fairly short", "summary": "Rated 8/10 (10-point scale); a good chilled summer sipper that does not blow him away.", "year": 2024},
+   {"source": "Men's Journal (Carey Purcell)", "source_url": "https://www.mensjournal.com/drink/penelope-rose-cask-finish-bourbon-opinion", "score": null, "scale": null, "nose": "caramel, cinnamon, hint of vanilla", "palate": "cinnamon, vanilla, subtle rose-cask fruit; warming", "finish": null, "summary": "Reviewer expected to dislike it but found it balanced and sippable neat or on the rocks.", "year": 2024}
+  ],
+  "facts": {"abv": null, "proof": 94, "age": "minimum 4 years plus about 4 months finishing in rose wine casks", "mash_bill": "76% corn / 7% rye / 14% wheat / 3% malted barley", "cask": "French Southern Rhone rose wine casks (Whiskey Wash says Grenache rose)", "region": null, "source_url": "https://shop.penelopebourbon.com/products/rose-cask-finish"},
+  "flavor_terms": ["strawberry","vanilla","cream","floral","candied fruit","leather","berry","marzipan","almond","cinnamon"],
+  "confidence": "high",
+  "notes": "Input lists 90 proof / undisclosed mash bill; producer says 94 proof. Batch-specific reviews (batch 8)."
+ },
+ {
+  "id": "penelope-valencia",
+  "producer": {"nose": "bold spice and iced coffee cake with orange glaze", "palate": "citrus zest and mandarin, hints of vanilla and candied ginger", "finish": "long and savory with orange peel and black pepper", "summary": "Limited release (5,000 cases) of Four Grain bourbon finished in Vino de Naranja orange-wine casks from Seville.", "source_url": "https://www.prnewswire.com/news-releases/penelope-bourbon-introduces-tastes-of-spain-with-valencia-302222708.html"},
+  "critics": [
+   {"source": "Breaking Bourbon (Eric Hasman)", "source_url": "https://www.breakingbourbon.com/review/penelope-valencia", "score": null, "scale": null, "nose": "orange cream, bubble gum, baking spice, fresh-cut lumber, burnt orange rind", "palate": "burnt orange, orange cream, floral, French vanilla", "finish": "baking spice, white pepper, walnut, bitter", "summary": "Scored 3/10 (10-point scale); strong start but bitter finish. Reviewed the earlier 97 proof release.", "year": 2023},
+   {"source": "Bourbon Guy", "source_url": "https://www.bourbonguy.com/blog/2024/10/2/penelope-valencia", "score": null, "scale": null, "nose": "caramel, nutmeg, candied orange peel", "palate": "syrupy; cinnamon, nutmeg, caramel, floral orange", "finish": "medium warmth, floral orange, baking spice, oak", "summary": "Liked it but found it too sweet outside a cocktail; good Old Fashioned base or dessert pour.", "year": 2024},
+   {"source": "Film Whiskey", "source_url": "https://www.filmwhiskey.com/blog/whiskey-review-penelope-valencia-bourbon/", "score": 76.5, "scale": "100", "nose": "orange-forward, peaches and cream, rose petal, cedar; caramel, butterscotch and baking spice with time", "palate": "floral; vanilla bean and citrus zest, sour-candy tang, anise", "finish": "warm; pecan, pepper, cedar, citrus; some bitterness and potpourri", "summary": "Two-reviewer average of 38.25/50.", "year": 2024}
+  ],
+  "facts": {"abv": 47.5, "proof": 95, "age": "NAS, about 4 years base per reviewers", "mash_bill": "74% corn / 7% rye / 16% wheat / 3% malted barley", "cask": "Vino de Naranja casks from Seville, finished up to 12 months", "region": null, "source_url": "https://www.prnewswire.com/news-releases/penelope-bourbon-introduces-tastes-of-spain-with-valencia-302222708.html"},
+  "flavor_terms": ["orange","candied orange","mandarin","vanilla","baking spice","cinnamon","nutmeg","caramel","black pepper","floral"],
+  "confidence": "high",
+  "notes": "Producer notes are from the Penelope press release, not a product page. Input lists 90 proof; sources say 95 (a 2023 batch was 97)."
+ },
+ {
+  "id": "penelope-rio",
+  "producer": {"nose": "vanilla, toffee, graham cracker, floral honeycomb", "palate": "honey nectar, cinnamon sugar, vanilla, baking spices", "finish": "cinnamon, toasted oak and baking spice fading to honeyed pastry", "summary": "Cooper Series bourbon with a double finish: American honey barrels, then Brazilian Amburana oak.", "source_url": "https://shop.penelopebourbon.com/products/rio"},
+  "critics": [
+   {"source": "The Whiskey Wash (Scott Manning)", "source_url": "https://thewhiskeywash.com/whiskey-reviews/bourbon-review-penelope-rio/", "score": null, "scale": null, "nose": "clover honey with grassy, open-field notes; little oak", "palate": "honey sweetness, building heat, metallic tip, peppery warmth", "finish": "tingling spice, muted honey, charcoal-like smokiness", "summary": "Rated 9/10 (10-point scale); bold and layered rather than an everyday pour.", "year": 2025},
+   {"source": "Breaking Bourbon (Eric Hasman, Batch 4)", "source_url": "https://www.breakingbourbon.com/review/penelope-rio-batch-4-25-901", "score": null, "scale": null, "nose": "honeycomb, butterscotch, caramel corn, cinnamon frosting, marshmallow, toasted oak", "palate": "honey cereal, cornbread, snickerdoodle, white pepper", "finish": "cinnamon, toasted oak, brittle, burnt sugar, gentle rye spice", "summary": "Better balanced than earlier batches; the numeric score was ambiguous in extraction, so left null.", "year": 2025}
+  ],
+  "facts": {"abv": null, "proof": 98, "age": "NAS; minimum 4 years per Breaking Bourbon", "mash_bill": "74% corn / 16% wheat / 7% rye / 3% malted barley", "cask": "finished in honey barrels, then new Amburana (Brazilian) oak", "region": null, "source_url": "https://shop.penelopebourbon.com/products/rio"},
+  "flavor_terms": ["honey","vanilla","toffee","graham cracker","cinnamon","baking spice","butterscotch","caramel","toasted oak","white pepper"],
+  "confidence": "high",
+  "notes": "Input lists 90 proof / undisclosed mash bill; producer says 98 proof and gives the mash bill above."
+ },
+ {
+  "id": "knob-creek-9-year",
+  "producer": {"nose": "toasted nuts, grain, oak", "palate": "rich, sweet, woody, full-bodied, almost fruity", "finish": "long, rich and glowing", "summary": "Pre-Prohibition-style bourbon with robust oak, smooth vanilla and layered caramel.", "source_url": "https://www.knobcreek.com/whiskies/9-year-old-bourbon-whiskey"},
+  "critics": [
+   {"source": "Breaking Bourbon (Jordan Moskal)", "source_url": "https://www.breakingbourbon.com/review/knob-creek-small-batch-9-year-bourbon", "score": null, "scale": null, "nose": "slight nuttiness, vanilla, light oak, caramel, char, marshmallow", "palate": "oak base with green peppercorn, vanilla sweetness, toasted caramel; lighter body", "finish": "oak, vanilla, leather, then black pepper and rye spice", "summary": "Above-average, easy-drinking classic at about $35; score on its own scale not recorded.", "year": 2020},
+   {"source": "Film Whiskey", "source_url": "https://www.filmwhiskey.com/blog/whiskey-review-knob-creek-9-year-bourbon/", "score": null, "scale": null, "nose": "cola-like sweetness, caramel, rye spice, honey, vanilla, floral, corn syrup", "palate": "softer than expected; oak, rye spice, corn, floral, clove", "finish": "oak-heavy, fades quickly", "summary": "Two reviewers averaged 32/50; considered a bit overpriced at $40.", "year": 2024}
+  ],
+  "facts": {"abv": 50, "proof": 100, "age": "9 years", "mash_bill": "75% corn / 13% rye / 12% malted barley (per Breaking Bourbon; not on producer page)", "cask": "white oak barrels", "region": null, "source_url": "https://www.diffordsguide.com/en-au/beer-wine-spirits/1982/knob-creek-9-year-old-small-batch"},
+  "flavor_terms": ["oak","vanilla","caramel","toasted nuts","pepper","rye spice","leather","marshmallow","char","corn"],
+  "confidence": "high",
+  "notes": "Mash bill is from a critic, not the producer. Breaking Bourbon numeric score scale unclear."
+ },
+ {
+  "id": "knob-creek-12-year",
+  "producer": {"nose": "heavy toffee over char, aged tobacco, toasted coconut, dark chocolate", "palate": "bold spice, leathery fruit, vanilla, caramelized wood", "finish": "warm smoky char with lingering heat", "summary": "Pre-Prohibition-style 12-year bourbon at 100 proof, dark amber with red hues.", "source_url": "https://www.knobcreek.com/whiskies/12-year-old-bourbon-whiskey"},
+  "critics": [
+   {"source": "The Whiskey Jug (Josh Peters)", "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/knob-creek-12-years-review/", "score": 4, "scale": "5", "nose": "oak, nuts, leather, dark sweets, pumpkin spice, pie crust, peanut", "palate": "oak, nuts, dark fruit, leather, spice with sticky sweetness", "finish": "medium-long: peanut, oak, caramel", "summary": "Bold, well-aged and reasonably priced at about $60.", "year": 2021},
+   {"source": "Bourbon Obsessed", "source_url": "https://bourbonobsessed.com/knob-creek-12-year-bourbon/", "score": null, "scale": null, "nose": "vanilla, caramel, cedar, oak, rye spice, brown sugar, cherry", "palate": "caramel, rye spice, oak, brown sugar, well integrated", "finish": "oak, char, black pepper and dryness in a long finish", "summary": "More balanced than the 9 year; recommended neat.", "year": 2022},
+   {"source": "Drinkhacker (Drew Beard)", "source_url": "https://www.drinkhacker.com/2019/12/23/review-knob-creek-bourbon-12-years-old/", "score": null, "scale": null, "nose": "woodshop turning to cigar box, tobacco, cocoa, vanilla, ginger", "palate": "lighter than the nose; honey, oak, peanut brittle, caramel", "finish": "medium; toasted sugar, cinnamon, orange peel", "summary": "Graded A- (9.0/10); best nose on a Knob Creek in the reviewer's view.", "year": 2019}
+  ],
+  "facts": {"abv": 50, "proof": 100, "age": "12 years", "mash_bill": null, "cask": null, "region": null, "source_url": "https://www.knobcreek.com/whiskies/12-year-old-bourbon-whiskey"},
+  "flavor_terms": ["oak","caramel","toffee","tobacco","leather","dark chocolate","vanilla","nuts","char","cinnamon"],
+  "confidence": "high",
+  "notes": "Mash bill not disclosed by producer."
+ },
+ {
+  "id": "knob-creek-18-year",
+  "producer": {"nose": "brown sugar and aged oak with char and caramel", "palate": "full-bodied; caramelized oak, hints of sweet vanilla and baking spices", "finish": "warm with spice and slight floral and fruit notes", "summary": "Limited-edition 18-year bourbon at 100 proof, aged twice as long as the flagship.", "source_url": "https://www.knobcreek.com/whiskies/18-year-old-bourbon-whiskey"},
+  "critics": [
+   {"source": "Bourbon Lens", "source_url": "https://bourbonlens.com/knob-creek-18-review-2023/", "score": null, "scale": null, "nose": "cherry pie filling, vanilla cream, crushed peanuts, oak", "palate": "prominent oak with cherry, vanilla, baking spice, tannin", "finish": "medium to long, faint cherry and vanilla", "summary": "Well-crafted extra-aged bourbon; recommended to Knob Creek fans.", "year": 2023},
+   {"source": "Whiskey Jar (Brad Drell)", "source_url": "https://whiskeyjar.blog/2023/10/21/tasting-notes-knob-creek-18-year-old-bourbon/", "score": null, "scale": null, "nose": "vanilla and cherry with oak", "palate": "cherry dominant, clove and baking spice, very smooth", "finish": "candied cherry, building oak, long and graceful", "summary": "Called really good; a fair-value ultra-aged bourbon at about $170.", "year": 2023}
+  ],
+  "facts": {"abv": 50, "proof": 100, "age": "18 years", "mash_bill": null, "cask": null, "region": null, "source_url": "https://www.knobcreek.com/whiskies/18-year-old-bourbon-whiskey"},
+  "flavor_terms": ["brown sugar","oak","char","caramel","vanilla","baking spice","cherry","peanut","clove","floral"],
+  "confidence": "high",
+  "notes": "Releases vary by batch (KC002, KC003 etc.). Mash bill not disclosed."
+ },
+ {
+  "id": "knob-creek-single-barrel-reserve",
+  "producer": {"nose": null, "palate": null, "finish": null, "summary": null, "source_url": null},
+  "critics": [
+   {"source": "The Whiskey Wash (Will Meek)", "source_url": "https://thewhiskeywash.com/whiskey-styles/bourbon/whiskey-review-knob-creek-single-barrel-reserve/", "score": 82, "scale": "100", "nose": "intense: oak, navel orange, pencil, vanilla bean", "palate": "medium body, sweet and rich with corn and caramel; astringent with water", "finish": "sustained warmth, deep caramel and wood", "summary": "Complex nose but astringency and heat; good value for a 9-year barrel-proof pour.", "year": 2016},
+   {"source": "The Whiskey Jug (Josh Peters)", "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/knob-creek-single-barrel-reserve-review/", "score": 84, "scale": "100", "nose": "light; corn, buttered biscuit, caramel, dried fruit, vanilla", "palate": "dark fruit, toasted grain, wood, brown sugar, corn, spice, brulee", "finish": "woody with brief spice and licorice", "summary": "Weak nose and thin body on this barrel; notes single-barrel variability.", "year": 2015}
+  ],
+  "facts": {"abv": 60, "proof": 120, "age": "9 years", "mash_bill": null, "cask": "single barrel", "region": null, "source_url": "https://thewhiskeywash.com/whiskey-styles/bourbon/whiskey-review-knob-creek-single-barrel-reserve/"},
+  "flavor_terms": ["oak","orange","vanilla","caramel","corn","dark fruit","toasted grain","brown sugar","licorice","wood"],
+  "confidence": "medium",
+  "notes": "Producer page (guessed URL) returned 404 and the current knobcreek.com lineup does not list this; no producer notes recorded. Reviews are 2015-2016 and single-barrel variation applies."
+ },
+ {
+  "id": "knob-creek-bourbon-x-rye",
+  "producer": {"nose": "sweet maple and vanilla with hints of nuttiness and baking spice", "palate": "brown sweets with a hint of fruit and black pepper", "finish": "sweet with lingering spice", "summary": "First Knob Creek blend: 30% 9-year bourbon and 70% 7-year rye, 113 proof.", "source_url": "https://www.knobcreek.com/whiskies/bourbon-x-rye-kentucky-blended"},
+  "critics": [
+   {"source": "Whisky Advocate (David Fleming)", "source_url": "https://whiskyadvocate.com/Knob-Creek-Bourbon-Rye-Blend-Reviewed", "score": 93, "scale": "100", "nose": "dark berries, licorice, gumdrops, clementine, vanilla pudding, eucalyptus, spicy oak", "palate": "spicy; cherry vanilla ice cream, grape jelly, jalapeno, oak", "finish": "blackberry jam and cinnamon spice", "summary": "Smooth, jammy and well balanced; strong value at $45.", "year": 2024},
+   {"source": "Bourbon Obsessed (Ed)", "source_url": "https://bourbonobsessed.com/knob-creek-bourbon-x-rye-review/", "score": null, "scale": null, "nose": "allspice, brown sugar, caramel, sugar cookie, cherry, plum, tart orange peel", "palate": "brown sugar and caramel, tart orange, rising black pepper", "finish": "black pepper, tart citrus, dry tannins and oak, long warmth", "summary": "Rye-dominant, a very enjoyable pour.", "year": 2024},
+   {"source": "Bourbon Banter (Steve Coomes)", "source_url": "https://www.bourbonbanter.com/knob-creek-bourbon-x-rye-review/", "score": null, "scale": null, "nose": "deep caramel, cooked stone fruit, citrus, oak, spice, browned butter, pastry dough", "palate": "bright rye spice, flamed citrus, mint, oak, nutmeg", "finish": "sweet lingering spice with black pepper heat", "summary": "Recommended as a great daily drinker at about $50.", "year": 2024}
+  ],
+  "facts": {"abv": 56.5, "proof": 113, "age": "30% 9-year bourbon + 70% 7-year rye", "mash_bill": null, "cask": null, "region": null, "source_url": "https://www.knobcreek.com/whiskies/bourbon-x-rye-kentucky-blended"},
+  "flavor_terms": ["maple","vanilla","caramel","brown sugar","black pepper","baking spice","cherry","citrus","oak","licorice"],
+  "confidence": "high",
+  "notes": "Mash bills of component whiskeys not disclosed."
+ },
+ {
+  "id": "old-forester-1910",
+  "producer": {"nose": "layers of buttercream, sticky toffee, baked apple, hint of roasted coffee", "palate": "oatmeal raisin cookie sweetness, warm cinnamon, nutmeg, mocha", "finish": "viscous yet slightly dry, with spice and smoky charred oak", "summary": "Double-barreled bourbon (second barrel filled at 100 proof) inspired by a 1910 warehouse fire.", "source_url": "https://www.oldforester.com/products/old-forester-1910-old-fine-whisky/"},
+  "critics": [
+   {"source": "Breaking Bourbon (Jordan Moskal)", "source_url": "https://www.breakingbourbon.com/review/old-forester-1910-old-fine-whisky", "score": 3.5, "scale": "5", "nose": "oaky, lightly sweet, rich caramel, vanilla, cake, frosting, sweet pecan", "palate": "thick, burnt caramel, vanilla, dark berry, toasted marshmallow, oak", "finish": "charred oak, caramel, vanilla, dry leather and cigar box, long", "summary": "Refined oak-forward pour that pairs with cigars; less value than 1920.", "year": 2018},
+   {"source": "The Whiskey Wash (Steven Shomler)", "source_url": "https://thewhiskeywash.com/bourbon/whiskey-review-old-forester-1910-old-fine-whisky/", "score": null, "scale": null, "nose": "brown sugar, caramel, citrus, hint of smoke", "palate": "rich caramel and dark cocoa, spice and oak, vanilla close", "finish": "gentle lingering warmth", "summary": "Rated 8/10 (10-point scale); smooth yet intricate.", "year": 2019},
+   {"source": "The Whiskey Jug (Josh Peters)", "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/old-forester-1910-old-fine-whisky-review/", "score": 82, "scale": "100", "nose": "oak, buttery dark sweets, spice, dried dark fruit, apple crumble, red licorice", "palate": "tannic oak, spice, cloying dark fruit, roasted corn, herbal", "finish": "medium; sweet dark fruit, oak, vanilla, burnt chestnut", "summary": "Reviewer's least favorite Old Forester due to heavy sweetness, though the nose was praised.", "year": 2019}
+  ],
+  "facts": {"abv": 46.5, "proof": 93, "age": "NAS (about 4+ years per Whiskey Jug)", "mash_bill": "72% corn / 18% rye / 10% malted barley", "cask": "double-barreled: matured, then moved to a second new charred barrel at 100 proof", "region": null, "source_url": "https://www.oldforester.com/products/old-forester-1910-old-fine-whisky/"},
+  "flavor_terms": ["caramel","toffee","vanilla","baked apple","cinnamon","mocha","charred oak","dark fruit","buttercream","leather"],
+  "confidence": "high",
+  "notes": "Mash bill from critics (Breaking Bourbon, Whiskey Wash), not the producer page."
+ },
+ {
+  "id": "old-forester-1920",
+  "producer": {"nose": "cherry preserves, chewy caramel, dark chocolate, thick maple syrup, spiced nuts", "palate": "dark caramel over malt nuttiness, chocolate and nougat, rye spice, hint of cedar", "finish": "long: toasted coconut, dark chocolate, charred marshmallow, oak spice", "summary": "115 proof Prohibition-style bourbon recreating whiskey bottled at 100 proof after evaporation.", "source_url": "https://www.oldforester.com/products/old-forester-1920-style-prohibition-whisky/"},
+  "critics": [
+   {"source": "Breaking Bourbon (Nick Beiter)", "source_url": "https://www.breakingbourbon.com/review/old-forester-1920-prohibition-style-bourbon", "score": 4, "scale": "5", "nose": "rich, powerful dark fruit, burnt brown sugar, chocolate, slight ethanol", "palate": "barrel char and dark chocolate against caramel, nuttiness, smoke, coffee", "finish": "allspice and black pepper fading to dark chocolate and char", "summary": "His favorite Old Forester; stout-like chocolate profile, competitive at $60.", "year": 2017},
+   {"source": "The Whiskey Wash (Jordan Morris)", "source_url": "https://thewhiskeywash.com/whiskey-styles/bourbon/whisky-review-old-forester-1920-prohibition-style-bourbon/", "score": 88, "scale": "100", "nose": "strong cherry and dark fruit, light caramel and seasoned oak", "palate": "berry, then caramel and toasted nuts, seasoned oak, caramelized sugar", "finish": "light cream and seasoned oak", "summary": "Preferred bottle of the Whiskey Row series.", "year": 2016},
+   {"source": "The Whiskey Jug (Josh Peters)", "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/old-forester-1920-prohibition-style-review/", "score": 4, "scale": "5", "nose": "oak, caramel, roasted nuts, vanilla pudding, cornbread, honey, dried dark fruit, baking spice", "palate": "similar to nose, grainy/farmy notes late", "finish": "long; oak, cocoa, baking spice, dried fruit, dry grainy fade", "summary": "Heavy, warm and inviting; top of the current core line.", "year": null}
+  ],
+  "facts": {"abv": 57.5, "proof": 115, "age": "NAS (about 4+ years per Whiskey Jug)", "mash_bill": "72% corn / 18% rye / 10% malted barley", "cask": null, "region": null, "source_url": "https://www.oldforester.com/products/old-forester-1920-style-prohibition-whisky/"},
+  "flavor_terms": ["cherry","caramel","dark chocolate","maple","nuts","rye spice","cedar","oak","coconut","dark fruit"],
+  "confidence": "high",
+  "notes": "Mash bill from critics, not the producer page."
+ },
+ {
+  "id": "old-forester-1897-bottled-in-bond",
+  "producer": {"nose": "classic bourbon profile with intense caramel and vanilla bean, dried fruit, sweet leather, cured tobacco", "palate": "sticky toffee and smoky wood with figs, dates, raisins, black pepper and cinnamon", "finish": "deep fruit, spice and oak over dark caramel and vanilla; leather and tobacco linger", "summary": "Bottled-in-Bond expression honoring the 1897 Act: 4+ years, one season, one distillery.", "source_url": "https://www.oldforester.com/products/old-forester-1897-bottled-in-bond-whisky/"},
+  "critics": [
+   {"source": "The Whiskey Wash (Katelyn Best)", "source_url": "https://thewhiskeywash.com/bourbon/whiskey-review-old-forester-1897-bottled-bond/", "score": 89, "scale": "100", "nose": "sweet honey, vanilla, hint of smoke, salted caramel, allspice", "palate": "honeyed sweetness and caramel with dark fruit and wood", "finish": "smoky, woody, moderately long with caramel sweetness", "summary": "Balanced, approachable bonded bourbon; price a bit high. Reviewed the 2015 launch.", "year": 2015},
+   {"source": "The Whiskey Jug (Josh Peters)", "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/old-forester-1897-bottled-in-bond-review/", "score": 2.5, "scale": "5", "nose": "sweet and flabby; banana foster, vanilla custard, dried fruit, green mango, little oak", "palate": "similar, plus corn cakes; judged barely average", "finish": "medium; corn sweetness and oak to vanilla custard", "summary": "Criticized as almost cloying with a distracting banana note.", "year": null},
+   {"source": "The Whiskey Shelf (Alex Wang)", "source_url": "https://www.thewhiskeyshelf.com/old-forester-1897-bottled-in-bond-review/", "score": null, "scale": null, "nose": "roasted caramel, vanilla, oak, red apple peel, maraschino cherry, banana, cinnamon, fennel, coconut", "palate": "caramel, dried apple, dry oak; chewing brings maple and dark caramel", "finish": "dry; roasted caramel, oak, slight bitterness, apple and banana", "summary": "Rated Mid Shelf+; improves with aeration.", "year": 2023}
+  ],
+  "facts": {"abv": 50, "proof": 100, "age": "at least 4 years", "mash_bill": "72% corn / 18% rye / 10% malted barley", "cask": "aged in a federally bonded warehouse", "region": null, "source_url": "https://www.oldforester.com/products/old-forester-1897-bottled-in-bond-whisky/"},
+  "flavor_terms": ["caramel","vanilla","dried fruit","leather","tobacco","toffee","fig","black pepper","cinnamon","oak"],
+  "confidence": "high",
+  "notes": "Mash bill/age from critics (Whiskey Jug, Whiskey Shelf) and the producer's BiB statement. Critic opinions vary a lot."
+ },
+ {
+  "id": "old-forester-1870-original-batch",
+  "producer": {"nose": "juicy apple and mandarin over silky honey, subtle clove and nutmeg, honeysuckle", "palate": "balanced and elegant; crisp apple and citrus into shortbread, bright vanilla, clove", "finish": "soft and silky, fruit and florals giving way to bright oak and sweet baking spice", "summary": "Recreates founder George Garvin Brown's batching: barrels from three warehouses with different days, entry proofs and ages.", "source_url": "https://www.oldforester.com/products/old-forester-1870-original-batch-whisky/"},
+  "critics": [
+   {"source": "The Whiskey Jug (Josh Peters)", "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/old-forester-1870-original-batch-review/", "score": 3, "scale": "5", "nose": "dried dark cherry, oak, coffee cake, vanilla, brown sugar, cinnamon", "palate": "caramel, dried fruit, oak, maple-frosted donut, cocoa, baking spice", "finish": "medium: maple, oak, corn, dark fruit", "summary": "Good, soft and accessible, but better for mixing than sipping.", "year": 2021},
+   {"source": "Modern Thirst", "source_url": "https://modernthirst.com/2014/12/29/bourbon-review-old-forester-1870-original-batch/", "score": 92, "scale": "100", "nose": "oak and a burst of clove, cherry cordial, apricot, citrus", "palate": "light cloves and cinnamon, citrus and cherry, blood orange, apricot, nuts, nutmeg", "finish": "medium, soft and sweet, fruit cordial with oak and clove", "summary": "Praised as outstanding value under $50; 2014 launch-era review.", "year": 2014}
+  ],
+  "facts": {"abv": 45, "proof": 90, "age": "NAS", "mash_bill": "72% corn / 18% rye / 10% malted barley (per Whiskey Jug)", "cask": null, "region": null, "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/old-forester-1870-original-batch-review/"},
+  "flavor_terms": ["apple","mandarin","honey","clove","nutmeg","vanilla","cherry","citrus","shortbread","oak"],
+  "confidence": "high",
+  "notes": "Producer page gives no proof; 90 proof from critics. Mash bill from a critic."
+ },
+ {
+  "id": "old-forester-100-proof",
+  "producer": {"nose": "bold vanilla, creamy butterscotch, black cherry, hint of nutmeg and allspice", "palate": "cane sugar sweetness with black cherry and candied citrus; nutmeg and subtle char", "finish": "charred oak and baking spice with black tea and burnt sugar", "summary": "Spicy, robust 100 proof bourbon from hand-picked barrels.", "source_url": "https://www.oldforester.com/products/old-forester-100-proof/"},
+  "critics": [
+   {"source": "Bourbon Obsessed (Ed)", "source_url": "https://bourbonobsessed.com/old-forester-100-proof-bourbon-review/", "score": null, "scale": null, "nose": "warm caramel, banana, apple, dark cherry, rose, cinnamon, toast, brown sugar", "palate": "caramel, oak, brown sugar, dark stone fruit, tart orange", "finish": "dry oak, black pepper, barrel char; dark cherry and citrus; moderately long", "summary": "Flavorful, easy drinking and fuller than the lower-proof version.", "year": 2023},
+   {"source": "The Whiskey Jug (Josh Peters, reviewing Old Forester Signature 100 proof)", "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/old-forester-signature-review-100-proof/", "score": 88, "scale": "100", "nose": "butterscotch taffy, caramel, dark cherry, wood, cinnamon", "palate": "cinnamon, orange zest, caramel, dark fruit, leather, burnt sugar, cocoa", "finish": "extended and spicy; wood, vanilla, caramel, citrus, dark fruit", "summary": "Well-balanced daily drinker, better than its lower-proof sibling. 2014 review under the earlier 'Signature' name.", "year": 2014},
+   {"source": "Breaking Bourbon (Eric Hasman, Old Forester Signature 100 Proof)", "source_url": "https://www.breakingbourbon.com/review/old-forester-signature-100-proof-bourbon", "score": null, "scale": null, "nose": "sweet caramel and bright cherry with oak", "palate": "bold oak and pecan, caramelized maple; thinner mouthfeel", "finish": "pepper, clove, seasoned oak; a danky, over-oaked bitter aftertaste", "summary": "Improved over past versions but flawed finish; the numeric score was ambiguous so left null (2019).", "year": 2019}
+  ],
+  "facts": {"abv": 50, "proof": 100, "age": "NAS (about 4 years per Bourbon Obsessed)", "mash_bill": "72% corn / 18% rye / 10% malted barley", "cask": null, "region": null, "source_url": "https://bourbonobsessed.com/old-forester-100-proof-bourbon-review/"},
+  "flavor_terms": ["vanilla","butterscotch","black cherry","caramel","nutmeg","allspice","candied citrus","oak","brown sugar","baking spice"],
+  "confidence": "high",
+  "notes": "Two critic pages cover the earlier 'Signature 100 Proof' label (same 100 proof, renamed). Mash bill/age from critics."
+ },
+ {
+  "id": "old-forester-statesman",
+  "producer": {"nose": "spiced baked apples and rye spice over raw vanilla and sweet oak", "palate": "apple pie and cream soda with pepper, cinnamon and sweet leather", "finish": "intense but quick spice with subtle eucalyptus fading to orange cream and caramel", "summary": "Kingsman: The Golden Circle tie-in; casks from the warmest warehouse locations for bold flavor.", "source_url": "https://www.oldforester.com/products/old-forester-statesman-bourbon/"},
+  "critics": [
+   {"source": "Paste (Jim Vorel)", "source_url": "https://www.pastemagazine.com/drink/old-forester-statesman-bourbon/old-forester-statesman-bourbon-review", "score": null, "scale": null, "nose": "deep caramel, molasses, charred oak, vanilla bean, sweet cinnamon, baking spice", "palate": "rich and woody; charred barrel, dark caramel, cinnamon, clove, bay leaf, subtle orange", "finish": null, "summary": "Rated 8.7/10 (10-point scale); spicier and fuller than standard Old Forester, fair value at $55. 2017 review.", "year": 2017}
+  ],
+  "facts": {"abv": 47.5, "proof": 95, "age": "blend of roughly 4- and 6-year-old barrels (per Paste)", "mash_bill": null, "cask": null, "region": null, "source_url": "https://www.pastemagazine.com/drink/old-forester-statesman-bourbon/old-forester-statesman-bourbon-review"},
+  "flavor_terms": ["apple","rye spice","vanilla","oak","cinnamon","pepper","leather","caramel","molasses","clove"],
+  "confidence": "high",
+  "notes": "Only one critic found; 2017 limited movie tie-in release, may be discontinued. Mash bill not found."
+ },
+ {
+  "id": "old-forester-single-barrel-barrel-strength",
+  "producer": {"nose": null, "palate": null, "finish": null, "summary": null, "source_url": null},
+  "critics": [
+   {"source": "Breaking Bourbon (Eric Hasman)", "source_url": "https://www.breakingbourbon.com/review/old-forester-single-barrel-barrel-strength", "score": 2.5, "scale": "5", "nose": "cherry cough syrup, green apple, creme brulee, wet oak; restrained", "palate": "roasted pecan, thick oak, black cherry, leather", "finish": "long: pecan, seasoned oak, burnt caramel, pepper, mild bitterness", "summary": "A flat wall of flavor; reviewed a 130-135 proof barrel.", "year": 2020},
+   {"source": "Thirty One Whiskey (Nick Leghorn)", "source_url": "https://www.thirtyonewhiskey.com/whiskey-review-old-forester-single-barrel-barrel-strength-kentucky-straight-bourbon-whiskey/", "score": 4, "scale": "5", "nose": "brown sugar, vanilla, cinnamon, rye bread, subtle cherry", "palate": "smoky char, toffee caramel, dark chocolate, vanilla, strong cherry", "finish": "lingering cherry and black pepper", "summary": "Great straight from the barrel; very strong, 65.4% ABV sample.", "year": 2021},
+   {"source": "The Whiskey Shelf (Alex Wang, BK Miller pick)", "source_url": "https://www.thewhiskeyshelf.com/old-forester-barrel-strength-bk-miller-review/", "score": null, "scale": null, "nose": "roasted caramel, roasted banana, roasted oak, dried fruit, candied caramel and butterscotch", "palate": "dense oily caramel and butterscotch, cinnamon, oak, roasted grains, dried fruit", "finish": "roasted caramel, oak, dried apple peel, banana, pecan, coffee grounds, pumpernickel", "summary": "Rated Top Shelf; 63.45% ABV store pick.", "year": 2023}
+  ],
+  "facts": {"abv": null, "proof": null, "age": "NAS (about 4 years per two critics)", "mash_bill": "72% corn / 18% rye / 10% malted barley", "cask": "single barrel", "region": null, "source_url": "https://www.breakingbourbon.com/review/old-forester-single-barrel-barrel-strength"},
+  "flavor_terms": ["cherry","caramel","pecan","oak","butterscotch","vanilla","leather","black pepper","dark chocolate","cinnamon"],
+  "confidence": "medium",
+  "notes": "Producer page had no tasting notes or proof. Proof varies by barrel (critics saw 130-135 proof / 63-65% ABV), so the input's 120 proof is unconfirmed. Reviews are of individual store-pick barrels."
+ },
+ {
+  "id": "woodford-reserve-double-oaked",
+  "producer": {"nose": "dark fruit, caramel, sharp honey, chocolate, marzipan, toasted oak", "palate": "full-bodied; vanilla, dark caramel, hazelnut, apple, fruit and spices", "finish": "long and creamy with lingering honeyed apple", "summary": "Twice-barreled: finished in a second barrel that is deeply toasted before a light char.", "source_url": "https://www.woodfordreserve.com/whiskies/double-oaked/"},
+  "critics": [
+   {"source": "The Whiskey Wash (Beth Squires)", "source_url": "https://thewhiskeywash.com/whiskey-reviews/bourbon-review-woodford-reserve-double-oaked/", "score": null, "scale": null, "nose": "caramel, vanilla, dark fruit, toasted oak, cocoa, almond, hazelnut", "palate": "creamy and full; vanilla, toffee, charred oak, dried cherry, raspberry, dark chocolate, apple peel", "finish": "medium-long; charred oak, soft spice, caramel, cocoa, toffee apple", "summary": "Rated 8/10 (10-point scale); sweet-leaning and classic.", "year": 2025},
+   {"source": "The Whiskey Jug (Josh Peters)", "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/woodford-reserve-double-oaked-review/", "score": 85, "scale": "100", "nose": "caramel, vanilla, oak, orange, butterscotch, mint, sweet tobacco", "palate": "caramel, cinnamon, clove, corn, oak, pepper, leather, cherry", "finish": "fruity caramel with oak and corn, extended", "summary": "Earthier and drier than Distiller's Select; good in a Manhattan. Published 2014.", "year": 2014},
+   {"source": "The Whiskey Shelf (Alex Wang)", "source_url": "https://www.thewhiskeyshelf.com/woodford-reserve-double-oaked-review/", "score": null, "scale": null, "nose": "dark roasted caramel, toasted vanilla, mocha, roasted oak, roasted banana, candied pecan, dried cherry", "palate": "dark caramel, roasted vanilla, banana, coffee, chocolate; bright fruit balance", "finish": "roasted oak, tannin, orange peel, cinnamon, coffee", "summary": "Rated Mid Shelf+; pleasant but light-bodied for the proof.", "year": 2023}
+  ],
+  "facts": {"abv": 45.2, "proof": 90.4, "age": "NAS", "mash_bill": null, "cask": "second barrel deeply toasted then lightly charred", "region": null, "source_url": "https://www.woodfordreserve.com/whiskies/double-oaked/"},
+  "flavor_terms": ["dark fruit","caramel","honey","chocolate","marzipan","toasted oak","vanilla","hazelnut","apple","cherry"],
+  "confidence": "high",
+  "notes": "Mash bill not stated in fetched sources (input's 72/18/10 left unconfirmed). ABV 45.2 from Whiskey Jug."
+ },
+ {
+  "id": "woodford-reserve-bourbon",
+  "producer": {"nose": "rich dried fruit, mint and orange with dusting of cocoa, faint vanilla and tobacco spice", "palate": "rich, chewy and smooth; citrus, cinnamon, cocoa, toffee, caramel, chocolate", "finish": "silky, almost creamy, long warm tail", "summary": "Flagship Kentucky Straight Bourbon (Distiller's Select), said to carry 200+ detectable flavor notes.", "source_url": "https://www.woodfordreserve.com/en-uk/whiskey/straight-bourbon-whiskey/"},
+  "critics": [
+   {"source": "Breaking Bourbon (Jordan Moskal)", "source_url": "https://www.breakingbourbon.com/review/woodford-reserve-distillers-select-bourbon", "score": 2.5, "scale": "5", "nose": "vanilla, honey, light oak, citrus, graham cracker", "palate": "thin and delicate; vanilla, honey, citrus over subtle rye and oak", "finish": "green pepper, aged oak, leather, tobacco, dry", "summary": "Straightforward, mid-market; good for cocktails.", "year": 2017},
+   {"source": "The Whiskey Jug (Josh Peters)", "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/woodford-reserve-distillers-select-review/", "score": 83, "scale": "100", "nose": "caramel, maple, floral; brown sugar, toffee, vanilla, citrus, light oak", "palate": "caramel, cocoa, maple, then pepper, cinnamon, vanilla, smoky char", "finish": "caramel, vanilla, light citrus fading to corn and maple wood; long", "summary": "Excellent everyday bourbon, balanced sweetness. 2014 review.", "year": 2014},
+   {"source": "Bourbon Paddy", "source_url": "https://bourbonpaddy.com/2019/09/01/woodford-reserve-distillers-select-bourbon-review/", "score": null, "scale": null, "nose": "dried red fruit, earthy rye, dry oak, touch of corn, faint dark chocolate, slight citrus", "palate": "caramel and vanilla into toffee, grain spice, strawberry, marzipan, cocoa, charred wood", "finish": "warm with red fruit and caramel; long charred oak, marzipan, malted barley", "summary": "Considered strong value for UK buyers; distinctive marzipan note.", "year": 2019}
+  ],
+  "facts": {"abv": 45.2, "proof": 90.4, "age": "NAS", "mash_bill": "72% corn / 18% rye / 10% malted barley (per Breaking Bourbon)", "cask": null, "region": null, "source_url": "https://www.woodfordreserve.com/en-uk/whiskey/straight-bourbon-whiskey/"},
+  "flavor_terms": ["dried fruit","mint","orange","cocoa","vanilla","toffee","caramel","cinnamon","maple","oak"],
+  "confidence": "high",
+  "notes": "Producer notes are from the UK site. Older bottlings were 86.4 proof (Difford's 43.2%); reviews cover the 90.4 proof Distiller's Select/Kentucky Straight label."
+ },
+ {
+  "id": "woodford-reserve-batch-proof",
+  "producer": {"nose": null, "palate": null, "finish": null, "summary": "Bottled at actual barrel-batch proof from the standard Woodford grain bill, with a sweet vanilla and toasted oak profile (2025 edition 119.5 proof).", "source_url": "https://www.woodfordreserve.com/whiskies/batch-proof/"},
+  "critics": [
+   {"source": "VinePair (David Thomas Tao, 119.5 proof 2024)", "source_url": "https://vinepair.com/review/woodford-reserve-batch-proof-119-5-2024/", "score": 93, "scale": "100", "nose": "roasted nuts and black cherry, caramel, pecan, vanilla; baked pecan pie, brulee banana", "palate": "caramel and vanilla sweetness, cherry fruit leather, dark fruit, strawberry candy, butterscotch, cinnamon; slightly thin", "finish": "long and rich; spiced fruit compote, mint jelly, oaky caramel turning tannic", "summary": "Drinks below its proof; balanced and sophisticated.", "year": 2025},
+   {"source": "Breaking Bourbon (Eric Hasman, 2022 release 118.4 proof)", "source_url": "https://www.breakingbourbon.com/review/woodford-reserve-batch-proof-2022-release", "score": 3, "scale": "5", "nose": "pecan pie, dark maple syrup, blackberry, heavy charred oak", "palate": "leather, raw pecan, coffee, dry oak", "finish": "dark chocolate, coffee, charred oak, allspice, slight astringency", "summary": "Darker and drier direction than prior batches; one-dimensional to this reviewer.", "year": 2022},
+   {"source": "The Whiskey Wash (Charles Steele, 2022 release)", "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-2022-woodford-reserve-batch-proof/", "score": null, "scale": null, "nose": "cinnamon red-hot candy, holiday spice, clove, then oak, citrus", "palate": "buttery; cherry, leather, vanilla, molasses, baking spice, wood char", "finish": "smooth, warming and lingering", "summary": "Rated 10/10 (10-point scale); drinkable all night.", "year": 2022}
+  ],
+  "facts": {"abv": null, "proof": 119.5, "age": "NAS", "mash_bill": null, "cask": null, "region": null, "source_url": "https://www.woodfordreserve.com/whiskies/batch-proof/"},
+  "flavor_terms": ["vanilla","toasted oak","pecan","black cherry","caramel","maple","leather","dark chocolate","coffee","cinnamon"],
+  "confidence": "medium",
+  "notes": "Annual release whose proof changes (118.4 in 2022, 119.5 in 2024/2025); input's 90 proof does not match. Producer page gave only a summary, no nose/palate/finish. Recorded proof is the 2025 edition."
+ }
+]

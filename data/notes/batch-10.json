@@ -1,0 +1,748 @@
+[
+ {
+  "id": "eisele-vineyard-sauvignon-blanc",
+  "producer": {
+   "nose": "Fresh-cut grass and hawthorn blossom at first, opening to candied citrus, lemongrass and a white-musk note.",
+   "palate": "Creamy, velvety texture with pink grapefruit and rose, then poached pear, vanilla and cinnamon.",
+   "finish": "Lingering quinine-tonic note.",
+   "summary": "2023 vintage: 74% Sauvignon Blanc Musque, 26% Sauvignon Blanc.",
+   "source_url": "https://eiselevineyard.com/notes/Eisele-Vineyard-Sauvignon-Blanc-2023.pdf"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "2023: 12 months in stainless eggs, concrete eggs, used oak and new oak (about 38% new) in French/Austrian demi-muids",
+   "region": "Napa Valley",
+   "source_url": "https://eiselevineyard.com/notes/Eisele-Vineyard-Sauvignon-Blanc-2023.pdf"
+  },
+  "flavor_terms": [
+   "hawthorn",
+   "candied citrus",
+   "lemongrass",
+   "pink grapefruit",
+   "poached pear",
+   "vanilla",
+   "cinnamon",
+   "creamy"
+  ],
+  "confidence": "medium",
+  "notes": "Producer notes for 2023 vintage (2022 sheet also opened: Meyer lemon, white peach, nectarine, verbena). No independent critic notes found; web search budget ran out."
+ },
+ {
+  "id": "rudd-crossroads-sauvignon-blanc",
+  "producer": {
+   "nose": "Lemongrass, lemon rind and white florals (2022 winemaker notes via retailer).",
+   "palate": "Sweet lime, peach and mineral notes with bright acidity.",
+   "finish": "Green apple note on the finish.",
+   "summary": "Retailer page reproducing winemaker notes for 2022; 2018 producer page also opened (nectarine, fennel, honeysuckle; long finish).",
+   "source_url": "https://www.wine.com/product/rudd-crossroads-sauvignon-blanc-2022/1861999"
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.wine.com/product/rudd-crossroads-sauvignon-blanc-2022/1861999",
+    "score": 91,
+    "scale": "100",
+    "nose": "Lemongrass, lemon verbena and lemon basil aromatics.",
+    "palate": "Mouthwatering, fresh core of Meyer lemon, pomelo and green apple.",
+    "finish": null,
+    "summary": "Fragrant and intense; note as reproduced on wine.com for the 2022 vintage.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 13.7,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Mt. Veeder, Napa Valley",
+   "source_url": "https://www.wine.com/product/rudd-crossroads-sauvignon-blanc-2022/1861999"
+  },
+  "flavor_terms": [
+   "lemongrass",
+   "lemon rind",
+   "white floral",
+   "lime",
+   "peach",
+   "green apple",
+   "meyer lemon",
+   "pomelo",
+   "mineral"
+  ],
+  "confidence": "high",
+  "notes": "2022 vintage; ABV 13.7 is for 2022. Critic note seen via retailer page, not Wine Spectator directly. Wine Enthusiast 2020 page could not be fetched."
+ },
+ {
+  "id": "arrow-branch-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Decanter",
+    "source_url": "https://www.decanter.com/wine-reviews/usa/california/arrow-branch-sauvignon-blanc-napa-valley-california-2023-88898",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "2023: described as very fresh with crunchy acidity and concentrated lime on the mid-palate. Full note and score are paywalled.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "lime"
+  ],
+  "confidence": "medium",
+  "notes": "Only the Decanter meta-description was readable (paywall). Decanter page lists 14.5% ABV for 2023 (not recorded; differs from input). A Press Democrat piece on the 2015 vintage (stone fruit, minerality, citrus finish) was skipped as a different vintage."
+ },
+ {
+  "id": "realm-fidelio-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "honeydew",
+   "lychee"
+  ],
+  "confidence": "low",
+  "notes": "Only CellarTracker user notes (2023 page) seen: honeydew, lychee, bright acidity. No professional or producer notes found."
+ },
+ {
+  "id": "dragonette-cellars-happy-canyon-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": "Ripe tropical fruit and crisp citrus-laced acidity with minerals and a touch of fresh herbs.",
+   "finish": null,
+   "summary": "2023 retailer page quoting winery notes; fruit lifted by acidity and minerality.",
+   "source_url": "https://www.thewinestop.com/2023-dragonette-happy-canyon-of-santa-barbara-sauvignon-blanc.html"
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator (via wine.com)",
+    "source_url": "https://www.wine.com/product/dragonette-cellars-happy-canyon-sauvignon-blanc-2018/542974",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": "Savory, sleek, saline touch with chive blossom over pear, citrus and apple.",
+    "finish": "Long, with toasted herb accents.",
+    "summary": "2018 vintage.",
+    "year": 2018
+   },
+   {
+    "source": "Wine Spectator (MaryAnn Worobiec)",
+    "source_url": "https://dragonettecellars.com/reviews/",
+    "score": 90,
+    "scale": "100",
+    "nose": "Floral and tropical aromatics.",
+    "palate": "Mango and melon flavors.",
+    "finish": "Detailed finish.",
+    "summary": "2012 vintage, as listed on winery reviews page.",
+    "year": 2012
+   },
+   {
+    "source": "eRobertParker.com (Jeb Dunnuck)",
+    "source_url": "https://dragonettecellars.com/reviews/",
+    "score": 91,
+    "scale": "100",
+    "nose": "Subtle grassy notes, white peach, cream and citrus blossom.",
+    "palate": "Medium-bodied and fresh.",
+    "finish": null,
+    "summary": "2012 vintage, as listed on winery reviews page.",
+    "year": 2012
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "2023: 72% neutral oak, 28% stainless; 7 months on lees",
+   "region": "Happy Canyon, Santa Barbara",
+   "source_url": "https://www.thewinestop.com/2023-dragonette-happy-canyon-of-santa-barbara-sauvignon-blanc.html"
+  },
+  "flavor_terms": [
+   "tropical fruit",
+   "citrus",
+   "mineral",
+   "fresh herbs",
+   "pear",
+   "apple",
+   "white peach",
+   "mango",
+   "melon",
+   "citrus blossom"
+  ],
+  "confidence": "high",
+  "notes": "Vintages differ: producer 2023, critics 2018 and 2012. 2018 ABV 14.2 not recorded as a general fact."
+ },
+ {
+  "id": "dragonette-cellars-vogelzang-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator (MaryAnn Worobiec)",
+    "source_url": "https://dragonettecellars.com/reviews/",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": "White grapefruit and lime, tangy acidity, fresh thyme and watercress accents.",
+    "finish": null,
+    "summary": "2012 vintage; powerful and refreshing.",
+    "year": 2012
+   },
+   {
+    "source": "Wine Access/Tanzer (Joshua Raynolds)",
+    "source_url": "https://dragonettecellars.com/reviews/",
+    "score": 93,
+    "scale": "100",
+    "nose": "Pungent pear and peach aromas.",
+    "palate": "Concentrated yet elegant, with minerality and a ginger nuance.",
+    "finish": null,
+    "summary": "2011 vintage.",
+    "year": 2011
+   },
+   {
+    "source": "eRobertParker.com (Jeb Dunnuck)",
+    "source_url": "https://dragonettecellars.com/reviews/",
+    "score": 89,
+    "scale": "100",
+    "nose": "Mint and flower oil notes.",
+    "palate": "Medium-bodied, fresh and clean.",
+    "finish": null,
+    "summary": "2012 vintage.",
+    "year": 2012
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "white grapefruit",
+   "lime",
+   "thyme",
+   "watercress",
+   "pear",
+   "peach",
+   "mineral",
+   "ginger"
+  ],
+  "confidence": "medium",
+  "notes": "Critic notes are old vintages (2011-2012) listed on the winery reviews page; no producer tasting note for a current vintage found."
+ },
+ {
+  "id": "lieu-dit-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "brander-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "margerum-sybarite-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "justin-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "daou-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "austin-hope-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "emmolo-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "orin-swift-blank-stare-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "twomey-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "silver-oak-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "James Suckling (as shown on producer page)",
+    "source_url": "https://silveroak.com/collections/sauvignon-blanc",
+    "score": 94,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "2025 vintage, first Silver Oak white; score shown on producer collection page, no note text.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Score only; no tasting notes available on fetched page."
+ },
+ {
+  "id": "the-prisoner-wine-company-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "joel-gott-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "josh-cellars-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "kendall-jackson-vintner-s-reserve-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ },
+ {
+  "id": "bogle-sauvignon-blanc",
+  "producer": {
+   "nose": "Citrus and freshly cut grass.",
+   "palate": "Crisp and vibrant.",
+   "finish": "Pineapple and passion fruit.",
+   "summary": "2025 vintage; cold-fermented in stainless steel, dry, low oak.",
+   "source_url": "https://www.boglewinery.com/wines/sauvignon-blanc/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Stainless steel (cold fermented)",
+   "region": null,
+   "source_url": "https://www.boglewinery.com/wines/sauvignon-blanc/"
+  },
+  "flavor_terms": [
+   "citrus",
+   "cut grass",
+   "pineapple",
+   "passion fruit"
+  ],
+  "confidence": "medium",
+  "notes": "Producer notes only (2025 vintage); no critic reviews found."
+ },
+ {
+  "id": "bread-butter-sauvignon-blanc",
+  "producer": {
+   "nose": "Lemon zest with a hint of tropical fruit.",
+   "palate": "Lively fresh citrus with a rich texture.",
+   "finish": "Mineral, clean and refreshing.",
+   "summary": "2022 vintage; page describes it as North Coast, zesty and lively.",
+   "source_url": "https://breadandbutterwines.com/california-sauvignon-blanc/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "North Coast (per producer page)",
+   "source_url": "https://breadandbutterwines.com/california-sauvignon-blanc/"
+  },
+  "flavor_terms": [
+   "lemon zest",
+   "tropical fruit",
+   "citrus",
+   "mineral"
+  ],
+  "confidence": "medium",
+  "notes": "Producer notes only (2022 vintage); no critic reviews found."
+ },
+ {
+  "id": "bonterra-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": "Balanced acidity with kumquat, mango, passionfruit and a hint of lime zest (California bottling).",
+   "finish": null,
+   "summary": "Producer also lists an Estate bottling with grapefruit, lime zest, pineapple, passionfruit; the California bottling is recorded here.",
+   "source_url": "https://www.bonterra.com/shop/white-wine-sauvignon-blanc/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.bonterra.com/shop/white-wine-sauvignon-blanc/"
+  },
+  "flavor_terms": [
+   "kumquat",
+   "mango",
+   "passionfruit",
+   "lime zest",
+   "tropical fruit"
+  ],
+  "confidence": "medium",
+  "notes": "Producer notes only; page lists two Sauvignon Blanc bottlings, and no vintage or ABV given."
+ },
+ {
+  "id": "cannonball-sauvignon-blanc",
+  "producer": {
+   "nose": "Tangerine, honeysuckle and soft mineral.",
+   "palate": "Bright crisp acidity with papaya, honeydew melon and white peach.",
+   "finish": null,
+   "summary": "2024 vintage; described as vibrant and refreshing.",
+   "source_url": "https://www.drinkcannonball.com/wines/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.drinkcannonball.com/wines/"
+  },
+  "flavor_terms": [
+   "tangerine",
+   "honeysuckle",
+   "mineral",
+   "papaya",
+   "honeydew",
+   "white peach"
+  ],
+  "confidence": "medium",
+  "notes": "Producer notes only (2024 vintage); no critic reviews found."
+ },
+ {
+  "id": "napa-cellars-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Nothing reliable found: web search budget exhausted and direct producer page fetches returned no tasting notes (404, robots block, or page without product detail)."
+ }
+]

@@ -1,0 +1,809 @@
+[
+ {
+  "id": "j-rieger-kansas-city-whiskey",
+  "producer": {
+   "nose": "Sherry leads, with sweet caramel and butterscotch, then a corn-whiskey base.",
+   "palate": "Corn sweetness meets sherry notes of dried fruit, almond and bitter chocolate.",
+   "finish": "Strongly spicy from the rye.",
+   "summary": "Blend of 4+ year straight bourbon, straight rye and light corn whiskey finished with 15-year oloroso sherry; positioned as a 'Kansas City Style' whiskey.",
+   "source_url": "https://www.jriegerco.com/our-spirits/kansas-city-whiskey"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash (Aaron Knapp)",
+    "source_url": "https://thewhiskeywash.com/whiskey-styles/american-whiskey/whiskey-review-jacob-rieger-company-kansas-city-whiskey/",
+    "score": 77,
+    "scale": "100",
+    "nose": "Subtle sweet berries reminiscent of a dessert wine, cranberry sauce, caramel and autumn spices (cinnamon, nutmeg, clove).",
+    "palate": "Soft honey-butter sweetness first, then growing heat and a charred crème brûlée caramel note.",
+    "finish": "Reviewer found it harsh and falling short of the nose's promise.",
+    "summary": "Above average for the price; best suited to classic cocktails.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": "Components 4+ years",
+   "mash_bill": "Blend of straight bourbon, straight rye and light corn whiskey, plus 15-year oloroso sherry",
+   "cask": "Oloroso sherry (Williams & Humbert) component",
+   "region": "Kansas City, Missouri",
+   "source_url": "https://www.jriegerco.com/our-spirits/kansas-city-whiskey"
+  },
+  "flavor_terms": [
+   "sherry",
+   "caramel",
+   "butterscotch",
+   "dried fruit",
+   "almond",
+   "bitter chocolate",
+   "rye spice",
+   "cranberry",
+   "honey butter",
+   "cinnamon"
+  ],
+  "confidence": "high",
+  "notes": "Critic review is from 2016 and may reflect an earlier batch."
+ },
+ {
+  "id": "j-rieger-bottled-in-bond-rye",
+  "producer": {
+   "nose": "Caramelized orange and fresh bread, with orange blossom and cut grass.",
+   "palate": "Toasted cedar, five spice, sunflower seed and cinnamon; mid-palate of chocolate cherries and buttered popcorn with cherry-cola jam character.",
+   "finish": "Long and drier: sage, mint and a little toasted coconut.",
+   "summary": "Pot-distilled limited annual bottled-in-bond rye; 6 years on producer page.",
+   "source_url": "https://www.jriegerco.com/our-spirits/straight-rye-whiskey-bottled-in-bond"
+  },
+  "critics": [
+   {
+    "source": "The Right Spirit (Mark J)",
+    "source_url": "https://the-right-spirit.com/2023/05/26/riegers-bottled-in-bond-rye/",
+    "score": null,
+    "scale": null,
+    "nose": "Dry yet syrupy, with rye grain and grass, brandied dark cherry, sanded oak, baking spice and a faint creosote note.",
+    "palate": "Dark cherry and caramel with baked apricot, syrupy texture and creosote undertone.",
+    "finish": "Lingering dark cherry, creosote-caramel and syrupy chocolate with gentle heat.",
+    "summary": "Rated 'Yes' (worth buying); decadent, approachable and distinctive; 2022 release, 6 yr, 100 proof.",
+    "year": 2023
+   },
+   {
+    "source": "WhiskyCast",
+    "source_url": "https://whiskycast.com/ratings/j-rieger-co-2021-bottled-in-bond-rye/",
+    "score": 93,
+    "scale": null,
+    "nose": "Baking spice, toasted oak, caramel, vanilla, honey, baking chocolate, dried fruit and maple.",
+    "palate": "Thick and spicy: clove, cinnamon, black pepper, then cocoa, honey, toasted oak and dried fruit.",
+    "finish": "Long, spicy and warming.",
+    "summary": "93 points; scale not stated on the page. 2021 inaugural release, nearly six years old, 50% ABV.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "6 years",
+   "mash_bill": "96% rye, 4% malted barley (producer)",
+   "cask": "New charred white oak",
+   "region": "Kansas City, Missouri",
+   "source_url": "https://www.jriegerco.com/our-spirits/straight-rye-whiskey-bottled-in-bond"
+  },
+  "flavor_terms": [
+   "caramelized orange",
+   "cherry",
+   "baking spice",
+   "cinnamon",
+   "caramel",
+   "cedar",
+   "dark chocolate",
+   "creosote",
+   "toasted oak",
+   "honey"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gives 6 years (input says 4+). Release years vary (2021, 2022); mash bill from one source (a reviewer said 4% malted rye) so treat as approximate. Producer-page awards (SFWSC gold, 94 UCS) not recorded as critic entries."
+ },
+ {
+  "id": "j-rieger-monogram",
+  "producer": {
+   "nose": "2023 edition: buttered popcorn, French toast, maple, smoky cedar, woody tobacco, black pepper, caramelized orange, hint of tropical fruit.",
+   "palate": null,
+   "finish": null,
+   "summary": "Limited solera-style blend of Kansas City whiskey, bourbon, rye and corn whiskey with oloroso sherry; 2026 edition described as bigger and bolder than 2025.",
+   "source_url": "https://www.jriegerco.com/our-spirits/monogram-whiskey"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash (Charles Steele)",
+    "source_url": "https://thewhiskeywash.com/whiskey-reviews/review-j-rieger-co-monogram-whiskey-2025/",
+    "score": 8,
+    "scale": "10",
+    "nose": "Cherries jubilee, baked pie crust cinnamon, warm oak, green apple, ripe peach and dark fruit compote.",
+    "palate": "Light cigar smoke, bright red wine notes, dark molasses, cigar box and baking chocolate.",
+    "finish": "Oily texture, lasting dark cherry and plum with a trace of white sugar.",
+    "summary": "2025 Solera Reserve, mahogany colour.",
+    "year": 2025
+   },
+   {
+    "source": "The Whiskey Wash (Suzanne Bayard)",
+    "source_url": "https://thewhiskeywash.com/american-whiskey/whiskey-review-j-rieger-co-2023-monogram-kansas-city-whiskey-solera-reserve/",
+    "score": null,
+    "scale": null,
+    "nose": "Sweet caramel snickerdoodle, marshmallow, maple and graham cracker, shifting to buttered popcorn and some sulfur/shoe polish.",
+    "palate": "Sherry-led: toasted pecan, oxidized apple, yellow peach, toasted coconut, golden raisin, lemon zest.",
+    "finish": "Long: yellow plum, graham cracker, pencil shavings, campfire smoke.",
+    "summary": "2023 release; page shows a 5/5 style rating but scale unclear, so not recorded as score; reviewer ambivalent on the flavor combination.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": "Blend of Kansas City whiskey, straight bourbon, straight rye, light corn whiskey",
+   "cask": "Solera of old casks plus 15-year oloroso sherry",
+   "region": "Kansas City, Missouri",
+   "source_url": "https://www.jriegerco.com/our-spirits/monogram-whiskey"
+  },
+  "flavor_terms": [
+   "buttered popcorn",
+   "maple",
+   "sherry",
+   "cherry",
+   "caramel",
+   "cedar",
+   "tobacco",
+   "dark fruit",
+   "molasses",
+   "baking chocolate"
+  ],
+  "confidence": "medium",
+  "notes": "Release-specific bottling: producer notes are for 2023 edition, critic scores for 2025 (8/10) and 2023 (unscored). Different years taste different."
+ },
+ {
+  "id": "still-630-due-process-bourbon",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Only Still 630 pages found were Due Process Cask Strength single barrel (130.6 proof, over 5 yrs) and a Small Batch Missouri bourbon (90 proof); neither matches the 92-proof Due Process listing, so nothing recorded. No critic reviews found. Further searching blocked by search budget."
+ },
+ {
+  "id": "matanzas-creek-sauvignon-blanc",
+  "producer": {
+   "nose": "Lime and lemon, leaf, white nectarine, white flowers and bosc pear.",
+   "palate": "Key lime, nectarine, honeysuckle and kumquat; light-to-medium body with bright, balanced acidity.",
+   "finish": null,
+   "summary": "2023 Sonoma County; 97% Sauvignon Blanc, 3% Semillon.",
+   "source_url": "https://www.wine.com/product/matanzas-creek-sonoma-county-sauvignon-blanc-2023/1908729"
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator (via wine.com)",
+    "source_url": "https://www.wine.com/product/matanzas-creek-sonoma-county-sauvignon-blanc-2023/1908729",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": "Juicy apple, peach and ripe melon with lemon, pomelo and a touch of fresh ginger.",
+    "finish": null,
+    "summary": "Described as exuberant and refreshing.",
+    "year": 2023
+   },
+   {
+    "source": "Jeb Dunnuck (via wine.com)",
+    "source_url": "https://www.wine.com/product/matanzas-creek-sonoma-county-sauvignon-blanc-2023/1908729",
+    "score": 91,
+    "scale": "100",
+    "nose": "Lifted white grapefruit zest and piney fresh herbs.",
+    "palate": "Floats lightly with a delicate floral touch and fresh acidity.",
+    "finish": null,
+    "summary": null,
+    "year": 2023
+   },
+   {
+    "source": "Tasting Panel (via wine.com)",
+    "source_url": "https://www.wine.com/product/matanzas-creek-sonoma-county-sauvignon-blanc-2023/1908729",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": "Pear, melon and citrus with dried herb and wildflower hints.",
+    "finish": null,
+    "summary": "Intricate but harmonious.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 12.8,
+   "proof": null,
+   "age": null,
+   "mash_bill": "97% Sauvignon Blanc, 3% Semillon (2023)",
+   "cask": null,
+   "region": "Sonoma County, California",
+   "source_url": "https://www.wine.com/product/matanzas-creek-sonoma-county-sauvignon-blanc-2023/1908729"
+  },
+  "flavor_terms": [
+   "lime",
+   "lemon",
+   "white nectarine",
+   "white flowers",
+   "pear",
+   "honeysuckle",
+   "kumquat",
+   "grapefruit",
+   "melon",
+   "fresh herbs"
+  ],
+  "confidence": "high",
+  "notes": "2023 vintage, all via a single retailer page (wine.com). Page ABV 12.8 differs from input 13.5. Wine Enthusiast 2024 page was rate-limited and not read."
+ },
+ {
+  "id": "unshackled-sauvignon-blanc",
+  "producer": {
+   "nose": "Gooseberry, lychee and white flowers.",
+   "palate": "Crisp acidity with soft rich mouthfeel; ripe pineapple, crisp pear.",
+   "finish": "Gooseberry.",
+   "summary": "2021 vintage; page lists a blend of Albariño, Malvasia Bianca and Chardonnay.",
+   "source_url": "https://www.wine.com/product/the-prisoner-wine-company-unshackled-sauvignon-blanc-2021/1135411"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 14,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.wine.com/product/the-prisoner-wine-company-unshackled-sauvignon-blanc-2021/1135411"
+  },
+  "flavor_terms": [
+   "gooseberry",
+   "lychee",
+   "white flowers",
+   "pineapple",
+   "pear"
+  ],
+  "confidence": "low",
+  "notes": "Only retailer-reproduced producer copy (2021 vintage, The Prisoner Wine Co. Unshackled). Page ABV 14 differs from input 13 and the blend listed is not pure Sauvignon Blanc; verify label/vintage. Wine Enthusiast and Wine Spectator pages (2020) not read: rate-limited or paywalled."
+ },
+ {
+  "id": "cloudy-bay-sauvignon-blanc",
+  "producer": {
+   "nose": "Restrained and less tropical than earlier vintages, opening to citrus, lime leaf and apricot.",
+   "palate": "Intense with passionfruit, citrus and a saline note.",
+   "finish": "Fresh-squeezed lemon acidity.",
+   "summary": "2024 vintage winemaker notes via retailer.",
+   "source_url": "https://www.wine.com/product/cloudy-bay-sauvignon-blanc-2024/2613905"
+  },
+  "critics": [
+   {
+    "source": "Decanter (Emma Jenkins MW)",
+    "source_url": "https://www.decanter.com/wine-reviews/new-zealand/marlborough/cloudy-bay-sauvignon-blanc-marlborough-new-zealand-2024-97362/",
+    "score": 94,
+    "scale": "100",
+    "nose": "Grapefruit, sweet lime and jalapeño.",
+    "palate": "Fine texture, bright citrus, fresh herbs, a touch of tomato stalk.",
+    "finish": null,
+    "summary": "Fragrant, juicy wine from a very dry vintage.",
+    "year": 2025
+   },
+   {
+    "source": "Decanter (David Williams)",
+    "source_url": "https://www.decanter.com/wine-reviews/new-zealand/marlborough/cloudy-bay-sauvignon-blanc-marlborough-new-zealand-2024-97362/",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": "Energetic and clear, with guava, citrus tang and blackcurrant leaf.",
+    "finish": null,
+    "summary": "Still a luminous star of the style.",
+    "year": 2025
+   },
+   {
+    "source": "Wine Advocate (via wine.com)",
+    "source_url": "https://www.wine.com/product/cloudy-bay-sauvignon-blanc-2024/2613905",
+    "score": 94,
+    "scale": "100",
+    "nose": "Green apple and a salsa-verde herbal note.",
+    "palate": "Punchy, crunchy and high acid with chalky mid-palate texture.",
+    "finish": null,
+    "summary": null,
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://www.decanter.com/wine-reviews/new-zealand/marlborough/cloudy-bay-sauvignon-blanc-marlborough-new-zealand-2024-97362/"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "lime",
+   "passionfruit",
+   "guava",
+   "fresh herbs",
+   "blackcurrant leaf",
+   "apricot",
+   "green apple",
+   "lemon",
+   "saline"
+  ],
+  "confidence": "high",
+  "notes": "2024 vintage. ABV 13.5 per Decanter and wine.com (input says 13). Wine Spectator page for 2024 is paywalled (score not visible)."
+ },
+ {
+  "id": "cloudy-bay-te-koko-sauvignon-blanc",
+  "producer": {
+   "nose": "Citrus, stone fruit and exotic florals.",
+   "palate": "Grapefruit, white nectarine, lemon curd and beeswax; tightly focused with barrel-fermented texture.",
+   "finish": "Nectarine, glace fruit and light smoky oak, with jasmine, honeysuckle and pollen.",
+   "summary": "2015 vintage winemaker notes via retailer.",
+   "source_url": "https://www.wine.com/product/cloudy-bay-te-koko-sauvignon-blanc-2015/415325"
+  },
+  "critics": [
+   {
+    "source": "Decanter (via wine.com)",
+    "source_url": "https://www.wine.com/product/cloudy-bay-te-koko-sauvignon-blanc-2015/415325",
+    "score": 95,
+    "scale": "100",
+    "nose": "Rich creamy oak.",
+    "palate": null,
+    "finish": null,
+    "summary": "Good balance and has aged well in bottle.",
+    "year": null
+   },
+   {
+    "source": "Wine Advocate (via wine.com)",
+    "source_url": "https://www.wine.com/product/cloudy-bay-te-koko-sauvignon-blanc-2015/415325",
+    "score": 93,
+    "scale": "100",
+    "nose": "Pungent with passion fruit.",
+    "palate": "Great concentration.",
+    "finish": null,
+    "summary": null,
+    "year": null
+   },
+   {
+    "source": "Drinkhacker (Christopher Null)",
+    "source_url": "https://www.drinkhacker.com/2025/02/05/review-2021-cloudy-bay-sauvignon-blanc-te-koko/",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Coconut, toasted anise seed, sesame oil, Meyer lemon, sugared grapefruit; creamy body.",
+    "finish": null,
+    "summary": "Graded A- (about 9/10 per the page); 2021 vintage, $65.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": 14,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Barrel fermented",
+   "region": "Marlborough",
+   "source_url": "https://www.wine.com/product/cloudy-bay-te-koko-sauvignon-blanc-2015/415325"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "white nectarine",
+   "lemon curd",
+   "beeswax",
+   "smoky oak",
+   "jasmine",
+   "honeysuckle",
+   "passion fruit",
+   "coconut",
+   "meyer lemon"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes and Decanter/Wine Advocate scores are for the 2015 vintage (ABV 14 then; input says 13); Drinkhacker is 2021. Cloudy Bay's own site page was not found."
+ },
+ {
+  "id": "kim-crawford-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "whitehaven-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "matua-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "dog-point-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "greywacke-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "greywacke-wild-sauvignon",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "craggy-range-te-muna-road-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "villa-maria-private-bin-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "villa-maria-reserve-wairau-valley-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "brancott-estate-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "oyster-bay-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "starborough-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "rapaura-springs-classic-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "rapaura-springs-reserve-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "allan-scott-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "nautilus-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ },
+ {
+  "id": "saint-clair-family-estate-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch rate-limited/blocked; guessed producer URLs returned 404/403."
+ }
+]

@@ -8,6 +8,7 @@ import { hydrateCatalog } from "./catalog-pack.js";
 import { refreshCatalog, computeFit, isVisible } from "./catalog-engine.js";
 import { enrichOne, downloadImage, isSameBottle } from "./image-enrich.js";
 import { parseBarcode, lookupOpenFoodFacts as fetchOffProduct } from "./barcode.js";
+import { expertBrief, explainFromNotes, axisTargets, linkCatalogRecord } from "./expert-match.js";
 
 // The reference catalog is read-only data. It used to be compiled into this script
 // (~700 KB of literals parsed on every cold start); it now ships as the static
@@ -72,6 +73,8 @@ async function routeApi(request, url, env) {
   if (pathname === "/api/catalog/recommended" && method === "GET") return catalogRecommended(url, env);
   if (pathname === "/api/catalog/browse" && method === "GET") return catalogBrowse(url, env);
   if (pathname === "/api/catalog/adopt" && method === "POST") return catalogAdopt(request, env, url);
+  const catalogItemMatch = pathname.match(/^\/api\/catalog\/item\/([a-z0-9-]{1,120})$/);
+  if (catalogItemMatch && method === "GET") return catalogItem(catalogItemMatch[1], url, env);
   if (pathname === "/api/images/status" && method === "GET") return imageStatus(env, url.searchParams.get("scope") || "visible");
   if (pathname === "/api/images/review" && method === "GET") return imageReview(env);
   if (pathname === "/api/images/enrich" && method === "POST") return enrichImages(request, env);
@@ -421,7 +424,7 @@ async function getBottle(id, env, url) {
   // Everything this page shows — the bottle, its tastings, the palate inputs and the
   // liked/disliked lists the match is scored against — in one round trip. It used to
   // be about ten awaits in a row.
-  const [bottleRows, palBottles, tagRows, palTastings, palTastingTags, statusRows, tastings, bottleTastingTags, likedRows, dislikedRows, wineRows, likedWineRows, brandRows = []] = await batch(env, [
+  const [bottleRows, palBottles, tagRows, palTastings, palTastingTags, statusRows, tastings, bottleTastingTags, likedRows, dislikedRows, wineRows, likedWineRows, evidenceRows, brandRows = []] = await batch(env, [
     ["SELECT b.*, d.name as distillery_name, d.city as distillery_city, d.state_region as distillery_state, d.country as distillery_country, d.lat as distillery_lat, d.lon as distillery_lon, d.is_sourced_whiskey, d.confidence as distillery_confidence, d.notes as distillery_notes FROM bottles b LEFT JOIN distilleries d ON d.id = b.distillery_id WHERE b.id = ?", id],
     ...palateStatements(profileId),
     [STATUS_SQL, profileId],
@@ -432,6 +435,7 @@ async function getBottle(id, env, url) {
     [DISLIKED_SQL, profileId],
     ["SELECT * FROM wine_palate_dimensions WHERE profile_id = ?", profileId],
     likedWineStatement(profileId),
+    evidenceStatement(profileId),
     // Optional statements go LAST: when absent, the trailing destructured name is
     // simply undefined, whereas one in the middle would shift every result after it.
     ...(profileId === 1 ? [["SELECT brand, sentiment FROM brand_signals"]] : [])
@@ -465,7 +469,16 @@ async function getBottle(id, env, url) {
     match = scoreMatch({ flavorTags: withTags.flavor_tags, proof: withTags.proof, brand: withTags.brand, category: withTags.category }, profile, brandSignals, likedWithTags.filter((b) => b.id !== id), dislikedWithTags.filter((b) => b.id !== id));
   }
 
-  return json({ bottle: withTags, tastings: fullTastings, match, wineMatch });
+  // Cited producer/critic notes for this bottle, when it maps to a researched catalog record.
+  const link = linkCatalogRecord(await catalog(env).catch(() => []), withTags);
+  const rec = link?.record || null;
+  const expert = rec?.expert || null;
+  const notesMatch = expert ? explainFromNotes(expert, {
+    palate: profile, targets: axisTargets(evidenceFromRows(evidenceRows), withTags.category), category: withTags.category
+  }) : null;
+
+  return json({ bottle: withTags, tastings: fullTastings, match, wineMatch, expert, notes_match: notesMatch, catalog_id: rec?.id || null,
+    catalog_link: rec ? { id: rec.id, name: rec.name, how: link.how } : null });
 }
 
 // Bottles this profile has marked positively / negatively, used for the
@@ -966,7 +979,8 @@ function catalogPublic(r) {
     serving: r.research?.serving || null,
     price: r.typical_price_usd?.typical ?? null,
     image_url: r.image?.primary_url || null,
-    lifecycle: r.lifecycle
+    lifecycle: r.lifecycle,
+    expert: expertBrief(r.expert)
   };
 }
 
@@ -1928,24 +1942,41 @@ function referenceCandidate(r) {
   for (const [key,axis] of Object.entries(map)) if (typeof tp[key] === 'number') dimensions[axis] = tp[key];
   return { name:r.name, category, style:category === 'wine' ? 'Sauvignon Blanc' : r.subcategory, dimensions };
 }
+async function catalogItem(id, url, env) {
+  const records = await catalog(env);
+  const rec = records.find((r) => r.id === id);
+  if (!rec) return json({ error: "Not found" }, 404);
+  const ctx = await catalogContext(env, await resolveProfileId(url, env));
+  const [item] = markAdoptedFrom(await personalizedCatalog(url, env, [rec], ctx), ctx.owned);
+  const [withImage] = withImagesFrom([item], ctx.have);
+  return json({ item: withImage, expert: rec.expert || null });
+}
 async function personalizedCatalog(url,env,records,ctx = null) {
   const { evidence, legacy, wineRows } = ctx || await catalogContext(env, await resolveProfileId(url, env));
   return records.map(r => {
     const candidate = referenceCandidate(r);
     const fit = scorePour(candidate,evidence);
     let score=fit.score, why=fit.reasons.join('. '), concern=fit.concerns.join('. ');
+    // Cited producer/critic descriptors: what the bottle actually tastes like per its sources.
+    const notes = explainFromNotes(r.expert, { palate: legacy, targets: axisTargets(evidence, candidate.category), category: candidate.category });
     // Existing explicitly stated tastes remain useful before the first questionnaire.
     if (score == null && candidate.category === 'wine') {
       const result = scoreWine({varietal:'sauvignon_blanc',dimensions:{fruit_intensity:candidate.dimensions.fruit, ...candidate.dimensions, herbal_green:candidate.dimensions.herbal}},wineRows,[]);
       score = result.score;
       why = score != null ? 'Based on your saved wine preferences; rate a pour to refine this estimate.' : '';
     } else if (score == null && candidate.category !== 'wine') {
-      const tags = candidateTags(candidate);
+      // Prefer flavor tags the sources actually used over ones inferred from model dimensions.
+      const tags = notes.tags.length ? notes.tags : candidateTags(candidate);
       const result = scoreMatch({flavorTags:tags,category:candidate.category},legacy,[],[],[]);
       score = tags.some(t => legacy[t]) ? result.matchPercent : null;
-      why = score != null ? 'Based on your saved flavor preferences; ten-question ratings will refine this estimate.' : '';
+      why = score != null ? (notes.tags.length ? 'Based on the flavors critics and the producer describe, scored against your saved preferences.' : 'Based on your saved flavor preferences; ten-question ratings will refine this estimate.') : '';
+    } else if (score != null && notes.signal != null) {
+      // Sourced flavors nudge a dimension-model score by at most ±5, never override it.
+      score = Math.max(0, Math.min(100, Math.round(score + notes.signal * 5)));
     }
-    return {...catalogPublic(r), jd_fit:score, why:why || 'No matching taste evidence yet. Rate this category to learn your preferences.', concern:concern || null, summary:null, fit_label:fit.confidence};
+    if (notes.reasons.length) why = [why, ...notes.reasons].filter(Boolean).join('. ');
+    if (notes.concerns.length) concern = [concern, ...notes.concerns].filter(Boolean).join('. ');
+    return {...catalogPublic(r), jd_fit:score, why:why || 'No matching taste evidence yet. Rate this category to learn your preferences.', concern:concern || null, summary:null, fit_label:fit.confidence, notes_reasons:notes.reasons, notes_concerns:notes.concerns};
   });
 }
 function candidateTags(candidate) {

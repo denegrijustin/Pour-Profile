@@ -1,0 +1,1101 @@
+[
+ {
+  "id": "kendall-jackson-vintner-s-reserve-sauvignon-blanc",
+  "producer": {
+   "nose": "Honeysuckle, ripe pear and lemongrass, with a touch of grapefruit.",
+   "palate": "Medium-bodied and crisp, with tropical grapefruit, fig, honeysuckle and a mineral thread.",
+   "finish": null,
+   "summary": "Aromatic, crisp, medium-bodied style (winemaker notes for the 2021 vintage as shown on Wine.com).",
+   "source_url": "https://www.wine.com/product/kendall-jackson-vintners-reserve-sauvignon-blanc-2021/1027388"
+  },
+  "critics": [
+   {
+    "source": "Wilfred Wong (Wine.com)",
+    "source_url": "https://www.wine.com/product/kendall-jackson-vintners-reserve-sauvignon-blanc-2021/1027388",
+    "score": 89,
+    "scale": "100",
+    "nose": "Dried herbs, earthiness and citrus peel.",
+    "palate": "Layered with good texture.",
+    "finish": null,
+    "summary": "Herbal, citrus-peel style with a nicely textured palate.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc with a small portion of Semillon",
+   "cask": null,
+   "region": "California",
+   "source_url": "https://www.wine.com/product/kendall-jackson-vintners-reserve-sauvignon-blanc-2021/1027388"
+  },
+  "flavor_terms": [
+   "honeysuckle",
+   "pear",
+   "lemongrass",
+   "grapefruit",
+   "fig",
+   "citrus peel",
+   "dried herbs",
+   "earthy",
+   "mineral"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2021 (Wine.com page; critic is Wine.com's in-house reviewer). Wine Enthusiast 2023 review page could not be fetched (redirect loop)."
+ },
+ {
+  "id": "napa-cellars-sauvignon-blanc",
+  "producer": {
+   "nose": "Lemon meringue, tangerine and green apple.",
+   "palate": "Medium-bodied; grapefruit-led with melon and tropical fruit, bright acidity and some roundness.",
+   "finish": "Clean, lingering and refreshing.",
+   "summary": "Winemaker notes for the 2024 vintage (via Wine.com).",
+   "source_url": "https://www.wine.com/product/napa-cellars-sauvignon-blanc-2024/3607351"
+  },
+  "critics": [
+   {
+    "source": "James Suckling",
+    "source_url": "https://www.wine.com/product/napa-cellars-sauvignon-blanc-2024/3607351",
+    "score": 94,
+    "scale": "100",
+    "nose": "Lifted green apple, jalapeño, white pepper and fennel.",
+    "palate": "Bright acidity with a rounded feel.",
+    "finish": null,
+    "summary": "Called well balanced.",
+    "year": 2024
+   },
+   {
+    "source": "Wine Enthusiast",
+    "source_url": "https://www.wine.com/product/napa-cellars-sauvignon-blanc-2022/1369512",
+    "score": 91,
+    "scale": null,
+    "nose": null,
+    "palate": "Ripe melon and stone fruit held up by snappy acidity; fairly full-bodied.",
+    "finish": null,
+    "summary": "Reviewer suggests it can stand in for Chardonnay with richer dishes. Different vintage (2022); scale assumed but not stated on page.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 14.1,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc with some Semillon",
+   "cask": null,
+   "region": "Napa Valley",
+   "source_url": "https://www.wine.com/product/napa-cellars-sauvignon-blanc-2024/3607351"
+  },
+  "flavor_terms": [
+   "lemon meringue",
+   "tangerine",
+   "green apple",
+   "grapefruit",
+   "melon",
+   "tropical fruit",
+   "jalapeño",
+   "white pepper",
+   "fennel",
+   "stone fruit"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes and Suckling score are 2024 vintage; Wine Enthusiast review is 2022 vintage. ABV 14.1% is the 2024 figure from one retailer page."
+ },
+ {
+  "id": "peju-sauvignon-blanc",
+  "producer": {
+   "nose": "Pineapple, passion fruit, grapefruit and lychee.",
+   "palate": "Lemon curd, green apple and apricot with marked minerality.",
+   "finish": "Fresh and clean.",
+   "summary": "Winemaker notes for the 2019 Napa Valley bottling (via Wine.com).",
+   "source_url": "https://www.wine.com/product/peju-winery-napa-valley-sauvignon-blanc-2019/592005"
+  },
+  "critics": [
+   {
+    "source": "James Suckling",
+    "source_url": "https://www.wine.com/product/peju-winery-napa-valley-sauvignon-blanc-2019/592005",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": "Grapefruit and lime with stony notes and some white peach; medium-bodied.",
+    "finish": null,
+    "summary": "Fruity, bright style.",
+    "year": 2019
+   },
+   {
+    "source": "Wine Enthusiast",
+    "source_url": "https://www.wine.com/product/peju-winery-napa-valley-sauvignon-blanc-2019/592005",
+    "score": 90,
+    "scale": null,
+    "nose": null,
+    "palate": "Lively acidity carrying grapefruit, fig and dried herbs.",
+    "finish": "Lengthy.",
+    "summary": "Fresh, straightforward and light on its feet. Scale not stated on page.",
+    "year": 2019
+   }
+  ],
+  "facts": {
+   "abv": 13.8,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Napa Valley",
+   "source_url": "https://www.wine.com/product/peju-winery-napa-valley-sauvignon-blanc-2019/592005"
+  },
+  "flavor_terms": [
+   "pineapple",
+   "passion fruit",
+   "grapefruit",
+   "lychee",
+   "lemon curd",
+   "green apple",
+   "apricot",
+   "lime",
+   "white peach",
+   "fig"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2019. Peju also makes a Legacy Collection Sauvignon Blanc; these notes are for the standard Napa Valley bottling."
+ },
+ {
+  "id": "elizabeth-spencer-sauvignon-blanc",
+  "producer": {
+   "nose": "Passionfruit and lemon rind leading into citrus blossom.",
+   "palate": "Tropical fruit and apricot with minerality adding complexity.",
+   "finish": "Stays fresh through the end.",
+   "summary": "Winemaker notes for the 2019 Mendocino bottling (via Wine.com).",
+   "source_url": "https://www.wine.com/product/elizabeth-spencer-mendocino-sauvignon-blanc-2019/649185"
+  },
+  "critics": [
+   {
+    "source": "Jeb Dunnuck",
+    "source_url": "https://www.wine.com/product/elizabeth-spencer-mendocino-sauvignon-blanc-2019/649185",
+    "score": 91,
+    "scale": "100",
+    "nose": "Peach, honeysuckle, melon and white flowers.",
+    "palate": "Builds richness with some toast; medium to full body.",
+    "finish": null,
+    "summary": "Described as a white Bordeaux-style take; suggested drinking within 2-3 years of review.",
+    "year": 2019
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Mendocino",
+   "source_url": "https://www.wine.com/product/elizabeth-spencer-mendocino-sauvignon-blanc-2019/649185"
+  },
+  "flavor_terms": [
+   "passionfruit",
+   "lemon rind",
+   "citrus blossom",
+   "tropical fruit",
+   "apricot",
+   "mineral",
+   "peach",
+   "honeysuckle",
+   "melon",
+   "toast"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2019."
+ },
+ {
+  "id": "long-meadow-ranch-sauvignon-blanc",
+  "producer": {
+   "nose": "Lemongrass, pomelo and kiwi berry.",
+   "palate": "Grapefruit zest and passion fruit.",
+   "finish": "Fine minerality.",
+   "summary": "Crisp, clean, elegant style from a long, cool season (2023 winemaker notes via Wine.com).",
+   "source_url": "https://www.wine.com/product/long-meadow-ranch-sauvignon-blanc-2023/1748096"
+  },
+  "critics": [
+   {
+    "source": "James Suckling",
+    "source_url": "https://www.wine.com/product/long-meadow-ranch-sauvignon-blanc-2023/1748096",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": "Sliced apple and lemon with a hint of concrete; creamy texture.",
+    "finish": "Clean and crunchy.",
+    "summary": null,
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Rutherford, Napa Valley",
+   "source_url": "https://www.wine.com/product/long-meadow-ranch-sauvignon-blanc-2023/1748096"
+  },
+  "flavor_terms": [
+   "lemongrass",
+   "pomelo",
+   "kiwi",
+   "grapefruit",
+   "passion fruit",
+   "mineral",
+   "apple",
+   "lemon",
+   "creamy"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2023."
+ },
+ {
+  "id": "sinegal-estate-sauvignon-blanc",
+  "producer": {
+   "nose": "White peach, spiced apple and mandarin with hints of cherry blossom and wet stone.",
+   "palate": "Asian pear, apricot and lemon zest, then nectarine and lychee around a sweet core.",
+   "finish": "Long and silky, driven by vibrant acidity.",
+   "summary": "Winemaker notes for the 2021 vintage (via Wine.com).",
+   "source_url": "https://www.wine.com/product/sinegal-estate-sauvignon-blanc-2021/1278797"
+  },
+  "critics": [
+   {
+    "source": "Jeb Dunnuck",
+    "source_url": "https://www.wine.com/product/sinegal-estate-sauvignon-blanc-2021/1278797",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": "Bright citrus, honeyed lime and ripe grapefruit with light toast and spice; medium-bodied and lively.",
+    "finish": null,
+    "summary": "Suggested drinking over the following couple of years.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Napa Valley",
+   "source_url": "https://www.wine.com/product/sinegal-estate-sauvignon-blanc-2021/1278797"
+  },
+  "flavor_terms": [
+   "white peach",
+   "apple",
+   "mandarin",
+   "wet stone",
+   "asian pear",
+   "apricot",
+   "lemon zest",
+   "nectarine",
+   "lychee",
+   "grapefruit"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2021. ABV and oak details on the page summary looked unreliable (summary mentioned Sonoma sites for a Napa estate wine), so they were left out."
+ },
+ {
+  "id": "illumination-sauvignon-blanc",
+  "producer": {
+   "nose": "Grapefruit peel, lemon curd and white peach over ginger tea, wild thyme and clover.",
+   "palate": "Kumquat and guava with wet slate and elderflower; round texture against racy acidity.",
+   "finish": "Long, with marmalade, candied ginger and lemon balm.",
+   "summary": "Winemaker notes for the 2023 vintage (as shown on Wine Express).",
+   "source_url": "https://www.wineexpress.com/illumination-by-quintessa-2023-sauvignon-blanc-napa-sonoma-counties"
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.wineexpress.com/illumination-by-quintessa-2023-sauvignon-blanc-napa-sonoma-counties",
+    "score": 95,
+    "scale": "100",
+    "nose": "Beeswax, honeysuckle and lanolin.",
+    "palate": "Juicy white peach, nectarine and lemon curd on a plush frame.",
+    "finish": null,
+    "summary": "Drinking window given as 2025-2035.",
+    "year": 2023
+   },
+   {
+    "source": "Ken's Wine Guide",
+    "source_url": "https://www.kenswineguide.com/wine_review/Quintessa-2023-Illumination-Sauvignon-Blanc",
+    "score": null,
+    "scale": null,
+    "nose": "Gooseberry and white grapefruit with gardenia, marshmallow and lemon tea.",
+    "palate": "Very light-bodied; lemon tea, grapefruit, saline and lime zest, with passionfruit and white pepper.",
+    "finish": "Dry.",
+    "summary": "Rated 95 on Ken's own scale (scale not stated).",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Napa and Sonoma counties",
+   "source_url": "https://www.wineexpress.com/illumination-by-quintessa-2023-sauvignon-blanc-napa-sonoma-counties"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "lemon curd",
+   "white peach",
+   "ginger",
+   "kumquat",
+   "guava",
+   "elderflower",
+   "beeswax",
+   "gooseberry",
+   "lime zest"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2023. Illumination is Quintessa's Sauvignon Blanc; producer notes taken from a retailer page reproducing them. Region per both sources is Napa/Sonoma rather than generic California."
+ },
+ {
+  "id": "chalk-hill-sauvignon-blanc",
+  "producer": {
+   "nose": "Lemongrass, grapefruit and fresh flowers.",
+   "palate": "Vibrant yet rich, with tropical fruit, grapefruit and minerality.",
+   "finish": "Clean and mineral.",
+   "summary": "Winemaker notes for the 2022 Estate bottling (via Wine.com).",
+   "source_url": "https://www.wine.com/product/chalk-hill-estate-sauvignon-blanc-2022/1273487"
+  },
+  "critics": [
+   {
+    "source": "Wine Enthusiast",
+    "source_url": "https://www.wine.com/product/chalk-hill-estate-sauvignon-blanc-2022/1273487",
+    "score": 94,
+    "scale": null,
+    "nose": null,
+    "palate": "Minerals, dried herbs and a touch of toast, with fennel bulb, cucumber and lime.",
+    "finish": "Long.",
+    "summary": "Scale not stated on page.",
+    "year": 2022
+   },
+   {
+    "source": "Wilfred Wong (Wine.com)",
+    "source_url": "https://www.wine.com/product/chalk-hill-estate-sauvignon-blanc-2022/1273487",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Expressive, with chalky, mineral and dried-herb notes.",
+    "year": 2022
+   },
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.wine.com/product/chalk-hill-estate-sauvignon-blanc-2022/1273487",
+    "score": 90,
+    "scale": "100",
+    "nose": "Honeysuckle, orange blossom and yuzu.",
+    "palate": "Tropical touches of passion fruit, pineapple and candied ginger.",
+    "finish": null,
+    "summary": null,
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 14.6,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc with a little Sauvignon Gris",
+   "cask": null,
+   "region": "Chalk Hill, Sonoma County",
+   "source_url": "https://www.wine.com/product/chalk-hill-estate-sauvignon-blanc-2022/1273487"
+  },
+  "flavor_terms": [
+   "lemongrass",
+   "grapefruit",
+   "tropical fruit",
+   "mineral",
+   "dried herbs",
+   "fennel",
+   "lime",
+   "honeysuckle",
+   "yuzu",
+   "passion fruit"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2022, Chalk Hill Estate Sauvignon Blanc."
+ },
+ {
+  "id": "quivira-fig-tree-vineyard-sauvignon-blanc",
+  "producer": {
+   "nose": "Grapefruit, underripe pear and lemon, with hibiscus and faint macaroon and toasted coconut.",
+   "palate": "Lemon bar, clementine and kumquat wrapped in minerality; acidity rounds through the mid-palate.",
+   "finish": "Fresh, with river-rock minerality.",
+   "summary": "Winemaker notes for the 2022 vintage (via Wine.com).",
+   "source_url": "https://www.wine.com/product/quivira-fig-tree-sauvignon-blanc-2022/1479842"
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.wine.com/product/quivira-fig-tree-sauvignon-blanc-2022/1479842",
+    "score": 94,
+    "scale": "100",
+    "nose": "Dried honeysuckle, lanolin and honeycomb.",
+    "palate": "Mango, peach and citrus core.",
+    "finish": null,
+    "summary": "Complex and aromatic.",
+    "year": 2022
+   },
+   {
+    "source": "The Tasting Panel",
+    "source_url": "https://www.wine.com/product/quivira-fig-tree-sauvignon-blanc-2022/1479842",
+    "score": 92,
+    "scale": null,
+    "nose": "Lanolin, white grapefruit and lemon chiffon.",
+    "palate": "Sleek, with garden herbs.",
+    "finish": null,
+    "summary": "Scale not stated on page.",
+    "year": 2022
+   },
+   {
+    "source": "Wine Enthusiast",
+    "source_url": "https://www.wine.com/product/quivira-fig-tree-sauvignon-blanc-2022/1479842",
+    "score": 91,
+    "scale": null,
+    "nose": "Grapefruit, jalapeño and chopped herbs.",
+    "palate": "Riper pear and tart apple.",
+    "finish": null,
+    "summary": "Called classic Sonoma Sauvignon Blanc. Scale not stated on page.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Dry Creek Valley, Sonoma County",
+   "source_url": "https://www.wine.com/product/quivira-fig-tree-sauvignon-blanc-2022/1479842"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "pear",
+   "lemon",
+   "hibiscus",
+   "clementine",
+   "kumquat",
+   "lanolin",
+   "honeycomb",
+   "mango",
+   "jalapeño"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2022."
+ },
+ {
+  "id": "capture-sauvignon-blanc",
+  "producer": {
+   "nose": "Lime peel, white stone fruit and green apple.",
+   "palate": "Mineral texture with brilliant acidity.",
+   "finish": null,
+   "summary": "Stainless-fermented with about ten months on lees, aimed at varietal purity (2018 Tradition, via Wine.com).",
+   "source_url": "https://www.wine.com/product/capture-tradition-sauvignon-blanc-2018/568313"
+  },
+  "critics": [
+   {
+    "source": "Jeb Dunnuck",
+    "source_url": "https://www.wine.com/product/capture-tradition-sauvignon-blanc-2018/568313",
+    "score": 91,
+    "scale": "100",
+    "nose": "Crisp citrus, lemon and white flowers.",
+    "palate": "Medium-bodied, vibrant and pure.",
+    "finish": null,
+    "summary": "Likened to Bordeaux in style.",
+    "year": 2018
+   },
+   {
+    "source": "Robert Parker's Wine Advocate",
+    "source_url": "https://www.wine.com/product/capture-tradition-sauvignon-blanc-2018/568313",
+    "score": 90,
+    "scale": "100",
+    "nose": "Tarragon, chive and cut grass with kiwi, gooseberry, white peach, flint and lychee.",
+    "palate": "Light-bodied and lively with bright acidity.",
+    "finish": "Long and refreshing.",
+    "summary": null,
+    "year": 2018
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Stainless steel fermentation, about 10 months sur lie",
+   "region": "Sonoma County (Alexander Valley and Lake County fruit)",
+   "source_url": "https://www.wine.com/product/capture-tradition-sauvignon-blanc-2018/568313"
+  },
+  "flavor_terms": [
+   "lime peel",
+   "stone fruit",
+   "green apple",
+   "mineral",
+   "citrus",
+   "white flowers",
+   "tarragon",
+   "gooseberry",
+   "kiwi",
+   "flint"
+  ],
+  "confidence": "medium",
+  "notes": "Assumed the Sonoma County 'Tradition' bottling (vintage 2018, older). Capture also makes a Pine Mountain Sauvignon Blanc; confirm which bottle is held."
+ },
+ {
+  "id": "matthiasson-sauvignon-blanc",
+  "producer": {
+   "nose": "Flinty, with a hint of dried fig.",
+   "palate": "Low alcohol, bracing acidity and a beeswax texture.",
+   "finish": null,
+   "summary": "Producer page for the 2022 Napa Valley Sauvignon Blanc & Semillon, Ryan's Vineyard.",
+   "source_url": "https://www.matthiasson.com/store/2022-matthiasson-napa-valley-sauvignon-blanc-semillon-ryans-vineyard"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc and Semillon blend",
+   "cask": null,
+   "region": "Napa Valley (Ryan's Vineyard)",
+   "source_url": "https://www.matthiasson.com/store/2022-matthiasson-napa-valley-sauvignon-blanc-semillon-ryans-vineyard"
+  },
+  "flavor_terms": [
+   "flint",
+   "dried fig",
+   "beeswax",
+   "grapefruit",
+   "pineapple",
+   "oat straw",
+   "creamy oak"
+  ],
+  "confidence": "medium",
+  "notes": "Vintage 2022. Matthiasson's Napa 'Sauvignon Blanc' is a Sauvignon Blanc/Semillon blend; a retailer (Mission Liquor) also lists grapefruit, pineapple, oat straw and light oak. Not the same wine as the Matthiasson Napa Valley White blend. No critic review found."
+ },
+ {
+  "id": "domaine-vacheron-sancerre",
+  "producer": {
+   "nose": "Grapefruit zest and gunflint.",
+   "palate": "Pure and fresh, with mineral energy and citrus flavors.",
+   "finish": null,
+   "summary": "Classic, clear and energetic Sancerre from flint and chalk soils, farmed organically/biodynamically (2019 notes via Wine.com).",
+   "source_url": "https://www.wine.com/product/domaine-vacheron-sancerre-2019/674960"
+  },
+  "critics": [
+   {
+    "source": "Robert Parker's Wine Advocate",
+    "source_url": "https://www.wine.com/product/domaine-vacheron-sancerre-2019/674960",
+    "score": 93,
+    "scale": "100",
+    "nose": "Ripe peach with cool flinty notes.",
+    "palate": "Full-bodied and intense with lingering salinity.",
+    "finish": "Long and grippy.",
+    "summary": "Already accessible; tasted Feb 2021.",
+    "year": 2019
+   },
+   {
+    "source": "Kevin Day (Opening a Bottle)",
+    "source_url": "https://www.openingabottle.com/domaine-vacheron-inexhaustible-entry-level-sancerre/",
+    "score": null,
+    "scale": null,
+    "nose": "White peach, candied papaya, sea spray, honeysuckle and tarragon.",
+    "palate": "Rounded but muscular, with very persistent flavor.",
+    "finish": null,
+    "summary": "Calls it the domaine's entry-level wine; star rating given on the site's own scale.",
+    "year": 2019
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Sancerre (flint, limestone and marl soils)",
+   "source_url": "https://www.openingabottle.com/domaine-vacheron-inexhaustible-entry-level-sancerre/"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "gunflint",
+   "citrus",
+   "mineral",
+   "peach",
+   "flint",
+   "salinity",
+   "papaya",
+   "honeysuckle",
+   "tarragon"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2019 for all sources. Soil types per both sources include flint and limestone/chalk."
+ },
+ {
+  "id": "alphonse-mellot-la-moussi-re-sancerre",
+  "producer": {
+   "nose": "White flowers and citrus fruit.",
+   "palate": "Lively and refreshing.",
+   "finish": null,
+   "summary": "The domaine's flagship Sancerre; golden with green glints (2022 notes via Wine.com).",
+   "source_url": "https://www.wine.com/product/alphonse-mellot-la-moussiere-sancerre-blanc-2022/1282277"
+  },
+  "critics": [
+   {
+    "source": "Wilfred Wong (Wine.com)",
+    "source_url": "https://www.wine.com/product/alphonse-mellot-la-moussiere-sancerre-blanc-2022/1282277",
+    "score": 91,
+    "scale": "100",
+    "nose": "Herbs and stone fruit.",
+    "palate": "Racy, with satisfying texture.",
+    "finish": null,
+    "summary": "Suggests grilled oysters.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Sancerre",
+   "source_url": "https://www.wine.com/product/alphonse-mellot-la-moussiere-sancerre-blanc-2022/1282277"
+  },
+  "flavor_terms": [
+   "white flowers",
+   "citrus",
+   "herbs",
+   "stone fruit"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2022; only critic found is Wine.com's in-house reviewer."
+ },
+ {
+  "id": "alphonse-mellot-edmond-sancerre",
+  "producer": {
+   "nose": "Honey, vanilla, lemon and brioche with a woody edge.",
+   "palate": "Tender, with aniseed, menthol, licorice and spice.",
+   "finish": "Firm, almost tannic structure.",
+   "summary": "Winemaker notes for the 2020 Cuvée Edmond (via Wine.com).",
+   "source_url": "https://www.wine.com/product/alphonse-mellot-edmond-sancerre-blanc-2020/1701131"
+  },
+  "critics": [
+   {
+    "source": "Antonio Galloni (Vinous)",
+    "source_url": "https://www.wine.com/product/alphonse-mellot-edmond-sancerre-blanc-2020/1701131",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": "Rich, silky and concentrated, with nectarine fruit opening up.",
+    "finish": null,
+    "summary": "Driven by texture rather than aromatics; some alcoholic warmth noted on the finish.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 14.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Fermented partly in barrel and partly in wooden vats",
+   "region": "Sancerre (7 ha south-west facing parcel, Kimmeridgian marl)",
+   "source_url": "https://www.wine.com/product/alphonse-mellot-edmond-sancerre-blanc-2020/1701131"
+  },
+  "flavor_terms": [
+   "honey",
+   "vanilla",
+   "lemon",
+   "brioche",
+   "aniseed",
+   "menthol",
+   "licorice",
+   "spice",
+   "nectarine"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2020."
+ },
+ {
+  "id": "pascal-jolivet-sancerre",
+  "producer": {
+   "nose": "White fruit, orchard blossom and a light smokiness.",
+   "palate": "Dry and mineral, elegant with good depth.",
+   "finish": null,
+   "summary": "Balanced, perfumed style (winemaker notes repeated on 2022 and 2023 Wine.com pages).",
+   "source_url": "https://www.wine.com/product/pascal-jolivet-sancerre-2022/1351743"
+  },
+  "critics": [
+   {
+    "source": "Decanter",
+    "source_url": "https://www.wine.com/product/pascal-jolivet-sancerre-2022/1351743",
+    "score": 90,
+    "scale": "100",
+    "nose": "Grassy citrus.",
+    "palate": "Creamy, mouthcoating texture with a salty streak.",
+    "finish": null,
+    "summary": "Restrained and elegant.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Stainless steel, natural yeasts, 4-6 months on lees",
+   "region": "Sancerre (clay-limestone, limestone and flint soils)",
+   "source_url": "https://www.wine.com/product/pascal-jolivet-sancerre-2023/2028857"
+  },
+  "flavor_terms": [
+   "white fruit",
+   "orchard flowers",
+   "smoky",
+   "mineral",
+   "grassy",
+   "citrus",
+   "creamy",
+   "saline"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2022 (Decanter); vinification details agree across the 2022 and 2023 pages. Wine.com also cites Vinous 90 for the 2024, not recorded here."
+ },
+ {
+  "id": "henri-bourgeois-les-baronnes-sancerre",
+  "producer": {
+   "nose": "Delicate white-fleshed fruit and citrus.",
+   "palate": "Exotic fruit and citrus, understated yet powerful.",
+   "finish": "Persistent and harmonious.",
+   "summary": "Winemaker notes for the 2021 vintage (via Wine.com).",
+   "source_url": "https://www.wine.com/product/henri-bourgeois-sancerre-les-baronnes-blanc-2021/949139"
+  },
+  "critics": [
+   {
+    "source": "Wilfred Wong (Wine.com)",
+    "source_url": "https://www.wine.com/product/henri-bourgeois-sancerre-les-baronnes-blanc-2021/949139",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Dried citrus, green apple and savory spice.",
+    "year": 2021
+   },
+   {
+    "source": "Decanter",
+    "source_url": "https://www.wine.com/product/henri-bourgeois-sancerre-les-baronnes-blanc-2021/949139",
+    "score": 90,
+    "scale": "100",
+    "nose": "Reserved blackcurrant leaf and floral notes.",
+    "palate": "Ripe texture.",
+    "finish": "Long and racy.",
+    "summary": null,
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Sancerre",
+   "source_url": "https://www.wine.com/product/henri-bourgeois-sancerre-les-baronnes-blanc-2021/949139"
+  },
+  "flavor_terms": [
+   "white fruit",
+   "citrus",
+   "exotic fruit",
+   "dried citrus",
+   "green apple",
+   "spice",
+   "blackcurrant leaf",
+   "floral"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2021."
+ },
+ {
+  "id": "henri-bourgeois-jadis-sancerre",
+  "producer": {
+   "nose": "Expressive and complex: exotic fruit, green mango, citrus, honey and menthol.",
+   "palate": "Powerful, round and harmonious with sharp minerality.",
+   "finish": "Very long.",
+   "summary": "Winemaker notes for 2020 (via Wine.com); the domaine's 2023 sheet adds mango, sea air and oyster-shell minerality.",
+   "source_url": "https://www.wine.com/product/henri-bourgeois-sancerre-jadis-2020/1221625"
+  },
+  "critics": [
+   {
+    "source": "Wine Enthusiast",
+    "source_url": "https://www.wine.com/product/henri-bourgeois-sancerre-jadis-2020/1221625",
+    "score": 95,
+    "scale": null,
+    "nose": null,
+    "palate": "Firm and rich with a grapefruit and green apple core.",
+    "finish": null,
+    "summary": "Powerful. Scale not stated on page.",
+    "year": 2020
+   },
+   {
+    "source": "Robert Parker's Wine Advocate",
+    "source_url": "https://www.wine.com/product/henri-bourgeois-sancerre-jadis-2020/1221625",
+    "score": 92,
+    "scale": "100",
+    "nose": "Deep and complex.",
+    "palate": null,
+    "finish": "Delicate phenolic grip.",
+    "summary": "Rated 92+; elegantly muscular.",
+    "year": 2020
+   },
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.wine.com/product/henri-bourgeois-sancerre-jadis-2020/1221625",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": "Round and lush with salty brioche and a mineral vein.",
+    "finish": "Minerality persists.",
+    "summary": null,
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 14.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Aged on lees (about 14 months per Wine.com)",
+   "region": "Sancerre, Chavignol hill (Kimmeridgian marl with fossil oysters)",
+   "source_url": "https://famillebourgeois-sancerre.com/en/vins/sancerre-blanc/jadis-2/"
+  },
+  "flavor_terms": [
+   "exotic fruit",
+   "mango",
+   "citrus",
+   "honey",
+   "menthol",
+   "mineral",
+   "grapefruit",
+   "green apple",
+   "brioche",
+   "oyster shell"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2020 for notes and critics; 2023 producer sheet used for soil (marl agrees with Wine.com). Wine.com also lists James Suckling 92 and Decanter 92."
+ },
+ {
+  "id": "domaine-delaporte-sancerre-chavignol",
+  "producer": {
+   "nose": "Intense and complex: boxwood, rhubarb, blackcurrant and kiwi with light vegetal hints.",
+   "palate": "Soft entry, bright freshness and lively purity.",
+   "finish": "Clean and lingering.",
+   "summary": "Pale gold with green tints (importer technical sheet, 2024 vintage).",
+   "source_url": "https://trialto.kork.ca/bc/en/our-wineries/domaine-delaporte/sancerre-chavignol-blanc/2024/333518"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Temperature-controlled stainless steel, about six months on lees",
+   "region": "Sancerre (Chavignol)",
+   "source_url": "https://trialto.kork.ca/bc/en/our-wineries/domaine-delaporte/sancerre-chavignol-blanc/2024/333518"
+  },
+  "flavor_terms": [
+   "boxwood",
+   "rhubarb",
+   "blackcurrant",
+   "kiwi",
+   "vegetal"
+  ],
+  "confidence": "medium",
+  "notes": "Vintage 2024 producer/importer sheet (Trialto). Wine Enthusiast review of the 2020 exists but its page could not be fetched; no critic text recorded."
+ },
+ {
+  "id": "domaine-laporte-le-rochoy-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Rich and balanced with a fine flinty tang; flint (silex) monopole hillside, organic, stainless steel without malolactic, about five months on fine lees (2019, as described on a retailer page).",
+   "source_url": "https://perrineswine.com/products/laporte-sancerre-le-rochoy"
+  },
+  "critics": [
+   {
+    "source": "Decanter",
+    "source_url": "https://www.decanter.com/wine-reviews/france/loire/domaine-laporte-le-rochoy-terroir-de-silex-sancerre-2022-70742/",
+    "score": null,
+    "scale": null,
+    "nose": "Light lemon.",
+    "palate": "Energetic, with soft yellow plum.",
+    "finish": "Long and crystalline.",
+    "summary": "Score paywalled. Reviewed as 'Le Rochoy Terroir de Silex'.",
+    "year": 2022
+   },
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.winespectator.com/wine/wine-detail/id/1313692/name/domaine-laporte-sancerre-le-rochoy-2023/guest",
+    "score": null,
+    "scale": null,
+    "nose": "Nectarine and salty lime with a hint of smoke.",
+    "palate": null,
+    "finish": null,
+    "summary": "Only an excerpt is visible; score paywalled.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Stainless steel, about 5 months on fine lees, no malolactic",
+   "region": "Sancerre (silex/flint soils)",
+   "source_url": "https://perrineswine.com/products/laporte-sancerre-le-rochoy"
+  },
+  "flavor_terms": [
+   "flint",
+   "lemon",
+   "yellow plum",
+   "nectarine",
+   "lime",
+   "smoke",
+   "saline"
+  ],
+  "confidence": "medium",
+  "notes": "Mixed vintages (2019 producer description, 2022 Decanter, 2023 Wine Spectator); critic scores not visible. Wine Enthusiast pages exist for 2022/2023 but were not fetched (site blocks with a redirect loop)."
+ },
+ {
+  "id": "lucien-crochet-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Could not identify the plain 'Sancerre' cuvée: the domaine's site lists Les Calcaires, Le Chêne Marchand and La Louisonne, and search results were all Le Chêne Marchand. CellarTracker returned 403. Confirm the cuvée on the label."
+ },
+ {
+  "id": "fran-ois-crochet-sancerre",
+  "producer": {
+   "nose": "Fresh and pure, with blackcurrant leaf and gooseberry.",
+   "palate": "Citrus acidity supporting stone fruit and minerality.",
+   "finish": null,
+   "summary": "Called a textbook Sancerre combining power, elegance and purity (UK importer Alliance Wine, 2024 vintage).",
+   "source_url": "https://www.alliancewine.com/domaine-francois-crochet/sancerre-blanc-2024-1190"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Natural-yeast fermentation; 6 months on fine lees in stainless steel, no oak",
+   "region": "Sancerre (mostly caillottes chalk, plus clay-chalk and flint)",
+   "source_url": "https://www.alliancewine.com/domaine-francois-crochet/sancerre-blanc-2024-1190"
+  },
+  "flavor_terms": [
+   "blackcurrant leaf",
+   "gooseberry",
+   "citrus",
+   "stone fruit",
+   "mineral"
+  ],
+  "confidence": "low",
+  "notes": "Vintage 2024; only source is the importer/retailer page. No critic review found for the basic Sancerre blanc (the domaine also makes Exils, Les Amoureuses and Chêne Marchand)."
+ },
+ {
+  "id": "fran-ois-cotat-sancerre-les-monts-damn-s",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "School of Wine & Spirits",
+    "source_url": "https://reviews.schoolofwineandspirits.com/reviews/white-wine/domaine-fran-ois-cotat-sancerre-les-monts-damn-s-2022",
+    "score": null,
+    "scale": null,
+    "nose": "Concentrated citrus zest and white flowers, then ripe gooseberry and flint.",
+    "palate": "Full for the region; citrus, green apple and gooseberry with a waxy texture and toasty lees notes.",
+    "finish": "Long and mineral, ending on a light honeyed note.",
+    "summary": "No numeric score given.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Native-yeast fermentation in old barrels; late harvest",
+   "region": "Sancerre, Les Monts Damnés (Kimmeridgian clay-limestone)",
+   "source_url": "https://reviews.schoolofwineandspirits.com/reviews/white-wine/domaine-fran-ois-cotat-sancerre-les-monts-damn-s-2022"
+  },
+  "flavor_terms": [
+   "citrus zest",
+   "white flowers",
+   "gooseberry",
+   "flint",
+   "green apple",
+   "waxy",
+   "toasty",
+   "honeyed",
+   "mineral"
+  ],
+  "confidence": "medium",
+  "notes": "Vintage 2022. No producer tasting notes found (domaine publishes none online); facts come from the review page."
+ },
+ {
+  "id": "pascal-cotat-sancerre-la-grande-c-te",
+  "producer": {
+   "nose": "Lime zest, fresh pear and light herbs.",
+   "palate": "Juicy and penetrating; textured but very dry, with stone fruit, crushed stone and light pepper.",
+   "finish": null,
+   "summary": "Very mineral (2020 notes labelled winemaker notes on Wine.com).",
+   "source_url": "https://www.wine.com/product/pascal-cotat-sancerre-la-grande-cote-2020/791926"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Indigenous-yeast fermentation in very old demi-muids; unfined and unfiltered",
+   "region": "Sancerre, Chavignol (Kimmeridgian limestone and clay)",
+   "source_url": "https://www.hitimewine.net/pascal-cotat-2024-sancerre-la-grande-cote-358301"
+  },
+  "flavor_terms": [
+   "lime zest",
+   "pear",
+   "herbs",
+   "stone fruit",
+   "crushed stone",
+   "pepper",
+   "flint",
+   "passion fruit",
+   "oyster shell"
+  ],
+  "confidence": "medium",
+  "notes": "Vintage 2020 notes; vinification agreed by two retailer pages (Empire Wine 2022, Hi-Time 2024), which also mention floral/flint and passion fruit/oyster-shell notes. No critic review of the exact cuvée found."
+ }
+]

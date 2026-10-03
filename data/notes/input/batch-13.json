@@ -1,0 +1,189 @@
+[
+ {
+  "id": "ch-teau-lamothe-de-haux-blanc",
+  "name": "Château Lamothe de Haux Blanc",
+  "producer": "Château Lamothe de Haux",
+  "category": "sauvignon_blanc",
+  "region": "Bordeaux",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc-led Bordeaux Blanc; Sémillon may be included"
+ },
+ {
+  "id": "ch-teau-reynon-blanc",
+  "name": "Château Reynon Blanc",
+  "producer": "Château Reynon",
+  "category": "sauvignon_blanc",
+  "region": "Bordeaux",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc-led Bordeaux Blanc; Sémillon may be included"
+ },
+ {
+  "id": "los-vascos-sauvignon-blanc",
+  "name": "Los Vascos Sauvignon Blanc",
+  "producer": "Los Vascos",
+  "category": "sauvignon_blanc",
+  "region": "Chile",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "casa-lapostolle-sauvignon-blanc",
+  "name": "Casa Lapostolle Sauvignon Blanc",
+  "producer": "Casa Lapostolle",
+  "category": "sauvignon_blanc",
+  "region": "Chile",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "montes-sauvignon-blanc",
+  "name": "Montes Sauvignon Blanc",
+  "producer": "Montes",
+  "category": "sauvignon_blanc",
+  "region": "Chile",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "concha-y-toro-terrunyo-sauvignon-blanc",
+  "name": "Concha y Toro Terrunyo Sauvignon Blanc",
+  "producer": "Concha y Toro Terrunyo",
+  "category": "sauvignon_blanc",
+  "region": "Chile",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "leyda-sauvignon-blanc",
+  "name": "Leyda Sauvignon Blanc",
+  "producer": "Leyda",
+  "category": "sauvignon_blanc",
+  "region": "Leyda Valley",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "matetic-eq-coastal-sauvignon-blanc",
+  "name": "Matetic EQ Coastal Sauvignon Blanc",
+  "producer": "Matetic EQ Coastal",
+  "category": "sauvignon_blanc",
+  "region": "San Antonio Valley",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "veramonte-sauvignon-blanc",
+  "name": "Veramonte Sauvignon Blanc",
+  "producer": "Veramonte",
+  "category": "sauvignon_blanc",
+  "region": "Casablanca Valley",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "errazuriz-aconcagua-costa-sauvignon-blanc",
+  "name": "Errazuriz Aconcagua Costa Sauvignon Blanc",
+  "producer": "Errazuriz Aconcagua Costa",
+  "category": "sauvignon_blanc",
+  "region": "Aconcagua Costa",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "klein-constantia-sauvignon-blanc",
+  "name": "Klein Constantia Sauvignon Blanc",
+  "producer": "Klein Constantia",
+  "category": "sauvignon_blanc",
+  "region": "Constantia",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "mulderbosch-sauvignon-blanc",
+  "name": "Mulderbosch Sauvignon Blanc",
+  "producer": "Mulderbosch",
+  "category": "sauvignon_blanc",
+  "region": "Stellenbosch",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "neil-ellis-groenekloof-sauvignon-blanc",
+  "name": "Neil Ellis Groenekloof Sauvignon Blanc",
+  "producer": "Neil Ellis Groenekloof",
+  "category": "sauvignon_blanc",
+  "region": "South Africa",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "southern-right-sauvignon-blanc",
+  "name": "Southern Right Sauvignon Blanc",
+  "producer": "Southern Right",
+  "category": "sauvignon_blanc",
+  "region": "Walker Bay",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "springfield-special-cuv-e-sauvignon-blanc",
+  "name": "Springfield Special Cuvée Sauvignon Blanc",
+  "producer": "Springfield Special Cuvée",
+  "category": "sauvignon_blanc",
+  "region": "Robertson",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "cape-point-vineyards-sauvignon-blanc",
+  "name": "Cape Point Vineyards Sauvignon Blanc",
+  "producer": "Cape Point Vineyards",
+  "category": "sauvignon_blanc",
+  "region": "Cape Town",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ },
+ {
+  "id": "demorgenzon-sauvignon-blanc",
+  "name": "DeMorgenzon Sauvignon Blanc",
+  "producer": "DeMorgenzon",
+  "category": "sauvignon_blanc",
+  "region": "Stellenbosch",
+  "age_statement": null,
+  "proof": null,
+  "abv": 13,
+  "mash_bill": "Sauvignon Blanc"
+ }
+]

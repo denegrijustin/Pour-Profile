@@ -1,0 +1,134 @@
+[
+ {
+  "id": "kentucky-vintage",
+  "name": "Kentucky Vintage",
+  "producer": "Willett",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "old-bardstown-bottled-in-bond",
+  "name": "Old Bardstown Bottled in Bond",
+  "producer": "Willett",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "heaven-hill-bottled-in-bond-7-year",
+  "name": "Heaven Hill Bottled-in-Bond 7 Year",
+  "producer": "Heaven Hill",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "7 years",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "78% corn / 10% rye / 12% malted barley"
+ },
+ {
+  "id": "evan-williams-bottled-in-bond",
+  "name": "Evan Williams Bottled-in-Bond",
+  "producer": "Heaven Hill",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "At least 4 years",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "78% corn / 10% rye / 12% malted barley"
+ },
+ {
+  "id": "evan-williams-single-barrel",
+  "name": "Evan Williams Single Barrel",
+  "producer": "Heaven Hill",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "henry-mckenna-10-year-single-barrel",
+  "name": "Henry McKenna 10 Year Single Barrel",
+  "producer": "Heaven Hill",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "10 years",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "78% corn / 10% rye / 12% malted barley"
+ },
+ {
+  "id": "bernheim-original-wheat-whiskey",
+  "name": "Bernheim Original Wheat Whiskey",
+  "producer": "Heaven Hill",
+  "category": "american_whiskey",
+  "region": "Kentucky, USA",
+  "age_statement": "7 years current label",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "51% wheat / 37% corn / 12% malted barley"
+ },
+ {
+  "id": "j-t-s-brown-bottled-in-bond",
+  "name": "J.T.S. Brown Bottled in Bond",
+  "producer": "Heaven Hill",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "At least 4 years",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "Heaven Hill bourbon mash bill"
+ },
+ {
+  "id": "old-fitzgerald-bottled-in-bond",
+  "name": "Old Fitzgerald Bottled-in-Bond",
+  "producer": "Heaven Hill",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "parker-s-heritage-collection",
+  "name": "Parker's Heritage Collection",
+  "producer": "Heaven Hill",
+  "category": "american_whiskey",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "rittenhouse-rye-bottled-in-bond",
+  "name": "Rittenhouse Rye Bottled in Bond",
+  "producer": "Heaven Hill",
+  "category": "rye",
+  "region": "Kentucky, USA",
+  "age_statement": "At least 4 years",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "51% rye / 37% corn / 12% malted barley"
+ },
+ {
+  "id": "pikesville-rye-110-proof",
+  "name": "Pikesville Rye 110 Proof",
+  "producer": "Heaven Hill",
+  "category": "rye",
+  "region": "Kentucky, USA",
+  "age_statement": "6 years",
+  "proof": 110,
+  "abv": 55,
+  "mash_bill": "51% rye / 37% corn / 12% malted barley"
+ }
+]

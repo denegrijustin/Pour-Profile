@@ -96,3 +96,16 @@ export function hydrateCatalog(packed) {
     return rec;
   });
 }
+
+/**
+ * Attach cited expert notes (data/expert-notes.json, keyed by id) to packed records as
+ * `expert`. Records with nothing reliable get no field. Shared by the build and tests.
+ */
+export function attachExpertNotes(packed, notes = {}) {
+  return packed.map((r) => {
+    const e = notes[r.id];
+    if (!e || e.confidence === "none") return r;
+    const { notes: caveat, corrected, ...expert } = e;
+    return { ...r, expert: { ...expert, caveat: caveat || null } };
+  });
+}

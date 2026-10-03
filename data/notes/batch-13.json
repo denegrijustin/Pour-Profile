@@ -1,0 +1,393 @@
+[
+ {
+  "id": "ch-teau-lamothe-de-haux-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "ch-teau-reynon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "los-vascos-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "casa-lapostolle-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "montes-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "concha-y-toro-terrunyo-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "leyda-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "matetic-eq-coastal-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "veramonte-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "errazuriz-aconcagua-costa-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "klein-constantia-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "mulderbosch-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "neil-ellis-groenekloof-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "southern-right-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "springfield-special-cuv-e-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "cape-point-vineyards-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ },
+ {
+  "id": "demorgenzon-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No research possible: WebSearch budget exhausted (200/200) at start of batch; direct WebFetch of guessed producer URLs failed (robots.txt/DNS errors) or returned only a homepage with no product notes. Nothing recorded rather than guessing."
+ }
+]

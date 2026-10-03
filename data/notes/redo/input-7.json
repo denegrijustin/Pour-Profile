@@ -1,0 +1,145 @@
+[
+ {
+  "id": "casey-jones-total-eclipse-bourbon",
+  "name": "Casey Jones Total Eclipse Bourbon",
+  "producer": "Casey Jones",
+  "category": "bourbon",
+  "region": "Hopkinsville, Kentucky",
+  "age_statement": "At least 4 years",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "75% corn / 10% wheat / 10% rye / 5% malted barley"
+ },
+ {
+  "id": "casey-jones-small-batch-bourbon",
+  "name": "Casey Jones Small Batch Bourbon",
+  "producer": "Casey Jones",
+  "category": "bourbon",
+  "region": "Hopkinsville, Kentucky",
+  "age_statement": "NAS",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "casey-jones-barrel-cut-bourbon",
+  "name": "Casey Jones Barrel Cut Bourbon",
+  "producer": "Casey Jones",
+  "category": "bourbon",
+  "region": "Hopkinsville, Kentucky",
+  "age_statement": "NAS",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "peerless-small-batch-bourbon",
+  "name": "Peerless Small Batch Bourbon",
+  "producer": "Peerless",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS; 4+ years",
+  "proof": 109,
+  "abv": 54.5,
+  "mash_bill": "Undisclosed"
+ },
+ {
+  "id": "peerless-double-oak-bourbon",
+  "name": "Peerless Double Oak Bourbon",
+  "producer": "Peerless",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 109,
+  "abv": 54.5,
+  "mash_bill": "Undisclosed"
+ },
+ {
+  "id": "peerless-small-batch-rye",
+  "name": "Peerless Small Batch Rye",
+  "producer": "Peerless",
+  "category": "rye",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS; 4+ years",
+  "proof": 110,
+  "abv": 55,
+  "mash_bill": "Undisclosed rye mash bill"
+ },
+ {
+  "id": "peerless-double-oak-rye",
+  "name": "Peerless Double Oak Rye",
+  "producer": "Peerless",
+  "category": "rye",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 108,
+  "abv": 54,
+  "mash_bill": "Undisclosed rye mash bill"
+ },
+ {
+  "id": "willett-pot-still-reserve",
+  "name": "Willett Pot Still Reserve",
+  "producer": "Willett",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 94,
+  "abv": 47,
+  "mash_bill": "Undisclosed"
+ },
+ {
+  "id": "willett-family-estate-4-year-rye",
+  "name": "Willett Family Estate 4 Year Rye",
+  "producer": "Willett",
+  "category": "rye",
+  "region": "Kentucky, USA",
+  "age_statement": "4 years",
+  "proof": 110,
+  "abv": 55,
+  "mash_bill": "High-rye mash bill; undisclosed"
+ },
+ {
+  "id": "noah-s-mill",
+  "name": "Noah's Mill",
+  "producer": "Willett",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 114.3,
+  "abv": 57.15,
+  "mash_bill": "Undisclosed"
+ },
+ {
+  "id": "rowan-s-creek",
+  "name": "Rowan's Creek",
+  "producer": "Willett",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 100.1,
+  "abv": 50.05,
+  "mash_bill": "Undisclosed"
+ },
+ {
+  "id": "johnny-drum-private-stock",
+  "name": "Johnny Drum Private Stock",
+  "producer": "Willett",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "pure-kentucky-xo",
+  "name": "Pure Kentucky XO",
+  "producer": "Willett",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "Not publicly disclosed"
+ }
+]

@@ -1,0 +1,1032 @@
+[
+ {
+  "id": "saint-clair-wairau-reserve-sauvignon-blanc",
+  "producer": {
+   "nose": "Grapefruit and blackcurrant bud with a green herbaceous thread.",
+   "palate": "Passionfruit and crushed herbs; generous, rich body with a salty mineral note.",
+   "finish": "Long, weighty finish with lingering minerality.",
+   "summary": "Concentrated, vibrant style balancing freshness with richness and salty minerality.",
+   "source_url": "https://saintclair.co.nz/products/wairau-reserve-sauvignon-blanc-2025"
+  },
+  "critics": [
+   {
+    "source": "Decanter",
+    "source_url": "https://www.decanter.com/wine-reviews/new-zealand/marlborough/saint-clair-family-estate-reserve-sauvignon-blanc-wairau-78067/",
+    "score": null,
+    "scale": null,
+    "nose": "Pithy grapefruit with nectarine and a confected lemon note.",
+    "palate": "Crisp, refreshing citrus and lime layers.",
+    "finish": null,
+    "summary": "Score is behind Decanter paywall; 2022 vintage.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough (lower Wairau Valley)",
+   "source_url": "https://saintclair.co.nz/products/wairau-reserve-sauvignon-blanc-2025"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "blackcurrant bud",
+   "passionfruit",
+   "crushed herb",
+   "mineral",
+   "nectarine",
+   "lime",
+   "salty"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are for the 2025 vintage; Decanter note is for the 2022 vintage (score not visible, year of review unknown)."
+ },
+ {
+  "id": "tohu-sauvignon-blanc",
+  "producer": {
+   "nose": "Citrus zest, green apple and pineapple with subtle herbal touches.",
+   "palate": "Lime, pink grapefruit and crunchy apple with fresh acidity and a bright mineral edge.",
+   "finish": "Clean and focused with good concentration.",
+   "summary": "Awatere Valley fruit, stainless steel ferment, dry style; world's first Maori-owned wine company.",
+   "source_url": "https://www.reservewines.co.uk/products/tohu-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Anthony Gismondi (GismondiOnWine)",
+    "source_url": "https://gismondionwine.com/tasting-notes/202303/tohu-sauvignon-blanc-2022/?note=39164",
+    "score": 90,
+    "scale": "100",
+    "nose": "Dry, aromatic lemongrass and passionfruit with citrus blossom.",
+    "palate": "Fresh grassy citrus undercurrent with ripe, juicy pink grapefruit.",
+    "finish": "Saline, mineral finish.",
+    "summary": "Also scored 16.5/20; tasted March 2023, retasted March 2024. 2022 vintage.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough (Awatere Valley)",
+   "source_url": "https://www.reservewines.co.uk/products/tohu-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "lemongrass",
+   "passionfruit",
+   "pink grapefruit",
+   "citrus blossom",
+   "green apple",
+   "pineapple",
+   "lime",
+   "mineral",
+   "saline"
+  ],
+  "confidence": "medium",
+  "notes": "Producer-style notes come from a UK retailer page (2024 vintage, page title says 2025), not tohu.co.nz. Gismondi note is 2022 vintage."
+ },
+ {
+  "id": "spy-valley-sauvignon-blanc",
+  "producer": {
+   "nose": "Gooseberry, passionfruit, lime zest and ripe yellow stone fruit.",
+   "palate": "Fresh grapefruit with tropical and citrus fruit.",
+   "finish": "Lively and clean.",
+   "summary": "Pure, crisp and easy-drinking; estate fruit from the Waihopai Valley plus other Marlborough sites.",
+   "source_url": "https://www.thewinesociety.com/product/spy-valley-marlborough-sauvignon-blanc-2025-en.aspx"
+  },
+  "critics": [
+   {
+    "source": "James Suckling (via wine.com)",
+    "source_url": "https://www.wine.com/product/spy-valley-sauvignon-blanc-2023/1819810",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "2023 vintage. The wine.com page lists notes of dried apple, lemon, stone, celery and mouth-watering acidity with a light finish; attribution to Suckling not explicit.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://www.thewinesociety.com/product/spy-valley-marlborough-sauvignon-blanc-2025-en.aspx"
+  },
+  "flavor_terms": [
+   "gooseberry",
+   "passionfruit",
+   "lime zest",
+   "stone fruit",
+   "grapefruit",
+   "tropical",
+   "dried apple",
+   "lemon"
+  ],
+  "confidence": "medium",
+  "notes": "Producer-style notes from The Wine Society (retailer) for 2025 vintage; Suckling score is 2023 vintage from retailer page."
+ },
+ {
+  "id": "the-ned-sauvignon-blanc",
+  "producer": {
+   "nose": "Ripe citrus, passionfruit and green apple.",
+   "palate": "Honeydew melon with herbal highlights and lively acidity.",
+   "finish": "Long-lasting.",
+   "summary": null,
+   "source_url": "https://taylorswineshop.com/products/the-ned-sauvignon-blanc"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://taylorswineshop.com/products/the-ned-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "citrus",
+   "passionfruit",
+   "green apple",
+   "honeydew melon",
+   "herbal"
+  ],
+  "confidence": "low",
+  "notes": "Only retailer copy opened (vintage unspecified). Wine Enthusiast and Decanter reviews exist but pages were unfetchable/paywalled."
+ },
+ {
+  "id": "yealands-sauvignon-blanc",
+  "producer": {
+   "nose": "Generous ripe tropical and citrus notes with flowering herbs and blackcurrant leaf.",
+   "palate": "Layered green tropical fruit.",
+   "finish": "Crisp, mineral finish.",
+   "summary": null,
+   "source_url": "https://www.wine.com/product/yealands-sauvignon-blanc-2022/1119499"
+  },
+  "critics": [
+   {
+    "source": "Decanter",
+    "source_url": "https://www.decanter.com/wine-reviews/new-zealand/marlborough/yealands-estate-sauvignon-blanc-marlborough-2023-76664/",
+    "score": 90,
+    "scale": "100",
+    "nose": "Grass and hay with bright gooseberry and greengage.",
+    "palate": "Preserved lemon with a driving line of acidity.",
+    "finish": "Mellow, soft finish.",
+    "summary": "2023 vintage.",
+    "year": null
+   },
+   {
+    "source": "Wine Enthusiast (via wine.com)",
+    "source_url": "https://www.wine.com/product/yealands-sauvignon-blanc-2022/1119499",
+    "score": 90,
+    "scale": "100",
+    "nose": "Fresh passionfruit, grapefruit and lime with cut-grass nuances.",
+    "palate": "Prickly, tingly acidity.",
+    "finish": null,
+    "summary": "Best Buy; 2022 vintage.",
+    "year": null
+   },
+   {
+    "source": "Wilfred Wong (wine.com)",
+    "source_url": "https://www.wine.com/product/yealands-sauvignon-blanc-2022/1119499",
+    "score": 91,
+    "scale": "100",
+    "nose": "Focused grapefruit and dried herbs.",
+    "palate": null,
+    "finish": null,
+    "summary": "Described as fresh, bright and crisp; 2022 vintage.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 12.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://www.wine.com/product/yealands-sauvignon-blanc-2022/1119499"
+  },
+  "flavor_terms": [
+   "gooseberry",
+   "greengage",
+   "preserved lemon",
+   "passionfruit",
+   "grapefruit",
+   "lime",
+   "blackcurrant leaf",
+   "green tropical",
+   "cut grass",
+   "dried herb"
+  ],
+  "confidence": "medium",
+  "notes": "Producer-style notes taken from wine.com (2022 vintage), not yealands.co.nz. ABV 12.5 per wine.com 2022 and Decanter 2023; input says 13."
+ },
+ {
+  "id": "babich-black-label-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Blend of Waihopai and Upper Wairau estate fruit; minimal skin contact, stainless steel ferment with some malolactic. Retailer lists notes of mango, nectarine, lime, sweet herbs and fresh pea (attribution unclear).",
+   "source_url": "https://www.steephillwines.com/p/babich-black-label-marlborough-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Cameron Douglas MS (via Steep Hill Wines)",
+    "source_url": "https://www.steephillwines.com/p/babich-black-label-marlborough-sauvignon-blanc",
+    "score": 95,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Dec 2020, vintage not stated on page.",
+    "year": 2020
+   },
+   {
+    "source": "James Suckling (via Steep Hill Wines)",
+    "source_url": "https://www.steephillwines.com/p/babich-black-label-marlborough-sauvignon-blanc",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Jan 2021, vintage not stated.",
+    "year": 2021
+   },
+   {
+    "source": "Decanter",
+    "source_url": "https://www.decanter.com/wine-reviews/new-zealand/marlborough/babich-black-label-sauvignon-blanc-marlborough-2020-45042/",
+    "score": null,
+    "scale": null,
+    "nose": "Orchard fruit and sage, apple, tropical fruit, sweet basil, flinty lees character.",
+    "palate": null,
+    "finish": null,
+    "summary": "2020 vintage; score and rest of note paywalled.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://www.steephillwines.com/p/babich-black-label-marlborough-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "mango",
+   "nectarine",
+   "lime",
+   "mineral",
+   "sweet herbal",
+   "orchard fruit",
+   "sage",
+   "tropical fruit",
+   "flinty"
+  ],
+  "confidence": "medium",
+  "notes": "Scores relayed by a retailer; Winestate 5 stars also listed there. Vintage unclear."
+ },
+ {
+  "id": "babich-sauvignon-blanc",
+  "producer": {
+   "nose": "Pungent and inviting: lantana, passionfruit, grapefruit, then mandarin, slate and nettle.",
+   "palate": "Blackcurrant and fruit-salad burst with green tropical and citrus notes.",
+   "finish": "Mineral and spice lingering with lime zest; fresh and juicy.",
+   "summary": "Fuller, riper style Marlborough Sauvignon Blanc from several vineyards.",
+   "source_url": "https://www.babichwines.com/product/marlborough-sauvingon-blanc/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://www.babichwines.com/product/marlborough-sauvingon-blanc/"
+  },
+  "flavor_terms": [
+   "passionfruit",
+   "grapefruit",
+   "mandarin",
+   "blackcurrant",
+   "fruit salad",
+   "tropical",
+   "lime zest",
+   "mineral",
+   "spice",
+   "nettle"
+  ],
+  "confidence": "medium",
+  "notes": "Producer notes are 2025 vintage. No independent critic note found for this exact label."
+ },
+ {
+  "id": "giesen-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "James Suckling (via winedeals.com)",
+    "source_url": "https://www.winedeals.com/wine/white-wine/sauvignon-blanc/giesen-marlborough-sauvignon-blanc-750-ml-70986.html",
+    "score": 89,
+    "scale": "100",
+    "nose": "Lime, green pepper, crushed stone, grapefruit, gooseberry.",
+    "palate": "Light and juicy.",
+    "finish": "Brief but refreshing.",
+    "summary": "2023 vintage; slightly grassy.",
+    "year": null
+   },
+   {
+    "source": "Wine Enthusiast (via winedeals.com)",
+    "source_url": "https://www.winedeals.com/wine/white-wine/sauvignon-blanc/giesen-marlborough-sauvignon-blanc-750-ml-70986.html",
+    "score": 88,
+    "scale": "100",
+    "nose": null,
+    "palate": "Crisp acidity with citrus, stone fruit and florals through the finish.",
+    "finish": null,
+    "summary": "2023 vintage per retailer.",
+    "year": null
+   },
+   {
+    "source": "Edward Deitch (VinePair)",
+    "source_url": "https://vinepair.com/good-wine-reviews/giesen-sauvignon-blanc-2019-marlborough-new-zealand/",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Stone fruit, orange and tropical fruit with mineral and herb touches; balanced acidity.",
+    "finish": "Light creamy finish.",
+    "summary": "2019 vintage; light on grassiness; no score on page.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://www.winedeals.com/wine/white-wine/sauvignon-blanc/giesen-marlborough-sauvignon-blanc-750-ml-70986.html"
+  },
+  "flavor_terms": [
+   "lime",
+   "grapefruit",
+   "gooseberry",
+   "stone fruit",
+   "citrus",
+   "floral",
+   "tropical fruit",
+   "mineral",
+   "herbal"
+  ],
+  "confidence": "low",
+  "notes": "No producer notes obtained. Critic data comes from a retailer page (2023) and a 2019 VinePair review. Retailer lists ABV 12.5, not confirmed by a second source."
+ },
+ {
+  "id": "giesen-the-august-1888-sauvignon-blanc",
+  "producer": {
+   "nose": "Passionfruit, guava, lime leaf, plus steely wet-pebble purity.",
+   "palate": "Toasty almond, fresh brioche and flinty notes; herbal and rich with tropical character.",
+   "finish": "Wild-yeast oak ageing builds depth and length.",
+   "summary": "Hand-picked, wild-fermented, oak-integrated Sauvignon Blanc.",
+   "source_url": "https://www.hitimewine.net/giesen-2019-the-august-1888-sauvignon-blanc-378943"
+  },
+  "critics": [
+   {
+    "source": "Wine Advocate (via Wine Month Club)",
+    "source_url": "https://www.winemonthclub.com/giesen-the-august-1888-marlborough-sauvignon-blanc-2013",
+    "score": 90,
+    "scale": "100",
+    "nose": "Melon, lime leaf, passionfruit.",
+    "palate": "Brioche, toasted almond, minerality.",
+    "finish": "Long.",
+    "summary": "2013 vintage, different from current.",
+    "year": null
+   },
+   {
+    "source": "Decanter",
+    "source_url": "https://www.decanter.com/wine-reviews/new-zealand/marlborough/giesen-august-1888-sauvignon-blanc-marlborough-2012-13020",
+    "score": 87,
+    "scale": "100",
+    "nose": null,
+    "palate": "Pineapple, cream, flint, minerals with vibrant acidity.",
+    "finish": null,
+    "summary": "2012 vintage; panel tasting April 2017.",
+    "year": 2017
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://www.hitimewine.net/giesen-2019-the-august-1888-sauvignon-blanc-378943"
+  },
+  "flavor_terms": [
+   "passionfruit",
+   "guava",
+   "lime leaf",
+   "toasted almond",
+   "brioche",
+   "flinty",
+   "mineral",
+   "pineapple",
+   "wet pebble"
+  ],
+  "confidence": "low",
+  "notes": "Retailer page URL says 2019 but body text says 2018. Critic notes are for 2012 and 2013 vintages. Wine Spectator/Cooper pages not fetchable."
+ },
+ {
+  "id": "loveblock-sauvignon-blanc",
+  "producer": {
+   "nose": "Pineapple, guava and sweet meadow grass.",
+   "palate": "Rounded, textured; pineapple, tropical fruit, sweet basil, ripe peach, chalky mineral.",
+   "finish": null,
+   "summary": "Single-vineyard organic Awatere Valley fruit, parcels fermented in concrete eggs, amphorae and neutral oak with wild yeast.",
+   "source_url": "https://loveblockwine.com/us/products/sauvignon-blanc-organic-marlborough-2023/"
+  },
+  "critics": [
+   {
+    "source": "Tom Cannavan (wine-pages.com)",
+    "source_url": "https://wine-pages.com/tasting-notes/loveblock-marlborough-sauvignon-blanc-2020/",
+    "score": 89,
+    "scale": "100",
+    "nose": "Slightly reductive and flinty, salt and apple.",
+    "palate": "Creamy, with oatmeal and nutty apple; some residual sweetness noted.",
+    "finish": "Tangy citrus finish.",
+    "summary": "2020 vintage.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough (Awatere Valley)",
+   "source_url": "https://loveblockwine.com/us/products/sauvignon-blanc-organic-marlborough-2023/"
+  },
+  "flavor_terms": [
+   "pineapple",
+   "guava",
+   "meadow grass",
+   "sweet basil",
+   "ripe peach",
+   "chalky",
+   "flinty",
+   "apple",
+   "oatmeal",
+   "citrus"
+  ],
+  "confidence": "high",
+  "notes": "Producer page is the 2023 organic Woolshed bottling (13.5% ABV); Cannavan note is 2020 (13%). Possibly a different cuvee than the standard Loveblock label."
+ },
+ {
+  "id": "clos-henri-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Estate owned by the Bourgeois family of Sancerre; organic, dry-farmed, high-density vines, native ferment in stainless steel, 3 months on lees (per retailer).",
+   "source_url": "https://www.winesolutions.com/products/clos-henri-estate-sauvignon-blanc-2025"
+  },
+  "critics": [
+   {
+    "source": "Wine Advocate (via Fine Wine House)",
+    "source_url": "https://www.finewinehouse.com/clos-henri-estate-marlborough-sauvignon-blanc-2025.html",
+    "score": 93,
+    "scale": "100",
+    "nose": "Graphite and dried grasses with ripe citrus, orange blossom, white peach.",
+    "palate": "Juicy, chalky texture, ripe stone fruit and bright acidity.",
+    "finish": "Lingering and mineral.",
+    "summary": "2025 vintage; restrained style; drink 2026-2032.",
+    "year": null
+   },
+   {
+    "source": "Bob Campbell MW (via Wine Solutions)",
+    "source_url": "https://www.winesolutions.com/products/clos-henri-estate-sauvignon-blanc-2025",
+    "score": 93,
+    "scale": "100",
+    "nose": "Guava, peach, mandarin, grapefruit with mineral and saline touches.",
+    "palate": "Medium body, restrained, streamlined; gravel and wet stone.",
+    "finish": "Long, dense and bone-dry.",
+    "summary": "2025 vintage.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough (Wairau Valley)",
+   "source_url": "https://www.winesolutions.com/products/clos-henri-estate-sauvignon-blanc-2025"
+  },
+  "flavor_terms": [
+   "guava",
+   "peach",
+   "mandarin",
+   "grapefruit",
+   "white peach",
+   "orange blossom",
+   "graphite",
+   "mineral",
+   "saline",
+   "wet stone"
+  ],
+  "confidence": "medium",
+  "notes": "No producer tasting notes found; critic notes via retailers, 2025 vintage."
+ },
+ {
+  "id": "astrolabe-marlborough-sauvignon-blanc",
+  "producer": {
+   "nose": "Powerful gooseberry, white currant, red capsicum, passionfruit and lime peel.",
+   "palate": "Medium-bodied with makrut lime, passionfruit and lemongrass.",
+   "finish": "Smooth, dry and persistent.",
+   "summary": "Dry, expressive, balanced; blended from three Marlborough sub-regions.",
+   "source_url": "https://astrolabewines.co.nz/wine/astrolabe-marlborough-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Shanteh Wale (Halliday Wine Companion), via producer",
+    "source_url": "https://astrolabewines.co.nz/wine/astrolabe-marlborough-sauvignon-blanc",
+    "score": 93,
+    "scale": "100",
+    "nose": "Explosive perfume.",
+    "palate": "Blackcurrant-gummy fruit with mineral lines.",
+    "finish": null,
+    "summary": "2025 vintage.",
+    "year": null
+   },
+   {
+    "source": "Cameron Douglas MS, via producer",
+    "source_url": "https://astrolabewines.co.nz/wine/astrolabe-marlborough-sauvignon-blanc",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": "Pungent, precise citrus with saline minerality.",
+    "finish": null,
+    "summary": "2025 vintage; drink 2025-2030+.",
+    "year": null
+   },
+   {
+    "source": "James Suckling, via producer",
+    "source_url": "https://astrolabewines.co.nz/wine/astrolabe-marlborough-sauvignon-blanc",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": "Juicy, fruit-driven tropical notes with zesty acidity.",
+    "finish": null,
+    "summary": "2025 vintage.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://astrolabewines.co.nz/wine/astrolabe-marlborough-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "gooseberry",
+   "white currant",
+   "red capsicum",
+   "passionfruit",
+   "lime peel",
+   "makrut lime",
+   "lemongrass",
+   "blackcurrant leaf",
+   "mineral",
+   "saline"
+  ],
+  "confidence": "high",
+  "notes": "All data from producer page, 2025 vintage; critic scores are as reproduced by the producer."
+ },
+ {
+  "id": "astrolabe-kekerengu-coast-sauvignon-blanc",
+  "producer": {
+   "nose": "Citrus pith, lime and grapefruit zest with jasmine tea, fennel and basil.",
+   "palate": "Medium-bodied, flinty and almost salty, with passionfruit; dry.",
+   "finish": "Briny, salty, savoury and dry.",
+   "summary": "Limestone soils in the Kekerengu Coast sub-region with maritime influence.",
+   "source_url": "https://astrolabewines.co.nz/wine/astrolabe-kekerengu-coast-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Cameron Douglas MS, via producer",
+    "source_url": "https://astrolabewines.co.nz/wine/astrolabe-kekerengu-coast-sauvignon-blanc",
+    "score": 96,
+    "scale": "100",
+    "nose": null,
+    "palate": "Dry, textured mouthfeel with very fine fruit tannins.",
+    "finish": null,
+    "summary": "2024 vintage.",
+    "year": null
+   },
+   {
+    "source": "Bob Campbell MW, via producer",
+    "source_url": "https://astrolabewines.co.nz/wine/astrolabe-kekerengu-coast-sauvignon-blanc",
+    "score": 95,
+    "scale": "100",
+    "nose": null,
+    "palate": "Taut, crisp, chalky/oyster-shell and citrus flavours.",
+    "finish": null,
+    "summary": "2023 vintage.",
+    "year": null
+   },
+   {
+    "source": "Michael Cooper, via producer",
+    "source_url": "https://astrolabewines.co.nz/wine/astrolabe-kekerengu-coast-sauvignon-blanc",
+    "score": 5,
+    "scale": "5",
+    "nose": null,
+    "palate": "Full-bodied, vibrant, citrusy and gently herbal.",
+    "finish": null,
+    "summary": "2023 vintage; 5 stars.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough (Kekerengu Coast)",
+   "source_url": "https://astrolabewines.co.nz/wine/astrolabe-kekerengu-coast-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "citrus pith",
+   "lime",
+   "grapefruit zest",
+   "jasmine tea",
+   "fennel",
+   "basil",
+   "flinty",
+   "salty",
+   "briny",
+   "passionfruit"
+  ],
+  "confidence": "high",
+  "notes": "All from producer page; critic scores span 2023 and 2024 vintages."
+ },
+ {
+  "id": "lawson-s-dry-hills-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Producer homepage had no wine pages reachable; search budget exhausted. No data."
+ },
+ {
+  "id": "framingham-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Producer collection page listed the 2025 wine but gave no notes or scores; product page URL 404. No data."
+ },
+ {
+  "id": "jules-taylor-sauvignon-blanc",
+  "producer": {
+   "nose": "Explosive citrus and passionfruit, lemongrass, Vietnamese mint, a touch of reductive character.",
+   "palate": "Ripe citrus, greengage plum, passionfruit and Asian herbs; bone-dry and concentrated.",
+   "finish": "Long, elegant, with moreish acidity.",
+   "summary": "Grassy, summery, citrus-driven Marlborough style.",
+   "source_url": "https://www.julestaylor.com/products/marlborough-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Wine Enthusiast (Christina Pickard), via producer",
+    "source_url": "https://www.julestaylor.com/products/marlborough-sauvignon-blanc",
+    "score": 94,
+    "scale": "100",
+    "nose": null,
+    "palate": "Bright passionfruit, lemon-lime, pink grapefruit.",
+    "finish": null,
+    "summary": "2025 vintage, Editor's Choice.",
+    "year": 2025
+   },
+   {
+    "source": "Wine Spectator (Maryann Worobiec), via producer",
+    "source_url": "https://www.julestaylor.com/products/marlborough-sauvignon-blanc",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "2024 vintage.",
+    "year": null
+   },
+   {
+    "source": "Sam Kim (Wine Orbit), via producer",
+    "source_url": "https://www.julestaylor.com/products/marlborough-sauvignon-blanc",
+    "score": 95,
+    "scale": "100",
+    "nose": "Feijoa, kiwifruit, kaffir lime, fresh herbs.",
+    "palate": "Vibrant, juicy fruit intensity.",
+    "finish": null,
+    "summary": "2025 vintage.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": 13.51,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://www.julestaylor.com/products/marlborough-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "citrus",
+   "passionfruit",
+   "lemongrass",
+   "mint",
+   "greengage",
+   "herbs",
+   "grapefruit",
+   "feijoa",
+   "kaffir lime"
+  ],
+  "confidence": "high",
+  "notes": "Scores are reproduced on the producer page, not verified at the original publications. ABV is the producer's figure."
+ },
+ {
+  "id": "mount-riley-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Producer lists several Sauvignon Blanc ranges (17 Valley, Estate, Organic, Limited); no tasting notes or scores reachable, so expression ambiguous."
+ },
+ {
+  "id": "mud-house-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Producer site pages reached gave no notes or scores. No data."
+ },
+ {
+  "id": "wither-hills-sauvignon-blanc",
+  "producer": {
+   "nose": "Crunchy green notes and tropical guava.",
+   "palate": "Juicy citrus core with textural acidity.",
+   "finish": null,
+   "summary": "Refined, elegant Marlborough style; pairs with seafood.",
+   "source_url": "https://witherhills.co.nz/collections/wairau-valley/products/wairau-valley-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Winestate (via producer)",
+    "source_url": "https://witherhills.co.nz/collections/wairau-valley/products/wairau-valley-sauvignon-blanc",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Listed as 4 stars; year and scale not stated on page.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://witherhills.co.nz/collections/wairau-valley/products/wairau-valley-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "citrus",
+   "guava",
+   "green",
+   "tropical"
+  ],
+  "confidence": "medium",
+  "notes": "Page is the Wairau Valley Sauvignon Blanc; assumed to be the intended label. Vintage not given."
+ },
+ {
+  "id": "kono-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Described as vibrant and crisp, with intense flavours from several Marlborough sub-regions.",
+   "source_url": "https://www.konowines.co.nz/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Marlborough",
+   "source_url": "https://www.konowines.co.nz/"
+  },
+  "flavor_terms": [],
+  "confidence": "low",
+  "notes": "Only generic producer homepage blurb; no nose/palate/finish or critic notes."
+ },
+ {
+  "id": "momo-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Seresin homepage had no product details; no data found."
+ },
+ {
+  "id": "te-pa-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Producer homepage had no product details; no data found."
+ },
+ {
+  "id": "black-cottage-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No winery site found (domain tried was an unrelated accommodation page); no data."
+ },
+ {
+  "id": "awatere-river-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Producer site returned 403; no data."
+ },
+ {
+  "id": "lake-chalice-the-nest-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Producer collection page gave only price and a range blurb; no notes or scores."
+ }
+]

@@ -1,0 +1,1095 @@
+[
+ {
+  "id": "domaine-vincent-pinard-floril-ge-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No Vincent Pinard cuvée named 'Florilège' found; importer list (vintageandvine.com) shows Florès, Nuance, Le Château, Grand Chemarin, Chêne Marchand. 'Florilège' is a Jonathan Didier Pabiot cuvée name. Likely a name mix-up (Florès?) - not filled to avoid conflating expressions."
+ },
+ {
+  "id": "domaine-vincent-pinard-ch-ne-marchand-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Vinous (Rebecca Gibb), via Justerini & Brooks",
+    "source_url": "https://www.justerinis.com/fine-wines/france/loire/vincent-pinard/sancerre-le-chene-marchand/2022",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": "Creamy with ripe peach; a near-tannic grip gives structure.",
+    "finish": "Fine saline/briny edge.",
+    "summary": "Score and note quoted by merchant J&B, Aug 2024.",
+    "year": 2022
+   },
+   {
+    "source": "La Revue du Vin de France (RVF), via Les Passionnés du Vin",
+    "source_url": "https://en.lespassionnesduvin.com/vincent-pinard-sancerre-chene-marchand-2023.html",
+    "score": 96,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score only, as reported by retailer; no critic text.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "600-litre barrels (12 months on lees per J&B, 2022)",
+   "region": "Sancerre (Bué), Oxfordian limestone",
+   "source_url": "https://www.justerinis.com/fine-wines/france/loire/vincent-pinard/sancerre-le-chene-marchand/2022"
+  },
+  "flavor_terms": [
+   "ripe citrus",
+   "nectarine",
+   "peach",
+   "stone fruit",
+   "chalky",
+   "creamy",
+   "briny",
+   "white pepper",
+   "sour apple"
+  ],
+  "confidence": "medium",
+  "notes": "Vintages 2022 (Vinous) and 2023 (RVF). No producer-written notes fetched; merchant J&B and importer Vintage and Vine describe citrus/stone fruit, chalk, white pepper. ABV differs by vintage (13% 2022 per J&B, 13.5% 2023 per retailer) so left null. Soil described inconsistently (Oxfordian chalk vs caillottes) across retailers."
+ },
+ {
+  "id": "domaine-fouassier-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Wine Enthusiast (as reported by retailer O My Cellar)",
+    "source_url": "https://www.omycellar.com/products/domaine-fouassier-sancerre-blanc-2022",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score only via retailer; no critic text verified.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Sancerre",
+   "source_url": "https://www.omycellar.com/products/domaine-fouassier-sancerre-blanc-2022"
+  },
+  "flavor_terms": [
+   "peach",
+   "dried mango",
+   "quince",
+   "lemon",
+   "minerality",
+   "crisp"
+  ],
+  "confidence": "low",
+  "notes": "Only a retailer page (2022 'Sancerre Blanc'): ripe peach, dried mango, quince, lemon; fresh acidity, subtle minerality, crisp finish. Fouassier makes many lieu-dit Sancerres (Sur le Fort, Clos Paradis, Les Chasseignes); generic bottle is ambiguous. SAQ 'Fouassier Sancerre 2022' is a red - not used."
+ },
+ {
+  "id": "domaine-roger-champault-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Delectable (community/aggregated taster notes) - Les Pierris cuvée",
+    "source_url": "https://delectable.com/wine/roger-champault/les-pierris-sancerre-sauvignon-blanc",
+    "score": null,
+    "scale": null,
+    "nose": "Lemongrass, green/vegetal notes, citrus, nectarine, peach, pineapple, white flowers.",
+    "palate": "Sharp, refreshing acidity; chalky, grapefruit-like and mineral.",
+    "finish": null,
+    "summary": "Amateur aggregate notes; some tasters say it turns rounder and more tropical with age.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Sancerre",
+   "source_url": null
+  },
+  "flavor_terms": [
+   "lemongrass",
+   "citrus",
+   "nectarine",
+   "peach",
+   "pineapple",
+   "grapefruit",
+   "chalky",
+   "white flowers",
+   "herbaceous"
+  ],
+  "confidence": "low",
+  "notes": "Champault makes several Sancerres (Les Pierris, Clos du Roy, Côte de Champtin); no plain 'Sancerre' identified. Data is for Les Pierris from a community aggregator only, no vintage."
+ },
+ {
+  "id": "domaine-de-la-villaudi-re-sancerre",
+  "producer": {
+   "nose": "Expressive, floral, with white peach and exotic fruit.",
+   "palate": "Harmonious attack balancing freshness and tension.",
+   "finish": "Long and powerful with marked minerality.",
+   "summary": "Blend of Terres Blanches clay-limestone and Caillottes limestone parcels; steel-tank fermentation, bottled in spring.",
+   "source_url": "https://planetwineus.com/wp-content/uploads/2023/10/Villaudiere_Sancerre-White_Technical_Sheet_PW.pdf"
+  },
+  "critics": [
+   {
+    "source": "Decanter (panel tasting)",
+    "source_url": "https://www.decanter.com/wine-reviews/france/loire/reverdy-fils-domaine-de-la-villaudiere-sancerre-2018-39072",
+    "score": null,
+    "scale": null,
+    "nose": "Clear pineapple, gooseberry and pomegranate fruit.",
+    "palate": "Appealing texture.",
+    "finish": "Bright, peppery acidity on the finish.",
+    "summary": "Score behind paywall.",
+    "year": 2018
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Stainless steel, temperature-controlled",
+   "region": "Sancerre (Terres Blanches + Caillottes); vines avg ~40 yrs",
+   "source_url": "https://planetwineus.com/wp-content/uploads/2023/10/Villaudiere_Sancerre-White_Technical_Sheet_PW.pdf"
+  },
+  "flavor_terms": [
+   "floral",
+   "white peach",
+   "exotic fruit",
+   "minerality",
+   "pineapple",
+   "gooseberry",
+   "pomegranate",
+   "peppery"
+  ],
+  "confidence": "high",
+  "notes": "Producer tech sheet hosted by US importer Planet Wine (non-vintage). Decanter note is the 2018 vintage. ABV 13% from Decanter 2018 page."
+ },
+ {
+  "id": "ch-teau-de-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Sancerre",
+   "source_url": "https://www.lcbo.com/fr/chateau-de-sancerre-blanc-42202"
+  },
+  "flavor_terms": [
+   "white flowers",
+   "peach",
+   "lemon",
+   "herbs"
+  ],
+  "confidence": "low",
+  "notes": "Only LCBO retailer description (vintage unspecified): white flowers, peach, lemon, herbs; fresh and well balanced. Producer site blocked (TLS/robots). Producer field in input reads 'Château de' - estate is Château de Sancerre (Marnier-Lapostolle)."
+ },
+ {
+  "id": "jean-reverdy-la-reine-blanche-sancerre",
+  "producer": {
+   "nose": "Intense flint, citrus, white peach and linden blossom.",
+   "palate": "Rich yet fresh, mineral and citrusy.",
+   "finish": "Long.",
+   "summary": "Unoaked, steel-fermented, no malolactic.",
+   "source_url": "https://www.kysela.com/wine/reverdy-sancerre-blanc.html"
+  },
+  "critics": [
+   {
+    "source": "Into Wine (Loren Sonkin)",
+    "source_url": "https://www.intowine.com/reviews/2024-jean-reverdy-et-fils-sancerre-la-reine-blanche-france-loire-wine-review",
+    "score": 88,
+    "scale": "100",
+    "nose": "Tight at first, opening to lemon, light herbal tone and minerality.",
+    "palate": "Just off-dry impression, lemony, with yellow grapefruit emerging with air; medium body, good acidity.",
+    "finish": null,
+    "summary": "Easy-drinking; best within a couple of years.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Stainless steel, no oak, no malolactic",
+   "region": "Sancerre; soils ~55% silex, 35% caillottes, 10% terres blanches",
+   "source_url": "https://www.kysela.com/wine/reverdy-sancerre-blanc.html"
+  },
+  "flavor_terms": [
+   "flint",
+   "citrus",
+   "white peach",
+   "linden",
+   "mineral",
+   "lemon",
+   "herbal",
+   "grapefruit"
+  ],
+  "confidence": "high",
+  "notes": "Producer-style notes are from US importer Kysela's page, which identifies La Reine Blanche as Jean Reverdy's main cuvée (non-vintage text). Critic note is 2024 vintage. WE 2015 page blocked (redirect loop)."
+ },
+ {
+  "id": "baron-de-ladoucette-pouilly-fum",
+  "producer": {
+   "nose": "White flowers and exotic fruit such as lychee and mango; delicate, complex aromatics.",
+   "palate": "Bright fruit with dense texture and notable acidity.",
+   "finish": null,
+   "summary": "Winemaker description as quoted by retailer.",
+   "source_url": "https://www.woodswholesalewine.com/products/2024-baron-de-ladoucette-pouilly-fume-loire-france-750ml"
+  },
+  "critics": [
+   {
+    "source": "Wine Enthusiast (as quoted by retailer Woods Wholesale)",
+    "source_url": "https://www.woodswholesalewine.com/products/2024-baron-de-ladoucette-pouilly-fume-loire-france-750ml",
+    "score": 92,
+    "scale": "100",
+    "nose": "Cool citrus and white peach with orange blossom and lilac.",
+    "palate": "Mineral: crushed shell, grilled lemon, green pear.",
+    "finish": "Dried hay.",
+    "summary": "Vintage of the WE review not stated on retailer page.",
+    "year": null
+   },
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.winespectator.com/wine/wine-detail/id/1319175/name/de-ladoucette-pouilly-fume-2023/guest",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Apple, pear and citrus cream with a taut line (note truncated behind paywall).",
+    "finish": null,
+    "summary": "Score member-only; March 31 2025 issue.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Pouilly-Fumé",
+   "source_url": null
+  },
+  "flavor_terms": [
+   "white flowers",
+   "lychee",
+   "mango",
+   "citrus",
+   "white peach",
+   "orange blossom",
+   "crushed shell",
+   "pear",
+   "dried hay",
+   "apple"
+  ],
+  "confidence": "medium",
+  "notes": "Retailer page is 2024 vintage; WE note vintage unclear; WS note is 2023. Likely the same wine as id domaine-de-ladoucette-pouilly-fum (label 'de Ladoucette Pouilly-Fumé')."
+ },
+ {
+  "id": "baron-de-l-pouilly-fum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "View From the Cellar (John Gilman), via Farr Vintners",
+    "source_url": "https://www.farrvintners.com/wine.php?wine=58903",
+    "score": 94,
+    "scale": "100",
+    "nose": "Green apple, lime, grass, minerality and orange peel; precise and vibrant.",
+    "palate": "Deep and pure with bright, zesty acidity.",
+    "finish": "Long and refined.",
+    "summary": "Rated July 2020; drink 2020-2035.",
+    "year": 2017
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Pouilly-Fumé",
+   "source_url": "https://www.farrvintners.com/wine.php?wine=58903"
+  },
+  "flavor_terms": [
+   "green apple",
+   "lime",
+   "grass",
+   "mineral",
+   "orange peel",
+   "zesty"
+  ],
+  "confidence": "medium",
+  "notes": "2017 vintage. Farr describes Baron de L as de Ladoucette's top selection made only in exceptional years. No producer notes fetched."
+ },
+ {
+  "id": "didier-dagueneau-silex",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Wine Advocate, via K&L",
+    "source_url": "https://www.klwines.com/products/details/1057948",
+    "score": 93,
+    "scale": "100",
+    "nose": "Ripe pear, white peach, sage, gunflint and chalky crushed stone, lime zest.",
+    "palate": null,
+    "finish": null,
+    "summary": "Called a long keeper (Aug 2010).",
+    "year": 2008
+   },
+   {
+    "source": "International Wine Cellar, via K&L",
+    "source_url": "https://www.klwines.com/products/details/1057948",
+    "score": 93,
+    "scale": "100",
+    "nose": "Kaleidoscopic: lime zest, strong minerality, spice cake, white flowers.",
+    "palate": "Very deep and pure.",
+    "finish": "Strongly mineral.",
+    "summary": "April 2010.",
+    "year": 2008
+   },
+   {
+    "source": "Jancis Robinson, via K&L",
+    "source_url": "https://www.klwines.com/products/details/1057948",
+    "score": 19,
+    "scale": "20",
+    "nose": null,
+    "palate": "Wide flavour range: cream, baked apple, spice, a touch of bacon fat; fruit and oak well integrated.",
+    "finish": null,
+    "summary": "July 2017.",
+    "year": 2008
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Pouilly-Fumé",
+   "source_url": "https://www.klwines.com/products/details/1057948"
+  },
+  "flavor_terms": [
+   "pear",
+   "white peach",
+   "sage",
+   "gunflint",
+   "crushed stone",
+   "lime zest",
+   "spice",
+   "white flowers",
+   "baked apple",
+   "cream"
+  ],
+  "confidence": "medium",
+  "notes": "All critics are the 2008 vintage via K&L (retailer reprints). K&L lists 14.2% ABV for 2008 only - not applied as general fact. No producer notes. Recent vintages labeled Vin de France per CellarTracker titles."
+ },
+ {
+  "id": "didier-dagueneau-pur-sang",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "The Wine Doctor (Chris Kissack)",
+    "source_url": "https://www.thewinedoctor.com/weekend/didierdagueneau_pouillyfumepursang_1997.shtml",
+    "score": 96,
+    "scale": "100",
+    "nose": "Honeyed macaroon, whitecurrant, white pepper and a light pea-shoot note.",
+    "palate": "Fresh, textured, broad and energetic despite creamy weight.",
+    "finish": "Cool, weighty and very long.",
+    "summary": "Also scored 18/20; tasted at 20 years old.",
+    "year": 1997
+   },
+   {
+    "source": "Wine Spectator, via Wine.com",
+    "source_url": "https://www.wine.com/product/didier-dagueneau-pouilly-fume-pur-sang-2002/146863",
+    "score": 96,
+    "scale": "100",
+    "nose": "Smoke and blanched almond.",
+    "palate": "Candied citrus peel, lanolin, macadamia, coconut, wet straw; rich with a steely core.",
+    "finish": "Long.",
+    "summary": "Drink through 2010.",
+    "year": 2002
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Pouilly-Fumé",
+   "source_url": null
+  },
+  "flavor_terms": [
+   "honey",
+   "whitecurrant",
+   "white pepper",
+   "smoke",
+   "almond",
+   "citrus peel",
+   "lanolin",
+   "macadamia",
+   "coconut",
+   "wet straw"
+  ],
+  "confidence": "medium",
+  "notes": "Old vintages (1997, 2002). No producer notes fetched. WS note page blocked (406)."
+ },
+ {
+  "id": "didier-dagueneau-blanc-etc",
+  "producer": {
+   "nose": "Ripe white grapefruit, quince, acacia honey, green herbs, cream, hint of tropical fruit and crushed stone.",
+   "palate": "Lush texture with spicy, tangy acidity once aerated.",
+   "finish": "Strong aromatic lift.",
+   "summary": "From younger vines and parcels off the St-Andelain hill.",
+   "source_url": "https://www.elitewines.com/wp-content/uploads/2023/08/Didier-Dagueneau-Blanc-Etc.-NV-TS.pdf"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Loire (Vin de France); Kimmeridgian clay-limestone",
+   "source_url": "https://www.elitewines.com/wp-content/uploads/2023/08/Didier-Dagueneau-Blanc-Etc.-NV-TS.pdf"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "quince",
+   "acacia honey",
+   "green herbs",
+   "cream",
+   "tropical fruit",
+   "crushed stone",
+   "green apple",
+   "saline"
+  ],
+  "confidence": "medium",
+  "notes": "Labelled Vin de France, not Pouilly-Fumé AOC. Notes from importer (Elite Wines) tech sheet, non-vintage. Sources conflict: Elite says tank-fermented/aged at 13%; Alliance Wine (2023) says 50% neutral oak at 12% - cask and ABV left null."
+ },
+ {
+  "id": "jonathan-didier-pabiot-pouilly-fum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Pabiot bottles several Pouilly-Fumé cuvées (Aubaine, Florilège, Eurythmie, Élisa, Léon); search found no plain 'Pouilly-Fumé' bottling, so cuvée unclear. Not filled."
+ },
+ {
+  "id": "domaine-des-berthiers-pouilly-fum",
+  "producer": {
+   "nose": "Ripe lime and tangerine with smoky silex notes.",
+   "palate": "Flinty acidity with blackcurrant, mango and citron.",
+   "finish": null,
+   "summary": "Lively, noble Saint-Andelain village cuvée.",
+   "source_url": "https://www.wine.com/product/jean-claude-dagueneau-domaine-des-berthiers-pouilly-fume-2022/1741560"
+  },
+  "critics": [
+   {
+    "source": "James Suckling, via Wine.com",
+    "source_url": "https://www.wine.com/product/jean-claude-dagueneau-domaine-des-berthiers-pouilly-fume-2022/1741560",
+    "score": 91,
+    "scale": "100",
+    "nose": "Lemon, warm herbs, mild spice.",
+    "palate": "Medium body, zesty acidity, vivid and refreshing.",
+    "finish": "Lemony, mouthwatering.",
+    "summary": null,
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Pouilly-Fumé (Saint-Andelain), silex",
+   "source_url": "https://www.wine.com/product/jean-claude-dagueneau-domaine-des-berthiers-pouilly-fume-2022/1741560"
+  },
+  "flavor_terms": [
+   "lime",
+   "tangerine",
+   "smoky",
+   "flint",
+   "blackcurrant",
+   "mango",
+   "citron",
+   "lemon",
+   "herbs",
+   "spice"
+  ],
+  "confidence": "high",
+  "notes": "2022 vintage; producer is Jean-Claude Dagueneau. Winemaker notes via Wine.com. Wine Enthusiast pages blocked (redirect loop)."
+ },
+ {
+  "id": "ch-teau-de-tracy-pouilly-fum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Producer wine page returned 404; search surfaced only CellarTracker/other cuvées (Haute Densité, 101 Rangs, Mademoiselle de T). Nothing reliable for the classic bottling."
+ },
+ {
+  "id": "domaine-de-ladoucette-pouilly-fum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.winespectator.com/wine/wine-detail/id/1319175/name/de-ladoucette-pouilly-fume-2023/guest",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Apple, pear and citrus cream with a taut line (truncated, paywalled).",
+    "finish": null,
+    "summary": "Score member-only; March 31 2025 issue.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Pouilly-Fumé",
+   "source_url": null
+  },
+  "flavor_terms": [
+   "apple",
+   "pear",
+   "citrus"
+  ],
+  "confidence": "low",
+  "notes": "Probable duplicate of id baron-de-ladoucette-pouilly-fum (the estate's standard 'de Ladoucette Pouilly-Fumé'); see that entry for fuller notes. Only a paywalled fragment here (2023)."
+ },
+ {
+  "id": "patient-cottat-anciennes-vignes-sancerre",
+  "producer": {
+   "nose": "Complex acacia blossom and Muscat-like passion fruit.",
+   "palate": "Full and rich with lychee and honey; well balanced.",
+   "finish": null,
+   "summary": "Lemon colour with gold-green glints.",
+   "source_url": "https://www.wine.com/product/patient-cottat-sancerre-anciennes-vignes-2018/526431"
+  },
+  "critics": [
+   {
+    "source": "Wine Enthusiast, via Wine.com",
+    "source_url": "https://www.wine.com/product/patient-cottat-sancerre-anciennes-vignes-2018/526431",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": "Rich, concentrated ripe white fruit; apple threaded with lemon zest and acidity.",
+    "finish": null,
+    "summary": null,
+    "year": 2018
+   },
+   {
+    "source": "Wilfred Wong (Wine.com)",
+    "source_url": "https://www.wine.com/product/patient-cottat-sancerre-anciennes-vignes-2018/526431",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": "Bright and brisk with fresh citrus and minerality.",
+    "finish": null,
+    "summary": null,
+    "year": 2018
+   },
+   {
+    "source": "Wine Enthusiast, via Wine of the Month Club",
+    "source_url": "https://www.winemonthclub.com/patient-cotta-sancerre-anciennes-vignes-2019",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score only via retailer.",
+    "year": 2019
+   }
+  ],
+  "facts": {
+   "abv": 12.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Sancerre; flint soils, estate's oldest vines",
+   "source_url": "https://www.wine.com/product/patient-cottat-sancerre-anciennes-vignes-2018/526431"
+  },
+  "flavor_terms": [
+   "acacia",
+   "passion fruit",
+   "lychee",
+   "honey",
+   "apple",
+   "lemon zest",
+   "citrus",
+   "mineral",
+   "apricot",
+   "grapefruit"
+  ],
+  "confidence": "high",
+  "notes": "2018 vintage (winemaker notes, ABV 12.5%) plus a 2019 WE score. Oldest-vines claim from winemonthclub.com."
+ },
+ {
+  "id": "ch-teau-bonnet-blanc",
+  "producer": {
+   "nose": "Exotic fruit (mango, passion fruit) and grapefruit.",
+   "palate": "Good intensity, round yet fresh, exotic and citrus fruit.",
+   "finish": "Gourmand, pleasant finish.",
+   "summary": "Pale yellow with silver glints.",
+   "source_url": "https://www.wine.com/product/chateau-bonnet-blanc-2023/2234847"
+  },
+  "critics": [
+   {
+    "source": "Wilfred Wong (Wine.com)",
+    "source_url": "https://www.wine.com/product/chateau-bonnet-blanc-2023/2234847",
+    "score": 91,
+    "scale": "100",
+    "nose": "Peach skin, fragrant spice, dried earth.",
+    "palate": "Fresh, clean and well balanced.",
+    "finish": null,
+    "summary": null,
+    "year": 2023
+   },
+   {
+    "source": "Wine Enthusiast, via Wine.com",
+    "source_url": "https://www.wine.com/product/chateau-bonnet-blanc-2023/2234847",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Classic, fresh, fruity white Bordeaux for drinking now; Best Buy.",
+    "year": 2023
+   },
+   {
+    "source": "The Wine Cellar Insider (Jeff Leve)",
+    "source_url": "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/satellite-appellations/chateau-bonnet-entre-deux-mers-bordeaux-wine/",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Open, easy-drinking; light lemon, lime and green apple.",
+    "finish": null,
+    "summary": "Score not shown on profile page.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 12.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "65% Sauvignon Blanc, 30% Sémillon, 5% Muscadelle",
+   "cask": "Stainless steel, 4 months on lees, no malolactic",
+   "region": "Entre-Deux-Mers, Bordeaux",
+   "source_url": "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/satellite-appellations/chateau-bonnet-entre-deux-mers-bordeaux-wine/"
+  },
+  "flavor_terms": [
+   "mango",
+   "passion fruit",
+   "grapefruit",
+   "citrus",
+   "peach skin",
+   "spice",
+   "lemon",
+   "lime",
+   "green apple"
+  ],
+  "confidence": "high",
+  "notes": "Winemaker notes and scores for 2023 vintage (ABV 12.5% from Wine.com 2023). Blend/vinification from WCI profile."
+ },
+ {
+  "id": "ch-teau-carbonnieux-blanc",
+  "producer": {
+   "nose": "Lilac and hawthorn, then lemon, grapefruit and passion fruit.",
+   "palate": "Fresh, crisp attack opening to a dense, fleshy citrus mid-palate.",
+   "finish": "Long, concentrated, citrus.",
+   "summary": "Develops dried and candied fruit after ~4 years.",
+   "source_url": "https://carbonnieux.com/les-vins/chateau-carbonnieux-blanc/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "68% Sauvignon Blanc, 32% Sémillon (2023)",
+   "cask": "10 months in barrels and foudres, 25% new",
+   "region": "Pessac-Léognan; clay-limestone",
+   "source_url": "https://carbonnieux.com/les-vins/chateau-carbonnieux-blanc/"
+  },
+  "flavor_terms": [
+   "lilac",
+   "hawthorn",
+   "lemon",
+   "grapefruit",
+   "passion fruit",
+   "citrus"
+  ],
+  "confidence": "medium",
+  "notes": "Producer notes for 2023 vintage. No critic fetched (search budget)."
+ },
+ {
+  "id": "pavillon-blanc-du-ch-teau-margaux",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Jeb Dunnuck, via Vinfolio",
+    "source_url": "https://www.vinfolio.com/product/612ec2800100000000057136/2021-pavillon-blanc-du-ch-margaux-chateau-margaux",
+    "score": 95,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "All Sauvignon; brilliant, mineral-soaked style with ~20 years of life.",
+    "year": 2021
+   },
+   {
+    "source": "Neal Martin, via Vinfolio",
+    "source_url": "https://www.vinfolio.com/product/612ec2800100000000057136/2021-pavillon-blanc-du-ch-margaux-chateau-margaux",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": "Well balanced, taut and fresh with a fine acid line.",
+    "finish": null,
+    "summary": null,
+    "year": 2021
+   },
+   {
+    "source": "The Wine Cellar Insider (Jeff Leve)",
+    "source_url": "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/margaux/margaux/",
+    "score": 95,
+    "scale": "100",
+    "nose": "White flowers, pomelo, white peach, green apple, tangerine.",
+    "palate": null,
+    "finish": null,
+    "summary": null,
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Barrel-fermented, 7-8 months on lees with stirring, 33% new French oak",
+   "region": "Bordeaux (Soussans vineyard, limestone); sold as AOC Bordeaux",
+   "source_url": "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/margaux/margaux/"
+  },
+  "flavor_terms": [
+   "mineral",
+   "white flowers",
+   "pomelo",
+   "white peach",
+   "green apple",
+   "tangerine",
+   "citrus"
+  ],
+  "confidence": "medium",
+  "notes": "Vintages 2021 and 2023. WCI and Dunnuck say 100% Sauvignon Blanc; Vinfolio lists Sémillon too - blend left null. Jancis Robinson gave 2021 16/20 ('overpriced'). Producer page 404."
+ },
+ {
+  "id": "ch-teau-de-fieuzal-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Jane Anson, via Berry Bros & Rudd",
+    "source_url": "https://www.bbr.com/products-20238037435-2023-chateau-de-fieuzal-blanc-pessac-leognan-bordeaux",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": "Stone fruit, sage and fresh-cut herbs with slate-like grip.",
+    "finish": null,
+    "summary": null,
+    "year": 2023
+   },
+   {
+    "source": "The Wine Cellar Insider (Jeff Leve)",
+    "source_url": "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/graves-pessac/de-fieuzal/",
+    "score": 92,
+    "scale": "100",
+    "nose": "Flowers, green apple, white peach, lemon peel, tangerine zest, honeysuckle.",
+    "palate": null,
+    "finish": null,
+    "summary": null,
+    "year": 2023
+   },
+   {
+    "source": "Decanter",
+    "source_url": "https://www.decanter.com/wine-reviews/france/bordeaux/chateau-de-fieuzal-blanc-pessac-leognan-bordeaux-2020-67832/",
+    "score": null,
+    "scale": null,
+    "nose": "Peach, pear, green apple, light pineapple.",
+    "palate": "Balanced and textured (note truncated).",
+    "finish": null,
+    "summary": "Score paywalled.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc/Sémillon; 60/40 in 2023",
+   "cask": "16-18 months, ~50% new French oak (WCI)",
+   "region": "Pessac-Léognan",
+   "source_url": "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/graves-pessac/de-fieuzal/"
+  },
+  "flavor_terms": [
+   "stone fruit",
+   "sage",
+   "herbs",
+   "green apple",
+   "white peach",
+   "lemon peel",
+   "honeysuckle",
+   "pear",
+   "pineapple",
+   "saline"
+  ],
+  "confidence": "medium",
+  "notes": "Mostly 2023 vintage (blend 60/40 agreed by BBR and WCI); Decanter note is 2020. BBR also lists Dunnuck 91-93 and Suckling 93-94 barrel ranges. No producer notes fetched."
+ },
+ {
+  "id": "ch-teau-olivier-blanc",
+  "producer": {
+   "nose": "Citrus and white peach, with white flowers and exotic fruit such as pineapple depending on vintage.",
+   "palate": "Rich yet fresh, mineral, with light smoke from barrel.",
+   "finish": "Citrus, melon and verbena; persistent, tangy to saline.",
+   "summary": "Multi-vintage profile from estate site.",
+   "source_url": "https://www.chateau-olivier.com/en/vin/chateau-olivier-white/"
+  },
+  "critics": [
+   {
+    "source": "The Wine Cellar Insider (Jeff Leve)",
+    "source_url": "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/graves-pessac/olivier/",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": "Crisp, juicy and fresh with yellow fruit and green apple.",
+    "finish": null,
+    "summary": null,
+    "year": 2023
+   },
+   {
+    "source": "The Wine Cellar Insider (Jeff Leve)",
+    "source_url": "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/graves-pessac/olivier/",
+    "score": 94,
+    "scale": "100",
+    "nose": "Crushed rock, flowers, lemon peel.",
+    "palate": "Sweet, crisp yellow citrus.",
+    "finish": null,
+    "summary": null,
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "~78-80% Sauvignon Blanc, ~20% Sémillon, ~2% Muscadelle (varies by vintage)",
+   "cask": "French oak on lees ~9 months (WCI)",
+   "region": "Pessac-Léognan; ~40-year-old vines",
+   "source_url": "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/graves-pessac/olivier/"
+  },
+  "flavor_terms": [
+   "citrus",
+   "white peach",
+   "white flowers",
+   "pineapple",
+   "smoke",
+   "melon",
+   "verbena",
+   "green apple",
+   "lemon peel",
+   "saline"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are a non-vintage summary across 2010-2021; critic notes 2021 and 2023. Blend agrees between estate and WCI. WCI lists 13.5% ABV for 2021 only."
+ },
+ {
+  "id": "ch-teau-latour-martillac-blanc",
+  "producer": {
+   "nose": "Flinty, lemon rind, baked apple and pear.",
+   "palate": "Fresh, lively, medium-to-full with bright acidity.",
+   "finish": "Saline and long.",
+   "summary": "55% Sauvignon Blanc / 45% Sémillon, 15 months in barrel.",
+   "source_url": "https://www.wine.com/product/chateau-latour-martillac-blanc-2021/2609579"
+  },
+  "critics": [
+   {
+    "source": "Wine Enthusiast, via Wine.com",
+    "source_url": "https://www.wine.com/product/chateau-latour-martillac-blanc-2021/2609579",
+    "score": 94,
+    "scale": "100",
+    "nose": null,
+    "palate": "Ripe fruit and textured acidity with yeasty, spicy oak notes.",
+    "finish": null,
+    "summary": null,
+    "year": 2021
+   },
+   {
+    "source": "Decanter, via Wine.com",
+    "source_url": "https://www.wine.com/product/chateau-latour-martillac-blanc-2021/2609579",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": "Crystalline and zesty, honeyed with a sherbet-like tang.",
+    "finish": null,
+    "summary": null,
+    "year": 2021
+   },
+   {
+    "source": "Jeb Dunnuck, via Wine.com",
+    "source_url": "https://www.wine.com/product/chateau-latour-martillac-blanc-2021/2609579",
+    "score": 92,
+    "scale": "100",
+    "nose": "Clean citrus, honeyed lemon zest, mint, flowers.",
+    "palate": null,
+    "finish": "Excellent length.",
+    "summary": null,
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "55% Sauvignon Blanc, 45% Sémillon (2021)",
+   "cask": "15 months in barrel",
+   "region": "Pessac-Léognan",
+   "source_url": "https://www.wine.com/product/chateau-latour-martillac-blanc-2021/2609579"
+  },
+  "flavor_terms": [
+   "flint",
+   "lemon rind",
+   "baked apple",
+   "pear",
+   "saline",
+   "honey",
+   "lemon zest",
+   "mint",
+   "floral",
+   "spice"
+  ],
+  "confidence": "high",
+  "notes": "All 2021 vintage via Wine.com (winemaker notes + critic reprints). Producer site unreachable (robots)."
+ }
+]
