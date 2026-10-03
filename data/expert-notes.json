@@ -6701,84 +6701,524 @@
   "notes": "Barrel-proof product; proof varies by batch. Critic batch was 54.2% ABV (108.4 proof) vs input 109. Excluded a Bourbon Culture review (7.7/10) because it covered a 108-proof single-barrel store pick, not the standard release."
  },
  "peerless-small-batch-rye": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: page-fetch quota exhausted before this bottle. Candidate sources: kentuckypeerless.com/whiskey/kentucky-peerless-small-batch-rye/, thewhiskeywash.com review (2025)."
+  "producer": {
+   "nose": null,
+   "palate": "Balanced; sweet maple, brown sugar and light citrus sweetness.",
+   "finish": "A touch of oak with no throat burn.",
+   "summary": "Producer pitches it as a smooth sipping rye, bottled at barrel proof, non-chill-filtered, made with a sweet mash process.",
+   "source_url": "https://kentuckypeerless.com/whiskey/kentucky-peerless-small-batch-rye/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash (Jade Cox)",
+    "source_url": "https://thewhiskeywash.com/whiskey-reviews/review-kentucky-peerless-small-batch-rye-whiskey-2025/",
+    "score": null,
+    "scale": null,
+    "nose": "Honey and spice up front, then vanilla, apple and charred oak; little alcohol heat.",
+    "palate": "Bold oak with warm honey, caramelized pear, baking spice and a hint of milk chocolate.",
+    "finish": "Vanilla and sweet orange moving to butterscotch and hickory smoke, with lingering spice and pumpkin.",
+    "summary": "Very positive; calls it a benchmark premium rye for sipping or cocktails. A numeric 10 is shown but the scale is not stated, so score omitted.",
+    "year": 2025
+   },
+   {
+    "source": "Tweet Drams (rarebird101)",
+    "source_url": "https://tweetdrams.com/2021/07/29/peerless-small-batch-rye/",
+    "score": null,
+    "scale": null,
+    "nose": "Sugar cookie, maple, buttered cinnamon bread.",
+    "palate": "Caramel creme, lemon frosting, vanilla extract.",
+    "finish": "Long and rich: English toffee, charred oak, cola.",
+    "summary": "Called an exceptional, rich and complex pour that tastes pricier than it is; qualitative rating only. Reviewed bottle was 109.6 proof.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Louisville, Kentucky",
+   "source_url": "https://kentuckypeerless.com/whiskey/kentucky-peerless-small-batch-rye/"
+  },
+  "flavor_terms": [
+   "maple",
+   "brown sugar",
+   "citrus",
+   "oak",
+   "honey",
+   "vanilla",
+   "charred oak",
+   "caramel",
+   "toffee",
+   "baking spice"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gives no proof/age/mash bill, only that it is barrel proof and non-chill-filtered; barrel proof varies by batch (one reviewer's bottle was 109.6 vs input 110). Producer notes are not split into nose/palate; mapped from one descriptive sentence."
  },
  "peerless-double-oak-rye": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: page-fetch quota exhausted. Candidate sources: kentuckypeerless.com/whiskey/double-oak-rye/, shoppeerless.com product page."
+  "producer": {
+   "nose": "Sweet seasoned oak with orange zest; robust.",
+   "palate": "Warm molasses and earthy cinnamon at first, shifting to bright florals and smoky, earthy herbs.",
+   "finish": "Candied smoke as bright and dark notes play off each other.",
+   "summary": "Straight rye aged in two new oak casks (from the Peerless online shop). The distillery says it selects barrels with prominent grain, fruit and herbaceous notes for the second cask.",
+   "source_url": "https://shoppeerless.com/product/peerless-small-batch-double-oak-rye/"
+  },
+  "critics": [
+   {
+    "source": "Bourbonary (Lance)",
+    "source_url": "https://bourbonary.wordpress.com/2021/04/20/peerless-double-oaked-rye-review/",
+    "score": 8,
+    "scale": "10",
+    "nose": "Dark caramel, toasted oak, graham cracker and rye spice.",
+    "palate": "Thick, oily; rye and cinnamon spice fading into oak, dark chocolate and dark caramel, then a return of cinnamon.",
+    "finish": "Lingering dark chocolate, black pepper, rye spice, late mint.",
+    "summary": "Praised the balance of sweet and spice and deep flavors. Bottle reviewed was barrel R150922109, 109.6 proof, stated 5 years old.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Two new oak casks (double oaked)",
+   "region": "Louisville, Kentucky",
+   "source_url": "https://shoppeerless.com/product/peerless-small-batch-double-oak-rye/"
+  },
+  "flavor_terms": [
+   "oak",
+   "orange zest",
+   "molasses",
+   "cinnamon",
+   "floral",
+   "herbal",
+   "smoke",
+   "dark caramel",
+   "dark chocolate",
+   "rye spice"
+  ],
+  "confidence": "high",
+  "notes": "Producer pages state barrel proof but give no specific proof/age/mash bill; input 108 proof is unverified. The sole critic review covers a specific barrel at 109.6 proof, which may differ from other releases."
  },
  "willett-pot-still-reserve": {
   "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: page-fetch quota exhausted. Candidate sources: breakingbourbon.com/review/willett-pot-still-reserve-bourbon, thewhiskeywash.com review."
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Nick Beiter)",
+    "source_url": "https://www.breakingbourbon.com/review/willett-pot-still-reserve-bourbon",
+    "score": 3,
+    "scale": "5",
+    "nose": "Ripe cherry and a little citrus over vanilla and dry oak, hints of buttered popcorn and honey.",
+    "palate": "Honey and caramel against spice and zesty citrus; fairly thin mouthfeel.",
+    "finish": "Rye spice building, then cinnamon, buttered popcorn, vanilla and caramel; lingering spice.",
+    "summary": "Slightly above average and distinctive, but the liquid falls short of the showpiece bottle. Batch 19C25, 94 proof.",
+    "year": 2020
+   },
+   {
+    "source": "The Whiskey Wash (Jeff Bogursky)",
+    "source_url": "https://thewhiskeywash.com/american-whiskey/whisky-review-whiskey-whisky-review-willett-pot-still-reserve-kentucky-straight-bourbon-willett-willett-2024/",
+    "score": null,
+    "scale": null,
+    "nose": "Hot spirity vapor with wood and maple underneath.",
+    "palate": "Immediate rye spice, not sweet, heavy oak, a hint of cayenne over a neutral corn base.",
+    "finish": "Long and warming as it fades.",
+    "summary": "Attractive gift bottle but ordinary liquid. A 5 is shown without a stated scale, so score omitted.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": null,
+   "mash_bill": "65% corn, 20% wheat, 15% barley",
+   "cask": "Barrel entry proof 115",
+   "region": "Kentucky",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/willett-pot-still-reserve/"
+  },
+  "flavor_terms": [
+   "cherry",
+   "citrus",
+   "vanilla",
+   "oak",
+   "buttered popcorn",
+   "honey",
+   "caramel",
+   "rye spice",
+   "cinnamon",
+   "maple"
+  ],
+  "confidence": "medium",
+  "notes": "Producer page has no tasting notes. It currently lists a wheated mash bill (corn/wheat/barley), yet both critics describe rye spice; the reviewed bottles (2020, 2024) may predate or differ from the current recipe."
  },
  "willett-family-estate-4-year-rye": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: page-fetch quota exhausted. Candidate source: breakingbourbon.com/review/willett-family-estate-bottled-4-year-rye. Note WFE 4yr rye proof varies by release."
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer describes a cask-strength blend of two rye mash bills meant to evoke a historic Maryland-style rye, balancing fruit and spice; no formal tasting notes.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/willett-family-estate-4-year-rye/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Eric Hasman)",
+    "source_url": "https://www.breakingbourbon.com/review/willett-family-estate-bottled-4-year-rye",
+    "score": null,
+    "scale": null,
+    "nose": "Floral, botanical and sweet; caramel apple, caramel popcorn, burnt toffee over honey and rye bread.",
+    "palate": "Warm raisin, menthol and spice with green tea giving a slightly medicinal note, plus light cherry and citrus.",
+    "finish": "More botanicals and spice, toasted grain, black pepper, lingering dryness.",
+    "summary": "Called unique and surprisingly complex. Rated 3.5 on the site's own scale (scale not stated on the page, so score omitted). Reviewed bottle 111.2 proof.",
+    "year": 2020
+   },
+   {
+    "source": "The Whiskey Shelf (xboxsimpson)",
+    "source_url": "https://www.thewhiskeyshelf.com/willett-family-estate-4-year-rye-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Licorice, honey, dark berries, anise, fennel, caraway, citrus and herbal botanicals.",
+    "palate": "Spicy, herbal sweetness: licorice, honey, fennel, roasted oak, cinnamon, vanilla; likened to lightly sweetened lemon tea.",
+    "finish": "Herbal, sweet and tannic with honey, licorice, baked bread and mint, moving to black tea and eucalyptus.",
+    "summary": "Rated 'Top Shelf' (qualitative); dense, unique herbal rye. Reviewed bottle 56.6% ABV.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": "4 years",
+   "mash_bill": "Blend: 90% of a 74% rye / 11% corn / 15% barley mash and 10% of a 51% rye / 34% corn / 15% barley mash",
+   "cask": "Barrel entry proof 110; bottled at cask strength",
+   "region": "Kentucky",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/willett-family-estate-4-year-rye/"
+  },
+  "flavor_terms": [
+   "floral",
+   "botanical",
+   "caramel",
+   "honey",
+   "rye bread",
+   "menthol",
+   "licorice",
+   "fennel",
+   "black pepper",
+   "mint"
+  ],
+  "confidence": "high",
+  "notes": "Producer gives no tasting notes or bottling proof; 110 is barrel entry proof. Cask strength varies by batch (critics' bottles were 111.2 and ~113.2 proof vs input 110). Mash bill percentages read from the producer page layout."
  },
  "noah-s-mill": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: page-fetch quota exhausted. Beware older age-stated (15yr) Noah's Mill reviews when filling."
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer calls it a robust, smooth bourbon; no formal tasting notes.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/noahs-mill/"
+  },
+  "critics": [
+   {
+    "source": "Film Whiskey (Bob Book & Brad)",
+    "source_url": "https://www.filmwhiskey.com/blog/whiskey-review-noahs-mill-bourbon/",
+    "score": 34.75,
+    "scale": "50",
+    "nose": "Rye-like spice, vanilla and caramel; dusty, musty warehouse character.",
+    "palate": "Sweet start, spice-forward with oak, vanilla, caramel and dusty notes.",
+    "finish": "Fairly smooth and sweet; dark chocolate and coffee.",
+    "summary": "Average of two tasters just below their recommend threshold; worth trying at a bar, questionable value. Reviewed at 114.3 proof.",
+    "year": 2024
+   },
+   {
+    "source": "BarleyMania (Tobi)",
+    "source_url": "https://barleymania.com/2018/05/23/rev-noahsmillbourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Wax and corn, wood, straw, honey, herbs and dust, dried apricot and papaya.",
+    "palate": "Complex: vanilla, oatcake, leather, spices, sunflower seeds, dried fruit; proof well integrated.",
+    "finish": "Long, focused and creamy.",
+    "summary": "A personal favorite of the reviewer; no score. Reviewed at 57.15% ABV.",
+    "year": 2018
+   }
+  ],
+  "facts": {
+   "abv": 57.15,
+   "proof": 114.3,
+   "age": null,
+   "mash_bill": "72% corn, 13% rye, 15% barley",
+   "cask": "Barrel entry proof 125",
+   "region": "Kentucky",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/noahs-mill/"
+  },
+  "flavor_terms": [
+   "spice",
+   "vanilla",
+   "caramel",
+   "dusty",
+   "oak",
+   "dark chocolate",
+   "coffee",
+   "honey",
+   "dried fruit",
+   "leather"
+  ],
+  "confidence": "high",
+  "notes": "No producer tasting notes. Film Whiskey review was recorded 2021 and posted 2024; older Noah's Mill was sourced whiskey, so profile may differ by era."
  },
  "rowan-s-creek": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: page-fetch quota exhausted."
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer notes the label honors the creek on the family distillery and describes a smooth, approachable whiskey; no formal tasting notes.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/rowans-creek/"
+  },
+  "critics": [
+   {
+    "source": "Columbus Bourbon (Mark & Johny K)",
+    "source_url": "https://www.columbusbourbon.com/2019/03/rowans-creek-bourbon-review.html",
+    "score": 51,
+    "scale": "100",
+    "nose": "Very sweet: caramel, brown sugar, raisin, rose petal, vanilla, honey; slight lighter-fluid note.",
+    "palate": "Smoky, cigar-like and corn-forward; bitter and tart.",
+    "finish": "Hot at first, medium-long, smoky with a hint of cinnamon.",
+    "summary": "Disappointing for the price versus peers. Reviewed at 50.05% ABV.",
+    "year": 2019
+   },
+   {
+    "source": "Bourbon Gents (Mr Pie)",
+    "source_url": "https://bourbongents.com/reviews/rowans-creek",
+    "score": null,
+    "scale": null,
+    "nose": "Lots of raisin, creamy vanilla, faint dark chocolate.",
+    "palate": "Aged oak with rye pepper and spice, nutty aftertaste.",
+    "finish": "Modest, oak and sweet spice.",
+    "summary": "Above average but one-dimensional and arguably overpriced. A 6 is shown without a stated scale; year not stated.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 50.05,
+   "proof": 100.1,
+   "age": null,
+   "mash_bill": "72% corn, 13% rye, 15% barley",
+   "cask": "Barrel entry proof 125",
+   "region": "Kentucky",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/rowans-creek/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "brown sugar",
+   "raisin",
+   "vanilla",
+   "honey",
+   "smoky",
+   "oak",
+   "rye spice",
+   "cinnamon",
+   "dark chocolate"
+  ],
+  "confidence": "high",
+  "notes": "No producer tasting notes. Critic reviews (2019 and undated) likely reflect older, possibly sourced batches."
  },
  "johnny-drum-private-stock": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: page-fetch quota exhausted."
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer says it was developed by Thompson Willett in the 1960s, with a retro look and rye-forward flavor; no formal tasting notes.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/johnny-drum-private-stock/"
+  },
+  "critics": [
+   {
+    "source": "Drinkspirits (Geoff Kleinman)",
+    "source_url": "https://www.drinkspirits.com/bourbon/review-johnny-drum-private-stock-bourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Caramel, cinnamon, marzipan, light oak spice.",
+    "palate": "Caramel, peanut and cinnamon up front; midpalate turns to allspice, clove and oak.",
+    "finish": "Long, spicy, slightly dry and well balanced.",
+    "summary": "Called a hidden gem that drinks easily neat for its proof. Reviewed at 101 proof.",
+    "year": 2013
+   },
+   {
+    "source": "Bourbon Guy (Eric Burke)",
+    "source_url": "https://www.bourbonguy.com/blog/2016/4/28/johnny-drum-private-stock-101-proof",
+    "score": null,
+    "scale": null,
+    "nose": "Mint, grain, honeydew melon, allspice.",
+    "palate": "Dry, grain-forward with mint, brown sugar, oak and spice.",
+    "finish": "Warm, spicy, decent length.",
+    "summary": "Liked it as a well-integrated, non-oaky bourbon; no numeric score. Reviewed at 101 proof.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 50.5,
+   "proof": 101,
+   "age": null,
+   "mash_bill": "Blend: 65% of a 52% corn / 38% rye / 10% barley mash and 35% of a 72% corn / 13% rye / 15% barley mash",
+   "cask": "Barrel entry proof 125",
+   "region": "Kentucky",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/johnny-drum-private-stock/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "cinnamon",
+   "marzipan",
+   "oak",
+   "allspice",
+   "clove",
+   "mint",
+   "grain",
+   "brown sugar",
+   "spice"
+  ],
+  "confidence": "high",
+  "notes": "PROOF MISMATCH: producer page lists 101 proof / 50.5% ABV, not the input's 90 proof / 45%; all critics reviewed the 101-proof bottle. Critic reviews (2013, 2016) predate the current Willett-distilled blend."
  },
  "pure-kentucky-xo": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: page-fetch quota exhausted."
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Willett product page lists proof/ABV and a general line about Kentucky limestone water; no nose/palate/finish notes given.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/pure-kentucky"
+  },
+  "critics": [
+   {
+    "source": "Hi-Time Wine Cellars (retailer notes)",
+    "source_url": "https://www.hitimewine.net/pure-kentucky-x.o.-bourbon-whiskey-53.5-750ml-willet-distillery-kentucky-straight-bourbon-whiskey-164771",
+    "score": null,
+    "scale": null,
+    "nose": "Black tea, cedar, mustiness, oak, spice, vanilla and a sooty note.",
+    "palate": "Eucalyptus and earth, more vanilla, cherry, with rye grain moving forward.",
+    "finish": "Salty with maple syrup and woody, forest-like character.",
+    "summary": "Retailer-written tasting notes, not an independent critic; listing gives 53.5% ABV.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 53.5,
+   "proof": 107,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/pure-kentucky"
+  },
+  "flavor_terms": [
+   "black tea",
+   "cedar",
+   "oak",
+   "vanilla",
+   "eucalyptus",
+   "cherry",
+   "maple syrup",
+   "salty",
+   "spice",
+   "earth"
+  ],
+  "confidence": "low",
+  "notes": "Input says 90 proof/45% but Willett page and Hi-Time list 107 proof/53.5%; input proof likely wrong. Willett page mash-bill figures are garbled (one sums >100%), so omitted. Hi-Time claims 11 years old (retailer only, not recorded as fact). Total Wine page had only producer marketing copy, no notes."
  },
  "kentucky-vintage": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: WebFetch hit a session limit before this bottle was reached; no source fetched."
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Willett says the blend of two mash bills yields a mellow, balanced flavor; no separate nose/palate/finish notes.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/kentucky-vintage"
+  },
+  "critics": [
+   {
+    "source": "The Scotch Noob",
+    "source_url": "https://scotchnoob.com/2021/06/28/kentucky-vintage-bourbon/",
+    "score": 2,
+    "scale": "10",
+    "nose": "Sawdust and hay, very dry with splintery oak and dry corn husk; corn syrup and acetone after air.",
+    "palate": "Full-bodied and woody with birch beer, roasted chestnut, cola and light cinnamon.",
+    "finish": "Medium-short and drying; late cola and black licorice sweetness, fades quickly.",
+    "summary": "Liked the birch-beer note but found it shallow with off-notes; recommends passing. Water brought out almond/marzipan.",
+    "year": 2021
+   },
+   {
+    "source": "Barrels and Mash",
+    "source_url": "https://www.barrelsandmash.com/2016/07/13/review-kentucky-vintage/",
+    "score": 3,
+    "scale": "5",
+    "nose": "Slight ethanol, sweet corn, light vanilla and sugar; youthful, caramel with air.",
+    "palate": "Salty peanut, tobacco, earthiness, black pepper and leather; little sweetness.",
+    "finish": "Light and dry with slightly bitter peanut and gentle warmth.",
+    "summary": "Notes an unusual saltiness; reviewer leaned positive and suggests it suits cocktails.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": "Blend of two Willett mash bills; page lists 72% corn/13% rye/15% barley (125 barrel-entry proof) and 79% corn/7% rye/14% barley (107 barrel-entry proof)",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/kentucky-vintage"
+  },
+  "flavor_terms": [
+   "oak",
+   "sawdust",
+   "birch beer",
+   "cola",
+   "black licorice",
+   "peanut",
+   "salty",
+   "tobacco",
+   "leather",
+   "sweet corn"
+  ],
+  "confidence": "high",
+  "notes": "Producer offers only a one-line descriptor. Page also shows a stray '85%' figure of unclear meaning; mash bills recorded as the two cleanly listed sets. Critic reviews (2016, 2021) may predate a shift to Willett-distilled whiskey; both reviewers mention an unverified ~10-year rumor."
  },
  "old-bardstown-bottled-in-bond": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: WebFetch hit a session limit before this bottle was reached; no source fetched."
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Willett page calls it the original family mash bill and notes Kentucky-only distribution; no tasting notes given.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/old-bardstown-bottled-in-bond"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Eric Hasman)",
+    "source_url": "https://www.breakingbourbon.com/review/old-bardstown-bottled-in-bond-bourbon",
+    "score": null,
+    "scale": null,
+    "nose": "Molasses, caramel, mint and cherry cough syrup; youthful with some chemical notes.",
+    "palate": "Thin in body and flavor; caramel over faint butterscotch and oak, underdeveloped.",
+    "finish": "Low burn with faint clove, cinnamon and pepper.",
+    "summary": "Easy-drinking but bland; sees promise in Willett's own distillate but little else. Score scale not clearly stated, so not recorded.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": "72% corn / 13% rye / 15% barley",
+   "cask": "125 barrel-entry proof",
+   "region": "Kentucky, USA",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/old-bardstown-bottled-in-bond"
+  },
+  "flavor_terms": [
+   "molasses",
+   "caramel",
+   "mint",
+   "cherry",
+   "butterscotch",
+   "oak",
+   "clove",
+   "cinnamon",
+   "pepper"
+  ],
+  "confidence": "high",
+  "notes": "No producer tasting notes. Only critic review fetched is from 2016, early in the Willett-distilled era; current bottlings are likely older. Bourbon Guy 2025 revisit was rate-limited (429)."
  },
  "heaven-hill-bottled-in-bond-7-year": {
   "producer": {
@@ -6838,19 +7278,120 @@
  },
  "evan-williams-bottled-in-bond": {
   "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: WebFetch hit a session limit before this bottle was reached; no source fetched."
+  "critics": [
+   {
+    "source": "The Whiskey Jug (Josh Peters)",
+    "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/evan-williams-bottled-in-bond-review/",
+    "score": 86,
+    "scale": "100",
+    "nose": "Caramel-heavy dark sweets, oak, French vanilla, dark fruit and sweet cream; hints of maple and grain.",
+    "palate": "Creamy caramel, oak, toasted corn and spice with light sweetness and leather.",
+    "finish": "Long and spicy with dark fruit, sweetness and wood.",
+    "summary": "Strong value; pleasant neat and robust in cocktails, medium body.",
+    "year": 2015
+   },
+   {
+    "source": "The Scotch Noob",
+    "source_url": "https://scotchnoob.com/2020/04/06/evan-williams-bottled-in-bond/",
+    "score": null,
+    "scale": null,
+    "nose": "Soft and sweet: sweet corn, cherry syrup, marshmallow, mild nutty oak.",
+    "palate": "Cherry lozenge and caramel frosting, then cinnamon, clove and brown sugar with moderate burn.",
+    "finish": "Medium-long and warming with mild tannic dryness, vanilla frosting and faint oak.",
+    "summary": "Called it a quintessential, possibly among the best sub-$20 bourbons; good for cocktails.",
+    "year": 2020
+   },
+   {
+    "source": "The Whiskey Ramble (Xenoraiser)",
+    "source_url": "https://thewhiskeyramble.com/2024/01/16/evan-williams-bottled-in-bond-2020-scoresheet-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Toffee almond, lightly roasted corn, slight floral note, then nut butter and clove/cinnamon/nutmeg.",
+    "palate": "Honey-nut cereal, roasted peanut, ground pepper, caramel, peanut brittle, light brown sugar.",
+    "finish": "Lingering pepper, drying wood and roasted peanut.",
+    "summary": "Solid, reliable budget bonded bourbon, neat or mixed. Bottle filled early 2020 per laser code.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "4+ years",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/evan-williams-bottled-in-bond-review/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "oak",
+   "vanilla",
+   "dark fruit",
+   "cherry",
+   "toasted corn",
+   "roasted peanut",
+   "cinnamon",
+   "clove",
+   "brown sugar"
+  ],
+  "confidence": "medium",
+  "notes": "Heaven Hill product page not reachable (www robots failure; non-www slugs 404). Facts from critic page; input mash bill not confirmed by any fetched source. Scotch Noob page shows a graphic rating whose scale was unclear, so not recorded."
  },
  "evan-williams-single-barrel": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: WebFetch hit a session limit before this bottle was reached; no source fetched."
+  "producer": {
+   "nose": "Dark caramel with sweet oak and charred wood.",
+   "palate": "Lush and spicy; oak with honey, apple and orange.",
+   "finish": "Long, graceful and relaxed.",
+   "summary": "Heaven Hill notes each bottle carries its barrel-entry vintage date, bottling year and barrel number.",
+   "source_url": "https://heavenhilldistillery.com/evan-williams-single-barrel-vintage.php"
+  },
+  "critics": [
+   {
+    "source": "The Whisky Study (Chris Ellis)",
+    "source_url": "https://thewhiskystudy.com/reviews-1/evan-williams-single-barrel-2015-review",
+    "score": null,
+    "scale": null,
+    "nose": "Wood varnish, dusty cereal, bright vanilla cream, sour cherry, cream soda; fresh oak.",
+    "palate": "Classic oak, caramel and nutty Heaven Hill profile with red fruit and citrus, like orange marmalade and walnut.",
+    "finish": "Medium; French toast, oak and cherry cordial with dry warming spice.",
+    "summary": "2015 vintage (bottled 2024). Solid, approachable value. Page shows 88 but scale not stated, so not recorded.",
+    "year": 2024
+   },
+   {
+    "source": "Talking Bourbon",
+    "source_url": "https://talkingbourbon.com/evan-williams-single-barrel-vintage-review/",
+    "score": 12.25,
+    "scale": "20",
+    "nose": "Mild and sweet: wood, grainy bread, rye and fruit with leather, pepper, cinnamon.",
+    "palate": "Caramel, rye, leather, wood with apple, pepper and toasted nuts.",
+    "finish": "Medium, smooth, a bit sweeter.",
+    "summary": "Reasonably priced single barrel worth keeping on hand; vintage year reviewed not stated.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": 86.6,
+   "age": "7-8 years",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://heavenhilldistillery.com/evan-williams-single-barrel-vintage.php"
+  },
+  "flavor_terms": [
+   "caramel",
+   "oak",
+   "charred wood",
+   "honey",
+   "apple",
+   "orange",
+   "cherry",
+   "walnut",
+   "leather",
+   "rye"
+  ],
+  "confidence": "high",
+  "notes": "Input says 100 proof/50% but Heaven Hill lists 86.6 proof; input proof likely wrong. Vintage-dated single barrels vary by vintage and barrel; critic reviews cover different/unspecified vintages."
  },
  "henry-mckenna-10-year-single-barrel": {
   "producer": {
@@ -6912,19 +7453,109 @@
  },
  "j-t-s-brown-bottled-in-bond": {
   "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Not researched: WebFetch hit a session limit before this bottle was reached; no source fetched."
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Jordan Moskal)",
+    "source_url": "https://www.breakingbourbon.com/review/j-t-s-brown-bottled-in-bond-bourbon",
+    "score": 2.5,
+    "scale": "5",
+    "nose": "Caramel, brown sugar and light oak with rye spice and ethanol; unimpactful.",
+    "palate": "Brown butter sugar, tannic oak and peppery rye, faint vanilla cream.",
+    "finish": "Rye spice and light caramel, then dry oak and vanilla fading fast with mellow heat.",
+    "summary": "Average, straightforward value bourbon for newcomers and veterans alike.",
+    "year": 2023
+   },
+   {
+    "source": "Bourbon Culture (Mike & Mike)",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/jts-brown-bottled-in-bond-review/",
+    "score": 5.9,
+    "scale": "10",
+    "nose": "Buttery grits and grain, vanilla frosting, caramel, baked apple, peanut brittle, musty oak.",
+    "palate": "Thin; thin caramel sauce with crushed peanut, oak and tobacco.",
+    "finish": "Black pepper then peanut butter fudge, butterscotch, mint, drying oak, leather.",
+    "summary": "Balanced and nuanced for the price, a strong value, held back by thin mouthfeel.",
+    "year": 2019
+   },
+   {
+    "source": "Bourbon Guy",
+    "source_url": "https://www.bourbonguy.com/blog/2016/1/7/jts-brown-bottled-in-bond",
+    "score": null,
+    "scale": null,
+    "nose": "Delicate fruit, dried corn, hints of mint.",
+    "palate": "Caramel, dried corn and mint.",
+    "finish": "Turns bitter, with dried corn, mint and clove.",
+    "summary": "Rated 'I Dislike This' on the site's category scale; reviewer later revisited and softened his view.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "NAS (4 years per company, as reported by reviewer)",
+   "mash_bill": "78% corn / 10% rye / 12% malted barley (as reported by Breaking Bourbon)",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.breakingbourbon.com/review/j-t-s-brown-bottled-in-bond-bourbon"
+  },
+  "flavor_terms": [
+   "caramel",
+   "brown sugar",
+   "oak",
+   "rye spice",
+   "vanilla",
+   "peanut",
+   "mint",
+   "dried corn",
+   "butterscotch",
+   "black pepper"
+  ],
+  "confidence": "medium",
+  "notes": "Heaven Hill product page not reachable (www robots failure; tried non-www slugs 404). Facts are critic-reported."
  },
  "old-fitzgerald-bottled-in-bond": {
-  "producer": null,
-  "critics": [],
-  "facts": null,
-  "flavor_terms": [],
-  "confidence": "none",
-  "notes": "Fetch blocked by session limit. Input data looks inconsistent: a bottled-in-bond whiskey must be 100 proof, but input says 90 proof/NAS. Heaven Hill's site has an old-fitzgerald-7-year-old.php page and reviews exist for the 7-year BiB (e.g. The Whiskey Wash 2025), so the input record likely needs correcting."
+  "producer": {
+   "nose": "Rich bourbon sweetness with leather, subtle oak and baking spice.",
+   "palate": "Velvety, honey and butterscotch then plum, peach and fig.",
+   "finish": "Warm and sweet with dark fruit and milk chocolate.",
+   "summary": "Notes are for the 11-year decanter edition. Heaven Hill releases a new decanter edition each spring and fall; ages vary by release.",
+   "source_url": "https://heavenhilldistillery.com/old-fitzgerald.php"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Jordan Moskal)",
+    "source_url": "https://www.breakingbourbon.com/review/old-fitzgerald-bottled-in-bond-fall-2025-edition",
+    "score": null,
+    "scale": null,
+    "nose": "Butterscotch hard candy, oak, caramel chew, leather, faint vanilla, baking spice, light dried cherry.",
+    "palate": "Aged charred oak, brown sugar, baking spice, green peppercorn, vanilla taffy, touch of butterscotch.",
+    "finish": "Dry aged oak, leather, cinnamon, white pepper, dried cherry; lingering dry spice.",
+    "summary": "Fall 2025 11-year edition, 100 proof: traditional aged, dry profile with subtle sweetness; thin mouthfeel. Score scale not clearly confirmed, so not recorded.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "Varies by edition (8-19 years); current editions include 9 and 11 years",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://heavenhilldistillery.com/old-fitzgerald.php"
+  },
+  "flavor_terms": [
+   "leather",
+   "oak",
+   "baking spice",
+   "honey",
+   "butterscotch",
+   "plum",
+   "dark fruit",
+   "milk chocolate",
+   "dried cherry",
+   "brown sugar"
+  ],
+  "confidence": "high",
+  "notes": "Semi-annual decanter series with varying ages; producer notes (11-yr) matched to Breaking Bourbon Fall 2025 11-yr review. Input says 90 proof/45% but bonded decanters are 100 proof/50%; input proof likely wrong. Breaking Bourbon 2015 review of the older NAS standard Old Fitz BiB excluded as a different product."
  },
  "parker-s-heritage-collection": {
   "producer": null,

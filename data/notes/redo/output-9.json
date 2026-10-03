@@ -1,0 +1,390 @@
+[
+ {
+  "id": "peerless-small-batch-rye",
+  "producer": {
+   "nose": null,
+   "palate": "Balanced; sweet maple, brown sugar and light citrus sweetness.",
+   "finish": "A touch of oak with no throat burn.",
+   "summary": "Producer pitches it as a smooth sipping rye, bottled at barrel proof, non-chill-filtered, made with a sweet mash process.",
+   "source_url": "https://kentuckypeerless.com/whiskey/kentucky-peerless-small-batch-rye/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash (Jade Cox)",
+    "source_url": "https://thewhiskeywash.com/whiskey-reviews/review-kentucky-peerless-small-batch-rye-whiskey-2025/",
+    "score": null,
+    "scale": null,
+    "nose": "Honey and spice up front, then vanilla, apple and charred oak; little alcohol heat.",
+    "palate": "Bold oak with warm honey, caramelized pear, baking spice and a hint of milk chocolate.",
+    "finish": "Vanilla and sweet orange moving to butterscotch and hickory smoke, with lingering spice and pumpkin.",
+    "summary": "Very positive; calls it a benchmark premium rye for sipping or cocktails. A numeric 10 is shown but the scale is not stated, so score omitted.",
+    "year": 2025
+   },
+   {
+    "source": "Tweet Drams (rarebird101)",
+    "source_url": "https://tweetdrams.com/2021/07/29/peerless-small-batch-rye/",
+    "score": null,
+    "scale": null,
+    "nose": "Sugar cookie, maple, buttered cinnamon bread.",
+    "palate": "Caramel creme, lemon frosting, vanilla extract.",
+    "finish": "Long and rich: English toffee, charred oak, cola.",
+    "summary": "Called an exceptional, rich and complex pour that tastes pricier than it is; qualitative rating only. Reviewed bottle was 109.6 proof.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Louisville, Kentucky",
+   "source_url": "https://kentuckypeerless.com/whiskey/kentucky-peerless-small-batch-rye/"
+  },
+  "flavor_terms": [
+   "maple",
+   "brown sugar",
+   "citrus",
+   "oak",
+   "honey",
+   "vanilla",
+   "charred oak",
+   "caramel",
+   "toffee",
+   "baking spice"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gives no proof/age/mash bill, only that it is barrel proof and non-chill-filtered; barrel proof varies by batch (one reviewer's bottle was 109.6 vs input 110). Producer notes are not split into nose/palate; mapped from one descriptive sentence."
+ },
+ {
+  "id": "peerless-double-oak-rye",
+  "producer": {
+   "nose": "Sweet seasoned oak with orange zest; robust.",
+   "palate": "Warm molasses and earthy cinnamon at first, shifting to bright florals and smoky, earthy herbs.",
+   "finish": "Candied smoke as bright and dark notes play off each other.",
+   "summary": "Straight rye aged in two new oak casks (from the Peerless online shop). The distillery says it selects barrels with prominent grain, fruit and herbaceous notes for the second cask.",
+   "source_url": "https://shoppeerless.com/product/peerless-small-batch-double-oak-rye/"
+  },
+  "critics": [
+   {
+    "source": "Bourbonary (Lance)",
+    "source_url": "https://bourbonary.wordpress.com/2021/04/20/peerless-double-oaked-rye-review/",
+    "score": 8,
+    "scale": "10",
+    "nose": "Dark caramel, toasted oak, graham cracker and rye spice.",
+    "palate": "Thick, oily; rye and cinnamon spice fading into oak, dark chocolate and dark caramel, then a return of cinnamon.",
+    "finish": "Lingering dark chocolate, black pepper, rye spice, late mint.",
+    "summary": "Praised the balance of sweet and spice and deep flavors. Bottle reviewed was barrel R150922109, 109.6 proof, stated 5 years old.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Two new oak casks (double oaked)",
+   "region": "Louisville, Kentucky",
+   "source_url": "https://shoppeerless.com/product/peerless-small-batch-double-oak-rye/"
+  },
+  "flavor_terms": [
+   "oak",
+   "orange zest",
+   "molasses",
+   "cinnamon",
+   "floral",
+   "herbal",
+   "smoke",
+   "dark caramel",
+   "dark chocolate",
+   "rye spice"
+  ],
+  "confidence": "high",
+  "notes": "Producer pages state barrel proof but give no specific proof/age/mash bill; input 108 proof is unverified. The sole critic review covers a specific barrel at 109.6 proof, which may differ from other releases."
+ },
+ {
+  "id": "willett-pot-still-reserve",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Nick Beiter)",
+    "source_url": "https://www.breakingbourbon.com/review/willett-pot-still-reserve-bourbon",
+    "score": 3,
+    "scale": "5",
+    "nose": "Ripe cherry and a little citrus over vanilla and dry oak, hints of buttered popcorn and honey.",
+    "palate": "Honey and caramel against spice and zesty citrus; fairly thin mouthfeel.",
+    "finish": "Rye spice building, then cinnamon, buttered popcorn, vanilla and caramel; lingering spice.",
+    "summary": "Slightly above average and distinctive, but the liquid falls short of the showpiece bottle. Batch 19C25, 94 proof.",
+    "year": 2020
+   },
+   {
+    "source": "The Whiskey Wash (Jeff Bogursky)",
+    "source_url": "https://thewhiskeywash.com/american-whiskey/whisky-review-whiskey-whisky-review-willett-pot-still-reserve-kentucky-straight-bourbon-willett-willett-2024/",
+    "score": null,
+    "scale": null,
+    "nose": "Hot spirity vapor with wood and maple underneath.",
+    "palate": "Immediate rye spice, not sweet, heavy oak, a hint of cayenne over a neutral corn base.",
+    "finish": "Long and warming as it fades.",
+    "summary": "Attractive gift bottle but ordinary liquid. A 5 is shown without a stated scale, so score omitted.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": null,
+   "mash_bill": "65% corn, 20% wheat, 15% barley",
+   "cask": "Barrel entry proof 115",
+   "region": "Kentucky",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/willett-pot-still-reserve/"
+  },
+  "flavor_terms": [
+   "cherry",
+   "citrus",
+   "vanilla",
+   "oak",
+   "buttered popcorn",
+   "honey",
+   "caramel",
+   "rye spice",
+   "cinnamon",
+   "maple"
+  ],
+  "confidence": "medium",
+  "notes": "Producer page has no tasting notes. It currently lists a wheated mash bill (corn/wheat/barley), yet both critics describe rye spice; the reviewed bottles (2020, 2024) may predate or differ from the current recipe."
+ },
+ {
+  "id": "willett-family-estate-4-year-rye",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer describes a cask-strength blend of two rye mash bills meant to evoke a historic Maryland-style rye, balancing fruit and spice; no formal tasting notes.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/willett-family-estate-4-year-rye/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Eric Hasman)",
+    "source_url": "https://www.breakingbourbon.com/review/willett-family-estate-bottled-4-year-rye",
+    "score": null,
+    "scale": null,
+    "nose": "Floral, botanical and sweet; caramel apple, caramel popcorn, burnt toffee over honey and rye bread.",
+    "palate": "Warm raisin, menthol and spice with green tea giving a slightly medicinal note, plus light cherry and citrus.",
+    "finish": "More botanicals and spice, toasted grain, black pepper, lingering dryness.",
+    "summary": "Called unique and surprisingly complex. Rated 3.5 on the site's own scale (scale not stated on the page, so score omitted). Reviewed bottle 111.2 proof.",
+    "year": 2020
+   },
+   {
+    "source": "The Whiskey Shelf (xboxsimpson)",
+    "source_url": "https://www.thewhiskeyshelf.com/willett-family-estate-4-year-rye-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Licorice, honey, dark berries, anise, fennel, caraway, citrus and herbal botanicals.",
+    "palate": "Spicy, herbal sweetness: licorice, honey, fennel, roasted oak, cinnamon, vanilla; likened to lightly sweetened lemon tea.",
+    "finish": "Herbal, sweet and tannic with honey, licorice, baked bread and mint, moving to black tea and eucalyptus.",
+    "summary": "Rated 'Top Shelf' (qualitative); dense, unique herbal rye. Reviewed bottle 56.6% ABV.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": "4 years",
+   "mash_bill": "Blend: 90% of a 74% rye / 11% corn / 15% barley mash and 10% of a 51% rye / 34% corn / 15% barley mash",
+   "cask": "Barrel entry proof 110; bottled at cask strength",
+   "region": "Kentucky",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/willett-family-estate-4-year-rye/"
+  },
+  "flavor_terms": [
+   "floral",
+   "botanical",
+   "caramel",
+   "honey",
+   "rye bread",
+   "menthol",
+   "licorice",
+   "fennel",
+   "black pepper",
+   "mint"
+  ],
+  "confidence": "medium",
+  "notes": "Producer gives no tasting notes or bottling proof; 110 is barrel entry proof. Cask strength varies by batch (critics' bottles were 111.2 and ~113.2 proof vs input 110). Mash bill percentages read from the producer page layout."
+ },
+ {
+  "id": "noah-s-mill",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer calls it a robust, smooth bourbon; no formal tasting notes.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/noahs-mill/"
+  },
+  "critics": [
+   {
+    "source": "Film Whiskey (Bob Book & Brad)",
+    "source_url": "https://www.filmwhiskey.com/blog/whiskey-review-noahs-mill-bourbon/",
+    "score": 34.75,
+    "scale": "50",
+    "nose": "Rye-like spice, vanilla and caramel; dusty, musty warehouse character.",
+    "palate": "Sweet start, spice-forward with oak, vanilla, caramel and dusty notes.",
+    "finish": "Fairly smooth and sweet; dark chocolate and coffee.",
+    "summary": "Average of two tasters just below their recommend threshold; worth trying at a bar, questionable value. Reviewed at 114.3 proof.",
+    "year": 2024
+   },
+   {
+    "source": "BarleyMania (Tobi)",
+    "source_url": "https://barleymania.com/2018/05/23/rev-noahsmillbourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Wax and corn, wood, straw, honey, herbs and dust, dried apricot and papaya.",
+    "palate": "Complex: vanilla, oatcake, leather, spices, sunflower seeds, dried fruit; proof well integrated.",
+    "finish": "Long, focused and creamy.",
+    "summary": "A personal favorite of the reviewer; no score. Reviewed at 57.15% ABV.",
+    "year": 2018
+   }
+  ],
+  "facts": {
+   "abv": 57.15,
+   "proof": 114.3,
+   "age": null,
+   "mash_bill": "72% corn, 13% rye, 15% barley",
+   "cask": "Barrel entry proof 125",
+   "region": "Kentucky",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/noahs-mill/"
+  },
+  "flavor_terms": [
+   "spice",
+   "vanilla",
+   "caramel",
+   "dusty",
+   "oak",
+   "dark chocolate",
+   "coffee",
+   "honey",
+   "dried fruit",
+   "leather"
+  ],
+  "confidence": "medium",
+  "notes": "No producer tasting notes. Film Whiskey review was recorded 2021 and posted 2024; older Noah's Mill was sourced whiskey, so profile may differ by era."
+ },
+ {
+  "id": "rowan-s-creek",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer notes the label honors the creek on the family distillery and describes a smooth, approachable whiskey; no formal tasting notes.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/rowans-creek/"
+  },
+  "critics": [
+   {
+    "source": "Columbus Bourbon (Mark & Johny K)",
+    "source_url": "https://www.columbusbourbon.com/2019/03/rowans-creek-bourbon-review.html",
+    "score": 51,
+    "scale": "100",
+    "nose": "Very sweet: caramel, brown sugar, raisin, rose petal, vanilla, honey; slight lighter-fluid note.",
+    "palate": "Smoky, cigar-like and corn-forward; bitter and tart.",
+    "finish": "Hot at first, medium-long, smoky with a hint of cinnamon.",
+    "summary": "Disappointing for the price versus peers. Reviewed at 50.05% ABV.",
+    "year": 2019
+   },
+   {
+    "source": "Bourbon Gents (Mr Pie)",
+    "source_url": "https://bourbongents.com/reviews/rowans-creek",
+    "score": null,
+    "scale": null,
+    "nose": "Lots of raisin, creamy vanilla, faint dark chocolate.",
+    "palate": "Aged oak with rye pepper and spice, nutty aftertaste.",
+    "finish": "Modest, oak and sweet spice.",
+    "summary": "Above average but one-dimensional and arguably overpriced. A 6 is shown without a stated scale; year not stated.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 50.05,
+   "proof": 100.1,
+   "age": null,
+   "mash_bill": "72% corn, 13% rye, 15% barley",
+   "cask": "Barrel entry proof 125",
+   "region": "Kentucky",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/rowans-creek/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "brown sugar",
+   "raisin",
+   "vanilla",
+   "honey",
+   "smoky",
+   "oak",
+   "rye spice",
+   "cinnamon",
+   "dark chocolate"
+  ],
+  "confidence": "medium",
+  "notes": "No producer tasting notes. Critic reviews (2019 and undated) likely reflect older, possibly sourced batches."
+ },
+ {
+  "id": "johnny-drum-private-stock",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer says it was developed by Thompson Willett in the 1960s, with a retro look and rye-forward flavor; no formal tasting notes.",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/johnny-drum-private-stock/"
+  },
+  "critics": [
+   {
+    "source": "Drinkspirits (Geoff Kleinman)",
+    "source_url": "https://www.drinkspirits.com/bourbon/review-johnny-drum-private-stock-bourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Caramel, cinnamon, marzipan, light oak spice.",
+    "palate": "Caramel, peanut and cinnamon up front; midpalate turns to allspice, clove and oak.",
+    "finish": "Long, spicy, slightly dry and well balanced.",
+    "summary": "Called a hidden gem that drinks easily neat for its proof. Reviewed at 101 proof.",
+    "year": 2013
+   },
+   {
+    "source": "Bourbon Guy (Eric Burke)",
+    "source_url": "https://www.bourbonguy.com/blog/2016/4/28/johnny-drum-private-stock-101-proof",
+    "score": null,
+    "scale": null,
+    "nose": "Mint, grain, honeydew melon, allspice.",
+    "palate": "Dry, grain-forward with mint, brown sugar, oak and spice.",
+    "finish": "Warm, spicy, decent length.",
+    "summary": "Liked it as a well-integrated, non-oaky bourbon; no numeric score. Reviewed at 101 proof.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 50.5,
+   "proof": 101,
+   "age": null,
+   "mash_bill": "Blend: 65% of a 52% corn / 38% rye / 10% barley mash and 35% of a 72% corn / 13% rye / 15% barley mash",
+   "cask": "Barrel entry proof 125",
+   "region": "Kentucky",
+   "source_url": "https://www.kentuckybourbonwhiskey.com/whiskey/johnny-drum-private-stock/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "cinnamon",
+   "marzipan",
+   "oak",
+   "allspice",
+   "clove",
+   "mint",
+   "grain",
+   "brown sugar",
+   "spice"
+  ],
+  "confidence": "medium",
+  "notes": "PROOF MISMATCH: producer page lists 101 proof / 50.5% ABV, not the input's 90 proof / 45%; all critics reviewed the 101-proof bottle. Critic reviews (2013, 2016) predate the current Willett-distilled blend."
+ }
+]
