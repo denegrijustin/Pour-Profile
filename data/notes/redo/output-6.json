@@ -1,0 +1,984 @@
+[
+ {
+  "id": "ch-teau-brown-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Estate tech page gives no tasting notes; describes barrel fermentation and about 8 months on fine lees with monthly stirring, half new French oak.",
+   "source_url": "https://www.chateau-brown.com/en/wines-2018/"
+  },
+  "critics": [
+   {
+    "source": "The Wine Cellar Insider (Jeff Leve)",
+    "source_url": "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/graves-pessac/chateau-brown-graves-pessac-leognan-bordeaux-wine/",
+    "score": 92,
+    "scale": "100",
+    "nose": "Lemon rind, mango, tangerine, yellow tropical fruit and honeysuckle.",
+    "palate": "Bright and fresh with lemon, green apple and a touch of orange.",
+    "finish": null,
+    "summary": "2021 vintage rated 92; other vintages (2015-2019) rated 90-92 with recurring citrus, pomelo and honeysuckle notes.",
+    "year": 2021
+   },
+   {
+    "source": "Decanter",
+    "source_url": "https://www.decanter.com/wine-reviews/france/bordeaux/chateau-brown-blanc-pessac-leognan-bordeaux-france-2021-59188",
+    "score": null,
+    "scale": null,
+    "nose": "Clear, pristine aromatics.",
+    "palate": "Lifted, energetic palate with citrus fruit.",
+    "finish": null,
+    "summary": "Only the free preview of the 2021 review was visible; score paywalled.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "60% Sauvignon Blanc, 40% Sémillon",
+   "cask": "Fermented and aged ~8 months on lees in French oak barrels, 50% new",
+   "region": "Pessac-Léognan",
+   "source_url": "https://www.chateau-brown.com/en/wines-2018/"
+  },
+  "flavor_terms": [
+   "lemon rind",
+   "mango",
+   "tangerine",
+   "honeysuckle",
+   "green apple",
+   "grapefruit",
+   "pomelo",
+   "citrus"
+  ],
+  "confidence": "medium",
+  "notes": "Notes are for 2021 vintage. Blend varies by source/vintage: producer page and Decanter say 60/40 SB/Sémillon; Wine Cellar Insider profile says 70/30. No producer tasting notes found; ABV not confirmed."
+ },
+ {
+  "id": "ch-teau-lamothe-de-haux-blanc",
+  "producer": {
+   "nose": "Expressive fruit (citrus, peach) and flowers (hawthorn, acacia) with a mineral, lemongrass touch.",
+   "palate": "Fresh, balanced and round, fruity and floral with discreet minerality.",
+   "finish": "Lively and elegant.",
+   "summary": "Producer's 'Blanc Traditionnel'; screwcap, everyday Bordeaux Blanc.",
+   "source_url": "https://shop.chateau-lamothe.com/fr/nos-vins/178-836-chateau-lamothe-blanc-traditionnel.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "40% Sémillon, 40% Sauvignon Blanc, 15% Muscadelle, 5% Colombard (2025 per producer)",
+   "cask": null,
+   "region": "Bordeaux (estate in Haux, Cadillac Côtes de Bordeaux area)",
+   "source_url": "https://shop.chateau-lamothe.com/fr/nos-vins/178-836-chateau-lamothe-blanc-traditionnel.html"
+  },
+  "flavor_terms": [
+   "citrus",
+   "peach",
+   "hawthorn",
+   "acacia",
+   "lemongrass",
+   "mineral",
+   "floral"
+  ],
+  "confidence": "medium",
+  "notes": "Producer notes for 2025 vintage. Not Sauvignon-led: Sémillon/SB equal with Muscadelle (retailer Empire Wine lists 2022 as 40/40/20 at 12.5% ABV). Wine Enthusiast 2020 review exists but page could not be fetched (redirect loop)."
+ },
+ {
+  "id": "ch-teau-reynon-blanc",
+  "producer": {
+   "nose": "Intense, very fruity, fresh and ripe, with lemon and verbena.",
+   "palate": "Supple, perfumed and long.",
+   "finish": "Graceful and lingering.",
+   "summary": "Dubourdieu family estate on the Garonne right-bank slopes near Cadillac.",
+   "source_url": "https://www.denisdubourdieu.com/en/chateau-reynon-en/"
+  },
+  "critics": [
+   {
+    "source": "Decanter",
+    "source_url": "https://www.decanter.com/wine-reviews/france/bordeaux/chateau-reynon-bordeaux-blanc-bordeaux-france-2018-29673/",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Ripe-fruited with hints of raspberry.",
+    "finish": null,
+    "summary": "Only a short free preview visible for the 2018; score paywalled.",
+    "year": 2018
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc (2019, producer); 89% SB / 11% Sémillon (2021, The Wine Society)",
+   "cask": "Fermented and raised ~5 months in wooden and stainless vats",
+   "region": "Bordeaux (Béguey, Cadillac Côtes de Bordeaux area)",
+   "source_url": "https://www.denisdubourdieu.com/en/chateau-reynon-en/"
+  },
+  "flavor_terms": [
+   "lemon",
+   "verbena",
+   "raspberry",
+   "fruity",
+   "perfumed"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are for 2019; Decanter critic note is a thin 2018 preview. Blend varies by vintage. The Wine Society lists 2021 at 12% ABV."
+ },
+ {
+  "id": "los-vascos-sauvignon-blanc",
+  "producer": {
+   "nose": "Guava, green gooseberry and lime with smoky, herbal and white-pepper touches.",
+   "palate": "Fruity and balanced; citrus and herbs then passion fruit, pineapple and white peach.",
+   "finish": "Medium-bodied with a pithy, lightly phenolic finish.",
+   "summary": "Night-harvested, cold-macerated, cool steel fermentation, part lees aging (2024, via US importer Palm Bay).",
+   "source_url": "https://www.palmbay.com/wines/vina-los-vascos/sauvignon-blanc/"
+  },
+  "critics": [
+   {
+    "source": "James Suckling (via importer)",
+    "source_url": "https://www.palmbay.com/wines/vina-los-vascos/sauvignon-blanc/",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score relayed on importer page (Feb 2025), presumably for 2024 vintage; no note shown.",
+    "year": 2025
+   },
+   {
+    "source": "Decanter (panel)",
+    "source_url": "https://www.decanter.com/wine-reviews/chile/casablanca-valley/vina-los-vascos-sauvignon-blanc-casablanca-valley-2017-24051/",
+    "score": null,
+    "scale": null,
+    "nose": "Garden herbs, gooseberry, ripe pineapple.",
+    "palate": null,
+    "finish": null,
+    "summary": "Crisp, uplifting yet gentle; 2017 Casablanca bottling; score paywalled.",
+    "year": 2017
+   }
+  ],
+  "facts": {
+   "abv": 12,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc",
+   "cask": "Stainless steel, partial lees aging",
+   "region": "Colchagua Valley (2024 per importer); earlier vintages Casablanca Valley",
+   "source_url": "https://www.palmbay.com/wines/vina-los-vascos/sauvignon-blanc/"
+  },
+  "flavor_terms": [
+   "guava",
+   "gooseberry",
+   "lime",
+   "passion fruit",
+   "pineapple",
+   "white peach",
+   "herbal",
+   "white pepper"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes for 2024 (12% ABV); Decanter note is 2017 at 13% from Casablanca. Sourcing region appears to have changed between vintages."
+ },
+ {
+  "id": "casa-lapostolle-sauvignon-blanc",
+  "producer": {
+   "nose": "Fresh herbs, cucumber, pear and flowers.",
+   "palate": "Balanced, fresh mid-palate with good volume.",
+   "finish": "Long.",
+   "summary": "Grand Selection tier, Las Kuras vineyard (Cachapoal); cool steel fermentation, ~5 months before bottling (2025, via importer Winebow).",
+   "source_url": "https://www.winebow.com/our-brands/lapostolle/lapostolle-grand-selection-sauvignon-blanc/2025"
+  },
+  "critics": [
+   {
+    "source": "Vinous (via importer)",
+    "source_url": "https://www.winebow.com/our-brands/lapostolle/lapostolle-grand-selection-sauvignon-blanc/2025",
+    "score": 92,
+    "scale": "100",
+    "nose": "Lime, lemon, herbs, honey and white flowers.",
+    "palate": null,
+    "finish": null,
+    "summary": "Quoted on importer's 2025 vintage page.",
+    "year": null
+   },
+   {
+    "source": "Wine Spectator (via importer)",
+    "source_url": "https://www.winebow.com/our-brands/lapostolle/lapostolle-grand-selection-sauvignon-blanc/2025",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": "Juicy, with honeyed peach, pear and tangerine.",
+    "finish": null,
+    "summary": "Quoted on importer page.",
+    "year": null
+   },
+   {
+    "source": "James Suckling (via importer)",
+    "source_url": "https://www.winebow.com/our-brands/lapostolle/lapostolle-grand-selection-sauvignon-blanc/2025",
+    "score": 90,
+    "scale": "100",
+    "nose": "Lime and gooseberry.",
+    "palate": null,
+    "finish": null,
+    "summary": "Quoted on importer page; Wine Advocate 89 also listed.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 13.4,
+   "proof": null,
+   "age": null,
+   "mash_bill": "75% Sauvignon Blanc, 25% Sémillon (importer also mentions Sauvignon Gris)",
+   "cask": "Stainless steel, ~5 months",
+   "region": "Rapel Valley (Cachapoal)",
+   "source_url": "https://www.winebow.com/our-brands/lapostolle/lapostolle-grand-selection-sauvignon-blanc/2025"
+  },
+  "flavor_terms": [
+   "fresh herbs",
+   "cucumber",
+   "pear",
+   "lime",
+   "lemon",
+   "honey",
+   "white flowers",
+   "peach",
+   "tangerine",
+   "gooseberry"
+  ],
+  "confidence": "high",
+  "notes": "Assumed the Grand Selection Sauvignon Blanc (main US bottling). Critic scores relayed by importer; vintages of the critic reviews not stated. Blend percentages from a model summary are inconsistent (SB/Sémillon/Gris)."
+ },
+ {
+  "id": "montes-sauvignon-blanc",
+  "producer": {
+   "nose": "Pineapple and white peach.",
+   "palate": "Grapefruit and orange blossom with clear grassiness; lively acidity, light body.",
+   "finish": "Long.",
+   "summary": "Classic Series, 100% Sauvignon Blanc from Aconcagua Costa, stainless steel (2022, via importer Kobrand).",
+   "source_url": "https://www.kobrandwineandspirits.com/release/montes-classic-sauvignon-blanc-2022/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc",
+   "cask": "Stainless steel",
+   "region": "Aconcagua Costa",
+   "source_url": "https://www.kobrandwineandspirits.com/release/montes-classic-sauvignon-blanc-2022/"
+  },
+  "flavor_terms": [
+   "pineapple",
+   "white peach",
+   "grapefruit",
+   "orange blossom",
+   "grassy"
+  ],
+  "confidence": "medium",
+  "notes": "2022 vintage; assumed Montes Classic Series (Montes also makes Alpha and Outer Limits SBs). Wine Enthusiast reviews exist but pages could not be fetched (redirect loop)."
+ },
+ {
+  "id": "concha-y-toro-terrunyo-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "The Tasting Panel",
+    "source_url": "https://www.tastingpanelmag.com/review/concha-y-toro-2023-terrunyo-sauvignon-blanc-los-boldos-vineyard-casablanca-valley-chile-30/",
+    "score": null,
+    "scale": null,
+    "nose": "Dried herbs, fresh-cut lime, pink grapefruit.",
+    "palate": "Citrus continues with mineral undertone and energetic acidity.",
+    "finish": null,
+    "summary": "Citrus-leaning Sauvignon; very flavorful for its low alcohol (11.5%).",
+    "year": 2023
+   },
+   {
+    "source": "Decanter (panel)",
+    "source_url": "https://www.decanter.com/wine-reviews/chile/casablanca-valley/concha-y-toro-terrunyo-sauvignon-blanc-2021-61615/",
+    "score": null,
+    "scale": null,
+    "nose": "Gooseberry and thyme.",
+    "palate": "Refined and refreshing.",
+    "finish": null,
+    "summary": "Lean, mouthwatering style; score paywalled.",
+    "year": 2021
+   },
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.winespectator.com/wine/wine-detail/id/1318749/name/concha-y-toro-sauvignon-blanc-casablanca-valley-terrunyo-los-boldos-vineyard-2024/guest",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Direct style, apple with a grassy undertone.",
+    "finish": null,
+    "summary": "Only a truncated free snippet; score paywalled. Listed at $35.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc",
+   "cask": null,
+   "region": "Casablanca Valley (Los Boldos vineyard)",
+   "source_url": "https://www.decanter.com/wine-reviews/chile/casablanca-valley/concha-y-toro-terrunyo-sauvignon-blanc-2021-61615/"
+  },
+  "flavor_terms": [
+   "dried herbs",
+   "lime",
+   "pink grapefruit",
+   "mineral",
+   "gooseberry",
+   "thyme",
+   "apple",
+   "grassy"
+  ],
+  "confidence": "medium",
+  "notes": "Critic notes span 2021, 2023, 2024 vintages. ABV varies (Decanter 2021 12%; Tasting Panel 2023 11.5%). No producer notes found."
+ },
+ {
+  "id": "leyda-sauvignon-blanc",
+  "producer": {
+   "nose": "Grapefruit, lime and mandarin with cut grass and lemon verbena.",
+   "palate": "Balanced, racy acidity and creamy texture.",
+   "finish": "Citrus.",
+   "summary": "Reserva bottling (2022 winemaker notes via wine.com).",
+   "source_url": "https://www.wine.com/product/leyda-reserva-sauvignon-blanc-2022/1291595"
+  },
+  "critics": [
+   {
+    "source": "Natalie MacLean",
+    "source_url": "https://www.nataliemaclean.com/wine-reviews/leyda-reserva-sauvignon-blanc-2023/351366",
+    "score": 93,
+    "scale": "100",
+    "nose": "Grapefruit, lime zest and green melon with herbs and flint.",
+    "palate": "Light-to-medium, dry and crisp with racy acidity.",
+    "finish": "Clean and refreshing.",
+    "summary": null,
+    "year": 2023
+   },
+   {
+    "source": "James Suckling (via wine.com)",
+    "source_url": "https://www.wine.com/product/leyda-reserva-sauvignon-blanc-2022/1291595",
+    "score": 91,
+    "scale": "100",
+    "nose": "White asparagus, green bean, guava/quince and gooseberry.",
+    "palate": "Medium-bodied, nice texture and bright acidity; typical but not too green.",
+    "finish": null,
+    "summary": "Called good value.",
+    "year": 2022
+   },
+   {
+    "source": "Decanter (panel)",
+    "source_url": "https://www.decanter.com/wine-reviews/chile/san-antonio/vina-leyda-reserva-sauvignon-blanc-leyda-valley-2022-69437/",
+    "score": null,
+    "scale": null,
+    "nose": "Grapefruit, asparagus, green pepper, ripe apple, fennel, warm earth.",
+    "palate": null,
+    "finish": null,
+    "summary": "Graceful and youthful; score paywalled.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc",
+   "cask": null,
+   "region": "Leyda Valley (San Antonio)",
+   "source_url": "https://www.wine.com/product/leyda-reserva-sauvignon-blanc-2022/1291595"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "lime",
+   "mandarin",
+   "cut grass",
+   "lemon verbena",
+   "asparagus",
+   "gooseberry",
+   "green pepper",
+   "flint",
+   "green melon"
+  ],
+  "confidence": "high",
+  "notes": "Assumed the Reserva (Classic) bottling. Producer notes 2022; critics 2022-2023."
+ },
+ {
+  "id": "matetic-eq-coastal-sauvignon-blanc",
+  "producer": {
+   "nose": "Citrus and tropical: mango, papaya, grapefruit peel.",
+   "palate": "Fresh, vivid and concentrated; very fruity with salty minerality.",
+   "finish": "Lingering, saline.",
+   "summary": "Organic grapes from a coastal vineyard ~13 km from the Pacific (2022 winery notes via retailer).",
+   "source_url": "https://familywineriesdirect.com/products/2022-eq-coastal-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Ken's Wine Guide",
+    "source_url": "https://www.kenswineguide.com/wine_review/Matetic-2020-EQ-Coastal-Sauvignon-Blanc",
+    "score": 91.5,
+    "scale": "100",
+    "nose": "Green bell pepper, yellow grapefruit and lime with a hint of peach.",
+    "palate": "White grapefruit, bell pepper, chalky minerality, nectarine pit, lime, asparagus.",
+    "finish": "Dry.",
+    "summary": null,
+    "year": 2020
+   },
+   {
+    "source": "Wine Advocate (via retailer)",
+    "source_url": "https://familywineriesdirect.com/products/2022-eq-coastal-sauvignon-blanc",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Listed as 92+ on retailer page; no note shown.",
+    "year": 2022
+   },
+   {
+    "source": "James Suckling (via retailer)",
+    "source_url": "https://familywineriesdirect.com/products/2022-eq-coastal-sauvignon-blanc",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score only, relayed by retailer.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "San Antonio Valley (retailer lists Casablanca Valley)",
+   "source_url": "https://familywineriesdirect.com/products/2022-eq-coastal-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "mango",
+   "papaya",
+   "grapefruit",
+   "saline",
+   "mineral",
+   "bell pepper",
+   "lime",
+   "peach",
+   "asparagus"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes and WA/JS scores are 2022 via retailer; Ken's review is 2020. Retailer states Casablanca Valley vs input San Antonio; left input region."
+ },
+ {
+  "id": "veramonte-sauvignon-blanc",
+  "producer": {
+   "nose": "Lime and tangerine with subtle floral notes.",
+   "palate": "Smooth and fresh, good mouthfeel.",
+   "finish": "Long.",
+   "summary": "Reserva, 100% organically grown Sauvignon Blanc (2022 winery notes via retailer).",
+   "source_url": "https://www.saratogawine.com/product/veramonte-sauvignon-blanc-2022-750ml/"
+  },
+  "critics": [
+   {
+    "source": "Decanter (Julie Sheppard)",
+    "source_url": "https://www.decanter.com/wine-reviews/chile/casablanca-valley/veramonte-organic-sauvignon-blanc-casablanca-valley-2019-49093/",
+    "score": 89,
+    "scale": "100",
+    "nose": "Lemon and lime with passion fruit and gooseberry.",
+    "palate": "Zingy lime and gooseberry, creamy texture, racy acidity.",
+    "finish": "Crisp and lemony.",
+    "summary": null,
+    "year": 2019
+   },
+   {
+    "source": "James Suckling (via retailer)",
+    "source_url": "https://www.saratogawine.com/product/veramonte-sauvignon-blanc-2022-750ml/",
+    "score": 89,
+    "scale": "100",
+    "nose": "Fresh, nectarine and chalk.",
+    "palate": "Simple and crisp with a saline edge.",
+    "finish": "Slightly short.",
+    "summary": "Wine Spectator 89 also listed.",
+    "year": 2022
+   },
+   {
+    "source": "Philadelphia Inquirer (Marnie Old)",
+    "source_url": "https://www.inquirer.com/food/veramonte-sauvignon-blanc-reserva-casablanca-valley-20240627.html",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Dry, mid-weight, unoaked; lemon and nectarine with verbena and minerality.",
+    "finish": null,
+    "summary": "Value pick of the week (2024); vintage not stated.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc (organic grapes)",
+   "cask": "Unoaked",
+   "region": "Casablanca Valley",
+   "source_url": "https://www.decanter.com/wine-reviews/chile/casablanca-valley/veramonte-organic-sauvignon-blanc-casablanca-valley-2019-49093/"
+  },
+  "flavor_terms": [
+   "lime",
+   "tangerine",
+   "lemon",
+   "passion fruit",
+   "gooseberry",
+   "nectarine",
+   "verbena",
+   "chalk",
+   "saline",
+   "floral"
+  ],
+  "confidence": "high",
+  "notes": "Reserva organic bottling. Vintages: producer 2022, Decanter 2019, JS 2022. ABV 13.5% per Decanter and Inquirer."
+ },
+ {
+  "id": "errazuriz-aconcagua-costa-sauvignon-blanc",
+  "producer": {
+   "nose": "Citrus and herbs.",
+   "palate": "Crisp, well balanced, refreshing entry.",
+   "finish": "Long with mineral sensations.",
+   "summary": "Coastal Aconcagua vineyard ~12 km from the Pacific.",
+   "source_url": "https://www.errazuriz.com/en/wines/aconcagua-costa/aconcagua-costa-sauvignon-blanc/2020"
+  },
+  "critics": [
+   {
+    "source": "James Suckling (via producer)",
+    "source_url": "https://www.errazuriz.com/en/wines/aconcagua-costa/aconcagua-costa-sauvignon-blanc/2020",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score cited on producer's 2020 page.",
+    "year": 2020
+   },
+   {
+    "source": "Decanter (Julie Sheppard)",
+    "source_url": "https://www.decanter.com/wine-reviews/chile/aconcagua-costa/errazuriz-aconcagua-costa-sauvignon-blanc-2020-50785/",
+    "score": 89,
+    "scale": "100",
+    "nose": "Zesty gooseberry and lime, grassy.",
+    "palate": "Creamy texture with crisp acidity.",
+    "finish": null,
+    "summary": "Cool-climate single-vineyard character.",
+    "year": 2020
+   },
+   {
+    "source": "Natalie MacLean",
+    "source_url": "https://www.nataliemaclean.com/wine-reviews/errzuriz-aconcagua-costa-sauvignon-blanc-2018/317046",
+    "score": 91,
+    "scale": "100",
+    "nose": "Fresh herbs, green pea, lime, melon.",
+    "palate": "Dry, medium-bodied, lemon-lime zest.",
+    "finish": "Lingering, briny and mineral.",
+    "summary": null,
+    "year": 2018
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Aconcagua Costa",
+   "source_url": "https://www.decanter.com/wine-reviews/chile/aconcagua-costa/errazuriz-aconcagua-costa-sauvignon-blanc-2020-50785/"
+  },
+  "flavor_terms": [
+   "citrus",
+   "herbal",
+   "mineral",
+   "gooseberry",
+   "lime",
+   "grassy",
+   "green pea",
+   "melon",
+   "briny"
+  ],
+  "confidence": "high",
+  "notes": "Producer and Decanter for 2020 (13% ABV); MacLean 2018 lists 13.5%."
+ },
+ {
+  "id": "klein-constantia-sauvignon-blanc",
+  "producer": {
+   "nose": "Grapefruit, lime and kiwi.",
+   "palate": "Quince, citrus blossom and umami, a bittersweet edge and fresh salinity.",
+   "finish": "Long and crisp with lively acidity.",
+   "summary": "Estate parcels vinified separately; mostly wild ferment, small portion on lees in neutral 500L oak.",
+   "source_url": "https://www.kleinconstantia.com/our-wines/estate/sauvignon-blanc/"
+  },
+  "critics": [
+   {
+    "source": "Wine Advocate (via importer)",
+    "source_url": "https://frederickwildman.com/producers/klein-constantia/2023-klein-constantia-sauvignon-blanc/",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": "Very linear and sharp with persistent minerality; salty marine character, white fruit, light floral.",
+    "finish": null,
+    "summary": "Quoted on US importer's 2023 page.",
+    "year": 2023
+   },
+   {
+    "source": "James Suckling (via importer)",
+    "source_url": "https://frederickwildman.com/producers/klein-constantia/2023-klein-constantia-sauvignon-blanc/",
+    "score": 92,
+    "scale": "100",
+    "nose": "Lime peel, gooseberry, flint, fennel.",
+    "palate": "Medium-bodied, vibrant, electric, mouthwatering.",
+    "finish": null,
+    "summary": "Quoted on US importer's 2023 page.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Mostly stainless steel; a portion on lees in neutral oak (10% in 500L per estate page; importer says 20% neutral oak, 12 months on lees for 2023)",
+   "region": "Constantia",
+   "source_url": "https://www.kleinconstantia.com/our-wines/estate/sauvignon-blanc/"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "lime",
+   "kiwi",
+   "quince",
+   "citrus blossom",
+   "saline",
+   "gooseberry",
+   "flint",
+   "fennel",
+   "mineral"
+  ],
+  "confidence": "high",
+  "notes": "Producer page current vintage (2025 listed) vs critics on 2023; elevage details differ by vintage. ABV not found."
+ },
+ {
+  "id": "mulderbosch-sauvignon-blanc",
+  "producer": {
+   "nose": "Tropical guava, ripe lemon and blackcurrant with fynbos herbs (lavender, thyme, oregano).",
+   "palate": "Explosive mix of floral, fruit, saline and herbal notes; sweetness balanced by acidity.",
+   "finish": null,
+   "summary": "Half the blend aged six months on lees in neutral 500L French oak (2023 spec sheet).",
+   "source_url": "https://mulderbosch.co.za/wp-content/uploads/2024/02/Mulderbosch-Sauvignon-Blanc-2023-Spec-Sheet.pdf"
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.winespectator.com/wine/wine-detail/id/1288857/name/mulderbosch-sauvignon-blanc-stellenbosch-2021/guest",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Zippy, hints of chive blossom and white pepper.",
+    "finish": null,
+    "summary": "Only a truncated free snippet; score paywalled. Listed at $17.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "50% on lees in neutral 500L French oak, 6 months",
+   "region": "Stellenbosch",
+   "source_url": "https://mulderbosch.co.za/wp-content/uploads/2024/02/Mulderbosch-Sauvignon-Blanc-2023-Spec-Sheet.pdf"
+  },
+  "flavor_terms": [
+   "guava",
+   "lemon",
+   "blackcurrant",
+   "fynbos",
+   "lavender",
+   "thyme",
+   "saline",
+   "chive blossom",
+   "white pepper"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes 2023; critic note is a thin 2021 Wine Spectator snippet."
+ },
+ {
+  "id": "neil-ellis-groenekloof-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Ken's Wine Guide",
+    "source_url": "https://www.kenswineguide.com/wine_review/Neil-Ellis-2022-Groenekloof-Sauvignon-Blanc",
+    "score": 90,
+    "scale": "100",
+    "nose": "Passion fruit and pear with honeydew.",
+    "palate": "Medium-bodied, zesty; green tea, lime, white grapefruit, chalky minerality, tonic.",
+    "finish": "Dry, extended.",
+    "summary": null,
+    "year": 2022
+   },
+   {
+    "source": "Natalie MacLean",
+    "source_url": "https://www.nataliemaclean.com/wine-reviews/neil-ellis-groenekloof-sauvignon-blanc-2019/319472",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": "Stony, green herb, white pepper and briny mineral with tropical fruit.",
+    "finish": "Flinty.",
+    "summary": "Fresh and zesty, medium-bodied.",
+    "year": 2019
+   },
+   {
+    "source": "Platter's (Greg de Bruyn, via retailer)",
+    "source_url": "https://vinty.co.za/product/neil-ellis-groenekloof-sauvignon-blanc-2024/",
+    "score": 94,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "4.5 stars / 94 points relayed by retailer; youthful vigour on a dusty-grassy base. Tim Atkin 92 also listed.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Cool stainless-steel fermentation with extended lees contact (per retailer)",
+   "region": "Groenekloof (Darling), South Africa",
+   "source_url": "https://www.nataliemaclean.com/wine-reviews/neil-ellis-groenekloof-sauvignon-blanc-2019/319472"
+  },
+  "flavor_terms": [
+   "passion fruit",
+   "pear",
+   "honeydew",
+   "lime",
+   "grapefruit",
+   "green tea",
+   "chalky",
+   "briny",
+   "flint",
+   "grassy"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site unreachable (robots/timeout). A retailer (vinty.co.za) shows winery-style notes for 2024 but attribution unclear, so not used as producer notes. Critics span 2019-2024; ABV 13% from MacLean 2019."
+ },
+ {
+  "id": "southern-right-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Estate aims for minerality and palate complexity over pungent varietal aroma; texture from clay-shale, openness from granite, saline brightness from sandstone.",
+   "source_url": "https://southernright.co.za/home/our-wines/sauvignon-blanc/sauvignon-blanc-2024/"
+  },
+  "critics": [
+   {
+    "source": "The Tasting Panel",
+    "source_url": "https://www.tastingpanelmag.com/review/southern-right-2024-sauvignon-blanc-walker-bay-hemel-en-aarde-valley-south-africa-18/",
+    "score": 92,
+    "scale": "100",
+    "nose": "Flint, white flowers, lemon sorbet.",
+    "palate": null,
+    "finish": null,
+    "summary": "Delicate style with a salty, seashell tone; 92 per producer page.",
+    "year": 2024
+   },
+   {
+    "source": "Vinous (Neal Martin, via producer)",
+    "source_url": "https://southernright.co.za/home/our-wines/sauvignon-blanc/sauvignon-blanc-2024/",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": "Crisp and linear, finely delineated.",
+    "finish": "Precise and sapid.",
+    "summary": null,
+    "year": 2024
+   },
+   {
+    "source": "Tim Atkin MW (via producer)",
+    "source_url": "https://southernright.co.za/home/our-wines/sauvignon-blanc/sauvignon-blanc-2024/",
+    "score": 91,
+    "scale": "100",
+    "nose": "Wet stone and struck match.",
+    "palate": "Passion fruit and lemongrass, racy acidity.",
+    "finish": null,
+    "summary": null,
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 13.51,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "8% barrel fermented in neutral oak",
+   "region": "Hemel-en-Aarde Valley 46%, Walker Bay 49%, Elgin 5%",
+   "source_url": "https://southernright.co.za/home/our-wines/sauvignon-blanc/sauvignon-blanc-2024/"
+  },
+  "flavor_terms": [
+   "mineral",
+   "saline",
+   "flint",
+   "white flowers",
+   "lemon sorbet",
+   "seashell",
+   "wet stone",
+   "struck match",
+   "passion fruit",
+   "lemongrass"
+  ],
+  "confidence": "high",
+  "notes": "All 2024 vintage. Producer page gives style philosophy rather than nose/palate notes. ABV 13.51% from model summary of producer page."
+ },
+ {
+  "id": "springfield-special-cuv-e-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Blend of early and late pickings showing passion fruit, nettle and minerality; built to age 2-4 years. Night-harvested, 100 days on lees.",
+   "source_url": "https://www.springfieldestate.com/special-cuvee-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Decanter (Amy Wislocki)",
+    "source_url": "https://www.decanter.com/wine-reviews/south-africa/robertson/springfield-estate-special-cuvee-sauvignon-blanc-2021-59724/",
+    "score": 90,
+    "scale": "100",
+    "nose": "Smoky and aromatic without pungency.",
+    "palate": "Textured with refreshing acidity.",
+    "finish": null,
+    "summary": "Distinct from Marlborough-style Sauvignon.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 12.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Stainless; ~100 days lees contact",
+   "region": "Robertson",
+   "source_url": "https://www.springfieldestate.com/special-cuvee-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "passion fruit",
+   "nettle",
+   "mineral",
+   "smoky",
+   "gooseberry",
+   "lime",
+   "citrus"
+  ],
+  "confidence": "high",
+  "notes": "Producer page is 2026 vintage; Decanter review 2021 (12.5%). Waitrose (retailer) also lists gooseberry/lime/citrus at 13%. Producer note is a summary, not split nose/palate."
+ },
+ {
+  "id": "cape-point-vineyards-sauvignon-blanc",
+  "producer": {
+   "nose": "Fresh apricot, ripe pear, lime and orange blossom with fynbos and dried herbs.",
+   "palate": "Bright, refreshing acidity.",
+   "finish": "Lingering and fruity.",
+   "summary": "Standard estate Sauvignon Blanc (distinct from Reserve, Noordhoek and Isliedh bottlings).",
+   "source_url": "https://cpv.co.za/wine"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Cape Point / Cape Town",
+   "source_url": "https://cpv.co.za/wine"
+  },
+  "flavor_terms": [
+   "apricot",
+   "pear",
+   "lime",
+   "orange blossom",
+   "fynbos",
+   "dried herbs"
+  ],
+  "confidence": "medium",
+  "notes": "Vintage not stated on producer page. Critic reviews found were for Noordhoek or Reserve bottlings (different expressions), so skipped; strictlywine.co.uk returned 403."
+ },
+ {
+  "id": "demorgenzon-sauvignon-blanc",
+  "producer": {
+   "nose": "Lime zest, gooseberry, passion fruit, white peach with cut herbs, snap pea and fynbos.",
+   "palate": "Bright, focused, textured; grapefruit, ripe kiwi, green melon.",
+   "finish": null,
+   "summary": "DMZ Sauvignon Blanc; cool extended ferment, lees time with stirring (2025).",
+   "source_url": "https://demorgenzon.com/product/dmz-sauvignon-blanc/"
+  },
+  "critics": [
+   {
+    "source": "Tim Atkin MW (via producer)",
+    "source_url": "https://demorgenzon.com/product/dmz-sauvignon-blanc/",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "2020 vintage, South Africa Report 2021; score only.",
+    "year": 2020
+   },
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.winespectator.com/wine/wine-detail/id/1288953/name/de-morgenzon-sauvignon-blanc-stellenbosch-dmz-2021/guest",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Lively, with light, plump juiciness.",
+    "finish": null,
+    "summary": "Truncated free snippet; score paywalled. Listed at $18.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Stainless with lees aging and stirring",
+   "region": "Stellenbosch",
+   "source_url": "https://demorgenzon.com/product/dmz-sauvignon-blanc/"
+  },
+  "flavor_terms": [
+   "lime zest",
+   "gooseberry",
+   "passion fruit",
+   "white peach",
+   "snap pea",
+   "fynbos",
+   "grapefruit",
+   "kiwi",
+   "green melon"
+  ],
+  "confidence": "high",
+  "notes": "Assumed the DMZ Sauvignon Blanc (estate's SB label). Producer notes 2025; critics 2020-2021, thin."
+ }
+]

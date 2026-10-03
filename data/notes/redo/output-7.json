@@ -1,0 +1,124 @@
+[
+ {
+  "id": "casey-jones-total-eclipse-bourbon",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": "Distillery bills it as a four-grain bourbon with a balanced mash bill, the official spirit of the 2017 and 2024 total solar eclipses, made in limited quantities. No nose/palate/finish notes on the page.", "source_url": "https://www.caseyjonesdistillery.com/total-eclipse" },
+  "critics": [
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/casey-jones-total-eclipse-straight-bourbon", "score": null, "scale": null, "nose": "Caramel, fresh raspberry, prune, Concord grape and brown sugar.", "palate": "Vanilla and caramel with light clove and white pepper.", "finish": "Butterscotch, burnt orange peel and rye spice.", "summary": "2024 release reviewed (listed as 2 yrs 6 mos, 100 proof). Approachable, fun commemorative branding, but fairly simple given its youth. Rated 2.5 on Breaking Bourbon's own rating scale (scale not captured).", "year": 2024 },
+   { "source": "The Whiskey Wash (Scott Manning)", "source_url": "https://thewhiskeywash.com/whiskey-reviews/whisky-review-whiskey-whisky-review-casey-jones-total-eclipse-bourbon-casey-jones-3/", "score": 7, "scale": "10", "nose": "Plenty of graham cracker plus a touch of honey, turning sweeter and almost floral toward the back.", "palate": "Bitter orange and orange peel develop over a honeyed base, moving toward tannin.", "finish": "Tannic and dry with a sweet honeyed lift and a slight oiliness that softens the mouthfeel for a young whiskey.", "summary": "Young 100-proof bourbon; reviewer scored it 7/10 at about $48.", "year": 2025 }
+  ],
+  "facts": { "abv": 50, "proof": 100, "age": "Minimum 2 years", "mash_bill": "75% corn, 10% wheat, 10% rye, 5% malted barley", "cask": null, "region": "Hopkinsville, Kentucky", "source_url": "https://www.caseyjonesdistillery.com/total-eclipse" },
+  "flavor_terms": ["caramel", "raspberry", "brown sugar", "vanilla", "clove", "white pepper", "butterscotch", "orange peel", "graham cracker", "honey"],
+  "confidence": "medium",
+  "notes": "Input age 'At least 4 years' conflicts with producer ('minimum 2 years') and Breaking Bourbon (2y6m); age set from producer. Producer page has no tasting notes. A WhiskyCast rating page (89, dated Nov 2023, 2 yrs) was excluded: its date predates the 2024 release so batch (possibly 2017) is unclear and scale was not explicit."
+ },
+ {
+  "id": "casey-jones-small-batch-bourbon",
+  "producer": { "nose": "Vanilla, caramel and light oak.", "palate": "Smooth and balanced with brown sugar, vanilla and gentle spice.", "finish": "Clean and warm.", "summary": "Notes relayed by retailer Wooden Cork and attributed there to the distillery; Kentucky straight small-batch bourbon from Master Distiller Arlon Casey Jones. Proof not stated on the page.", "source_url": "https://woodencork.com/collections/buy-spirits-online-liquor-store/products/casey-jones-distillery-small-batch-bourbon-whiskey" },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": "Hopkinsville, Kentucky", "source_url": "https://woodencork.com/collections/buy-spirits-online-liquor-store/products/casey-jones-distillery-small-batch-bourbon-whiskey" },
+  "flavor_terms": ["vanilla", "caramel", "oak", "brown sugar", "spice"],
+  "confidence": "low",
+  "notes": "Could not confirm a 90-proof Casey Jones Small Batch. Other Small Batch releases found were different proofs and excluded: 2019 first release at 104.2 proof (Distillery Trail) and a 108-proof bottling (People's Bourbon Review). Current distillery small-batch product is Revere at 100 proof, also excluded. Retailer notes may not match the 90-proof bottle."
+ },
+ {
+  "id": "casey-jones-barrel-cut-bourbon",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Distillery's Barrel Cut line (Single Barrel 100-115 proof, Double Barrel 80-117 proof) is described as a corn-and-cane Kentucky specialty spirit, not bourbon, and no 90-proof Barrel Cut bourbon was found. Possible data error in input; nothing recorded."
+ },
+ {
+  "id": "peerless-small-batch-bourbon",
+  "producer": { "nose": "Citrus, cedar and honeysuckle over balanced spicy oak.", "palate": "Caramel and toasted oak first, then fruit, floral and oak notes.", "finish": "Sweet citrus, floral and sweet oak play against dry cocoa, cinnamon and spicy oak.", "summary": "Producer stresses it is distilled in-house (never sourced), sweet mash, barrel proof with no water added, and not chill-filtered.", "source_url": "https://kentuckypeerless.com/whiskey/kentucky-peerless-small-batch-bourbon/" },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": "https://kentuckypeerless.com/whiskey/kentucky-peerless-small-batch-bourbon/" },
+  "flavor_terms": ["citrus", "cedar", "honeysuckle", "spicy oak", "caramel", "toasted oak", "cocoa", "cinnamon"],
+  "confidence": "medium",
+  "notes": "Producer page states barrel proof but no specific proof/age; batch proof varies so input 109 not verified. No critic review fetched (tool quota exhausted)."
+ },
+ {
+  "id": "peerless-double-oak-bourbon",
+  "producer": { "nose": "Sweet oak with orange zest and cedar, then tobacco and herbs.", "palate": "Honeyed sweetness shifting quickly to cinnamon and spicy oak, with leather adding earthiness and a big body.", "finish": "Viscous, with sweet toasted oak and dry cocoa.", "summary": "Matured in two separate barrels for two full barrel extractions; bottled at barrel proof.", "source_url": "https://kentuckypeerless.com/whiskey/kentucky-peerless-double-oak-bourbon/" },
+  "critics": [
+   { "source": "The Whiskey Ramble (Xenoraiser)", "source_url": "https://thewhiskeyramble.com/2024/11/08/peerless-double-oak-bourbon-scoresheet-review/", "score": null, "scale": null, "nose": "Medium-roast coffee, semi-sweet chocolate and cherry, plus brown sugar, torched orange peel and black tea.", "palate": "Dark brown sugar and cacao up front, a flash of orange and cherry syrup, then burnt toffee and vanilla bean.", "finish": "Chocolate-orange with growing orange oil, lingering vanilla, and cardamom, clove and nutmeg.", "summary": "Batch 15CS241C6 (2022) at 54.2% ABV. Reviewer admired it more than enjoyed it, calling it frustratingly close to great, and questioned value at about $87. No numeric score captured.", "year": 2024 }
+  ],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": "Matured in two separate barrels (double oak)", "region": null, "source_url": "https://kentuckypeerless.com/whiskey/kentucky-peerless-double-oak-bourbon/" },
+  "flavor_terms": ["orange zest", "cedar", "tobacco", "honey", "cinnamon", "leather", "cocoa", "chocolate", "cherry", "brown sugar"],
+  "confidence": "high",
+  "notes": "Barrel-proof product; proof varies by batch. Critic batch was 54.2% ABV (108.4 proof) vs input 109. Excluded a Bourbon Culture review (7.7/10) because it covered a 108-proof single-barrel store pick, not the standard release."
+ },
+ {
+  "id": "peerless-small-batch-rye",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: page-fetch quota exhausted before this bottle. Candidate sources: kentuckypeerless.com/whiskey/kentucky-peerless-small-batch-rye/, thewhiskeywash.com review (2025)."
+ },
+ {
+  "id": "peerless-double-oak-rye",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: page-fetch quota exhausted. Candidate sources: kentuckypeerless.com/whiskey/double-oak-rye/, shoppeerless.com product page."
+ },
+ {
+  "id": "willett-pot-still-reserve",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: page-fetch quota exhausted. Candidate sources: breakingbourbon.com/review/willett-pot-still-reserve-bourbon, thewhiskeywash.com review."
+ },
+ {
+  "id": "willett-family-estate-4-year-rye",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: page-fetch quota exhausted. Candidate source: breakingbourbon.com/review/willett-family-estate-bottled-4-year-rye. Note WFE 4yr rye proof varies by release."
+ },
+ {
+  "id": "noah-s-mill",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: page-fetch quota exhausted. Beware older age-stated (15yr) Noah's Mill reviews when filling."
+ },
+ {
+  "id": "rowan-s-creek",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: page-fetch quota exhausted."
+ },
+ {
+  "id": "johnny-drum-private-stock",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: page-fetch quota exhausted."
+ },
+ {
+  "id": "pure-kentucky-xo",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: page-fetch quota exhausted."
+ }
+]

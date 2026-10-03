@@ -1,0 +1,1326 @@
+[
+ {
+  "id": "woodford-reserve-master-s-collection",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Master's Collection is a rotating series of very different releases (Batch Proof, Sonoma Triple Finish, Sweet Oak, etc.); the input (NAS, 90 proof) does not map to one specific release, so no notes were recorded to avoid mixing expressions."
+ },
+ {
+  "id": "elijah-craig-small-batch",
+  "producer": {
+   "nose": "Complex aroma of vanilla bean, sweet fruit and fresh mint.",
+   "palate": "Warm, smooth and woody with spice, smoke and nutmeg accents.",
+   "finish": "Long, sweet and a bit toasty.",
+   "summary": "Brand describes warm spice and subtle smoke from Level 3 charred new oak; burnished copper color.",
+   "source_url": "https://elijahcraig.com/small-batch"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Jug (Josh Peters)",
+    "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/elijah-craig-small-batch-review/",
+    "score": 85,
+    "scale": "100",
+    "nose": "Oaky and nutty with dark fruit, dried corn, nutmeg and a little mint and vanilla.",
+    "palate": "Oak, nuts, dried corn, caramel, nutmeg and a hint of mint.",
+    "finish": "Long; oak, dark fruit, nuts and nutmeg.",
+    "summary": "Solid, oak-forward bourbon, though less rich than the older 12-year version.",
+    "year": 2016
+   },
+   {
+    "source": "The Whiskey Shelf",
+    "source_url": "https://www.thewhiskeyshelf.com/elijah-craig-small-batch-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Grassy, nutty sweetness with caramel, coffee, chocolate and citrus; also peach, honey and eucalyptus.",
+    "palate": "Caramel and vanilla, then nuts, citrus, cherry, licorice, oak, cinnamon and clove; fairly thick mouthfeel.",
+    "finish": "Caramel and vanilla with oak tannins, coffee grounds, citrus peel and mint.",
+    "summary": "Rated \"Mid Shelf+\" (non-numeric).",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": "NAS",
+   "mash_bill": "78% corn / 10% rye / 12% malted barley",
+   "cask": "Level 3 charred new oak",
+   "region": "Kentucky, USA",
+   "source_url": "https://elijahcraig.com/small-batch"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "mint",
+   "nutmeg",
+   "smoke",
+   "caramel",
+   "oak",
+   "dark fruit",
+   "cinnamon",
+   "citrus",
+   "nuts"
+  ],
+  "confidence": "high",
+  "notes": "Mash bill (78/10/12) comes from The Whiskey Shelf, not the producer page. The Whiskey Jug page lists a different mash bill (75/13/12) which looks like an error and was not used. Input age says 8-12 year profile; no source opened confirms that."
+ },
+ {
+  "id": "elijah-craig-toasted-barrel",
+  "producer": {
+   "nose": "Toasted oak with rich caramel.",
+   "palate": "Big and complex; spice and pepper fade to milk chocolate with a touch of smoke.",
+   "finish": "Warming, with lingering chocolate and baking spices.",
+   "summary": "Small Batch finished in a second, custom-toasted barrel; distiller also cites pekoe tea, leather, cedar, peach preserves and brown sugar.",
+   "source_url": "https://elijahcraig.com/toasted-barrel"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash (Cindy Capparelli)",
+    "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-elijah-craig-toasted-barrel-straight-bourbon-whiskey/",
+    "score": null,
+    "scale": null,
+    "nose": "Cherry cola with clove and nutmeg baking spice, plus sarsaparilla and cigar box.",
+    "palate": "Honeyed and warm, spices building mid-palate with a peachy roundness.",
+    "finish": "Minty, moving to black tea.",
+    "summary": "Rated 9/10 (10-point scale); deeper than the standard Elijah Craig.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": null,
+   "mash_bill": "78% corn / 10% rye / 12% malted barley",
+   "cask": "Small Batch finished in a second custom toasted barrel",
+   "region": "Kentucky, USA",
+   "source_url": "https://elijahcraig.com/toasted-barrel"
+  },
+  "flavor_terms": [
+   "toasted oak",
+   "caramel",
+   "milk chocolate",
+   "baking spice",
+   "cherry cola",
+   "peach",
+   "black tea",
+   "mint",
+   "leather",
+   "cinnamon"
+  ],
+  "confidence": "high",
+  "notes": "Mash bill from The Whiskey Wash (producer page does not list it). Only one critic review found; its 9/10 score is on a 10-point scale so left out of the score field."
+ },
+ {
+  "id": "elijah-craig-barrel-proof",
+  "producer": {
+   "nose": "Caramel with toasted oak, plus apple and orange fruit.",
+   "palate": "Rich vanilla, caramel and butterscotch with black pepper and cinnamon.",
+   "finish": "Fades gradually in layers, lingering as it cools.",
+   "summary": "Uncut, non-chill-filtered, bottled straight from the barrel; deep amber.",
+   "source_url": "https://elijahcraig.com/barrel-proof"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/elijah-craig-barrel-proof-batch-c923",
+    "score": 4.5,
+    "scale": "5",
+    "nose": "Sangria-like, with red raspberry, blueberry, lime, plum and nectarine over caramel and charred oak.",
+    "palate": "Dark raspberry and black cherry with barrel char, black pepper, cinnamon, hazelnut, maple and coffee bean.",
+    "finish": "Charred oak, then molasses and brown sugar; warm brownie note as heat fades.",
+    "summary": "Batch C923 (Sept 2023), 133 proof, 13 yrs 7 mos; first batch without a 12-year minimum.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": "Primarily 12 years; recent batches range from about 9 years 1 month to 13 years 7 months",
+   "mash_bill": "78% corn / 10% rye / 12% malted barley",
+   "cask": "Uncut, non-chill-filtered, straight from the barrel",
+   "region": "Kentucky, USA",
+   "source_url": "https://elijahcraig.com/barrel-proof"
+  },
+  "flavor_terms": [
+   "caramel",
+   "toasted oak",
+   "apple",
+   "orange",
+   "vanilla",
+   "butterscotch",
+   "black pepper",
+   "cinnamon",
+   "black cherry",
+   "molasses"
+  ],
+  "confidence": "high",
+  "notes": "Proof varies by batch (producer lists a historical 128.0-140.2 range, which conflicts with the 120 proof in the input), so proof/abv left null. Critic note is for batch C923 only. Mash bill from Breaking Bourbon."
+ },
+ {
+  "id": "elijah-craig-18-year",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Press release (2015 re-release) says the profile is complex and layered, balancing 18 years in new charred oak with sweet and spicy grain notes, with a long, warm finish.",
+   "source_url": "https://heavenhill.com/news-and-notes/heaven-hill-brings-back-critically-acclaimed-elijah-craig-18-year-old-single-barrel-bourbon-after-three-year-hiatus/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/elijah-craig-18-year-old-single-barrel-bourbon-2023",
+    "score": 3.5,
+    "scale": "5",
+    "nose": "Oak and caramel in balance, with vanilla cream, creme brulee, brown sugar and a little apple cinnamon crumble.",
+    "palate": "Dry aged oak, vanilla, cinnamon apples and brown sugar, plus rye bread and white pepper; slightly thin at 90 proof.",
+    "finish": "Rye spice, vanilla cream and aged oak, with cinnamon cake and leather and gentle heat.",
+    "summary": "2023 release.",
+    "year": 2023
+   },
+   {
+    "source": "The Whiskey Shelf",
+    "source_url": "https://www.thewhiskeyshelf.com/elijah-craig-18-year-single-barrel-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Dark roasted caramel, dense roasted oak, dried cherry and red apple, with chocolate and vanilla.",
+    "palate": "Roasted caramel, vanilla, oak, dried apricot, cinnamon, dark chocolate and roasted coffee; fuller than 45% suggests.",
+    "finish": "Caramel, dried cherry, red apple peel and oak with a long roasty sweetness.",
+    "summary": "Rated \"Top Shelf\" (non-numeric); barrel 6409 bottled 2023.",
+    "year": 2023
+   },
+   {
+    "source": "Bourbon Culture",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/elijah-craig-18-year-old-single-barrel-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Rich caramel, a lighter chocolate note, blueberry, cinnamon, oak and vanilla.",
+    "palate": "Caramel, chocolate and nuttiness, then spiced applesauce, vanilla pudding, plum, cherry and peppery spice.",
+    "finish": "Dry oak and tobacco with toffee and creme brulee; somewhat short.",
+    "summary": "Rated 7.9/10 (10-point scale); confirms 90 proof.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "18 years",
+   "mash_bill": "78% corn / 10% rye / 12% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.breakingbourbon.com/review/elijah-craig-18-year-old-single-barrel-bourbon-2023"
+  },
+  "flavor_terms": [
+   "caramel",
+   "oak",
+   "vanilla",
+   "cinnamon",
+   "dried cherry",
+   "baked apple",
+   "dark chocolate",
+   "brown sugar",
+   "leather",
+   "tobacco"
+  ],
+  "confidence": "high",
+  "notes": "Producer source is a 2015 release press release with only a general profile and no proof/mash bill. Bottle is a single-barrel release so notes vary by barrel. Facts from Breaking Bourbon 2023."
+ },
+ {
+  "id": "larceny-small-batch",
+  "producer": {
+   "nose": "Fresh bread and toffee with a butterscotch note.",
+   "palate": "Buttery caramel with honeyed notes and a rich mouthfeel.",
+   "finish": "Long, gently sweet and savory.",
+   "summary": "Brand calls it a signature wheated bourbon; bright new copper color.",
+   "source_url": "https://larcenybourbon.com/small-batch"
+  },
+  "critics": [
+   {
+    "source": "Whiskey in My Wedding Ring",
+    "source_url": "https://www.whiskeyinmyweddingring.com/reviews/larceny-small-batch",
+    "score": null,
+    "scale": null,
+    "nose": "Corn sweetness and oak spice with grape and a fresh-pastry vanilla.",
+    "palate": "Sweet with light heat; sugared corn pudding vanilla with cinnamon and allspice.",
+    "finish": "More corn, savory like caramelized cornbread edges, with baking spices.",
+    "summary": "Scored 6.0 (\"very good\") on the site's 10-point scale; praised as a good entry-level wheated bourbon.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://larcenybourbon.com/small-batch"
+  },
+  "flavor_terms": [
+   "toffee",
+   "butterscotch",
+   "caramel",
+   "honey",
+   "bread",
+   "cinnamon",
+   "allspice",
+   "vanilla",
+   "oak spice",
+   "cornbread"
+  ],
+  "confidence": "high",
+  "notes": "Only one critic found and review year is not given on the page. The 6-8 year age and 68/20/12 mash bill in the input were only found on the Barrel Proof pages, not for Small Batch, so left null."
+ },
+ {
+  "id": "larceny-barrel-proof",
+  "producer": {
+   "nose": "Toasted bread with maple and cinnamon.",
+   "palate": "Rich molasses with fig and hazelnut.",
+   "finish": "Nuanced flavors fade into lingering warmth.",
+   "summary": "Non-chill-filtered, barrel strength wheated bourbon released three times a year; dark sepia color.",
+   "source_url": "https://heavenhilldistillery.com/larceny-barrel-proof.php"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash",
+    "source_url": "https://thewhiskeywash.com/whiskey-styles/bourbon/whiskey-review-larceny-barrel-proof-kentucky-straight-bourbon-batch-b522/",
+    "score": null,
+    "scale": null,
+    "nose": "Banana bread, cinnamon twists and vanilla extract.",
+    "palate": "Gingersnap, nutmeg and cinnamon, then pipe tobacco, prunes, leather and maple, ending in hazelnut.",
+    "finish": "Relatively long with hazelnut.",
+    "summary": "Batch B522 (123.8 proof), rated 7/10 (10-point scale); \"very good bourbon\".",
+    "year": 2022
+   },
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/larceny-barrel-proof-batch-c922",
+    "score": 4.5,
+    "scale": "5",
+    "nose": "Cinnamon, nutmeg and brown sugar with a sweet accent.",
+    "palate": "Oaky caramel base with cinnamon, nutmeg, brown sugar, graham cracker and syrupy french toast.",
+    "finish": "Warm heat, cinnamon candy, nutmeg and caramel, with dry oak at the end.",
+    "summary": "Batch C922 (126.6 proof).",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": "6-8 years",
+   "mash_bill": "68% corn / 20% wheat / 12% malted barley",
+   "cask": "Non-chill-filtered, bottled at barrel strength",
+   "region": "Kentucky, USA",
+   "source_url": "https://heavenhilldistillery.com/larceny-barrel-proof.php"
+  },
+  "flavor_terms": [
+   "cinnamon",
+   "nutmeg",
+   "brown sugar",
+   "maple",
+   "molasses",
+   "fig",
+   "hazelnut",
+   "toasted bread",
+   "caramel",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Proof varies by batch (producer lists recent range 114.8-126.6), so the input 120 proof was not recorded. Critic notes are batch-specific (B522, C922)."
+ },
+ {
+  "id": "russell-s-reserve-10-year",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer page only gives a short line: spicy vanilla flavors and a smooth finish.",
+   "source_url": "https://www.russellsreserve.com/our-products/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/russells-reserve-10-year-bourbon",
+    "score": 3,
+    "scale": "5",
+    "nose": "Strong vanilla and caramel with aged oak, graham cracker and leather.",
+    "palate": "Caramel and vanilla with tobacco, seasoned oak and gentle rye spice; slightly thin.",
+    "finish": "Rye spice peaks, then toasted marshmallow, leather, tobacco and caramel-vanilla; slightly dry.",
+    "summary": "Reviewed 2020.",
+    "year": 2020
+   },
+   {
+    "source": "The Whiskey Shelf",
+    "source_url": "https://www.thewhiskeyshelf.com/russells-reserve-10-year-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Sweet, grassy nuttiness with roasted peanut shell, burnt caramel and eucalyptus, then vanilla, orange oil, oak and cherry.",
+    "palate": "Caramel and vanilla, sweet corn, citrus, toasted bread and malt, oak, cinnamon, black pepper and licorice.",
+    "finish": "Sweet, bitter and roasty with honey, grass and orange peel.",
+    "summary": "Rated \"Mid Shelf\"; balanced but unremarkable.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "10 years",
+   "mash_bill": "75% corn / 13% rye / 12% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.russellsreserve.com/our-products/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "caramel",
+   "oak",
+   "leather",
+   "tobacco",
+   "rye spice",
+   "graham cracker",
+   "cinnamon",
+   "orange peel",
+   "licorice"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gives only a one-line description. Mash bill is from the critic reviews."
+ },
+ {
+  "id": "russell-s-reserve-single-barrel",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer page describes signature toffee and vanilla notes, non-chill-filtered.",
+   "source_url": "https://www.russellsreserve.com/our-products/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Shelf",
+    "source_url": "https://www.thewhiskeyshelf.com/russells-reserve-single-barrel-bourbon-2023-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Dense caramel, vanilla, roasted oak, heavy cinnamon, dried cherry and cranberry, with clove and fennel.",
+    "palate": "Roasted caramel, vanilla, oak, dried apricot, cinnamon-coated apple, licorice and pumpernickel; strong candied-apple note.",
+    "finish": "Caramel, roasted oak, lots of cinnamon and red apple chips, with maple.",
+    "summary": "Rated \"Top Shelf\"; delicious but not especially unique.",
+    "year": 2023
+   },
+   {
+    "source": "Bourbon Banter",
+    "source_url": "https://www.bourbonbanter.com/russells-reserve-single-barrel-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Vanilla, baking spice, toasted oak and a hint of orange.",
+    "palate": "Caramel, cinnamon and spice, oak and a hint of mint.",
+    "finish": "Cinnamon spice surges at the back, then a meandering oak finish with a touch of mint.",
+    "summary": "Older (2013) review with no numeric score; strong recommendation.",
+    "year": 2013
+   }
+  ],
+  "facts": {
+   "abv": 55,
+   "proof": 110,
+   "age": "Usually 9-10 years per reviewer; NAS",
+   "mash_bill": "75% corn / 13% rye / 12% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.thewhiskeyshelf.com/russells-reserve-single-barrel-bourbon-2023-review/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "vanilla",
+   "roasted oak",
+   "cinnamon",
+   "dried cherry",
+   "baked apple",
+   "toffee",
+   "baking spice",
+   "mint",
+   "orange"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gives only a short line on toffee/vanilla. Single-barrel release so notes vary by barrel. Age and mash bill come from The Whiskey Shelf."
+ },
+ {
+  "id": "russell-s-reserve-13-year",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer page calls it rich and warm, best enjoyed straight from the bottle; no structured notes given.",
+   "source_url": "https://www.russellsreserve.com/our-products/"
+  },
+  "critics": [
+   {
+    "source": "Whisky Advocate",
+    "source_url": "https://whiskyadvocate.com/russells-reserve-13-year-old-barrel-proof-bourbon-spring-2026-review",
+    "score": 94,
+    "scale": "100",
+    "nose": "Dark chocolate, black cherry, car leather, butterscotch, cola, cinnamon and charred oak.",
+    "palate": "Fudge, chocolate-chip cookies, raspberry jam, caramel and spice, with some dark roast mid-palate.",
+    "finish": "Cinnamon and nutmeg, then leather, cacao and espresso-like notes framed by oak.",
+    "summary": "Spring 2026 batch, 60.6% ABV, $200 SRP.",
+    "year": 2026
+   },
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/russells-reserve-13-year-old-bourbon-2026",
+    "score": 4.5,
+    "scale": "5",
+    "nose": "Cherry, strawberry shortcake, vanilla cream, pie crust, seasoned oak, brown sugar and cinnamon apple.",
+    "palate": "Cherry, raspberry, aged oak, black pepper, nutmeg and caramel.",
+    "finish": "Dry oak, rye spice, cinnamon, leather and tobacco.",
+    "summary": "2026 release at 121.2 proof.",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 57.4,
+   "proof": 114.8,
+   "age": "Minimum 13 years",
+   "mash_bill": "75% corn / 13% rye / 12% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.russellsreserve.com/our-products/"
+  },
+  "flavor_terms": [
+   "dark chocolate",
+   "black cherry",
+   "leather",
+   "cinnamon",
+   "caramel",
+   "oak",
+   "raspberry",
+   "nutmeg",
+   "cacao",
+   "vanilla"
+  ],
+  "confidence": "high",
+  "notes": "Barrel-proof batches vary: producer page lists 57.4% ABV (114.8 proof), but both critic notes are for a 2026 batch at about 121 proof. Mash bill from Breaking Bourbon."
+ },
+ {
+  "id": "wild-turkey-101",
+  "producer": {
+   "nose": "Vanilla with cinnamon and oak.",
+   "palate": "A little sweetness up front with vanilla and caramel, then oak and baking spices.",
+   "finish": "Bold Wild Turkey spice with orange peel.",
+   "summary": null,
+   "source_url": "https://www.wildturkeybourbon.com/our-products/wild-turkey-101/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/wild-turkey-101-bourbon-2021",
+    "score": 3,
+    "scale": "5",
+    "nose": "Vanilla, baking spices and rye grain, with toasted oak, toffee and orange zest.",
+    "palate": "Corn-oil mouthfeel with rye and baking spice, sharp oak and vanilla.",
+    "finish": "Rye spice up front, muted vanilla and oak, ending in dry spicy oak.",
+    "summary": "Reviewed Nov 2021.",
+    "year": 2021
+   },
+   {
+    "source": "The Whiskey Shelf",
+    "source_url": "https://www.thewhiskeyshelf.com/wild-turkey-101-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Honey, fennel, vanilla and cherry, apricot and orange peel with oak and spice.",
+    "palate": "Caramel, vanilla and apricot, then caraway, roasted grain and spice; some bitterness at the back.",
+    "finish": "Bitter earthy oak, then honey, fennel, orange peel and dried nuts.",
+    "summary": "Rated \"Mid Shelf\"; solid budget bourbon, oaky bitterness a drawback.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 50.5,
+   "proof": 101,
+   "age": "6-8 years",
+   "mash_bill": "75% corn / 13% rye / 12% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.wildturkeybourbon.com/our-products/wild-turkey-101/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "cinnamon",
+   "oak",
+   "caramel",
+   "baking spice",
+   "orange peel",
+   "rye spice",
+   "honey",
+   "apricot",
+   "toffee"
+  ],
+  "confidence": "high",
+  "notes": "Mash bill and ABV come from critic reviews (Breaking Bourbon, The Whiskey Shelf); producer page gave proof and age."
+ },
+ {
+  "id": "wild-turkey-rare-breed",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Bourbon Culture",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/wild-turkey-rare-breed-116-8-proof-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Roasted nuts, cinnamon and toffee with classic Wild Turkey rye spice.",
+    "palate": "Caramel sauce and peanut brittle, with a creamy flan-like vanilla.",
+    "finish": "Oak, tobacco spice and sweetness, with a savory salted-caramel note.",
+    "summary": "Rated 7.6/10 (10-point scale); 116.8 proof.",
+    "year": null
+   },
+   {
+    "source": "Whiskey in My Wedding Ring",
+    "source_url": "https://www.whiskeyinmyweddingring.com/reviews/wild-turkey-rare-breed-1168",
+    "score": null,
+    "scale": null,
+    "nose": "Cornbread with sweet butter and French vanilla creamer, with rye mint behind.",
+    "palate": "Sweet, slightly drying honey with oak spice; later sweet tobacco, chocolate and nuts; full, oily body.",
+    "finish": "Medium-long, slightly spicy then semisweet to dark chocolate with vanilla.",
+    "summary": "Scored 7.1 on a 10-point scale; current 116.8 proof release.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 58.4,
+   "proof": 116.8,
+   "age": "NAS (reportedly a blend of 6, 8 and 12 year barrels)",
+   "mash_bill": "75% corn / 13% rye / 12% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.whiskeyinmyweddingring.com/reviews/wild-turkey-rare-breed-1168"
+  },
+  "flavor_terms": [
+   "toffee",
+   "cinnamon",
+   "rye spice",
+   "caramel",
+   "peanut brittle",
+   "cornbread",
+   "vanilla",
+   "dark chocolate",
+   "tobacco",
+   "oak"
+  ],
+  "confidence": "medium",
+  "notes": "Producer page could not be read (fetch error). Review years not shown on the extracts. A Whiskey Jug review of batch W-T-01-95 was skipped because it is a different proof (about 109)."
+ },
+ {
+  "id": "wild-turkey-kentucky-spirit",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/wild-turkey-kentucky-spirit-bourbon",
+    "score": 3.5,
+    "scale": "5",
+    "nose": "Very sweet, with key lime and pecan pie, plus citrus, leather and spice.",
+    "palate": "Caramel, vanilla, orange and cinnamon, balanced by leather and oak.",
+    "finish": "Medium-long rye and leather with brown sugar and a little cinnamon.",
+    "summary": "2015 review; fuller-bodied than standard 101.",
+    "year": 2015
+   },
+   {
+    "source": "The Whiskey Shelf",
+    "source_url": "https://www.thewhiskeyshelf.com/wild-turkey-kentucky-spirit-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Dark honey, toasted oak, cinnamon-coated apple peel, cocoa and pear; like spiced cider.",
+    "palate": "Caramel, roasted oak, red apple, cinnamon, licorice, clove and mint, with pineapple and apricot on chewing.",
+    "finish": "Sweet, oaky and lightly spicy with toasted oak, clove, honey and licorice.",
+    "summary": "Rated \"Mid Shelf+\"; barrel bottled 2023.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 50.5,
+   "proof": 101,
+   "age": "NAS; about 8-9 years per Eddie Russell (per Breaking Bourbon)",
+   "mash_bill": "75% corn / 13% rye / 12% malted barley",
+   "cask": "Single barrel",
+   "region": "Kentucky, USA",
+   "source_url": "https://www.breakingbourbon.com/review/wild-turkey-kentucky-spirit-bourbon"
+  },
+  "flavor_terms": [
+   "caramel",
+   "vanilla",
+   "orange",
+   "cinnamon",
+   "leather",
+   "oak",
+   "red apple",
+   "honey",
+   "pecan",
+   "licorice"
+  ],
+  "confidence": "medium",
+  "notes": "No producer page found. Single-barrel product, so notes vary by barrel."
+ },
+ {
+  "id": "wild-turkey-master-s-keep",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Master's Keep is a series of distinct limited releases (Revival, Voyage, Triumph rye, 17 Year BiB, etc.) with different ages/finishes; the input is not one specific expression, so nothing was recorded."
+ },
+ {
+  "id": "michter-s-us-1-bourbon",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Rich caramel with balanced vanilla, stone fruit, smoky depth and an oak finish; small batches of up to 20 barrels.",
+   "source_url": "https://michters.com/kentucky-straight-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/michters-us-1-bourbon",
+    "score": 2,
+    "scale": "5",
+    "nose": "Subtle new oak, corn, grain and raisins.",
+    "palate": "Sweet corn, honey and vanilla; seems youngish.",
+    "finish": "Light and lingering with oak, white pepper, honey, peach and raisin.",
+    "summary": "2015 review.",
+    "year": 2015
+   },
+   {
+    "source": "The Whiskey Wash",
+    "source_url": "https://thewhiskeywash.com/whiskey-reviews/bourbon-review-michter-s-us-1-small-batch-kentucky-straight-bourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Honey and vanilla, brown sugar, milk chocolate and dried fruit.",
+    "palate": "Golden syrup and vanilla with dried mango, prominent oak, cinnamon and smoke.",
+    "finish": "Honey with growing smoke and oak.",
+    "summary": "Rated 8/10 (10-point scale); versatile and approachable.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 45.7,
+   "proof": 91.4,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Fire-charred new American white oak",
+   "region": "Kentucky, USA",
+   "source_url": "https://michters.com/kentucky-straight-bourbon/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "vanilla",
+   "stone fruit",
+   "smoke",
+   "oak",
+   "honey",
+   "brown sugar",
+   "dried fruit",
+   "white pepper",
+   "sweet corn"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are a single line, so placed in summary rather than split by nose/palate/finish. Critics disagree notably (2/5 vs 8/10)."
+ },
+ {
+  "id": "michter-s-us-1-american-whiskey",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Deep butterscotch and vanilla with caramel and dried fruit, finishing on ripe fruit; unblended and aged in whiskey-soaked barrels.",
+   "source_url": "https://michters.com/us1-american-whiskey/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Shelf",
+    "source_url": "https://www.thewhiskeyshelf.com/michters-american-whiskey-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Dark caramel, toasted vanilla, roasted oak, cinnamon, dark chocolate and dried cherry.",
+    "palate": "Dark caramel, toasted vanilla, baked apple, toasted oak, cinnamon, chocolate, cherry and tobacco; thin from the low ABV.",
+    "finish": "Toasted caramel and vanilla, oak, tobacco, baked apple and cherry.",
+    "summary": "Rated \"Mid Shelf+\", borderline Top Shelf; low ABV is the main complaint.",
+    "year": null
+   },
+   {
+    "source": "Adventures in Whiskey",
+    "source_url": "https://adventuresinwhiskey.com/2015/12/01/michters-us1-american-whiskey-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Sweet toffee and buttered corn, with faint rye and baking spices.",
+    "palate": "Toffee, then buttered rye toast, corn mash and vanilla; mouthfeel a bit light.",
+    "finish": "Medium, sweet and mildly spicy with mint.",
+    "summary": "Rated 8/10 (10-point scale).",
+    "year": 2015
+   }
+  ],
+  "facts": {
+   "abv": 41.7,
+   "proof": 83.4,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Whiskey-soaked American white oak barrels",
+   "region": "Kentucky, USA",
+   "source_url": "https://michters.com/us1-american-whiskey/"
+  },
+  "flavor_terms": [
+   "butterscotch",
+   "vanilla",
+   "caramel",
+   "dried fruit",
+   "toffee",
+   "cinnamon",
+   "dark chocolate",
+   "dried cherry",
+   "toasted oak",
+   "baked apple"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are a single line, placed in summary."
+ },
+ {
+  "id": "michter-s-us-1-rye",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Peppery spice with citrus, butterscotch and oak.",
+   "source_url": "https://michters.com/us1-kentucky-straight-rye/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Jug",
+    "source_url": "https://thewhiskeyjug.com/rye-whiskey/michters-straight-rye-review/",
+    "score": 83,
+    "scale": "100",
+    "nose": "Oak, citrus, vanilla, candy and spice with a bit of dark fruit.",
+    "palate": "Rye spice, citrus, vanilla, oak and butterscotch with candy-corn sweetness.",
+    "finish": "Medium; candy corn, vanilla, butterscotch and some spice.",
+    "summary": "Barrel 17F988; called an okay, soft, unchallenging rye.",
+    "year": null
+   },
+   {
+    "source": "Bourbon Obsessed",
+    "source_url": "https://bourbonobsessed.com/michters-us1-rye-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Pear, sweet cherry, light rye spice, burnt caramel, brown sugar, cedar and pine.",
+    "palate": "Brown sugar, caramel and soft fruit with mild black pepper and pine.",
+    "finish": "Black pepper builds, with dry oak and lingering warmth; fairly long.",
+    "summary": "Praised for depth at low proof; no score given.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 42.4,
+   "proof": 84.8,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Fire-charred new American white oak",
+   "region": "Kentucky, USA",
+   "source_url": "https://michters.com/us1-kentucky-straight-rye/"
+  },
+  "flavor_terms": [
+   "pepper",
+   "citrus",
+   "butterscotch",
+   "oak",
+   "vanilla",
+   "candy corn",
+   "pear",
+   "cherry",
+   "brown sugar",
+   "pine"
+  ],
+  "confidence": "high",
+  "notes": "Single-barrel product, notes vary by barrel. Mash bill not disclosed by producer."
+ },
+ {
+  "id": "michter-s-10-year-bourbon",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Big, bold dark toffee and caramel with charred oak, maple syrup and vanilla; single-barrel, limited production.",
+   "source_url": "https://michters.com/10-year-kentucky-straight-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash",
+    "source_url": "https://thewhiskeywash.com/whiskey-styles/bourbon/whiskey-review-michters-10-year-old-kentucky-straight-bourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Vanilla and sawdust with candied pecan, violets and celery; later dark cherry and menthol.",
+    "palate": "Raisin, toffee, cinnamon toast and dark fruit custard with firm tannins.",
+    "finish": "Fairly brief burst of baked dark cherry.",
+    "summary": "Rated 9/10 (10-point scale).",
+    "year": 2023
+   },
+   {
+    "source": "Bourbon Banter",
+    "source_url": "https://www.bourbonbanter.com/michters-2026-10-year-bourbon-is-rock-solid-terrific-as-ever/",
+    "score": null,
+    "scale": null,
+    "nose": "Nougat, cotton candy, dark chocolate and toasted hazelnut with dark honey and dusty oak.",
+    "palate": "Rich, lightly syrupy; candied orange, cooked cherries, a little cough syrup and cigar leaf.",
+    "finish": "Medium, slightly warming, with well-integrated oak.",
+    "summary": "No numeric score; strong recommendation (2026).",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 47.2,
+   "proof": 94.4,
+   "age": "10 years",
+   "mash_bill": null,
+   "cask": "Fire-charred new American white oak",
+   "region": "Kentucky, USA",
+   "source_url": "https://michters.com/10-year-kentucky-straight-bourbon/"
+  },
+  "flavor_terms": [
+   "toffee",
+   "caramel",
+   "charred oak",
+   "maple",
+   "vanilla",
+   "dark cherry",
+   "raisin",
+   "cinnamon",
+   "hazelnut",
+   "candied orange"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are a single line, placed in summary."
+ },
+ {
+  "id": "michter-s-10-year-rye",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla and toffee, toasted almonds and cinnamon, crushed pepper and a hint of orange citrus; limited single-barrel release.",
+   "source_url": "https://michters.com/10-year-kentucky-straight-rye/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash",
+    "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-michters-10-year-rye-2023/",
+    "score": null,
+    "scale": null,
+    "nose": "Musky then savory, with blanched almond and a white pepper kick.",
+    "palate": "Soft rye grassiness deepening into toasted, nearly burnt nuts.",
+    "finish": "Long, lightening to vanilla sweetness.",
+    "summary": "Rated 9/10 (10-point scale).",
+    "year": 2023
+   },
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/michters-10-year-straight-rye-2023",
+    "score": 5,
+    "scale": "5",
+    "nose": "Creamy creme brulee with sweet and savory spices, peppery rye, dark honey and aged oak.",
+    "palate": "Buttery; toffee, orange rind, vanilla, then oak, pastry, custard, honey and golden raisin.",
+    "finish": "Red fruit, buttercream, graham cracker and maple, ending in lightly dried oak.",
+    "summary": "2023 release.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 46.4,
+   "proof": 92.8,
+   "age": "10 years",
+   "mash_bill": null,
+   "cask": "Fire-charred new American white oak",
+   "region": "Kentucky, USA",
+   "source_url": "https://michters.com/10-year-kentucky-straight-rye/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "toffee",
+   "almond",
+   "cinnamon",
+   "pepper",
+   "orange",
+   "creme brulee",
+   "honey",
+   "oak",
+   "maple"
+  ],
+  "confidence": "high",
+  "notes": "Single-barrel product, notes vary by barrel."
+ },
+ {
+  "id": "michter-s-toasted-barrel-finish-bourbon",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Campfire and cinnamon with pecan and candied fruit; lingering finish of baked pears, vanilla and marshmallow.",
+   "source_url": "https://michters.com/us1-toasted-barrel-finish-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash",
+    "source_url": "https://thewhiskeywash.com/reviews/michters-us1-toasted-barrel-finish-bourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Cherry, maple and strong vanilla bean.",
+    "palate": "Sharp, prickly heat easing to warmth, with bitter greens, smoke, spice and chocolate.",
+    "finish": null,
+    "summary": "Rated 8/10 (10-point scale); some found the bite a bit much.",
+    "year": 2021
+   },
+   {
+    "source": "Bourbon Culture",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/michters-toasted-barrel-finish-kentucky-straight-bourbon-whiskey-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Caramel fudge, vanilla bean and toasted orange with cinnamon.",
+    "palate": "Very sweet, like toasted marshmallow and brown sugar, with cinnamon raisin toast; thin body.",
+    "finish": "Quick; bitter oak sawdust, dry tobacco and charcoal.",
+    "summary": "Rated 6.5/10 (10-point scale); 2018 release.",
+    "year": 2018
+   }
+  ],
+  "facts": {
+   "abv": 45.7,
+   "proof": 91.4,
+   "age": null,
+   "mash_bill": null,
+   "cask": "First fill in a charred new oak barrel, then a second custom toasted (not charred) barrel",
+   "region": "Kentucky, USA",
+   "source_url": "https://michters.com/us1-toasted-barrel-finish-bourbon/"
+  },
+  "flavor_terms": [
+   "campfire",
+   "cinnamon",
+   "pecan",
+   "candied fruit",
+   "baked pear",
+   "vanilla",
+   "marshmallow",
+   "cherry",
+   "maple",
+   "caramel"
+  ],
+  "confidence": "high",
+  "notes": "Producer proof is 91.4 (input says 90); Bourbon Culture's 2018 bottle was 90 proof, so release years differ slightly. Producer notes are one line, placed in summary."
+ },
+ {
+  "id": "michter-s-toasted-barrel-strength-rye",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Toffee, honey and black walnut leading to dark chocolate, salted caramel, cherry and mint, with pronounced rye spice, rounded oak and toastiness (2026 edition).",
+   "source_url": "https://michters.com/toasted-barrel-finish-rye/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash",
+    "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-michters-barrel-strength-toasted-barrel-rye/",
+    "score": null,
+    "scale": null,
+    "nose": "Pastry-forward with cinnamon, marzipan, whiskey-soaked cherries and nutmeg.",
+    "palate": "Soft, sweet nuttiness with brown sugar; sweeter than expected for a rye.",
+    "finish": null,
+    "summary": "Rated 9/10 (10-point scale); called a near-perfect dessert rye (2017).",
+    "year": 2017
+   },
+   {
+    "source": "Drinkhacker",
+    "source_url": "https://www.drinkhacker.com/2023/11/04/review-michters-us-1-toasted-barrel-finish-rye-2023/",
+    "score": null,
+    "scale": null,
+    "nose": "Deep wood, fresh rye bread, black tea, anise and gunpowder.",
+    "palate": "Savory with strong toasted-barrel impact, baking spice, red pepper and roasted-meat character.",
+    "finish": "Lingering tea-leaf quality, turning sweeter with water.",
+    "summary": "Graded A- (9.0 out of 10); 2023 release at about 109 proof.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 54.55,
+   "proof": 109.1,
+   "age": null,
+   "mash_bill": null,
+   "cask": "First fill in a charred new oak barrel, then a custom toasted barrel",
+   "region": "Kentucky, USA",
+   "source_url": "https://michters.com/toasted-barrel-finish-rye/"
+  },
+  "flavor_terms": [
+   "toffee",
+   "honey",
+   "black walnut",
+   "dark chocolate",
+   "salted caramel",
+   "cherry",
+   "mint",
+   "rye spice",
+   "cinnamon",
+   "marzipan"
+  ],
+  "confidence": "high",
+  "notes": "Producer page is the 2026 edition (109.1 proof avg); input says 108.9, matching the 2023 release. Release-to-release variation likely. Drinkhacker score is 9.0 on a 10-point scale, left out of the score field."
+ },
+ {
+  "id": "1792-small-batch",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Jug",
+    "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/1792-small-batch-bourbon-review/",
+    "score": 84,
+    "scale": "100",
+    "nose": "Dark fruit, caramel, vanilla pudding and oak with a little raisin and biscuit.",
+    "palate": "Oak, dark fruit, maple-caramel, vanilla pudding, pine-like herbal spice and toasted corn.",
+    "finish": "Long fade of oak, vanilla, spice and caramel-popcorn.",
+    "summary": "Reviewed 2016; decent balance but lighter on spice than \"high rye\" implies.",
+    "year": 2016
+   },
+   {
+    "source": "The Whiskey Shelf",
+    "source_url": "https://www.thewhiskeyshelf.com/1792-small-batch-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Caramel, cherry and licorice, then vanilla, roasted oak, cinnamon, orange and caraway.",
+    "palate": "Honey, vanilla, licorice, cherry, dried orange peel and roasted oak, with some bitterness.",
+    "finish": "Honey, licorice, cherry and oak; falls off quickly to sweet oak tannins.",
+    "summary": "Rated \"Mid Shelf\"; easy drinking but unremarkable.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 46.85,
+   "proof": 93.7,
+   "age": "NAS (The Whiskey Shelf says at least 4 years)",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.thewhiskeyshelf.com/1792-small-batch-bourbon-review/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "vanilla",
+   "oak",
+   "dark fruit",
+   "cherry",
+   "licorice",
+   "honey",
+   "orange peel",
+   "maple",
+   "caraway"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site (1792bourbon.com) returned 403, so no producer notes. Critics give conflicting mash bills (75/15/10 vs 74/18/8), so left null."
+ },
+ {
+  "id": "1792-full-proof",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Shelf",
+    "source_url": "https://www.thewhiskeyshelf.com/1792-full-proof-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Citrusy honey, smoked oak, vanilla frosting, spiced apple, licorice, with buttercream and ripe pear later.",
+    "palate": "Intense, viscous vanilla, caramel and licorice with smoky oak, cinnamon, orange and apple.",
+    "finish": "Dry, tannic and sweet with oak, caramel, vanilla and citrus, plus smoked meat and mint.",
+    "summary": "Rated \"Top Shelf\"; reviewed 2020.",
+    "year": 2020
+   },
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/1792-full-proof",
+    "score": null,
+    "scale": null,
+    "nose": "Alcohol-forward with dry oak, caramel and vanilla.",
+    "palate": "Sweeter than the nose: corn sweetness, cinnamon, raisins, dried cherry and vanilla.",
+    "finish": "Heat dominates, fading to musty oak, white pepper and wet grass.",
+    "summary": "Reviewer found it unbalanced and hot; reported score unclear on scale so not recorded (2016 release).",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 62.5,
+   "proof": 125,
+   "age": "NAS (about 7-8 years per The Whiskey Shelf)",
+   "mash_bill": null,
+   "cask": "Virgin American white oak",
+   "region": "Kentucky, USA",
+   "source_url": "https://www.thewhiskeyshelf.com/1792-full-proof-bourbon-review/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "caramel",
+   "oak",
+   "licorice",
+   "cinnamon",
+   "orange",
+   "honey",
+   "dried cherry",
+   "apple",
+   "white pepper"
+  ],
+  "confidence": "medium",
+  "notes": "No producer notes (1792bourbon.com returned 403). Mash bills conflict across reviews, so left null. Critics strongly disagree (Top Shelf vs poor)."
+ },
+ {
+  "id": "1792-bottled-in-bond",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/1792-bottled-in-bond",
+    "score": 2.5,
+    "scale": "5",
+    "nose": "Rye spice, vanilla and caramel over a trace of oak; subdued for the proof.",
+    "palate": "Rye spice with caramel, vanilla and seasoned oak; spice-forward with good mouthfeel.",
+    "finish": "Rye spice and seasoned oak, with a bit of caramel; medium to long.",
+    "summary": "2017 release.",
+    "year": 2017
+   },
+   {
+    "source": "The Whiskey Wash",
+    "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-barton-1792-distillery-bottled-bond-bourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Honeysuckle and clover honey with char, vanilla oak and a bright herbal note.",
+    "palate": "Warm and full, with maple and coffee-toffee sweetness over oak and earthiness.",
+    "finish": "Lingering, smooth yet spicy and savory.",
+    "summary": "Rated 8/10 (10-point scale); 2018; well-balanced and versatile.",
+    "year": 2018
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "NAS",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.breakingbourbon.com/review/1792-bottled-in-bond"
+  },
+  "flavor_terms": [
+   "rye spice",
+   "vanilla",
+   "caramel",
+   "oak",
+   "honey",
+   "maple",
+   "coffee",
+   "toffee",
+   "char",
+   "herbal"
+  ],
+  "confidence": "medium",
+  "notes": "No producer notes (1792bourbon.com returned 403). Reviews say no age statement; the input's \"at least 4 years\" was not confirmed by these sources."
+ },
+ {
+  "id": "1792-single-barrel",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash",
+    "source_url": "https://thewhiskeywash.com/whiskey-styles/bourbon/whiskey-review-1792-straight-bourbon-whiskey/",
+    "score": 88,
+    "scale": "100",
+    "nose": "Sweet butterscotch with lots of lemon and citrus, light ginger, honey and Fuji apple.",
+    "palate": "Caramel-forward and candy-like with rye bite, young wood, roasted almonds and Meyer lemon; medium-thin body.",
+    "finish": "Sharp alcohol bite at the end.",
+    "summary": "Review year and proof not stated on the extract; reviewer felt it lacked the intensity its marketing implies.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "butterscotch",
+   "lemon",
+   "citrus",
+   "ginger",
+   "honey",
+   "apple",
+   "caramel",
+   "almond",
+   "sawdust",
+   "rye spice"
+  ],
+  "confidence": "medium",
+  "notes": "One critic only; no producer notes (1792bourbon.com returned 403); proof, mash bill and age not confirmed by any opened source. Single-barrel, so notes vary by barrel."
+ }
+]

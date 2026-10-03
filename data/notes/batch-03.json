@@ -1,0 +1,1330 @@
+[
+ {
+  "id": "1792-sweet-wheat",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Balanced, delicate-bodied wheated bourbon with vanilla and caramel plus a little white-oak tannin; dried fruit, sweet-meets-dry harmony.",
+   "source_url": "https://1792bourbon.com/sweet-wheat/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (2023 release)",
+    "source_url": "https://www.breakingbourbon.com/review/1792-sweet-wheat-2023",
+    "score": 3.5,
+    "scale": "5",
+    "nose": "candied nuts, spicy oak, caramel, faint floral/earthy",
+    "palate": "warm caramel, vanilla sugar cookie, custard; light-medium body, thin",
+    "finish": "light spice, seasoned oak, fried dough, a little leather; slightly dry",
+    "summary": "Very sweet, dessert-like and approachable; thinner than earlier creamier batches.",
+    "year": 2023
+   },
+   {
+    "source": "Whiskey Consensus (Courtney Stiers)",
+    "source_url": "https://whiskeyconsensus.com/1792-sweet-wheat-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "sweet malt, vanilla, hints of caramel",
+    "palate": "sweet wheat, warm caramel, vanilla, dried apricot, citrus; creamy mouthfeel",
+    "finish": "relatively short, creamy, sweet",
+    "summary": "Scored 8.4/10; creamy and well balanced though not very complex.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 46.85,
+   "proof": 93.7,
+   "age": null,
+   "mash_bill": "Wheated bourbon (no percentages given)",
+   "cask": null,
+   "region": null,
+   "source_url": "https://1792bourbon.com/sweet-wheat/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "caramel",
+   "white oak",
+   "dried fruit",
+   "sugar cookie",
+   "custard",
+   "apricot",
+   "candied nuts",
+   "leather",
+   "citrus"
+  ],
+  "confidence": "high",
+  "notes": "Producer site lists 93.7 proof; Breaking Bourbon (2023) reviewed 91.2 proof, so proof appears to vary by release. Whiskey Consensus review is older (proof stated 91.2); year not captured. Whiskey Consensus score was /10 so left null here."
+ },
+ {
+  "id": "1792-aged-twelve-years",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": "delicate fruit notes and a lingering smoky finish",
+   "summary": "Full-bodied with rich vanilla and cocoa flavors; high-rye recipe aged in charred American white oak at Barton 1792.",
+   "source_url": "https://1792bourbon.com/aged-twelve-years/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (2023 release)",
+    "source_url": "https://www.breakingbourbon.com/review/1792-aged-twelve-years-2023-release",
+    "score": 2.5,
+    "scale": "5",
+    "nose": "caramel apple, raspberry, honey, powdered sugar, oak, vanilla",
+    "palate": "caramel with milk chocolate, brown sugar, nougat; mature but not bright",
+    "finish": "rye spice, dry charred oak, mixed nuts, graham cracker, cocoa nib",
+    "summary": "Well built and consistent but a straightforward, unsurprising 12-year bourbon.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 46.85,
+   "proof": 93.7,
+   "age": "12 years",
+   "mash_bill": "High rye recipe (no percentages)",
+   "cask": "Charred American white oak",
+   "region": null,
+   "source_url": "https://1792bourbon.com/aged-twelve-years/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "cocoa",
+   "caramel apple",
+   "raspberry",
+   "honey",
+   "milk chocolate",
+   "brown sugar",
+   "nougat",
+   "rye spice",
+   "charred oak"
+  ],
+  "confidence": "high",
+  "notes": "Producer page lists 93.7 proof; the 2023 review was of a 96.6 proof bottle (matches input). Producer smoky/fruit note is for the finish only."
+ },
+ {
+  "id": "buffalo-trace-bourbon",
+  "producer": {
+   "nose": "vanilla, mint, molasses",
+   "palate": "brown sugar and spice giving way to oak, toffee, dark fruit, anise",
+   "finish": "long, smooth, with depth",
+   "summary": "Sweet, deep-amber bourbon matured in new charred oak.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/buffalo-trace/buffalo-trace-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Bourbon Inspector",
+    "source_url": "https://bourboninspector.com/buffalo-trace-bourbon-review/",
+    "score": 93,
+    "scale": "100",
+    "nose": "oak and dark chocolate, light vanilla/caramel",
+    "palate": "sweet and smooth, vanilla, brown sugar, some spice; thinner mouthfeel",
+    "finish": "surprisingly flavorful and lingering: vanilla, oak, pepper",
+    "summary": "Strong value entry-level bourbon, reliable rather than distinctive.",
+    "year": 2022
+   },
+   {
+    "source": "WhiskeyBon",
+    "source_url": "https://whiskeybon.com/bourbon/buffalo-trace-review/",
+    "score": 90,
+    "scale": "100",
+    "nose": "spicy, deep, sweet toffee",
+    "palate": "coating mouthfeel, vanilla spice, butterscotch",
+    "finish": "extra spice, cinnamon, oak and pepper",
+    "summary": "Reviewer praised it as a top-value bourbon.",
+    "year": 2017
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": "Mash Bill #1 (grain bill not given)",
+   "cask": "New charred oak",
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/buffalo-trace/buffalo-trace-bourbon/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "mint",
+   "molasses",
+   "brown sugar",
+   "toffee",
+   "dark fruit",
+   "anise",
+   "oak",
+   "cinnamon",
+   "butterscotch"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gives no age statement."
+ },
+ {
+  "id": "eagle-rare-10-year",
+  "producer": {
+   "nose": "toffee, orange peel, herbs, honey, leather, oak",
+   "palate": "bold, dry, candied almonds and rich cocoa",
+   "finish": "dry and lingering",
+   "summary": "10-year Kentucky straight bourbon from Buffalo Trace Distillery.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/eagle-rare/eagle-rare-10/"
+  },
+  "critics": [
+   {
+    "source": "WhiskeyBon (Hammond)",
+    "source_url": "https://whiskeybon.com/bourbon/eagle-rare-10-year-old-review/",
+    "score": 91,
+    "scale": "100",
+    "nose": "dark fruit, cherry, banoffee, caramel, creme brulee, leather",
+    "palate": "vanilla, dark fruit, caramel, honey, orange, glazed cherry, baking spice",
+    "finish": "boiled-sweet fruitiness, oak, fudge",
+    "summary": "Fruity, well-rounded and fairly priced for a 10-year.",
+    "year": 2018
+   },
+   {
+    "source": "Barrel Banter",
+    "source_url": "https://www.barrelbanter.com/reviews/eagle-rare-10-year",
+    "score": null,
+    "scale": null,
+    "nose": "sweet but youthful, red fruit, chocolate; some chalky/char notes",
+    "palate": "honey sweetness then sour, oak-heavy bite",
+    "finish": "short, oaky, medicinal",
+    "summary": "Scored 5/10; tasters found it younger and thinner than hoped.",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "10 years",
+   "mash_bill": "Mash Bill #1",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/eagle-rare/eagle-rare-10/"
+  },
+  "flavor_terms": [
+   "toffee",
+   "orange peel",
+   "honey",
+   "leather",
+   "oak",
+   "cocoa",
+   "dark fruit",
+   "cherry",
+   "caramel",
+   "almond"
+  ],
+  "confidence": "high",
+  "notes": "Barrel Banter reports multiple tasters with mixed impressions."
+ },
+ {
+  "id": "stagg",
+  "producer": {
+   "nose": "chocolate and brown sugar balanced with bold rye spice (page combines nose and taste)",
+   "palate": "chocolate, brown sugar, rye spice",
+   "finish": "long, with cherries, cloves and smoke",
+   "summary": "Uncut, unfiltered barrel-proof bourbon.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/george-t-stagg/stagg-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Stagg Jr. Batch 12)",
+    "source_url": "https://www.breakingbourbon.com/review/stagg-jr-bourbon-batch-12",
+    "score": 4.5,
+    "scale": "5",
+    "nose": "molasses, brown sugar, nutmeg, then cherry and honey",
+    "palate": "vanilla, caramel, chocolate, brown sugar, molasses; forceful but balanced",
+    "finish": "brown-sugar heat, seasoned oak, vanilla",
+    "summary": "Best Stagg Jr. batch to date in the reviewer view; strong GTS alternative.",
+    "year": 2019
+   }
+  ],
+  "facts": {
+   "abv": 67.2,
+   "proof": 134.4,
+   "age": "8 years (per producer page)",
+   "mash_bill": null,
+   "cask": "Charred white oak",
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/george-t-stagg/stagg-bourbon/"
+  },
+  "flavor_terms": [
+   "chocolate",
+   "brown sugar",
+   "rye spice",
+   "cherry",
+   "clove",
+   "smoke",
+   "molasses",
+   "nutmeg",
+   "vanilla",
+   "caramel"
+  ],
+  "confidence": "medium",
+  "notes": "Stagg is the renamed Stagg Jr.; the only critic review fetched is Stagg Jr. Batch 12 (132.3 proof, 2019). Proof varies by batch; producer page lists 134.4. Not a perfectly matched batch."
+ },
+ {
+  "id": "george-t-stagg",
+  "producer": {
+   "nose": "toffee, dark chocolate, vanilla, fudge, nougat, molasses; dates, tobacco, dark berries, spearmint, a little coffee (page combines nose and palate)",
+   "palate": null,
+   "finish": null,
+   "summary": "Uncut, unfiltered, aged at least 15 years; each annual release varies.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/george-t-stagg/george-t-stagg-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Film Whiskey (2023 release)",
+    "source_url": "https://www.filmwhiskey.com/blog/whiskey-review-george-t-stagg-bourbon-2023/",
+    "score": null,
+    "scale": null,
+    "nose": "anise, molasses, honey, craisin, brown sugar, dusty oak",
+    "palate": "great mouthfeel, spice; tart cherry, dark fruit, black pepper, growing oak",
+    "finish": "long: vanilla bean, oak char, baking spice, leather, cherry",
+    "summary": "Two tasters scored 47/50 and 40/50; beautifully complex but pricey on secondary.",
+    "year": 2023
+   },
+   {
+    "source": "Bourbon Culture (2017 release)",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/george-t-stagg-bourbon-2017-review/",
+    "score": 9,
+    "scale": null,
+    "nose": "rich, dessert-like: chocolate, heavy oak, cherry licorice, caramel, leather",
+    "palate": "leather, chocolate eclair, seasoned oak, rye spice, cinnamon, nutmeg, pepper, some cherry and citrus",
+    "finish": "smoldering heat, oak, lingering chocolate, cherry, baking spice",
+    "summary": "Rated 9/10; more rye- and fruit-forward than older vintages.",
+    "year": 2017
+   }
+  ],
+  "facts": {
+   "abv": 71.4,
+   "proof": 142.8,
+   "age": "No less than 15 years",
+   "mash_bill": "Mash Bill #1",
+   "cask": "New charred oak",
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/george-t-stagg/george-t-stagg-bourbon/"
+  },
+  "flavor_terms": [
+   "toffee",
+   "dark chocolate",
+   "vanilla",
+   "molasses",
+   "tobacco",
+   "dark berries",
+   "cherry",
+   "leather",
+   "baking spice",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Vintage-specific: reviews cover 2023 (135 proof) and 2017 releases; producer page lists 142.8 proof (a different year). /10 and /50 scores left out of numeric fields."
+ },
+ {
+  "id": "e-h-taylor-small-batch",
+  "producer": {
+   "nose": null,
+   "palate": "caramel-corn sweetness with butterscotch and licorice",
+   "finish": "soft mouthfeel, subtle pepper and tobacco spice",
+   "summary": "Bottled-in-bond 100 proof small-batch bourbon.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/e-h-taylor-jr/e-h-taylor-jr-small-batch/"
+  },
+  "critics": [
+   {
+    "source": "The Bourbon Culture",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/colonel-e-h-taylor-small-batch-bottled-in-bond-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "maraschino cherry, vanilla blossom, oak, toasted almond, butter",
+    "palate": "vanilla pound cake, black cherry, walnut oil, black pepper",
+    "finish": "red fruit (raspberry), burnt caramel, gingersnap, peppercorn, mint",
+    "summary": "Scored 6.6/10; pleasant and fruit-forward but not worth heavy markups.",
+    "year": null
+   },
+   {
+    "source": "Amongst the Whiskey",
+    "source_url": "https://www.amongstthewhiskey.com/post/colonel-e-h-taylor-small-batch-bourbon-review",
+    "score": 4,
+    "scale": "5",
+    "nose": "chocolate, molasses, brown sugar, silky cherry, slight spice",
+    "palate": "candy-like sweetness, molasses, strawberry, apple, cherry",
+    "finish": null,
+    "summary": "Favored over a Heaven Hill 7-year BiB in a head-to-head.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": "Mash Bill #1",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/e-h-taylor-jr/e-h-taylor-jr-small-batch/"
+  },
+  "flavor_terms": [
+   "caramel corn",
+   "butterscotch",
+   "licorice",
+   "pepper",
+   "tobacco",
+   "cherry",
+   "vanilla",
+   "molasses",
+   "brown sugar",
+   "raspberry"
+  ],
+  "confidence": "high",
+  "notes": "Critic review years not captured; Amongst the Whiskey says purchased late 2019 and quotes a young age, ignored here."
+ },
+ {
+  "id": "e-h-taylor-single-barrel",
+  "producer": {
+   "nose": "lightly toasted oak, dried figs, butterscotch",
+   "palate": "sweetness balanced with tobacco and dark spice",
+   "finish": "just long enough",
+   "summary": "Single-barrel bottled-in-bond style, 100 proof.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/e-h-taylor-jr/e-h-taylor-jr-single-barrel/"
+  },
+  "critics": [
+   {
+    "source": "VinePair",
+    "source_url": "https://vinepair.com/review/e-h-taylor-jr-single-barrel-bourbon/",
+    "score": 92,
+    "scale": "100",
+    "nose": "pralines and cream, butter pecan ice cream, vanilla, ripe raspberry",
+    "palate": "toasted coconut, rice pudding, brandied raisin, cherry, red berry; thin",
+    "finish": "tannic: dried tobacco, barrel char, medicinal cherry, light rye spice",
+    "summary": "Quality single barrel, barrel variation expected.",
+    "year": 2023
+   },
+   {
+    "source": "Whiskey For The Ages (Brian)",
+    "source_url": "https://whiskeyfortheages.com/whiskey-reviews-brians-colonel-e-h-taylor-single-barrel-bourbon-review/",
+    "score": 86,
+    "scale": "100",
+    "nose": "apple blossom, apple, citrus, grilled pineapple, banana, vanilla custard, honey, toasted oak",
+    "palate": "dry, warm, apple pipe tobacco, dried cherry, white pepper",
+    "finish": "warm, medium-long: cinnamon, banana bread, leather, toasted wood",
+    "summary": "Simple and good for this barrel; price questioned.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": "Mash Bill #1",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/e-h-taylor-jr/e-h-taylor-jr-single-barrel/"
+  },
+  "flavor_terms": [
+   "toasted oak",
+   "dried fig",
+   "butterscotch",
+   "tobacco",
+   "dark spice",
+   "vanilla",
+   "cherry",
+   "raspberry",
+   "apple",
+   "cinnamon"
+  ],
+  "confidence": "high",
+  "notes": "Single-barrel: reviews differ by barrel."
+ },
+ {
+  "id": "e-h-taylor-barrel-proof",
+  "producer": {
+   "nose": "cooked berries, rich caramel, slightly floral",
+   "palate": "bold spice, toasty vanilla, dried oak, pepper",
+   "finish": "long, powerful rye character, lingering fruit",
+   "summary": "Barrel-proof expression, batch proof varies.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/e-h-taylor-jr/e-h-taylor-jr-barrel-proof/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Batch 9)",
+    "source_url": "https://www.breakingbourbon.com/review/e-h-taylor-jr-barrel-proof-bourbon-130-3-proof-batch-9",
+    "score": 3.5,
+    "scale": "5",
+    "nose": "buttered pecan, dark brown sugar, tobacco, thick oak, dark fruit",
+    "palate": "brown sugar, dark fruit, vanilla bean, burnt caramel; hot, straightforward",
+    "finish": "menthol, coffee bean, cinnamon nut; drying oak",
+    "summary": "Reliable, classic-tasting, not flashy.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 63.75,
+   "proof": 127.5,
+   "age": null,
+   "mash_bill": "Mash Bill #1",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/e-h-taylor-jr/e-h-taylor-jr-barrel-proof/"
+  },
+  "flavor_terms": [
+   "cooked berries",
+   "caramel",
+   "vanilla",
+   "dried oak",
+   "pepper",
+   "rye",
+   "brown sugar",
+   "tobacco",
+   "dark fruit",
+   "cinnamon"
+  ],
+  "confidence": "high",
+  "notes": "Batch-specific: critic reviewed Batch 9 (130.3 proof, 2020); producer page lists 127.5."
+ },
+ {
+  "id": "blanton-s-original-single-barrel",
+  "producer": {
+   "nose": "nutmeg and spices",
+   "palate": "dry vanilla with honey, strong caramel and corn",
+   "finish": "medium; corn and nutmeg return",
+   "summary": "Single-barrel bourbon.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/blantons-original-single-barrel/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (2021)",
+    "source_url": "https://www.breakingbourbon.com/review/blantons-original-single-barrel-bourbon-2021",
+    "score": 3.5,
+    "scale": "5",
+    "nose": "honey, vanilla, light bubble gum, orange peel, char, floral, cinnamon",
+    "palate": "caramel, honey, brown sugar, leather, charred oak, rye spice; subdued",
+    "finish": "crisp: vanilla, caramel, leather, dry oak, light pepper",
+    "summary": "Consistent and approachable rather than best in class.",
+    "year": 2021
+   },
+   {
+    "source": "Whiskey In My Wedding Ring",
+    "source_url": "https://www.whiskeyinmyweddingring.com/reviews/blantons-original-single-barrel-3-4-2019",
+    "score": null,
+    "scale": null,
+    "nose": "caramel-covered fruit",
+    "palate": "vanilla, caramel, white pepper, red grape, berries, stone fruit",
+    "finish": "medium, fruity",
+    "summary": "Scored 7.9/10; favourite bourbon of the reviewer.",
+    "year": 2019
+   }
+  ],
+  "facts": {
+   "abv": 46.5,
+   "proof": 93,
+   "age": null,
+   "mash_bill": "Mash Bill #2",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/blantons-original-single-barrel/"
+  },
+  "flavor_terms": [
+   "nutmeg",
+   "vanilla",
+   "honey",
+   "caramel",
+   "corn",
+   "orange peel",
+   "leather",
+   "rye spice",
+   "brown sugar",
+   "stone fruit"
+  ],
+  "confidence": "high",
+  "notes": "Single barrel; reviews vary by barrel."
+ },
+ {
+  "id": "blanton-s-gold",
+  "producer": {
+   "nose": "spicy rye and tobacco, caramel, honey, dark fruit, citrus",
+   "palate": "rye, tobacco, honey",
+   "finish": "oak and vanilla, extremely long",
+   "summary": "103 proof single-barrel edition.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/blantons-single-barrel/blantons-gold-edition/"
+  },
+  "critics": [
+   {
+    "source": "Whiskey In My Wedding Ring",
+    "source_url": "https://www.whiskeyinmyweddingring.com/reviews/blantons-gold-edition",
+    "score": null,
+    "scale": null,
+    "nose": "grapes, ethanol, sweetness, toasted vanilla",
+    "palate": "heat, vanilla, custard, pepper, dark chocolate, orange zest; full and oily",
+    "finish": "very long: creme brulee, vanilla, chocolate shavings",
+    "summary": "Scored 8.5/10; rivals or beats the Original.",
+    "year": 2018
+   },
+   {
+    "source": "WhiskeyBon",
+    "source_url": "https://whiskeybon.com/bourbon/blantons-gold-review/",
+    "score": 90,
+    "scale": "100",
+    "nose": "light caramel, baking spice, cinnamon, citrus",
+    "palate": "caramel, toffee, dark fruit, honeycomb, vanilla",
+    "finish": "oak, toffee apple, tobacco, frosting, pepper",
+    "summary": "Excellent, easy-sipping.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 51.5,
+   "proof": 103,
+   "age": null,
+   "mash_bill": "Mash Bill #2",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/blantons-single-barrel/blantons-gold-edition/"
+  },
+  "flavor_terms": [
+   "rye",
+   "tobacco",
+   "caramel",
+   "honey",
+   "dark fruit",
+   "citrus",
+   "oak",
+   "vanilla",
+   "custard",
+   "chocolate"
+  ],
+  "confidence": "high",
+  "notes": "Review years partly unknown (WIMWR barrel dumped Oct 2018)."
+ },
+ {
+  "id": "blanton-s-straight-from-the-barrel",
+  "producer": {
+   "nose": "dark chocolate, caramel, earthy walnut and hazelnut",
+   "palate": "warm vanilla, oak, toasted nuts, rich spice, butterscotch or honey",
+   "finish": null,
+   "summary": "Barrel-strength, intense but inviting.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/blantons-single-barrel/blantons-straight-from-the-barrel/"
+  },
+  "critics": [
+   {
+    "source": "The Bourbon Culture",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/blantons-straight-from-the-barrel-single-barrel-bourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "cinnamon, ripe apple, caramel, brown sugar, butter, cherry, orange peel",
+    "palate": "cherry, baked apple, peach, pie crust, brown sugar",
+    "finish": "brown sugar, spiced oak, tobacco, raspberry, peach, cherry",
+    "summary": "Scored 8.7/10 at 126.7 proof; very good for presumed youth.",
+    "year": 2019
+   },
+   {
+    "source": "Whiskey Ramble",
+    "source_url": "https://thewhiskeyramble.com/2021/04/07/blantons-straight-from-the-barrel-scoresheet-review/",
+    "score": null,
+    "scale": null,
+    "nose": "closed, seasoned oak, light brown sugar, orange, faint cherry",
+    "palate": "vanilla bean, orange, pepper, apple",
+    "finish": "brown sugar, orange, tart fruit, cream, pepper and oak; short",
+    "summary": "Solid but unremarkable; price not justified.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 66.85,
+   "proof": 133.7,
+   "age": null,
+   "mash_bill": "Mash Bill #2",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/blantons-single-barrel/blantons-straight-from-the-barrel/"
+  },
+  "flavor_terms": [
+   "dark chocolate",
+   "caramel",
+   "walnut",
+   "hazelnut",
+   "vanilla",
+   "oak",
+   "butterscotch",
+   "cherry",
+   "brown sugar",
+   "orange"
+  ],
+  "confidence": "high",
+  "notes": "Barrel-specific; proof varies (126.7 in one review, 133.7 on producer page). Ramble year from URL."
+ },
+ {
+  "id": "weller-special-reserve",
+  "producer": {
+   "nose": "sweet with caramel",
+   "palate": "honey, butterscotch, soft wood",
+   "finish": "smooth with a honeysuckle sweetness",
+   "summary": "Original wheated bourbon.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-special-reserve/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (2020)",
+    "source_url": "https://www.breakingbourbon.com/review/weller-special-reserve-2020",
+    "score": null,
+    "scale": null,
+    "nose": "vanilla, caramel, honey, oak, floral",
+    "palate": "honey, caramel, vanilla, light fruit; little spice",
+    "finish": "mild heat, more oak, honey and caramel return",
+    "summary": "Pleasant, above-average, but no longer special; score on the page read 3, scale unclear.",
+    "year": 2020
+   },
+   {
+    "source": "Barrel Banter",
+    "source_url": "https://www.barrelbanter.com/reviews/weller-special-reserve",
+    "score": null,
+    "scale": null,
+    "nose": "vanilla wafer, honey, red fruit, red apple, cedar",
+    "palate": "cherry, mild oak, grainy, light",
+    "finish": "short, char and dry grass",
+    "summary": "Scored 6/10; accessible but thin.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": "Wheated mash",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-special-reserve/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "honey",
+   "butterscotch",
+   "vanilla",
+   "soft wood",
+   "honeysuckle",
+   "oak",
+   "red fruit",
+   "red apple",
+   "cedar"
+  ],
+  "confidence": "high",
+  "notes": "Barrel Banter year approximated from \"as of 2025\"."
+ },
+ {
+  "id": "weller-antique-107",
+  "producer": {
+   "nose": "sweet, unusual floral with vanilla",
+   "palate": "sweet fruit, strong vanilla, sharp spice",
+   "finish": "cinnamon",
+   "summary": "Wheated 107 proof bourbon.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-antique-107/"
+  },
+  "critics": [
+   {
+    "source": "Bourbon Inspector",
+    "source_url": "https://bourboninspector.com/weller-antique-107-review/",
+    "score": 90.5,
+    "scale": "100",
+    "nose": "cinnamon roll, oak, caramel, vanilla, dark fruit",
+    "palate": "cinnamon spice, oak, vanilla, caramel, dark fruit; full",
+    "finish": "long, spicy, oaky, cinnamon",
+    "summary": "Good bourbon at MSRP, hard to justify at markups.",
+    "year": 2022
+   },
+   {
+    "source": "Whiskey Ramble",
+    "source_url": "https://thewhiskeyramble.com/2023/05/09/weller-antique-107-scoresheet-review/",
+    "score": null,
+    "scale": null,
+    "nose": "caramel apple, vanilla, butterscotch, brown sugar, cherry bubblegum",
+    "palate": "vanilla, caramelized red apple, brown sugar, cinnamon proof hit",
+    "finish": "creamy vanilla and caramel as spice fades",
+    "summary": "Solid middle-of-the-line Weller.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 53.5,
+   "proof": 107,
+   "age": null,
+   "mash_bill": "Wheated mash",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-antique-107/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "caramel",
+   "floral",
+   "cinnamon",
+   "oak",
+   "dark fruit",
+   "caramel apple",
+   "brown sugar",
+   "butterscotch",
+   "spice"
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "id": "weller-12-year",
+  "producer": {
+   "nose": "lanolin, almond, creamed corn, toasty vanilla",
+   "palate": "heavily wheated, layered, moderately sweet",
+   "finish": "long, oaky, intensely smooth",
+   "summary": "12-year wheated bourbon.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-12-year.html"
+  },
+  "critics": [
+   {
+    "source": "WhiskeyBon",
+    "source_url": "https://whiskeybon.com/bourbon/w-l-weller-12-review/",
+    "score": 91,
+    "scale": "100",
+    "nose": "caramel, dark cherry, oak, pine nut, vanilla, creme brulee",
+    "palate": "caramel and toffee, baked cherry pie, pastry",
+    "finish": "dark fruit, bitter chocolate, caramel, long",
+    "summary": "Very good, maybe not hype-level; great for price.",
+    "year": 2018
+   },
+   {
+    "source": "Whiskey Ramble",
+    "source_url": "https://thewhiskeyramble.com/2023/03/27/weller-12-year-scoresheet-review/",
+    "score": null,
+    "scale": null,
+    "nose": "buttery, fruity, caramel, light brown sugar, floral vanilla",
+    "palate": "very sweet: vanilla, honey candy, brown sugar",
+    "finish": "not long; brown sugar, tobacco hints",
+    "summary": "Considered sweet and one-dimensional.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "12 years",
+   "mash_bill": "Wheated mash",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-12-year.html"
+  },
+  "flavor_terms": [
+   "almond",
+   "creamed corn",
+   "toasty vanilla",
+   "caramel",
+   "dark cherry",
+   "oak",
+   "toffee",
+   "brown sugar",
+   "dark fruit",
+   "tobacco"
+  ],
+  "confidence": "high",
+  "notes": "Reviewers differ sharply."
+ },
+ {
+  "id": "weller-full-proof",
+  "producer": {
+   "nose": "vanilla, dark cherries, caramel",
+   "palate": "caramel and toasted oak",
+   "finish": "long: creme brulee and chocolate",
+   "summary": "Non-chill-filtered, bottled at barrel-entry proof.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-full-proof/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash",
+    "source_url": "https://thewhiskeywash.com/bourbon/whiskey-review-weller-full-proof/",
+    "score": 9,
+    "scale": null,
+    "nose": "grape, cherry, plum, caramel, vanilla",
+    "palate": null,
+    "finish": null,
+    "summary": "Scored 9/10; hides youth, buy at retail.",
+    "year": 2019
+   },
+   {
+    "source": "Whiskey Ramble (Total Wine pick)",
+    "source_url": "https://thewhiskeyramble.com/2022/02/24/weller-full-proof-total-wine-pick-scoresheet-review/",
+    "score": null,
+    "scale": null,
+    "nose": "amplified Buffalo Trace aroma, buttery, vanilla, caramel, light brown sugar",
+    "palate": "caramel, sweet oak, cherry pie with glaze",
+    "finish": "medium, caramel, toffee, vanilla, sweet tobacco",
+    "summary": "A strong store pick; safe but delicious.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 57,
+   "proof": 114,
+   "age": null,
+   "mash_bill": "Wheated mash",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-full-proof/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "dark cherry",
+   "caramel",
+   "toasted oak",
+   "creme brulee",
+   "chocolate",
+   "plum",
+   "grape",
+   "toffee",
+   "brown sugar"
+  ],
+  "confidence": "high",
+  "notes": "Whiskey Wash score was /10 so numeric score null."
+ },
+ {
+  "id": "weller-c-y-p-b",
+  "producer": {
+   "nose": "light citrus and oak",
+   "palate": "well rounded, balanced",
+   "finish": "medium-long with vanilla",
+   "summary": "Craft Your Perfect Bourbon, wheated.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-c-y-p-b/"
+  },
+  "critics": [
+   {
+    "source": "The Bourbon Culture (2021 review)",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/weller-create-your-perfect-bourbon-cypb-2020-review/",
+    "score": null,
+    "scale": null,
+    "nose": "caramel, fudge, syrup, cherry pie filling, soft oak, vanilla, baking spice",
+    "palate": "vanilla cake batter, cinnamon, cherry pie, brown sugar",
+    "finish": "toffee, cinnamon, oak, thick syrup, dark cherry",
+    "summary": "Scored 8.2/10; dessert-forward.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 47.5,
+   "proof": 95,
+   "age": null,
+   "mash_bill": "Wheated mash",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-c-y-p-b/"
+  },
+  "flavor_terms": [
+   "citrus",
+   "oak",
+   "vanilla",
+   "caramel",
+   "cherry",
+   "fudge",
+   "cinnamon",
+   "brown sugar",
+   "toffee",
+   "baking spice"
+  ],
+  "confidence": "high",
+  "notes": "Producer and reviewer show 95 proof; input says 90. Released in several editions; review is for the 2018 inaugural edition (8 years per reviewer)."
+ },
+ {
+  "id": "william-larue-weller",
+  "producer": {
+   "nose": "caramel corn, new leather, plum, toffee, pipe tobacco",
+   "palate": "marshmallow, salted almond, nougat, fig, date",
+   "finish": "smooth, composed, sweet",
+   "summary": "Wheated Antique Collection release.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/william-larue-weller/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash (2017)",
+    "source_url": "https://thewhiskeywash.com/bourbon/whiskey-review-william-larue-weller-2017/",
+    "score": null,
+    "scale": null,
+    "nose": "vanilla bean, caramel, cookies; earth and roasted corn with water",
+    "palate": "fig, cherry, honeyed; orange zest and nutmeg with water",
+    "finish": "short",
+    "summary": "Scored 8/10; recommended at MSRP.",
+    "year": 2017
+   }
+  ],
+  "facts": {
+   "abv": 64,
+   "proof": 128,
+   "age": null,
+   "mash_bill": "Wheated mash",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/william-larue-weller/"
+  },
+  "flavor_terms": [
+   "caramel corn",
+   "leather",
+   "plum",
+   "toffee",
+   "tobacco",
+   "marshmallow",
+   "almond",
+   "nougat",
+   "fig",
+   "date"
+  ],
+  "confidence": "high",
+  "notes": "Vintage-specific: critic reviewed 2017 (128.2 proof). Age not stated."
+ },
+ {
+  "id": "sazerac-rye",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Bold rye spice with vanilla, clove, subtle citrus; oak, leather, molasses.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/sazerac-rye-whiskey/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (2020)",
+    "source_url": "https://www.breakingbourbon.com/review/sazerac-rye",
+    "score": 3,
+    "scale": "5",
+    "nose": "orange zest, clove, raisin, rye spice, anise",
+    "palate": "apricot, orange peel, caramel, vanilla, char, licorice",
+    "finish": "brief rye spice, licorice, dark fruit, caramel, pepper",
+    "summary": "Approachable fruit-forward rye. Score read as 3; scale inferred.",
+    "year": 2020
+   },
+   {
+    "source": "The Whiskey Jug",
+    "source_url": "https://thewhiskeyjug.com/rye-whiskey/sazerac-rye-review/",
+    "score": 89,
+    "scale": "100",
+    "nose": "caramel/toffee, cinnamon, honey, toasted grain",
+    "palate": "pepper, cinnamon, rye bread, vanilla, caramel, licorice",
+    "finish": "paprika, nutmeg, orchard fruit, soft oak",
+    "summary": "Sweet, bourbon-like rye with strong value.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://thewhiskeyjug.com/rye-whiskey/sazerac-rye-review/"
+  },
+  "flavor_terms": [
+   "rye spice",
+   "vanilla",
+   "clove",
+   "citrus",
+   "oak",
+   "leather",
+   "molasses",
+   "caramel",
+   "licorice",
+   "orange"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gave only flavor profile summary; abv/proof from critic."
+ },
+ {
+  "id": "sazerac-18-year-rye",
+  "producer": {
+   "nose": "mature oak, leather, molasses, allspice",
+   "palate": "mint, eucalyptus, cinnamon, vanilla, pepper",
+   "finish": "long and warm",
+   "summary": "18-year Antique Collection rye.",
+   "source_url": "https://buffalotracedistillery.com/our-brands/sazerac/sazerac-18-year-old.html"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (2023)",
+    "source_url": "https://www.breakingbourbon.com/review/sazerac-18-year-2023",
+    "score": 3.5,
+    "scale": "5",
+    "nose": "candy cane, mint, rye spice, dried apricot",
+    "palate": "rye spice, vegetal, straw, mild fruit, light oak",
+    "finish": "light cinnamon, dry oak, leather, some mustiness",
+    "summary": "Balanced and creamy but narrow.",
+    "year": 2023
+   },
+   {
+    "source": "The Bourbon Culture (2020)",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/sazerac-18-year-old-rye-whiskey-review/",
+    "score": null,
+    "scale": null,
+    "nose": "candy corn, cherry, lemon, mint, herbs, fennel, aged wood",
+    "palate": "oak, tobacco, cherry, red pepper, anise",
+    "finish": "stale tobacco, tannic, bark, chocolate, leather",
+    "summary": "Scored 7.3/10; felt underwhelming.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 47.5,
+   "proof": 95,
+   "age": "18 years",
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://buffalotracedistillery.com/our-brands/sazerac/sazerac-18-year-old.html"
+  },
+  "flavor_terms": [
+   "oak",
+   "leather",
+   "molasses",
+   "allspice",
+   "mint",
+   "cinnamon",
+   "vanilla",
+   "pepper",
+   "apricot",
+   "tobacco"
+  ],
+  "confidence": "high",
+  "notes": "Producer page shows 95 proof; recent critic reviews 90 proof. Vintage varies."
+ },
+ {
+  "id": "thomas-h-handy-sazerac-rye",
+  "producer": {
+   "nose": null,
+   "palate": "powerful, lush, spicy; toffee, fig cake, candied fruit, mint, cinnamon, clove",
+   "finish": "allspice, coconut, nutmeg, long and warm",
+   "summary": "Uncut, unfiltered ~63% ABV.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/sazerac-rye-whiskey/thomas-h-handy-sazerac/"
+  },
+  "critics": [
+   {
+    "source": "VinePair (2023)",
+    "source_url": "https://vinepair.com/review/thomas-h-handy-sazerac-rye-whiskey-2023/",
+    "score": 94,
+    "scale": "100",
+    "nose": "citrus zest, anise, clove, cinnamon, polish",
+    "palate": "pumpernickel, butter, honey cornbread, grapefruit candy, clove",
+    "finish": "spice and sweetness fading, oak, gentle heat",
+    "summary": "Consistent and delicious.",
+    "year": 2023
+   },
+   {
+    "source": "WhiskeyBon (2017)",
+    "source_url": "https://whiskeybon.com/rye/thomas-h-handy-sazerac-rye-review/",
+    "score": 89,
+    "scale": "100",
+    "nose": "woodchips, dried herbs, nuts, ethanol",
+    "palate": "raisin, ginger cake, treacle, mint, pepper",
+    "finish": "brown sugar, rye, allspice, tangerine, pepper",
+    "summary": "Weak nose, exciting palate.",
+    "year": 2017
+   }
+  ],
+  "facts": {
+   "abv": 63,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/sazerac-rye-whiskey/thomas-h-handy-sazerac/"
+  },
+  "flavor_terms": [
+   "toffee",
+   "fig",
+   "candied fruit",
+   "mint",
+   "cinnamon",
+   "clove",
+   "allspice",
+   "coconut",
+   "nutmeg",
+   "citrus"
+  ],
+  "confidence": "high",
+  "notes": "Vintage-specific: reviews of 2023 (124.9 proof) and 2017 (127.2). Producer page gives ABV only."
+ },
+ {
+  "id": "jim-beam-black-7-year",
+  "producer": {
+   "nose": "charred oak, brown sweets, vanilla",
+   "palate": "full-bodied, caramel, baking spice",
+   "finish": null,
+   "summary": "Smooth, caramel, vanilla, warm oak.",
+   "source_url": "https://www.jimbeam.com/en-us/bourbons/jim-beam-black"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://breakingbourbon.com/review/jim-beam-black-7-year-bourbon",
+    "score": 2,
+    "scale": "5",
+    "nose": "faint oak, vanilla, light caramel, cinnamon",
+    "palate": "vanilla, white pepper, new oak, thin",
+    "finish": "vanilla custard, peppercorn, oak, dry",
+    "summary": "Thin and underwhelming. Score inferred 2/5.",
+    "year": null
+   },
+   {
+    "source": "The Whiskey Wash (2026)",
+    "source_url": "https://thewhiskeywash.com/whiskey-reviews/review-jim-beam-black-age7-years-review-2026/",
+    "score": null,
+    "scale": null,
+    "nose": "toasted oak, peanuts, pecans, burnt orange, cherry syrup",
+    "palate": "spice, burnt sugar, chocolate toffee, cherry jam, tannins",
+    "finish": "oaky, dry, bitter, black tea, dark chocolate",
+    "summary": "Scored 6/10.",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "7 years",
+   "mash_bill": "77% corn, 13% rye, 10% malted barley",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/en-us/bourbons/jim-beam-black"
+  },
+  "flavor_terms": [
+   "oak",
+   "caramel",
+   "vanilla",
+   "baking spice",
+   "cherry",
+   "pepper",
+   "chocolate",
+   "toffee",
+   "peanut",
+   "tea"
+  ],
+  "confidence": "high",
+  "notes": "Producer finish null."
+ },
+ {
+  "id": "jim-beam-bonded",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Jug",
+    "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/jim-beam-bonded-review/",
+    "score": 84,
+    "scale": "100",
+    "nose": "candy corn, caramel, dark fruit leather, vanilla, toffee",
+    "palate": "candy corn, sarsaparilla, toffee, vanilla, wood",
+    "finish": "medium-long corn, caramel, wood, allspice",
+    "summary": "Between White and Black; balanced.",
+    "year": null
+   },
+   {
+    "source": "Secret Whiskey Society",
+    "source_url": "https://secretwhiskeysociety.com/jim-beam-bonded-review-bottled-in-bond/",
+    "score": null,
+    "scale": null,
+    "nose": "buttery caramel, dark fruit, cherry, donut, oak, vanilla",
+    "palate": "caramel, charred oak, vanilla, rye spice, nuts, pepper",
+    "finish": "long, oak and rye spice, black pepper",
+    "summary": "Great flavor for the price.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "At least 4 years",
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/jim-beam-bonded-review/"
+  },
+  "flavor_terms": [
+   "candy corn",
+   "caramel",
+   "dark fruit",
+   "vanilla",
+   "toffee",
+   "oak",
+   "allspice",
+   "cherry",
+   "rye spice",
+   "pepper"
+  ],
+  "confidence": "medium",
+  "notes": "No producer notes found (jimbeam.com page did not give product details). Review years unknown."
+ },
+ {
+  "id": "jim-beam-single-barrel",
+  "producer": {
+   "nose": "oaky vanilla with light spice",
+   "palate": "oak, vanilla, caramel, balanced",
+   "finish": "full-bodied, smooth, slightly lingering oak and vanilla",
+   "summary": "Hand-selected single barrel.",
+   "source_url": "https://www.jimbeam.com/en-us/bourbons/jim-beam-single-barrel"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "oak",
+   "vanilla",
+   "caramel",
+   "spice"
+  ],
+  "confidence": "medium",
+  "notes": "Critic reviews found (WhiskeyJug, Bourbon & Banter, Spirits Review, Breaking Bourbon) are all of earlier 95 proof Single Barrel; skipped as different expression from 108 proof."
+ },
+ {
+  "id": "jim-beam-winter-reserve",
+  "producer": {
+   "nose": "sweet vanilla, cinnamon, clove (page combines nose and palate)",
+   "palate": null,
+   "finish": "warm finish",
+   "summary": "Limited-edition seasonal bourbon finished in two toasted barrels.",
+   "source_url": "https://www.jimbeam.com/en-us/bourbons/jim-beam-winter-reserve-limited-edition"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (2024)",
+    "source_url": "https://www.breakingbourbon.com/review/jim-beam-winter-reserve-bourbon",
+    "score": 2.5,
+    "scale": "5",
+    "nose": "vanilla, oak, orange marmalade, cinnamon, yellow cake",
+    "palate": "rye spice, cinnamon, oak, vanilla, thin",
+    "finish": "rye spice, toasted oak, vanilla, gentle spice",
+    "summary": "Consumer-friendly and low priced. Score 2.5.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": "6 years",
+   "mash_bill": null,
+   "cask": "Finished in two toasted barrels",
+   "region": null,
+   "source_url": "https://www.jimbeam.com/en-us/bourbons/jim-beam-winter-reserve-limited-edition"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "cinnamon",
+   "clove",
+   "oak",
+   "orange marmalade",
+   "rye spice",
+   "yellow cake",
+   "toasted oak"
+  ],
+  "confidence": "high",
+  "notes": "Current release is 86 proof/6 years per producer and critic; input lists 90 NAS."
+ }
+]

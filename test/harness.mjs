@@ -5,9 +5,11 @@ import { DatabaseSync } from 'node:sqlite';
 import { readFileSync, readdirSync } from 'node:fs';
 import worker from '../worker.js';
 import { RESEARCH_CATALOG } from '../catalog-research.js';
-import { packCatalog } from '../catalog-pack.js';
+import { packCatalog, attachExpertNotes } from '../catalog-pack.js';
 
-const PACKED_CATALOG = JSON.stringify(packCatalog(RESEARCH_CATALOG));
+const NOTES = JSON.parse(readFileSync(new URL('../data/expert-notes.json', import.meta.url), 'utf8'));
+// Served exactly as the build produces it: packed records plus their cited notes.
+const PACKED_CATALOG = JSON.stringify(attachExpertNotes(packCatalog(RESEARCH_CATALOG), NOTES));
 
 export function setup() {
   const db = new DatabaseSync(':memory:');

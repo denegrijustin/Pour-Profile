@@ -1,0 +1,900 @@
+[
+ {
+  "id": "mahi-sauvignon-blanc",
+  "producer": {
+   "nose": "Stone fruit and fresh-squeezed lime",
+   "palate": "Fresh, crisp and dry with peach, pear and lime; slightly unctuous texture",
+   "finish": null,
+   "summary": "Small-batch Marlborough wine; partly barrel-fermented (about 7% old French oak) with about 20% wild ferment",
+   "source_url": "https://www.thewinesociety.com/product/mahi-marlborough-sauvignon-blanc-2024-en.aspx"
+  },
+  "critics": [
+   {
+    "source": "Natalie MacLean",
+    "source_url": "https://www.nataliemaclean.com/wine-reviews/mahi-sauvignon-blanc-2022/338534",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": "Silky, with gooseberry, lemongrass, tropical fruit and lime-lemon zest that lingers",
+    "finish": null,
+    "summary": "Described as very appealing; wild-yeast partial ferment and some barrel aging give a rounded feel",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "About 7% old French barriques",
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://www.thewinesociety.com/product/mahi-marlborough-sauvignon-blanc-2024-en.aspx"
+  },
+  "flavor_terms": [
+   "stone fruit",
+   "lime",
+   "peach",
+   "pear",
+   "gooseberry",
+   "lemongrass",
+   "tropical fruit",
+   "lemon zest"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are from The Wine Society (UK retailer) 2024 vintage page; critic note is 2022 vintage. Page says 13.5% ABV and 2% Semillon (input says 13 / pure SB); mash_bill left null."
+ },
+ {
+  "id": "seresin-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Retailer-directory description of the 2023: bright acidity, zesty citrus, tropical fruit, hint of herbaceousness; green apple, passionfruit, citrus blossom",
+   "source_url": "https://www.firstleaf.com/a/wine-directory/product/sauvignon-blanc-2023-seresin"
+  },
+  "critics": [
+   {
+    "source": "Cameron Douglas MS",
+    "source_url": "https://www.camdouglasms.com/reviews/2024/3/19/seresin-sauvignon-blanc-2023-marlborough",
+    "score": 93,
+    "scale": "100",
+    "nose": "Attractive, powerful aromatic mix of fruit and pungent notes",
+    "palate": "Pineapple, angelica leaf, red apple, gooseberry, nettle, white spice, cool stony minerality, fine lees",
+    "finish": "Slightly saline with a fleshy note",
+    "summary": "Medium-weight style, drink 2024 to 2027+",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "pineapple",
+   "red apple",
+   "gooseberry",
+   "nettle",
+   "white spice",
+   "mineral",
+   "passionfruit",
+   "citrus blossom"
+  ],
+  "confidence": "medium",
+  "notes": "2023 vintage. Producer notes only via a Firstleaf directory page (not seresin.co.nz). Wine Spectator 2022 page is paywalled; no score read."
+ },
+ {
+  "id": "clos-du-bois-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "lemon",
+   "grapefruit",
+   "pineapple",
+   "tropical fruit",
+   "herbal"
+  ],
+  "confidence": "low",
+  "notes": "Only a retailer snippet (Siesta Spirits, 2024 vintage: citrus and tropical fruit with lemon, grapefruit, pineapple, subtle herbal edge). Wine Enthusiast pages could not be fetched (redirect error). Retailer URL: https://siestaspirits.com/products/clos-du-bois-sauvignon-blanc-california-2014-750ml"
+ },
+ {
+  "id": "duckhorn-sauvignon-blanc",
+  "producer": {
+   "nose": "Lemongrass, lychee, passionfruit, melon, pineapple, hints of white nectarine and lime",
+   "palate": "Subtle viscosity with refreshing acidity; juicy citrus and tropical fruit",
+   "finish": "Bright and zesty",
+   "summary": null,
+   "source_url": "https://www.duckhorn.com/product/2018-duckhorn-vineyards-napa-valley-sauvignon-blanc"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Napa Valley",
+   "source_url": "https://www.duckhorn.com/product/2018-duckhorn-vineyards-napa-valley-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "lemongrass",
+   "lychee",
+   "passionfruit",
+   "melon",
+   "pineapple",
+   "white nectarine",
+   "lime",
+   "citrus"
+  ],
+  "confidence": "medium",
+  "notes": "Producer notes are for the 2018 vintage (older page). Wine Spectator 2020 page paywalled."
+ },
+ {
+  "id": "decoy-sauvignon-blanc",
+  "producer": {
+   "nose": "Tropical fruit, tangy citrus and a touch of vanilla spice",
+   "palate": "Lively acidity with creamy, rounded texture; juicy stone fruit and tropical flavors",
+   "finish": "Long, with lingering kiwi",
+   "summary": "2025 vintage producer notes",
+   "source_url": "https://www.decoywines.com/products/decoy-california-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Ken's Wine Guide",
+    "source_url": "https://www.kenswineguide.com/wine_review/Decoy-2022-Sauvignon-Blanc",
+    "score": 88,
+    "scale": "100",
+    "nose": "Gooseberry and lemon with grapefruit pith and white pepper",
+    "palate": "Round and zesty; lime, minerality, stone fruit",
+    "finish": null,
+    "summary": "Rated Very Good",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "California",
+   "source_url": "https://www.decoywines.com/products/decoy-california-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "tropical fruit",
+   "citrus",
+   "vanilla",
+   "stone fruit",
+   "kiwi",
+   "gooseberry",
+   "lemon",
+   "grapefruit pith",
+   "lime"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are 2025 vintage; Ken's review is 2022 vintage (published Apr 2024). Decoy Featherweight is a different wine and was excluded."
+ },
+ {
+  "id": "honig-sauvignon-blanc",
+  "producer": {
+   "nose": "Honeysuckle and stone fruit",
+   "palate": "Round mid-palate with bright lime and ruby grapefruit",
+   "finish": null,
+   "summary": "Layered, classic Honig style (2023)",
+   "source_url": "https://www.honigwine.com/assets/client/File/23%20SB%20Fact.pdf"
+  },
+  "critics": [
+   {
+    "source": "Loren Sonkin (Into Wine)",
+    "source_url": "https://www.intowine.com/reviews/2023-honig-sauvignon-blanc-napa-valley-usa-california-wine-review",
+    "score": 90,
+    "scale": "100",
+    "nose": "Slight peach, some lime and a bit of grapefruit",
+    "palate": "Peach and grapefruit, easy drinking, no bitterness",
+    "finish": null,
+    "summary": "Grade A-; drink within a year or two",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Napa Valley",
+   "source_url": "https://www.honigwine.com/assets/client/File/23%20SB%20Fact.pdf"
+  },
+  "flavor_terms": [
+   "honeysuckle",
+   "stone fruit",
+   "lime",
+   "ruby grapefruit",
+   "peach",
+   "grapefruit"
+  ],
+  "confidence": "high",
+  "notes": "2023 vintage for both sources."
+ },
+ {
+  "id": "cakebread-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Described as round and fleshy, with citrus, stone fruit and gooseberry; small Semillon addition (retailer quoting producer, 2022)",
+   "source_url": "https://www.corneyandbarrow.com/sauvignon-blanc-cakebread-cellars-2022-10000502022bt12-1.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 14,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Napa Valley",
+   "source_url": "https://www.corneyandbarrow.com/sauvignon-blanc-cakebread-cellars-2022-10000502022bt12-1.html"
+  },
+  "flavor_terms": [
+   "citrus",
+   "stone fruit",
+   "gooseberry"
+  ],
+  "confidence": "low",
+  "notes": "Only a UK retailer page (2022 vintage, 14.0% ABV vs input 13.5). Wine Enthusiast page could not be fetched; it was a North Coast 2024 bottling anyway."
+ },
+ {
+  "id": "rombauer-sauvignon-blanc",
+  "producer": {
+   "nose": "Key lime, honeydew melon, passion fruit",
+   "palate": "Fresh lime and honeydew, kiwi, subtle herbal notes",
+   "finish": "Lively, with mouthwatering acidity",
+   "summary": "Winery notes as reproduced on wine.com (2022)",
+   "source_url": "https://www.wine.com/product/rombauer-sauvignon-blanc-2022/1215226"
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator (via wine.com)",
+    "source_url": "https://www.wine.com/product/rombauer-sauvignon-blanc-2022/1215226",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score listed on retailer page for 2022",
+    "year": 2022
+   },
+   {
+    "source": "Decanter (via wine.com)",
+    "source_url": "https://www.wine.com/product/rombauer-sauvignon-blanc-2022/1215226",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score listed on retailer page for 2022",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 14.2,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Napa Valley",
+   "source_url": "https://www.wine.com/product/rombauer-sauvignon-blanc-2022/1215226"
+  },
+  "flavor_terms": [
+   "key lime",
+   "honeydew",
+   "passion fruit",
+   "kiwi",
+   "herbal",
+   "lime"
+  ],
+  "confidence": "low",
+  "notes": "All from a wine.com retailer page (2022 vintage); scores are as listed there, no critic prose. ABV 14.2 vs input 13."
+ },
+ {
+  "id": "st-sup-ry-sauvignon-blanc",
+  "producer": {
+   "nose": "Green lime and yellow grapefruit with passion fruit, lemon peel, hint of anise",
+   "palate": "Crisp grapefruit and lime zest with touch of gooseberry and caper, saline vibrancy",
+   "finish": "Balanced, lively acidity, pleasing finish",
+   "summary": "2024 Napa Valley Estate tasting sheet",
+   "source_url": "https://www.stsupery.com/wp-content/uploads/2025/04/2024-St.-Supery-Napa-Valley-Estate-Sauvignon-Blanc-Tasting-Note.pdf"
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator (via stsupery.com)",
+    "source_url": "https://www.stsupery.com/91-point-sauvignon-blanc/",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": "Vivid and juicy: passion fruit, lime, peach, white tea, ruby grapefruit, wild fennel",
+    "finish": null,
+    "summary": "2022 Napa Valley Estate",
+    "year": 2022
+   },
+   {
+    "source": "Ken's Wine Guide",
+    "source_url": "https://www.kenswineguide.com/wine_review/St-Supery-2022-Sauvignon-Blanc",
+    "score": 90,
+    "scale": "100",
+    "nose": "Faint lime, hints of lemon, sea breeze, gooseberry",
+    "palate": "Granny Smith apple, celery, lime, saline, chalky minerality, hint of grapefruit and white pepper",
+    "finish": "Dry and graceful fade",
+    "summary": "2022 vintage panel review",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Napa Valley",
+   "source_url": "https://www.stsupery.com/wp-content/uploads/2025/04/2024-St.-Supery-Napa-Valley-Estate-Sauvignon-Blanc-Tasting-Note.pdf"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "lime",
+   "passion fruit",
+   "lemon peel",
+   "gooseberry",
+   "saline",
+   "peach",
+   "fennel",
+   "mineral"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are 2024; critic notes are 2022 vintage. Wine Spectator note reproduced on the winery site."
+ },
+ {
+  "id": "groth-sauvignon-blanc",
+  "producer": {
+   "nose": "Cantaloupe, zesty lime, ripe papaya, candied lemon, touch of white pepper",
+   "palate": "Lemon-lime and citrus oil with smooth, waxy texture",
+   "finish": "Crisp, clean, bright acidity with a waxy feel",
+   "summary": "2024 vintage; neutral oak with lees aging",
+   "source_url": "https://grothwines.com/wine/2024-sauvignon-blanc-napa-valley/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 14,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Neutral oak barrels, 3 months on lees",
+   "region": "Napa Valley",
+   "source_url": "https://grothwines.com/wine/2024-sauvignon-blanc-napa-valley/"
+  },
+  "flavor_terms": [
+   "cantaloupe",
+   "lime",
+   "papaya",
+   "candied lemon",
+   "white pepper",
+   "lemon",
+   "citrus oil"
+  ],
+  "confidence": "medium",
+  "notes": "2024 vintage. Page lists 89% SB / 11% Semillon (single source, not recorded as mash_bill). Wine Spectator page paywalled."
+ },
+ {
+  "id": "merry-edwards-sauvignon-blanc",
+  "producer": {
+   "nose": "Honeysuckle, citrus blossom, white rose, honeydew, nectarine, tangerine, Kaffir lime, with some sweet oak and toasted hazelnut",
+   "palate": "Vibrant acidity with rich creamy texture; blood-orange-sorbet impression",
+   "finish": "Broad and lingering, pink grapefruit and Meyer lemon zest",
+   "summary": "Producer page shows the 2017 vintage",
+   "source_url": "https://merryedwards.com/shop/russian-river-valley-sauvignon-blanc/"
+  },
+  "critics": [
+   {
+    "source": "Robert Whitley (Wine Review Online, via winery page)",
+    "source_url": "https://merryedwards.com/shop/russian-river-valley-sauvignon-blanc/",
+    "score": 97,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score for 2017 vintage as shown on winery page",
+    "year": 2019
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Russian River Valley",
+   "source_url": "https://merryedwards.com/shop/russian-river-valley-sauvignon-blanc/"
+  },
+  "flavor_terms": [
+   "honeysuckle",
+   "citrus blossom",
+   "honeydew",
+   "nectarine",
+   "tangerine",
+   "pink grapefruit",
+   "meyer lemon",
+   "hazelnut"
+  ],
+  "confidence": "medium",
+  "notes": "Page is a stale 2017 vintage. Score relayed by winery, not independently opened."
+ },
+ {
+  "id": "ferrari-carano-fum-blanc",
+  "producer": {
+   "nose": "Guava, apricot, lychee, with grapefruit and flint",
+   "palate": "Pineapple, mango, peach, lemon cream; light-bodied and refreshing",
+   "finish": "Generous texture, bright and vibrant",
+   "summary": "2024 vintage, North Coast",
+   "source_url": "https://www.ferrari-carano.com/wines/fume-blanc"
+  },
+  "critics": [
+   {
+    "source": "James Suckling (via winery page)",
+    "source_url": "https://www.ferrari-carano.com/wines/fume-blanc",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score for 2024 as listed on winery page",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 13.9,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "North Coast (Sonoma County)",
+   "source_url": "https://www.ferrari-carano.com/wines/fume-blanc"
+  },
+  "flavor_terms": [
+   "guava",
+   "apricot",
+   "lychee",
+   "grapefruit",
+   "flint",
+   "pineapple",
+   "mango",
+   "peach",
+   "lemon cream"
+  ],
+  "confidence": "high",
+  "notes": "2024 vintage; critic score relayed by the winery page, no critic prose read."
+ },
+ {
+  "id": "dry-creek-vineyard-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Winery lists passionfruit, guava, Meyer lemon, lime, cucumber; styled elegant, full-bodied, aromatic",
+   "source_url": "https://www.drycreekvineyard.com/wines/sauvignon-blanc"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "passionfruit",
+   "guava",
+   "meyer lemon",
+   "lime",
+   "cucumber"
+  ],
+  "confidence": "medium",
+  "notes": "Producer flavor tags only; no nose/palate/finish prose, vintage not shown."
+ },
+ {
+  "id": "spottswoode-sauvignon-blanc",
+  "producer": {
+   "nose": "Florals with lime rind and salted lemon",
+   "palate": "Textural length, juicy white peach, pear and orange",
+   "finish": "Balanced by sweet-tasting acidity",
+   "summary": "2025 vintage",
+   "source_url": "https://www.spottswoode.com/wines/sauvignon-blanc"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 14,
+   "proof": null,
+   "age": null,
+   "mash_bill": "95% Sauvignon Blanc / 5% Semillon",
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.spottswoode.com/wines/sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "lime rind",
+   "salted lemon",
+   "white peach",
+   "pear",
+   "orange",
+   "floral"
+  ],
+  "confidence": "medium",
+  "notes": "2025 vintage page. No scores; only a quoted Bloomberg accolade (Elin McCoy, no score) was seen on the page."
+ },
+ {
+  "id": "frog-s-leap-sauvignon-blanc",
+  "producer": {
+   "nose": "Meyer lemon, grapefruit, lime zest, white stone fruit, herbs, saline mineral edge",
+   "palate": "Crisp with fine lees texture; citrus, green pear, wet stone, fennel",
+   "finish": "Savory, almost flinty",
+   "summary": "2025 vintage",
+   "source_url": "https://frogsleap.com/the-wines-of-frogs-leap/sauvignon-blanc/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "meyer lemon",
+   "grapefruit",
+   "lime zest",
+   "stone fruit",
+   "green pear",
+   "wet stone",
+   "fennel",
+   "flinty"
+  ],
+  "confidence": "medium",
+  "notes": "2025 vintage; ABV not on page."
+ },
+ {
+  "id": "grgich-hills-fum-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Grgich pages tried were 404/401 or lacked Fumé Blanc details; web search budget exhausted before critic lookups."
+ },
+ {
+  "id": "robert-mondavi-fum-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Napa Valley-tier product page not found (guessed URL 404; collection page showed only the Reserve). Search budget exhausted."
+ },
+ {
+  "id": "robert-mondavi-reserve-fum-blanc",
+  "producer": {
+   "nose": "Peach, yellow jasmine, citrus, mango, herb and lemon",
+   "palate": "Mango and other tropical fruit with a touch of barrel spice",
+   "finish": "Fresh, lively, juicy with good density and acidity; lingering",
+   "summary": "2022 To Kalon Reserve",
+   "source_url": "https://robertmondaviwinery.com/collections/our-wines/products/2022-to-kalon-reserve-fume-blanc"
+  },
+  "critics": [
+   {
+    "source": "Jeb Dunnuck (via winery page)",
+    "source_url": "https://robertmondaviwinery.com/collections/our-wines/products/2022-to-kalon-reserve-fume-blanc",
+    "score": 97,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Racier, mineral-driven, tight profile (Jan 2025)",
+    "year": 2025
+   },
+   {
+    "source": "Tom Hyland (Forbes, via winery page)",
+    "source_url": "https://robertmondaviwinery.com/collections/our-wines/products/2022-to-kalon-reserve-fume-blanc",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score only (Jan 2025)",
+    "year": 2025
+   },
+   {
+    "source": "Joe Czerwinski (Wine Advocate, via winery page)",
+    "source_url": "https://robertmondaviwinery.com/collections/our-wines/products/2022-to-kalon-reserve-fume-blanc",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Score only (Oct 2024)",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Napa Valley (To Kalon Vineyard)",
+   "source_url": "https://robertmondaviwinery.com/collections/our-wines/products/2022-to-kalon-reserve-fume-blanc"
+  },
+  "flavor_terms": [
+   "peach",
+   "jasmine",
+   "citrus",
+   "mango",
+   "tropical fruit",
+   "herbal",
+   "lemon",
+   "barrel spice",
+   "mineral"
+  ],
+  "confidence": "high",
+  "notes": "2022 vintage; critic scores relayed by the winery page."
+ },
+ {
+  "id": "cliff-lede-sauvignon-blanc",
+  "producer": {
+   "nose": "Pineapple, lime, grapefruit, passion fruit, peppermint, white currant, chalk dust, herbs and flowers",
+   "palate": "White pear, kiwi, lemon curd, orange marmalade, minerality; brioche and pastry hints",
+   "finish": "Fleur de sel and a touch of clay",
+   "summary": "2025 vintage with 18% Semillon",
+   "source_url": "https://cliffledevineyards.com/wines/2021-sauvignon-blanc/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "pineapple",
+   "lime",
+   "grapefruit",
+   "passion fruit",
+   "peppermint",
+   "white pear",
+   "kiwi",
+   "lemon curd",
+   "brioche"
+  ],
+  "confidence": "medium",
+  "notes": "2025 vintage; includes 18% Semillon; no ABV or scores on page."
+ },
+ {
+  "id": "hall-sauvignon-blanc",
+  "producer": {
+   "nose": "Citrus blossom, passion fruit, lemon zest",
+   "palate": "Bright acidity with flinty minerality, mid-palate richness, tropical notes",
+   "finish": null,
+   "summary": "2025 vintage; stainless steel, sur lie, unfiltered",
+   "source_url": "https://hallwines.com/products/2025-hall-napa-valley-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Owen Bargreen (via winery page)",
+    "source_url": "https://hallwines.com/products/2025-hall-napa-valley-sauvignon-blanc",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": "Kiwi, starfruit and sweet gooseberry with green melon and plenty of minerality",
+    "finish": null,
+    "summary": "2025 vintage",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Stainless steel",
+   "region": "Napa Valley",
+   "source_url": "https://hallwines.com/products/2025-hall-napa-valley-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "citrus blossom",
+   "passion fruit",
+   "lemon zest",
+   "mineral",
+   "kiwi",
+   "starfruit",
+   "gooseberry",
+   "green melon"
+  ],
+  "confidence": "high",
+  "notes": "2025 vintage; critic note relayed by winery page."
+ },
+ {
+  "id": "round-pond-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Winery site pages lacked product details; search budget exhausted."
+ },
+ {
+  "id": "provenance-vineyards-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Winery site lacked product details; search budget exhausted."
+ },
+ {
+  "id": "turnbull-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Winery page only listed a Josephine Sauvignon Blanc (2019) with no notes; ambiguous label."
+ },
+ {
+  "id": "chateau-montelena-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "2025 vintage leaned cool with just enough heat to add complexity (very thin winery blurb)",
+   "source_url": "https://www.montelena.com/wines/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Napa Valley",
+   "source_url": "https://www.montelena.com/wines/"
+  },
+  "flavor_terms": [],
+  "confidence": "low",
+  "notes": "Only a vague winery blurb; no sensory descriptors."
+ },
+ {
+  "id": "lail-vineyards-georgia-sauvignon-blanc",
+  "producer": {
+   "nose": "Apricot, white truffle, clementine, jasmine",
+   "palate": "White peach, lemon confit, mint, honeydew, toasted almond; mineral, bright acidity",
+   "finish": null,
+   "summary": "2024 vintage",
+   "source_url": "https://shop.lailvineyards.com/Wines"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "apricot",
+   "white truffle",
+   "clementine",
+   "jasmine",
+   "white peach",
+   "lemon confit",
+   "mint",
+   "honeydew",
+   "toasted almond"
+  ],
+  "confidence": "medium",
+  "notes": "2024 vintage; no scores or ABV on page."
+ }
+]

@@ -1,0 +1,163 @@
+[
+ {
+  "id": "kentucky-vintage",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebFetch hit a session limit before this bottle was reached; no source fetched."
+ },
+ {
+  "id": "old-bardstown-bottled-in-bond",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebFetch hit a session limit before this bottle was reached; no source fetched."
+ },
+ {
+  "id": "heaven-hill-bottled-in-bond-7-year",
+  "producer": {
+   "nose": "Warm vanilla and honey over a rich caramel sweetness.",
+   "palate": "Smooth, warm and sweet; a light rye spice, with caramel and honey rounded out by oak and char.",
+   "finish": "Long and lingering.",
+   "summary": "Tribute to Heaven Hill's original 1939 bottled-in-bond release; aged 7 years, three years beyond the bonded minimum.",
+   "source_url": "https://heavenhilldistillery.com/hh-bottled-in-bond.php"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/heaven-hill-7-year-bottled-in-bond",
+    "score": 2.5,
+    "scale": "5",
+    "nose": "Vanilla, caramel and aged oak up front, with background leather, tobacco and honey; a bit light for the proof.",
+    "palate": "Seasoned oak and spice lead, then savory tobacco and leather against graham cracker and butterscotch; light, somewhat dry mouthfeel.",
+    "finish": "Medium to long; cinnamon spice and caramel with oak, cherry and vanilla, dryness easing toward sweetness.",
+    "summary": "A decent, classic-profile bourbon, but weaker value at its roughly $40 price versus competitors (score given as 2.5 of 5 barrels).",
+    "year": 2019
+   },
+   {
+    "source": "The Whiskey Wash (Finian Sedgwick)",
+    "source_url": "https://thewhiskeywash.com/whiskey-reviews/review-heaven-hill-bottled-in-bond7-year-old-bourbon-2025/",
+    "score": 8,
+    "scale": "10",
+    "nose": "Vanilla, warm oak and caramel with dried apricot and banana, plus leather, citrus, toasted nuts and some ethanol.",
+    "palate": "Rich and balanced; caramel and honey open, then corn warmth and rye structure, with oak and char.",
+    "finish": "Medium; toasty oak, black pepper and lasting caramel.",
+    "summary": "Strong value; recommended as an easy bar staple for newcomers and seasoned drinkers alike.",
+    "year": 2025
+   }
+  ],
+  "facts": { "abv": null, "proof": 100, "age": "7 years", "mash_bill": null, "cask": null, "region": null, "source_url": "https://heavenhilldistillery.com/hh-bottled-in-bond.php" },
+  "flavor_terms": ["vanilla", "honey", "caramel", "rye spice", "oak", "char", "leather", "tobacco", "butterscotch", "black pepper"],
+  "confidence": "high",
+  "notes": "Producer page did not state mash bill; Breaking Bourbon's review lists 78% corn / 12% malted barley / 10% rye (matches input) but facts.source_url points to producer page, so mash_bill left null. Breaking Bourbon review is from 2019 (original ~$40 relaunch)."
+ },
+ {
+  "id": "evan-williams-bottled-in-bond",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebFetch hit a session limit before this bottle was reached; no source fetched."
+ },
+ {
+  "id": "evan-williams-single-barrel",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebFetch hit a session limit before this bottle was reached; no source fetched."
+ },
+ {
+  "id": "henry-mckenna-10-year-single-barrel",
+  "producer": {
+   "nose": "Vanilla, caramel and oak with a faint herbal note.",
+   "palate": "Smooth oak, sharp spice, honey and sweetness.",
+   "finish": "Long, sweet and spicy.",
+   "summary": "Extra-aged bottled-in-bond single barrel bourbon (about 40 Kentucky seasons); warm golden amber color.",
+   "source_url": "https://heavenhilldistillery.com/henry-mckenna-single-barrel.php"
+  },
+  "critics": [],
+  "facts": { "abv": null, "proof": 100, "age": "10 years", "mash_bill": null, "cask": null, "region": null, "source_url": "https://heavenhilldistillery.com/henry-mckenna-single-barrel.php" },
+  "flavor_terms": ["vanilla", "caramel", "oak", "herbal", "spice", "honey"],
+  "confidence": "medium",
+  "notes": "Producer notes only; WebFetch session limit prevented fetching critic reviews. Single barrel, so bottles vary."
+ },
+ {
+  "id": "bernheim-original-wheat-whiskey",
+  "producer": {
+   "nose": "Gently sweet, with vanilla and honey.",
+   "palate": "Toffee, berry and spice hints.",
+   "finish": "Toasted oak; warm and elegant.",
+   "summary": "Straight wheat whiskey billed as the first new American whiskey style since Prohibition; aged 7 years in open rickhouses; bright amber.",
+   "source_url": "https://heavenhilldistillery.com/bernheim-straight-wheat-whiskey.php"
+  },
+  "critics": [],
+  "facts": { "abv": null, "proof": 90, "age": "7 years", "mash_bill": null, "cask": null, "region": null, "source_url": "https://heavenhilldistillery.com/bernheim-straight-wheat-whiskey.php" },
+  "flavor_terms": ["vanilla", "honey", "toffee", "berries", "spice", "toasted oak"],
+  "confidence": "medium",
+  "notes": "Producer notes only; WebFetch session limit prevented fetching critic reviews. Producer page did not give exact mash bill percentages."
+ },
+ {
+  "id": "j-t-s-brown-bottled-in-bond",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebFetch hit a session limit before this bottle was reached; no source fetched."
+ },
+ {
+  "id": "old-fitzgerald-bottled-in-bond",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Fetch blocked by session limit. Input data looks inconsistent: a bottled-in-bond whiskey must be 100 proof, but input says 90 proof/NAS. Heaven Hill's site has an old-fitzgerald-7-year-old.php page and reviews exist for the 7-year BiB (e.g. The Whiskey Wash 2025), so the input record likely needs correcting."
+ },
+ {
+  "id": "parker-s-heritage-collection",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched (session limit). Input names the collection, not a specific edition/year, so notes could not be matched to one expression anyway."
+ },
+ {
+  "id": "rittenhouse-rye-bottled-in-bond",
+  "producer": {
+   "nose": "Dried fruit, toffee and sweet pepper.",
+   "palate": "Clean and rich: cocoa, citrus, cinnamon, nutmeg and vanilla.",
+   "finish": "Lasting spice with a maple-like quality.",
+   "summary": "Bottled-in-bond straight rye named for Philadelphia's Rittenhouse Square, with a notably corn-heavy mash for a rye; mahogany color.",
+   "source_url": "https://heavenhilldistillery.com/rittenhouse-rye.php"
+  },
+  "critics": [],
+  "facts": { "abv": null, "proof": 100, "age": "4 years", "mash_bill": null, "cask": null, "region": null, "source_url": "https://heavenhilldistillery.com/rittenhouse-rye.php" },
+  "flavor_terms": ["dried fruit", "toffee", "sweet pepper", "cocoa", "citrus", "cinnamon", "nutmeg", "vanilla", "maple", "spice"],
+  "confidence": "medium",
+  "notes": "Producer notes only; WebFetch session limit prevented fetching critic reviews. Producer page did not state exact mash bill percentages."
+ },
+ {
+  "id": "pikesville-rye-110-proof",
+  "producer": {
+   "nose": "Dusty cocoa over a layer of smoky oak.",
+   "palate": "Dry and spicy, with honeyed rye and clove.",
+   "finish": "Soft vanilla and baking spice.",
+   "summary": "Revived Maryland rye brand now made in Kentucky from extra-aged barrels in prime warehouse spots; pale copper color.",
+   "source_url": "https://heavenhilldistillery.com/pikesville-straight-rye.php"
+  },
+  "critics": [],
+  "facts": { "abv": null, "proof": 110, "age": "6 years", "mash_bill": null, "cask": null, "region": null, "source_url": "https://heavenhilldistillery.com/pikesville-straight-rye.php" },
+  "flavor_terms": ["cocoa", "smoke", "oak", "spicy", "honey", "rye", "clove", "vanilla", "baking spice"],
+  "confidence": "medium",
+  "notes": "Producer notes only; WebFetch session limit prevented fetching critic reviews. Producer page did not state mash bill."
+ }
+]

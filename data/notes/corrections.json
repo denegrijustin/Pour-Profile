@@ -1,0 +1,10 @@
+[
+ {"id":"grgich-hills-fum-blanc","set":{"critics.0.score":93,"critics.0.year":2022,"critics.0.summary":"2022 vintage (matches the producer notes); scored 93 by Wine Enthusiast as relayed on the retailer page.","notes":"2022 vintage throughout. Score relayed by a retailer page (67wine). No ABV found."},"why":"verifier: stored 91 was the 2023 score; same page shows 93 for 2022"},
+ {"id":"brander-sauvignon-blanc","set":{"producer":null,"critics.0.nose":"quince, green fig and guava skin","critics.0.palate":"piney, with tart green apple and cut grass","notes":"Assumes the Los Olivos District bottling; notes are Wine Enthusiast's review as shown by K&L (2024 vintage). No winery notes found."},"why":"verifier: 'winery notes' were actually the Wine Enthusiast review"},
+ {"id":"alphonse-mellot-edmond-sancerre","set":{"producer.finish":null},"why":"verifier: finish came from the Vinous review, not the winemaker notes"},
+ {"id":"booker-s-the-reserves","remove_critics":[0,2],"set":{"facts.proof":null,"facts.age":null,"notes":"Annual release; notes are for the 2025 tequila-finished release (about 123 proof per Breaking Bourbon). The input's 90 proof is wrong."},"why":"verifier: mixed 2024 and 2025 releases; producer page has no proof/age"},
+ {"id":"stagg","set":{"critics.0.summary":"Review of Stagg Jr. Batch 12 (2019, 132.3 proof), a different batch; reviewer rated it highly and compared it favorably with George T. Stagg."},"why":"verifier: 'best batch to date' not on page"},
+ {"id":"cliff-lede-sauvignon-blanc","set":{"producer.palate":"White pear, kiwi, lemon curd, orange marmalade and minerality, with brioche hints and a salty, clay-like edge mid-palate","producer.finish":"Lingering, delicate citrus"},"why":"verifier: stored finish was a mid-palate note"},
+ {"id":"spy-valley-sauvignon-blanc","set":{"critics.0.summary":"2023 vintage, credited to James Suckling on the retailer page: dried apple, lemon, stony and celery notes with mouth-watering acidity and a light finish."},"why":"verifier: page does credit Suckling"},
+ {"id":"rabbit-hole-cavehill","set":{"facts.proof":null,"facts.abv":null},"why":"verifier: proof not on the cited page"}
+]
