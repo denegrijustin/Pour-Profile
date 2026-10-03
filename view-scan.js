@@ -109,9 +109,10 @@ function wireCatalogSearch(dispatchNav) {
           <div class="thumb-sm">${bottleThumbHtml(r)}</div>
           <div class="info">
             <div class="name">${escapeHtml(r.name)}</div>
-            <div class="sub">${escapeHtml([r.producer, r.region, r.proof ? r.proof + " proof" : null].filter(Boolean).join(" · "))}</div>
+            <div class="sub">${escapeHtml([r.kind === "kansas" ? null : r.producer, r.region, r.proof ? r.proof + " proof" : null, r.kind === "kansas" && r.vintage ? r.vintage : null].filter(Boolean).join(" · "))}</div>
           </div>
           ${r.kind === "reference" ? `<span class="field-hint">${r.ratings.length} sourced rating${r.ratings.length === 1 ? "" : "s"}</span>` : ""}
+          ${r.kind === "kansas" ? `<span class="field-hint" title="${escapeHtml((r.distributors || []).join(", "))}">${r.store_pick ? "Store pick · " : ""}Sold in KS</span>` : ""}
           ${r.jd_fit != null ? `<div style="text-align:right"><div style="font-weight:800;color:var(--accent-deep)">${r.jd_fit}</div><div class="field-hint" style="font-size:10px">${escapeHtml(r.fit_label || "")}</div></div>` : ""}
         </div>`).join("") : `<p class="field-hint">Not in the database — that's fine. Tap “Add a bottle myself” to enter it.</p>`;
     }, 220);

@@ -1,0 +1,252 @@
+[
+ {
+  "id": "ks-jack-daniel-s-12-years-old-tennessee-whiskey",
+  "name": "Jack Daniel's 12 Years Old Tennessee Whiskey",
+  "producer": "Jack Daniel's",
+  "category": "american_whiskey",
+  "region": null,
+  "proof": 107,
+  "abv": 53.5,
+  "vintage": null
+ },
+ {
+  "id": "ks-widow-jane-lucky-thirteen-small-batch-bourbon",
+  "name": "Widow Jane Lucky Thirteen Small Batch Bourbon",
+  "producer": "Widow Jane",
+  "category": "bourbon",
+  "region": null,
+  "proof": 101,
+  "abv": 50.5,
+  "vintage": null
+ },
+ {
+  "id": "ks-tom-s-town-distilling-co-pendergast-s-royal-gold-bourbon-whiskey-finished-in-port-wine-casks",
+  "name": "Tom's Town Distilling Co Pendergast's Royal Gold Bourbon Whiskey Finished in Port Wine Casks",
+  "producer": "Tom's Town Distilling Co",
+  "category": "bourbon",
+  "region": null,
+  "proof": null,
+  "abv": null,
+  "vintage": null
+ },
+ {
+  "id": "ks-bib-tucker-aged-6-years-gold-roast-bourbon-small-batch-bourbon-whiskey",
+  "name": "BIB & Tucker Aged 6 Years Gold Roast Bourbon Small Batch Bourbon Whiskey",
+  "producer": "BIB & Tucker",
+  "category": "bourbon",
+  "region": null,
+  "proof": 92,
+  "abv": 46,
+  "vintage": null
+ },
+ {
+  "id": "ks-michter-s-barrel-strength-toasted-barrel-finish-kentucky-straight-rye-whiskey",
+  "name": "Michter's Barrel Strength Toasted Barrel Finish Kentucky Straight Rye Whiskey",
+  "producer": "Michter's",
+  "category": "rye",
+  "region": null,
+  "proof": 108,
+  "abv": 54,
+  "vintage": null
+ },
+ {
+  "id": "ks-russell-s-reserve-single-rickhouse-ksbw",
+  "name": "Russell's Reserve Single Rickhouse Kentucky Straight Bourbon",
+  "producer": "Russell's Reserve",
+  "category": "bourbon",
+  "region": null,
+  "proof": 120.2,
+  "abv": 60.1,
+  "vintage": null
+ },
+ {
+  "id": "ks-jefferson-s-grand-selection-chateau-suduirait-sauternes-cask-finish-ksbw",
+  "name": "Jefferson's Grand Selection Chateau Suduirait Sauternes Cask Finish Kentucky Straight Bourbon",
+  "producer": "Jefferson's",
+  "category": "bourbon",
+  "region": null,
+  "proof": 90,
+  "abv": 45,
+  "vintage": null
+ },
+ {
+  "id": "ks-tanqueray-10-gin-tanqueray-10-gin",
+  "name": "Tanqueray #10 Gin",
+  "producer": "Tanqueray #10 Gin",
+  "category": "gin",
+  "region": null,
+  "proof": 94.6,
+  "abv": 47.3,
+  "vintage": null
+ },
+ {
+  "id": "ks-plymouth-original-gin",
+  "name": "Plymouth Original Gin",
+  "producer": "Plymouth",
+  "category": "gin",
+  "region": null,
+  "proof": 82.4,
+  "abv": 41.2,
+  "vintage": null
+ },
+ {
+  "id": "ks-st-george-botanivore-gin",
+  "name": "St. George Botanivore Gin",
+  "producer": "St. George",
+  "category": "gin",
+  "region": null,
+  "proof": 90,
+  "abv": 45,
+  "vintage": null
+ },
+ {
+  "id": "ks-ferrand-1840-original-formula-cognac",
+  "name": "Ferrand 1840 Original Formula Cognac",
+  "producer": "Ferrand",
+  "category": "cognac",
+  "region": null,
+  "proof": 90,
+  "abv": 45,
+  "vintage": null
+ },
+ {
+  "id": "ks-hine-triomphe-cognac",
+  "name": "Hine Triomphe Cognac",
+  "producer": "Hine",
+  "category": "cognac",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-ferrand-ambre-cognac",
+  "name": "Ferrand Ambre Cognac",
+  "producer": "Ferrand",
+  "category": "cognac",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-planteray-original-dark-rum",
+  "name": "Planteray Original Dark Rum",
+  "producer": "Planteray",
+  "category": "rum",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-appleton-estate-signature-blend-rum",
+  "name": "Appleton Estate Signature Blend Rum",
+  "producer": "Appleton Estate",
+  "category": "rum",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-doorly-s-8-year-old-fine-old-barbados-rum",
+  "name": "Doorly's 8 Year Old Fine Old Barbados Rum",
+  "producer": "Doorly's",
+  "category": "rum",
+  "region": null,
+  "proof": 86,
+  "abv": 43,
+  "vintage": null
+ },
+ {
+  "id": "ks-appleton-estate-15-year-black-river-casks-jamaica-rum",
+  "name": "Appleton Estate 15 Year Black River Casks Jamaica Rum",
+  "producer": "Appleton Estate",
+  "category": "rum",
+  "region": null,
+  "proof": 86,
+  "abv": 43,
+  "vintage": null
+ },
+ {
+  "id": "ks-chateau-la-freynelle-sauvignon-blanc-semillon-muscadelle-blanc",
+  "name": "Chateau la Freynelle Sauvignon Blanc/ Semillon/ Muscadelle Blanc",
+  "producer": "Chateau la Freynelle",
+  "category": "sauvignon_blanc",
+  "region": "Bordeaux",
+  "proof": null,
+  "abv": 13.5,
+  "vintage": "2025"
+ },
+ {
+  "id": "ks-volcan-x-a-tequila",
+  "name": "Volcan X.A Tequila",
+  "producer": "Volcan",
+  "category": "tequila",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-arette-artesanal-suave-reposado-tequila",
+  "name": "Arette Artesanal Suave Reposado Tequila",
+  "producer": "Arette",
+  "category": "tequila",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-g4-reposado-premium-tequila",
+  "name": "G4 Reposado Premium Tequila",
+  "producer": "G4",
+  "category": "tequila",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-siete-leguas-reposado-tequila-7",
+  "name": "Siete Leguas Reposado Tequila 7",
+  "producer": "Siete Leguas",
+  "category": "tequila",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-tapatio-reposado-tequila",
+  "name": "Tapatio Reposado Tequila",
+  "producer": "Tapatio",
+  "category": "tequila",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-del-maguey-san-luis-del-rio-single-village-mezcal",
+  "name": "Del Maguey San Luis del Rio Single Village Mezcal",
+  "producer": "Del Maguey",
+  "category": "mezcal",
+  "region": null,
+  "proof": 94,
+  "abv": 47,
+  "vintage": null
+ },
+ {
+  "id": "ks-del-maguey-minero-single-village-mezcal",
+  "name": "Del Maguey Minero Single Village Mezcal",
+  "producer": "Del Maguey",
+  "category": "mezcal",
+  "region": null,
+  "proof": 100,
+  "abv": 50,
+  "vintage": null
+ }
+]

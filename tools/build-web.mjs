@@ -24,8 +24,9 @@ const hash = (buf) => crypto.createHash("sha256").update(buf).digest("hex").slic
 
 // Only the build's own output is removed; catalog.json is rebuilt by build-catalog.mjs.
 fs.rmSync(assets, { recursive: true, force: true });
+// dist/notes/ belongs to build-catalog.mjs and is left alone.
 for (const f of fs.readdirSync(dist, { withFileTypes: true })) {
-  if (f.isFile() && f.name !== "catalog.json") fs.rmSync(path.join(dist, f.name));
+  if (f.isFile() && !["catalog.json", "kansas.tsv"].includes(f.name)) fs.rmSync(path.join(dist, f.name));
 }
 fs.mkdirSync(assets, { recursive: true });
 
@@ -69,7 +70,9 @@ fs.writeFileSync(path.join(dist, "_headers"), [
   "/assets/*", "  Cache-Control: public, max-age=31536000, immutable", "",
   "/sw.js", "  Cache-Control: no-cache", "",
   "/index.html", "  Cache-Control: no-cache", "",
-  "/catalog.json", "  Cache-Control: public, max-age=300, must-revalidate", ""
+  "/catalog.json", "  Cache-Control: public, max-age=300, must-revalidate", "",
+  "/kansas.tsv", "  Cache-Control: public, max-age=3600, must-revalidate", "  Content-Type: text/plain; charset=utf-8", "",
+  "/notes/*", "  Cache-Control: public, max-age=300, must-revalidate", ""
 ].join("\n"));
 
 const size = (f) => fs.statSync(path.join(dist, f)).size;

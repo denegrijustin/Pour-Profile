@@ -45,7 +45,7 @@ function pickCardHtml(r) {
         ${r.concern ? `<p class="pick-concern">⚠ ${escapeHtml(r.concern)}</p>` : ""}
         <div class="pick-meta">
           ${r.price != null ? `<span>~$${Math.round(r.price)}</span>` : ""}
-          ${r.availability ? `<span>${escapeHtml(r.availability)}</span>` : ""}
+          ${r.kansas ? `<span title="${escapeHtml("Kansas distributor: " + (r.kansas.distributors || []).join(", "))}">Sold in KS</span>` : r.availability ? `<span>${escapeHtml(r.availability)}</span>` : ""}
           ${r.serving ? `<span>${escapeHtml(r.serving)}</span>` : ""}
         </div>
         <div class="pick-actions">
@@ -182,6 +182,7 @@ async function openCatalogDetail(id, dispatchNav) {
       ${why.map((w) => `<div>✓ ${escapeHtml(w.replace(/\.$/, ""))}</div>`).join("")}
       ${concerns.map((c) => `<div>⚠ ${escapeHtml(c.replace(/\.$/, ""))}</div>`).join("")}
     </div>` : ""}
+    ${r.kansas ? `<p class="field-hint">Registered for sale in Kansas · orderable through ${escapeHtml((r.kansas.distributors || []).join(", ") || "a Kansas distributor")}. Ask your store if it's not on the shelf.</p>` : ""}
     ${data.expert ? expertNotesHtml(data.expert) : `<p class="field-hint" style="margin-top:14px">No cited tasting notes found for this bottle yet.</p>`}
     <div class="pick-actions" style="margin-top:14px">
       ${r.adopted_bottle_id

@@ -1,0 +1,2102 @@
+[
+ {
+  "id": "ks-maker-s-mark-cellar-aged-ksbw",
+  "name": "Maker's Mark Cellar Aged Kentucky Straight Bourbon",
+  "brand": "Maker's Mark",
+  "category": "bourbon",
+  "proof": 115.7,
+  "abv": 57.85,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-old-grand-dad-114-ksbw",
+  "name": "Old Grand Dad 114° Kentucky Straight Bourbon",
+  "brand": "Old Grand Dad",
+  "category": "bourbon",
+  "proof": 114,
+  "abv": 57,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-evan-williams-1783-small-batch-ksbw",
+  "name": "Evan Williams 1783 Small Batch Kentucky Straight Bourbon",
+  "brand": "Evan Williams",
+  "category": "bourbon",
+  "proof": 86,
+  "abv": 43,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-heaven-hill-grain-to-glass-ksbw",
+  "name": "Heaven Hill Grain To Glass Kentucky Straight Bourbon",
+  "brand": "Heaven Hill",
+  "category": "bourbon",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-jefferson-s-ocean-aged-at-sea-ksbw",
+  "name": "Jefferson's Ocean Aged At Sea Kentucky Straight Bourbon",
+  "brand": "Jefferson's",
+  "category": "bourbon",
+  "proof": 90,
+  "abv": 45,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 3
+ },
+ {
+  "id": "ks-jefferson-s-reserve-ksbw",
+  "name": "Jefferson's Reserve Kentucky Straight Bourbon",
+  "brand": "Jefferson's",
+  "category": "bourbon",
+  "proof": 90,
+  "abv": 45,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 3
+ },
+ {
+  "id": "ks-smoke-wagon-small-batch-straight-bourbon-whiskey",
+  "name": "Smoke Wagon Small Batch Straight Bourbon Whiskey",
+  "brand": "Smoke Wagon",
+  "category": "bourbon",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-smoke-wagon-uncut-unfiltered-straight-bourbon-whiskey",
+  "name": "Smoke Wagon Uncut Unfiltered Straight Bourbon Whiskey",
+  "brand": "Smoke Wagon",
+  "category": "bourbon",
+  "proof": 116.4,
+  "abv": 58.2,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-barrell-bourbon-cask-strength-a-blend-of-straight-bourbon-whiskeys-batch-037",
+  "name": "Barrell Bourbon Cask Strength a Blend of Straight Bourbon Whiskeys Batch 037",
+  "brand": "Barrell",
+  "category": "bourbon",
+  "proof": 111.4,
+  "abv": 55.69,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "LDF Sales & Distributing"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-wild-turkey-longbranch-ksbw",
+  "name": "Wild Turkey Longbranch Kentucky Straight Bourbon",
+  "brand": "Wild Turkey",
+  "category": "bourbon",
+  "proof": 86,
+  "abv": 43,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-wild-turkey-aged-8-years-ksbw",
+  "name": "Wild Turkey Aged 8 Years Kentucky Straight Bourbon",
+  "brand": "Wild Turkey",
+  "category": "bourbon",
+  "proof": 101,
+  "abv": 50.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-yellowstone-select-ksbw",
+  "name": "Yellowstone Select Kentucky Straight Bourbon",
+  "brand": "Yellowstone",
+  "category": "bourbon",
+  "proof": 93,
+  "abv": 46.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-hardin-s-creek-ksbw-low-distillation",
+  "name": "Hardin's Creek Kentucky Straight Bourbon Low Distillation",
+  "brand": "Hardin's Creek",
+  "category": "bourbon",
+  "proof": 109,
+  "abv": 54.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-blood-oath-pact-11-ksbw",
+  "name": "Blood Oath Pact 11 Kentucky Straight Bourbon",
+  "brand": "Blood Oath",
+  "category": "bourbon",
+  "proof": 98.6,
+  "abv": 49.3,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-starlight-distillery-carl-t-bourbon-whiskey-small-batch",
+  "name": "Starlight Distillery Carl T. Bourbon Whiskey Small Batch",
+  "brand": "Starlight Distillery",
+  "category": "bourbon",
+  "proof": 92,
+  "abv": 46,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 4
+ },
+ {
+  "id": "ks-uncle-nearest-1856-aged-whiskey",
+  "name": "Uncle Nearest 1856 Aged Whiskey",
+  "brand": "Uncle Nearest",
+  "category": "american_whiskey",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-jack-daniel-s-single-barrel-barrel-proof-whiskey",
+  "name": "Jack Daniel's Single Barrel Barrel Proof Whiskey",
+  "brand": "Jack Daniel's",
+  "category": "american_whiskey",
+  "proof": 129,
+  "abv": 64.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-jack-daniel-s-bonded-tennessee-whiskey",
+  "name": "Jack Daniel's Bonded Tennessee Whiskey",
+  "brand": "Jack Daniel's",
+  "category": "american_whiskey",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-george-dickel-tennessee-sour-mash-whisky-classic-8-recipe",
+  "name": "George Dickel Tennessee Sour Mash Whisky Classic #8 Recipe",
+  "brand": "George Dickel",
+  "category": "american_whiskey",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-george-dickel-13-year-tennessee-whisky-bottled-in-bond-fall-2008",
+  "name": "George Dickel 13 Year Tennessee Whisky Bottled in Bond Fall 2008",
+  "brand": "George Dickel",
+  "category": "american_whiskey",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-woodinville-straight-bourbon-whiskey",
+  "name": "Woodinville Straight Bourbon Whiskey",
+  "brand": "Woodinville",
+  "category": "bourbon",
+  "proof": 90,
+  "abv": 45,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 6
+ },
+ {
+  "id": "ks-woodinville-bourbon-whiskey-port-cask-finish",
+  "name": "Woodinville Bourbon Whiskey Port Cask Finish",
+  "brand": "Woodinville",
+  "category": "bourbon",
+  "proof": 90,
+  "abv": 45,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-garrison-brothers-small-batch-texas-straight-bourbon-whiskey",
+  "name": "Garrison Brothers Small Batch Texas Straight Bourbon Whiskey",
+  "brand": "Garrison Brothers",
+  "category": "bourbon",
+  "proof": 94,
+  "abv": 47,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-balcones-texas-pot-still-bourbon-straight-bourbon-whisky",
+  "name": "Balcones Texas Pot Still Bourbon Straight Bourbon Whisky",
+  "brand": "Balcones",
+  "category": "bourbon",
+  "proof": 92,
+  "abv": 46,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-still-austin-red-corn-bourbon-whiskey",
+  "name": "Still Austin Red Corn Bourbon Whiskey",
+  "brand": "Still Austin",
+  "category": "bourbon",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Trident Beverage"
+  ],
+  "alternatives": 8
+ },
+ {
+  "id": "ks-bib-tucker-6-yr-small-batch-bourbon-whiskey",
+  "name": "BIB & Tucker 6 Yr Small Batch Bourbon Whiskey",
+  "brand": "BIB & Tucker",
+  "category": "bourbon",
+  "proof": 92,
+  "abv": 46,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 3
+ },
+ {
+  "id": "ks-smooth-ambler-old-scout-straight-bourbon-whiskey",
+  "name": "Smooth Ambler Old Scout Straight Bourbon Whiskey",
+  "brand": "Smooth Ambler",
+  "category": "bourbon",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-redemption-wheated-bourbon-whiskey",
+  "name": "Redemption Wheated Bourbon Whiskey",
+  "brand": "Redemption",
+  "category": "bourbon",
+  "proof": 96,
+  "abv": 48,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 10
+ },
+ {
+  "id": "ks-tom-s-town-distilling-co-double-oaked-bourbon-whiskey",
+  "name": "Tom's Town Distilling Co Double Oaked Bourbon Whiskey",
+  "brand": "Tom's Town Distilling Co",
+  "category": "bourbon",
+  "proof": 90,
+  "abv": 45,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Handcrafted Wines of Kansas"
+  ],
+  "alternatives": 6
+ },
+ {
+  "id": "ks-holladay-soft-red-wheat-bottled-in-bond-missouri-straight-bourbon-whiskey-2",
+  "name": "Holladay Soft Red Wheat Bottled-In-Bond Missouri Straight Bourbon Whiskey",
+  "brand": "Holladay",
+  "category": "bourbon",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-boot-hill-distillery-bourbon-whiskey",
+  "name": "Boot Hill Distillery Bourbon Whiskey",
+  "brand": "Boot Hill Distillery",
+  "category": "bourbon",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 17
+ },
+ {
+  "id": "ks-woodford-reserve-barrel-finish-select-double-oaked-ksbw",
+  "name": "Woodford Reserve Barrel Finish Select Double Oaked Kentucky Straight Bourbon",
+  "brand": "Woodford Reserve",
+  "category": "bourbon",
+  "proof": 90.4,
+  "abv": 45.2,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 4
+ },
+ {
+  "id": "ks-woodford-reserve-wheat-ksbw",
+  "name": "Woodford Reserve Wheat Kentucky Straight Bourbon",
+  "brand": "Woodford Reserve",
+  "category": "bourbon",
+  "proof": 90.4,
+  "abv": 45.2,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-angels-envy-cask-strength-ksbw-finished-in-port-wine-barrels",
+  "name": "Angels Envy Cask Strength Kentucky Straight Bourbon Finished in Port Wine Barrels",
+  "brand": "Angels Envy",
+  "category": "bourbon",
+  "proof": 117.8,
+  "abv": 58.9,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-larceny-barrel-proof-wheated-bourbon-mashbill-ksbw",
+  "name": "Larceny Barrel Proof Wheated Bourbon Mashbill Kentucky Straight Bourbon",
+  "brand": "Larceny",
+  "category": "bourbon",
+  "proof": 125.6,
+  "abv": 62.8,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-benchmark-bonded-ksbw-single-season",
+  "name": "Benchmark Bonded Kentucky Straight Bourbon Single Season",
+  "brand": "Benchmark",
+  "category": "bourbon",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 4
+ },
+ {
+  "id": "ks-ezra-brooks-99-proof-ksbw",
+  "name": "Ezra Brooks 99 Proof Kentucky Straight Bourbon",
+  "brand": "Ezra Brooks",
+  "category": "bourbon",
+  "proof": 99,
+  "abv": 49.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-rebel-6-year-100-proof-ksbw",
+  "name": "Rebel 6 Year 100 Proof Kentucky Straight Bourbon",
+  "brand": "Rebel",
+  "category": "bourbon",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-sagamore-spirit-double-oak-straight-rye-whiskey",
+  "name": "Sagamore Spirit Double Oak Straight Rye Whiskey",
+  "brand": "Sagamore Spirit",
+  "category": "rye",
+  "proof": 96.6,
+  "abv": 48.3,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-old-overholt-4-year-straight-rye-whiskey",
+  "name": "Old Overholt 4 Year Straight Rye Whiskey",
+  "brand": "Old Overholt",
+  "category": "rye",
+  "proof": 86,
+  "abv": 43,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 5
+ },
+ {
+  "id": "ks-michter-s-barrel-strength-straight-rye-whiskey-limited-release",
+  "name": "Michter's Barrel Strength Straight Rye Whiskey Limited Release",
+  "brand": "Michter's",
+  "category": "rye",
+  "proof": 108,
+  "abv": 54,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-elijah-craig-straight-rye-whiskey",
+  "name": "Elijah Craig Straight Rye Whiskey",
+  "brand": "Elijah Craig",
+  "category": "rye",
+  "proof": 94,
+  "abv": 47,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-knob-creek-aged-7-years-small-batch-kentucky-straight-rye-whiskey",
+  "name": "Knob Creek Aged 7 Years Small Batch Kentucky Straight Rye Whiskey",
+  "brand": "Knob Creek",
+  "category": "rye",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-russell-s-reserve-6-years-old-kentucky-straight-rye-whiskey",
+  "name": "Russell's Reserve 6 Years Old Kentucky Straight Rye Whiskey",
+  "brand": "Russell's Reserve",
+  "category": "rye",
+  "proof": 90,
+  "abv": 45,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-wild-turkey-kentucky-straight-rye-whiskey-101-proof",
+  "name": "Wild Turkey Kentucky Straight Rye Whiskey 101 Proof",
+  "brand": "Wild Turkey",
+  "category": "rye",
+  "proof": 101,
+  "abv": 50.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-whistlepig-aged-10-years-single-barrel-rye-whiskey",
+  "name": "Whistlepig Aged 10 Years Single Barrel Rye Whiskey",
+  "brand": "Whistlepig",
+  "category": "rye",
+  "proof": 107.4,
+  "abv": 53.7,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 3
+ },
+ {
+  "id": "ks-whistlepig-aged-10-years-piggybank-rye-limited-edition-straight-rye-whiskey",
+  "name": "Whistlepig Aged 10 Years Piggybank Rye Limited Edition Straight Rye Whiskey",
+  "brand": "Whistlepig",
+  "category": "rye",
+  "proof": 110,
+  "abv": 55,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-old-forester-kentucky-straight-rye-whiskey",
+  "name": "Old Forester Kentucky Straight Rye Whiskey",
+  "brand": "Old Forester",
+  "category": "rye",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-pikesville-straight-rye-whiskey",
+  "name": "Pikesville Straight Rye Whiskey",
+  "brand": "Pikesville",
+  "category": "rye",
+  "proof": 110,
+  "abv": 55,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-woodford-reserve-distiller-s-select-kentucky-straight-rye-whiskey",
+  "name": "Woodford Reserve Distiller's Select Kentucky Straight Rye Whiskey",
+  "brand": "Woodford Reserve",
+  "category": "rye",
+  "proof": 90.4,
+  "abv": 45.2,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-fortaleza-blanco-tequila",
+  "name": "Fortaleza Blanco Tequila",
+  "brand": "Fortaleza",
+  "category": "tequila",
+  "proof": 92,
+  "abv": 46,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-fortaleza-reposado-tequila",
+  "name": "Fortaleza Reposado Tequila",
+  "brand": "Fortaleza",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-g4-blanco-premium-tequila",
+  "name": "G4 Blanco Premium Tequila",
+  "brand": "G4",
+  "category": "tequila",
+  "proof": 108,
+  "abv": 54,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-siete-leguas-blanco-tequila-7",
+  "name": "Siete Leguas Blanco Tequila 7",
+  "brand": "Siete Leguas",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-tapatio-blanco-tequila",
+  "name": "Tapatio Blanco Tequila",
+  "brand": "Tapatio",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-el-tesoro-blanco-tequila",
+  "name": "El Tesoro Blanco Tequila",
+  "brand": "El Tesoro",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-el-tesoro-reposado-tequila",
+  "name": "El Tesoro Reposado Tequila",
+  "brand": "El Tesoro",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-tequila-ocho-plata-tequila-corralillos",
+  "name": "Tequila Ocho Plata Tequila Corralillos",
+  "brand": "Tequila Ocho",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-cascahuin-anejo-tequila",
+  "name": "Cascahuin Anejo Tequila",
+  "brand": "Cascahuin",
+  "category": "tequila",
+  "proof": 88,
+  "abv": 44,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 5
+ },
+ {
+  "id": "ks-arette-artesanal-suave-blanco-tequila",
+  "name": "Arette Artesanal Suave Blanco Tequila",
+  "brand": "Arette",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 3
+ },
+ {
+  "id": "ks-don-julio-blanco-tequila",
+  "name": "Don Julio Blanco Tequila",
+  "brand": "Don Julio",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-don-julio-1942-anejo-tequila",
+  "name": "Don Julio 1942 Anejo Tequila",
+  "brand": "Don Julio",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 6
+ },
+ {
+  "id": "ks-patron-silver-tequila",
+  "name": "Patron Silver Tequila",
+  "brand": "Patron",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-casamigos-reposado-tequila",
+  "name": "Casamigos Reposado Tequila",
+  "brand": "Casamigos",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-clase-azul-reposado-tequila",
+  "name": "Clase Azul Reposado Tequila",
+  "brand": "Clase Azul",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-herradura-reposado-tequila",
+  "name": "Herradura Reposado Tequila",
+  "brand": "Herradura",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-espolon-blanco-tequila",
+  "name": "Espolon Blanco Tequila",
+  "brand": "Espolon",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-cimarron-blanco-tequila",
+  "name": "Cimarron Blanco Tequila",
+  "brand": "Cimarron",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-lalo-blanco-tequila",
+  "name": "Lalo Blanco Tequila",
+  "brand": "Lalo",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-teremana-reposado-tequila",
+  "name": "Teremana Reposado Tequila",
+  "brand": "Teremana",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 3
+ },
+ {
+  "id": "ks-codigo-1530-rosa-blanco-tequila",
+  "name": "Codigo 1530 Rosa Blanco Tequila",
+  "brand": "Codigo 1530",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-fuenteseca-cosecha-blanco-tequila",
+  "name": "Fuenteseca Cosecha Blanco Tequila",
+  "brand": "Fuenteseca",
+  "category": "tequila",
+  "proof": 91.4,
+  "abv": 45.7,
+  "vintage": "2020",
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 8
+ },
+ {
+  "id": "ks-cazcanes-anejo-tequila-no-7",
+  "name": "Cazcanes Anejo Tequila No. 7",
+  "brand": "Cazcanes",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "BJs Beverage Distribution"
+  ],
+  "alternatives": 5
+ },
+ {
+  "id": "ks-siembra-valles-blanco-tequila",
+  "name": "Siembra Valles Blanco Tequila",
+  "brand": "Siembra Valles",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 4
+ },
+ {
+  "id": "ks-del-maguey-vida-de-muertos-single-village-mezcal",
+  "name": "Del Maguey Vida de Muertos Single Village Mezcal",
+  "brand": "Del Maguey",
+  "category": "mezcal",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-del-maguey-chichicapa-single-village-mezcal",
+  "name": "Del Maguey Chichicapa Single Village Mezcal",
+  "brand": "Del Maguey",
+  "category": "mezcal",
+  "proof": 92,
+  "abv": 46,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-banhez-cushie-mezcal",
+  "name": "Banhez Cushie Mezcal",
+  "brand": "Banhez",
+  "category": "mezcal",
+  "proof": 94,
+  "abv": 47,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 5
+ },
+ {
+  "id": "ks-ilegal-joven-mezcal",
+  "name": "Ilegal Joven Mezcal",
+  "brand": "Ilegal",
+  "category": "mezcal",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-400-conejos-joven-mezcal",
+  "name": "400 Conejos Joven Mezcal",
+  "brand": "400 Conejos",
+  "category": "mezcal",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 8
+ },
+ {
+  "id": "ks-montelobos-tobala-mezcal",
+  "name": "Montelobos Tobala Mezcal",
+  "brand": "Montelobos",
+  "category": "mezcal",
+  "proof": 93.6,
+  "abv": 46.8,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-mezcal-rey-campero-joven-espadin-vicente-agave-angustfolia",
+  "name": "Mezcal Rey Campero Joven Espadin Vicente Agave Angustfolia",
+  "brand": "Mezcal Rey Campero",
+  "category": "mezcal",
+  "proof": 97,
+  "abv": 48.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-vago-el-manantial-by-hijos-de-barriga-mezcal",
+  "name": "Vago El Manantial By Hijos de Barriga Mezcal",
+  "brand": "Vago",
+  "category": "mezcal",
+  "proof": 84,
+  "abv": 42,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-planteray-xaymaca-special-dry-pot-still-rum",
+  "name": "Planteray Xaymaca Special Dry Pot Still Rum",
+  "brand": "Planteray",
+  "category": "rum",
+  "proof": 86,
+  "abv": 43,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "LDF Sales & Distributing"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-planteray-o-f-t-d-overproof-rum",
+  "name": "Planteray O.F.T.D. Overproof Rum",
+  "brand": "Planteray",
+  "category": "rum",
+  "proof": 138,
+  "abv": 69,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "LDF Sales & Distributing"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-planteray-3-stars-rum",
+  "name": "Planteray 3 Stars Rum",
+  "brand": "Planteray",
+  "category": "rum",
+  "proof": 82.4,
+  "abv": 41.2,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "LDF Sales & Distributing"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-diplomatico-reserva-exclusiva-rum",
+  "name": "Diplomatico Reserva Exclusiva Rum",
+  "brand": "Diplomatico",
+  "category": "rum",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-el-dorado-aged-12-years-finest-demerara-rum",
+  "name": "El Dorado Aged 12 Years Finest Demerara Rum",
+  "brand": "El Dorado",
+  "category": "rum",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Handcrafted Wines of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-el-dorado-aged-15-years-finest-demerara-rum",
+  "name": "El Dorado Aged 15 Years Finest Demerara Rum",
+  "brand": "El Dorado",
+  "category": "rum",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Handcrafted Wines of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-mount-gay-xo-cask-strength-limited-edition-barbados-rum",
+  "name": "Mount Gay XO Cask Strength Limited Edition Barbados Rum",
+  "brand": "Mount Gay",
+  "category": "rum",
+  "proof": 126,
+  "abv": 63,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-mount-gay-black-barrel-double-cask-blend-barbados-rum",
+  "name": "Mount Gay Black Barrel Double Cask Blend Barbados Rum",
+  "brand": "Mount Gay",
+  "category": "rum",
+  "proof": 86,
+  "abv": 43,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-appleton-estate-aged-12-years-rare-blend-rum",
+  "name": "Appleton Estate Aged 12 Years Rare Blend Rum",
+  "brand": "Appleton Estate",
+  "category": "rum",
+  "proof": 86,
+  "abv": 43,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-hampden-estate-aged-8-years-rum",
+  "name": "Hampden Estate Aged 8 Years Rum",
+  "brand": "Hampden Estate",
+  "category": "rum",
+  "proof": 92,
+  "abv": 46,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-worthy-park-109-jamaica-rum",
+  "name": "Worthy Park 109 Jamaica Rum",
+  "brand": "Worthy Park",
+  "category": "rum",
+  "proof": 109,
+  "abv": 54.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-foursquare-epliogue-single-blended-rum",
+  "name": "Foursquare Epliogue Single Blended Rum",
+  "brand": "Foursquare",
+  "category": "rum",
+  "proof": 114,
+  "abv": 57,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 4
+ },
+ {
+  "id": "ks-ron-zacapa-centerario-23-year-old-rum-ron-zacapa-centerario-23-year-old-rum",
+  "name": "Ron Zacapa Centerario 23 Year Old Rum",
+  "brand": "Ron Zacapa Centerario 23 Year Old Rum",
+  "category": "rum",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-flor-de-cana-aged-12-years-rum",
+  "name": "Flor de Cana Aged 12 Years Rum",
+  "brand": "Flor de Cana",
+  "category": "rum",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-doorly-s-xo-rum-fine-old-barbados-rum",
+  "name": "Doorly's XO Rum Fine Old Barbados Rum",
+  "brand": "Doorly's",
+  "category": "rum",
+  "proof": 86,
+  "abv": 43,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Trident Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-rhum-j-m-v-o-rum",
+  "name": "Rhum J.M V.O Rum",
+  "brand": "Rhum J.M",
+  "category": "rum",
+  "proof": 86,
+  "abv": 43,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 12
+ },
+ {
+  "id": "ks-hendrick-s-gin",
+  "name": "Hendrick's Gin",
+  "brand": "Hendrick's",
+  "category": "gin",
+  "proof": 88,
+  "abv": 44,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 10
+ },
+ {
+  "id": "ks-the-botanist-islay-cask-aged-gin",
+  "name": "The Botanist Islay Cask Aged Gin",
+  "brand": "The Botanist",
+  "category": "gin",
+  "proof": 92,
+  "abv": 46,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 3
+ },
+ {
+  "id": "ks-monkey-47-schwarzwalk-dry-gin",
+  "name": "Monkey 47 Schwarzwalk Dry Gin",
+  "brand": "Monkey 47",
+  "category": "gin",
+  "proof": 94,
+  "abv": 47,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-st-george-terroir-gin",
+  "name": "St. George Terroir Gin",
+  "brand": "St. George",
+  "category": "gin",
+  "proof": 90,
+  "abv": 45,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-aviation-american-gin",
+  "name": "Aviation American Gin",
+  "brand": "Aviation",
+  "category": "gin",
+  "proof": 84,
+  "abv": 42,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 3
+ },
+ {
+  "id": "ks-hennessy-privilege-vsop-cognac",
+  "name": "Hennessy Privilege VSOP Cognac",
+  "brand": "Hennessy",
+  "category": "cognac",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 5
+ },
+ {
+  "id": "ks-remy-martin-vsop-cognac",
+  "name": "Remy Martin VSOP Cognac",
+  "brand": "Remy Martin",
+  "category": "cognac",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 2
+ },
+ {
+  "id": "ks-martell-blue-swift-vsop-cognac",
+  "name": "Martell Blue Swift VSOP Cognac",
+  "brand": "Martell",
+  "category": "cognac",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-chateau-de-laubade-xo-armagnac",
+  "name": "Chateau de Laubade XO Armagnac",
+  "brand": "Chateau de Laubade",
+  "category": "armagnac",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Trident Beverage"
+  ],
+  "alternatives": 11
+ },
+ {
+  "id": "ks-germain-robin-craft-method-brandy",
+  "name": "Germain Robin Craft Method Brandy",
+  "brand": "Germain Robin",
+  "category": "brandy",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 3
+ },
+ {
+  "id": "ks-stoneleigh-sauvignon-blanc",
+  "name": "Stoneleigh Sauvignon Blanc",
+  "brand": "Stoneleigh",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 13,
+  "vintage": "2026",
+  "appellation": "Marlborough",
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-nobilo-sauvignon-blanc",
+  "name": "Nobilo Sauvignon Blanc",
+  "brand": "Nobilo",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 13,
+  "vintage": "2025",
+  "appellation": "Marlborough New Zealand",
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 3
+ },
+ {
+  "id": "ks-infamous-goose-sauvignon-blanc",
+  "name": "Infamous Goose Sauvignon Blanc",
+  "brand": "Infamous Goose",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 13,
+  "vintage": "2025",
+  "appellation": "New Zealand",
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-sea-pearl-sauvignon-blanc",
+  "name": "Sea Pearl Sauvignon Blanc",
+  "brand": "Sea Pearl",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 13,
+  "vintage": "2025",
+  "appellation": "Marlborough",
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-ant-moore-sauvignon-blanc-estate-series",
+  "name": "Ant Moore Sauvignon Blanc Estate Series",
+  "brand": "Ant Moore",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 12,
+  "vintage": "2025",
+  "appellation": "Marlborough",
+  "distributors": [
+   "Ad Astra Selections"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-girard-sauvignon-blanc",
+  "name": "Girard Sauvignon Blanc",
+  "brand": "Girard",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 13.5,
+  "vintage": "2023",
+  "appellation": "Sonoma County",
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-sunny-with-a-chance-of-flowers-sauvignon-blanc",
+  "name": "Sunny with a Chance of Flowers Sauvignon Blanc",
+  "brand": "Sunny with a Chance of Flowers",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 9,
+  "vintage": "2024",
+  "appellation": "California",
+  "distributors": [
+   "Worldwide Beverage Group"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-raeburn-sauvignon-blanc",
+  "name": "Raeburn Sauvignon Blanc",
+  "brand": "Raeburn",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 13.5,
+  "vintage": "2025",
+  "appellation": "North Coast",
+  "distributors": [
+   "Worldwide Beverage Group"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-la-crema-sauvignon-blanc",
+  "name": "La Crema Sauvignon Blanc",
+  "brand": "La Crema",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 13.5,
+  "vintage": "2024",
+  "appellation": "Ca - Sonoma",
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-domaine-fouassier-sauvignon-blanc-les-grous",
+  "name": "Domaine Fouassier Sauvignon Blanc Les Grous",
+  "brand": "Domaine Fouassier",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 13,
+  "vintage": "2023",
+  "appellation": "Sancerre",
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-joseph-mellot-sauvignon-blanc",
+  "name": "Joseph Mellot Sauvignon Blanc",
+  "brand": "Joseph Mellot",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 12,
+  "vintage": "2021",
+  "appellation": "Vin de France",
+  "distributors": [
+   "Handcrafted Wines of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-weingut-tement-sauvignon-blanc-kalk-kreide",
+  "name": "Weingut Tement Sauvignon Blanc Kalk & Kreide",
+  "brand": "Weingut Tement",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 12.5,
+  "vintage": "2020",
+  "appellation": "Sudsteiermark",
+  "distributors": [
+   "Veritas Selections"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-maker-s-mark-no-46-french-oaked-cask-strength-ksbw",
+  "name": "Maker's Mark No. 46 French Oaked Cask Strength Kentucky Straight Bourbon",
+  "brand": "Maker's Mark",
+  "category": "bourbon",
+  "proof": 110.6,
+  "abv": 55.3,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-old-grand-dad-old-grand-dad-ksbw",
+  "name": "Old Grand Dad Kentucky Straight Bourbon",
+  "brand": "Old Grand Dad",
+  "category": "bourbon",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-jefferson-s-8-yo-ksbw",
+  "name": "Jefferson's 8 Yo Kentucky Straight Bourbon",
+  "brand": "Jefferson's",
+  "category": "bourbon",
+  "proof": 96,
+  "abv": 48,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-hardin-s-creek-ksbw-middle-distillation",
+  "name": "Hardin's Creek Kentucky Straight Bourbon Middle Distillation",
+  "brand": "Hardin's Creek",
+  "category": "bourbon",
+  "proof": 109,
+  "abv": 54.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-jack-daniel-s-10-years-old-tennessee-whiskey",
+  "name": "Jack Daniel's 10 Years Old Tennessee Whiskey",
+  "brand": "Jack Daniel's",
+  "category": "american_whiskey",
+  "proof": 97,
+  "abv": 48.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-jack-daniel-s-12-years-old-tennessee-whiskey",
+  "name": "Jack Daniel's 12 Years Old Tennessee Whiskey",
+  "brand": "Jack Daniel's",
+  "category": "american_whiskey",
+  "proof": 107,
+  "abv": 53.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-widow-jane-lucky-thirteen-small-batch-bourbon",
+  "name": "Widow Jane Lucky Thirteen Small Batch Bourbon",
+  "brand": "Widow Jane",
+  "category": "bourbon",
+  "proof": 101,
+  "abv": 50.5,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-tom-s-town-distilling-co-pendergast-s-royal-gold-bourbon-whiskey-finished-in-port-wine-casks",
+  "name": "Tom's Town Distilling Co Pendergast's Royal Gold Bourbon Whiskey Finished in Port Wine Casks",
+  "brand": "Tom's Town Distilling Co",
+  "category": "bourbon",
+  "proof": null,
+  "abv": null,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Handcrafted Wines of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-bib-tucker-aged-6-years-gold-roast-bourbon-small-batch-bourbon-whiskey",
+  "name": "BIB & Tucker Aged 6 Years Gold Roast Bourbon Small Batch Bourbon Whiskey",
+  "brand": "BIB & Tucker",
+  "category": "bourbon",
+  "proof": 92,
+  "abv": 46,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-michter-s-barrel-strength-toasted-barrel-finish-kentucky-straight-rye-whiskey",
+  "name": "Michter's Barrel Strength Toasted Barrel Finish Kentucky Straight Rye Whiskey",
+  "brand": "Michter's",
+  "category": "rye",
+  "proof": 108,
+  "abv": 54,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-russell-s-reserve-single-rickhouse-ksbw",
+  "name": "Russell's Reserve Single Rickhouse Kentucky Straight Bourbon",
+  "brand": "Russell's Reserve",
+  "category": "bourbon",
+  "proof": 120.2,
+  "abv": 60.1,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-jefferson-s-grand-selection-chateau-suduirait-sauternes-cask-finish-ksbw",
+  "name": "Jefferson's Grand Selection Chateau Suduirait Sauternes Cask Finish Kentucky Straight Bourbon",
+  "brand": "Jefferson's",
+  "category": "bourbon",
+  "proof": 90,
+  "abv": 45,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-tanqueray-10-gin-tanqueray-10-gin",
+  "name": "Tanqueray #10 Gin",
+  "brand": "Tanqueray #10 Gin",
+  "category": "gin",
+  "proof": 94.6,
+  "abv": 47.3,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-plymouth-original-gin",
+  "name": "Plymouth Original Gin",
+  "brand": "Plymouth",
+  "category": "gin",
+  "proof": 82.4,
+  "abv": 41.2,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-st-george-botanivore-gin",
+  "name": "St. George Botanivore Gin",
+  "brand": "St. George",
+  "category": "gin",
+  "proof": 90,
+  "abv": 45,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-ferrand-1840-original-formula-cognac",
+  "name": "Ferrand 1840 Original Formula Cognac",
+  "brand": "Ferrand",
+  "category": "cognac",
+  "proof": 90,
+  "abv": 45,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "LDF Sales & Distributing"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-hine-triomphe-cognac",
+  "name": "Hine Triomphe Cognac",
+  "brand": "Hine",
+  "category": "cognac",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-ferrand-ambre-cognac",
+  "name": "Ferrand Ambre Cognac",
+  "brand": "Ferrand",
+  "category": "cognac",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "LDF Sales & Distributing"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-planteray-original-dark-rum",
+  "name": "Planteray Original Dark Rum",
+  "brand": "Planteray",
+  "category": "rum",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "LDF Sales & Distributing"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-appleton-estate-signature-blend-rum",
+  "name": "Appleton Estate Signature Blend Rum",
+  "brand": "Appleton Estate",
+  "category": "rum",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-doorly-s-8-year-old-fine-old-barbados-rum",
+  "name": "Doorly's 8 Year Old Fine Old Barbados Rum",
+  "brand": "Doorly's",
+  "category": "rum",
+  "proof": 86,
+  "abv": 43,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Trident Beverage"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-appleton-estate-15-year-black-river-casks-jamaica-rum",
+  "name": "Appleton Estate 15 Year Black River Casks Jamaica Rum",
+  "brand": "Appleton Estate",
+  "category": "rum",
+  "proof": 86,
+  "abv": 43,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-chateau-la-freynelle-sauvignon-blanc-semillon-muscadelle-blanc",
+  "name": "Chateau la Freynelle Sauvignon Blanc/ Semillon/ Muscadelle Blanc",
+  "brand": "Chateau la Freynelle",
+  "category": "sauvignon_blanc",
+  "proof": null,
+  "abv": 13.5,
+  "vintage": "2025",
+  "appellation": "Bordeaux",
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-volcan-x-a-tequila",
+  "name": "Volcan X.A Tequila",
+  "brand": "Volcan",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 6
+ },
+ {
+  "id": "ks-arette-artesanal-suave-reposado-tequila",
+  "name": "Arette Artesanal Suave Reposado Tequila",
+  "brand": "Arette",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-g4-reposado-premium-tequila",
+  "name": "G4 Reposado Premium Tequila",
+  "brand": "G4",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-siete-leguas-reposado-tequila-7",
+  "name": "Siete Leguas Reposado Tequila 7",
+  "brand": "Siete Leguas",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Standard Beverage"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-tapatio-reposado-tequila",
+  "name": "Tapatio Reposado Tequila",
+  "brand": "Tapatio",
+  "category": "tequila",
+  "proof": 80,
+  "abv": 40,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Vintegrity Kansas"
+  ],
+  "alternatives": 0
+ },
+ {
+  "id": "ks-del-maguey-san-luis-del-rio-single-village-mezcal",
+  "name": "Del Maguey San Luis del Rio Single Village Mezcal",
+  "brand": "Del Maguey",
+  "category": "mezcal",
+  "proof": 94,
+  "abv": 47,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 1
+ },
+ {
+  "id": "ks-del-maguey-minero-single-village-mezcal",
+  "name": "Del Maguey Minero Single Village Mezcal",
+  "brand": "Del Maguey",
+  "category": "mezcal",
+  "proof": 100,
+  "abv": 50,
+  "vintage": null,
+  "appellation": null,
+  "distributors": [
+   "Southern Glazers of Kansas"
+  ],
+  "alternatives": 0
+ }
+]

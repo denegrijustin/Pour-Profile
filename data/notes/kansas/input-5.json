@@ -1,0 +1,252 @@
+[
+ {
+  "id": "ks-monkey-47-schwarzwalk-dry-gin",
+  "name": "Monkey 47 Schwarzwalk Dry Gin",
+  "producer": "Monkey 47",
+  "category": "gin",
+  "region": null,
+  "proof": 94,
+  "abv": 47,
+  "vintage": null
+ },
+ {
+  "id": "ks-st-george-terroir-gin",
+  "name": "St. George Terroir Gin",
+  "producer": "St. George",
+  "category": "gin",
+  "region": null,
+  "proof": 90,
+  "abv": 45,
+  "vintage": null
+ },
+ {
+  "id": "ks-aviation-american-gin",
+  "name": "Aviation American Gin",
+  "producer": "Aviation",
+  "category": "gin",
+  "region": null,
+  "proof": 84,
+  "abv": 42,
+  "vintage": null
+ },
+ {
+  "id": "ks-hennessy-privilege-vsop-cognac",
+  "name": "Hennessy Privilege VSOP Cognac",
+  "producer": "Hennessy",
+  "category": "cognac",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-remy-martin-vsop-cognac",
+  "name": "Remy Martin VSOP Cognac",
+  "producer": "Remy Martin",
+  "category": "cognac",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-martell-blue-swift-vsop-cognac",
+  "name": "Martell Blue Swift VSOP Cognac",
+  "producer": "Martell",
+  "category": "cognac",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-chateau-de-laubade-xo-armagnac",
+  "name": "Chateau de Laubade XO Armagnac",
+  "producer": "Chateau de Laubade",
+  "category": "armagnac",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-germain-robin-craft-method-brandy",
+  "name": "Germain Robin Craft Method Brandy",
+  "producer": "Germain Robin",
+  "category": "brandy",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-stoneleigh-sauvignon-blanc",
+  "name": "Stoneleigh Sauvignon Blanc",
+  "producer": "Stoneleigh",
+  "category": "sauvignon_blanc",
+  "region": "Marlborough",
+  "proof": null,
+  "abv": 13,
+  "vintage": "2026"
+ },
+ {
+  "id": "ks-nobilo-sauvignon-blanc",
+  "name": "Nobilo Sauvignon Blanc",
+  "producer": "Nobilo",
+  "category": "sauvignon_blanc",
+  "region": "Marlborough New Zealand",
+  "proof": null,
+  "abv": 13,
+  "vintage": "2025"
+ },
+ {
+  "id": "ks-infamous-goose-sauvignon-blanc",
+  "name": "Infamous Goose Sauvignon Blanc",
+  "producer": "Infamous Goose",
+  "category": "sauvignon_blanc",
+  "region": "New Zealand",
+  "proof": null,
+  "abv": 13,
+  "vintage": "2025"
+ },
+ {
+  "id": "ks-sea-pearl-sauvignon-blanc",
+  "name": "Sea Pearl Sauvignon Blanc",
+  "producer": "Sea Pearl",
+  "category": "sauvignon_blanc",
+  "region": "Marlborough",
+  "proof": null,
+  "abv": 13,
+  "vintage": "2025"
+ },
+ {
+  "id": "ks-ant-moore-sauvignon-blanc-estate-series",
+  "name": "Ant Moore Sauvignon Blanc Estate Series",
+  "producer": "Ant Moore",
+  "category": "sauvignon_blanc",
+  "region": "Marlborough",
+  "proof": null,
+  "abv": 12,
+  "vintage": "2025"
+ },
+ {
+  "id": "ks-girard-sauvignon-blanc",
+  "name": "Girard Sauvignon Blanc",
+  "producer": "Girard",
+  "category": "sauvignon_blanc",
+  "region": "Sonoma County",
+  "proof": null,
+  "abv": 13.5,
+  "vintage": "2023"
+ },
+ {
+  "id": "ks-sunny-with-a-chance-of-flowers-sauvignon-blanc",
+  "name": "Sunny with a Chance of Flowers Sauvignon Blanc",
+  "producer": "Sunny with a Chance of Flowers",
+  "category": "sauvignon_blanc",
+  "region": "California",
+  "proof": null,
+  "abv": 9,
+  "vintage": "2024"
+ },
+ {
+  "id": "ks-raeburn-sauvignon-blanc",
+  "name": "Raeburn Sauvignon Blanc",
+  "producer": "Raeburn",
+  "category": "sauvignon_blanc",
+  "region": "North Coast",
+  "proof": null,
+  "abv": 13.5,
+  "vintage": "2025"
+ },
+ {
+  "id": "ks-la-crema-sauvignon-blanc",
+  "name": "La Crema Sauvignon Blanc",
+  "producer": "La Crema",
+  "category": "sauvignon_blanc",
+  "region": "Ca - Sonoma",
+  "proof": null,
+  "abv": 13.5,
+  "vintage": "2024"
+ },
+ {
+  "id": "ks-domaine-fouassier-sauvignon-blanc-les-grous",
+  "name": "Domaine Fouassier Sauvignon Blanc Les Grous",
+  "producer": "Domaine Fouassier",
+  "category": "sauvignon_blanc",
+  "region": "Sancerre",
+  "proof": null,
+  "abv": 13,
+  "vintage": "2023"
+ },
+ {
+  "id": "ks-joseph-mellot-sauvignon-blanc",
+  "name": "Joseph Mellot Sauvignon Blanc",
+  "producer": "Joseph Mellot",
+  "category": "sauvignon_blanc",
+  "region": "Vin de France",
+  "proof": null,
+  "abv": 12,
+  "vintage": "2021"
+ },
+ {
+  "id": "ks-weingut-tement-sauvignon-blanc-kalk-kreide",
+  "name": "Weingut Tement Sauvignon Blanc Kalk & Kreide",
+  "producer": "Weingut Tement",
+  "category": "sauvignon_blanc",
+  "region": "Sudsteiermark",
+  "proof": null,
+  "abv": 12.5,
+  "vintage": "2020"
+ },
+ {
+  "id": "ks-maker-s-mark-no-46-french-oaked-cask-strength-ksbw",
+  "name": "Maker's Mark No. 46 French Oaked Cask Strength Kentucky Straight Bourbon",
+  "producer": "Maker's Mark",
+  "category": "bourbon",
+  "region": null,
+  "proof": 110.6,
+  "abv": 55.3,
+  "vintage": null
+ },
+ {
+  "id": "ks-old-grand-dad-old-grand-dad-ksbw",
+  "name": "Old Grand Dad Kentucky Straight Bourbon",
+  "producer": "Old Grand Dad",
+  "category": "bourbon",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-jefferson-s-8-yo-ksbw",
+  "name": "Jefferson's 8 Yo Kentucky Straight Bourbon",
+  "producer": "Jefferson's",
+  "category": "bourbon",
+  "region": null,
+  "proof": 96,
+  "abv": 48,
+  "vintage": null
+ },
+ {
+  "id": "ks-hardin-s-creek-ksbw-middle-distillation",
+  "name": "Hardin's Creek Kentucky Straight Bourbon Middle Distillation",
+  "producer": "Hardin's Creek",
+  "category": "bourbon",
+  "region": null,
+  "proof": 109,
+  "abv": 54.5,
+  "vintage": null
+ },
+ {
+  "id": "ks-jack-daniel-s-10-years-old-tennessee-whiskey",
+  "name": "Jack Daniel's 10 Years Old Tennessee Whiskey",
+  "producer": "Jack Daniel's",
+  "category": "american_whiskey",
+  "region": null,
+  "proof": 97,
+  "abv": 48.5,
+  "vintage": null
+ }
+]

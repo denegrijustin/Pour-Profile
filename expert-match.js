@@ -102,7 +102,7 @@ export function criticSummary(critics = []) {
 /** The compact form shown on list cards. */
 export function expertBrief(expert) {
   if (!expert || expert.confidence === "none") return null;
-  const cs = criticSummary(expert.critics);
+  const cs = expert.critic_summary || criticSummary(expert.critics);
   return {
     confidence: expert.confidence,
     critic_count: cs.count,
