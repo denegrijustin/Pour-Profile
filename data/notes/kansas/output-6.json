@@ -1,0 +1,1058 @@
+[
+ {
+  "id": "ks-jack-daniel-s-12-years-old-tennessee-whiskey",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Launch press release describes sweet, creamy notes of pipe tobacco, seasoned oak and butterscotch; charcoal mellowed before aging in new toasted and charred barrels. No separate nose/palate/finish given.",
+   "source_url": "https://www.businesswire.com/news/home/20230314005506/en"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash",
+    "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-jack-daniels-12-year-old-tennessee-whiskey/",
+    "score": 7,
+    "scale": "10",
+    "nose": "Tobacco, leather and toffee, with vanilla and candied strawberry developing in the glass.",
+    "palate": "Heavily oak-driven and tannic; water softens it to show cherry, cola, tobacco, leather, cinnamon, caraway and clove.",
+    "finish": "Medium length with a lingering smoky quality.",
+    "summary": "Prefers it to the 10 Year as extra age tames the sweetness, though the oak can dominate; reviewer's favorite current JD release.",
+    "year": 2023
+   },
+   {
+    "source": "Bourbon Culture",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/jack-daniels-12-year-old-tennessee-whiskey-review/",
+    "score": 8,
+    "scale": "10",
+    "nose": "Brown sugar butter, maple-soaked corn cakes, nuttiness, seasoned oak, brown spice and light vanilla.",
+    "palate": "Buttered grits, maple syrup, cinnamon-led baking spice, velvety oak, vanilla coffee and mashed banana; proof feels restrained.",
+    "finish": "Mellow with no burn; bruleed banana, caramel and butterscotch with subtle oak.",
+    "summary": "An easy, effortless drinker, though the reviewer feels the Lincoln County Process limits complexity.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 53.5,
+   "proof": 107,
+   "age": "12 years",
+   "mash_bill": "80% corn, 12% malted barley, 8% rye",
+   "cask": "New toasted and charred American white oak; charcoal mellowed before aging",
+   "region": "Tennessee",
+   "source_url": "https://www.businesswire.com/news/home/20230314005506/en"
+  },
+  "flavor_terms": [
+   "pipe tobacco",
+   "seasoned oak",
+   "butterscotch",
+   "toffee",
+   "leather",
+   "vanilla",
+   "maple syrup",
+   "cinnamon",
+   "banana",
+   "caramel"
+  ],
+  "confidence": "high",
+  "notes": "Producer info is the combined descriptor from the 2023 launch press release; jackdaniels.com product page returned 404."
+ },
+ {
+  "id": "ks-widow-jane-lucky-thirteen-small-batch-bourbon",
+  "producer": {
+   "nose": "Vanilla bean, Earl Grey tea, caramel and sweet tobacco.",
+   "palate": "Pecan pie, whole grain toast and grapefruit peel.",
+   "finish": "Nutmeg, birch beer and dry oak tannin.",
+   "summary": "Hyper-small-batch 13-year bourbon, non-chill filtered and proofed with Rosendale Mines limestone water.",
+   "source_url": "https://www.widowjane.com/whiskey/lucky-thirteen"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Amanda Schuster)",
+    "source_url": "https://distiller.com/spirits/widow-jane-lucky-thirteen-small-batch-bourbon",
+    "score": 89,
+    "scale": "100",
+    "nose": "Candied apple, cinnamon, nutmeg, clove and leather.",
+    "palate": "Tart red apple, vanilla, caramel, espresso, toasted oak and bitter chocolate.",
+    "finish": "Warm and spicy.",
+    "summary": "Fall 2021 small-batch release at 93 proof; profiled as spicy and rich.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 46.5,
+   "proof": 93,
+   "age": "13 years minimum",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Brooklyn, New York (bottler)",
+   "source_url": "https://www.widowjane.com/whiskey/lucky-thirteen"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "earl grey",
+   "caramel",
+   "tobacco",
+   "pecan pie",
+   "grapefruit peel",
+   "nutmeg",
+   "candied apple",
+   "espresso",
+   "toasted oak"
+  ],
+  "confidence": "high",
+  "notes": "Input lists 101 proof but producer page and Distiller list 93 proof; the Kansas label may be a different batch strength, so notes may not match exactly. Skipped Paste's 2020 review (earlier single-barrel, variable-proof version)."
+ },
+ {
+  "id": "ks-tom-s-town-distilling-co-pendergast-s-royal-gold-bourbon-whiskey-finished-in-port-wine-casks",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Drinkhacker",
+    "source_url": "https://www.drinkhacker.com/2020/06/18/review-toms-town-double-oaked-bourbon-and-pendergasts-royal-gold-bourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Port influence brings raisin and mint forward, with more clove than the unfinished bourbon.",
+    "palate": "Apple butter gives a rich mouthfeel; baking spice throughout.",
+    "finish": "Sweet with lingering baking spice; possibly too sweet for some drinkers.",
+    "summary": "Graded A- (letter grade). Reviewed at 90 proof, finished in 14-year-old ruby port casks.",
+    "year": 2020
+   },
+   {
+    "source": "Distiller (Jacob Grier)",
+    "source_url": "https://distiller.com/spirits/pendergast-s-royal-gold-bourbon",
+    "score": 85,
+    "scale": "100",
+    "nose": null,
+    "palate": "Butterscotch, clove and banana bread.",
+    "finish": "Gentle fruity port notes add complexity without overwhelming the bourbon.",
+    "summary": "An appealing pairing of spicy bourbon and sweeter port character.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "NAS",
+   "mash_bill": "62% corn, 36% rye, 2% barley (sourced, reportedly Indiana/MGP)",
+   "cask": "Finished in 14-year-old ruby port wine casks",
+   "region": "Kansas City, Missouri (bottler)",
+   "source_url": "https://www.drinkhacker.com/2020/06/18/review-toms-town-double-oaked-bourbon-and-pendergasts-royal-gold-bourbon/"
+  },
+  "flavor_terms": [
+   "raisin",
+   "mint",
+   "clove",
+   "apple butter",
+   "baking spice",
+   "butterscotch",
+   "banana bread",
+   "port"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site unreachable (403/DNS); no producer notes. Facts from Drinkhacker (MGP sourcing is the reviewer's presumption). Input had no proof; 90 proof per Drinkhacker/Distiller."
+ },
+ {
+  "id": "ks-bib-tucker-aged-6-years-gold-roast-bourbon-small-batch-bourbon-whiskey",
+  "producer": {
+   "nose": "Freshly brewed coffee and rich molasses with subtle sweet corn and spice.",
+   "palate": "Layered vanilla and young oak blending into milk chocolate.",
+   "finish": "Medium-long and balanced; oak and vanilla with a touch of dark roast coffee and brown spice.",
+   "summary": "Master blender Alan Kennedy's notes as relayed in launch press coverage (Northwest Beer Guide), not fetched from the brand site. Color described as deep amber.",
+   "source_url": "https://www.northwestbeerguide.com/spirits/2025-bibtucker-goldcoast"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": "6 years",
+   "mash_bill": "Corn, rye and barley (proportions not given); charcoal mellowed (Lincoln County Process)",
+   "cask": "Cold-steeped, custom-roasted Honduran Arabica coffee beans (Agalta region) introduced during final maturation",
+   "region": "Tennessee",
+   "source_url": "https://www.northwestbeerguide.com/spirits/2025-bibtucker-goldcoast"
+  },
+  "flavor_terms": [
+   "coffee",
+   "molasses",
+   "sweet corn",
+   "spice",
+   "vanilla",
+   "young oak",
+   "milk chocolate",
+   "dark roast",
+   "brown spice"
+  ],
+  "confidence": "medium",
+  "notes": "2025 coffee-infused release, sold as a bourbon flavored with coffee. No independent critic review fetched (Whiskey Apostle review timed out)."
+ },
+ {
+  "id": "ks-michter-s-barrel-strength-toasted-barrel-finish-kentucky-straight-rye-whiskey",
+  "producer": {
+   "nose": "Toffee, honey and black walnut moving toward chocolate and caramel, with cherry, mint and strong rye spice (nose and palate described together).",
+   "palate": "Same combined description as nose: toffee, honey, black walnut, chocolate, caramel, cherry, mint and rye spice.",
+   "finish": "Oak and toastiness lead, lingering with warm gingerbread.",
+   "summary": "2026 edition notes from michters.com; fully matured US*1 rye re-barreled in a custom toasted barrel of 24-month air-dried wood, bottled at barrel strength.",
+   "source_url": "https://www.michters.com/whiskey/toasted-barrel-finish-rye/"
+  },
+  "critics": [
+   {
+    "source": "VinePair (David Thomas Tao)",
+    "source_url": "https://vinepair.com/review/michters-toasted-barrel-finish-rye-2023/",
+    "score": 91,
+    "scale": "100",
+    "nose": "Black cherry and walnut like a fruit cobbler, then brown sugar, honey, molasses, toffee and taffy.",
+    "palate": "Toasted honey, pecan, semi-sweet chocolate, Derby-pie character, blackstrap molasses, then oak; apple pie spice for balance.",
+    "finish": "Hot and drying with oak, cinnamon gum and black pepper.",
+    "summary": "Wood-forward and possibly divisive but well made; good with dessert. 2023 release, sampled at 109.4 proof.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 54.55,
+   "proof": 109.1,
+   "age": null,
+   "mash_bill": "Undisclosed",
+   "cask": "Finished in custom toasted (not charred) barrel from 24-month air-dried wood",
+   "region": "Kentucky",
+   "source_url": "https://www.michters.com/whiskey/toasted-barrel-finish-rye/"
+  },
+  "flavor_terms": [
+   "toffee",
+   "honey",
+   "black walnut",
+   "chocolate",
+   "caramel",
+   "cherry",
+   "rye spice",
+   "gingerbread",
+   "molasses",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Barrel-strength proof varies by barrel/year; producer page is 2026 edition (avg 109.1), VinePair is 2023 edition, input label 108 proof. Producer notes combine nose and palate."
+ },
+ {
+  "id": "ks-russell-s-reserve-single-rickhouse-ksbw",
+  "producer": {
+   "nose": "Oak, vanilla, sweet cream and fruitcake shifting to cinnamon, spice and florals.",
+   "palate": "Cherry, raisin and dark honey giving way to herbal clove, spearmint and thyme.",
+   "finish": "Long, with spice, mature oak, char and pepper.",
+   "summary": "Official 2024 Camp Nelson B release notes as relayed by Breaking Bourbon's press-release page; sixth-floor barrels, non-chill filtered, barrel proof, highest-proof Russell's Reserve to date.",
+   "source_url": "https://www.breakingbourbon.com/bourbon-whiskey-press-releases/russells-reserve-announces-third-annual-single-rickhouse-bottling-with-camp-nelson-b"
+  },
+  "critics": [
+   {
+    "source": "VinePair (David Thomas Tao)",
+    "source_url": "https://vinepair.com/review/russells-reserve-single-rickhouse-camp-nelson-b-bourbon-2024/",
+    "score": 96,
+    "scale": "100",
+    "nose": "Sweet oak, molasses and honeyed cornbread, nutmeg and boozy cherries, then spearmint and cocoa.",
+    "palate": "Syrupy honey, dark oak and tannin, brown butter, dark fruits (blackcurrant, prune, fig, cherry), chocolate and creamy peanut butter.",
+    "finish": "Long and oaky with cherry-cola notes; water brings out black cherry, dark grape and a brandy-like quality.",
+    "summary": "Reviewer's favorite of the three Single Rickhouse releases, narrowly ahead of Camp Nelson F.",
+    "year": 2024
+   },
+   {
+    "source": "Bourbon Banter (Steve Coomes)",
+    "source_url": "https://www.bourbonbanter.com/russells-reserve-single-rickhouse-camp-nelson-b-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Ethanol up front; with time, warm honey and golden raisins.",
+    "palate": "Apple, raisin, honey and lemon with crisp oak and restrained spice.",
+    "finish": "Long and warming with spice, oak, char and pepper, not overly dry.",
+    "summary": "Nothing to dislike except the steep price; rated 'Bar' on the site's buy/bar/bust scale.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 60.1,
+   "proof": 120.2,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky (Camp Nelson B rickhouse, sixth floor)",
+   "source_url": "https://www.breakingbourbon.com/bourbon-whiskey-press-releases/russells-reserve-announces-third-annual-single-rickhouse-bottling-with-camp-nelson-b"
+  },
+  "flavor_terms": [
+   "oak",
+   "vanilla",
+   "sweet cream",
+   "fruitcake",
+   "cherry",
+   "raisin",
+   "dark honey",
+   "spearmint",
+   "char",
+   "pepper"
+  ],
+  "confidence": "high",
+  "notes": "Identified via 120.2 proof as the 2024 Camp Nelson B edition. Producer notes are relayed via Breaking Bourbon press release."
+ },
+ {
+  "id": "ks-jefferson-s-grand-selection-chateau-suduirait-sauternes-cask-finish-ksbw",
+  "producer": {
+   "nose": "Citrus, floral and honey.",
+   "palate": "Citrus, burnt sugar, cinnamon, caramel and lemon zest.",
+   "finish": "Bourbon spice balanced against the Sauternes cask influence.",
+   "summary": "Producer notes as relayed by retailer Caskers (not fetched from jeffersonsbourbon.com, which returned 404). Finished in forty Chateau Suduiraut barrels in a 'hot box' warehouse.",
+   "source_url": "https://www.caskers.com/jefferson-s-grand-selection-chateau-suduiraut-sauternes-cask-finish/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "NAS",
+   "mash_bill": null,
+   "cask": "New charred American oak, then several months in ex-Chateau Suduiraut Sauternes French oak casks in a heated 'hot box' warehouse; 40 barrels",
+   "region": "Kentucky",
+   "source_url": "https://distiller.com/spirits/jefferson-s-grand-selection-chateau-suduirant-sauternes-cask-finish"
+  },
+  "flavor_terms": [
+   "citrus",
+   "floral",
+   "honey",
+   "burnt sugar",
+   "cinnamon",
+   "caramel",
+   "lemon zest"
+  ],
+  "confidence": "medium",
+  "notes": "Label spelling 'Suduirait' is Chateau Suduiraut. No critic review obtained (Whiskey Were Here hit a redirect loop; Distiller has only a community rating)."
+ },
+ {
+  "id": "ks-tanqueray-10-gin-tanqueray-10-gin",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "The Gin is In",
+    "source_url": "https://theginisin.com/gin-reviews/tanqueray-ten/",
+    "score": 5,
+    "scale": "5",
+    "nose": "Juniper-led with bright lime zest and hints of red grapefruit.",
+    "palate": "Bitter orange and lemon, then angelica and pink grapefruit, closing on creamy licorice root and piney juniper.",
+    "finish": "Long, moderately warm, with citrus zest and earthy undertones.",
+    "summary": "Highly recommended classic-style gin; suggested for martinis, Tom Collins, Corpse Reviver #2 and G&Ts.",
+    "year": null
+   },
+   {
+    "source": "88 Bamboo",
+    "source_url": "https://88bamboo.co/blogs/gin/tanqueray-n%C2%BA-ten-gin-47-3-trying-the-stanley-tucci-approved-ultra-premium-tanqueray-gin",
+    "score": null,
+    "scale": null,
+    "nose": "Bold juniper and soft citrus: grapefruit, blood orange and finger lime with licorice candy and angelica.",
+    "palate": "Creamy and full-bodied with chamomile florals and dominant grapefruit; rich yet bright, earthy base.",
+    "finish": "Clean, licorice-led, with a spicy tingle.",
+    "summary": "Called outstanding: powerful yet structured, bolder and more citrus-forward than standard Tanqueray. Reviewed at 47.3%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 47.3,
+   "proof": 94.6,
+   "age": null,
+   "mash_bill": "Wheat base spirit; botanicals juniper, coriander, licorice, angelica, chamomile plus fresh whole lime, orange and grapefruit (citrus distilled separately)",
+   "cask": "Distilled in the small 'Tiny Ten' still (about 500 L per batch); unaged",
+   "region": "Cameronbridge, Scotland",
+   "source_url": "https://theginisin.com/gin-reviews/tanqueray-ten/"
+  },
+  "flavor_terms": [
+   "juniper",
+   "lime zest",
+   "grapefruit",
+   "bitter orange",
+   "licorice",
+   "angelica",
+   "chamomile",
+   "blood orange",
+   "citrus",
+   "earthy"
+  ],
+  "confidence": "medium",
+  "notes": "Tanqueray producer page 404'd; no producer notes. Facts from The Gin is In (Tiny Ten batch size from 88 Bamboo). ABV 47.3% per 88 Bamboo."
+ },
+ {
+  "id": "ks-plymouth-original-gin",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer copy relayed on the Whisky Advocate store product page: rich, smooth and earthy with notable complexity; sweet orange in a blend with no bitter botanicals; green cardamom adds spicy, sweet floral notes. No nose/palate/finish split.",
+   "source_url": "https://store.whiskyadvocate.com/products/plymouth-original-strength"
+  },
+  "critics": [
+   {
+    "source": "The Gin is In",
+    "source_url": "https://theginisin.com/gin-reviews/plymouth/",
+    "score": 5,
+    "scale": "5",
+    "nose": "Classically juniper-forward with green pine, orange zest and a distinctive camphor note.",
+    "palate": "Bright, green pine moving to citrus and spice; vanilla custard with lemon and sweet orange, then cardamom, white pepper and cassia.",
+    "finish": "Long, with licorice root and nuttiness, moderate warmth, slight astringency and light sweetness.",
+    "summary": "A versatile classic for martinis, Negronis and Last Words; complex despite a short botanical list. Reviewed at 41.2%.",
+    "year": null
+   },
+   {
+    "source": "Gin Foundry",
+    "source_url": "https://www.gin-foundry.com/gin/plymouth-gin/",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Less crisp than typical London Dry, earthier from heavier root botanicals, with smoother juniper.",
+    "finish": "Unusually long for a gin, dominated by licorice and angelica.",
+    "summary": "A distinctive, heritage-driven gin set apart from modern London Dry conventions.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 41.2,
+   "proof": 82.4,
+   "age": null,
+   "mash_bill": "Grain spirit base; seven botanicals: juniper, coriander seed, orange peel, lemon peel, green cardamom, orris root, angelica root",
+   "cask": "One-shot distillation in a 160+ year-old still with short neck and sharply bent lye pipe; unaged",
+   "region": "Plymouth, England",
+   "source_url": "https://www.gin-foundry.com/gin/plymouth-gin/"
+  },
+  "flavor_terms": [
+   "juniper",
+   "pine",
+   "orange zest",
+   "camphor",
+   "earthy",
+   "cardamom",
+   "licorice",
+   "angelica",
+   "vanilla custard",
+   "white pepper"
+  ],
+  "confidence": "high",
+  "notes": "Producer site 404'd; producer copy is retailer-relayed and summary-only."
+ },
+ {
+  "id": "ks-st-george-botanivore-gin",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Trade sheet calls it a 'meadow in bloom': a balanced gin of 19 botanicals with herbaceous character, bright citrus and delicate florals, versatile in cocktails.",
+   "source_url": "https://stgeorgespirits.com/uploads/tradeSupport/St.-George-Botanivore-Gin.pdf"
+  },
+  "critics": [
+   {
+    "source": "Drinkhacker (Drew Beard)",
+    "source_url": "https://www.drinkhacker.com/2023/09/03/review-st-george-botanivore-gin/",
+    "score": null,
+    "scale": null,
+    "nose": "Balanced layers of soft juniper, pine resin, fennel, lime zest, pepper and baking spice.",
+    "palate": "Juniper berry moving into dry green herbs (cilantro, dill) with earthy dark licorice.",
+    "finish": "Long pine, mint and ginger with lemony hops, candied orange and lime.",
+    "summary": "Graded A (letter grade); the most classic-leaning gin in St. George's range, versatile and great in martinis. Reviewed at 90 proof.",
+    "year": 2023
+   },
+   {
+    "source": "The Gin is In",
+    "source_url": "https://theginisin.com/gin-reviews/st-george-botanivore/",
+    "score": 4.5,
+    "scale": "5",
+    "nose": "Orange, cinnamon and cardamom over a heady bay leaf note; spicy, herbal and citrusy.",
+    "palate": "Cinnamon stick, ginger candy and bright pepper with a thick warm texture; aquavit-like caraway, then juniper and hops.",
+    "finish": "Warm and spicy with a cool licorice-like back note.",
+    "summary": "Highly recommended contemporary gin where juniper supports the 19 botanicals; classic gin fans may want more juniper.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": "Grain base; 19 botanicals",
+   "cask": null,
+   "region": "California",
+   "source_url": "https://www.drinkhacker.com/2023/09/03/review-st-george-botanivore-gin/"
+  },
+  "flavor_terms": [
+   "herbaceous",
+   "citrus",
+   "floral",
+   "juniper",
+   "pine resin",
+   "fennel",
+   "lime zest",
+   "licorice",
+   "cinnamon",
+   "ginger"
+  ],
+  "confidence": "high",
+  "notes": "Producer product page 404'd; producer info from trade-support PDF (summary only)."
+ },
+ {
+  "id": "ks-ferrand-1840-original-formula-cognac",
+  "producer": {
+   "nose": "Ripe, juicy grape with meadow flowers, acacia blossom and a touch of cedar.",
+   "palate": "Warm and fruity yet clean.",
+   "finish": "Honey and spice.",
+   "summary": "Producer notes as relayed by retailer Cognac-Expert.com. Revives an 1840 cognac formula using Angeac eaux-de-vie; VS-grade Grande Champagne.",
+   "source_url": "https://www.cognac-expert.com/vs-cognac/pierre-ferrand-1840-original-formula-cognac"
+  },
+  "critics": [
+   {
+    "source": "The Rum Howler Blog (Chip Dykstra)",
+    "source_url": "https://therumhowlerblog.com/brandy-and-cognac-2/pierre-ferrand-1840-original-formula-cognac/",
+    "score": 90.5,
+    "scale": "100",
+    "nose": "Wood spice suggesting fresh-sanded oak and sandalwood, with cinnamon, butterscotch, honey and citrus zest.",
+    "palate": "Sweet grape and honeyed oak spice building to white pepper; butterscotch into marmalade, cinnamon and nuts.",
+    "finish": "Green grape, honey and butterscotch, then lingering wood spice, pepper, cinnamon and a hint of mint.",
+    "summary": "Works both neat and in cocktails; fulfils the brief of reviving historic cocktail cognac. Reviewed at 45%.",
+    "year": null
+   },
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/pierre-ferrand-original-formula-1840-cognac",
+    "score": 85,
+    "scale": "100",
+    "nose": "Ripe pear, wax, green grape and delicate florals.",
+    "palate": "Mint and crushed peanut on a creamy texture.",
+    "finish": null,
+    "summary": "Fruity, floral and higher-proof than most VS cognacs; designed mainly for mixing.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "VS (NAS)",
+   "mash_bill": "Grande Champagne cru; distilled in Charentais alembic",
+   "cask": "Limousin (French) oak",
+   "region": "Grande Champagne, Cognac, France",
+   "source_url": "https://www.cognac-expert.com/vs-cognac/pierre-ferrand-1840-original-formula-cognac"
+  },
+  "flavor_terms": [
+   "grape",
+   "floral",
+   "acacia",
+   "cedar",
+   "honey",
+   "spice",
+   "butterscotch",
+   "sandalwood",
+   "cinnamon",
+   "pear"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are retailer-relayed (Cognac-Expert). Developed 2011 with David Wondrich per Distiller."
+ },
+ {
+  "id": "ks-hine-triomphe-cognac",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Distiller (Katrina Niemisto)",
+    "source_url": "https://distiller.com/spirits/hine-triomphe-cognac",
+    "score": 94,
+    "scale": "100",
+    "nose": "Complex bouquet of raw honey, vanilla sugar and rich caramel.",
+    "palate": "Round, well-balanced mouthfeel with great complexity.",
+    "finish": "Mellow and lightly smoky.",
+    "summary": "Highly complex, balanced old Grande Champagne blend.",
+    "year": null
+   },
+   {
+    "source": "Malt Mileage",
+    "source_url": "https://maltmileage.wordpress.com/2014/05/08/hine-triomphe-grande-champagne/",
+    "score": 5,
+    "scale": "5",
+    "nose": "Mild wood with mineral-water freshness, lime, vanilla and blanched almond, developing mint.",
+    "palate": "Smooth then fiery mid-palate; dried fruit, bitter walnut, dark chocolate, preserved cherry, truffle and mushroom, florals.",
+    "finish": "Wood takes over: elegant but drying with pepper, spice, tobacco and lingering rancio.",
+    "summary": "Five-star review emphasizing classic rancio character (earthy, bitter-nut, oily, eucalyptus). Reviewed at 40%.",
+    "year": 2014
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "NAS; blend of 50+ eaux-de-vie described as very old (Malt Mileage cites 50-60 years)",
+   "mash_bill": "100% Grande Champagne eaux-de-vie",
+   "cask": "French oak (Troncais oak per Malt Mileage)",
+   "region": "Grande Champagne, Cognac, France",
+   "source_url": "https://distiller.com/spirits/hine-triomphe-cognac"
+  },
+  "flavor_terms": [
+   "honey",
+   "vanilla",
+   "caramel",
+   "smoke",
+   "almond",
+   "walnut",
+   "dark chocolate",
+   "dried fruit",
+   "rancio",
+   "tobacco"
+  ],
+  "confidence": "medium",
+  "notes": "Hine producer page rendered empty (JS) so no producer notes. Age of components varies by source; treat as approximate."
+ },
+ {
+  "id": "ks-ferrand-ambre-cognac",
+  "producer": {
+   "nose": "Subtle vanilla opening to rose and violet florals, plum and apricot, then sweet apple and pear pastry.",
+   "palate": "Fresh and well balanced.",
+   "finish": null,
+   "summary": "Producer notes as relayed by The Whisky Exchange retailer page; amber to golden color.",
+   "source_url": "https://www.thewhiskyexchange.com/p/13444/ferrand-ambre-1er-cru-grande-champagne-cognac"
+  },
+  "critics": [
+   {
+    "source": "The Rum Howler Blog (Chip Dykstra)",
+    "source_url": "https://therumhowlerblog.com/brandy-and-cognac-2/pierre-ferrand-ambre-grande-champagne-cognac/",
+    "score": 89,
+    "scale": "100",
+    "nose": "Fresh floral and citrus notes with green grape, vanilla, herbs and sandalwood.",
+    "palate": "Light oak and fresh green grape give a crisp feel, with vanilla, cinnamon, ginger and citrus.",
+    "finish": "Smooth and crisp with butterscotch, green grape, lemongrass and gooseberry.",
+    "summary": "Recommended for sipping and quality mixing. Reviewed at 40%; originally 2014, revised 2018.",
+    "year": 2018
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "NAS; blended to represent about 10 years old (per Rum Howler)",
+   "mash_bill": "Ugni Blanc and Colombard grapes; Grande Champagne 1er cru",
+   "cask": null,
+   "region": "Grande Champagne, Cognac, France",
+   "source_url": "https://therumhowlerblog.com/brandy-and-cognac-2/pierre-ferrand-ambre-grande-champagne-cognac/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "rose",
+   "violet",
+   "plum",
+   "apricot",
+   "pear",
+   "green grape",
+   "citrus",
+   "sandalwood",
+   "butterscotch"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are retailer-relayed (The Whisky Exchange); Rum Howler notes caramel coloring."
+ },
+ {
+  "id": "ks-planteray-original-dark-rum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/1770/plantation-original-dark-rum",
+    "score": null,
+    "scale": null,
+    "nose": "Toasty oak with cherry, banana, coconut, vanilla and clove.",
+    "palate": "Burnt sugar against dry oak tannin; blackened fruitcake, cinnamon and clove.",
+    "finish": "Long, spiced creme brulee.",
+    "summary": "Warming and festive: burnt sugar and caramel with Christmas spice and a hint of Jamaican fruit. Sampled July 2021 at 40%.",
+    "year": 2021
+   },
+   {
+    "source": "All At Sea (Terry Boram)",
+    "source_url": "https://www.allatsea.net/rum-review-plantation-original-dark/",
+    "score": 3.25,
+    "scale": "5",
+    "nose": "Subtle cherry, vanilla and clove; second taster found coconut, pineapple and banana.",
+    "palate": "Smooth with apricot, vanilla and cinnamon; butterscotch and coconut.",
+    "finish": "Some cinnamon but very short and not warming.",
+    "summary": "Drinks lighter than most dark rums and lacks wood complexity, yet a pleasant sipper. Earlier Plantation-branded bottling; ABV not stated in review.",
+    "year": null
+   },
+   {
+    "source": "Astor Wines (staff, EG)",
+    "source_url": "https://www.astorwines.com/item/31619",
+    "score": null,
+    "scale": null,
+    "nose": "Molasses, black pepper and a green note; fruity high tones with heavy esters and cinnamon.",
+    "palate": "Weighty and full-bodied with savory notes and spice cake.",
+    "finish": "Cooked caramel, tropical fruit and brown butter.",
+    "summary": "Retailer staff note praising it as complex value for cocktails or neat sipping (Planteray-branded bottling).",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": "Blend of younger Caribbean rum with long-aged Jamaican pot still rum; component islands differ by source and over time (Barbados or Trinidad)",
+   "cask": "Charred American oak, then French oak (Cognac) casks, married in vats",
+   "region": "Caribbean, blended/bottled by Maison Ferrand, France",
+   "source_url": "https://www.diffordsguide.com/beer-wine-spirits/1770/plantation-original-dark-rum"
+  },
+  "flavor_terms": [
+   "toasty oak",
+   "cherry",
+   "banana",
+   "coconut",
+   "vanilla",
+   "clove",
+   "burnt sugar",
+   "cinnamon",
+   "molasses",
+   "caramel"
+  ],
+  "confidence": "medium",
+  "notes": "Planteray is the renamed Plantation brand; producer site unreachable. Sources disagree on blend composition (Difford's: Barbados + 10-15 yr Jamaican; All At Sea: Trinidad + Jamaican; Astor: Barbados/Trinidad aging). Difford's notes 15 g/L sugar. All At Sea review predates rename."
+ },
+ {
+  "id": "ks-appleton-estate-signature-blend-rum",
+  "producer": {
+   "nose": "Fruit-forward with dried apricot, fresh peach and a hint of molasses.",
+   "palate": null,
+   "finish": "Rich and mildly sweet with brief citrus and nutty notes.",
+   "summary": "Official Appleton Estate notes; harvest gold/amber color, blended by Joy Spence with no added flavors.",
+   "source_url": "https://www.appletonestate.com/en-us/rums/signature"
+  },
+  "critics": [
+   {
+    "source": "The Rum Barrel",
+    "source_url": "https://therumbarrel.co.uk/2024/05/15/review-appleton-estate-rum-range/",
+    "score": 76,
+    "scale": "100",
+    "nose": "Mild and fruity: tobacco, orange zest, ripe banana, apricot, liquorice, black tea, biscuit, red apple, toffee and vanilla.",
+    "palate": "Woody with tobacco, nutmeg, nuts and marmalade, plus banana, pear, black pepper, caramel and raisin; somewhat thin body.",
+    "finish": "Short to medium with tropical and dried fruit.",
+    "summary": "Called underrated: complex and balanced for its light body; recommended in daiquiris. Reviewed at 40%.",
+    "year": 2024
+   },
+   {
+    "source": "EZdrinking (Eric Zandona)",
+    "source_url": "https://www.ezdrinking.com/blog/2016/appleton-estate-signature-blend-jamaica-rum",
+    "score": null,
+    "scale": null,
+    "nose": "Guava, pineapple and passion fruit against brown sugar, molasses, vanilla and caramel.",
+    "palate": "Sweet and slightly saline like salted caramel with oak and light dry tannin; velvety.",
+    "finish": "Dry, with lingering salted caramel, molasses and oak.",
+    "summary": "Smooth, flavorful and versatile in cocktails, especially eggnog. Reviewed as 'Signature Blend' at 40%.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "NAS; average age about 4 years",
+   "mash_bill": "Blend of pot still and column still rums (Difford's: 15 aged rums)",
+   "cask": null,
+   "region": "Nassau Valley, Jamaica",
+   "source_url": "https://www.appletonestate.com/en-us/rums/signature"
+  },
+  "flavor_terms": [
+   "dried apricot",
+   "peach",
+   "molasses",
+   "citrus",
+   "nutty",
+   "tobacco",
+   "banana",
+   "salted caramel",
+   "vanilla",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Now sold as 'Appleton Estate Signature' (formerly Signature Blend). 15-rum blend figure from Difford's Guide listing."
+ },
+ {
+  "id": "ks-doorly-s-8-year-old-fine-old-barbados-rum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "The Rum Barrel",
+    "source_url": "https://therumbarrel.co.uk/2023/03/23/review-doorlys-range/",
+    "score": 80,
+    "scale": "100",
+    "nose": "Woody and slightly herbal: cardamom, cocoa biscuit, cassia and fennel seed with red apple, sour cherry and unripe peach.",
+    "palate": "Sweeter than the nose suggests; coconut-chocolate, biscuit, honey, allspice, peach, mango and vanilla.",
+    "finish": "Medium, with dried fruit and charred oak.",
+    "summary": "A step up from the 5 Year; rounded with appealing dried fruit and spice. Reviewed at 40%.",
+    "year": 2023
+   },
+   {
+    "source": "The Fat Rum Pirate",
+    "source_url": "https://thefatrumpirate.com/doorlys-fine-old-barbados-rum-aged-8-years",
+    "score": 4,
+    "scale": "5",
+    "nose": "Light, fruity Bajan style with summer fruits, vanilla and bourbon-cask spice.",
+    "palate": "Oak, spicy bourbon notes, grape, coconut, caramel sweetness and a touch of toffee.",
+    "finish": null,
+    "summary": "A really good rum though fairly ordinary next to other recent Foursquare releases. Reviewed at 40%.",
+    "year": null
+   },
+   {
+    "source": "Memphis Rum Club (Geoff Davis)",
+    "source_url": "https://memphisrum.club/blog/review-093-doorlys-8yr/",
+    "score": 6,
+    "scale": "10",
+    "nose": "Vanilla, play-dough, caramel, saltwater taffy and fresh croissant.",
+    "palate": "Caramel, vanilla, saltwater taffy, orange peel and molasses.",
+    "finish": "Medium, tannic and a bit thin, with oak and citrus.",
+    "summary": "Classic, additive-free Bajan rum best as an affordable mixer or casual sipper. Reviewed at 40%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "8 years",
+   "mash_bill": "Molasses-based blend of pot and column still rum (Foursquare)",
+   "cask": "Ex-bourbon American white oak",
+   "region": "Barbados",
+   "source_url": "https://therumbarrel.co.uk/2023/03/23/review-doorlys-range/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "summer fruits",
+   "oak",
+   "coconut",
+   "caramel",
+   "toffee",
+   "dried fruit",
+   "cardamom",
+   "honey",
+   "saltwater taffy"
+  ],
+  "confidence": "medium",
+  "notes": "Input label lists 43% ABV (86 proof) but all reviews fetched are of the 40% bottling; facts reflect the 40% reviews. No producer notes found. Rum Barrel says no added sweeteners; Fat Rum Pirate suspects caramel coloring."
+ },
+ {
+  "id": "ks-appleton-estate-15-year-black-river-casks-jamaica-rum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not yet researched."
+ },
+ {
+  "id": "ks-chateau-la-freynelle-sauvignon-blanc-semillon-muscadelle-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not yet researched."
+ },
+ {
+  "id": "ks-volcan-x-a-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not yet researched."
+ },
+ {
+  "id": "ks-arette-artesanal-suave-reposado-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not yet researched."
+ },
+ {
+  "id": "ks-g4-reposado-premium-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not yet researched."
+ },
+ {
+  "id": "ks-siete-leguas-reposado-tequila-7",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not yet researched."
+ },
+ {
+  "id": "ks-tapatio-reposado-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not yet researched."
+ },
+ {
+  "id": "ks-del-maguey-san-luis-del-rio-single-village-mezcal",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not yet researched."
+ },
+ {
+  "id": "ks-del-maguey-minero-single-village-mezcal",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not yet researched."
+ }
+]
