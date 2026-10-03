@@ -1,0 +1,252 @@
+[
+ {
+  "id": "ks-bib-tucker-6-yr-small-batch-bourbon-whiskey",
+  "name": "BIB & Tucker 6 Yr Small Batch Bourbon Whiskey",
+  "producer": "BIB & Tucker",
+  "category": "bourbon",
+  "region": null,
+  "proof": 92,
+  "abv": 46,
+  "vintage": null
+ },
+ {
+  "id": "ks-smooth-ambler-old-scout-straight-bourbon-whiskey",
+  "name": "Smooth Ambler Old Scout Straight Bourbon Whiskey",
+  "producer": "Smooth Ambler",
+  "category": "bourbon",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-redemption-wheated-bourbon-whiskey",
+  "name": "Redemption Wheated Bourbon Whiskey",
+  "producer": "Redemption",
+  "category": "bourbon",
+  "region": null,
+  "proof": 96,
+  "abv": 48,
+  "vintage": null
+ },
+ {
+  "id": "ks-tom-s-town-distilling-co-double-oaked-bourbon-whiskey",
+  "name": "Tom's Town Distilling Co Double Oaked Bourbon Whiskey",
+  "producer": "Tom's Town Distilling Co",
+  "category": "bourbon",
+  "region": null,
+  "proof": 90,
+  "abv": 45,
+  "vintage": null
+ },
+ {
+  "id": "ks-holladay-soft-red-wheat-bottled-in-bond-missouri-straight-bourbon-whiskey-2",
+  "name": "Holladay Soft Red Wheat Bottled-In-Bond Missouri Straight Bourbon Whiskey",
+  "producer": "Holladay",
+  "category": "bourbon",
+  "region": null,
+  "proof": 100,
+  "abv": 50,
+  "vintage": null
+ },
+ {
+  "id": "ks-boot-hill-distillery-bourbon-whiskey",
+  "name": "Boot Hill Distillery Bourbon Whiskey",
+  "producer": "Boot Hill Distillery",
+  "category": "bourbon",
+  "region": null,
+  "proof": 80,
+  "abv": 40,
+  "vintage": null
+ },
+ {
+  "id": "ks-woodford-reserve-barrel-finish-select-double-oaked-ksbw",
+  "name": "Woodford Reserve Barrel Finish Select Double Oaked Kentucky Straight Bourbon",
+  "producer": "Woodford Reserve",
+  "category": "bourbon",
+  "region": null,
+  "proof": 90.4,
+  "abv": 45.2,
+  "vintage": null
+ },
+ {
+  "id": "ks-woodford-reserve-wheat-ksbw",
+  "name": "Woodford Reserve Wheat Kentucky Straight Bourbon",
+  "producer": "Woodford Reserve",
+  "category": "bourbon",
+  "region": null,
+  "proof": 90.4,
+  "abv": 45.2,
+  "vintage": null
+ },
+ {
+  "id": "ks-angels-envy-cask-strength-ksbw-finished-in-port-wine-barrels",
+  "name": "Angels Envy Cask Strength Kentucky Straight Bourbon Finished in Port Wine Barrels",
+  "producer": "Angels Envy",
+  "category": "bourbon",
+  "region": null,
+  "proof": 117.8,
+  "abv": 58.9,
+  "vintage": null
+ },
+ {
+  "id": "ks-larceny-barrel-proof-wheated-bourbon-mashbill-ksbw",
+  "name": "Larceny Barrel Proof Wheated Bourbon Mashbill Kentucky Straight Bourbon",
+  "producer": "Larceny",
+  "category": "bourbon",
+  "region": null,
+  "proof": 125.6,
+  "abv": 62.8,
+  "vintage": null
+ },
+ {
+  "id": "ks-benchmark-bonded-ksbw-single-season",
+  "name": "Benchmark Bonded Kentucky Straight Bourbon Single Season",
+  "producer": "Benchmark",
+  "category": "bourbon",
+  "region": null,
+  "proof": 100,
+  "abv": 50,
+  "vintage": null
+ },
+ {
+  "id": "ks-ezra-brooks-99-proof-ksbw",
+  "name": "Ezra Brooks 99 Proof Kentucky Straight Bourbon",
+  "producer": "Ezra Brooks",
+  "category": "bourbon",
+  "region": null,
+  "proof": 99,
+  "abv": 49.5,
+  "vintage": null
+ },
+ {
+  "id": "ks-rebel-6-year-100-proof-ksbw",
+  "name": "Rebel 6 Year 100 Proof Kentucky Straight Bourbon",
+  "producer": "Rebel",
+  "category": "bourbon",
+  "region": null,
+  "proof": 100,
+  "abv": 50,
+  "vintage": null
+ },
+ {
+  "id": "ks-sagamore-spirit-double-oak-straight-rye-whiskey",
+  "name": "Sagamore Spirit Double Oak Straight Rye Whiskey",
+  "producer": "Sagamore Spirit",
+  "category": "rye",
+  "region": null,
+  "proof": 96.6,
+  "abv": 48.3,
+  "vintage": null
+ },
+ {
+  "id": "ks-old-overholt-4-year-straight-rye-whiskey",
+  "name": "Old Overholt 4 Year Straight Rye Whiskey",
+  "producer": "Old Overholt",
+  "category": "rye",
+  "region": null,
+  "proof": 86,
+  "abv": 43,
+  "vintage": null
+ },
+ {
+  "id": "ks-michter-s-barrel-strength-straight-rye-whiskey-limited-release",
+  "name": "Michter's Barrel Strength Straight Rye Whiskey Limited Release",
+  "producer": "Michter's",
+  "category": "rye",
+  "region": null,
+  "proof": 108,
+  "abv": 54,
+  "vintage": null
+ },
+ {
+  "id": "ks-elijah-craig-straight-rye-whiskey",
+  "name": "Elijah Craig Straight Rye Whiskey",
+  "producer": "Elijah Craig",
+  "category": "rye",
+  "region": null,
+  "proof": 94,
+  "abv": 47,
+  "vintage": null
+ },
+ {
+  "id": "ks-knob-creek-aged-7-years-small-batch-kentucky-straight-rye-whiskey",
+  "name": "Knob Creek Aged 7 Years Small Batch Kentucky Straight Rye Whiskey",
+  "producer": "Knob Creek",
+  "category": "rye",
+  "region": null,
+  "proof": 100,
+  "abv": 50,
+  "vintage": null
+ },
+ {
+  "id": "ks-russell-s-reserve-6-years-old-kentucky-straight-rye-whiskey",
+  "name": "Russell's Reserve 6 Years Old Kentucky Straight Rye Whiskey",
+  "producer": "Russell's Reserve",
+  "category": "rye",
+  "region": null,
+  "proof": 90,
+  "abv": 45,
+  "vintage": null
+ },
+ {
+  "id": "ks-wild-turkey-kentucky-straight-rye-whiskey-101-proof",
+  "name": "Wild Turkey Kentucky Straight Rye Whiskey 101 Proof",
+  "producer": "Wild Turkey",
+  "category": "rye",
+  "region": null,
+  "proof": 101,
+  "abv": 50.5,
+  "vintage": null
+ },
+ {
+  "id": "ks-whistlepig-aged-10-years-single-barrel-rye-whiskey",
+  "name": "Whistlepig Aged 10 Years Single Barrel Rye Whiskey",
+  "producer": "Whistlepig",
+  "category": "rye",
+  "region": null,
+  "proof": 107.4,
+  "abv": 53.7,
+  "vintage": null
+ },
+ {
+  "id": "ks-whistlepig-aged-10-years-piggybank-rye-limited-edition-straight-rye-whiskey",
+  "name": "Whistlepig Aged 10 Years Piggybank Rye Limited Edition Straight Rye Whiskey",
+  "producer": "Whistlepig",
+  "category": "rye",
+  "region": null,
+  "proof": 110,
+  "abv": 55,
+  "vintage": null
+ },
+ {
+  "id": "ks-old-forester-kentucky-straight-rye-whiskey",
+  "name": "Old Forester Kentucky Straight Rye Whiskey",
+  "producer": "Old Forester",
+  "category": "rye",
+  "region": null,
+  "proof": 100,
+  "abv": 50,
+  "vintage": null
+ },
+ {
+  "id": "ks-pikesville-straight-rye-whiskey",
+  "name": "Pikesville Straight Rye Whiskey",
+  "producer": "Pikesville",
+  "category": "rye",
+  "region": null,
+  "proof": 110,
+  "abv": 55,
+  "vintage": null
+ },
+ {
+  "id": "ks-woodford-reserve-distiller-s-select-kentucky-straight-rye-whiskey",
+  "name": "Woodford Reserve Distiller's Select Kentucky Straight Rye Whiskey",
+  "producer": "Woodford Reserve",
+  "category": "rye",
+  "region": null,
+  "proof": 90.4,
+  "abv": 45.2,
+  "vintage": null
+ }
+]

@@ -42,7 +42,7 @@ export function classify(category, brand, label) {
 // Single-barrel store and club picks: real, but a one-off barrel at one shop.
 // Only explicit "picked by <someone>" wording counts — "Single Barrel Select" alone is
 // a product name (Jack Daniel's), not a store pick.
-const PICK = /\b(BOTTLED FOR|SELECTED BY|SELECTED FOR|PICKED BY|HAND PICKED BY|STORE PICK|WHISKEY GUILD|WHISKEY HUNTERS|BOURBON SOCIETY|BOURBON CLUB|WHISKEY CLUB|AMBASSADORS|LIQUOR\b|WINE (&|AND) SPIRITS LLC|BOTTLE SHOP|\bMHK\b|FRIDGE|RANCHMART|\bVAABC\b)/;
+const PICK = /\b(PRIVATE (SINGLE )?BARREL|PRIVTE BARREL|LIQUORS\b|BOTTLED FOR|SELECTED BY|SELECTED FOR|PICKED BY|HAND PICKED BY|STORE PICK|WHISKEY GUILD|WHISKEY HUNTERS|BOURBON SOCIETY|BOURBON CLUB|WHISKEY CLUB|AMBASSADORS|LIQUOR\b|WINE (&|AND) SPIRITS LLC|BOTTLE SHOP|\bMHK\b|FRIDGE|RANCHMART|\bVAABC\b)/;
 // Barrel programs ("Single Barrel Select", "Private Selection", "Barrel Select") are store
 // picks when the store or club name follows the whiskey designation, e.g.
 // "Cask Strength Single Barrel Select KSBW Salina Liquor".
