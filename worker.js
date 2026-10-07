@@ -4,7 +4,6 @@ import { RATING_SOURCES } from "./rating-sources.js";
 import { RESEARCH_CATALOG } from "./catalog-research.js";
 import { refreshCatalog, computeFit, isVisible } from "./catalog-engine.js";
 import { enrichOne, downloadImage, isSameBottle } from "./image-enrich.js";
-import { curatedNote } from "./curated-notes.js";
 
 // The reference catalog is read-only data, so it ships with the Worker rather
 // than living in D1. Scored once per isolate, not per request.
@@ -778,10 +777,6 @@ function catalogPublic(r) {
     serving: r.research?.serving || null,
     price: r.typical_price_usd?.typical ?? null,
     image_url: r.image?.primary_url || null,
-    // Real researched descriptors where they exist. Absent for most of the
-    // catalog, and absent is reported as absent -- the templated `summary`
-    // is not dressed up as a tasting note.
-    notes: curatedNote(r.id),
     lifecycle: r.lifecycle
   };
 }
@@ -976,13 +971,8 @@ async function catalogSubjects(env, scope) {
     records = records.filter((r) => ids.has(r.id) || r.recommendation?.recommended || r.user_state?.tasted);
   }
   // `image` is carried through so the resolver can explain that this record's
-  // only link is a search-engine lookup rather than a product page. `page` is the
-  // curated product URL, which is the one source that actually yields a photo --
-  // every URL in the research export is an unscrapeable image-search link.
-  return records.map((r) => ({
-    kind: "catalog", id: r.id, name: r.name, producer: r.producer, image: r.image,
-    page: curatedNote(r.id)?.product_url || null
-  }));
+  // only link is a search-engine lookup rather than a product page.
+  return records.map((r) => ({ kind: "catalog", id: r.id, name: r.name, producer: r.producer, image: r.image }));
 }
 
 async function imageSubjects(env, scope) {

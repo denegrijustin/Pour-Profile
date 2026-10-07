@@ -41,7 +41,7 @@ function pickCardHtml(r) {
           <span class="fit-chip ${band.cls}">${r.jd_fit != null ? `${r.jd_fit}` : "—"}</span>
         </div>
         <div class="pick-band ${band.cls}">${band.label}</div>
-        ${notesHtml(r)}
+        ${r.why ? `<p class="pick-why">${escapeHtml(r.why)}</p>` : r.summary ? `<p class="pick-why">${escapeHtml(r.summary)}</p>` : ""}
         ${r.concern ? `<p class="pick-concern">⚠ ${escapeHtml(r.concern)}</p>` : ""}
         <div class="pick-meta">
           ${r.price != null ? `<span>~$${Math.round(r.price)}</span>` : ""}
@@ -56,34 +56,6 @@ function pickCardHtml(r) {
         </div>
       </div>
     </article>`;
-}
-
-// Researched descriptors beat the catalog's generated sentence, and it isn't
-// close: across all 317 records there are only 28 distinct `why` strings, so the
-// generated line repeats verbatim across dozens of unrelated bottles. Where a
-// real note exists it is shown with its attribution; where none exists the
-// generated line stays, clearly as a profile summary rather than a tasting note.
-function notesHtml(r) {
-  const n = r.notes;
-  if (!n) {
-    const line = r.why || r.summary;
-    return line ? `<p class="pick-why">${escapeHtml(line)}</p>` : "";
-  }
-  const row = (label, arr) => arr?.length
-    ? `<div class="note-row"><span class="note-label">${label}</span><span class="note-vals">${arr.map(escapeHtml).join(" · ")}</span></div>`
-    : "";
-  const src = n.sources?.[0];
-  const vintage = n.vintage ? `${n.vintage}${n.house_style ? " — house style, vintages vary" : ""}` : (n.house_style ? "House style — vintages vary" : "");
-  return `
-    <div class="pick-notes">
-      ${row("Nose", n.nose)}
-      ${row("Palate", n.palate)}
-      ${row("Finish", n.finish)}
-      ${n.note ? `<p class="note-aside">${escapeHtml(n.note)}</p>` : ""}
-      <p class="note-src">
-        ${vintage ? `${escapeHtml(vintage)} · ` : ""}${escapeHtml(n.source_type === "producer" ? "Producer notes" : n.source_type === "press" ? "Published review" : "Retailer listings")}${src ? ` · <a href="${escapeHtml(src.url)}" target="_blank" rel="noopener noreferrer">source</a>` : ""}
-      </p>
-    </div>`;
 }
 
 export async function renderDiscover(dispatchNav) {

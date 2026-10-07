@@ -252,23 +252,3 @@ test("identity matching is empty-safe", () => {
   assert.equal(isSameBottle({ name: "", producer: "" }, { name: "Anything", producer: "" }), false);
   assert.equal(isSameBottle({ name: "Something", producer: "" }, { name: "", producer: "" }), false);
 });
-
-test("a curated product page clears the accept bar but keeps its ranking", async () => {
-  // CDN product URLs are often opaque hashes no name matcher can read, so a
-  // curated page (chosen by name for this exact bottle) must be trusted — but
-  // the product shot still has to beat the page banner.
-  const html = `
-    <meta property="og:image" content="https://cdn.x/hero-banner-winter.jpg">
-    <script type="application/ld+json">{"@type":"Product","name":"Old Forester 1910","image":["https://cdn.x/a8f3b912c7.jpg"]}</script>`;
-  const rec = { id: "old-forester-1910", name: "Old Forester 1910", producer: "Old Forester",
-                page: "https://shop.oldforester.com/old-forester-1910-old-fine-whisky" };
-  const { candidates } = await gatherCandidates(rec, {
-    fetchImpl: (url) => String(url).includes("openfoodfacts")
-      ? Promise.resolve(jsonResponse({ products: [] }))
-      : Promise.resolve({ ok: true, headers: { get: () => "text/html" }, text: async () => html })
-  });
-  assert.ok(candidates.length >= 2);
-  assert.equal(candidates[0].url, "https://cdn.x/a8f3b912c7.jpg", "the JSON-LD product shot must outrank the banner");
-  assert.ok(candidates[0].score >= 0.7, `curated candidate should clear the bar, got ${candidates[0].score}`);
-  assert.ok(candidates[0].score > candidates[1].score, "ranking between candidates must survive the boost");
-});
