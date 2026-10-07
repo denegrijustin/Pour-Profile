@@ -44,6 +44,18 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Wrangler's own failure for a missing token is a bare exit code in a log
+      # that is awkward to reach from a phone. Say it in one line instead.
+      - name: Check deploy credentials
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error title=Missing CLOUDFLARE_API_TOKEN::Tests and build passed; only the deploy is blocked. Add the secret under Settings -> Secrets and variables -> Actions, named CLOUDFLARE_API_TOKEN, using a Cloudflare 'Edit Cloudflare Workers' token with D1 edit. Then re-run from the Actions tab."
+            exit 1
+          fi
+          echo "Credentials present."
+
       - name: Deploy to Cloudflare
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
