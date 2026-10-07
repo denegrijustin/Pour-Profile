@@ -44,7 +44,18 @@ export async function lookupBottleSources(query,sourceUrl,fetchImpl=researchFetc
  if(direct) {
   if(bottleBookUrl(direct))return lookupBottleBook(query,direct,fetchImpl);
   const url=extraSourceUrl(direct);if(!url)throw new Error('Bottle lookup requires a supported bottle product page.');
-  return {draft:stores[new URL(url).hostname]?retailerDraft(await read(url+'.js',fetchImpl,true),url):producerDraft(await read(url,fetchImpl),url)};
+  if(!stores[new URL(url).hostname])return {draft:producerDraft(await read(url,fetchImpl),url)};
+  let product;
+  try {product=await read(url+'.js',fetchImpl,true);} catch(error) {
+   // Some storefronts block product JSON on server IPs but expose the same
+   // product through their public predictive search. Require the exact handle.
+   const u=new URL(url),handle=u.pathname.split('/').pop();
+   const data=await read(`https://${u.hostname}/search/suggest.json?q=${encodeURIComponent(query)}&resources[type]=product&resources[limit]=10`,fetchImpl,true);
+   const match=(data.resources?.results?.products || []).find(p=>p.handle===handle);
+   if(!match)throw error;
+   product={...match,description:match.body,featured_image:match.image || match.featured_image};
+  }
+  return {draft:retailerDraft(product,url)};
  }
  const jobs=[lookupBottleBook(query,null,fetchImpl),...Object.entries(stores).map(async([host,source])=>{
   const q=tokens(query).join(' ');const d=await read(`https://${host}/search/suggest.json?q=${encodeURIComponent(q)}&resources[type]=product&resources[limit]=10`,fetchImpl,true);

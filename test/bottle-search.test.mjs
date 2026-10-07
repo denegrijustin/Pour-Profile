@@ -26,3 +26,9 @@ test('retailer search rejects unrelated expressions while BBB failure does not b
  });
  assert.equal(r.candidates.length,2);assert.ok(r.candidates.every(c=>c.name.includes('Architect')));
 });
+test('blocked retailer detail falls back only to the selected exact handle',async()=>{
+ const fetcher=async url=>url.endsWith('.js')?new Response('',{status:403}):new Response(JSON.stringify({resources:{results:{products:[{handle:'double-rye',title:'High West Double Rye',body:'92 proof.',image:'https://cdn.shopify.com/rye.jpg'}]}}}));
+ const d=await lookupBottleSources('High West Double Rye','https://kegnbottle.com/products/double-rye',fetcher);
+ assert.equal(d.draft.source_image_url,'https://cdn.shopify.com/rye.jpg');assert.equal(d.draft.proof,92);
+ await assert.rejects(lookupBottleSources('High West Double Rye','https://kegnbottle.com/products/barrel-pick',fetcher),/403/);
+});

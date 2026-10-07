@@ -303,12 +303,20 @@ async function listProfiles(env) {
 const FLAVOR_TAGS_SQL = "SELECT bft.bottle_id, ft.name FROM bottle_flavor_tags bft JOIN flavor_tags ft ON ft.id = bft.flavor_tag_id";
 const FLAVOR_TAGS_ORDER = " ORDER BY bft.bottle_id, bft.flavor_tag_id";
 const TASTING_TAGS_ORDER = " ORDER BY ttf.tasting_id, ttf.flavor_tag_id";
-const STATUS_SQL = "SELECT bottle_id, status_tags FROM bottle_status WHERE profile_id = ?";
+const STATUS_SQL = `WITH active_profile AS (SELECT ? AS id), tried AS (
+ SELECT DISTINCT bottle_id FROM tastings WHERE profile_id=(SELECT id FROM active_profile) AND rating IS NOT NULL
+) SELECT bs.bottle_id, bs.status_tags, CASE WHEN tried.bottle_id IS NOT NULL THEN 1 ELSE 0 END AS has_tried
+ FROM bottle_status bs LEFT JOIN tried ON tried.bottle_id=bs.bottle_id WHERE bs.profile_id=(SELECT id FROM active_profile)
+ UNION ALL SELECT tried.bottle_id, '[]', 1 FROM tried WHERE NOT EXISTS (
+ SELECT 1 FROM bottle_status bs WHERE bs.profile_id=(SELECT id FROM active_profile) AND bs.bottle_id=tried.bottle_id)`;
 const TASTING_SUMMARY_SQL = `SELECT bottle_id, AVG(rating) as avg_rating, COUNT(*) as tasting_count, MAX(tasted_at) as last_tasted
   FROM tastings WHERE profile_id = ? GROUP BY bottle_id`;
 
 function applyStatus(bottles, rows) {
-  const byBottle = new Map(rows.map((r) => [r.bottle_id, safeParse(r.status_tags, [])]));
+  const byBottle = new Map(rows.map((r) => {
+    const tags=safeParse(r.status_tags, []);
+    return [r.bottle_id,r.has_tried?[...new Set([...tags.filter(t=>t!=="want_to_try"),"tried"])]:tags];
+  }));
   return bottles.map((b) => ({ ...b, status_tags: byBottle.get(b.id) || [] }));
 }
 
@@ -385,7 +393,12 @@ async function listBottles(url, env) {
   if (category) { sql += " AND b.category = ?"; params.push(category); }
   if (varietal) { sql += " AND b.varietal = ?"; params.push(varietal); }
   // Status lives per profile, so filter through bottle_status rather than the bottle row.
-  if (status) { sql += " AND EXISTS (SELECT 1 FROM bottle_status bs WHERE bs.bottle_id = b.id AND bs.profile_id = ? AND bs.status_tags LIKE ?)"; params.push(profileId, `%"${status}"%`); }
+  if (status === "tried") {
+    sql += " AND (EXISTS (SELECT 1 FROM tastings t WHERE t.bottle_id=b.id AND t.profile_id=? AND t.rating IS NOT NULL) OR EXISTS (SELECT 1 FROM bottle_status bs WHERE bs.bottle_id=b.id AND bs.profile_id=? AND bs.status_tags LIKE '%\"tried\"%'))";params.push(profileId,profileId);
+  } else if (status) {
+    sql += " AND EXISTS (SELECT 1 FROM bottle_status bs WHERE bs.bottle_id = b.id AND bs.profile_id = ? AND bs.status_tags LIKE ?)"; params.push(profileId, `%"${status}"%`);
+    if(status === "want_to_try") {sql += " AND NOT EXISTS (SELECT 1 FROM tastings t WHERE t.bottle_id=b.id AND t.profile_id=? AND t.rating IS NOT NULL)";params.push(profileId);}
+  }
   if (q) { sql += " AND (b.name LIKE ? OR b.brand LIKE ? OR b.expression LIKE ?)"; params.push(`%${q}%`, `%${q}%`, `%${q}%`); }
   sql += {
     newest: " ORDER BY b.created_at DESC",
@@ -648,6 +661,7 @@ async function createTasting(request, env, url) {
   if (b.reaction !== undefined) {
     if (!Object.hasOwn(REACTIONS,b.reaction)) return json({error:"Choose Bad, OK, Like or Love."},400);
     b.rating=REACTIONS[b.reaction];
+    b.status_tag=({bad:"dislike",ok:"neutral",like:"like",love:"favorite"})[b.reaction];
   }
   if (!b.bottle_id) return json({ error: "bottle_id is required" }, 400);
   const bottle = await first(env, "SELECT category, varietal FROM bottles WHERE id = ?", b.bottle_id);
@@ -691,10 +705,10 @@ async function createTasting(request, env, url) {
   }
 
   const tasting = await first(env, "SELECT * FROM tastings WHERE id = ?", id);
-  if (["favorite","like","neutral","dislike","avoid"].includes(b.status_tag)) {
+  {
     const old = await first(env, "SELECT status_tags FROM bottle_status WHERE profile_id = ? AND bottle_id = ?", profileId, b.bottle_id);
-    const tags = safeParse(old?.status_tags, []).filter(t => !["favorite","like","neutral","dislike","avoid"].includes(t));
-    await setBottleStatus(env, profileId, b.bottle_id, [...new Set([...tags,"tried",b.status_tag])]);
+    const tags = safeParse(old?.status_tags, []).filter(t => !["favorite","like","love","neutral","dislike","avoid","hate","want_to_try"].includes(t));
+    await setBottleStatus(env, profileId, b.bottle_id, [...new Set([...tags,"tried",...(["favorite","like","neutral","dislike","avoid"].includes(b.status_tag)?[b.status_tag]:[])])]);
   }
   return json({ tasting, palateUpdates });
 }
