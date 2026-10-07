@@ -484,6 +484,7 @@ export function renderDraftForm(draft, dispatchNav, provenance, shouldRate = tru
     <button class="btn btn-primary btn-block" id="draftSaveBtn" style="margin-top:16px">${shouldRate ? "Continue to Bad / OK / Like / Love →" : "Save to collection"}</button>
     ${offerLink && draft.barcode ? `<button class="btn btn-secondary btn-block" id="draftLinkBtn" style="margin-top:8px">This is a bottle I already have — link barcode</button>` : ""}
   `;
+  window.scrollTo(0, 0);
   document.getElementById("draftLinkBtn")?.addEventListener("click", () => renderLinkPicker(draft.barcode, dispatchNav, shouldRate));
   view.querySelector("[data-action='rescan']").addEventListener("click", () => renderScan(dispatchNav));
   document.getElementById("draftSaveBtn").addEventListener("click", async () => {
