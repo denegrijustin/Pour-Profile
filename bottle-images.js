@@ -3,6 +3,7 @@
 // Source pages and image labels checked against the expression, not brand alone.
 // Names without batch/year get representative expression photography only.
 const entries = [
+ [["Jim Beam Devil's Cut","Jim Beam Devil’s Cut","Jim Beam Devil's Cut Kentucky Straight Bourbon"], 'https://www.jimbeam.com/sites/default/files/styles/original/public/2025-02/devils-cut-whisky-jim-beam.png.webp?itok=KXMLyD2H', 'https://www.jimbeam.com/en-au/bourbons/jim-beam-devils-cut'],
  [['High West Double Rye','High West Double Rye!','High West Double Rye Whiskey','High West Double Rye Whiskey (750 mL)'], 'https://cdn.shopify.com/s/files/1/0045/4967/3089/files/high-west-double-rye-whiskey-750-ml-keg-n-bottle-8970167.jpg?v=1764186487', 'https://kegnbottle.com/products/high-west-double-rye-750-ml', 'retailer'],
  [['Johnny Drum Private Stock'], 'https://www.kentuckybourbonwhiskey.com/wp-content/uploads/2023/12/JDPS.png', 'https://www.kentuckybourbonwhiskey.com/whiskey/johnny-drum-private-stock/'],
  [['Penelope Architect'], 'https://shop.penelopebourbon.com/cdn/shop/products/bottle_544x.png?v=1641190991', 'https://shop.penelopebourbon.com/products/architect-series'],

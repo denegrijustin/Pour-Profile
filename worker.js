@@ -1331,7 +1331,7 @@ async function enrichImages(request, env) {
   // Keep saved photos. Recheck older unresolved lookups once with verified sources;
   // Explicit retry also rechecks unresolved review candidates after source fixes.
   const skip = new Set(
-    attempted.filter((r) => !(retryFailed && r.status !== "ok") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Image lookup v3:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
+    attempted.filter((r) => !(retryFailed && r.status !== "ok") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Image lookup v4:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
   );
   const queue = (await imageSubjects(env, scope))
     .filter((s) => !skip.has(`${s.kind}:${s.id}`) && (!b.bottles_only || s.kind === "bottle") && (!b.bottle_id || (s.kind === "bottle" && Number(s.id) === Number(b.bottle_id))))
@@ -1341,7 +1341,7 @@ async function enrichImages(request, env) {
   for (const [i, subject] of queue.entries()) {
     if (i > 0 && !verifiedBottleImage(subject)) await sleep(OFF_SEARCH_SPACING_MS);
     const r = await enrichBookImage(subject,{assetFetch:(path,options)=>env.ASSETS.fetch(new Request(new URL(path,env._origin),options))});
-    r.match_reason=`Image lookup v3: ${r.match_reason || ''}`;
+    r.match_reason=`Image lookup v4: ${r.match_reason || ''}`;
     if (r.status === "ok") {
       try {
         r.r2_key = await storeSubjectImage(env, subject, r.mime, r.buf);
