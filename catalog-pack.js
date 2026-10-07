@@ -127,6 +127,13 @@ export function slimExpert(full) {
   return {
     confidence: full.confidence,
     flavor_terms: full.flavor_terms,
+    // The producer's own product page. Carried on the slim record (one short
+    // string) because it is the ONLY real product URL the catalog has: every
+    // `image.lookup_url` in the research export is a Bing image-search link,
+    // which is JS-rendered and unscrapeable. Image enrichment reads this to find
+    // a bottle shot, and needs it for every record at once -- fetching 371
+    // per-bottle note files to collect them is not an option inside a Worker.
+    producer_url: full.producer?.source_url || null,
     critic_summary: {
       count: full.critics.length, scored: scored.length, n100: hundred.length,
       avg100: hundred.length ? Math.round(hundred.reduce((s, c) => s + c.score, 0) / hundred.length) : null

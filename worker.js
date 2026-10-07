@@ -1178,9 +1178,16 @@ async function catalogSubjects(env, scope) {
     const ids = new Set(adopted.map((r) => r.catalog_id));
     records = records.filter((r) => ids.has(r.id) || r.recommendation?.recommended || r.user_state?.tasted);
   }
-  // `image` is carried through so the resolver can explain that this record's
-  // only link is a search-engine lookup rather than a product page.
-  return records.map((r) => ({ kind: "catalog", id: r.id, name: r.name, producer: r.producer, image: r.image }));
+  // `page` is the producer's own product page, from the cited expert notes. It is
+  // what makes image enrichment work at all: every `image.lookup_url` in the
+  // research export is a Bing image-search link, which is JS-rendered and
+  // unscrapeable, so before this the extractor had nothing to read. 371 of 467
+  // records have one. `image` still rides along so the resolver can say so when a
+  // record has only the search link.
+  return records.map((r) => ({
+    kind: "catalog", id: r.id, name: r.name, producer: r.producer, image: r.image,
+    page: r.expert?.producer_url || null
+  }));
 }
 
 async function imageSubjects(env, scope) {

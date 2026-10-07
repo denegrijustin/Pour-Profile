@@ -164,7 +164,32 @@ const WIKI_UA = `${UA} (https://pourprofile.elskatemm.com)`;
 // The single acceptance gate. enrichOne uses it to pick the winner and the
 // resolvers use it to decide whether another source is worth a subrequest.
 export function passesGate(c, { autoAcceptAt = 0.7, minCoverage = 0.8, minPrecision = 0.8 } = {}) {
-  return !!c && c.score >= autoAcceptAt && c.coverage >= minCoverage && c.precision >= minPrecision;
+  if (!c) return false;
+  // A candidate pulled off the producer's own page FOR THIS BOTTLE is verified by
+  // where it came from, not by what its URL spells. Producer CDN paths are
+  // routinely opaque ("/dwdd3be5a0/images/0502422_1.png"), so name scoring reads
+  // ~0 on them and the numeric gate would reject every genuine product shot.
+  // Only pages with a real product path earn this — see isProductPage.
+  if (c.citedProductPage) return true;
+  return c.score >= autoAcceptAt && c.coverage >= minCoverage && c.precision >= minPrecision;
+}
+
+/**
+ * Is this URL a specific product's page, as opposed to a brand homepage?
+ *
+ * The distinction decides whether a page's images can be trusted automatically.
+ * Four different Rabbit Hole expressions all cite the same distillery homepage;
+ * auto-accepting from it would put one identical hero shot on four different
+ * bottles, which is exactly the wrong-expression failure the brief forbids.
+ */
+export function isProductPage(url) {
+  try {
+    const u = new URL(url);
+    if (isSearchEnginePage(url)) return false;
+    const path = u.pathname.replace(/\/+$/, "");
+    // A bare domain, or a path so short it cannot name a product, is a brand page.
+    return path.length > 1 && path.split("/").filter(Boolean).length >= 1 && path.length >= 6;
+  } catch { return false; }
 }
 
 function labelFromOff(p) {
@@ -384,13 +409,26 @@ export async function gatherCandidates(record, { fetchImpl = fetch } = {}) {
     candidates.push(...commons);
   }
 
-  // A real producer/product page, if the record ever gets one. Today every
-  // record's only URL is a Bing search, which is skipped by design.
-  const page = record.sources?.[0]?.url || record.image?.source_url || record.image?.primary_url;
+  // The producer's own product page, cited alongside this bottle's expert notes.
+  // This is the one URL worth fetching: every `image.lookup_url` in the research
+  // export is a Bing image-search link, which is JS-rendered and unscrapeable, so
+  // without `record.page` the extractor below has nothing to read.
+  const page = record.page || record.sources?.[0]?.url || record.image?.source_url || record.image?.primary_url;
   if (page && /^https?:/i.test(page) && !isSearchEnginePage(page)) {
     try {
       const html = await fetchText(page, fetchImpl);
-      candidates.push(...scorePageCandidates(extractImageCandidates(html, page), record));
+      const fromPage = scorePageCandidates(extractImageCandidates(html, page), record);
+      // Trust the page only when it names a product. A brand homepage shows a
+      // hero shot that belongs to no particular expression.
+      const trusted = record.page === page && isProductPage(page);
+      for (const c of fromPage) {
+        c.sourcePage = page;
+        if (trusted) c.citedProductPage = true;
+      }
+      if (!trusted && record.page === page) {
+        notes.push("cited producer link is a brand homepage, not a product page; left for confirmation");
+      }
+      candidates.push(...fromPage);
     } catch (err) {
       notes.push(`source page unreadable: ${String(err.message || err)}`);
     }
