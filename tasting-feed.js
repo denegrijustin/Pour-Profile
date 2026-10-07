@@ -50,7 +50,7 @@ export function tastingRowHtml(t, { showBottle = true } = {}) {
     <div class="tasting-row"${showBottle && t.bottle_id ? ` data-open-bottle="${t.bottle_id}" role="button" tabindex="0"` : ""}>
       <div class="tasting-verdict" title="${escapeHtml(r.label)}">
         <span class="tv-icon" aria-hidden="true">${r.icon}</span>
-        ${t.rating != null ? `<span class="tv-score">${escapeHtml(v?.label || "")}</span>` : ""}
+        ${t.rating != null ? `<span class="tv-score">${escapeHtml(r.label)}</span>` : ""}
       </div>
       <div class="tasting-body">
         ${showBottle ? `<div class="tasting-name">${escapeHtml(t.bottle_name || "Unknown bottle")}</div>` : ""}

@@ -1,4 +1,5 @@
 import { REACTIONS, sourcePreferences, sourcePreferenceFit } from "./source-preferences.js";
+import { enrichBookImage } from "./book-images.js";
 import { lookupBottleBook } from "./bottle-blue-book.js";
 import { researchFetch } from "./bottle-research.js";
 import { withBottleImage } from "./bottle-images.js";
@@ -1307,13 +1308,13 @@ async function enrichImages(request, env) {
   const retryFailed = b.retry_failed === true;
   const scope = b.scope === "all" ? "all" : "visible";
 
-  const attempted = await all(env, "SELECT subject_kind, subject_id, status FROM image_lookups");
+  const attempted = await all(env, "SELECT subject_kind, subject_id, status, match_reason FROM image_lookups");
   // Never re-run a subject that already resolved. `failed` is the only status
   // worth retrying — scoring is deterministic, so re-running a `needs_review`
   // subject just produces the same weak candidates again; those are resolved by
   // the user confirming one, not by another pass.
   const skip = new Set(
-    attempted.filter((r) => !(retryFailed && r.status === "failed")).map((r) => `${r.subject_kind}:${r.subject_id}`)
+    attempted.filter((r) => !(retryFailed && r.status === "failed") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Blue Book:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
   );
   const queue = (await imageSubjects(env, scope))
     .filter((s) => !skip.has(`${s.kind}:${s.id}`) && (!b.bottles_only || s.kind === "bottle") && (!b.bottle_id || (s.kind === "bottle" && Number(s.id) === Number(b.bottle_id))))
@@ -1322,7 +1323,7 @@ async function enrichImages(request, env) {
   const results = [];
   for (const [i, subject] of queue.entries()) {
     if (i > 0) await sleep(OFF_SEARCH_SPACING_MS);
-    const r = await enrichOne(subject);
+    const r = await enrichBookImage(subject);
     if (r.status === "ok") {
       try {
         r.r2_key = await storeSubjectImage(env, subject, r.mime, r.buf);
