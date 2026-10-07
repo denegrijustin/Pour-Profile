@@ -36,3 +36,12 @@ test('adoption saves researched details and image bytes without replacing user p
   assert.equal(again.data.image_saved,false);
   assert.equal(db.prepare('SELECT image_url FROM bottles WHERE id=?').get(result.bottle_id).image_url,'/my-photo');
 });
+
+test('citation-free JSON retries as cited prose and extracts a grounded draft',async()=>{
+  const responses=[{status:'completed',output:[{content:[{type:'output_text',text:JSON.stringify(raw)}]}]},
+    {status:'completed',output:[{content:[{type:'output_text',text:'Example Rye: producer states 50% ABV.',annotations:[{type:'url_citation',url:source}]}]}]},
+    {status:'completed',output:[{content:[{type:'output_text',text:JSON.stringify(raw)}]}]}];
+  let calls=0;
+  const result=await researchBottle('Example Rye',{OPENAI_API_KEY:'test'},async()=>Response.json(responses[calls++]));
+  assert.equal(calls,3);assert.equal(result.sources[0].url,source);
+});
