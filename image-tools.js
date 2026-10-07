@@ -173,10 +173,19 @@ export function wireImagesCard(root) {
 // Resolve missing collection photos automatically in paced, bounded batches.
 let automaticPhotoLookup = false;
 let lastAutomaticPhotoLookup = 0;
-export async function autoBottlePhotos() {
+export async function autoBottlePhotos(onUpdate) {
   if (automaticPhotoLookup || Date.now() - lastAutomaticPhotoLookup < 60000) return false;
   automaticPhotoLookup = true; lastAutomaticPhotoLookup = Date.now();
-  try { const result = await api.enrichImages({limit:3,bottles_only:true}); return result.results?.some(r=>r.status === "ok") || false; }
+  try {
+    let changed=false;
+    // Continue through small batches so later bottles do not wait for another visit.
+    for(let batch=0;batch<8;batch++) {
+      const result=await api.enrichImages({limit:3,bottles_only:true});
+      if(result.results?.some(r=>r.status === "ok")) { changed=true; await onUpdate?.(); }
+      if(result.processed<3) break;
+    }
+    return changed;
+  }
   catch { return false; }
   finally { automaticPhotoLookup = false; }
 }

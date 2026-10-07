@@ -44,7 +44,7 @@ export async function renderSpirits() {
   document.getElementById("spiritsSort").value = state.sort;
   await loadResults();
   wire();
-  autoBottlePhotos().then(changed=>{ if (changed && view.classList.contains("active") && state.tab === "bottles") loadResults(); });
+  autoBottlePhotos(async()=>{ if (view.classList.contains("active") && state.tab === "bottles") await loadResults(); });
 }
 
 async function loadResults() {

@@ -2,7 +2,7 @@ import { REACTIONS, sourcePreferences, sourcePreferenceFit } from "./source-pref
 import { enrichBookImage } from "./book-images.js";
 import { lookupBottleBook } from "./bottle-blue-book.js";
 import { researchFetch } from "./bottle-research.js";
-import { withBottleImage } from "./bottle-images.js";
+import { withBottleImage, verifiedBottleImage } from "./bottle-images.js";
 import { VERIFIED_DRINKS } from "./verified-ratings.js";
 import { QUESTIONS, AXES, AXIS_LABELS, validateAnswers, parseAnswers, observations, scorePour, tastingEvidence } from "./pour-model.js";
 import { buildPalateProfile, scoreMatch } from "./palate-engine.js";
@@ -1168,10 +1168,15 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 /** Bottles still missing a photo — the ones actually showing "No photo yet". */
 async function bottleSubjects(env) {
   const rows = await all(env,
-    `SELECT id, name, brand FROM bottles
+    `SELECT id, name, brand, category, catalog_id FROM bottles
      WHERE image_url IS NULL OR image_url = '' OR image_source = 'auto_lookup'
      ORDER BY id`);
-  return rows.filter(r => !withBottleImage(r).image_url).map((r) => ({ kind: "bottle", id: String(r.id), name: r.name, producer: r.brand }));
+  const records=await catalog(env);
+  return rows.map(r => {
+    const link=linkCatalogRecord(records,r);
+    const page=link && link.how !== 'close' ? link.record.expert?.producer_url : null;
+    return {kind:'bottle',id:String(r.id),name:r.name,producer:r.brand,page,verifyPageIdentity:true};
+  });
 }
 
 /**
@@ -1309,10 +1314,10 @@ async function enrichImages(request, env) {
   const scope = b.scope === "all" ? "all" : "visible";
 
   const attempted = await all(env, "SELECT subject_kind, subject_id, status, match_reason FROM image_lookups");
-  // Keep saved photos. Recheck older unresolved lookups once with Blue Book;
+  // Keep saved photos. Recheck older unresolved lookups once with verified sources;
   // subsequent ambiguous matches wait for confirmation unless explicitly retried.
   const skip = new Set(
-    attempted.filter((r) => !(retryFailed && r.status === "failed") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Blue Book:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
+    attempted.filter((r) => !(retryFailed && r.status === "failed") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Image lookup v3:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
   );
   const queue = (await imageSubjects(env, scope))
     .filter((s) => !skip.has(`${s.kind}:${s.id}`) && (!b.bottles_only || s.kind === "bottle") && (!b.bottle_id || (s.kind === "bottle" && Number(s.id) === Number(b.bottle_id))))
@@ -1320,8 +1325,9 @@ async function enrichImages(request, env) {
 
   const results = [];
   for (const [i, subject] of queue.entries()) {
-    if (i > 0) await sleep(OFF_SEARCH_SPACING_MS);
-    const r = await enrichBookImage(subject);
+    if (i > 0 && !verifiedBottleImage(subject)) await sleep(OFF_SEARCH_SPACING_MS);
+    const r = await enrichBookImage(subject,{assetFetch:(path,options)=>env.ASSETS.fetch(new Request(new URL(path,env._origin),options))});
+    r.match_reason=`Image lookup v3: ${r.match_reason || ''}`;
     if (r.status === "ok") {
       try {
         r.r2_key = await storeSubjectImage(env, subject, r.mime, r.buf);

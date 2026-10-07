@@ -58,6 +58,8 @@ fs.writeFileSync(path.join(dist, "index.html"), html);
 
 for (const f of ["manifest.json", "icon.svg"]) fs.copyFileSync(path.join(root, f), path.join(dist, f));
 
+fs.cpSync(path.join(root, "bottle-photo-assets"), path.join(dist, "bottle-photo-assets"), {recursive:true});
+
 const precache = ["/", "/index.html", "/manifest.json", "/icon.svg", ...allAssets];
 const version = hash(JSON.stringify(precache) + html);
 const sw = read("sw.js")
