@@ -437,3 +437,18 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); ou
 .tasting-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 
 .td-verdict-icon { display: block; font-size: 20px; line-height: 1.1; }
+
+/* Researched tasting notes. Rendered as labelled descriptor rows rather than a
+   paragraph: they ARE discrete data, and the label/value split makes nose vs
+   palate scannable one-handed without reading a block of prose. */
+.pick-notes { margin-top: 8px; }
+.note-row { display: flex; gap: 8px; font-size: 12.5px; line-height: 1.45; margin-bottom: 3px; }
+.note-label {
+  flex: 0 0 44px; font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--ink-faint); padding-top: 2px;
+}
+.note-vals { color: var(--ink-soft); }
+.note-aside { font-size: 12.5px; color: var(--ink-soft); margin: 6px 0 0; line-height: 1.4; font-style: italic; }
+/* Attribution is deliberately always visible: these are someone else's words. */
+.note-src { font-size: 11px; color: var(--ink-faint); margin: 6px 0 0; }
+.note-src a { color: var(--accent-deep); }

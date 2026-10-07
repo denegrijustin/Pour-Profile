@@ -257,13 +257,29 @@ export async function gatherCandidates(record, { fetchImpl = fetch } = {}) {
   const candidates = [...await searchOpenFoodFacts(record, { fetchImpl })];
   if (!candidates.length) notes.push("no Open Food Facts match");
 
-  // A real producer/product page, if the record ever gets one. Today every
-  // record's only URL is a Bing search, which is skipped by design.
-  const page = record.sources?.[0]?.url || record.image?.source_url || record.image?.primary_url;
+  // A real product page. `record.page` is the curated URL, which is the only
+  // reliable source here: every URL shipped in the research export is a Bing
+  // image-search link, skipped below by design.
+  const page = record.page || record.sources?.[0]?.url || record.image?.source_url || record.image?.primary_url;
   if (page && /^https?:/i.test(page) && !isSearchEnginePage(page)) {
     try {
       const html = await fetchText(page, fetchImpl);
-      candidates.push(...scorePageCandidates(extractImageCandidates(html, page), record));
+      const fromPage = scorePageCandidates(extractImageCandidates(html, page), record);
+      // A curated page was chosen BY NAME for this exact bottle, so its product
+      // shot is trustworthy even when the filename scores poorly -- CDN paths are
+      // often opaque hashes that no name matcher can read. The page having been
+      // verified is the evidence; the URL string is not.
+      if (record.page) {
+        for (const c of fromPage) {
+          c.curated = true;
+          // Lift above the accept bar while PRESERVING the ranking between
+          // candidates: flooring them all to one value would let a page banner
+          // tie with the product shot, and whichever landed first would win.
+          c.score = 0.8 + Math.min(c.score, 1) * 0.19;
+          c.coverage = Math.max(c.coverage, 0.8);
+        }
+      }
+      candidates.push(...fromPage);
     } catch (err) {
       notes.push(`source page unreadable: ${String(err.message || err)}`);
     }
