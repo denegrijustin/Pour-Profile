@@ -18,7 +18,7 @@ test('uses actual web-search output and refuses incomplete results',async()=>{
   let payload;
   const fake=async(url,opts)=>{payload=JSON.parse(opts.body);return Response.json({status:'completed',output:[{type:'web_search_call',action:{sources:[{url:source}]}},{content:[{type:'output_text',text:JSON.stringify(raw)}]}]});};
   const result=await researchBottle('Example Rye',{OPENAI_API_KEY:'test'},fake);
-  assert.equal(result.name,'Example Rye'); assert.equal(payload.store,false); assert.equal(payload.tools[0].type,'web_search');
+  assert.equal(result.name,'Example Rye'); assert.equal(payload.store,false); assert.ok(payload.input);
   await assert.rejects(()=>researchBottle('x',{OPENAI_API_KEY:'test'},async()=>Response.json({status:'incomplete'})),/finish/);
 });
 test('adoption saves researched details and image bytes without replacing user photos',async()=>{
@@ -37,11 +37,14 @@ test('adoption saves researched details and image bytes without replacing user p
   assert.equal(db.prepare('SELECT image_url FROM bottles WHERE id=?').get(result.bottle_id).image_url,'/my-photo');
 });
 
-test('citation-free JSON retries as cited prose and extracts a grounded draft',async()=>{
-  const responses=[{status:'completed',output:[{content:[{type:'output_text',text:JSON.stringify(raw)}]}]},
-    {status:'completed',output:[{content:[{type:'output_text',text:'Example Rye: producer states 50% ABV.',annotations:[{type:'url_citation',url:source}]}]}]},
+test('cited prose is formatted without a second web search',async()=>{
+  const responses=[{status:'completed',output:[{content:[{type:'output_text',text:'Example Rye: producer states 50% ABV.',annotations:[{type:'url_citation',url:source}]}]}]},
     {status:'completed',output:[{content:[{type:'output_text',text:JSON.stringify(raw)}]}]}];
-  let calls=0;
-  const result=await researchBottle('Example Rye',{OPENAI_API_KEY:'test'},async()=>Response.json(responses[calls++]));
-  assert.equal(calls,3);assert.equal(result.sources[0].url,source);
+  const payloads=[];
+  const result=await researchBottle('Example Rye',{OPENAI_API_KEY:'test'},async(url,opts)=>{payloads.push(JSON.parse(opts.body));return Response.json(responses[payloads.length-1]);});
+  assert.equal(payloads.length,2); assert.equal(payloads[0].tools[0].type,'web_search'); assert.equal(payloads[1].tools,undefined);
+  assert.equal(result.sources[0].url,source);
+});
+test('quota failures explain API billing without exposing provider text',async()=>{
+  await assert.rejects(()=>researchBottle('Example',{OPENAI_API_KEY:'test'},async()=>Response.json({error:{code:'insufficient_quota',message:'private'}},{status:429})),/API credits/);
 });
