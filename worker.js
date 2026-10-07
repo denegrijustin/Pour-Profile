@@ -1,5 +1,6 @@
 import { REACTIONS, sourcePreferences, sourcePreferenceFit } from "./source-preferences.js";
-import { researchBottle, researchFetch } from "./bottle-research.js";
+import { lookupBottleBook } from "./bottle-blue-book.js";
+import { researchFetch } from "./bottle-research.js";
 import { withBottleImage } from "./bottle-images.js";
 import { VERIFIED_DRINKS } from "./verified-ratings.js";
 import { QUESTIONS, AXES, AXIS_LABELS, validateAnswers, parseAnswers, observations, scorePour, tastingEvidence } from "./pour-model.js";
@@ -2157,14 +2158,17 @@ async function drinkAdopt(request, url, env) {
 async function webBottleResearch(request, env) {
   const b = await body(request);
   const q = typeof b.q === "string" ? b.q.trim() : "";
-  if (q.length < 3 || q.length > 160) return json({error:"Enter a bottle name between 3 and 160 characters."},400);
-  if (!env.OPENAI_API_KEY) return json({error:"Web bottle lookup needs the OPENAI_API_KEY secret on the Worker."},503);
+  if (q.length < 3 || q.length > 500) return json({error:"Enter a bottle name between 3 and 500 characters."},400);
   if (!env.PHOTOS) return json({error:"Web bottle lookup needs the bottle photo storage binding."},503);
   try {
-    const draft = await researchBottle(q,env);
+    const lookup = await lookupBottleBook(q,b.source_url);
+    if(!lookup.draft) return json({found:false,...lookup});
+    const draft=lookup.draft;
     if (!draft) return json({found:false, message:"No specific bottle verified. Include the brand, expression and vintage or age."});
     const id = crypto.randomUUID();
-    const image = await enrichOne({id,name:draft.name,producer:draft.brand,page:draft.producer_url,verifyPageIdentity:true},{fetchImpl:researchFetch});
+    let image={status:"no_match"};
+    if(draft.source_image_url) try {image={status:"ok",...await downloadImage(draft.source_image_url,researchFetch),source_page:draft.producer_url};} catch {}
+    else image = await enrichOne({id,name:draft.name,producer:draft.brand,page:draft.producer_url,verifyPageIdentity:true},{fetchImpl:researchFetch});
     let preview = null;
     if (image.status === "ok") {
       await env.PHOTOS.put(`research/${id}/image`,image.buf,{httpMetadata:{contentType:image.mime}});
@@ -2173,7 +2177,7 @@ async function webBottleResearch(request, env) {
     await env.PHOTOS.put(`research/${id}/draft`,JSON.stringify({draft,image: image.status === "ok" ? {mime:image.mime,source_page:image.source_page} : null,created:Date.now()}));
     return json({found:true,research_id:id,draft:{...draft,image_url:preview},sources:draft.sources,image_status:image.status,image_note:image.status === "ok" ? "Confirm the image matches your bottle." : "No confident bottle image found. You can add your own photo after saving."});
   } catch (error) {
-    const safe=/^(Web lookup|No verifiable sources)/.test(error?.message || "");
+    const safe=/^(Bottle lookup|Web lookup|No verifiable sources)/.test(error?.message || "");
     return json({error:safe ? error.message : "Bottle research could not finish. Please try again."},502);
   }
 }
@@ -2193,8 +2197,11 @@ async function adoptWebBottle(request, env, url) {
   if(!response.ok) return response;
   const detail=await response.json();
   if(existing) {
+    const fill=['brand','expression','proof','abv','age_statement','bottle_size_ml','varietal','vintage'];
+    const values=fill.map(key=>draft[key] ?? null);
+    await run(env,`UPDATE bottles SET ${fill.map(key=>`${key}=COALESCE(NULLIF(${key},''),?)`).join(',')} WHERE id=?`,...values,existing.id);
     const attrs=safeParse(existing.category_attrs,{});
-    attrs.web_research=draft.category_attrs.web_research;
+    attrs.web_research={...draft.category_attrs.web_research,flavor_terms:draft.flavor_terms?.length?draft.flavor_terms:attrs.web_research?.flavor_terms || []};
     await run(env,"UPDATE bottles SET category_attrs=?, description=CASE WHEN description IS NULL OR description='' OR data_source='web_research' THEN ? ELSE description END WHERE id=?",JSON.stringify(attrs),draft.description,existing.id);
   }
   for(const review of draft.reviews || []) {

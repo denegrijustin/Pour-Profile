@@ -8,7 +8,7 @@ export function sourcePreferences(rows, records) {
   return [...latest.values()].map(row=>{
     const own=parse(row.category_attrs).web_research;
     const rec=records.find(r=>r.id===row.catalog_id) || records.find(r=>r.name.toLowerCase()===row.bottle_name?.toLowerCase());
-    const terms=own?.flavor_terms || rec?.expert?.flavor_terms || [];
+    const terms=own?.flavor_terms?.length ? own.flavor_terms : rec?.expert?.flavor_terms || [];
     return {name:row.bottle_name,category:row.bottle_category,rating:row.rating,tags:termsToTags(terms),sources:own?.sources || [],basis:'sourced tasting notes'};
   }).filter(p=>p.tags.length && (p.rating>=7 || p.rating<=4));
 }

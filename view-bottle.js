@@ -118,7 +118,7 @@ export async function renderBottleDetail(id, dispatchNav) {
 
     ${isWine ? wineMatchHtml(data.wineMatch) : `${decisionBannerHtml(match)}${whyConcernsHtml(match)}${sourcedNote}`}
 
-    <button class="btn btn-secondary btn-block" id="researchExistingBottle">Find details & image</button>
+    <button class="btn btn-secondary btn-block" id="researchExistingBottle">Find details & image on Bottle Blue Book</button>
     <p class="field-hint" id="researchExistingStatus" role="status"></p>
     <div class="section-title"><h2>Details</h2></div>
     <div class="card"><dl class="spec-grid">${specs.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(String(v))}</dd></div>`).join("")}</dl></div>
@@ -160,7 +160,7 @@ export async function renderBottleDetail(id, dispatchNav) {
       if(!btn.isConnected) return;
       if(!result.found) {status.textContent=result.message;return;}
       if(result.draft.name.trim().toLowerCase()!==bottle.name.trim().toLowerCase()) {status.textContent="Research found a different bottle. Use Add Drink to review it separately.";return;}
-      renderDraftForm({...result.draft,research_id:result.research_id,image_note:result.image_note},currentDispatchNav,{source:"web research",confidence:"medium",sourceUrl:result.sources[0].url},false);
+      renderDraftForm({...result.draft,research_id:result.research_id,image_note:result.image_note},currentDispatchNav,{source:"Bottle Blue Book",confidence:"medium",sourceUrl:result.sources[0].url},false);
     } catch(err) {if(status.isConnected) status.textContent=err.message;}
     finally {btn.disabled=false;}
   };

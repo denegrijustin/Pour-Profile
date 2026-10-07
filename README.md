@@ -8,7 +8,7 @@ The Profile tab shows category counts, average ratings and enjoyed flavor levels
 
 1. Back up the existing D1 database using Cloudflare D1 Time Travel/export.
 2. Apply **only** `migrations/0010_full_pour_profiles.sql` to the existing database. It preserves profile IDs, tastings, statuses and wine preferences. JDAD keeps profile 1; Lady keeps profile 2. Old `spirits`, `wine` and `justin` client values are mapped to their corresponding person.
-3. Set the existing Worker's `OPENAI_API_KEY` secret to enable photo analysis. This key is server-side only. Image analysis uses the OpenAI Responses API with `store: false`; images are not persisted in D1/R2 by this feature. Photos require internet connectivity and can be sent to OpenAI when requested from Discover.
+3. Set the existing Worker's `OPENAI_API_KEY` secret (for optional AI/photo features) to enable photo analysis. This key is server-side only. Image analysis uses the OpenAI Responses API with `store: false`; images are not persisted in D1/R2 by this feature. Photos require internet connectivity and can be sent to OpenAI when requested from Discover.
 4. Run `npm install`, `npm test`, `npm run build`, then `npx wrangler deploy`. The GitHub-connected production build can deploy the code after the migration is applied.
 
 Offline tasting queues retain the original person and request ID, so switching profiles cannot change attribution and retries do not duplicate a saved pour. Existing questionnaires are stored with their version and visible in the bottle timeline and pour history. Unknown profile slugs and attempts to edit another person's tasting are rejected. The person switcher is for this shared household app; it is not an authentication system.
@@ -193,23 +193,13 @@ migrations.
 - Category-specific attribute editing UI for tequila/mezcal/scotch/rum/gin fields (`category_attrs` is modeled and stored; no dedicated edit form yet)
 - Per-field "user corrected" provenance tracking in the UI (the `user_edited_fields` column is populated on every edit; nothing surfaces it yet)
 
-### Web bottle lookup
+### Bottle lookup
 
-In **Add & rate a drink → Manual**, enter the brand and expression, then choose
-**Search the web for this bottle**. The Worker searches producer and retailer
-sources through the OpenAI Responses web-search tool and summarizes known facts
-into the existing bottle fields. Unknown facts stay blank; sourced descriptions
-never become your personal tasting answers. Review the identity, linked sources,
-and image before saving. A confidently matched image is downloaded into the
-existing private photo storage; existing photos are preserved. If no image can
-be verified, the bottle can still be saved and photographed later.
-
-Requires the existing `OPENAI_API_KEY` Worker secret with API billing and web-search
-model access, plus the `PHOTOS` R2 binding. No Google key is needed. The default
-model is `gpt-4.1-mini`; `BOTTLE_RESEARCH_MODEL` can override it with a compatible
-Responses web-search model. Lookups run only when requested, not on each keystroke,
-and incur OpenAI search/model usage. Server drafts expire for adoption after 24
-hours. The lookup uses existing D1 tables; no database migration is needed.
+In Add Drink, enter a name or paste a Bottle Blue Book bottle-page URL and choose
+**Search Bottle Blue Book**. Public bottle details and photos are imported without
+AI. Review the exact expression/year and image before saving. Requires the `PHOTOS`
+R2 binding, but no OpenAI or search API key. Drafts expire after 24 hours and use
+the existing D1 tables; no database migration is needed.
 
 Personal input is now a four-step Bad / OK / Like / Love reaction. The historical
 numeric values remain internally for compatibility, but there is no numeric
@@ -218,6 +208,10 @@ external reviews; only compatible 100-point scores are averaged, and other scale
 are shown separately. Discover can sort by highest external reviews. Recommendations
 compare source-stated flavors with the latest reaction to each bottle in the active
 person's history, giving Love more weight than Like and penalizing Bad overlaps.
-Web research stores source-stated flavor terms and exact-expression numeric reviews
-for this learning flow. Existing bottles offer **Find details & image** for review
+Bottle Blue Book adds community overall ratings; flavor terms continue to come
+from separately attributed producer and critic descriptions. Existing bottles offer **Find details & image** for review
 and enrichment without replacing a personal photo.
+
+### Bottle Blue Book lookup
+
+Add Drink → Search Bottle Blue Book reads public search and bottle pages on demand without an OpenAI key. Paste a Bottle Blue Book bottle URL or confirm an expression/year from search results. Details, photo bytes, source link and available community overall rating are saved through the existing research-draft flow. Images are copied into the app's photo storage only when confirmed; personal photos are preserved. Unknown fields stay blank and market estimates are labeled separately from MSRP. Flavor preferences continue to use attributed producer/critic descriptions, not community score categories. The photo-storage binding is required. Search is limited to three pages per lookup and may not cover the site's full catalog.
