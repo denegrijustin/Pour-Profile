@@ -41,7 +41,7 @@ export async function researchBottle(query, env, fetchImpl = fetch) {
   }
   let raw;
   try { raw=JSON.parse(parts.join('').slice(parts.join('').indexOf('{'),parts.join('').lastIndexOf('}')+1)); } catch { throw new Error('Web lookup returned an unreadable result. Please try again.'); }
-  if (raw.found === true && !consulted.size) {
+  if (raw.found === true && !(raw.sources || []).some(s => consulted.has(publicUrl(s.url)))) {
     // Plain prose preserves web citations; JSON-only answers can omit them.
     const evidenceResponse = await fetchImpl('https://api.openai.com/v1/responses', {
       method:'POST', headers:{Authorization:`Bearer ${env.OPENAI_API_KEY}`,'Content-Type':'application/json'}, signal:AbortSignal.timeout(60000),
