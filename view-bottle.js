@@ -106,7 +106,7 @@ export async function renderBottleDetail(id, dispatchNav) {
       ${matchBadgeHtml(match?.matchPercent)}
       <div>
         <div class="rating-display">${externalScore ?? "—"}<span style="font-size:13px;color:var(--ink-soft);font-weight:400">${externalScore!=null ? " / 100 external reviews" : " No scored external reviews"}</span></div>
-        <div class="field-hint">Your reaction: ${bottle.avg_rating != null ? formatRating(bottle.avg_rating) : "Not tried"} · ${bottle.tasting_count || 0} tasting${bottle.tasting_count === 1 ? "" : "s"} logged</div>
+        <div class="field-hint">Your reaction: ${tastings[0]?.rating != null ? formatRating(tastings[0].rating) : "Not tried"} · ${tastings.length} tasting${tastings.length === 1 ? "" : "s"} logged</div>
       </div>
     </div>
 
