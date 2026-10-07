@@ -1,0 +1,50 @@
+# Deploy Pour Profile to Cloudflare Workers.
+#
+# Exists so deploying never depends on having a terminal and a logged-in wrangler
+# on hand: pushing to main ships it. The manual trigger is there for re-running a
+# deploy without a new commit (for example after changing a Cloudflare binding).
+#
+# Requires one repository secret: CLOUDFLARE_API_TOKEN, with the "Edit Cloudflare
+# Workers" template plus D1 edit. Nothing else is read from the environment --
+# account and bindings all come from wrangler.jsonc, which is committed.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# A later push should win rather than race an in-flight deploy, but a running
+# deploy is never cancelled midway -- a half-uploaded Worker is worse than a slow one.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # `npm install`, not `npm ci`: package-lock.json is gitignored in this repo,
+      # so there is no lockfile in the checkout for `ci` to read.
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      # Tests gate the deploy. The suite is fast and entirely offline, and it
+      # covers the things most likely to ship a visible mistake -- wrong-expression
+      # image matching, catalog identity, note attribution.
+      - name: Run tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx wrangler deploy
