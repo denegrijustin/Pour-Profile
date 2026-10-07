@@ -36,9 +36,9 @@ export async function renderScan(dispatchNav) {
     <div id="manualPanel"><label style="margin-top:0">Find a drink in the database</label>
     <input type="search" id="catalogSearch" placeholder="Type any bottle name…" autocomplete="off">
     <button class="btn btn-secondary btn-block" id="webResearchBtn" style="margin-top:8px">Search Bottle Blue Book</button>
-    <p id="webResearchStatus" class="field-hint" role="status">Find bottle details, community ratings and a photo from Bottle Blue Book. You can also paste a bottle-page link.</p>
+    <p id="webResearchStatus" class="field-hint" role="status">Find details, reviews and a photo. A Blue Book bottle-page link works too.</p>
     <div id="catalogResults"></div>
-    <p class="field-hint" style="margin-top:10px">We'll check the reference catalog as you type — but you're not limited to it. Curated ratings cover 10 publishers across the catalog. Scores apply only to the listed bottle and vintage. Anything not listed can be added manually.</p>
+    <p class="field-hint" style="margin-top:10px">Catalog results appear as you type. Can't find it? Add it manually.</p>
     <button class="btn btn-primary btn-block" id="manualNewTopBtn" style="margin-top:10px">✍️ Add a bottle myself</button>
 
     </div><details style="margin-top:14px" id="barcodePanel" hidden>

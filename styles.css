@@ -632,3 +632,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { 
  .field-row>* { min-width:0; }
  .tasting-body,.pick-body,.bottle-card .body { min-width:0; overflow-wrap:anywhere; }
 }
+
+@media(max-width:599px) {
+ .add-flow-heading .eyebrow,.flow-steps { display:none; }
+ .add-flow-heading h2 { margin-top:0; font-size:22px; }
+ .add-flow-heading p { font-size:13px; margin:6px 0; }
+}

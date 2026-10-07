@@ -1309,10 +1309,8 @@ async function enrichImages(request, env) {
   const scope = b.scope === "all" ? "all" : "visible";
 
   const attempted = await all(env, "SELECT subject_kind, subject_id, status, match_reason FROM image_lookups");
-  // Never re-run a subject that already resolved. `failed` is the only status
-  // worth retrying — scoring is deterministic, so re-running a `needs_review`
-  // subject just produces the same weak candidates again; those are resolved by
-  // the user confirming one, not by another pass.
+  // Keep saved photos. Recheck older unresolved lookups once with Blue Book;
+  // subsequent ambiguous matches wait for confirmation unless explicitly retried.
   const skip = new Set(
     attempted.filter((r) => !(retryFailed && r.status === "failed") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Blue Book:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
   );
