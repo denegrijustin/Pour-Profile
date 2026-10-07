@@ -638,3 +638,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { 
  .add-flow-heading h2 { margin-top:0; font-size:22px; }
  .add-flow-heading p { font-size:13px; margin:6px 0; }
 }
+/* Small photo slots cannot contain the full collection placeholder caption. */
+.rating-photo { overflow:hidden; }
+.rating-photo .photo-placeholder { height:100%; }
+.rating-photo .photo-placeholder svg { width:28px; height:56px; }
+.rating-photo .photo-placeholder span { display:none; }
