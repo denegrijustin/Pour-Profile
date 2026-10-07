@@ -420,7 +420,9 @@ export async function gatherCandidates(record, { fetchImpl = fetch } = {}) {
       const fromPage = scorePageCandidates(extractImageCandidates(html, page), record);
       // Trust the page only when it names a product. A brand homepage shows a
       // hero shot that belongs to no particular expression.
-      const trusted = record.page === page && isProductPage(page);
+      const title=(html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)||[])[1] || "";
+      const identity=scoreNameMatch(record.name,record.producer,title);
+      const trusted = record.page === page && isProductPage(page) && (!record.verifyPageIdentity || (identity.coverage>=0.8 && identity.precision>=0.8));
       for (const c of fromPage) {
         c.sourcePage = page;
         if (trusted) c.citedProductPage = true;

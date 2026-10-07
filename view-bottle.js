@@ -1,3 +1,4 @@
+import { renderDraftForm } from "./view-scan.js";
 import { savedAnswersHtml } from "./questionnaire-form.js";
 import { api, downscaleImage } from "./api.js";
 import {
@@ -34,6 +35,8 @@ export async function renderBottleDetail(id, dispatchNav) {
   }).catch(()=>{});
   const external = await api.externalRatings(id).then((r) => r.external_ratings || []).catch(() => []);
 
+  const hundredReviews=external.filter(r=>String(r.scale)==="100" && r.score!=null);
+  const externalScore=hundredReviews.length ? Math.round(hundredReviews.reduce((sum,r)=>sum+Number(r.score),0)/hundredReviews.length) : expert?.critic_summary?.avg100 ?? null;
   const isWine = bottle.category === "wine";
   // Wine and spirits don't share meaningful specs — don't show mash bill for a
   // Sauvignon Blanc or a varietal for a bourbon.
@@ -102,8 +105,8 @@ export async function renderBottleDetail(id, dispatchNav) {
     <div style="display:flex;align-items:center;gap:16px;margin:14px 0">
       ${matchBadgeHtml(match?.matchPercent)}
       <div>
-        <div class="rating-display">${bottle.avg_rating != null ? formatRating(bottle.avg_rating) : "—"}<span style="font-size:13px;color:var(--ink-soft);font-weight:400"> / 10 avg</span></div>
-        <div class="field-hint">${bottle.tasting_count || 0} tasting${bottle.tasting_count === 1 ? "" : "s"} logged</div>
+        <div class="rating-display">${externalScore ?? "—"}<span style="font-size:13px;color:var(--ink-soft);font-weight:400">${externalScore!=null ? " / 100 external reviews" : " No scored external reviews"}</span></div>
+        <div class="field-hint">Your reaction: ${bottle.avg_rating != null ? formatRating(bottle.avg_rating) : "Not tried"} · ${bottle.tasting_count || 0} tasting${bottle.tasting_count === 1 ? "" : "s"} logged</div>
       </div>
     </div>
 
@@ -115,6 +118,8 @@ export async function renderBottleDetail(id, dispatchNav) {
 
     ${isWine ? wineMatchHtml(data.wineMatch) : `${decisionBannerHtml(match)}${whyConcernsHtml(match)}${sourcedNote}`}
 
+    <button class="btn btn-secondary btn-block" id="researchExistingBottle">Find details & image</button>
+    <p class="field-hint" id="researchExistingStatus" role="status"></p>
     <div class="section-title"><h2>Details</h2></div>
     <div class="card"><dl class="spec-grid">${specs.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(String(v))}</dd></div>`).join("")}</dl></div>
     ${bottle.image_source_url ? `<p class="field-hint"><a href="${escapeHtml(bottle.image_source_url)}" target="_blank" rel="noopener noreferrer">Producer bottle photo</a> · Packaging may vary by release.</p>` : ""}
@@ -123,7 +128,7 @@ export async function renderBottleDetail(id, dispatchNav) {
     ${expertNotesHtml(expert, notesMatch)}
     ${expert && catalogLink && catalogLink.how === "close" ? `<p class="field-hint">Notes shown are for <strong>${escapeHtml(catalogLink.name)}</strong>, the closest catalog match to this bottle's name.</p>` : ""}
 
-    <div class="section-title"><h2>Outside Opinion</h2><span class="link" data-action="add-external">+ Add</span></div>
+    <div class="section-title"><h2>External Reviews</h2><span class="link" data-action="add-external">+ Add</span></div>
     <div class="card">
       ${external.length ? external.map((r) => `
         <div class="ext-rating">
@@ -147,6 +152,18 @@ export async function renderBottleDetail(id, dispatchNav) {
     <div class="card"><div class="tag-cloud">${flavorExperience.map(([f, n]) => `<span class="tag-chip" style="cursor:default">${escapeHtml(titleize(f))} × ${n}</span>`).join("")}</div></div>` : ""}
   `;
 
+  document.getElementById("researchExistingBottle").onclick=async()=>{
+    const btn=document.getElementById("researchExistingBottle"),status=document.getElementById("researchExistingStatus");
+    btn.disabled=true;status.textContent="Finding sourced details and a matching image…";
+    try {
+      const result=await api.researchBottle(bottle.name);
+      if(!btn.isConnected) return;
+      if(!result.found) {status.textContent=result.message;return;}
+      if(result.draft.name.trim().toLowerCase()!==bottle.name.trim().toLowerCase()) {status.textContent="Research found a different bottle. Use Add Drink to review it separately.";return;}
+      renderDraftForm({...result.draft,research_id:result.research_id,image_note:result.image_note},currentDispatchNav,{source:"web research",confidence:"medium",sourceUrl:result.sources[0].url},false);
+    } catch(err) {if(status.isConnected) status.textContent=err.message;}
+    finally {btn.disabled=false;}
+  };
   wireBottleDetail(bottle);
 }
 
@@ -349,7 +366,7 @@ function openExternalRatingSheet(bottle) {
   const isWine = bottle.category === "wine";
   const sources = sourcesFor(bottle.category);
   openSheet(`
-    <div class="sheet-header"><h2>Outside Opinion</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
+    <div class="sheet-header"><h2>External Reviews</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
     <p class="field-hint">All structured — no free text, so it stays comparable and can feed scoring.</p>
 
     <label>Source</label>

@@ -30,8 +30,8 @@ export async function renderProfile() {
     ${fullRes ? `<div class="card"><h2>${escapeHtml(fullRes.person)}'s Full Pour Profile</h2><p class="field-hint">Your ratings stay personal. Shared flavors carry across categories; same-category and same-style pours carry more weight.</p>
       <div class="profile-category-grid">${POUR_CATEGORIES.map(category => {
         const c = fullRes.counts.find(c => c.category===category);
-        return `<div><strong>${titleize(category)}</strong><div>${c?.pours || 0} rated pours</div><span class="field-hint">${c ? `${c.average}/10 average` : 'Ready to explore'}</span></div>`;
-      }).join('')}</div><h3>Levels you enjoy</h3>${fullRes.axes.filter(a => a.target!=null).map(a => `<div class="profile-axis"><span>${escapeHtml(a.label)}</span><strong>${a.target}/10</strong><span class="field-hint">${a.samples} pours · ${a.categories.map(titleize).join(', ')}</span></div>`).join('') || '<p class="field-hint">Answer tasting questions when you log a pour to reveal the flavor levels you enjoy.</p>'}</div>` : ''}
+        return `<div><strong>${titleize(category)}</strong><div>${c?.pours || 0} rated pours</div><span class="field-hint">${c ? `${c.pours} reactions recorded` : 'Ready to explore'}</span></div>`;
+      }).join('')}</div><h3>Levels you enjoy</h3>${fullRes.axes.filter(a => a.target!=null).map(a => `<div class="profile-axis"><span>${escapeHtml(a.label)}</span><strong>${a.target}/10</strong><span class="field-hint">${a.samples} pours · ${a.categories.map(titleize).join(', ')}</span></div>`).join('') || '<p class="field-hint">Like or love bottles to learn from their sourced tasting notes. Optional tasting details refine the flavor levels.</p>'}</div>` : ''}
     <div class="card">
       <h2 style="margin-bottom:2px">Your Palate</h2>
       <p class="field-hint">Learned from your tastings, ratings, and status tags — every number here traces back to something you actually logged.</p>

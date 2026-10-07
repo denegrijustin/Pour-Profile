@@ -33,7 +33,7 @@ export async function renderSpirits() {
       <select id="spiritsSort">
         <option value="newest">Newest</option>
         <option value="alphabetical">Alphabetical</option>
-        <option value="highest_rated">Highest Rated</option>
+        <option value="highest_rated">Highest external reviews</option>
         <option value="highest_match">Highest Match</option>
         <option value="proof">Proof</option>
       </select>

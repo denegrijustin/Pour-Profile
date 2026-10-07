@@ -23,13 +23,13 @@ export async function renderScan(dispatchNav) {
   handlingCode = false;
   const view = el("view-scan");
   view.innerHTML = `
-    <div class="add-flow-heading"><span class="eyebrow">BUILD YOUR POUR PROFILE</span><h2>Add & rate a drink</h2><p>Find your bottle, then answer ten questions tailored to your drink.</p><div class="flow-steps"><span class="active">01 · Find drink</span><span>02 · Rate your pour</span></div></div>
+    <div class="add-flow-heading"><span class="eyebrow">BUILD YOUR POUR PROFILE</span><h2>Add & rate a drink</h2><p>Find your bottle, then choose Bad, OK, Like or Love.</p><div class="flow-steps"><span class="active">01 · Find drink</span><span>02 · Your reaction</span></div></div>
     <div class="add-methods">
       <button class="btn btn-primary" id="chooseManual">Manual</button>
       <button class="btn btn-secondary" id="chooseBarcode">Barcode</button>
       <button class="btn btn-secondary" id="chooseLabel">Label photo</button>
     </div>
-    <label class="add-intent"><input type="checkbox" id="rateAfterAdd" checked> Rate this drink after adding <span>10 tasting questions</span></label>
+    <label class="add-intent"><input type="checkbox" id="rateAfterAdd" checked> React to this drink after adding <span>Bad / OK / Like / Love</span></label>
     <div id="labelPanel" hidden><label>Photograph or upload one bottle label</label>
       <input id="labelPhoto" type="file" accept="image/*" capture="environment">
       <p id="labelStatus" class="field-hint">We’ll read the label, then let you confirm the drink.</p></div>
@@ -449,7 +449,7 @@ function renderStoreModeResult(detail, dispatchNav) {
   document.getElementById("storeViewBtn").addEventListener("click", () => dispatchNav("bottle", bottle.id));
 }
 
-function renderDraftForm(draft, dispatchNav, provenance, shouldRate = true, { offerLink = false } = {}) {
+export function renderDraftForm(draft, dispatchNav, provenance, shouldRate = true, { offerLink = false } = {}) {
   draft = draft || {};
   const view = el("view-scan");
   view.innerHTML = `
@@ -465,7 +465,7 @@ function renderDraftForm(draft, dispatchNav, provenance, shouldRate = true, { of
     <select id="draftCategory">${draft.category === "unknown" ? `<option value="" selected>Choose category</option>` : ""}${CATEGORIES.map((c) => `<option value="${c.id}" ${c.id === draft.category ? "selected" : ""}>${c.label}</option>`).join("")}</select>
     <label>Barcode</label><input type="text" id="draftBarcode" value="${escapeHtml(draft.barcode || "")}" readonly>
     ${draft.description ? `<label>Description (from source)</label><textarea id="draftDescription">${escapeHtml(draft.description)}</textarea>` : ""}
-    <button class="btn btn-primary btn-block" id="draftSaveBtn" style="margin-top:16px">${shouldRate ? "Continue to 10 tasting questions →" : "Save to collection"}</button>
+    <button class="btn btn-primary btn-block" id="draftSaveBtn" style="margin-top:16px">${shouldRate ? "Continue to Bad / OK / Like / Love →" : "Save to collection"}</button>
     ${offerLink && draft.barcode ? `<button class="btn btn-secondary btn-block" id="draftLinkBtn" style="margin-top:8px">This is a bottle I already have — link barcode</button>` : ""}
   `;
   document.getElementById("draftLinkBtn")?.addEventListener("click", () => renderLinkPicker(draft.barcode, dispatchNav, shouldRate));

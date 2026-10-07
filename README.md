@@ -210,3 +210,14 @@ model is `gpt-4.1-mini`; `BOTTLE_RESEARCH_MODEL` can override it with a compatib
 Responses web-search model. Lookups run only when requested, not on each keystroke,
 and incur OpenAI search/model usage. Server drafts expire for adoption after 24
 hours. The lookup uses existing D1 tables; no database migration is needed.
+
+Personal input is now a four-step Bad / OK / Like / Love reaction. The historical
+numeric values remain internally for compatibility, but there is no numeric
+rating input. Detailed sensory questions are optional. Bottle ratings use sourced
+external reviews; only compatible 100-point scores are averaged, and other scales
+are shown separately. Discover can sort by highest external reviews. Recommendations
+compare source-stated flavors with the latest reaction to each bottle in the active
+person's history, giving Love more weight than Like and penalizing Bad overlaps.
+Web research stores source-stated flavor terms and exact-expression numeric reviews
+for this learning flow. Existing bottles offer **Find details & image** for review
+and enrichment without replacing a personal photo.

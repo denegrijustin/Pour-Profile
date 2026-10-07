@@ -9,7 +9,7 @@ export function escapeHtml(str) {
 export function el(id) { return document.getElementById(id); }
 
 export function formatRating(r) {
-  return r == null ? "—" : Number(r).toFixed(1);
+  return r == null ? "—" : VERDICTS.reduce((best,v)=>Math.abs(v.rating-Number(r))<Math.abs(best.rating-Number(r))?v:best).label;
 }
 
 export function formatDate(d) {
@@ -104,7 +104,7 @@ export function bottleCardHtml(bottle) {
         <div class="name">${escapeHtml(bottle.name)}</div>
         <div class="sub">${escapeHtml(sub)}</div>
         <div class="meta-row">
-          <span>${bottle.avg_rating != null ? `★ ${formatRating(bottle.avg_rating)}` : "Not rated"}</span>
+          <span>${bottle.external_review_score != null ? `Reviews: ${Math.round(bottle.external_review_score)}/100 · ` : ""}${bottle.avg_rating != null ? `You: ${formatRating(bottle.avg_rating)}` : "Not tried"}</span>
           ${(bottle.status_tags || []).includes("favorite") ? '<span title="Favorite">❤️</span>' : ""}
         </div>
       </div>
@@ -142,11 +142,10 @@ export function flavorTagPickerHtml(allTags, selected = []) {
 // each verdict carries the status tag too, so a single tap answers both
 // "how good was it" and "would you have it again".
 export const VERDICTS = [
-  { id: "loved",   icon: "\u{1F929}", label: "Loved it",   rating: 9.0, status: "favorite", tone: "buy" },
-  { id: "liked",   icon: "\u{1F642}", label: "Liked it",   rating: 7.5, status: "like",     tone: "buy" },
-  { id: "fine",    icon: "\u{1F610}", label: "Fine",       rating: 6.0, status: "neutral",  tone: "try" },
-  { id: "meh",     icon: "\u{1F615}", label: "Not for me", rating: 4.0, status: "dislike",  tone: "skip" },
-  { id: "no",      icon: "\u{1F922}", label: "Nope",       rating: 2.0, status: "avoid",    tone: "skip" }
+  { id: "bad", icon: "😕", label: "Bad", rating: 2, status: "dislike", tone: "skip" },
+  { id: "ok", icon: "😐", label: "OK", rating: 6, status: "neutral", tone: "try" },
+  { id: "like", icon: "🙂", label: "Like", rating: 7.5, status: "like", tone: "buy" },
+  { id: "love", icon: "❤️", label: "Love", rating: 9, status: "favorite", tone: "buy" }
 ];
 
 export function verdictPickerHtml(selected = null) {
@@ -159,10 +158,7 @@ export function verdictPickerHtml(selected = null) {
           <span class="verdict-label">${escapeHtml(v.label)}</span>
         </button>`).join("")}
     </div>
-    <div class="verdict-fine" id="verdictFine" hidden>
-      <label for="ratingFine" style="margin:0">Fine-tune <span id="ratingFineValue"></span></label>
-      <input type="range" id="ratingFine" class="wine-range" min="0" max="10" step="0.5" value="7.5">
-    </div>`;
+    `;
 }
 
 /** Legacy precise picker, still used where a considered rating makes sense. */
