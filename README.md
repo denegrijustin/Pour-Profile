@@ -192,3 +192,32 @@ migrations.
 - LLM-assisted free-text tasting note parsing and flavor tag suggestion (`/api/analyze-image` exists for label photos; note-parsing is not yet wired up)
 - Category-specific attribute editing UI for tequila/mezcal/scotch/rum/gin fields (`category_attrs` is modeled and stored; no dedicated edit form yet)
 - Per-field "user corrected" provenance tracking in the UI (the `user_edited_fields` column is populated on every edit; nothing surfaces it yet)
+
+### Web bottle lookup
+
+In **Add & rate a drink → Manual**, enter the brand and expression, then choose
+**Search the web for this bottle**. The Worker searches producer and retailer
+sources through the OpenAI Responses web-search tool and summarizes known facts
+into the existing bottle fields. Unknown facts stay blank; sourced descriptions
+never become your personal tasting answers. Review the identity, linked sources,
+and image before saving. A confidently matched image is downloaded into the
+existing private photo storage; existing photos are preserved. If no image can
+be verified, the bottle can still be saved and photographed later.
+
+Requires the existing `OPENAI_API_KEY` Worker secret with API billing and web-search
+model access, plus the `PHOTOS` R2 binding. No Google key is needed. The default
+model is `gpt-4.1-mini`; `BOTTLE_RESEARCH_MODEL` can override it with a compatible
+Responses web-search model. Lookups run only when requested, not on each keystroke,
+and incur OpenAI search/model usage. Server drafts expire for adoption after 24
+hours. The lookup uses existing D1 tables; no database migration is needed.
+
+Personal input is now a four-step Bad / OK / Like / Love reaction. The historical
+numeric values remain internally for compatibility, but there is no numeric
+rating input. Detailed sensory questions are optional. Bottle ratings use sourced
+external reviews; only compatible 100-point scores are averaged, and other scales
+are shown separately. Discover can sort by highest external reviews. Recommendations
+compare source-stated flavors with the latest reaction to each bottle in the active
+person's history, giving Love more weight than Like and penalizing Bad overlaps.
+Web research stores source-stated flavor terms and exact-expression numeric reviews
+for this learning flow. Existing bottles offer **Find details & image** for review
+and enrichment without replacing a personal photo.

@@ -88,6 +88,7 @@ export async function renderDiscover(dispatchNav) {
       </div>
       <div class="field-row" style="margin:10px 0">
         <select id="discoverSort">
+          <option value="external_reviews"${state.sort === "external_reviews" ? " selected" : ""}>Highest external reviews</option>
           <option value="best_fit"${state.sort === "best_fit" ? " selected" : ""}>Best match for you</option>
           <option value="available"${state.sort === "available" ? " selected" : ""}>Easiest to find</option>
           <option value="price"${state.sort === "price" ? " selected" : ""}>Cheapest first</option>

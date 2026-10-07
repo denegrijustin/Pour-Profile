@@ -1,3 +1,5 @@
+import { REACTIONS, sourcePreferences, sourcePreferenceFit } from "./source-preferences.js";
+import { researchBottle, researchFetch } from "./bottle-research.js";
 import { withBottleImage } from "./bottle-images.js";
 import { VERIFIED_DRINKS } from "./verified-ratings.js";
 import { QUESTIONS, AXES, AXIS_LABELS, validateAnswers, parseAnswers, observations, scorePour, tastingEvidence } from "./pour-model.js";
@@ -65,6 +67,8 @@ async function routeApi(request, url, env) {
   const { pathname } = url;
   const method = request.method;
 
+  if (pathname === "/api/drinks/research" && method === "POST") return webBottleResearch(request, env);
+  if (pathname === "/api/drinks/research/adopt" && method === "POST") return adoptWebBottle(request, env, url);
   if (pathname === "/api/drinks/search" && method === "GET") return drinkSearch(url, env);
   if (pathname === "/api/drinks/adopt" && method === "POST") return drinkAdopt(request, url, env);
   if (pathname === "/api/kansas/search" && method === "GET") return kansasSearchRoute(url, env);
@@ -371,7 +375,7 @@ async function listBottles(url, env) {
   const profileId = activeProfile ? activeProfile.id : 1;
   const varietal = url.searchParams.get("varietal");
 
-  let sql = `SELECT b.*, d.name as distillery_name, d.city as distillery_city, d.state_region as distillery_state, d.country as distillery_country
+  let sql = `SELECT b.*, (SELECT AVG(er.score) FROM external_ratings er WHERE er.bottle_id=b.id AND er.scale='100') AS external_review_score, d.name as distillery_name, d.city as distillery_city, d.state_region as distillery_state, d.country as distillery_country
              FROM bottles b LEFT JOIN distilleries d ON d.id = b.distillery_id WHERE 1=1`;
   const params = [];
   sql += focusClause(activeProfile).sql;
@@ -403,7 +407,7 @@ async function listBottles(url, env) {
 
   let bottles = applyTastingSummary(applyStatus(applyFlavorTags(bottleRows, tagRows), statusRows), summaryRows);
 
-  if (sort === "highest_rated") bottles.sort((a, b) => (b.avg_rating || -1) - (a.avg_rating || -1));
+  if (sort === "highest_rated" || sort === "external_reviews") bottles.sort((a, b) => (b.external_review_score ?? -1) - (a.external_review_score ?? -1));
 
   const profile = palateFromRows([palBottles, tagRows, palTastings, palTastingTags]);
   const brandSignals = brandRows;
@@ -522,7 +526,7 @@ async function computeProfile(env, profileId) {
 }
 
 function fieldsFromBody(b) {
-  const fields = ["name", "brand", "expression", "category", "subcategory", "distillery_id", "origin_country", "origin_state", "age_statement", "proof", "abv", "mash_bill", "barrel_finish", "msrp", "street_price", "release_type", "bottle_size_ml", "barcode", "image_url", "image_source", "image_confidence", "producer_url", "description"];
+  const fields = ["name", "brand", "expression", "category", "subcategory", "distillery_id", "origin_country", "origin_state", "age_statement", "proof", "abv", "mash_bill", "barrel_finish", "msrp", "street_price", "release_type", "bottle_size_ml", "barcode", "image_url", "image_source", "image_confidence", "producer_url", "description", "varietal", "vintage"];
   const out = {};
   for (const f of fields) if (b[f] !== undefined) out[f] = b[f];
   return out;
@@ -639,6 +643,10 @@ async function resolveVenue(env, b) {
 async function createTasting(request, env, url) {
   const profileId = url ? await resolveProfileId(url, env) : 1;
   const b = await body(request);
+  if (b.reaction !== undefined) {
+    if (!Object.hasOwn(REACTIONS,b.reaction)) return json({error:"Choose Bad, OK, Like or Love."},400);
+    b.rating=REACTIONS[b.reaction];
+  }
   if (!b.bottle_id) return json({ error: "bottle_id is required" }, 400);
   const bottle = await first(env, "SELECT category, varietal FROM bottles WHERE id = ?", b.bottle_id);
   if (!bottle) return json({error:"Bottle not found"},404);
@@ -1054,6 +1062,7 @@ async function catalogBrowse(url, env) {
   if (category) records = records.filter(r => r.category === category);
   const results = await personalizedCatalog(url, env, records, ctx);
   const sorters = {
+    external_reviews:(a,b) => (b.expert?.critic_avg ?? -1)-(a.expert?.critic_avg ?? -1),
     best_fit:(a,b) => (b.jd_fit ?? -1)-(a.jd_fit ?? -1),
     alphabetical:(a,b) => a.name.localeCompare(b.name),
     available:(a,b) => String(a.availability || '').localeCompare(String(b.availability || '')),
@@ -1886,7 +1895,7 @@ async function analyzeImage(request, env) {
 
 // ---------- full, person-scoped pour profile and photo recommendations ----------
 function evidenceStatement(profileId) {
-  return [`SELECT t.*, b.category AS bottle_category, b.varietal, b.subcategory
+  return [`SELECT t.*, b.category AS bottle_category, b.varietal, b.subcategory, b.name AS bottle_name, b.brand, b.catalog_id, b.category_attrs
     FROM tastings t JOIN bottles b ON b.id=t.bottle_id WHERE t.profile_id=? AND t.rating IS NOT NULL`, profileId];
 }
 function evidenceFromRows(rows) {
@@ -1910,7 +1919,7 @@ async function scoringContext(env, profileId, extra = []) {
     ["SELECT * FROM wine_palate_dimensions WHERE profile_id = ?", profileId],
     ...extra
   ]);
-  return { evidence: evidenceFromRows(res[0]), legacy: palateFromRows(res.slice(1, 5)), wineRows: res[5], extras: res.slice(6) };
+  return { sourcePreferences: sourcePreferences(res[0],await catalog(env).catch(()=>[])), evidence: evidenceFromRows(res[0]), legacy: palateFromRows(res.slice(1, 5)), wineRows: res[5], extras: res.slice(6) };
 }
 
 /**
@@ -1970,7 +1979,7 @@ async function catalogItem(id, url, env) {
   return json({ item: withImage, expert: await expertNotes(env, rec.id) });
 }
 async function personalizedCatalog(url,env,records,ctx = null) {
-  const { evidence, legacy, wineRows } = ctx || await catalogContext(env, await resolveProfileId(url, env));
+  const { evidence, legacy, wineRows, sourcePreferences: preferences = [] } = ctx || await catalogContext(env, await resolveProfileId(url, env));
   return records.map(r => {
     const candidate = referenceCandidate(r);
     const fit = scorePour(candidate,evidence);
@@ -1991,6 +2000,12 @@ async function personalizedCatalog(url,env,records,ctx = null) {
     } else if (score != null && notes.signal != null) {
       // Sourced flavors nudge a dimension-model score by at most ±5, never override it.
       score = Math.max(0, Math.min(100, Math.round(score + notes.signal * 5)));
+    }
+    const sourceFit=sourcePreferenceFit(r,preferences);
+    if(sourceFit) {
+      score=sourceFit.score;
+      if(sourceFit.reason) why=sourceFit.reason;
+      if(sourceFit.concern) concern=sourceFit.concern;
     }
     const joinSentences = (parts) => parts.filter(Boolean).map((t) => String(t).replace(/\.\s*$/, '')).join('. ');
     if (notes.reasons.length) why = joinSentences([why, ...notes.reasons]);
@@ -2136,4 +2151,63 @@ async function drinkAdopt(request, url, env) {
     if (!found) await run(env,"INSERT INTO external_ratings (bottle_id,source,source_url,score,scale,descriptors,is_manual) VALUES (?,?,?,?,?,?,0)",detail.bottle.id,rating.source,rating.source_url,rating.score,rating.scale,JSON.stringify({review_scope:rating.scope,verified_at:"2026-10-02"}));
   }
   return json({bottle_id:detail.bottle.id,already_present:!!existed});
+}
+
+// Research drafts and image bytes remain server-side until the user confirms.
+async function webBottleResearch(request, env) {
+  const b = await body(request);
+  const q = typeof b.q === "string" ? b.q.trim() : "";
+  if (q.length < 3 || q.length > 160) return json({error:"Enter a bottle name between 3 and 160 characters."},400);
+  if (!env.OPENAI_API_KEY) return json({error:"Web bottle lookup needs the OPENAI_API_KEY secret on the Worker."},503);
+  if (!env.PHOTOS) return json({error:"Web bottle lookup needs the bottle photo storage binding."},503);
+  try {
+    const draft = await researchBottle(q,env);
+    if (!draft) return json({found:false, message:"No specific bottle verified. Include the brand, expression and vintage or age."});
+    const id = crypto.randomUUID();
+    const image = await enrichOne({id,name:draft.name,producer:draft.brand,page:draft.producer_url,verifyPageIdentity:true},{fetchImpl:researchFetch});
+    let preview = null;
+    if (image.status === "ok") {
+      await env.PHOTOS.put(`research/${id}/image`,image.buf,{httpMetadata:{contentType:image.mime}});
+      preview = `data:${image.mime};base64,${bytesToBase64(image.buf)}`;
+    }
+    await env.PHOTOS.put(`research/${id}/draft`,JSON.stringify({draft,image: image.status === "ok" ? {mime:image.mime,source_page:image.source_page} : null,created:Date.now()}));
+    return json({found:true,research_id:id,draft:{...draft,image_url:preview},sources:draft.sources,image_status:image.status,image_note:image.status === "ok" ? "Confirm the image matches your bottle." : "No confident bottle image found. You can add your own photo after saving."});
+  } catch (error) {
+    const safe=/^(Web lookup|No verifiable sources)/.test(error?.message || "");
+    return json({error:safe ? error.message : "Bottle research could not finish. Please try again."},502);
+  }
+}
+async function adoptWebBottle(request, env, url) {
+  const b=await body(request);
+  if (!/^[0-9a-f-]{36}$/.test(b.research_id || "")) return json({error:"Invalid research draft"},400);
+  const object=await env.PHOTOS?.get(`research/${b.research_id}/draft`);
+  if(!object) return json({error:"Research draft expired. Search again."},404);
+  const saved=await object.json();
+  if(Date.now()-saved.created>86400000) return json({error:"Research draft expired. Search again."},410);
+  // Permit confirmed identity edits; all other fields come from the server draft.
+  const draft={...saved.draft};
+  for(const key of ['name','brand','category','description']) if(typeof b[key]==='string') draft[key]=b[key].slice(0,key==='description'?4000:200);
+  const existing=await first(env,"SELECT id, category_attrs, description, data_source FROM bottles WHERE lower(trim(name))=lower(?) AND category=?",draft.name,draft.category);
+  draft.category_attrs={web_research:{flavor_terms:draft.flavor_terms || [],sources:draft.sources,reviews:draft.reviews || []}};
+  const response=await createBottle(new Request(request.url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({...draft,data_source:"web_research",source_confidence:"medium",status_tags:["want_to_try"]})}),env,url);
+  if(!response.ok) return response;
+  const detail=await response.json();
+  if(existing) {
+    const attrs=safeParse(existing.category_attrs,{});
+    attrs.web_research=draft.category_attrs.web_research;
+    await run(env,"UPDATE bottles SET category_attrs=?, description=CASE WHEN description IS NULL OR description='' OR data_source='web_research' THEN ? ELSE description END WHERE id=?",JSON.stringify(attrs),draft.description,existing.id);
+  }
+  for(const review of draft.reviews || []) {
+    const exists=await first(env,"SELECT id FROM external_ratings WHERE bottle_id=? AND source_url=?",detail.bottle.id,review.url);
+    if(!exists) await run(env,"INSERT INTO external_ratings (bottle_id,source,source_url,score,scale,descriptors,is_manual) VALUES (?,?,?,?,?,?,0)",detail.bottle.id,review.source,review.url,review.score,String(review.scale),JSON.stringify({review_scope:review.scope,flavor_terms:draft.flavor_terms,verified_at:new Date().toISOString().slice(0,10)}));
+  }
+  let imageSaved=false;
+  if(saved.image && b.save_image !== false && saved.draft.name.trim().toLowerCase() === draft.name.trim().toLowerCase()) {
+    const image=await env.PHOTOS.get(`research/${b.research_id}/image`);
+    if(image) try {
+      await storeSubjectImage(env,{kind:"bottle",id:detail.bottle.id},saved.image.mime,new Uint8Array(await image.arrayBuffer()));
+      imageSaved=true;
+    } catch { /* Existing user photo wins; saving the bottle still succeeds. */ }
+  }
+  return json({bottle_id:detail.bottle.id,image_saved:imageSaved,image_expected:!!saved.image});
 }

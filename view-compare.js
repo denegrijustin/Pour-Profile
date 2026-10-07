@@ -15,7 +15,7 @@ export async function renderCompare(dispatchNav) {
 
   const rows = [
     ["Match", (d) => `${d.match?.matchPercent ?? "—"}%`],
-    ["My Rating", (d) => d.bottle.avg_rating != null ? d.bottle.avg_rating.toFixed(1) : "—"],
+    ["My Reaction", (d) => d.bottle.avg_rating != null ? (d.bottle.avg_rating >= 8.5 ? "Love" : d.bottle.avg_rating >= 7 ? "Like" : d.bottle.avg_rating >= 5 ? "OK" : "Bad") : "—"],
     ["Category", (d) => categoryLabel(d.bottle.category)],
     ["Proof", (d) => d.bottle.proof ?? "—"],
     ["Age", (d) => d.bottle.age_statement || "—"],

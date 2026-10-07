@@ -70,14 +70,14 @@ export async function openLogPourSheet(bottle, { onSaved, fromAdd = false } = {}
   const isWine = bottle.category === "wine";
 
   openSheet(`
-    <div class="sheet-header"><div>${fromAdd ? `<span class="eyebrow">STEP 02 · RATE YOUR POUR</span>` : ""}<h2>${fromAdd ? "Rate your drink" : "Rate a pour"}</h2></div><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
+    <div class="sheet-header"><div>${fromAdd ? `<span class="eyebrow">STEP 02 · YOUR REACTION</span>` : ""}<h2>${fromAdd ? "How was your drink?" : "Rate a pour"}</h2></div><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
     <div class="rating-bottle-card"><div class="rating-photo">${bottleThumbHtml(bottle)}</div><div>
       <strong>${escapeHtml(bottle.name)}</strong>
       ${bottle.brand ? `<div class="field-hint">${escapeHtml(bottle.brand)}</div>` : ""}
     </div>
 
     </div><p class="field-hint">Saving this tasting for <strong>${pourProfile === "lady" ? "Lady" : "JDAD"}</strong></p>
-    ${questionnaireHtml(bottle.category)}
+    <details><summary>Describe tasting details (optional)</summary>${questionnaireHtml(bottle.category)}</details>
 
     <label>Overall impression</label>
     ${verdictPickerHtml(null)}
@@ -201,6 +201,7 @@ async function savePour() {
   const payload = {
     bottle_id: selectedBottle.id,
     rating: selectedRating,
+    reaction: selectedVerdict?.id,
     serving_style: document.getElementById("pourServingStyle").value || null,
     tasted_at: document.getElementById("pourDate").value || null,
     price_paid: document.getElementById("pourPrice").value ? Number(document.getElementById("pourPrice").value) : null,
