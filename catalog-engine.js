@@ -285,6 +285,15 @@ export function shouldRecommend(rec, { manualOverride = null } = {}) {
  * promotes anything below `relativeFloor`. Set topNPerCategory: 0 to use the
  * absolute thresholds only.
  */
+/** Recommendation pools: each family gets its own top-N so tequila never crowds out bourbon. */
+export function categoryFamily(category) {
+  if (category === "sauvignon_blanc") return "wine";
+  if (["bourbon", "rye", "american_whiskey"].includes(category)) return "whiskey";
+  if (["tequila", "mezcal"].includes(category)) return "agave";
+  if (["cognac", "armagnac", "brandy"].includes(category)) return "brandy";
+  return category;
+}
+
 export function refreshCatalog(records, { manualOverrides = {}, topNPerCategory = 8, relativeFloor = 72, availabilityFloor = 45 } = {}) {
   const scored = records.map((rec) => {
     const fit = computeFit(rec);
@@ -315,7 +324,7 @@ export function refreshCatalog(records, { manualOverrides = {}, topNPerCategory 
   if (topNPerCategory > 0) {
     const groups = {};
     for (const r of scored) {
-      const key = r.category === "sauvignon_blanc" ? "wine" : "whiskey";
+      const key = categoryFamily(r.category);
       (groups[key] = groups[key] || []).push(r);
     }
     for (const list of Object.values(groups)) {
@@ -358,7 +367,7 @@ export function validateCatalog(records, { requireImages = false } = {}) {
   const errors = [];
   const warnings = [];
   const seen = new Set();
-  const CATEGORIES = new Set(["bourbon", "rye", "american_whiskey", "sauvignon_blanc"]);
+  const CATEGORIES = new Set(["bourbon", "rye", "american_whiskey", "sauvignon_blanc", "tequila", "mezcal", "rum", "gin", "cognac", "armagnac", "brandy"]);
 
   records.forEach((r, i) => {
     const where = `record ${i}${r && r.id ? ` (${r.id})` : ""}`;

@@ -1,0 +1,1320 @@
+[
+ {
+  "id": "ks-bib-tucker-6-yr-small-batch-bourbon-whiskey",
+  "producer": {
+   "nose": "Vanilla and sweet hay with sandalwood and mace accents.",
+   "palate": "Smooth entry with a touch of pecan-pie sweetness; balanced mid-palate.",
+   "finish": "Warm, rich and spicy, ending on a long chestnut note.",
+   "summary": "Brand page for 'The Classic Six' 6-year small batch bourbon at 92 proof.",
+   "source_url": "https://www.bibandtuckerbourbon.com/bourbons/6-year-old-small-batch/"
+  },
+  "critics": [
+   {
+    "source": "The Barrel Burner",
+    "source_url": "https://www.thebarrelburner.com/bourbon-review-bib-tucker-small-batch-bourbon-aged-6-years/",
+    "score": null,
+    "scale": null,
+    "nose": "Rye-forward; corn, oak, faint cocoa, some ethanol.",
+    "palate": "Licorice, earth and pecans up front; oak, earth and rye spice behind; later caramel, cocoa, honey.",
+    "finish": "Slightly metallic/copper at first, then lingering rye spice.",
+    "summary": "Reviewer gave a numeric rating (88) but the scale was not stated, so it is not recorded as a score.",
+    "year": null
+   },
+   {
+    "source": "Nice Sipper",
+    "source_url": "https://www.nicesipper.com/reviews/bibandtucker6year",
+    "score": null,
+    "scale": null,
+    "nose": "Sweet oak, vanilla, a touch of rubbing alcohol.",
+    "palate": "Sweetness arrives mid-palate with cinnamon and vanilla, ending in cocoa/malty notes.",
+    "finish": "Quick, with some peppery spice lingering.",
+    "summary": "Called very smooth but ultimately unremarkable; rated 3 glasses on the site's icon scale (Batch 24).",
+    "year": null
+   },
+   {
+    "source": "The Daily Pour (T8ke)",
+    "source_url": "https://thedailypour.com/spirit/bib-tucker-bourbon-6yr/",
+    "score": null,
+    "scale": null,
+    "nose": "Baking spice heavy, toffee, clove, black pepper, hint of tobacco.",
+    "palate": "Caramel, light apple and cinnamon, some toffee and clove.",
+    "finish": "Sweet and easy; caramel, honey, light pepper, sweet oak.",
+    "summary": "House review calling it sweet and simple; suggests a higher ABV might help. Score format unclear from fetched summary, so omitted.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": "6 years",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Tennessee (sourced, per reviews)",
+   "source_url": "https://www.bibandtuckerbourbon.com/bourbons/6-year-old-small-batch/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "hay",
+   "pecan",
+   "caramel",
+   "toffee",
+   "baking spice",
+   "cocoa",
+   "oak",
+   "licorice",
+   "rye spice"
+  ],
+  "confidence": "high",
+  "notes": "Tennessee origin comes from reviewer pages (Barrel Burner, Daily Pour); producer page did not state distillery or mash bill."
+ },
+ {
+  "id": "ks-smooth-ambler-old-scout-straight-bourbon-whiskey",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer page lists cherry pipe tobacco, butterscotch and leather, high-rye spice, non-chill-filtered, lingering finish. Producer lists 99 proof, not the 80 proof on the Kansas registration.",
+   "source_url": "https://smoothambler.com/old-scout-straight-bourbon-whiskey/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Nick Beiter)",
+    "source_url": "https://www.breakingbourbon.com/review/smooth-ambler-old-scout-bourbon-nas-batch-32",
+    "score": null,
+    "scale": null,
+    "nose": "Spicy tobacco, baking spice, toasted oak, cinnamon and chocolate; some ethanol.",
+    "palate": "Caramel, toasted oak, leather, cigar, unsweetened chocolate, earthy baking spice.",
+    "finish": "Long; graham cracker, toasted marshmallow, caramel and cherry, fading to cinnamon.",
+    "summary": "Review of the NAS Batch 32 at 99 proof; site rating given on its own scale (3), not recorded as a score.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": 99,
+   "age": null,
+   "mash_bill": "60% corn, 36% rye, 4% malted barley",
+   "cask": null,
+   "region": "Distilled in Indiana; bottled in West Virginia",
+   "source_url": "https://smoothambler.com/old-scout-straight-bourbon-whiskey/"
+  },
+  "flavor_terms": [
+   "tobacco",
+   "butterscotch",
+   "leather",
+   "rye spice",
+   "caramel",
+   "toasted oak",
+   "chocolate",
+   "cherry",
+   "cinnamon",
+   "baking spice"
+  ],
+  "confidence": "low",
+  "notes": "PROOF MISMATCH: input says 80 proof/40% ABV but producer and all sources describe Old Scout bourbon at 99 proof. Could be a registration error or a different/new bottling; data here is for the 99-proof product."
+ },
+ {
+  "id": "ks-redemption-wheated-bourbon-whiskey",
+  "producer": {
+   "nose": "Candied ginger, sage and lavender with fresh pear over vanilla and cedar.",
+   "palate": "Silky yet intense; roasted coffee bean, smoked meat and hazelnut with cardamom and black pepper.",
+   "finish": "Fresh-baked bread with toasted crust and slight malty sweetness.",
+   "summary": "Producer tasting profile; non-chill-filtered, new American oak.",
+   "source_url": "https://www.redemptionwhiskey.com/whiskey/wheated-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Jacob Grier)",
+    "source_url": "https://distiller.com/spirits/redemption-wheated-bourbon",
+    "score": 89,
+    "scale": "100",
+    "nose": null,
+    "palate": "Soft vanilla, walnut and gentle floral notes.",
+    "finish": "Lingering and warming.",
+    "summary": "Expert rating; calls it an enjoyable addition to the line.",
+    "year": null
+   },
+   {
+    "source": "The Whiskey Jug (Josh Peters)",
+    "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/redemption-wheated-bourbon-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Honeyed graham, fruit, caramel, melon rind, cocoa, marshmallow, grain, wood.",
+    "palate": "Similar honeyed graham, fruit, caramel, marshmallow and grain sweetness.",
+    "finish": "Short; graham, fruit and cereal sweetness.",
+    "summary": "Found it thin and watery with little development; rated 2 on the site's 5-point-style scale (not recorded).",
+    "year": 2021
+   },
+   {
+    "source": "Whiskey Reviewer (Father John Rayls)",
+    "source_url": "https://whiskeyreviewer.com/2017/08/redemption-wheated-bourbon-review-081517/",
+    "score": null,
+    "scale": null,
+    "nose": "Light cereal grain, oak, sage, vanilla, some alcohol.",
+    "palate": "Light body; sweet cereal, oak, caramel, vanilla over white pepper.",
+    "finish": "Long and hot with persistent white pepper and a hint of smoked meat.",
+    "summary": "Letter grade B+; sweet, soft palate with a strong finish; suggested for cocktails.",
+    "year": 2017
+   }
+  ],
+  "facts": {
+   "abv": 48,
+   "proof": 96,
+   "age": "NAS (reviews cite about 4 years)",
+   "mash_bill": "51% corn, 45% winter wheat, 4% malted barley",
+   "cask": "New charred American oak",
+   "region": null,
+   "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/redemption-wheated-bourbon-review/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "pear",
+   "hazelnut",
+   "black pepper",
+   "caramel",
+   "graham",
+   "marshmallow",
+   "cereal",
+   "walnut",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Full mash bill and age from reviewer pages; producer page states 45% winter wheat only."
+ },
+ {
+  "id": "ks-tom-s-town-distilling-co-double-oaked-bourbon-whiskey",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer describes a warm, spicy bourbon with maple, butterscotch and honey; stave finishing adds caramel without extra bitterness.",
+   "source_url": "https://www.toms-town.com/toms-town-double-oaked-bourbon"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Jug",
+    "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/toms-town-double-oaked-bourbon-review/",
+    "score": 77,
+    "scale": "100",
+    "nose": "Caramel, butterscotch, raw grain, dried fruit, some bubblegum.",
+    "palate": "Orchard fruit, spice, vanilla, oak, a little grain and bubblegum.",
+    "finish": "Medium-short; fruity with toffee.",
+    "summary": "Light, sweet, fruity MGP-sourced bourbon; finishing method likened to Maker's 46 (C+).",
+    "year": 2019
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "2 years (per review)",
+   "mash_bill": "21% rye (per review)",
+   "cask": "Aged in white American oak barrels, then finished with inserted French and American oak staves",
+   "region": "Kansas City, Missouri (bottler)",
+   "source_url": "https://www.toms-town.com/toms-town-double-oaked-bourbon"
+  },
+  "flavor_terms": [
+   "maple",
+   "butterscotch",
+   "honey",
+   "caramel",
+   "dried fruit",
+   "bubblegum",
+   "orchard fruit",
+   "vanilla",
+   "toffee",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Age, rye content and MGP sourcing come from the 2019 Whiskey Jug review; current bottlings may differ."
+ },
+ {
+  "id": "ks-holladay-soft-red-wheat-bottled-in-bond-missouri-straight-bourbon-whiskey-2",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": "Soft, smooth finish.",
+   "summary": "Producer says wheat gives a softer, sweeter profile than rye; bottled-in-bond 'Real Missouri Bourbon' made with Missouri corn.",
+   "source_url": "https://holladaybourbon.com/holladay-soft-red-wheat-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://breakingbourbon.com/review/ben-holladay-soft-red-wheat-bottled-in-bond-bourbon",
+    "score": null,
+    "scale": null,
+    "nose": "Apricot and stone fruit, vanilla-laced oak, graham cracker, herbal grain.",
+    "palate": "Semi-creamy; toffee and charred oak, then leather, mixed nuts, fig, vanilla wafer, red fruit.",
+    "finish": "Mild dryness and bitterness with spice; black cherry, red currant, prune, vanilla.",
+    "summary": "Bottle distilled spring 2017, bottled Aug 2023; rated 3 on the site's scale (not recorded).",
+    "year": 2024
+   },
+   {
+    "source": "Bourbon Inspector (Mike Long)",
+    "source_url": "https://bourboninspector.com/holladay-soft-red-wheat-bottled-in-bond-bourbon/",
+    "score": 4.25,
+    "scale": "5",
+    "nose": "Rich pastry: cornbread, honeyed croissant, vanilla bean, toasted oak.",
+    "palate": "Velvety and coating; caramel, butterscotch, cinnamon, fig, toasted marshmallow.",
+    "finish": "Vanilla and Biscoff cookie with gentle dryness.",
+    "summary": "Gold rating; called a fantastic value at its MSRP.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "6 years",
+   "mash_bill": "73% corn, 15% soft red wheat, 12% malted barley",
+   "cask": null,
+   "region": "Weston, Missouri",
+   "source_url": "https://holladaybourbon.com/holladay-soft-red-wheat-bourbon/"
+  },
+  "flavor_terms": [
+   "apricot",
+   "toffee",
+   "fig",
+   "vanilla",
+   "graham cracker",
+   "caramel",
+   "butterscotch",
+   "pastry",
+   "black cherry",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gives only a general flavor description, no nose/palate breakdown."
+ },
+ {
+  "id": "ks-boot-hill-distillery-bourbon-whiskey",
+  "producer": {
+   "nose": "Caramel, green apple, leather, vanilla, cedar, black tea.",
+   "palate": "Toffee, baking spice, caramel apple, bran cereal, pecan.",
+   "finish": "Honey, baked goods, herbal tea, oak.",
+   "summary": "Producer product page; wheated Kansas bourbon from farm-grown grain. Producer lists 90 proof, not the 80 proof in the input.",
+   "source_url": "https://www.boothilldistillery.com/bourbon-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": "51% corn, 49% wheat (hard red winter wheat per club retailer)",
+   "cask": "New charred American white oak, 53-gallon barrels",
+   "region": "Dodge City, Kansas",
+   "source_url": "https://www.boothilldistillery.com/bourbon-whiskey"
+  },
+  "flavor_terms": [
+   "caramel",
+   "green apple",
+   "leather",
+   "vanilla",
+   "cedar",
+   "black tea",
+   "toffee",
+   "pecan",
+   "honey",
+   "baking spice"
+  ],
+  "confidence": "low",
+  "notes": "PROOF MISMATCH: input says 80 proof/40%; producer page says 90 proof/45%. Producer page cites a Tasting Panel 93+ and other awards, but no independent critic page was fetched."
+ },
+ {
+  "id": "ks-woodford-reserve-barrel-finish-select-double-oaked-ksbw",
+  "producer": {
+   "nose": "Dark fruit, caramel, sharp honey, chocolate, marzipan, toasted oak.",
+   "palate": "Full-bodied; vanilla, dark caramel, hazelnut, apple, fruit, spice.",
+   "finish": "Long and creamy with honeyed apple.",
+   "summary": "Second maturation in a deeply toasted, lightly charred new barrel.",
+   "source_url": "https://www.woodfordreserve.com/whiskey/double-oaked/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Jordan Moskal)",
+    "source_url": "https://www.breakingbourbon.com/review/woodford-reserve-double-oaked",
+    "score": null,
+    "scale": null,
+    "nose": "Sweet and oaky; toasted marshmallow, vanilla, corn.",
+    "palate": "Oak and vanilla with leather, caramel, dried fruit.",
+    "finish": "Mellow; dry leather, oak, tobacco, burnt caramel, white pepper.",
+    "summary": "2017 review; straightforward and approachable; site rating 3 (scale not stated in fetch).",
+    "year": 2017
+   }
+  ],
+  "facts": {
+   "abv": 45.2,
+   "proof": 90.4,
+   "age": null,
+   "mash_bill": "72% corn, 18% rye, 10% malted barley (per Breaking Bourbon)",
+   "cask": "Finished in a second new barrel, deeply toasted then lightly charred",
+   "region": "Kentucky",
+   "source_url": "https://www.woodfordreserve.com/whiskey/double-oaked/"
+  },
+  "flavor_terms": [
+   "dark fruit",
+   "caramel",
+   "honey",
+   "chocolate",
+   "marzipan",
+   "hazelnut",
+   "apple",
+   "vanilla",
+   "toasted oak",
+   "leather"
+  ],
+  "confidence": "high",
+  "notes": "'Barrel Finish Select' is a label series name for standard Double Oaked (Waitrose listing uses both names; its UK version is 43.2%). Used US 90.4-proof sources."
+ },
+ {
+  "id": "ks-woodford-reserve-wheat-ksbw",
+  "producer": {
+   "nose": "Cinnamon and cedar spice with cooked apple, pear, banana and a delicate floral note.",
+   "palate": "Spiced applesauce and toasted coconut over earthy mint and cocoa nib.",
+   "finish": "Dry, with cocoa nib and apple peel.",
+   "summary": "Producer page for Woodford Reserve Kentucky Straight Wheat Whiskey (wheat-dominant mash).",
+   "source_url": "https://www.woodfordreserve.com/whiskey/wheat-whiskey/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/woodford-reserve-wheat-whiskey",
+    "score": null,
+    "scale": null,
+    "nose": "Soft and fruity; peach pie, cinnamon, hay, light oak, vanilla, apple.",
+    "palate": "Oak, wheat grain, hint of vanilla; dry, thin mouthfeel.",
+    "finish": "Lighter; white pepper, oak, dried apple and peach.",
+    "summary": "Found it a play-it-safe, underwhelming wheat whiskey.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 45.2,
+   "proof": 90.4,
+   "age": null,
+   "mash_bill": "52% wheat, 20% malted barley, 20% corn, 8% rye",
+   "cask": null,
+   "region": "Kentucky",
+   "source_url": "https://www.woodfordreserve.com/whiskey/wheat-whiskey/"
+  },
+  "flavor_terms": [
+   "cinnamon",
+   "cedar",
+   "apple",
+   "pear",
+   "banana",
+   "coconut",
+   "mint",
+   "cocoa nib",
+   "peach",
+   "oak"
+  ],
+  "confidence": "medium",
+  "notes": "IDENTITY UNCERTAIN: Kansas label says 'Wheat Kentucky Straight Bourbon', but the only matching Woodford Wheat product found is a straight WHEAT WHISKEY (52% wheat), not a bourbon. Matched on name and 90.4 proof; verify the label."
+ },
+ {
+  "id": "ks-angels-envy-cask-strength-ksbw-finished-in-port-wine-barrels",
+  "producer": {
+   "nose": "Cherry cordial and salted caramel fading to sweetly spiced oak.",
+   "palate": "Rich and layered; apple cider and red wine notes rounded by creamy ganache.",
+   "finish": "Oak tannin around citrus preserves and jammy dark chocolate; dry.",
+   "summary": "2026 (15th edition) Cask Strength, 117.8 proof; solera-inspired blend incl. reserved 2023-2025 casks.",
+   "source_url": "https://www.angelsenvy.com/us/en/whiskeys/cask-strength/15th-edition-cask-strength-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Drinkhacker",
+    "source_url": "https://www.drinkhacker.com/2026/04/21/review-angels-envy-cask-strength-bourbon-2026/",
+    "score": null,
+    "scale": null,
+    "nose": "Cherry cough drop, then dark caramel, marzipan, praline.",
+    "palate": "Syrupy red fruit; dark cherry with leather, tea and dark chocolate mid-palate.",
+    "finish": "Red fruit and chocolate, turning notably tannic.",
+    "summary": "Letter grade A- for the 2026 release at 117.8 proof.",
+    "year": 2026
+   },
+   {
+    "source": "Bourbon Obsessed (Ed)",
+    "source_url": "https://bourbonobsessed.com/angels-envy-cask-strength-bourbon-2026-review-rich-fruit-tart-citrus-lingering-spice/",
+    "score": null,
+    "scale": null,
+    "nose": "Caramel, honey and cherry; dark plum, milk chocolate, raisin, tangerine.",
+    "palate": "Tart cherry, orange peel, caramel; black cherry and port later; slightly dusty.",
+    "finish": "Cherry candy, tart orange, black pepper, caramel, light char; fairly long.",
+    "summary": "Review of the 2026 release at 117.8 proof.",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 58.9,
+   "proof": 117.8,
+   "age": "Bourbon distilled 2014-2019; total maturation about 6y11m to 12y3m incl. finish",
+   "mash_bill": null,
+   "cask": "Finished up to ~3.5 years in port wine barrels (ruby; blend includes tawny-finished 2024 stock)",
+   "region": "Kentucky",
+   "source_url": "https://www.angelsenvy.com/us/en/whiskeys/cask-strength/15th-edition-cask-strength-bourbon/"
+  },
+  "flavor_terms": [
+   "cherry",
+   "salted caramel",
+   "red wine",
+   "dark chocolate",
+   "citrus",
+   "marzipan",
+   "praline",
+   "leather",
+   "tart cherry",
+   "oak tannin"
+  ],
+  "confidence": "high",
+  "notes": "117.8 proof matches the 2026 (15th edition) release; earlier releases had different proofs."
+ },
+ {
+  "id": "ks-larceny-barrel-proof-wheated-bourbon-mashbill-ksbw",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Batch not identified: 125.6 proof matched no batch found (A125=125.0, B524=125.4, C925=119.6). Producer site (larcenybourbon/heavenhilldistillery) was blocked. No same-batch data recorded."
+ },
+ {
+  "id": "ks-benchmark-bonded-ksbw-single-season",
+  "producer": {
+   "nose": "Citrus and honey.",
+   "palate": "Light oak, caramel and vanilla.",
+   "finish": "Long and smooth.",
+   "summary": "Producer tasting notes for Benchmark Bonded (bottled-in-bond, so single distilling season).",
+   "source_url": "https://www.buffalotracedistillery.com/brands/benchmark-bonded"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/benchmark-bonded-bourbon",
+    "score": null,
+    "scale": null,
+    "nose": "Vanilla custard, mixed berry pie, aged oak; later cinnamon, baked apple, caramel.",
+    "palate": "Oak, caramel, leather, then nutmeg and white pepper with sporadic sweet fruit.",
+    "finish": "Light peppercorn spice, then dull oak and leather; warming.",
+    "summary": "Called an above-average sip and excellent value at about $20. Site rating 3 (scale not confirmed from fetched page; not recorded as score).",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "4 years",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky (Buffalo Trace)",
+   "source_url": "https://www.buffalotracedistillery.com/brands/benchmark-bonded"
+  },
+  "flavor_terms": [
+   "citrus",
+   "honey",
+   "oak",
+   "caramel",
+   "vanilla",
+   "berry",
+   "baked apple",
+   "leather",
+   "nutmeg",
+   "white pepper"
+  ],
+  "confidence": "high",
+  "notes": "'Single Season' in the label name reflects the bottled-in-bond rule, not a separate expression."
+ },
+ {
+  "id": "ks-ezra-brooks-99-proof-ksbw",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer describes a smooth, drinkable bourbon with caramel, vanilla, chocolate and spice; charcoal filtered; spicy rye-recipe mash.",
+   "source_url": "https://ezrabrooks.com/whiskey/ezra-99/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Jordan Moskal)",
+    "source_url": "https://www.breakingbourbon.com/review/ezra-brooks-99-bourbon",
+    "score": null,
+    "scale": null,
+    "nose": "Light charred oak, vanilla, caramel, faint peanut.",
+    "palate": "Creamy caramel, vanilla, light brown sugar with oak, white pepper, peanut.",
+    "finish": "Shorter; caramel and vanilla to dry oak, leather, peanut shell, rye spice.",
+    "summary": "Good value, cocktail-friendly entry to higher proof but lacks complexity. Site rating 2.5 (scale not confirmed from fetched page; not recorded as score).",
+    "year": 2021
+   },
+   {
+    "source": "The Whiskey Wash (Melissa Jones)",
+    "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-ezra-brooks-99-proof-kentucky-straight-bourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Apricot, vanilla, honey, peach, slight citrus and floral hints.",
+    "palate": null,
+    "finish": null,
+    "summary": "Warm but balanced year-round bourbon for sipping or mixing; numeric rating shown without stated scale.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 49.5,
+   "proof": 99,
+   "age": null,
+   "mash_bill": "78% corn, 12% malted barley, 10% rye (per Breaking Bourbon)",
+   "cask": "New charred American white oak",
+   "region": "Kentucky (Lux Row, Bardstown)",
+   "source_url": "https://ezrabrooks.com/whiskey/ezra-99/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "vanilla",
+   "chocolate",
+   "peanut",
+   "brown sugar",
+   "oak",
+   "apricot",
+   "honey",
+   "leather",
+   "rye spice"
+  ],
+  "confidence": "high",
+  "notes": "Producer gives only a general description, no nose/palate/finish split."
+ },
+ {
+  "id": "ks-rebel-6-year-100-proof-ksbw",
+  "producer": {
+   "nose": "Vanilla and honey.",
+   "palate": "Dark fruit followed by citrus and oak.",
+   "finish": "Velvety with a hint of spice.",
+   "summary": "Lux Row release notes relayed via FredMinnick.com; wheated recipe; 6 years, 100 proof.",
+   "source_url": "https://www.fredminnick.com/2024/03/07/lux-row-release-rebel-100-6-year-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/rebel-100-6-year-bourbon",
+    "score": 81,
+    "scale": "100",
+    "nose": "Lightly sweet; vanilla, maple, fresh wheat bread, a marker-ink note, charred oak.",
+    "palate": "Fairly full body.",
+    "finish": null,
+    "summary": "Expert rating; flavor profile listed as herbal and rich.",
+    "year": null
+   },
+   {
+    "source": "The Whiskey Wash (Nino Kilgore-Marchetti)",
+    "source_url": "https://thewhiskeywash.com/whiskey-reviews/whiskey-review-rebel-100-6-year-bourbon/",
+    "score": null,
+    "scale": null,
+    "nose": "Sweet corn/wheat; vanilla, oak, syrupy cherry, wet grass, blackberry, brown sugar.",
+    "palate": "Vanilla and oak, then baked bread, coriander, dark cherry, plum.",
+    "finish": "Short and quiet.",
+    "summary": "Middle-of-the-road but competent wheated bourbon; numeric rating shown without stated scale.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "6 years",
+   "mash_bill": "Wheated (percentages not disclosed)",
+   "cask": "New charred American oak",
+   "region": "Kentucky (Lux Row)",
+   "source_url": "https://distiller.com/spirits/rebel-100-6-year-bourbon"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "honey",
+   "dark fruit",
+   "citrus",
+   "oak",
+   "maple",
+   "wheat bread",
+   "cherry",
+   "plum",
+   "brown sugar"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are from a press release reprinted on fredminnick.com, not the brand site."
+ },
+ {
+  "id": "ks-sagamore-spirit-double-oak-straight-rye-whiskey",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer description relayed in The Whiskey Wash review: after new American oak, it gets a secondary maturation in wave-toasted stave casks, building caramel richness.",
+   "source_url": "https://thewhiskeywash.com/whiskey-reviews/review-sagamore-spirit-double-oak-straight-rye-2025/"
+  },
+  "critics": [
+   {
+    "source": "WhiskyCast",
+    "source_url": "https://whiskycast.com/ratings/sagamore-spirit-double-oak-rye/",
+    "score": 91,
+    "scale": "100",
+    "nose": "Oaky, dry; caramel, honey, brown sugar, molasses, subtle spice.",
+    "palate": "Thick and spicy; clove, cinnamon, allspice, ginger balanced by honey, vanilla, molasses.",
+    "finish": "Medium, balanced, lingering spice and honey.",
+    "summary": "Rated at 48.3% ABV.",
+    "year": 2018
+   },
+   {
+    "source": "The Whiskey Wash (Phil Dwyer)",
+    "source_url": "https://thewhiskeywash.com/whiskey-reviews/review-sagamore-spirit-double-oak-straight-rye-2025/",
+    "score": null,
+    "scale": null,
+    "nose": "Rum-roasted pecan with maple; baked vanilla, pastry, burnt butter, gentle rye spice, caramelized banana.",
+    "palate": "Thin at first, then spicy rye, toasted oak, green herbs, sweet pastry.",
+    "finish": "Dark chocolate, hazelnut, walnut, rum-raisin.",
+    "summary": "2025 review; numeric rating shown without stated scale.",
+    "year": 2025
+   },
+   {
+    "source": "Master of Malt (retailer house notes)",
+    "source_url": "https://www.masterofmalt.com/whiskies/sagamore-spirit/sagamore-spirit-double-oak-rye-whiskey/",
+    "score": null,
+    "scale": null,
+    "nose": "Sweet spicy grain, brown sugar, cinnamon butter, orange peel.",
+    "palate": "Apple crumble and cinnamon, chocolate praline, black pepper, almond.",
+    "finish": "Rich pecan-pie sweetness.",
+    "summary": "Retailer-written notes, 48.3% ABV.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 48.3,
+   "proof": 96.6,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Secondary maturation in toasted new oak (sources differ: Whiskey Wash 18 months in wave-toasted stave casks; Master of Malt 4 months)",
+   "region": "Maryland",
+   "source_url": "https://whiskycast.com/ratings/sagamore-spirit-double-oak-rye/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "honey",
+   "molasses",
+   "clove",
+   "cinnamon",
+   "pecan",
+   "maple",
+   "vanilla",
+   "dark chocolate",
+   "rye spice"
+  ],
+  "confidence": "high",
+  "notes": "Producer site not fetchable; producer description is relayed via a critic page. Secondary-maturation length conflicts between sources."
+ },
+ {
+  "id": "ks-old-overholt-4-year-straight-rye-whiskey",
+  "producer": {
+   "nose": "Peanut, allspice, vanilla and grassy rye.",
+   "palate": "Baked apple and peanut with allspice, clove, cinnamon.",
+   "finish": "Sweet corn and peanut brittle with baking-spice tingle.",
+   "summary": "Distiller notes relayed by retailer Bitters & Bottles; 86 proof, 4 years, non-chill-filtered.",
+   "source_url": "https://www.bittersandbottles.com/products/old-overholt-rye-whiskey"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Jake Emen)",
+    "source_url": "https://distiller.com/spirits/old-overholt-4-year-straight-rye-whiskey-86-proof",
+    "score": 86,
+    "scale": "100",
+    "nose": "Whole peanut, dark chocolate syrup, caramel, spearmint.",
+    "palate": "Dry up front; anise, tannic oak, black pepper, toasted rye bread.",
+    "finish": null,
+    "summary": "Expert rating; profile spicy and herbal.",
+    "year": null
+   },
+   {
+    "source": "Film Whiskey (Brad & Bob)",
+    "source_url": "https://www.filmwhiskey.com/blog/whiskey-review-old-overholt-4-year-straight-rye-whiskey/",
+    "score": 37,
+    "scale": "50",
+    "nose": "Sweet mint gum and vanilla frosting; pineapple cake.",
+    "palate": "Simple-syrup sweetness, shortbread, spearmint, some fruit.",
+    "finish": "Mint to dill/eucalyptus, rye spice, sweet fruity and medicinal touches.",
+    "summary": "Average of two reviewers' 50-point scores; recommended as an affordable rye for neat or cocktails.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": "4 years",
+   "mash_bill": null,
+   "cask": "New charred American oak",
+   "region": "Kentucky (Beam)",
+   "source_url": "https://distiller.com/spirits/old-overholt-4-year-straight-rye-whiskey-86-proof"
+  },
+  "flavor_terms": [
+   "peanut",
+   "allspice",
+   "vanilla",
+   "baked apple",
+   "clove",
+   "cinnamon",
+   "spearmint",
+   "anise",
+   "black pepper",
+   "caramel"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are retailer-relayed. Skipped Whiskey Wash 2021 review: it covered the older 3-year 86-proof version."
+ },
+ {
+  "id": "ks-michter-s-barrel-strength-straight-rye-whiskey-limited-release",
+  "producer": {
+   "nose": "Butterscotch and cinnamon, hint of cherry.",
+   "palate": "Warm, rich, toasty vanilla and caramel.",
+   "finish": "Dry oaky spice.",
+   "summary": "Single-barrel product entered at 103 proof; bottling proof varies by barrel (2025 release 107.4-115.2).",
+   "source_url": "https://michters.com/us-1-barrel-strength-rye/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Fire-charred new American white oak; single barrel, barrel entry 103 proof",
+   "region": "Kentucky",
+   "source_url": "https://michters.com/us-1-barrel-strength-rye/"
+  },
+  "flavor_terms": [
+   "butterscotch",
+   "cinnamon",
+   "cherry",
+   "vanilla",
+   "caramel",
+   "oak spice"
+  ],
+  "confidence": "medium",
+  "notes": "Single-barrel proof varies; no review found at 108 proof. Skipped reviews at other proofs (Breaking Bourbon 112, Drinkhacker 109.8, Distiller 110.2). Release year unknown."
+ },
+ {
+  "id": "ks-elijah-craig-straight-rye-whiskey",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Paste Magazine (Jim Vorel)",
+    "source_url": "https://www.pastemagazine.com/drink/whiskey/elijah-craig-straight-rye-whiskey-review",
+    "score": 8.6,
+    "scale": "10",
+    "nose": "Caramel and vanilla bean, very spicy, lots of pepper and rye spice.",
+    "palate": "Slightly oily; corny sweetness, peanut butter, caramel, vanilla, then rye spice, stone fruit, apple-pie spice, barrel char.",
+    "finish": "Long mint note.",
+    "summary": "Well balanced between bourbon and rye traits; excellent all-purpose value.",
+    "year": 2020
+   },
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/8112/elijah-craig-straight-rye",
+    "score": null,
+    "scale": null,
+    "nose": "Toasty oak, vanilla, maple, lemon, honeysuckle, clove, cinnamon.",
+    "palate": "Toasty oak with cinnamon, clove, black-pepper-spiced caramel, honey, vanilla.",
+    "finish": "Toasty oak, maple, honey, vanilla, lingering baking spice.",
+    "summary": "Sampled 2024; strong cocktail rye and satisfying sipper.",
+    "year": 2024
+   },
+   {
+    "source": "Breaking Bourbon (Nick Beiter)",
+    "source_url": "https://www.breakingbourbon.com/review/elijah-craig-rye",
+    "score": null,
+    "scale": null,
+    "nose": "Black pepper and summer fruit over herbal notes; mild.",
+    "palate": "Surprisingly sweet; kettle corn, caramel, then allspice, nutmeg, rye grain.",
+    "finish": "Vanilla and butterscotch, then lasting rye spice.",
+    "summary": "Approachable entry-level rye. Site rating 2.5 (scale not confirmed from fetched page; not recorded as score).",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": "NAS",
+   "mash_bill": "51% rye, 35% corn, 14% malted barley",
+   "cask": null,
+   "region": "Kentucky (Heaven Hill, Bardstown)",
+   "source_url": "https://www.diffordsguide.com/beer-wine-spirits/8112/elijah-craig-straight-rye"
+  },
+  "flavor_terms": [
+   "caramel",
+   "vanilla",
+   "rye spice",
+   "black pepper",
+   "mint",
+   "toasty oak",
+   "honey",
+   "maple",
+   "clove",
+   "butterscotch"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site (elijahcraig.com) not reachable; no producer tasting notes recorded."
+ },
+ {
+  "id": "ks-knob-creek-aged-7-years-small-batch-kentucky-straight-rye-whiskey",
+  "producer": {
+   "nose": "Caramel and vanilla with round rye spice, apple and floral notes, hint of leather.",
+   "palate": "Full body; black pepper, vanilla, caramel, lingering oak and spice.",
+   "finish": "Warm and smooth with spice throughout.",
+   "summary": "Producer page for Knob Creek 7 Year Rye, 100 proof.",
+   "source_url": "https://www.knobcreek.com/whiskies/7-year-old-rye-whiskey"
+  },
+  "critics": [
+   {
+    "source": "Drinkhacker (David Tao)",
+    "source_url": "https://www.drinkhacker.com/2023/05/05/review-knob-creek-rye-7-years-old-2023/",
+    "score": null,
+    "scale": null,
+    "nose": "Leathery and sweet; praline, rye spice, green apple, raspberry, chocolate-covered cherry.",
+    "palate": "Paprika and pepper early, then honey-forward sweetness.",
+    "finish": "Warming, moderate; rye and baking spice, honey candy, bitter cocoa.",
+    "summary": "Letter grade A-; 'a bourbon drinker's rye', richer than the earlier NAS version.",
+    "year": 2023
+   },
+   {
+    "source": "Bourbon Inspector (Mike Long)",
+    "source_url": "https://bourboninspector.com/knob-creek-rye-whiskey-7-year-review/",
+    "score": 4.3,
+    "scale": "5",
+    "nose": "Honeycrisp apple, butterscotch, sweet oak.",
+    "palate": "Light black pepper, paprika, sweet oak.",
+    "finish": "Long and warming; bitter chocolate.",
+    "summary": "Gold rating; depth above its price.",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "7 years",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky",
+   "source_url": "https://www.knobcreek.com/whiskies/7-year-old-rye-whiskey"
+  },
+  "flavor_terms": [
+   "caramel",
+   "vanilla",
+   "rye spice",
+   "apple",
+   "leather",
+   "black pepper",
+   "paprika",
+   "honey",
+   "oak",
+   "bitter chocolate"
+  ],
+  "confidence": "high",
+  "notes": "Mash bill not recorded (fetched producer summary was ambiguous)."
+ },
+ {
+  "id": "ks-russell-s-reserve-6-years-old-kentucky-straight-rye-whiskey",
+  "producer": {
+   "nose": "Roasted almond, vanilla, caramel, cinnamon.",
+   "palate": "Complex allspice, pepper and almond.",
+   "finish": "Long, with rye spice and dried fruit.",
+   "summary": "Producer notes as relayed by retailer Seelbach's.",
+   "source_url": "https://seelbachs.com/products/russells-reserve-6-year-old-rye-whiskey"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Amanda Schuster)",
+    "source_url": "https://distiller.com/spirits/russell-s-reserve-6-year-rye",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": "Prominent rye bread with sweet baking spice and pepper, sweet undertones, subtle oak.",
+    "finish": null,
+    "summary": "Expert rating; calls it a textbook rye whiskey; profile sweet and rich.",
+    "year": null
+   },
+   {
+    "source": "Nice Sipper",
+    "source_url": "https://www.nicesipper.com/reviews/russellsreserverye6",
+    "score": null,
+    "scale": null,
+    "nose": "Hay, cotton candy, banana bread, some sharpness.",
+    "palate": "Honey sweetness, then dry rye mid-palate with black pepper and caramel.",
+    "finish": "Black pepper, caramel warmth, lingering sweetness.",
+    "summary": "Approachable rye for bourbon drinkers; 4 glasses on the site's icon scale.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "6 years",
+   "mash_bill": null,
+   "cask": "New charred American oak",
+   "region": "Kentucky (Wild Turkey)",
+   "source_url": "https://distiller.com/spirits/russell-s-reserve-6-year-rye"
+  },
+  "flavor_terms": [
+   "almond",
+   "vanilla",
+   "caramel",
+   "cinnamon",
+   "allspice",
+   "pepper",
+   "dried fruit",
+   "rye bread",
+   "honey",
+   "baking spice"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes retailer-relayed."
+ },
+ {
+  "id": "ks-wild-turkey-kentucky-straight-rye-whiskey-101-proof",
+  "producer": {
+   "nose": "Rich, balanced caramel with honey and vanilla.",
+   "palate": "Warm, smoky grain and spice.",
+   "finish": "Long spice with hints of smoke.",
+   "summary": "Producer page for Wild Turkey 101 Rye; at least 4 years old.",
+   "source_url": "https://www.wildturkeybourbon.com/en-us/products/wild-turkey-101-rye/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/wild-turkey-101-rye",
+    "score": null,
+    "scale": null,
+    "nose": "Caramel, honey, grain, mint; faint bubblegum, creme brulee, baking spice, oak.",
+    "palate": "Rye spice dominant; mint, oatmeal, apple; buttery with oak.",
+    "finish": "Medium; hot cinnamon spice to woody oak, dry.",
+    "summary": "Straightforward profile. Site rating 2.5 (scale not confirmed from fetched page; not recorded as score).",
+    "year": 2017
+   },
+   {
+    "source": "The Whiskey Jug",
+    "source_url": "https://thewhiskeyjug.com/rye-whiskey/wild-turkey-rye-101-review/",
+    "score": 87,
+    "scale": "100",
+    "nose": "Caramel, burnt toffee, pecan pie, vanilla, cinnamon, briny dill, rye spice.",
+    "palate": "Big spicy rye, caramel, leather, pepper, burnt toffee; tobacco, orange, cherry, licorice.",
+    "finish": "Caramel fading to malt, toasted grain, earthy citrus.",
+    "summary": "2013 review of the then-returning 101 rye.",
+    "year": 2013
+   }
+  ],
+  "facts": {
+   "abv": 50.5,
+   "proof": 101,
+   "age": "Minimum 4 years",
+   "mash_bill": "51% rye, 37% corn, 12% malted barley (per Breaking Bourbon)",
+   "cask": null,
+   "region": "Kentucky",
+   "source_url": "https://www.wildturkeybourbon.com/en-us/products/wild-turkey-101-rye/"
+  },
+  "flavor_terms": [
+   "caramel",
+   "honey",
+   "vanilla",
+   "rye spice",
+   "mint",
+   "cinnamon",
+   "burnt toffee",
+   "leather",
+   "pepper",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Critic reviews are older (2013, 2017); the product may have changed since."
+ },
+ {
+  "id": "ks-whistlepig-aged-10-years-single-barrel-rye-whiskey",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Single-barrel/private-barrel product; 107.4 proof barrel not found. Found only other barrels (104.4 'Water Rabbit' tasting-room barrel, 109.5 store pick), so recorded nothing."
+ },
+ {
+  "id": "ks-whistlepig-aged-10-years-piggybank-rye-limited-edition-straight-rye-whiskey",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Drinkhacker",
+    "source_url": "https://www.drinkhacker.com/2023/12/26/review-whistlepig-piggybank-rye-10-years-old-2023/",
+    "score": null,
+    "scale": null,
+    "nose": "Biting; green grass and pepper, later black cherry and clove.",
+    "palate": "Bold and herbal; tobacco, grass, leather, orange peel, cranberry, winter spice.",
+    "finish": "Aggressive rye punch with spearmint and eucalyptus.",
+    "summary": "2023 edition (gold wax), 110 proof; letter grade A-; more aggressive than 2022, water recommended.",
+    "year": 2023
+   },
+   {
+    "source": "The Whiskey Wash (Jerry Jenae Sampson)",
+    "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-whistlepig-piggybank-rye/",
+    "score": null,
+    "scale": null,
+    "nose": "Teriyaki, smoky soy, vanilla, sunflower seed.",
+    "palate": "Peppery and woody with fermented notes, cola, tarragon.",
+    "finish": "Extended, charred oak.",
+    "summary": "10-year, 110-proof PiggyBank reviewed Feb 2023 (likely the 2022 edition); numeric rating shown without stated scale.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 55,
+   "proof": 110,
+   "age": "10 years",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Vermont (bottler)",
+   "source_url": "https://www.drinkhacker.com/2023/12/26/review-whistlepig-piggybank-rye-10-years-old-2023/"
+  },
+  "flavor_terms": [
+   "green grass",
+   "pepper",
+   "black cherry",
+   "clove",
+   "tobacco",
+   "leather",
+   "orange peel",
+   "spearmint",
+   "eucalyptus",
+   "charred oak"
+  ],
+  "confidence": "medium",
+  "notes": "Annual edition (2022/2023/2024 'Rye, White & Blue') not identifiable from label; reviews cover different years. Skipped retailer producer notes listing 100 proof."
+ },
+ {
+  "id": "ks-old-forester-kentucky-straight-rye-whiskey",
+  "producer": {
+   "nose": "Brown sugar and magnolia blossom with sassafras and candied lemon.",
+   "palate": "Immediate black pepper and cinnamon stick, then dried dill and baked apple.",
+   "finish": "Long and dry; allspice, peppercorn, pine, anise, lemon zest.",
+   "summary": "Notes by Master Taster Jackie Zykan from the brand's launch announcement.",
+   "source_url": "https://www.oldforester.com/old-forester-introduces-rye-whisky/"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Jacob Grier)",
+    "source_url": "https://distiller.com/spirits/old-forester-rye",
+    "score": 85,
+    "scale": "100",
+    "nose": null,
+    "palate": "Big clove hit; vanilla, cherrywood, mildly medicinal; sweet/heat balance.",
+    "finish": "Sweet with a bit of maple.",
+    "summary": "Expert rating; unusual mash bill and profile.",
+    "year": null
+   },
+   {
+    "source": "Drinkhacker",
+    "source_url": "https://www.drinkhacker.com/2019/02/09/review-old-forester-rye/",
+    "score": null,
+    "scale": null,
+    "nose": "Barrel char and spice; clove, black pepper, toasted sesame, dried fruit.",
+    "palate": "Clove, nutmeg, cinnamon to vanilla custard, milk chocolate, lemon peel.",
+    "finish": "Vanilla ice cream and cinnamon.",
+    "summary": "Letter grade A.",
+    "year": 2019
+   },
+   {
+    "source": "Secret Whiskey Society (Brad)",
+    "source_url": "https://secretwhiskeysociety.com/old-forester-100-proof-rye-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Honey, vanilla, light fruit, citrus, green apple, anise, cinnamon, allspice, floral, rye spice.",
+    "palate": "Rye spice, light caramel, toasted oak, banana, black peppercorn, malt.",
+    "finish": "Medium; spice, heat, rye and pepper.",
+    "summary": "Solid cocktail value but lacks complexity.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "NAS",
+   "mash_bill": "65% rye, 20% malted barley, 15% corn",
+   "cask": "New charred American oak",
+   "region": "Kentucky (Louisville)",
+   "source_url": "https://www.oldforester.com/old-forester-introduces-rye-whisky/"
+  },
+  "flavor_terms": [
+   "brown sugar",
+   "candied lemon",
+   "black pepper",
+   "cinnamon",
+   "dill",
+   "baked apple",
+   "clove",
+   "anise",
+   "vanilla",
+   "maple"
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "id": "ks-pikesville-straight-rye-whiskey",
+  "producer": {
+   "nose": "Dusty cocoa with oaky smoke underneath.",
+   "palate": "Dry and spicy; honeyed rye and clove.",
+   "finish": "Soft vanilla and baking spice.",
+   "summary": "Heaven Hill tasting profile; 6 years, 110 proof.",
+   "source_url": "https://heavenhilldistillery.com/pikesville-straight-rye.php"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/pikesville-rye-6-year",
+    "score": null,
+    "scale": null,
+    "nose": "Sweet and spicy; cherry syrup, rye spice, red licorice, cinnamon apple.",
+    "palate": "Cherry cola with rye spice, vanilla, summer fruit; drinks below its proof.",
+    "finish": "Rye spice and vanilla, creeping heat, subtle oak, cherry syrup.",
+    "summary": "Readily available, easy high-proof rye with mass appeal. Site rating 3.5 (scale not confirmed from fetched page; not recorded as score).",
+    "year": 2016
+   },
+   {
+    "source": "WhiskyRant (Johannes Lindblom)",
+    "source_url": "https://www.whiskyrant.com/pikesville-110-proof-straight-rye-whiskey-review/",
+    "score": 95,
+    "scale": "100",
+    "nose": "Sawdust, creamy sweetness, vanilla, cherry bubblegum, corn.",
+    "palate": "Syrupy cherry, dark fruit, spice, mild oak, vanilla.",
+    "finish": "Long, spicy, classic rye with sweet hints.",
+    "summary": "Score is a sum of sub-scores (nose, taste, finish, balance).",
+    "year": 2017
+   },
+   {
+    "source": "Master of Malt (retailer house notes)",
+    "source_url": "https://www.masterofmalt.com/whiskies/pikesville/pikesville-6-year-old-110-proof-straight-rye-whiskey/",
+    "score": null,
+    "scale": null,
+    "nose": "Dusty spice, cocoa, liquorice, Curacao, vanilla custard, creme caramel.",
+    "palate": "Fruity then spicy rye; liquorice, oak, clove.",
+    "finish": "Vanilla with cinnamon and apricot pastry.",
+    "summary": "Retailer-written notes, 55% ABV.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 55,
+   "proof": 110,
+   "age": "6 years",
+   "mash_bill": "51% rye (BB: 39% corn, 10% malted barley; WhiskyRant: 37% corn, 12% barley; sources disagree)",
+   "cask": null,
+   "region": "Kentucky (Heaven Hill, Bardstown)",
+   "source_url": "https://heavenhilldistillery.com/pikesville-straight-rye.php"
+  },
+  "flavor_terms": [
+   "cocoa",
+   "clove",
+   "honey",
+   "vanilla",
+   "baking spice",
+   "cherry",
+   "rye spice",
+   "licorice",
+   "cinnamon",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Secondary-grain split differs between critic pages."
+ },
+ {
+  "id": "ks-woodford-reserve-distiller-s-select-kentucky-straight-rye-whiskey",
+  "producer": {
+   "nose": "Rye, black pepper, cedar and cassia with marzipan; hints of pear, apple, almond.",
+   "palate": "Clove, rye, mint, molasses, sorghum, honey, apple and malt.",
+   "finish": "Long and sweetly spiced.",
+   "summary": "Producer page; 53% rye, 90.4 proof.",
+   "source_url": "https://www.woodfordreserve.com/whiskey/rye-whiskey/"
+  },
+  "critics": [
+   {
+    "source": "Drinkhacker",
+    "source_url": "https://www.drinkhacker.com/2015/02/06/review-woodford-reserve-rye/",
+    "score": null,
+    "scale": null,
+    "nose": "Cinnamon toast, vanilla, baking spice.",
+    "palate": "Gingerbread, cherry, clove-cinnamon apple-pie spice.",
+    "finish": "Chocolate malt returning to vanilla.",
+    "summary": "Letter grade A.",
+    "year": 2015
+   },
+   {
+    "source": "Breaking Bourbon (Jordan Moskal)",
+    "source_url": "https://www.breakingbourbon.com/review/woodford-reserve-distillers-select-rye",
+    "score": null,
+    "scale": null,
+    "nose": "Very light; subtle rye and wood, faint pear and apple.",
+    "palate": "Peppery rye with honey, apple, vanilla; bourbon-leaning.",
+    "finish": "Light pepper and leather, then pear, honey, vanilla.",
+    "summary": "Felt overpriced and underproofed. Site rating 2 (scale not confirmed from fetched page; not recorded as score).",
+    "year": 2015
+   }
+  ],
+  "facts": {
+   "abv": 45.2,
+   "proof": 90.4,
+   "age": null,
+   "mash_bill": "53% rye, 33% corn, 14% malted barley",
+   "cask": null,
+   "region": "Kentucky",
+   "source_url": "https://www.breakingbourbon.com/review/woodford-reserve-distillers-select-rye"
+  },
+  "flavor_terms": [
+   "rye",
+   "black pepper",
+   "cedar",
+   "marzipan",
+   "pear",
+   "apple",
+   "clove",
+   "mint",
+   "honey",
+   "cinnamon"
+  ],
+  "confidence": "high",
+  "notes": "Critic reviews date from the 2015 launch."
+ }
+]

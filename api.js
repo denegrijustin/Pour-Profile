@@ -52,10 +52,10 @@ const PROFILE_KEY = "pourProfile.activeProfile";
 // Profiles were originally named after people; they're now named after the drink
 // family each one covers. Map any stored legacy value so existing phones don't
 // wake up pointing at a slug that no longer exists.
-const LEGACY_PROFILE_SLUGS = { justin: "spirits", lady: "wine" };
+const LEGACY_PROFILE_SLUGS = { justin: "jdad", spirits: "jdad", wine: "lady" };
 let activeProfile = LEGACY_PROFILE_SLUGS[localStorage.getItem(PROFILE_KEY)]
   || localStorage.getItem(PROFILE_KEY)
-  || "spirits";
+  || "jdad";
 // Write the migrated value straight back, so the legacy slug doesn't linger.
 try { localStorage.setItem(PROFILE_KEY, activeProfile); } catch { /* ignore */ }
 
@@ -65,13 +65,13 @@ export function setActiveProfile(slug) {
   try { localStorage.setItem(PROFILE_KEY, slug); } catch { /* ignore */ }
 }
 
-function withProfile(path) {
+function withProfile(path, profile = activeProfile) {
   const sep = path.includes("?") ? "&" : "?";
-  return `${path}${sep}profile=${encodeURIComponent(activeProfile)}`;
+  return `${path}${sep}profile=${encodeURIComponent(profile)}`;
 }
 
 async function request(path, options = {}) {
-  path = withProfile(path);
+  path = withProfile(path, options.profile);
   const method = options.method || "GET";
   try {
     const res = await fetch(path, {
@@ -80,7 +80,7 @@ async function request(path, options = {}) {
       body: options.body ? JSON.stringify(options.body) : undefined
     });
     const data = await res.json().catch(() => ({}));
-    if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
+    if (!res.ok) throw Object.assign(new Error(data.error || `Request failed (${res.status})`), { status:res.status });
     if (method === "GET") {
       const cache = readCache();
       cache[path] = { data, cachedAt: Date.now() };
@@ -123,10 +123,16 @@ export const api = {
   palate: () => request("/api/palate"),
   match: (payload) => request("/api/match", { method: "POST", body: payload }),
 
+  fullProfile: () => request("/api/profile/full"),
+  photoRecommendations: (payload) => request("/api/recommendations/photo", { method: "POST", body: payload }),
   profiles: () => request("/api/profiles"),
+  drinkSearch: (q) => request(`/api/drinks/search?${new URLSearchParams({ q })}`),
+  drinkAdopt: (payload) => request("/api/drinks/adopt", { method: "POST", body: payload }),
+  analyzeImage: (payload) => request("/api/analyze-image", { method: "POST", body: payload }),
   catalogSearch: (q) => request(`/api/catalog/search?${new URLSearchParams({ q })}`),
   catalogRecommended: () => request("/api/catalog/recommended"),
   catalogBrowse: (params = {}) => request(`/api/catalog/browse?${new URLSearchParams(params)}`),
+  catalogItem: (id) => request(`/api/catalog/item/${encodeURIComponent(id)}`),
   catalogAdopt: (payload) => request("/api/catalog/adopt", { method: "POST", body: payload }),
   // Image enrichment runs server-side: the Worker does the outbound lookups, the
   // phone just drives the loop and shows progress.
@@ -143,6 +149,8 @@ export const api = {
   putWineDimension: (payload) => request("/api/wine/dimensions", { method: "PUT", body: payload }),
 
   barcode: (code) => request(`/api/barcode/${encodeURIComponent(code)}`),
+  barcodeLookup: (code) => request(`/api/barcodes/${encodeURIComponent(code)}`),
+  saveBarcode: (payload) => request("/api/barcodes", { method: "POST", body: payload }),
   search: (q) => request(`/api/search?${new URLSearchParams({ q })}`),
   stats: () => request("/api/stats"),
 
@@ -151,21 +159,23 @@ export const api = {
 
 // Pours logged offline are queued and flushed on the next successful sync.
 async function queueableWrite(path, payload) {
+  const profile = activeProfile;
   if (navigator.onLine) {
     try {
-      return await request(path, { method: "POST", body: payload });
+      return await request(path, { method: "POST", body: payload, profile });
     } catch (err) {
-      queueWrite(path, payload);
-      throw err;
+      if (err.status) throw err;
+      queueWrite(path, payload, profile);
+      return { queued:true, tasting:payload };
     }
   }
-  queueWrite(path, payload);
+  queueWrite(path, payload, profile);
   return { queued: true, tasting: payload };
 }
 
-function queueWrite(path, payload) {
+function queueWrite(path, payload, profile) {
   const q = readQueue();
-  q.push({ path, payload, queuedAt: Date.now() });
+  q.push({ path, payload, profile, queuedAt: Date.now(), requestId:payload.client_request_id || crypto.randomUUID() });
   writeQueue(q);
 }
 
@@ -176,7 +186,7 @@ export async function flushQueue() {
   let flushed = 0;
   for (const item of q) {
     try {
-      await request(item.path, { method: "POST", body: item.payload });
+      await request(item.path, { method: "POST", body: { ...item.payload, client_request_id:item.requestId }, profile: LEGACY_PROFILE_SLUGS[item.profile] || item.profile || "jdad" });
       flushed++;
     } catch {
       remaining.push(item);

@@ -1,7 +1,8 @@
+import { savedAnswersHtml } from "./questionnaire-form.js";
 import { api, downscaleImage } from "./api.js";
 import {
   el, escapeHtml, formatRating, formatDate, formatMoney, statusPillsHtml, matchBadgeHtml,
-  decisionBannerHtml, whyConcernsHtml, openSheet, closeSheet, toast, flavorTagPickerHtml
+  decisionBannerHtml, whyConcernsHtml, openSheet, closeSheet, toast, flavorTagPickerHtml, expertNotesHtml
 } from "./ui.js";
 import { CATEGORIES, STATUS_TAGS, categoryLabel, titleize } from "./spirit-taxonomy.js";
 import { openLogPourSheet } from "./log-pour.js";
@@ -22,7 +23,15 @@ export async function renderBottleDetail(id, dispatchNav) {
   view.innerHTML = `<p class="field-hint">Loading bottle…</p>`;
   let data;
   try { data = await api.bottle(id); } catch (err) { view.innerHTML = `<p>Couldn't load this bottle: ${escapeHtml(err.message)}</p>`; return; }
-  const { bottle, tastings, match } = data;
+  const { bottle, tastings, match, expert, notes_match: notesMatch, catalog_link: catalogLink } = data;
+  if (!bottle.image_url) api.enrichImages({limit:1,bottle_id:Number(id)}).then(async result => {
+    if (!result.results?.some(r=>r.status === "ok") || currentBottleId !== id || !view.classList.contains("active")) return;
+    const fresh = await api.bottle(id);
+    if (!fresh.bottle.image_url || currentBottleId !== id) return;
+    const hero = view.querySelector(".hero-photo");
+    const placeholder = hero?.querySelector(".hero-photo-empty");
+    if (placeholder) { const image = document.createElement("img"); image.src = fresh.bottle.image_url; image.alt = fresh.bottle.name; placeholder.replaceWith(image); }
+  }).catch(()=>{});
   const external = await api.externalRatings(id).then((r) => r.external_ratings || []).catch(() => []);
 
   const isWine = bottle.category === "wine";
@@ -62,6 +71,7 @@ export async function renderBottleDetail(id, dispatchNav) {
         </div>
         <div class="td-body">
           <div class="td-meta">${v ? `<strong>${escapeHtml(v.label)}</strong> · ` : ""}${formatDate(t.tasted_at)}${t.venue_name ? ` · ${escapeHtml(t.venue_name)}` : ""}${t.serving_style ? ` · ${escapeHtml(titleize(t.serving_style))}` : ""}</div>
+          ${savedAnswersHtml(bottle.category,t.questionnaire_answers,t.tasting_style)}
           ${t.notes ? `<p style="margin:4px 0">${escapeHtml(t.notes)}</p>` : ""}
           ${t.flavor_tags && t.flavor_tags.length ? `<div class="tag-cloud" style="margin-top:4px">${t.flavor_tags.map((f) => `<span class="tag-chip" style="cursor:default">${escapeHtml(titleize(f))}</span>`).join("")}</div>` : ""}
         </div>
@@ -98,7 +108,7 @@ export async function renderBottleDetail(id, dispatchNav) {
     </div>
 
     <div style="display:flex;gap:8px;margin-bottom:10px">
-      <button class="btn btn-primary" data-action="log-pour" style="flex:1">Log a Pour</button>
+      <button class="btn btn-primary" data-action="log-pour" style="flex:1">Rate this drink</button>
       <button class="btn btn-secondary" data-action="edit-bottle">Edit</button>
       <button class="btn btn-secondary" data-action="add-compare">⇄</button>
     </div>
@@ -107,7 +117,11 @@ export async function renderBottleDetail(id, dispatchNav) {
 
     <div class="section-title"><h2>Details</h2></div>
     <div class="card"><dl class="spec-grid">${specs.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(String(v))}</dd></div>`).join("")}</dl></div>
+    ${bottle.image_source_url ? `<p class="field-hint"><a href="${escapeHtml(bottle.image_source_url)}" target="_blank" rel="noopener noreferrer">Producer bottle photo</a> · Packaging may vary by release.</p>` : ""}
     ${bottle.description ? `<div class="card"><strong>Notes on this bottle</strong><p style="margin-top:6px">${escapeHtml(bottle.description)}</p></div>` : ""}
+
+    ${expertNotesHtml(expert, notesMatch)}
+    ${expert && catalogLink && catalogLink.how === "close" ? `<p class="field-hint">Notes shown are for <strong>${escapeHtml(catalogLink.name)}</strong>, the closest catalog match to this bottle's name.</p>` : ""}
 
     <div class="section-title"><h2>Outside Opinion</h2><span class="link" data-action="add-external">+ Add</span></div>
     <div class="card">
@@ -116,6 +130,8 @@ export async function renderBottleDetail(id, dispatchNav) {
           <div>
             <strong>${escapeHtml(sourceLabel(r.source))}</strong>
             ${r.score != null ? `<span class="ext-score">${r.score}<span style="font-weight:500;font-size:12px">/${escapeHtml(r.scale)}</span></span>` : ""}
+            ${r.source_url && /^https?:\/\//.test(r.source_url) ? `<a href="${escapeHtml(r.source_url)}" target="_blank" rel="noopener noreferrer">Rating source</a>` : ""}
+            ${(() => { let d = r.descriptors || {}; if (typeof d === "string") { try { d = JSON.parse(d); } catch { d = {}; } } return d.review_scope ? `<p class="field-hint">${escapeHtml(d.review_scope)} · Checked ${escapeHtml(d.verified_at || "")}</p>` : ""; })()}
             ${descriptorChips(r)}
           </div>
           <button class="btn-ghost btn-sm" data-del-external="${r.id}" aria-label="Remove">✕</button>

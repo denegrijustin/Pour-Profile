@@ -1,0 +1,302 @@
+[
+ {
+  "id": "booker-s-bourbon",
+  "producer": { "nose": "Warm and inviting, with vanilla and a gentle sweetness from the 7+ years of age (Barry's Batch 2025-01).", "palate": "Described by the distiller as cozy and mouth-filling.", "finish": "Balanced and smooth, leaving you wanting another sip.", "summary": "Batch-specific notes from the 2025-01 Barry's Batch; Booker's flavor varies by batch.", "source_url": "https://www.beamdistilling.com/bookersbourbon/whiskies/2025-01-barrys-batch-bourbon" },
+  "critics": [
+   { "source": "Boozemakers", "source_url": "https://www.boozemakers.com/articles/bookers-bourbon-review", "score": 87, "scale": "100", "nose": "Cinnamon roll, peanut fudge, caramel, toasted oak, tobacco, honey, allspice and graham cracker.", "palate": "Vanilla, cinnamon, clove, dark berries, caramel, signature Beam nuttiness and charred oak; thick, oily texture.", "finish": "Long and warming with mixed nuts, dark berries and spicy char.", "summary": "Unfiltered, high-proof Beam bourbon with concentrated oak and spice; best for experienced drinkers.", "year": 2026 },
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/bookers-bourbon", "score": 3, "scale": "5", "nose": "Strong alcohol up front with oak, faint floral and nutty notes.", "palate": "Approachable for the proof; wood sugars, vanilla and raisin, then warmth and aged wood or leather.", "finish": "Long, light and lingering, easing into vanilla and fresh wood.", "summary": "Review of batch C06-K-8 (128.5 proof); an older batch, so profile will differ from current releases.", "year": 2014 }
+  ],
+  "facts": { "abv": null, "proof": 125.7, "age": "7 years, 2 months (2025-01 batch)", "mash_bill": null, "cask": null, "region": null, "source_url": "https://www.beamdistilling.com/bookersbourbon/whiskies/2025-01-barrys-batch-bourbon" },
+  "flavor_terms": ["vanilla", "cinnamon", "caramel", "toasted oak", "dark berries", "clove", "honey", "tobacco", "peanut", "leather"],
+  "confidence": "high",
+  "notes": "Booker's is released in batches with varying proof and age; producer facts are from the 2025-01 batch, critic notes from different batches."
+ },
+ {
+  "id": "booker-s-the-reserves",
+  "producer": { "nose": "Caramel, vanilla and a touch of agave.", "palate": "Rich caramel and charred oak with baking spice.", "finish": "Agave and black pepper.", "summary": "Second Reserves release (2025), uncut and unfiltered bourbon finished in barrels that previously held El Tesoro tequila.", "source_url": "https://www.beamdistilling.com/bookersbourbon/whiskies/booker-the-reserves-2025" },
+  "critics": [
+   { "source": "VinePair", "source_url": "https://vinepair.com/review/bookers-bourbon-the-reserves-2024/", "score": 94, "scale": "100", "nose": "Dark caramel, burnt brown sugar, buttered cinnamon toast, dried apricot and baked apple, moving to vanilla ice cream and char.", "palate": "Red-hot cinnamon candy, sugar cookie, gingerbread, dark leather, black walnut, light cherry syrup.", "finish": "Long, sweet and semi-dry, with baked apple, clove, allspice and honeyed black tea.", "summary": "2024 release, 8 to 14 year blend at 125.9 proof; balanced and restrained for the proof.", "year": 2024 },
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/bookers-the-reserves-2025", "score": 3.5, "scale": "5", "nose": "Brown sugar, cinnamon, eucalyptus, agave, mint, vanilla, tobacco and earthy notes.", "palate": "Caramel, cinnamon, light citrus and grapefruit, thyme.", "finish": "Dry seasoned oak, rye spice, black pepper and dark fruit, with a quick fade.", "summary": "2025 tequila-finished release at 123.3 proof; interesting but somewhat noncommittal.", "year": 2025 },
+   { "source": "Bourbon Obsessed", "source_url": "https://bourbonobsessed.com/bookers-the-reserves-bourbon-review/", "score": null, "scale": null, "nose": "Brown sugar, toffee, dark cherries, vanilla and mild oak, with sugar cookie and tart orange peel.", "palate": "Toffee, dark cherries, brown sugar, tart orange, dry oak and hot cinnamon.", "finish": "Hot cinnamon spice and lingering tart orange, growing drier and charrier; very long and warm.", "summary": "2024 release at 125.9 proof; familiar Booker's profile with richer fruit and pronounced spice.", "year": 2024 }
+  ],
+  "facts": { "abv": null, "proof": 123.3, "age": "8 years, 10 months (2025 release, per Breaking Bourbon)", "mash_bill": null, "cask": "Finished in barrels previously used for El Tesoro tequila (2025 release)", "region": null, "source_url": "https://www.beamdistilling.com/bookersbourbon/whiskies/booker-the-reserves-2025" },
+  "flavor_terms": ["caramel", "vanilla", "agave", "charred oak", "baking spice", "black pepper", "brown sugar", "cinnamon", "cherry", "leather"],
+  "confidence": "high",
+  "notes": "Input lists 90 proof, but sources show about 123 to 126 proof for 2024 and 2025 releases. Annual release: critic notes span the 2024 and 2025 releases."
+ },
+ {
+  "id": "baker-s-7-year-single-barrel",
+  "producer": { "nose": "Fruit, vanilla and caramel.", "palate": "Medium-bodied with oak, toasted nuts and vanilla.", "finish": "Warm, rounded and lingering.", "summary": "Single barrel bottled at 107 proof, minimum 7 years; flavor varies barrel to barrel.", "source_url": "https://www.beamdistilling.com/bakers/whiskies/bakers-single-barrel-bourbon" },
+  "critics": [
+   { "source": "Barrel Banter", "source_url": "https://www.barrelbanter.com/reviews/bakers-7", "score": null, "scale": null, "nose": "Peanut is the lead note, with dark butterscotch, caramel and faint red fruit.", "palate": "Oak-forward and sweet; peanut butter turning to dry peanut shell, plus artificial banana and sweet mesquite smoke.", "finish": "Peanut persists as oak builds; red apple and orange emerge with mild alcohol bite.", "summary": "Rated 7/10.", "year": 2026 },
+   { "source": "The Whisky Knights", "source_url": "https://thewhiskyknights.com/bakers-single-barrel/", "score": 3.5, "scale": "5", "nose": "Pronounced vanilla with oak and rye spice; corn-driven fruit.", "palate": "Creamy start with fruit and vanilla, building cinnamon and pepper; rich and sweet.", "finish": "Rich and creamy as the spices take over.", "summary": "Solid, sweet, spicy single barrel at 107 proof.", "year": 2023 },
+   { "source": "Bourbon Boss Man", "source_url": "https://bourbonbossman.com/2025/02/07/review-of-bakers-single-barrel-bourbon-7-year/", "score": null, "scale": null, "nose": "Brown sugar, walnut and peanut, charred oak, but an off-putting ethanol edge.", "palate": "Vanilla, brown sugar, spice and bitter oak.", "finish": "Medium length with baking spice and dry oak.", "summary": "Disappointed relative to the hype; rated as a mixer or pass at the price.", "year": 2025 }
+  ],
+  "facts": { "abv": 53.5, "proof": 107, "age": "Minimum 7 years", "mash_bill": null, "cask": null, "region": null, "source_url": "https://www.beamdistilling.com/bakers/whiskies/bakers-single-barrel-bourbon" },
+  "flavor_terms": ["vanilla", "caramel", "toasted nuts", "oak", "peanut", "brown sugar", "cinnamon", "butterscotch", "baking spice", "fruit"],
+  "confidence": "high",
+  "notes": "Skipped a Bourbon Culture review (2019) because the bottle was labeled 8 years 6 months, a different label. Single barrel, so notes vary."
+ },
+ {
+  "id": "baker-s-13-year-single-barrel",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [
+   { "source": "VinePair", "source_url": "https://vinepair.com/review/bakers-13-year-old-single-barrel-bourbon-2024/", "score": 93, "scale": "100", "nose": "Classic aged Beam: roasted peanut, hazelnut spread, candied pecan and vanilla syrup against oak, becoming nutty vanilla nougat.", "palate": "Almond cookie and hazelnut, then tobacco-tinged oak, licorice, dark chocolate, dried coffee and ripe raspberry.", "finish": "Dry dark chocolate and espresso with raspberry; extremely long, with dried cranberry skin.", "summary": "2024 release, 13 years at 107 proof; a standout for age.", "year": 2024 },
+   { "source": "Paste Magazine", "source_url": "https://www.pastemagazine.com/drink/whiskey/bakers-13-year-old-single-barrel-bourbon-2024-review-price-flavors", "score": null, "scale": null, "nose": "Almond butter, dark caramel, vanilla frosting, clove, cherry and musty rye grain, shifting to tobacco, leather and anise.", "palate": "Sweet caramel and cherry, then almond butter and charred oak, tobacco and charred corn; drying tannin.", "finish": "Lingering roasty nuttiness and oak with modest tannin.", "summary": "2024 release; rated 8.6/10.", "year": 2024 },
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/bakers-13-year-old-single-barrel", "score": 3.5, "scale": "5", "nose": "Summer fruit with caramel chews, vanilla and cinnamon; hints of char and funk.", "palate": "Rye spice, raisin, caramel and summer fruit with leather, oak and toasted marshmallow.", "finish": "Allspice and oak balanced by butterscotch sweetness, drying out over time.", "summary": "2019 release; classic, balanced but safe for a limited edition.", "year": 2020 }
+  ],
+  "facts": { "abv": 53.5, "proof": 107, "age": "13 years", "mash_bill": null, "cask": null, "region": null, "source_url": "https://vinepair.com/review/bakers-13-year-old-single-barrel-bourbon-2024/" },
+  "flavor_terms": ["peanut", "hazelnut", "caramel", "vanilla", "tobacco", "dark chocolate", "cherry", "leather", "raspberry", "oak"],
+  "confidence": "medium",
+  "notes": "No producer page found for the 13 year. Limited annual single barrel release; critic notes span 2019 and 2024 releases."
+ },
+ {
+  "id": "little-book",
+  "producer": { "nose": null, "palate": null, "finish": null, "summary": null, "source_url": null },
+  "critics": [],
+  "facts": { "abv": null, "proof": null, "age": null, "mash_bill": null, "cask": null, "region": null, "source_url": null },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Ambiguous label: the producer's Little Book page (beamdistilling.com/littlebook) lists only numbered Chapter releases and The Infinite editions, with no standard 90 proof core expression. Each Chapter differs, so no single set of notes was recorded."
+ },
+ {
+  "id": "little-book-the-infinite",
+  "producer": { "nose": null, "palate": "A blend of three Noe-family bourbons: Booker's contributes oak, char and smoke; Fred's brings dark fruit, cherry and brown sugar; Freddie's adds caramel, vanilla and baking spice.", "finish": null, "summary": "Edition I blends bourbons from three generations of Noe master distillers; deep copper color.", "source_url": "https://www.beamdistilling.com/littlebook/whiskies/little-book-the-infinite-edition" },
+  "critics": [
+   { "source": "VinePair", "source_url": "https://vinepair.com/review/little-book-the-infinite-edition-1/", "score": 93, "scale": "100", "nose": "Corn pudding, light herbal notes and oaky caramel with roasted nuts, like roasted peach with herbs.", "palate": "Salted peanut butter, dark fruit, cinnamon sugar cookie, vanilla and a barbecue-like smoky sweetness.", "finish": "Deep caramel, vanilla bean and toasted bread with fading spice; the reviewer's favorite part.", "summary": "Edition I at 119.3 proof, blending 7 to 20 year bourbons.", "year": 2024 },
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/little-book-the-infinite-edition-1", "score": 3.5, "scale": "5", "nose": "Cinnamon and dry dark chocolate over oak, with dense caramel, dark fruit and smoke.", "palate": "Bold baking spice, rich caramel, graham cracker and brown sugar with aged oak, vanilla custard and Beam nuttiness.", "finish": "Brown sugar and caramel as spices recede, with firm heat and nuttiness.", "summary": "Edition I at 119.3 proof.", "year": 2024 }
+  ],
+  "facts": { "abv": 59.65, "proof": 119.3, "age": "Blend of bourbons aged 7 to 20 years", "mash_bill": null, "cask": null, "region": null, "source_url": "https://vinepair.com/review/little-book-the-infinite-edition-1/" },
+  "flavor_terms": ["caramel", "cinnamon", "dark chocolate", "oak", "peanut butter", "brown sugar", "vanilla", "baking spice", "dark fruit", "graham cracker"],
+  "confidence": "high",
+  "notes": "Notes are for The Infinite Edition I. Input proof 90 does not match; sources report 119.3 proof. Edition II exists with a different blend."
+ },
+ {
+  "id": "basil-hayden-bourbon",
+  "producer": { "nose": "Charred oak with sweet vanilla caramel and hints of dried fruit.", "palate": "Charred oak with brown sugar, a touch of black pepper and dried fruit.", "finish": "Pleasant, lingering charred oak with a bit of dried fruit.", "summary": "Golden brown, high-rye bourbon at 80 proof (40% ABV).", "source_url": "https://www.basilhaydenbourbon.com/whiskies/basil-hayden-kentucky-straight-bourbon" },
+  "critics": [
+   { "source": "Breaking Bourbon (2025)", "source_url": "https://www.breakingbourbon.com/review/basil-hayden-bourbon", "score": 2.5, "scale": "5", "nose": "Caramel, candy corn and squash with red fruit, vanilla and oak; faint peach, golden raisin and green tea.", "palate": "Vanilla and sweet oak, then golden raisin, honey and peach; thin because of the proof.", "finish": "Spicy with dry oak and a coppery edge; semi-sweet fruit and chocolate wafer fade fast, leaving oak bitterness.", "summary": "A gateway bourbon for newcomers; the low proof is divisive.", "year": 2025 },
+   { "source": "Breaking Bourbon (2019)", "source_url": "https://www.breakingbourbon.com/review/basil-haydens-bourbon", "score": 2, "scale": "5", "nose": "Bright peach and ripe mixed berries, with faint oak, orange zest and white pepper.", "palate": "Light vanilla, new wood and peach; thin mouthfeel.", "finish": "Short and fleeting with oak, summer fruit, corn and new leather.", "summary": "Approachable, but pricey for an 80 proof NAS bourbon.", "year": 2019 },
+   { "source": "Bourbon Obsessed", "source_url": "https://bourbonobsessed.com/basil-hayden-bourbon-review/", "score": null, "scale": null, "nose": "Vanilla, dried fruit and oak.", "palate": "Vanilla, honey and citrus.", "finish": "Honey and oak.", "summary": "Refined and approachable but not worth the price for serious enthusiasts.", "year": 2024 }
+  ],
+  "facts": { "abv": 40, "proof": 80, "age": null, "mash_bill": "High-rye mash bill; percentages not disclosed", "cask": null, "region": null, "source_url": "https://www.basilhaydenbourbon.com/whiskies/basil-hayden-kentucky-straight-bourbon" },
+  "flavor_terms": ["charred oak", "vanilla", "caramel", "dried fruit", "brown sugar", "black pepper", "peach", "honey", "golden raisin", "citrus"],
+  "confidence": "high",
+  "notes": "Reviews are for the standard 80 proof Basil Hayden bourbon."
+ },
+ {
+  "id": "basil-hayden-toast",
+  "producer": { "nose": "Toasted oak with dried fruit and caramelized sugar.", "palate": "Toasted wood and vanilla with a light body.", "finish": "Sweet caramel.", "summary": "Dark amber, brown-rice mash bill instead of rye, with secondary aging in toasted, flash-charred barrels.", "source_url": "https://www.basilhaydenbourbon.com/whiskies/basil-hayden-toast-bourbon" },
+  "critics": [
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/basil-haydens-toast", "score": 3, "scale": "5", "nose": "Brown sugar, caramel toffee, buttered toast, cinnamon and light smoke.", "palate": "Toffee, butterscotch, sweet bread and almond; easygoing.", "finish": "Light heat and spice with cinnamon, hazelnut and leather.", "summary": "Called the best Basil Hayden release yet; soft and approachable.", "year": 2021 },
+   { "source": "The Whiskey Wash", "source_url": "https://thewhiskeywash.com/american-whiskey/whiskey-review-basil-hayden-toast/", "score": null, "scale": null, "nose": "Very faint sweet cereal, light brown sugar and glazed donut with a hint of campfire.", "palate": "Delicate rhubarb, almond and crab apple; soft and smooth.", "finish": null, "summary": "Light and mild; the displayed rating appeared to be 5/10 but was not clearly stated.", "year": 2021 }
+  ],
+  "facts": { "abv": 40, "proof": 80, "age": "NAS", "mash_bill": "63% corn, 27% brown rice, 10% malted barley", "cask": "Secondary maturation in toasted then flash-charred barrels", "region": null, "source_url": "https://www.basilhaydenbourbon.com/whiskies/basil-hayden-toast-bourbon" },
+  "flavor_terms": ["toasted oak", "dried fruit", "caramel", "vanilla", "brown sugar", "toffee", "butterscotch", "almond", "cinnamon", "hazelnut"],
+  "confidence": "high",
+  "notes": "Mash bill percentages come from the critic pages (Breaking Bourbon, Whiskey Wash); the producer page only says brown rice replaces rye."
+ },
+ {
+  "id": "basil-hayden-dark-rye",
+  "producer": { "nose": "Oak balanced with dark berries and molasses.", "palate": "Caramel, dried fruit and oak, with back-end spice and a rounded feel.", "finish": "Lingering dried fruit, light sweetness and rye spice.", "summary": "Deep amber with ruby tones; Kentucky rye plus Canadian rye, finished with port.", "source_url": "https://www.basilhaydenbourbon.com/whiskies/basil-hayden-dark-rye-whiskey" },
+  "critics": [
+   { "source": "The Whiskey Wash", "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-basil-haydens-dark-rye-whiskey/", "score": null, "scale": null, "nose": "Sweet ruby port with oak, fresh leather, pickling spice and dried dark red fruit.", "palate": "Port dominates, with light rye spice, a briny pickle note, chocolate and oak; a slightly cloying caramelized corn syrup close.", "finish": null, "summary": "Critical review (displayed rating appeared to be 4/10, not clearly stated) at 80 proof.", "year": 2018 }
+  ],
+  "facts": { "abv": 40, "proof": 80, "age": null, "mash_bill": "Blend of Kentucky rye and Canadian rye whiskeys", "cask": "Port wine finish", "region": null, "source_url": "https://www.basilhaydenbourbon.com/whiskies/basil-hayden-dark-rye-whiskey" },
+  "flavor_terms": ["dark berries", "molasses", "caramel", "dried fruit", "oak", "rye spice", "port", "leather", "chocolate"],
+  "confidence": "high",
+  "notes": "Only one critic note found; the 2018 review is the original release."
+ },
+ {
+  "id": "maker-s-mark",
+  "producer": { "nose": "Sweet oak, vanilla, bright fruit and wheat.", "palate": "Sweet and balanced among oak, vanilla and fruity notes.", "finish": "Smooth and creamy with soft spice and a clean close.", "summary": "Wheated bourbon, 90 proof, using soft red winter wheat.", "source_url": "https://www.makersmark.com/en-us/bourbons/makers-mark" },
+  "critics": [
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/makers-mark-bourbon", "score": 2.5, "scale": "5", "nose": "Caramel and vanilla over a brown sugar base.", "palate": "Caramel and vanilla with cinnamon, dark cherry and toasted oak; slight astringency but smooth.", "finish": "Caramel and vanilla fade fast, replaced by cinnamon, then citrus, char and oak.", "summary": "Approachable but unremarkable.", "year": 2024 },
+   { "source": "Bourbon Obsessed", "source_url": "https://bourbonobsessed.com/makers-mark-bourbon-whisky-review/", "score": null, "scale": null, "nose": "Sweet apple and pear, light orange, caramel and brown sugar, later cherry.", "palate": "Pear, light caramel and brown sugar with a touch of cherry; light body.", "finish": "Increasingly dry with char, tannin and black pepper; medium length.", "summary": "Easy-drinking bourbon with classic flavors, good for newcomers.", "year": 2024 }
+  ],
+  "facts": { "abv": 45, "proof": 90, "age": "NAS", "mash_bill": "Wheated; uses soft red winter wheat (percentages not on fetched sources)", "cask": null, "region": null, "source_url": "https://www.makersmark.com/en-us/bourbons/makers-mark" },
+  "flavor_terms": ["caramel", "vanilla", "oak", "brown sugar", "cinnamon", "dark cherry", "wheat", "pear", "apple", "black pepper"],
+  "confidence": "high",
+  "notes": "The 70/16/14 mash bill in the input was not confirmed by any fetched source, so it was left out."
+ },
+ {
+  "id": "maker-s-mark-46",
+  "producer": { "nose": "Toasty French oak, caramel and baking spices.", "palate": "Mildly sweet and layered, with deep vanilla and baking spice.", "finish": "Velvety, subtle and fairly long.", "summary": "Finished with ten seared French oak staves (Stave Profile No. 46).", "source_url": "https://www.makersmark.com/en-us/bourbons/makers-mark-46" },
+  "critics": [
+   { "source": "Breaking Bourbon (2022)", "source_url": "https://www.breakingbourbon.com/review/makers-mark-46-bourbon", "score": 3, "scale": "5", "nose": "Charred French oak and cinnamon raisin toast with vanilla, brown sugar, caramel and creme brulee.", "palate": "Sweet syrup, burnt cinnamon toast, caramel and prominent oak; wheat keeps spice in check.", "finish": "Spicy with heavy char, dried leather and tobacco leaf; fading heat.", "summary": "Solid oak-driven wheated bourbon at 94 proof.", "year": 2022 },
+   { "source": "Breaking Bourbon (2016)", "source_url": "https://www.breakingbourbon.com/review/makers-46-bourbon", "score": 3, "scale": "5", "nose": "Caramel, toasted oak, vanilla, buttery toffee and toasted cinnamon bread.", "palate": "Heavy oak, caramel, cinnamon and light baked wheat bread; balanced but less complex than the nose.", "finish": "A spice blast with buttered rum, tobacco, leather and aged oak, turning one-dimensional.", "summary": "Heavier and oakier than standard Maker's Mark.", "year": 2016 },
+   { "source": "Whiskey in My Wedding Ring", "source_url": "https://www.whiskeyinmyweddingring.com/reviews/makers-mark-46", "score": null, "scale": null, "nose": "Muted, herbal and menthol with butterscotch and some fermentation funk.", "palate": "Stone fruit and orchard fruit, not fresh, with a rye backbone and some proof heat.", "finish": "Medium yet almost absent.", "summary": "Rated 3.2 out of 10, a negative review; publication year not shown.", "year": null }
+  ],
+  "facts": { "abv": 47, "proof": 94, "age": "NAS", "mash_bill": "Wheated Maker's Mark mash bill", "cask": "Finished with ten seared French oak staves (Stave Profile No. 46)", "region": null, "source_url": "https://www.makersmark.com/en-us/bourbons/makers-mark-46" },
+  "flavor_terms": ["french oak", "caramel", "baking spice", "vanilla", "cinnamon", "brown sugar", "leather", "tobacco", "toffee", "oak"],
+  "confidence": "high",
+  "notes": "Standard Maker's 46 (94 proof), not the 46 Cask Strength."
+ },
+ {
+  "id": "maker-s-mark-cask-strength",
+  "producer": { "nose": "Toasted oak, salted caramel and warm vanilla.", "palate": "Robust and warm, with salted caramel, vanilla and spice.", "finish": "Full and harmonious with dark chocolate and espresso.", "summary": "Bottled at barrel proof (107 to 114 proof), minimum 7 years, in small batches.", "source_url": "https://www.makersmark.com/en-us/bourbons/makers-mark-cask-strength" },
+  "critics": [
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/makers-mark-cask-strength-bourbon", "score": 4, "scale": "5", "nose": "Faint cherry, cinnamon and vanilla after an initial alcohol burn.", "palate": "Rich and coating with caramel, toasted nuts, cinnamon, allspice, dark fruit and molasses.", "finish": "Medium to long, sweet and spicy, ending earthy.", "summary": "First release (113.2 proof); far more intense than the standard bottling.", "year": 2014 },
+   { "source": "The Whiskey Wash", "source_url": "https://thewhiskeywash.com/bourbon/whiskey-review-makers-mark-cask-strength-bourbon/", "score": 92, "scale": null, "nose": "Lighter than expected, with distinct vanilla, cinnamon and subtle wood.", "palate": "Smooth, woody notes with vanilla, smoke and spice.", "finish": "Clean, refreshing and longer than standard Maker's, with lingering wheat.", "summary": "Score of 92 given; scale not stated on the page.", "year": 2015 }
+  ],
+  "facts": { "abv": null, "proof": null, "age": "Minimum 7 years", "mash_bill": "Wheated Maker's Mark mash bill", "cask": "Bottled straight from the barrel, nothing added or removed", "region": null, "source_url": "https://www.makersmark.com/en-us/bourbons/makers-mark-cask-strength" },
+  "flavor_terms": ["salted caramel", "vanilla", "toasted oak", "spice", "dark chocolate", "espresso", "cinnamon", "toasted nuts", "molasses", "dark fruit"],
+  "confidence": "high",
+  "notes": "Proof varies by batch (producer lists 107 to 114), so no single proof recorded. Critic reviews are of 2014 and 2015 early releases."
+ },
+ {
+  "id": "maker-s-mark-101",
+  "producer": { "nose": "Soft holiday spices, oak and apple butter.", "palate": "Dried figs, butterscotch and vanilla bean.", "finish": "Lengthy and robust with white chocolate and dried fruit.", "summary": "Classic Maker's recipe bottled at 101 proof; page is titled a limited release.", "source_url": "https://www.makersmark.com/en-us/bourbons/makers-mark-101" },
+  "critics": [
+   { "source": "Bourbon Culture", "source_url": "https://thebourbonculture.com/whiskey-reviews/makers-mark-101-review/", "score": null, "scale": null, "nose": "Light and fruity at first (raisin, cherry, caramel, butterscotch pudding) before sharper cinnamon takes over.", "palate": "Drying cinnamon and oak with cherry compote, raspberry, date and plum; burnt caramel and bitter baker's chocolate.", "finish": "Overdone cinnamon rolls and oak crowd out the faint fruit.", "summary": "Rated 6.5/10, better than average.", "year": 2021 },
+   { "source": "Bourbon Obsessed", "source_url": "https://bourbonobsessed.com/makers-mark-101-review/", "score": null, "scale": null, "nose": "Sweet pear and dark cherry, dark caramel, brown sugar, light orange and vanilla.", "palate": "Dark cherry, brown sugar, light toffee, tart orange peel, mild tannin and dry wood.", "finish": "Black pepper, fading brown sugar, increasingly dry wood and char; fairly long and warm.", "summary": "No numeric score.", "year": 2024 }
+  ],
+  "facts": { "abv": 50.5, "proof": 101, "age": "NAS", "mash_bill": "Classic Maker's Mark recipe", "cask": null, "region": null, "source_url": "https://www.makersmark.com/en-us/bourbons/makers-mark-101" },
+  "flavor_terms": ["holiday spice", "oak", "apple butter", "dried figs", "butterscotch", "vanilla bean", "dark cherry", "brown sugar", "cinnamon", "caramel"],
+  "confidence": "high",
+  "notes": "ABV derived from the 101 proof stated on the producer page."
+ },
+ {
+  "id": "maker-s-mark-wood-finishing-series",
+  "producer": { "nose": "Seasoned oak, bruleed sugar and tobacco.", "palate": "Bold toasted oak with subtle sweetness.", "finish": "Long and enveloping with dried dark fruit and roasted sweetness.", "summary": "The Keepers Release, finished with 10 selected oak staves; cask strength at 107 to 114 proof.", "source_url": "https://www.makersmark.com/en-us/bourbons/makers-mark-wood-finishing-series-bourbon-keepers-release" },
+  "critics": [
+   { "source": "VinePair", "source_url": "https://vinepair.com/review/makers-mark-wood-finishing-series-the-keepers-release/", "score": 92, "scale": "100", "nose": "Heavy baking spice and oak, with char, vanilla, red cherry, bergamot, dark chocolate, tobacco and black tea.", "palate": "Dried citrus and cocoa, a slightly chalky start, then silky vanilla and orange, cinnamon, black tea and dried orchard fruit.", "finish": "Long with dried fruit, cinnamon and vanilla extract, ending on smoked maple.", "summary": "Keepers Release at 109.2 proof, finished with toasted American oak staves.", "year": 2025 },
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/makers-mark-wood-finishing-series-the-keepers-release", "score": 3.5, "scale": "5", "nose": "Balanced oak, caramel, vanilla, dark chocolate, raspberry, brown sugar and coffee bean.", "palate": "Caramel-forward with charred and toasted oak, burnt caramel, plum and chocolate raspberry.", "finish": "Oak first, then pepper, black cherry, molasses and tannic oak.", "summary": "Keepers Release, 109.2 proof.", "year": 2025 }
+  ],
+  "facts": { "abv": 54.6, "proof": 109.2, "age": "NAS", "mash_bill": null, "cask": "Finished with 10 toasted American oak staves per barrel (Keepers Release)", "region": null, "source_url": "https://vinepair.com/review/makers-mark-wood-finishing-series-the-keepers-release/" },
+  "flavor_terms": ["toasted oak", "baking spice", "vanilla", "caramel", "dark chocolate", "tobacco", "black tea", "dried fruit", "cinnamon", "plum"],
+  "confidence": "high",
+  "notes": "The Wood Finishing Series is a set of different releases; notes are for The Keepers Release (2025) only. Input's 90 proof does not match the Keepers Release (109.2 proof)."
+ },
+ {
+  "id": "four-roses-bourbon",
+  "producer": { "nose": "Floral, with gentle spice and honey.", "palate": "Crisp fresh fruit, with hints of pear and apple.", "finish": "Smooth, long and pleasant.", "summary": "Blend of up to 10 Four Roses recipes, aged minimum 5 years.", "source_url": "https://www.fourrosesbourbon.com/bourbon/four-roses-bourbon" },
+  "critics": [
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/four-roses-yellow-label", "score": 2.5, "scale": "5", "nose": "Floral base with apple and pear.", "palate": "Soft, lightweight, with a fruity, floral character.", "finish": "Crisp; fruit and floral fade fast, replaced by a soft, lingering light spice.", "summary": "Mild and easy at 80 proof.", "year": 2016 }
+  ],
+  "facts": { "abv": 40, "proof": 80, "age": "Minimum 5 years", "mash_bill": "Blend of up to 10 Four Roses recipes", "cask": null, "region": null, "source_url": "https://www.fourrosesbourbon.com/bourbon/four-roses-bourbon" },
+  "flavor_terms": ["floral", "spice", "honey", "pear", "apple", "fruit"],
+  "confidence": "high",
+  "notes": "Producer page lists both 80 and 100 proof for this bourbon; the 80 proof review applies. Only one critic note found."
+ },
+ {
+  "id": "four-roses-small-batch",
+  "producer": { "nose": "Rich fruit with hints of sweet oak and caramel.", "palate": "Ripe red berries and dried spices.", "finish": "Soft, smooth and pleasantly long.", "summary": "90 proof, aged 6 to 7 years, blending four recipes.", "source_url": "https://www.fourrosesbourbon.com/bourbon/small-batch" },
+  "critics": [
+   { "source": "Bourbon Culture", "source_url": "https://thebourbonculture.com/whiskey-reviews/four-roses-small-batch-bourbon-review/", "score": null, "scale": null, "nose": "Light brown sugar with green peppercorn, cinnamon and oak.", "palate": "Light and sweet with red fruit and cinnamon; thicker than expected, some youthful oak.", "finish": "Playful spice with toffee and oak, and faint ethanol.", "summary": "Rated 6/10, better than average.", "year": 2020 },
+   { "source": "Bourbon Obsessed", "source_url": "https://bourbonobsessed.com/four-roses-small-batch-bourbon-review/", "score": null, "scale": null, "nose": "Baking spice, cedar, orange, cherry candy, butterscotch and vanilla; light alcohol.", "palate": "Baking spice, light honey, black tea, butterscotch, oak and vanilla.", "finish": "Butterscotch and vanilla, a hint of cedar, growing char; short to medium with moderate burn.", "summary": "No numeric score.", "year": 2021 }
+  ],
+  "facts": { "abv": 45, "proof": 90, "age": "6 to 7 years", "mash_bill": "Blend of four recipes: OBSK, OBSO, OESK, OESO", "cask": null, "region": null, "source_url": "https://www.fourrosesbourbon.com/bourbon/small-batch" },
+  "flavor_terms": ["caramel", "sweet oak", "red berries", "dried spices", "brown sugar", "cinnamon", "butterscotch", "vanilla", "toffee", "baking spice"],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "id": "four-roses-single-barrel",
+  "producer": { "nose": "Dried spice, pear, cocoa, vanilla and maple syrup.", "palate": "Hints of ripe plum and cherry.", "finish": "Smooth and delicately long.", "summary": "100 proof, 7 to 9 years, single recipe OBSV, hand-selected by the master distiller.", "source_url": "https://www.fourrosesbourbon.com/bourbon/single-barrel" },
+  "critics": [
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/four-roses-single-barrel-2025-obsv", "score": 3, "scale": "5", "nose": "Vanilla, dried apple, fresh oak and grain; light.", "palate": "Golden raisin, vanilla syrup, white pepper, light baking spice and a hint of oak.", "finish": "Light rye spice, oak and vanilla powder; mellow.", "summary": "2025 OBSV bottle; a straightforward entry point to the single barrel line.", "year": 2025 },
+   { "source": "The Whiskey Shelf", "source_url": "https://www.thewhiskeyshelf.com/four-roses-single-barrel-review/", "score": null, "scale": null, "nose": "Oaky caramel with vanilla, citrus, apple and wintergreen; opens to eucalyptus, honey, cocoa and strawberry.", "palate": "Honey, apple and vanilla sweetness; oak, cinnamon and clove behind, with cocoa and baked apple.", "finish": "Honey and citrus, floral and apple notes, long with mint and oak tannin.", "summary": "Rated mid shelf plus (non-numeric).", "year": 2021 }
+  ],
+  "facts": { "abv": 50, "proof": 100, "age": "7 to 9 years", "mash_bill": "Recipe OBSV", "cask": null, "region": null, "source_url": "https://www.fourrosesbourbon.com/bourbon/single-barrel" },
+  "flavor_terms": ["dried spice", "pear", "cocoa", "vanilla", "maple syrup", "plum", "cherry", "honey", "apple", "baking spice"],
+  "confidence": "high",
+  "notes": "Four Roses has expanded its single barrel line with other recipes (e.g. OBSF); notes here are for OBSV."
+ },
+ {
+  "id": "four-roses-small-batch-select",
+  "producer": { "nose": "Raspberries, cloves and nutmeg.", "palate": "Apricot, berries, vanilla and light oak.", "finish": "Lingering spearmint with a touch of cinnamon.", "summary": "104 proof, 6 to 7 years, non-chill-filtered blend of six recipes.", "source_url": "https://www.fourrosesbourbon.com/bourbon/small-batch-select" },
+  "critics": [
+   { "source": "The Whiskey Wash", "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-four-roses-small-batch-select/", "score": null, "scale": null, "nose": "Apricot, white flowers and lemon zest with an undertone of clove.", "palate": "Nutmeg and black pepper with plummy fruit, oregano and leather; lean and subtle.", "finish": "Short and clean.", "summary": "Rated 7/10 (stated on a 10-point basis).", "year": 2019 },
+   { "source": "Bourbon Banter", "source_url": "https://www.bourbonbanter.com/four-roses-small-batch-select-review/", "score": null, "scale": null, "nose": "Gentle baking spice, a hint of fruit gum, caramel and clove.", "palate": "Vanilla, caramel, apple and peach, and toasted oak.", "finish": "Medium to long with cinnamon-laced caramel, toasted oak and mint chocolate.", "summary": "Verdict: Bottle (recommended).", "year": 2019 }
+  ],
+  "facts": { "abv": 52, "proof": 104, "age": "6 to 7 years", "mash_bill": "Blend of six recipes: OBSV, OBSK, OBSF, OESV, OESK, OESF", "cask": null, "region": null, "source_url": "https://www.fourrosesbourbon.com/bourbon/small-batch-select" },
+  "flavor_terms": ["raspberry", "clove", "nutmeg", "apricot", "vanilla", "light oak", "spearmint", "cinnamon", "caramel", "toasted oak"],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "id": "bulleit-bourbon",
+  "producer": { "nose": "Gentle spice with sweet oak aromas.", "palate": "Smooth mid-palate with maple, oak and nutmeg.", "finish": "Long, dry and satiny with light toffee.", "summary": "Medium amber, 45% ABV, high-rye recipe of rye, corn and barley malt.", "source_url": "https://www.bulleit.com/whiskeys/bulleit-bourbon" },
+  "critics": [
+   { "source": "Breaking Bourbon", "source_url": "https://breakingbourbon.com/review/bulleit-bourbon", "score": 2.5, "scale": "5", "nose": "Vanilla, caramel and orange zest over smoke, cherry and oak.", "palate": "Sweet caramel turning to a peppery oak punch; light body but creamy.", "finish": "Spice, pepper and oak with butterscotch, mint and cherry; smooth and creamy.", "summary": "Better as a cocktail base than a sipper.", "year": 2016 },
+   { "source": "The Whiskey Ramble", "source_url": "https://thewhiskeyramble.com/2023/04/07/bulleit-bourbon-scoresheet-review/", "score": null, "scale": null, "nose": "Bright, mildly sweet, slightly grassy, with brown sugar, pine, wood and baking spice.", "palate": "Thin and light; hot cinnamon, mild brown sugar and black pepper.", "finish": "Watery and slightly dry, with creeping pepper and herbal hints.", "summary": "Unremarkable but an accessible gateway bourbon.", "year": 2023 }
+  ],
+  "facts": { "abv": 45, "proof": 90, "age": "NAS", "mash_bill": "High-rye recipe of rye, corn and barley malt (percentages not on producer page)", "cask": null, "region": null, "source_url": "https://www.bulleit.com/whiskeys/bulleit-bourbon" },
+  "flavor_terms": ["sweet oak", "maple", "nutmeg", "toffee", "vanilla", "caramel", "orange zest", "pepper", "cinnamon", "brown sugar"],
+  "confidence": "high",
+  "notes": "68/28/4 mash bill from the input was not confirmed by a fetched source."
+ },
+ {
+  "id": "bulleit-10-year-bourbon",
+  "producer": { "nose": "Rich, oaky aromas; deep russet color.", "palate": "Smooth, with vanilla and dried fruit.", "finish": "Long and smoky.", "summary": "10 years old, 45.6% ABV, high-rye recipe.", "source_url": "https://www.bulleit.com/whiskeys/bulleit-bourbon-10-year-old" },
+  "critics": [
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/bulleit-10-year-bourbon", "score": 2.5, "scale": "5", "nose": "Sweet caramel and vanilla offset by toasted oak and spice, with citrus, cherry, butterscotch and pepper.", "palate": "Spice and wood lead, with cherry, vanilla and leather; shallow depth.", "finish": "Fleeting dark fruit and rye spice that go flat and dry, with wood dominating.", "summary": "A gentle sipper with a spicy bite.", "year": 2016 },
+   { "source": "Bourbon Banter", "source_url": "https://www.bourbonbanter.com/bulleit-10-year-bourbon-review-aged-perfection-at-91-2-proof/", "score": null, "scale": null, "nose": "Deep oak with simmering dark fruit, dried rose, rum cake, grilled peach, cocoa and cherry candy.", "palate": "Silky, with dark caramel, cinnamon, cooked cherry and chocolate sponge cake; baking spice and burnt orange peel.", "finish": "Fruity and cola-like.", "summary": "Verdict: Bottle for sure.", "year": 2025 }
+  ],
+  "facts": { "abv": 45.6, "proof": 91.2, "age": "10 years", "mash_bill": "High-rye recipe (percentages not disclosed on producer page)", "cask": null, "region": null, "source_url": "https://www.bulleit.com/whiskeys/bulleit-bourbon-10-year-old" },
+  "flavor_terms": ["oak", "vanilla", "dried fruit", "smoky", "caramel", "cherry", "spice", "butterscotch", "leather", "dark fruit"],
+  "confidence": "high",
+  "notes": "The two critic reviews are nine years apart and read quite differently."
+ },
+ {
+  "id": "bulleit-barrel-strength-bourbon",
+  "producer": { "nose": "Medium amber, gentle spice and sweet oak.", "palate": "Smooth, with maple, oak and nutmeg.", "finish": "Long, dry and satiny with light toffee and deeper oak.", "summary": "Uncut, non-chill-filtered high-rye bourbon aged and bottled at Stitzel-Weller.", "source_url": "https://www.bulleit.com/whiskeys/bulleit-barrel-strength" },
+  "critics": [
+   { "source": "The Whiskey Wash", "source_url": "https://thewhiskeywash.com/bourbon/whiskey-review-bulleit-bourbon-barrel-strength/", "score": 92, "scale": "100", "nose": "Toasted marshmallow and burnt sugar, peanuts, cilantro and fresh grass.", "palate": "Jammy plum and cherry, black pepper, anise and fennel, ending bright and acidic.", "finish": null, "summary": "Early release (2016).", "year": 2016 },
+   { "source": "Bourbon Banter", "source_url": "https://www.bourbonbanter.com/bulleit-barrel-strength-bourbon-review/", "score": null, "scale": null, "nose": "Floral and rosy, with candied fruit, spiced candy, white pepper, raspberry and strawberry.", "palate": "Sturdy baking spice, blackberry, cooked stone fruit and honey over oak.", "finish": "Long, dry and satiny with toffee and deeper oak.", "summary": "Batch at 121.8 proof.", "year": 2024 }
+  ],
+  "facts": { "abv": 59.7, "proof": null, "age": "NAS", "mash_bill": "High-rye", "cask": null, "region": "Aged and bottled at Stitzel-Weller, Louisville, Kentucky", "source_url": "https://www.bulleit.com/whiskeys/bulleit-barrel-strength" },
+  "flavor_terms": ["sweet oak", "maple", "nutmeg", "toffee", "plum", "cherry", "black pepper", "baking spice", "blackberry", "honey"],
+  "confidence": "high",
+  "notes": "Proof varies by batch (about 120 to 125 per sources), so no single proof recorded."
+ },
+ {
+  "id": "bulleit-rye",
+  "producer": { "nose": "Russet color with rich oaky aromas.", "palate": "Exceptionally smooth, with vanilla, honey and spice.", "finish": "Crisp and clean with long, lingering flavor.", "summary": "Producer lists 90 proof (45% ABV).", "source_url": "https://www.bulleit.com/whiskeys/bulleit-rye-whiskey" },
+  "critics": [
+   { "source": "Whiskey Apostle", "source_url": "https://whiskeyapostle.com/2024/05/bulleit-95-rye-whiskey/", "score": null, "scale": null, "nose": "Fresh mint, dill, eucalyptus, menthol, lime zest, light vanilla and rye toast.", "palate": "Crisp citrus spice with tangerine and lime, mint, thyme, caramel, honey and pepper.", "finish": "Short to moderate, with fading rye spice.", "summary": "Rated Stands Out (non-numeric).", "year": 2024 },
+   { "source": "Rye Central", "source_url": "https://www.ryecentral.com/products/bulleit-95-rye-whiskey-review", "score": 3.8, "scale": "5", "nose": "Mint, spicy rye, vanilla, pine, tobacco and herbal notes.", "palate": "Cinnamon, caramel, vanilla, clove, black pepper and brown sugar.", "finish": "Medium length and warming, with cinnamon and caramel fading to vanilla.", "summary": "Score is a consensus of about 470 user ratings, not a single critic.", "year": 2026 }
+  ],
+  "facts": { "abv": 45, "proof": 90, "age": "NAS", "mash_bill": null, "cask": null, "region": null, "source_url": "https://www.bulleit.com/whiskeys/bulleit-rye-whiskey" },
+  "flavor_terms": ["oak", "vanilla", "honey", "spice", "mint", "dill", "eucalyptus", "citrus", "caramel", "black pepper"],
+  "confidence": "high",
+  "notes": "Input lists 95 proof / 47.5% ABV, but the producer and critics show 90 proof / 45%; the '95' refers to the rye content. The 95/5 mash bill was not confirmed on a fetched page."
+ },
+ {
+  "id": "high-west-bourbon",
+  "producer": { "nose": "Light caramel and sweet vanilla.", "palate": "Rich and earthy, with candy corn, honey nougat and sweet corn bread.", "finish": "Vanilla with caramel apple and pecan pie.", "summary": "92 proof blend of straight bourbons, aged minimum 2 years, not chill-filtered.", "source_url": "https://ship.highwest.com/products/bourbon" },
+  "critics": [
+   { "source": "Whiskey for the Ages", "source_url": "https://whiskeyfortheages.com/whiskey-reviews-hannahs-high-west-bourbon-review/", "score": 88, "scale": "100", "nose": "Brown sugar and cinnamon-dusted ginger cookies, with fig, dark berry leather, corn dust and wood smoke.", "palate": "Cinnamon and ginger cookies, tart grape and cherry, then plum and vanilla custard.", "finish": "Medium length with oak and faint vanilla fading fast.", "summary": "Mild alcohol, grain-forward and well structured.", "year": 2022 },
+   { "source": "Whiskey Fellow", "source_url": "https://reviews.whiskeyfellow.net/2023/12/review-tasting-notes-of-high-west.html", "score": null, "scale": null, "nose": "Toasted almond, corn, nutmeg, vanilla and a hint of orange peel.", "palate": "Oily and light; corn, vanilla and nutmeg, then orange peel, almond, bold oak, cinnamon and pepper.", "finish": "Long, oak-forward, with cinnamon, nutmeg, orange peel and black pepper.", "summary": "Verdict: Bottle (buy it).", "year": 2023 }
+  ],
+  "facts": { "abv": 46, "proof": 92, "age": "Blend of bourbons aged at least 2 years", "mash_bill": "Blend including a 75% corn / 21% rye / 4% barley malt bourbon and an 84% corn / 8% rye / 8% malted barley bourbon, plus undisclosed components", "cask": "Charred American oak", "region": null, "source_url": "https://ship.highwest.com/products/bourbon" },
+  "flavor_terms": ["caramel", "vanilla", "candy corn", "honey", "corn bread", "pecan pie", "cinnamon", "ginger", "nutmeg", "orange peel"],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "id": "high-west-double-rye",
+  "producer": { "nose": "Mint, clove, allspice, licorice root and dark chocolate, with some gin-like botanicals.", "palate": "Bright rye spice moving to menthol, eucalyptus, lemon and ginger tea with wildflower honey.", "finish": "Warm cinnamon candy softening to gentle sweet spice, with a hint of anise.", "summary": "92 proof blend of two ryes (MGP 95/5 and a High West pot-still 80/20), each at least 2 years old.", "source_url": "https://ship.highwest.com/products/double-rye" },
+  "critics": [
+   { "source": "Breaking Bourbon", "source_url": "https://www.breakingbourbon.com/review/high-west-double-rye-2021", "score": 2.5, "scale": "5", "nose": "Light hay, pine and oak with prominent dill and little rye spice.", "palate": "Light-bodied with muted vanilla and honey, cinnamon and botanicals; noticeably young.", "finish": "Sweet rye spice, vanilla and oak; medium, drier with some heat.", "summary": "2021 review of the current formula; average and forgettable.", "year": 2021 },
+   { "source": "Whiskey Fellow", "source_url": "https://reviews.whiskeyfellow.net/2023/12/review-tasting-notes-of-high-west.html", "score": null, "scale": null, "nose": "Dill, mint and rye spice, with juniper and oak.", "palate": "Heavier and oilier; vanilla, juniper and honeysuckle, then cinnamon and rye spice, with oak, lavender and dill.", "finish": "Medium, with lavender, dill, cinnamon and rye spice.", "summary": "Verdict: Bar (try it before buying).", "year": 2023 }
+  ],
+  "facts": { "abv": 46, "proof": 92, "age": "Blend of ryes aged at least 2 years", "mash_bill": "95% rye / 5% barley malt (MGP) blended with 80% rye / 20% malted rye (High West pot still)", "cask": null, "region": null, "source_url": "https://ship.highwest.com/products/double-rye" },
+  "flavor_terms": ["mint", "clove", "allspice", "licorice", "dark chocolate", "rye spice", "dill", "eucalyptus", "honey", "anise"],
+  "confidence": "high",
+  "notes": "Skipped older reviews (2014 and a 2016 batch) that describe a discontinued formula with much older rye."
+ },
+ {
+  "id": "high-west-rendezvous-rye",
+  "producer": { "nose": "Orange peel, dried apricot, mint, clove, pine and caramelized sugar.", "palate": "Bold ginger and cinnamon spice over molasses, vanilla, macaroon and toasted oak.", "finish": "Rye spice fades to caramel, orange zest and tobacco.", "summary": "92 proof blend of MGP 95/5 rye and High West 80/20 rye; not chill-filtered, no additives.", "source_url": "https://ship.highwest.com/products/rendezvous-rye" },
+  "critics": [
+   { "source": "The Whiskey Wash", "source_url": "https://thewhiskeywash.com/american-whiskey/whiskey-review-high-west-rendezvous-rye/", "score": null, "scale": null, "nose": "Botanical, grassy spices with vanilla, oak and a hint of thyme.", "palate": "Cinnamon apple, butterscotch, black tea and roasted marshmallow, with spearmint and white cherry.", "finish": "Spicy, lingering and clean.", "summary": "Rated 8/10.", "year": 2022 },
+   { "source": "Whiskey Consensus", "source_url": "https://whiskeyconsensus.com/high-west-rendezvous-rye-whiskey-review/", "score": null, "scale": null, "nose": "Rye spice with bubble gum, simple syrup, melon, vanilla, brown sugar and pine.", "palate": "Complex rye spice, vanilla, brown sugar, mint and syrupy sweetness.", "finish": "Long, complex and slightly tannic, with oak, rye spice, vanilla and jalapeno.", "summary": "Rated 8.6/10 (Great).", "year": 2021 }
+  ],
+  "facts": { "abv": 46, "proof": 92, "age": null, "mash_bill": "95% rye / 5% malted barley (MGP) blended with 80% rye / 20% malted rye (High West)", "cask": null, "region": null, "source_url": "https://ship.highwest.com/products/rendezvous-rye" },
+  "flavor_terms": ["orange peel", "dried apricot", "mint", "clove", "caramel", "ginger", "cinnamon", "molasses", "vanilla", "toasted oak"],
+  "confidence": "high",
+  "notes": ""
+ }
+]

@@ -1,0 +1,270 @@
+[
+ {"id":"ks-maker-s-mark-cellar-aged-ksbw",
+  "producer":{"nose":"Dark stone fruit with caramelized sugar and toasted oak.","palate":"Big oak balanced by dark vanilla and fruit.","finish":"Velvety, long and complex, with caramelized barrel character and baking spice.","summary":"Official Maker's Mark notes as relayed by the KY Supply Co. retailer blog (2023 release article), not fetched from makersmark.com.","source_url":"https://blog.kysupplyco.com/makers-mark-cellar-aged-2023-release-review-price-proof/"},
+  "critics":[
+   {"source":"VinePair","source_url":"https://vinepair.com/review/makers-mark-cellar-aged/","score":95,"scale":"100","nose":"Deeper and more pungent than other Maker's expressions; berry/mulberry fruit with mint and rosemary.","palate":"Dark caramel and chocolate, then baked berry, apple and apricot with brown sugar; no drying astringency.","finish":"Sweet, maple-syrup tinged, long without lingering too heavily; complexity tapers a bit.","summary":"Called it close to flawless and the new flagship of the range; inaugural 2023 release at 115.7 proof.","year":2023},
+   {"source":"The Whiskey Wash","source_url":"https://thewhiskeywash.com/bourbon/whiskey-review-makers-mark-cellar-aged-bourbon/","score":6,"scale":"10","nose":"Toffee and somewhat astringent sawdust, buttered toast, clove and orange.","palate":"Dark chocolate and bitter orange moving to butterscotch, tobacco and cinnamon, then bitter oak with caramel and faint mint.","finish":"Oak-dominated and hotter than expected, briefly sweetened by the wheated mash.","summary":"Found it too oak-heavy; suited to fans of double-oaked, overproof styles. 2023 release (115.74 proof).","year":2023}
+  ],
+  "facts":{"abv":57.85,"proof":115.7,"age":"Blend of 11- and 12-year-old bourbon (sources disagree on the split)","mash_bill":null,"cask":null,"region":"Kentucky","source_url":"https://blog.kysupplyco.com/makers-mark-cellar-aged-2023-release-review-price-proof/"},
+  "flavor_terms":["stone fruit","caramelized sugar","toasted oak","vanilla","baking spice","dark chocolate","caramel","toffee","maple syrup","bitter orange"],
+  "confidence":"high",
+  "notes":"Matches 2023 inaugural release at 115.7 proof. Age split conflicts: KY Supply says 70% 11yr/30% 12yr, VinePair says 13% 11yr/87% 12yr. Producer notes are retailer-relayed; makersmark.com product page 404."},
+
+ {"id":"ks-old-grand-dad-114-ksbw",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"Breaking Bourbon (Eric Hasman)","source_url":"https://www.breakingbourbon.com/review/old-grand-dad-114-bourbon-2025","score":3.5,"scale":"5","nose":"Caramel and cinnamon up front with corn sweetness, black pepper and green apple.","palate":"Seasoned oak, cinnamon, brown sugar, burnt orange peel, vanilla, prune and leather.","finish":"Warm and lingering; cinnamon, baking and rye spice over charred oak and molasses.","summary":"Calls it a must-have for its proof, flavor and value.","year":2025},
+   {"source":"Bourbon Culture (Mike & Mike)","source_url":"https://thebourbonculture.com/whiskey-reviews/old-grand-dad-114-review/","score":6.2,"scale":"10","nose":"Sharp rye prickle, baking spice, caramel and baked apple with a youthful grainy undertone.","palate":"Cinnamon and spiced honey with tarragon and mint; thick but hot.","finish":"Lingering peppery burn; vanilla and toffee under heat, tobacco tannins and char.","summary":"Excellent value at about $20 but would benefit from more age.","year":2020}
+  ],
+  "facts":{"abv":57,"proof":114,"age":"NAS","mash_bill":"63% corn, 27% rye, 10% malted barley","cask":null,"region":"Kentucky","source_url":"https://www.breakingbourbon.com/review/old-grand-dad-114-bourbon-2025"},
+  "flavor_terms":["caramel","cinnamon","rye spice","black pepper","green apple","brown sugar","orange peel","baked apple","spiced honey","molasses"],
+  "confidence":"medium",
+  "notes":"No producer notes: oldgranddad.com redirects to a domain-sale page. Older 2014 Breaking Bourbon review skipped (score unclear)."},
+
+ {"id":"ks-evan-williams-1783-small-batch-ksbw",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"Sycamore Hills Whiskey blog (dehneac)","source_url":"https://shw2010.wordpress.com/2011/11/03/newest-bourbon-review-evan-williams-1783-small-batch/","score":null,"scale":null,"nose":"Light char and oak with fresh bread and caramel.","palate":"Earthy cocoa, leather and apple with mild pepper; char, burnt sugar and gentle oak.","finish":"Burnt sugar with very mild oak.","summary":"Amateur blog review of the 86-proof bottling; praised its smoothness and value. No numeric score.","year":2011}
+  ],
+  "facts":{"abv":43,"proof":86,"age":null,"mash_bill":null,"cask":null,"region":"Kentucky","source_url":"https://shw2010.wordpress.com/2011/11/03/newest-bourbon-review-evan-williams-1783-small-batch/"},
+  "flavor_terms":["char","oak","fresh bread","caramel","cocoa","leather","apple","burnt sugar"],
+  "confidence":"medium",
+  "notes":"Kansas label is the older 86-proof version; brand moved to 90 proof (~2021) and most reviews (Breaking Bourbon, The Whisky Study) cover 90 proof, so they were excluded. Producer pages 404/blocked. Only critic is an amateur blog."},
+
+ {"id":"ks-heaven-hill-grain-to-glass-ksbw",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"The Whiskey Wash (Nino Kilgore-Marchetti)","source_url":"https://thewhiskeywash.com/whiskey-reviews/whiskey-review-heaven-hill-grain-to-glass-kentucky-straight-bourbon/","score":8,"scale":"10","nose":"Sweet vanilla first, then orange and vibrant oak, marshmallow, maple, milk chocolate, baking spice.","palate":"Orange candy and warm vanilla with oak, bread, pear, coriander, cinnamon and maple.","finish":"Clean, not aggressive, sweet and moderately fading.","summary":"2024 release reviewed at 107 proof, 6 years old.","year":2024},
+   {"source":"Breaking Bourbon (Jordan Moskal)","source_url":"https://www.breakingbourbon.com/review/heaven-hill-grain-to-glass-bourbon-2024","score":3,"scale":"5","nose":"Sweet popcorn, white peach, light grain, white pepper, faint oak.","palate":"Rye spice, hot cross buns, mixed peppercorn, tannic oak, light brown sugar.","finish":"Bold rye spice, leather, dry oak, green peppercorn, lingering dry spice.","summary":"2024 release at 107 proof; interesting concept but premium price limits appeal.","year":2025},
+   {"source":"Breaking Bourbon (2025 release)","source_url":"https://breakingbourbon.com/review/heaven-hill-grain-to-glass-bourbon-2025","score":null,"scale":null,"nose":"Spiced nuts, ballpark peanuts, new oak, baking spice and dried apricot.","palate":"Layered rye spice with cinnamon stick, tannic oak and grilled glazed peach.","finish":"Brown sugar giving way to bold rye spice, peppery oak and leather; dry with building heat.","summary":"2025 release at 105 proof; $100 price called hard to justify. Rating not clearly captured.","year":2025}
+  ],
+  "facts":{"abv":null,"proof":null,"age":"6 years","mash_bill":"52% corn, 35% rye, 13% malted barley","cask":null,"region":"Kentucky","source_url":"https://www.breakingbourbon.com/review/heaven-hill-grain-to-glass-bourbon-2024"},
+  "flavor_terms":["vanilla","orange","oak","rye spice","peppercorn","popcorn","white peach","maple","leather","brown sugar"],
+  "confidence":"medium",
+  "notes":"PROOF MISMATCH: Kansas label says 100 proof, but reviewed releases are 107 (2024) and 105 (2025); no 100-proof edition found. Critics cover the same product line at different batch proofs. No producer notes found (heavenhilldistillery.com blocked)."},
+
+ {"id":"ks-jefferson-s-ocean-aged-at-sea-ksbw",
+  "producer":{"nose":"Fresh ginger, butterscotch and salt spray.","palate":"Salted caramel, chocolate and tropical fruit.","finish":"Delicate, with sea-salt notes.","summary":"Official notes from the Jefferson's Ocean page; barrels are aged aboard ships.","source_url":"https://jeffersonsbourbon.com/whiskeys/jeffersons-ocean-bourbon/"},
+  "critics":[
+   {"source":"The Whiskey Jug (Josh Peters)","source_url":"https://thewhiskeyjug.com/bourbon-whiskey/jeffersons-ocean-aged-sea-review/","score":91,"scale":"100","nose":"Mature bourbon: spice, caramel, vanilla, brown sugar, cherry, orange zest, dark honey, oak.","palate":"Bourbon spice and dark fruit with cinnamon and cherry, plus a subtle salty brine.","finish":"Medium-long with caramel, wood, salt and vanilla; called very unusual.","summary":"Batch 21 at 45% ABV; skeptic won over by the concept.","year":2014},
+   {"source":"The Whiskey Wash (Jordan Morris)","source_url":"https://thewhiskeywash.com/whiskey-styles/bourbon/whiskey-review-jeffersons-ocean-aged-sea-bourbon/","score":6,"scale":"10","nose":"Floral notes with salted caramel, soft salt and light smoke.","palate":"Floral, citrus and light black pepper, then caramel with faint salt and smoke, dry oak.","finish":"Light dry oak with dominant caramel.","summary":"Batch 14; salt and smoke faded with time in glass; questioned the impact of sea aging.","year":2017}
+  ],
+  "facts":{"abv":45,"proof":90,"age":null,"mash_bill":null,"cask":"Barrels matured aboard ocean-going ships","region":null,"source_url":"https://thewhiskeyjug.com/bourbon-whiskey/jeffersons-ocean-aged-sea-review/"},
+  "flavor_terms":["ginger","butterscotch","salted caramel","sea salt","tropical fruit","chocolate","cherry","brine","floral","caramel"],
+  "confidence":"high",
+  "notes":"Ocean is released in numbered voyages/batches; critics reviewed batches 21 and 14, Kansas label voyage unknown. Producer page gives no proof; 45% ABV from Whiskey Jug."},
+
+ {"id":"ks-jefferson-s-reserve-ksbw",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"The Rum Howler (Chip Dykstra)","source_url":"https://therumhowlerblog.com/whisky-reviews/american-whiskey/jeffersons-reserve-bourbon-very-old/","score":90.5,"scale":"100","nose":"Oak and cedar spice over deep caramel toffee, chocolate, cola, honeycomb and baking spice.","palate":"Dry and brash: oak, cedar, grass, butterscotch and bittersweet chocolate.","finish":"Medium length, smooth, with lingering dry spice.","summary":"Very Old bottling at 45.1% ABV; praised character and balance.","year":2015},
+   {"source":"Difford's Guide","source_url":"https://www.diffordsguide.com/en-au/beer-wine-spirits/1399/jeffersons-reserve-small-batch","score":null,"scale":null,"nose":"Popcorn, vanilla, raisin, butterscotch, peach and subtle ginger.","palate":"Chewy; hickory-smoked oak with salted butter, toffee, sweet corn, caramel and fruitcake spice.","finish":"Buttery popcorn, cinnamon and hot ginger building to a long peppery end.","summary":"Sampled 2014; 45.1% ABV bottling.","year":2014},
+   {"source":"Bourbon Paddy","source_url":"https://bourbonpaddy.com/2018/07/08/jeffersons-reserve-very-old-bourbon-review/","score":null,"scale":null,"nose":"Deep caramel, vanilla, grassy rye spice and dark fruit.","palate":"Viscous and fruity: orange peel, floral vanilla, deep toffee.","finish":"Long and warming with caramel-dipped orange and white pepper.","summary":"90.2-proof Very Old; a clear step up from Very Small Batch.","year":2018}
+  ],
+  "facts":{"abv":45.1,"proof":90.2,"age":null,"mash_bill":null,"cask":null,"region":"Kentucky","source_url":"https://therumhowlerblog.com/whisky-reviews/american-whiskey/jeffersons-reserve-bourbon-very-old/"},
+  "flavor_terms":["oak","cedar","caramel","toffee","butterscotch","chocolate","vanilla","popcorn","orange peel","ginger"],
+  "confidence":"medium",
+  "notes":"Kansas label (90 proof) matches the older 90.2-proof 'Very Old' Reserve. Current producer page describes a reformulated 8-year, 96-proof Reserve, so its notes were not used. Age claims vary (Difford's lists 12-17 yrs) so left null."},
+
+ {"id":"ks-smoke-wagon-small-batch-straight-bourbon-whiskey",
+  "producer":{"nose":"Balanced oak with fruit and dried apricot.","palate":"Sweet start, then white pepper spice from the high-rye recipe, with caramel and fruit.","finish":"Smooth, without alcohol burn.","summary":"Retailer (Seelbach's) product description, likely producer copy but not explicitly attributed; describes blending younger and older barrels.","source_url":"https://seelbachs.com/products/smoke-wagon-small-batch-bourbon"},
+  "critics":[
+   {"source":"Breaking Bourbon (Jordan Moskal)","source_url":"https://www.breakingbourbon.com/review/smoke-wagon-small-batch-bourbon","score":null,"scale":null,"nose":"Creamy caramel, light vanilla and oak with developing rye spice.","palate":"Heavy rye spice, green peppercorn, aged oak and vanilla.","finish":"Dry oak and leather with lingering woody rye spice.","summary":"Close to over-spiced but pleases spice lovers; competitive at $45. Rating not clearly captured.","year":2021},
+   {"source":"Bourbon Culture (Mike & Mike)","source_url":"https://thebourbonculture.com/whiskey-reviews/smoke-wagon-small-batch-straight-bourbon/","score":7.3,"scale":"10","nose":"Heavy rye spice, cinnamon, brown sugar, raisin-brandy, pine and apple cider.","palate":"Cinnamon candy spice with molasses cookie and baked apple; oak subtle.","finish":"Allspice, clove, citrus, tobacco and oak tannin held together by molasses.","summary":"Good entry point to the brand.","year":2020}
+  ],
+  "facts":{"abv":50,"proof":100,"age":null,"mash_bill":"60% corn, 36% rye, 4% malted barley (MGP, Indiana)","cask":null,"region":"Distilled in Indiana; Smoke Wagon is a Nevada brand","source_url":"https://www.breakingbourbon.com/review/smoke-wagon-small-batch-bourbon"},
+  "flavor_terms":["rye spice","caramel","vanilla","oak","dried apricot","white pepper","cinnamon","leather","baked apple","molasses"],
+  "confidence":"high",
+  "notes":"Producer notes are retailer-relayed and unattributed."},
+
+ {"id":"ks-smoke-wagon-uncut-unfiltered-straight-bourbon-whiskey",
+  "producer":{"nose":null,"palate":null,"finish":"Heat with a rye-spice finish.","summary":"Retailer (Seelbach's) description attributed to Smoke Wagon: rich and sweet with a very thick mouthfeel, likened to milk and cookies; proof cited around 115-116.","source_url":"https://seelbachs.com/products/smoke-wagon-uncut-unfiltered-bourbon"},
+  "critics":[
+   {"source":"The Book of Bourbon","source_url":"https://www.thebookofbourbon.com/whiskeyreviews/smokewagonuu","score":85,"scale":"100","nose":"Floral and fruity: carnation, jammy cherry/raspberry, vanilla, cereal, noticeable ethanol.","palate":"Cinnamon, butterscotch, stewed apple and oak, moving to caramelized fruit and malt.","finish":"Long, creamy and chocolatey with lingering brown sugar.","summary":"August 2021 release; impressive complexity and integrated oak.","year":null},
+   {"source":"The Whiskey Shelf","source_url":"https://www.thewhiskeyshelf.com/smoke-wagon-uncut-unfiltered-review/","score":null,"scale":null,"nose":"Caramel with an herbal edge, licorice, vanilla, candied pineapple, baked apple, oak, cinnamon, clove.","palate":"Caramel with earthy/herbal twist, vanilla, dried orange peel, baked apple, oak and spice.","finish":"Roasted oak, honey, vanilla cream, licorice, apple and pear.","summary":"Batch 14 at 57.1% ABV; rated 'Top Shelf' (top category).","year":2021}
+  ],
+  "facts":{"abv":null,"proof":null,"age":null,"mash_bill":"60% corn, 36% rye, 4% malted barley","cask":"Uncut, unfiltered","region":"Distilled in Lawrenceburg, Indiana","source_url":"https://seelbachs.com/products/smoke-wagon-uncut-unfiltered-bourbon"},
+  "flavor_terms":["caramel","rye spice","cinnamon","butterscotch","baked apple","vanilla","licorice","oak","cherry","brown sugar"],
+  "confidence":"high",
+  "notes":"Batch-strength product; Kansas label is 116.4 proof but reviewed batches were 57.1% ABV and a 2021 release in a 110-120 proof range. Producer description retailer-relayed."},
+
+ {"id":"ks-barrell-bourbon-cask-strength-a-blend-of-straight-bourbon-whiskeys-batch-037",
+  "producer":{"nose":"Candied apple and smoked cherry wood.","palate":"Acidic and zesty, with orange curacao and candied ginger.","finish":"Coats the tongue and throat with a warming sensation.","summary":"Barrell's official notes as relayed by One More Dram's launch article (press release).","source_url":"https://onemoredram.com/2025/06/25/barrell-craft-spirits-launches-barrell-bourbon-batch-037/"},
+  "critics":[
+   {"source":"Breaking Bourbon (Jordan Moskal)","source_url":"https://www.breakingbourbon.com/review/barrell-bourbon-batch-037","score":3.5,"scale":"5","nose":"Crisp leaves, nectarine, caramel sauce, coffee cake, cinnamon.","palate":"Peach, spiced syrup, oak, rye spice, creamy vanilla; creamy mouthfeel.","finish":"Rye spice, leather, dry oak, baking spice, hint of tobacco leaf.","summary":"Strong blending; finish less memorable; worth the $85.","year":2025},
+   {"source":"VinePair","source_url":"https://vinepair.com/review/barrell-bourbon-batch-037/","score":92,"scale":"100","nose":"Green apple with caramel, tropical fruit, white pepper, chili powder and floral notes.","palate":"Caramel, butterscotch, maple, praline, then cooked apple, cherry, orange marmalade, milk chocolate, coffee and toffee.","finish":null,"summary":"Accessible yet deep for both casual and seasoned drinkers.","year":2025}
+  ],
+  "facts":{"abv":55.69,"proof":111.38,"age":"Blend of 8-15 year bourbons (Indiana 8/11/12, Kentucky 10, Tennessee 13/14/15)","mash_bill":"78% corn, 18% rye, 4% malted barley","cask":null,"region":"Indiana, Kentucky and Tennessee","source_url":"https://onemoredram.com/2025/06/25/barrell-craft-spirits-launches-barrell-bourbon-batch-037/"},
+  "flavor_terms":["candied apple","cherry wood","orange","candied ginger","caramel","peach","rye spice","butterscotch","maple","toffee"],
+  "confidence":"high",
+  "notes":"Exact batch match. Producer notes press-release relayed (Barrell shop page 404)."},
+
+ {"id":"ks-wild-turkey-longbranch-ksbw",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"Breaking Bourbon","source_url":"https://breakingbourbon.com/review/wild-turkey-longbranch","score":3,"scale":"5","nose":"Sweet caramel, vanilla and toffee layered with nutmeg and oak.","palate":"Creamy, with honey and orange sweetness, spice and seasoned oak.","finish":"Heat spike, mild dryness, trailing caramel and spice with subtle smoke.","summary":"Easy-to-enjoy crowd-pleaser at its price.","year":2018},
+   {"source":"The Whiskey Wash (Phil Dwyer)","source_url":"https://thewhiskeywash.com/whiskey-reviews/bourbon-review-wild-turkey-longbranch/","score":7,"scale":"10","nose":"Peanut, banana bread, hazelnut and sweet earthiness.","palate":"More rye-led than typical Wild Turkey; honey and milk chocolate with an odd savory sweetness.","finish":"Banana and milk chocolate with oak dryness and citrus.","summary":"Not a favorite but well put together.","year":2025}
+  ],
+  "facts":{"abv":43,"proof":86,"age":"8 years","mash_bill":"75% corn, 13% rye, 12% malted barley","cask":"Filtered through American white oak charcoal then Texas mesquite charcoal","region":"Kentucky","source_url":"https://breakingbourbon.com/review/wild-turkey-longbranch"},
+  "flavor_terms":["caramel","vanilla","toffee","nutmeg","honey","orange","banana","milk chocolate","smoke","oak"],
+  "confidence":"medium",
+  "notes":"No producer notes: Wild Turkey Longbranch product page 404."},
+
+ {"id":"ks-wild-turkey-aged-8-years-ksbw",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"Breaking Bourbon","source_url":"https://www.breakingbourbon.com/review/wild-turkey-101-8-year-old-bourbon","score":3,"scale":"5","nose":"Candy corn, caramel, vanilla frosting, lemon zest, toasted oak, clove, rye spice, black cherry.","palate":"Caramel, vanilla, seasoned oak, graham cracker, light tobacco, black pepper, orange chocolate.","finish":"Rye spice and peppery oak with cinnamon, brown sugar, nutmeg and slight bitterness.","summary":"Better than standard 101, though the price bump may not justify it for everyone.","year":2025},
+   {"source":"The Whiskey Shelf","source_url":"https://www.thewhiskeyshelf.com/wild-turkey-101-8-year-bourbon-review/","score":null,"scale":null,"nose":"Dark roasted caramel, toasted vanilla, roasted oak, cinnamon, clove, dried grass, nuts.","palate":"Roasted caramel and vanilla, oak, cinnamon, nutmeg, cocoa, licorice, apple and orange.","finish":"Oak, coffee grounds, cinnamon, clove, burnt caramel and vanilla.","summary":"Export (Japan) bottling at 50.5% ABV; rated 'Mid shelf+'.","year":2021}
+  ],
+  "facts":{"abv":50.5,"proof":101,"age":"8 years","mash_bill":"75% corn, 13% rye, 12% malted barley","cask":null,"region":"Kentucky","source_url":"https://www.breakingbourbon.com/review/wild-turkey-101-8-year-old-bourbon"},
+  "flavor_terms":["caramel","vanilla","oak","rye spice","cinnamon","clove","black cherry","graham cracker","tobacco","orange"],
+  "confidence":"medium",
+  "notes":"Breaking Bourbon says the 8-year 101 became a US line extension after being export-only; Whiskey Shelf reviewed a Japan bottling. No producer page found (404)."},
+
+ {"id":"ks-yellowstone-select-ksbw",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"Drinkhacker","source_url":"https://www.drinkhacker.com/2019/08/01/review-yellowstone-select-kentucky-straight-bourbon-whiskey/","score":9.0,"scale":"10","nose":"Brown sugar, pralines, new leather, apricot, pepper and young creamed corn.","palate":"Caramel, brulee sugar, orange peel, cinnamon, lumber, peanut brittle, black pepper.","finish":"Medium length with vanilla wafer and ripe tangerine.","summary":"Graded A-.","year":2019},
+   {"source":"Beverage Testing Institute (tastings.com)","source_url":"https://www.tastings.com/Spirits-Review/YELLOWSTONE-Select-Kentucky-Straight-Bourbon-Whiskey-USA-93-Proof-10-01-2023.aspx","score":90,"scale":"100","nose":"Caramel, vanilla and pepper over roasted peanut, honeyed nougat and jalapeno cornbread.","palate":"Echoes the nose plus black pepper, vanilla cream, mint and circus peanut.","finish":"Medium-length, spicy and sweet.","summary":"Solid youthful everyday bourbon for sipping or mixing; Gold Medal.","year":2023}
+  ],
+  "facts":{"abv":46.5,"proof":93,"age":"NAS; blend of 4-year in-house and 7-year sourced bourbon (per 2019 review)","mash_bill":"Limestone Branch distillate blended with sourced Kentucky bourbon","cask":null,"region":"Kentucky","source_url":"https://www.drinkhacker.com/2019/08/01/review-yellowstone-select-kentucky-straight-bourbon-whiskey/"},
+  "flavor_terms":["brown sugar","praline","leather","apricot","caramel","orange peel","cinnamon","peanut","black pepper","vanilla"],
+  "confidence":"medium",
+  "notes":"Producer site had no product notes. Drinkhacker's age breakdown is from 2019 and may have changed."},
+
+ {"id":"ks-hardin-s-creek-ksbw-low-distillation",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[],
+  "facts":{"abv":null,"proof":null,"age":null,"mash_bill":null,"cask":null,"region":null,"source_url":null},
+  "flavor_terms":[],
+  "confidence":"none",
+  "notes":"Could not identify a Hardin's Creek 'Low Distillation' release at 109 proof; the Beam current-releases page lists only the 110-proof 2025 Warehouse Series, and hardinscreek.com was unreachable. Possibly a newer release not yet indexed."},
+
+ {"id":"ks-blood-oath-pact-11-ksbw",
+  "producer":{"nose":"Oak, vanilla and subtle spice.","palate":"Caramel and honey with a hint of agave from the tequila barrels.","finish":"Long and warm, with spice and sweetness.","summary":"Notes presented as producer notes on the Wooden Cork retailer page (retailer-relayed). Master Distiller John Rempe described the anejo-cask finish as bringing bourbon full circle (quoted via Whiskeyfellow).","source_url":"https://woodencork.com/products/blood-oath-pact-no-11"},
+  "critics":[
+   {"source":"Whiskeyfellow","source_url":"https://reviews.whiskeyfellow.net/2025/04/blood-oath-pact-11-kentucky-straight.html","score":null,"scale":null,"nose":"Earthy oak, smoky vanilla, cherry, toffee, leather and agave.","palate":"Creamy; smoky vanilla, lime zest, nutmeg, dark chocolate, black cherry, oak spice, tobacco, agave.","finish":"Long; oak spice, nutmeg, dark chocolate, black cherry, old leather, cinnamon.","summary":"'Bottle' rating; tequila notes complement rather than dominate.","year":2025},
+   {"source":"Whiskey Reviewer (Richard Thomas)","source_url":"https://whiskeyreviewer.com/2025/05/blood-oath-pact-no-11-bourbon-review-2025/","score":null,"scale":null,"nose":"Pine and oak with lemon zest, some bitterness and heat.","palate":"Toffee and nougat with pine and oak.","finish":"Astringent at first, returning to toffee.","summary":"Letter grade B-; bitter streaks detract, though not bad.","year":2025},
+   {"source":"The Daily Pour (David Morrow)","source_url":"https://thedailypour.com/spirit/blood-oath-pact-no-11/","score":null,"scale":null,"nose":"Bright, sweet and delicate: soft grain, waffle cone, lemon peel, subtle agave.","palate":"Vanilla, butterscotch, agave, orange peel, clove, barrel char.","finish":"Long; raisin, macadamia, agave, citrus peel, grapefruit, char.","summary":"Called it a lovely bourbon with a well-integrated tequila-cask finish; numeric score and scale ambiguous in fetch, so omitted.","year":2025}
+  ],
+  "facts":{"abv":49.3,"proof":98.6,"age":"Blend of 14-year and 7-year traditional bourbon with 10-year wheated bourbon","mash_bill":null,"cask":"Finished in anejo tequila barrels","region":"Kentucky","source_url":"https://reviews.whiskeyfellow.net/2025/04/blood-oath-pact-11-kentucky-straight.html"},
+  "flavor_terms":["oak","vanilla","agave","caramel","honey","toffee","black cherry","dark chocolate","leather","lemon zest"],
+  "confidence":"high",
+  "notes":"Producer tasting notes are retailer-relayed only."},
+
+ {"id":"ks-starlight-distillery-carl-t-bourbon-whiskey-small-batch",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":"Distillery describes it as elegant, fruit-driven and sweet, good neat, on the rocks or in cocktails; relayed by the Seelbach's retailer page.","source_url":"https://seelbachs.com/products/starlight-distillery-carl-t-bourbon"},
+  "critics":[
+   {"source":"Breaking Bourbon (Eric Hasman)","source_url":"https://www.breakingbourbon.com/review/starlight-carl-t-hubers-small-batch-straight-bourbon","score":2.5,"scale":"5","nose":"Caramel, vanilla, oak and pear; traditional bourbon aroma.","palate":"Oak, pepper, trail mix, banana; thin and quite oaky.","finish":"Oak and pepper, dry.","summary":"Surprisingly oaky for 4 years; expected more from the blended mashbills.","year":2020}
+  ],
+  "facts":{"abv":46,"proof":92,"age":"4 years","mash_bill":"Blend of 60% corn/20% rye/20% malted barley and 51% corn/20% rye/20% malted barley/9% wheat","cask":null,"region":"Starlight, Indiana","source_url":"https://www.breakingbourbon.com/review/starlight-carl-t-hubers-small-batch-straight-bourbon"},
+  "flavor_terms":["caramel","vanilla","oak","pear","pepper","banana","fruit","sweet"],
+  "confidence":"high",
+  "notes":"Producer statement is a brief retailer-relayed summary only (no nose/palate/finish)."},
+
+ {"id":"ks-uncle-nearest-1856-aged-whiskey",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":"Producer notes quoted by The Whiskey Shelf: bold and spicy at first, mellowing to sweet caramel and maple, likened to an oatmeal raisin cookie.","source_url":"https://www.thewhiskeyshelf.com/uncle-nearest-1856-whiskey-review/"},
+  "critics":[
+   {"source":"Bourbon Culture (Mike & Mike)","source_url":"https://thebourbonculture.com/whiskey-reviews/uncle-nearest-1856-premium-whiskey-review/","score":7,"scale":"10","nose":"Fruit-forward: cherry candy, orange jelly, raisin, light brown sugar, subtle oak.","palate":"Light-bodied; cherry, orange, lemon, vanilla, brown sugar, cinnamon, clove, leather.","finish":"Slightly bitter citrus and dry oak with cherry, vanilla and creme brulee.","summary":"Versatile and approachable.","year":2024},
+   {"source":"The Whiskey Wash (Aaron Knapp)","source_url":"https://thewhiskeywash.com/reviews/whiskey-review-uncle-nearest-1856-premium-whiskey/","score":8,"scale":"10","nose":"Molasses-like sweetness turning to grass, charcoal and nutmeg.","palate":"Smooth caramel with spicier notes.","finish":null,"summary":"Balanced; somewhat pricey but worth trying.","year":2018},
+   {"source":"The Whiskey Shelf","source_url":"https://www.thewhiskeyshelf.com/uncle-nearest-1856-whiskey-review/","score":null,"scale":null,"nose":"Shy; grassy, nougat caramel, vanilla, pine, maple.","palate":"Brown sugar, dried apricot, vanilla, roasted oak with a grainy, cracker-like harshness.","finish":"Honey, fennel, roasted oak, dried apricot; dry and spicy.","summary":"Rated 'Mid Shelf'; disappointed, drinks like a cheaper bottle.","year":2022}
+  ],
+  "facts":{"abv":50,"proof":100,"age":null,"mash_bill":null,"cask":"Maple charcoal filtered (Lincoln County Process); charred new American oak","region":"Tennessee","source_url":"https://thewhiskeywash.com/reviews/whiskey-review-uncle-nearest-1856-premium-whiskey/"},
+  "flavor_terms":["caramel","maple","cherry","orange","brown sugar","vanilla","molasses","nutmeg","dried apricot","oak"],
+  "confidence":"high",
+  "notes":"Producer notes are second-hand (quoted in a review); Uncle Nearest product page 404."},
+
+ {"id":"ks-jack-daniel-s-single-barrel-barrel-proof-whiskey",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":"Jack Daniel's says it is bottled straight from the barrel at full proof (125-140), with intensified vanilla and toasted oak; robust but not overpowering.","source_url":"https://www.jackdaniels.com/en-us/whiskey/single-barrel-barrel-proof"},
+  "critics":[
+   {"source":"Breaking Bourbon","source_url":"https://breakingbourbon.com/review/jack-daniels-single-barrel-barrel-proof","score":null,"scale":null,"nose":"Maple sugar candy and banana over burnt wood; inviting smoke.","palate":"Chocolatey caramel, burnt wood, pipe tobacco, banana, nuts; drinks lower than its proof.","finish":"Bold, spicy, near-tannic heat that fades to burnt wood and maple.","summary":"Barrel at 130.6 proof; recommended despite barrel variation. Rating not clearly captured.","year":2016},
+   {"source":"Bourbon Culture (Mike & Mike)","source_url":"https://thebourbonculture.com/whiskey-reviews/jack-daniels-single-barrel-barrel-proof-review/","score":7.5,"scale":"10","nose":"Banana bread, toasted marshmallow, deep caramel, faint salted almond.","palate":"Praline pecan, overripe banana, buttery biscuit; little heat.","finish":"Oak tannin, dry leather, dark chocolate and charred marshmallow.","summary":"Rural Inn store pick at 135.7 proof.","year":2019}
+  ],
+  "facts":{"abv":null,"proof":null,"age":null,"mash_bill":null,"cask":"Single barrel, barrel proof (125-140 proof range)","region":"Tennessee","source_url":"https://www.jackdaniels.com/en-us/whiskey/single-barrel-barrel-proof"},
+  "flavor_terms":["vanilla","toasted oak","banana","maple","burnt wood","caramel","tobacco","marshmallow","dark chocolate","leather"],
+  "confidence":"high",
+  "notes":"Single-barrel product, so each barrel differs; Kansas label is 129 proof, reviews are of 130.6- and 135.7-proof barrels. Mash bill omitted (sources disagree on rye vs barley split)."},
+
+ {"id":"ks-jack-daniel-s-bonded-tennessee-whiskey",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"The Whiskey Wash (Jerry Jenae Sampson)","source_url":"https://thewhiskeywash.com/reviews/whiskey-review-jack-daniels-bonded-tennessee-whiskey/","score":8,"scale":"10","nose":"Fresh and vegetal with mint and oak.","palate":"Grain and earth, then raisin, cinnamon and caramel.","finish":"Smooth and mellow.","summary":"Enjoyable for all experience levels.","year":2022},
+   {"source":"Bourbon Culture (Mike & Mike)","source_url":"https://thebourbonculture.com/whiskey-reviews/jack-daniels-bonded-tennessee-whiskey-review/","score":6.4,"scale":"10","nose":"Banana nut bread, caramel, maple, light cinnamon and vanilla.","palate":"Brown sugar and maple, nuttiness, banana and vanilla; little oak.","finish":"Graham cracker, vanilla, brown sugar; moderate length, minimal burn.","summary":"Big step up from the 80-proof standard but not exciting.","year":null}
+  ],
+  "facts":{"abv":50,"proof":100,"age":null,"mash_bill":"80% corn, 12% malted barley, 8% rye","cask":"Bottled in bond","region":"Tennessee","source_url":"https://thewhiskeywash.com/reviews/whiskey-review-jack-daniels-bonded-tennessee-whiskey/"},
+  "flavor_terms":["banana","caramel","maple","brown sugar","vanilla","mint","raisin","cinnamon","graham cracker","oak"],
+  "confidence":"medium",
+  "notes":"No producer notes (Jack Daniel's Bonded page 404)."},
+
+ {"id":"ks-george-dickel-tennessee-sour-mash-whisky-classic-8-recipe",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"The Whiskey Jug (Josh Peters)","source_url":"https://thewhiskeyjug.com/tennessee-whiskey/george-dickel-8-review/","score":null,"scale":null,"nose":"Clean and crisp: green apple, honey, cinnamon, caramel, corn, orchard fruit, char.","palate":"Honey, apple, corn, apricot, rye spice, caramel, wood, pine-mint.","finish":"Medium; caramel, honey, spice, wood and mint.","summary":"Praised drinkability and balance; a repeat purchase for the reviewer.","year":null},
+   {"source":"Thirty One Whiskey","source_url":"https://www.thirtyonewhiskey.com/whiskey-review-george-dickel-classic-no-8-tennessee-sour-mash-whisky/","score":4,"scale":"5","nose":"Banana with vanilla, like bananas foster.","palate":"Weightier than Jack Daniel's, light maple-syrup feel with apple and oak spice.","finish":"Slightly bitter on ice, with fruit and oak spice.","summary":"Good in cocktails, especially a mule.","year":2020}
+  ],
+  "facts":{"abv":40,"proof":80,"age":"NAS","mash_bill":"84% corn, 8% rye, 8% malted barley","cask":null,"region":"Tennessee","source_url":"https://www.thirtyonewhiskey.com/whiskey-review-george-dickel-classic-no-8-tennessee-sour-mash-whisky/"},
+  "flavor_terms":["green apple","honey","cinnamon","caramel","corn","apricot","mint","banana","vanilla","maple"],
+  "confidence":"medium",
+  "notes":"No producer notes found. Whiskey Jug score omitted (scale unclear in fetch)."},
+
+ {"id":"ks-george-dickel-13-year-tennessee-whisky-bottled-in-bond-fall-2008",
+  "producer":{"nose":"Fresh cherries, almonds and cedar.","palate":null,"finish":"Structured oak finish.","summary":"Official notes relayed by BroBible: fruit-forward with heavy nut character; charcoal mellowing gives a creamy mouthfeel.","source_url":"https://brobible.com/gear/article/george-dickel-fall-2008-bottled-in-bond-13-years-whiskey-review-best-value/"},
+  "critics":[
+   {"source":"The Whiskey Jug (Josh Peters)","source_url":"https://thewhiskeyjug.com/tennessee-whiskey/george-dickel-bottled-in-bond-fall-2008-13-years-review/","score":null,"scale":null,"nose":"Dried corn, brown sugar, oak, caramel, baking spice, leather, dried cherry, vanilla.","palate":"Mirrors the nose: dried corn, caramel, oak, cinnamon, leather, tart cherry.","finish":"Long; dried corn, oak, caramel and spice.","summary":"Summed up as spiced caramel corn; recommended neat or in a Manhattan. Letter-grade style rating (B+ range), numeric score omitted.","year":2023}
+  ],
+  "facts":{"abv":50,"proof":100,"age":"13 years","mash_bill":"84% corn, 8% rye, 8% malted barley","cask":"Bottled in bond; distilled Fall 2008","region":"Tennessee","source_url":"https://brobible.com/gear/article/george-dickel-fall-2008-bottled-in-bond-13-years-whiskey-review-best-value/"},
+  "flavor_terms":["cherry","almond","cedar","oak","dried corn","caramel","brown sugar","leather","baking spice","vanilla"],
+  "confidence":"high",
+  "notes":"Whiskey Wash review of Fall 2008 skipped: it covered the earlier 11-year release. Whiskey Shelf 13-year review was a 2005 distillation, skipped. Producer notes relayed by BroBible."},
+
+ {"id":"ks-woodinville-straight-bourbon-whiskey",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"Breaking Bourbon (Jordan Moskal)","source_url":"https://www.breakingbourbon.com/review/woodinville-straight-bourbon-2024","score":null,"scale":null,"nose":"Crisp apple, white peach, cedar, vanilla, light syrup.","palate":"Caramel and brown sugar, baking and rye spice, vanilla, oak.","finish":"Vanilla, oak, leather, white peppercorn, brown sugar.","summary":"Well-rounded Washington bourbon that holds up to Kentucky at 90 proof. Rating not clearly captured.","year":2024},
+   {"source":"The Whiskey Wash (Cameron Holck)","source_url":"https://thewhiskeywash.com/reviews/whiskey-reviews-woodinville-whiskey-co-bourbons/","score":3.5,"scale":"5","nose":"Grain, hay, lactic sourness, cashew, lemon, puff pastry.","palate":"Light and gently sweet: honey, custard, nutmeg, baked apple.","finish":"Sweet and chewy.","summary":null,"year":2020}
+  ],
+  "facts":{"abv":45,"proof":90,"age":"NAS (5 years per company, via Breaking Bourbon)","mash_bill":"72% corn, 22% rye, 6% malted barley","cask":null,"region":"Washington","source_url":"https://www.breakingbourbon.com/review/woodinville-straight-bourbon-2024"},
+  "flavor_terms":["apple","white peach","cedar","vanilla","caramel","brown sugar","rye spice","honey","baked apple","oak"],
+  "confidence":"medium",
+  "notes":"No producer notes: Woodinville shop lists finished variants; plain straight bourbon page not found."},
+
+ {"id":"ks-woodinville-bourbon-whiskey-port-cask-finish",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":"Producer page: rich texture with sticky baked plum and chocolate-covered cherry; finished six months in Douro Valley port barrels.","source_url":"https://woodinvillewhiskeyco.com/products/straight-bourbon-whiskey-finished-in-port-barrels-2026"},
+  "critics":[
+   {"source":"Breaking Bourbon","source_url":"https://www.breakingbourbon.com/review/woodinville-straight-bourbon-finished-in-port-casks","score":3,"scale":"5","nose":"Vanilla, blueberry, raspberry, seasoned oak.","palate":"Raspberry, grape, caramel, dark chocolate; good mouthfeel.","finish":"Plum, grape, seasoned oak, light leather, dry port aftertaste.","summary":"Sweet, fruit-forward daily drinker; dry winey finish holds it back.","year":2025}
+  ],
+  "facts":{"abv":45,"proof":90,"age":null,"mash_bill":null,"cask":"Finished about six months in port barrels from the Douro Valley","region":"Washington","source_url":"https://woodinvillewhiskeyco.com/products/straight-bourbon-whiskey-finished-in-port-barrels-2026"},
+  "flavor_terms":["baked plum","chocolate-covered cherry","raspberry","blueberry","grape","caramel","dark chocolate","vanilla","oak","leather"],
+  "confidence":"high",
+  "notes":"Producer gives a descriptive summary rather than split nose/palate/finish."},
+
+ {"id":"ks-garrison-brothers-small-batch-texas-straight-bourbon-whiskey",
+  "producer":{"nose":"Honey-drizzled apple slices, verbena, fresh-cut grass, saddle leather and cinnamon.","palate":"Tart orange and lemon candy, pound cake, sugar cookie, smoky baking spice, honeysuckle.","finish":"Long; smoky tobacco turning to caramel apple with walnut and cinnamon.","summary":"Official Garrison Brothers notes; grain-to-glass Texas bourbon aged in intense heat.","source_url":"https://www.garrisonbros.com/our-babies/small-batch/"},
+  "critics":[
+   {"source":"Bourbon Culture (Mike & Mike)","source_url":"https://thebourbonculture.com/whiskey-reviews/garrison-brothers-small-batch-texas-bourbon-2023-review/","score":6.5,"scale":"10","nose":"Raw grainy corn, caramel, sweet tea, cigar wrapper, leather, maple.","palate":"Chocolate, leather, charred oak, butterscotch pudding, honey candy; little baking spice.","finish":"More oak; chocolate, leather, caramel, honey, coffee liqueur.","summary":"Worth trying once for wheated-bourbon fans.","year":2023},
+   {"source":"Beverage Testing Institute (tastings.com)","source_url":"https://www.tastings.com/Spirits-Review/Garrison-Brothers-3-Year-Old-Small-Batch-Texas-Straight-Bourbon-Whiskey-USA-94-Proof-08-01-2023.aspx","score":91,"scale":"100","nose":"Maple gingerbread, toasted sesame, vanilla, toasted oak, marzipan, herbs.","palate":"Butterscotch, spiced pine, maple, chocolate-chip pancake, dried mango.","finish":"Slightly tannic and oaky in a flavorful way.","summary":"3-year-old at 94 proof; Gold Medal (archived 2023 review).","year":2023}
+  ],
+  "facts":{"abv":47,"proof":94,"age":"3 years (per BTI listing)","mash_bill":"Corn, wheat and barley (74% corn, 15% wheat, 11% malted barley per Bourbon Culture)","cask":null,"region":"Texas","source_url":"https://www.garrisonbros.com/our-babies/small-batch/"},
+  "flavor_terms":["apple","honey","leather","cinnamon","orange","baking spice","tobacco","caramel","butterscotch","maple"],
+  "confidence":"high",
+  "notes":"Mash percentages and age come from critics, not the producer page."},
+
+ {"id":"ks-balcones-texas-pot-still-bourbon-straight-bourbon-whisky",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[
+   {"source":"The Whiskey Wash (Courtney Kristjana)","source_url":"https://thewhiskeywash.com/reviews/whiskey-review-balcones-texas-pot-still-bourbon/","score":8,"scale":"10","nose":"Raisin and oak, cereal, faint cinnamon and baking spice, char.","palate":"Baking spice and rye warmth, coffee and leather bitterness, char; creamy.","finish":"Creamy with straw.","summary":"Standout in the Balcones range; drinks rye-like.","year":2019},
+   {"source":"Whisky For Everyone","source_url":"https://whiskyforeveryone.com/review-balcones-texas-pot-still-bourbon/","score":null,"scale":null,"nose":"Sawdust and oak spice, then honey, vanilla, toffee, canned peach, apricot jam, cocoa.","palate":"Spicy charred oak and toasted nuts, then vanilla, creamed corn, cooked apricot, stewed apple.","finish":"Long, spicy and drying; clove, cocoa, sandalwood.","summary":"Called it delicious with great structure.","year":2019}
+  ],
+  "facts":{"abv":46,"proof":92,"age":"2 years","mash_bill":"Roasted blue corn, Texas wheat, Texas rye, malted barley","cask":"Charred new American oak","region":"Texas","source_url":"https://thewhiskeywash.com/reviews/whiskey-review-balcones-texas-pot-still-bourbon/"},
+  "flavor_terms":["raisin","oak","baking spice","char","leather","coffee","honey","toffee","apricot","vanilla"],
+  "confidence":"medium",
+  "notes":"No producer notes (balconesdistilling.com fetch not permitted)."},
+
+ {"id":"ks-still-austin-red-corn-bourbon-whiskey",
+  "producer":{"nose":null,"palate":null,"finish":null,"summary":null,"source_url":null},
+  "critics":[],
+  "facts":{"abv":null,"proof":null,"age":null,"mash_bill":null,"cask":null,"region":null,"source_url":null},
+  "flavor_terms":[],
+  "confidence":"none",
+  "notes":"Search found several reviews (The Whiskey Wash, Bourbon Banter, The Whiskey Shelf) of Still Austin Red Corn Bottled-in-Bond, but page fetches failed (WebFetch session limit), so nothing was recorded."}
+]

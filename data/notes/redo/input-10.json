@@ -1,0 +1,79 @@
+[
+ {
+  "id": "pure-kentucky-xo",
+  "name": "Pure Kentucky XO",
+  "producer": "Willett",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "kentucky-vintage",
+  "name": "Kentucky Vintage",
+  "producer": "Willett",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "old-bardstown-bottled-in-bond",
+  "name": "Old Bardstown Bottled in Bond",
+  "producer": "Willett",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "evan-williams-bottled-in-bond",
+  "name": "Evan Williams Bottled-in-Bond",
+  "producer": "Heaven Hill",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "At least 4 years",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "78% corn / 10% rye / 12% malted barley"
+ },
+ {
+  "id": "evan-williams-single-barrel",
+  "name": "Evan Williams Single Barrel",
+  "producer": "Heaven Hill",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "Not publicly disclosed"
+ },
+ {
+  "id": "j-t-s-brown-bottled-in-bond",
+  "name": "J.T.S. Brown Bottled in Bond",
+  "producer": "Heaven Hill",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "At least 4 years",
+  "proof": 100,
+  "abv": 50,
+  "mash_bill": "Heaven Hill bourbon mash bill"
+ },
+ {
+  "id": "old-fitzgerald-bottled-in-bond",
+  "name": "Old Fitzgerald Bottled-in-Bond",
+  "producer": "Heaven Hill",
+  "category": "bourbon",
+  "region": "Kentucky, USA",
+  "age_statement": "NAS",
+  "proof": 90,
+  "abv": 45,
+  "mash_bill": "Not publicly disclosed"
+ }
+]

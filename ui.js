@@ -1,3 +1,4 @@
+import { withBottleImage } from "./bottle-images.js";
 import { STATUS_TAGS, categoryLabel, titleize } from "./spirit-taxonomy.js";
 
 export function escapeHtml(str) {
@@ -35,6 +36,7 @@ export function openSheet(html, { onOpen } = {}) {
   el("sheetContent").innerHTML = html;
   el("sheetBackdrop").classList.add("open");
   el("sheet").classList.add("open");
+  el("sheet").scrollTop = 0;
   document.body.style.overflow = "hidden";
   if (onOpen) onOpen();
 }
@@ -85,8 +87,9 @@ export function whyConcernsHtml(match) {
 }
 
 export function bottleThumbHtml(bottle) {
+  bottle = withBottleImage(bottle);
   if (bottle.image_url) return `<img src="${escapeHtml(bottle.image_url)}" alt="${escapeHtml(bottle.name)} bottle" loading="lazy">`;
-  return `<span aria-hidden="true">${bottle.category === "wine" ? "🍷" : "🥃"}</span>`;
+  return `<div class="photo-placeholder"><svg viewBox="0 0 32 64" aria-hidden="true"><path d="M12 3h8v17l6 9v29H6V29l6-9V3Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 36h12v14H10z" fill="none" stroke="currentColor"/></svg><span>Photo pending</span></div>`;
 }
 
 export function bottleCardHtml(bottle) {
@@ -171,4 +174,62 @@ export function ratingPickerHtml(selected) {
 
 export function emptyStateHtml(icon, title, body, actionHtml = "") {
   return `<div class="empty-state"><div class="ee-icon">${icon}</div><h3>${escapeHtml(title)}</h3><p>${escapeHtml(body)}</p>${actionHtml}</div>`;
+}
+
+// ---------- cited expert notes (producer + critics) ----------
+const safeUrl = (u) => (typeof u === "string" && /^https?:\/\//.test(u) ? u : null);
+const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; } };
+const NOTE_CONFIDENCE = {
+  high: "Producer notes and critic reviews",
+  medium: "One source type found",
+  low: "Thin sourcing — retailer text only"
+};
+
+function noteRowsHtml(n) {
+  const rows = [["Nose", n.nose], ["Palate", n.palate], ["Finish", n.finish]].filter(([, v]) => v);
+  return rows.length ? `<dl class="note-rows">${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${escapeHtml(v)}</dd></div>`).join("")}</dl>` : "";
+}
+
+/** Small summary used on list cards: critic score + the sources' top descriptors. */
+export function expertChipsHtml(brief) {
+  if (!brief) return "";
+  const score = brief.critic_avg != null
+    ? `<span class="critic-chip" title="Average of ${brief.critic_avg_n} critic score${brief.critic_avg_n === 1 ? "" : "s"} on a 100-point scale">Critics ${brief.critic_avg}</span>` : "";
+  const terms = (brief.flavor_terms || []).slice(0, 5).map((t) => `<span class="note-term">${escapeHtml(t)}</span>`).join("");
+  return score || terms ? `<div class="expert-chips">${score}${terms}</div>` : "";
+}
+
+/**
+ * Full notes block for a bottle page or detail sheet.
+ * @param expert  { producer, critics, facts, flavor_terms, confidence, caveat }
+ * @param match   { reasons, concerns } from explainFromNotes, optional
+ */
+export function expertNotesHtml(expert, match = null) {
+  if (!expert || expert.confidence === "none") return "";
+  const p = expert.producer;
+  const producerHtml = p ? `
+    <div class="note-block">
+      <div class="note-head"><strong>${/\b(retailer|via|relayed|importer|distributor)\b/i.test(p.summary || "") || expert.confidence === "low" ? "Producer notes (as relayed by a retailer)" : "From the producer"}</strong>${safeUrl(p.source_url) ? `<a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(hostOf(p.source_url))}</a>` : ""}</div>
+      ${noteRowsHtml(p)}
+      ${p.summary ? `<p class="note-summary">${escapeHtml(p.summary)}</p>` : ""}
+    </div>` : "";
+  const criticsHtml = (expert.critics || []).map((c) => `
+    <div class="note-block">
+      <div class="note-head">
+        <strong>${escapeHtml(c.source)}</strong>
+        ${c.score != null ? `<span class="critic-score">${c.score}<small>/${escapeHtml(c.scale)}</small></span>` : ""}
+        ${c.year ? `<span class="note-year">${c.year}</span>` : ""}
+        ${safeUrl(c.source_url) ? `<a href="${escapeHtml(c.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(hostOf(c.source_url))}</a>` : ""}
+      </div>
+      ${noteRowsHtml(c)}
+      ${c.summary ? `<p class="note-summary">${escapeHtml(c.summary)}</p>` : ""}
+    </div>`).join("");
+  const reasons = (match?.reasons || []).map((r) => `<div>✓ ${escapeHtml(r)}</div>`).join("");
+  const concerns = (match?.concerns || []).map((c) => `<div>⚠ ${escapeHtml(c)}</div>`).join("");
+  return `
+    <div class="section-title"><h2>Tasting Notes</h2><span class="field-hint">${escapeHtml(NOTE_CONFIDENCE[expert.confidence] || "")}</span></div>
+    ${reasons || concerns ? `<div class="card notes-match"><strong>How the notes fit your palate</strong><div class="notes-match-list">${reasons}${concerns}</div></div>` : ""}
+    ${(expert.flavor_terms || []).length ? `<div class="tag-cloud" style="margin-bottom:10px">${expert.flavor_terms.map((t) => `<span class="note-term">${escapeHtml(t)}</span>`).join("")}</div>` : ""}
+    <div class="card">${producerHtml}${criticsHtml}</div>
+    <p class="field-hint">Paraphrased from the linked sources. Batches and vintages vary${expert.caveat ? ` — ${escapeHtml(expert.caveat)}` : "."}</p>`;
 }

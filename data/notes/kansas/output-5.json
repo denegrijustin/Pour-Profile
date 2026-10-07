@@ -1,0 +1,1103 @@
+[
+ {
+  "id": "ks-monkey-47-schwarzwalk-dry-gin",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer describes pure juniper scent, tangy crisp citrus, sweet floral aroma, a hint of peppery spice, subtle bitter fruit and a racy finish. Batch-distilled, unfiltered, 47 botanicals (several from the Black Forest such as spruce, lingonberries, sloe and elderflower), rested in earthenware.",
+   "source_url": "https://monkey47.com/the-schwarzwald-dna"
+  },
+  "critics": [
+   {
+    "source": "Distiller (John Rankin)",
+    "source_url": "https://distiller.com/spirits/monkey-47-schwarzwald-dry-gin",
+    "score": 99,
+    "scale": "100",
+    "nose": null,
+    "palate": "Forest fruits with wildflower and island spice notes; juniper present but not dominant.",
+    "finish": "Balanced, long and rich.",
+    "summary": "Calls it an exquisite gin that pushes the limits of flavor in the category.",
+    "year": null
+   },
+   {
+    "source": "Drinkhacker",
+    "source_url": "https://www.drinkhacker.com/2013/03/12/review-monkey-47-schwarzwald-dry-gin/",
+    "score": null,
+    "scale": null,
+    "nose": "Prominent juniper with intense herbal notes: dried rosemary, cloves, dried mushroom.",
+    "palate": "Fresh rosemary, evergreen, black pepper and a big forest-floor, earthy, campfire-ember element; fruit (blueberry, orange, apple, peach) emerges late.",
+    "finish": "Sweet, fruity, slightly tart; very easy drinking.",
+    "summary": "Graded A- (letter grade). Calls it bizarre, fun and wholly unique. Reviewed at 94 proof.",
+    "year": 2013
+   },
+   {
+    "source": "The GIN is IN (Aaron Knoll)",
+    "source_url": "https://theginisin.com/gin-reviews/monkey-47/",
+    "score": 4.5,
+    "scale": "5",
+    "nose": "Very complex: mentholated juniper, pineapple sage, lemon verbena, lavender, rose, shifting as it warms.",
+    "palate": "Minty and herbal with herbaceous juniper, blackthorn, lavender and pepper; thick, rich mouthfeel.",
+    "finish": "Oily aromatic herbs, peppermint, lemon balm and blackberry; fresh and fruity.",
+    "summary": "Main critique is that the contemporary profile sidelines juniper; still recommended as an indulgence.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": "Rested ~3 months in earthenware (per Distiller)",
+   "mash_bill": "Molasses-based spirit; 47 botanicals incl. juniper, lingonberry, blackberry, pomelo, chamomile, sage, angelica, coriander, spruce",
+   "cask": "Earthenware vessels",
+   "region": "Black Forest, Germany",
+   "source_url": "https://distiller.com/spirits/monkey-47-schwarzwald-dry-gin"
+  },
+  "flavor_terms": [
+   "juniper",
+   "citrus",
+   "floral",
+   "pepper",
+   "forest fruits",
+   "rosemary",
+   "lavender",
+   "blackberry",
+   "sage",
+   "earthy"
+  ],
+  "confidence": "high",
+  "notes": "Input name misspells Schwarzwald. Producer notes are a single descriptive sentence, not split nose/palate/finish. Region from Distiller/producer Black Forest framing."
+ },
+ {
+  "id": "ks-st-george-terroir-gin",
+  "producer": {
+   "nose": "Prominent Douglas fir and California bay laurel with subtle citrus.",
+   "palate": "Sage and wok-roasted coriander evoke hillside scrub; angelica root and Saigon cinnamon add earthy undertones.",
+   "finish": "Clean and crisp with forest-like complexity.",
+   "summary": "Woodsy, aromatic gin meant to evoke the California landscape. Fir and sage distilled separately; bay laurel and juniper vapor-infused; other botanicals in the pot.",
+   "source_url": "https://stgeorgespirits.com/spirits/terroir-gin"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/st-george-terroir-gin",
+    "score": 90,
+    "scale": "100",
+    "nose": "Bold Douglas fir with sage growing more present over time.",
+    "palate": "Full-bodied; juniper subdued, little citrus.",
+    "finish": "Peppery.",
+    "summary": "Spicy, herbal gin suggested for a Gibson or Bramble.",
+    "year": null
+   },
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/4937/st-george-terroir-gin",
+    "score": null,
+    "scale": null,
+    "nose": "Pine cones, pine needles and sage.",
+    "palate": "Brawny pine resin with eucalyptus and sage.",
+    "finish": "Bone dry with pine resin.",
+    "summary": "Fir-pine character leads over traditional juniper; unconventional but still gin-like.",
+    "year": 2014
+   },
+   {
+    "source": "The GIN is IN (Aaron Knoll)",
+    "source_url": "https://theginisin.com/gin-reviews/st-george-terroir/",
+    "score": 5,
+    "scale": "5",
+    "nose": "Pine buds, spruce, fir and pine cones; immediately evocative.",
+    "palate": "Sage and bay leaf early, then juniper and fir needle turning minty; coriander, gentle spice and a touch of lemon.",
+    "finish": "Cool, moderately long, minty sage; very smooth.",
+    "summary": "Highly recommended; best neat or in a G&T with lime.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": "Botanicals: Douglas fir, California bay laurel, juniper, wok-roasted coriander, lemon, Seville orange, angelica, orris, sage, Saigon cinnamon, cardamom, fennel seed",
+   "cask": "Fir and sage distilled separately; bay laurel and juniper vapor-infused",
+   "region": "California, USA",
+   "source_url": "https://stgeorgespirits.com/spirits/terroir-gin"
+  },
+  "flavor_terms": [
+   "douglas fir",
+   "bay laurel",
+   "sage",
+   "pine",
+   "coriander",
+   "pine resin",
+   "eucalyptus",
+   "mint",
+   "pepper",
+   "citrus"
+  ],
+  "confidence": "high",
+  "notes": "ABV 45% confirmed by producer and Difford's."
+ },
+ {
+  "id": "ks-aviation-american-gin",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer gives no formal tasting notes, only calls it very smooth and suitable neat or mixed. Botanicals: cardamom, coriander, French lavender, anise seed, sarsaparilla, juniper and two orange peels; 18-hour maceration then steam-heated distillation.",
+   "source_url": "https://www.aviationgin.com/"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/aviation-american-gin",
+    "score": 89,
+    "scale": "100",
+    "nose": "Sarsaparilla and orange peel that highlight lavender.",
+    "palate": "Subtle sweetness with juniper pine in a supporting role.",
+    "finish": "Bittersweet with cinnamon and minty notes.",
+    "summary": "Suggested for an Aviation, Pegu Club or Bee's Knees.",
+    "year": null
+   },
+   {
+    "source": "Spirit Animal (Clayton Walker)",
+    "source_url": "https://www.spirit-animal.org/reviews/2016/8/29/aviation-american-gin",
+    "score": null,
+    "scale": null,
+    "nose": "Faint juniper with coriander and star anise.",
+    "palate": "White pepper, orange oil and lavender; very gentle.",
+    "finish": "Tangy and gently expansive.",
+    "summary": "Rated 2 stars (Recommended) on the site's own star system; soft gin good neat or for vodka drinkers, easily lost in cocktails.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 42,
+   "proof": 84,
+   "age": null,
+   "mash_bill": "100% grain neutral spirit; botanicals cardamom, coriander, French lavender, anise seed, sarsaparilla, juniper, two orange peels",
+   "cask": "18-hour botanical maceration, steam-heated still, heart cut",
+   "region": "USA",
+   "source_url": "https://www.aviationgin.com/"
+  },
+  "flavor_terms": [
+   "sarsaparilla",
+   "orange peel",
+   "lavender",
+   "juniper",
+   "coriander",
+   "anise",
+   "white pepper",
+   "cinnamon",
+   "mint",
+   "bittersweet"
+  ],
+  "confidence": "medium",
+  "notes": "No producer nose/palate/finish; critic notes only. Producer site lists Diageo as current owner/distiller."
+ },
+ {
+  "id": "ks-hennessy-privilege-vsop-cognac",
+  "producer": {
+   "nose": "Rich, inviting aroma of sweet, fresh apricot.",
+   "palate": "Voluptuous vanilla with mellow oak; smooth.",
+   "finish": null,
+   "summary": "Producer page (V.S.O.P Privilège) describes a ruby-amber color, apricot nose and vanilla/oak palate; blend dates to 1817.",
+   "source_url": "https://www.hennessy.com/en-us/collection/hennessy-vsop-privilege"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/hennessy-privilege-vsop-cognac",
+    "score": 85,
+    "scale": "100",
+    "nose": "Highly aromatic, led by fruit that has moved toward dried fruit.",
+    "palate": null,
+    "finish": null,
+    "summary": "Expert review excerpt only partially captured.",
+    "year": null
+   },
+   {
+    "source": "Cognac-Expert",
+    "source_url": "https://www.cognac-expert.com/vsop-cognac/hennessy-vsop-cognac",
+    "score": null,
+    "scale": null,
+    "nose": "Strong fruit bouquet with hints of honey.",
+    "palate": "Dominated by woody cask notes.",
+    "finish": "Woody.",
+    "summary": "Retailer/specialist site's own notes; its 3.5/5 is a user-review average so not recorded as a score.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "NAS (VSOP, min. 4 years per Cognac-Expert)",
+   "mash_bill": "Blend of eaux-de-vie from Grande Champagne, Petite Champagne, Borderies and Fins Bois",
+   "cask": "French oak (Limousin per Cognac-Expert)",
+   "region": "Cognac, France",
+   "source_url": "https://distiller.com/spirits/hennessy-privilege-vsop-cognac"
+  },
+  "flavor_terms": [
+   "apricot",
+   "vanilla",
+   "oak",
+   "dried fruit",
+   "honey",
+   "fruit",
+   "woody"
+  ],
+  "confidence": "high",
+  "notes": "Distiller's tasting text was only partially retrieved. Cru list from Distiller."
+ },
+ {
+  "id": "ks-remy-martin-vsop-cognac",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/remy-martin-vsop-cognac",
+    "score": 83,
+    "scale": "100",
+    "nose": "Lots of fruit and floral notes, a touch of wood and barrel spice, mostly sweet young fruit.",
+    "palate": null,
+    "finish": null,
+    "summary": "Youthful, fruit-forward VSOP.",
+    "year": null
+   },
+   {
+    "source": "Whiskey Apostle (Gary)",
+    "source_url": "https://whiskeyapostle.com/2021/08/remy-martin-v-s-o-p-cognac/",
+    "score": null,
+    "scale": null,
+    "nose": "Floral and fruity: plums edging to citrus, candied pineapple.",
+    "palate": "Spiced apples and pears, cinnamon, nutmeg, a hint of anise.",
+    "finish": "Short to moderate, drying, dark berries.",
+    "summary": "Whisky reviewer self-described as unfamiliar with cognac; preferred it to Courvoisier VS.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "NAS (VSOP; Distiller says eaux-de-vie aged 4-12 years)",
+   "mash_bill": "Fine Champagne cognac (Grande + Petite Champagne, ~55% Grande Champagne per Distiller); predominantly Ugni Blanc",
+   "cask": "Limousin oak",
+   "region": "Cognac, France",
+   "source_url": "https://distiller.com/spirits/remy-martin-vsop-cognac"
+  },
+  "flavor_terms": [
+   "fruit",
+   "floral",
+   "barrel spice",
+   "plum",
+   "candied pineapple",
+   "apple",
+   "pear",
+   "cinnamon",
+   "nutmeg",
+   "dark berries"
+  ],
+  "confidence": "medium",
+  "notes": "Producer page fetched but held no tasting notes. Difford's lists a 'Mature Cask Finish' VSOP, possibly a different market label, so not used. Cocktail Chemistry review blocked by redirect loop."
+ },
+ {
+  "id": "ks-martell-blue-swift-vsop-cognac",
+  "producer": {
+   "nose": null,
+   "palate": "Subtle sweetness of vanilla, coconut and spice, generous with ginger and candied fruit, plum and toasted oak.",
+   "finish": "Very smooth, rounded.",
+   "summary": "Martell VSOP eaux-de-vie (min. 4 years) finished in bourbon casks.",
+   "source_url": "https://www.martell.com/en-us/our-cognacs/martell-blue-swift"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Jacob Grier)",
+    "source_url": "https://distiller.com/spirits/martell-blue-swift",
+    "score": 87,
+    "scale": "100",
+    "nose": null,
+    "palate": "Sweet vanilla and a little smoke from American oak, then the brandy's fruit.",
+    "finish": null,
+    "summary": "Dark color from bourbon-barrel finish; built to appeal to bourbon drinkers and blends both well.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "NAS (VSOP, min. 4 years)",
+   "mash_bill": "Blend from Borderies, Grande Champagne, Petite Champagne and Fins Bois (per Cognac-Expert)",
+   "cask": "French oak, finished in Kentucky bourbon casks",
+   "region": "Cognac, France",
+   "source_url": "https://www.cognac-expert.com/vsop-cognac/martell-blue-swift-spirit"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "coconut",
+   "spice",
+   "ginger",
+   "candied fruit",
+   "plum",
+   "toasted oak",
+   "smoke",
+   "banana",
+   "mint"
+  ],
+  "confidence": "high",
+  "notes": "Legally labeled as eau-de-vie in some markets due to bourbon cask finish. Cognac-Expert relays Martell notes (fresh perfume/mint nose; banana, vanilla, coconut, menthol; toasted oak)."
+ },
+ {
+  "id": "ks-chateau-de-laubade-xo-armagnac",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/3568/chateau-de-laubade-xo-bas-armagnac",
+    "score": null,
+    "scale": null,
+    "nose": "Stewed prunes, vinous varnish, vanilla, fresh toast, spruce needles and toasted coconut with a sawn-wood note.",
+    "palate": "Light honeyed sweetness; delicate and easy sipping with cherry and gentle spice.",
+    "finish": "Lingering stewed and dried fruit with cherry wood and mild cinnamon.",
+    "summary": "Deep bronze-amber; easy-sipping XO. Sampled 2013.",
+    "year": 2013
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Blend of eaux-de-vie aged 15-25 years",
+   "mash_bill": "Estate-grown Ugni Blanc, Colombard, Baco and Folle Blanche",
+   "cask": "Gascon oak casks (400 L, made by the chateau's own cooper per Difford's)",
+   "region": "Bas-Armagnac, Gascony, France",
+   "source_url": "https://distiller.com/spirits/chateau-de-laubade-xo-bas-armagnac"
+  },
+  "flavor_terms": [
+   "stewed prunes",
+   "vanilla",
+   "toasted coconut",
+   "honey",
+   "cherry",
+   "spice",
+   "dried fruit",
+   "cinnamon",
+   "stewed plum",
+   "nutty"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site unreachable. Master of Malt description (retailer) calls it rich and sweet with nutty notes, stewed plum and a hint of smoke. Natalie MacLean page showed only community notes, no score. Distiller page had no expert review."
+ },
+ {
+  "id": "ks-germain-robin-craft-method-brandy",
+  "producer": {
+   "nose": "Harmonious aroma of oak, berries and a light floral quality (retailer-relayed).",
+   "palate": "Light and vibrant.",
+   "finish": "Dry and spice-filled with subtle roasted notes.",
+   "summary": "Retailer (Spec's) relays these as producer notes; producer suggests it as an aperitif.",
+   "source_url": "https://specsonline.com/shop/spirits/germain-robin-craft-method-brandy-vsop/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": "California grape wines; sources disagree (Distiller: Colombard, Pinot Noir, Chenin Blanc; Spec's: mainly Pinot Noir with Colombard, Ehrenfelser)",
+   "cask": "Limousin oak",
+   "region": "Mendocino County, California, USA (per Spec's)",
+   "source_url": "https://distiller.com/spirits/germain-robin-craft-method-brandy"
+  },
+  "flavor_terms": [
+   "oak",
+   "berries",
+   "floral",
+   "spice",
+   "roasted"
+  ],
+  "confidence": "low",
+  "notes": "Producer site no longer lists 'Craft Method' (now flagship 'Germain-Robin Brandy', unconfirmed as same product) so its notes were not used. Age conflicts: Distiller ~6 years (VSOP-equivalent, lot-numbered), Spec's 8-22 years. No critic reviews found."
+ },
+ {
+  "id": "ks-stoneleigh-sauvignon-blanc",
+  "producer": {
+   "nose": "Fresh and exuberant: passionfruit and lime zest with a herbal hint.",
+   "palate": "Tropical fruit, guava and pink grapefruit with lemongrass and bell pepper; mouth-watering acidity and minerality.",
+   "finish": "Long and lingering.",
+   "summary": "Producer notes shown for the 2024 vintage (latest on site); cool, slow stainless fermentation, 2024 blend includes some Awatere Valley fruit.",
+   "source_url": "https://stoneleigh.com/en-us/products/new-zealand-sauvignon-blanc"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc",
+   "cask": "Cool stainless-steel fermentation",
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://stoneleigh.com/en-us/products/new-zealand-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "passionfruit",
+   "lime zest",
+   "herbal",
+   "tropical fruit",
+   "guava",
+   "pink grapefruit",
+   "lemongrass",
+   "bell pepper",
+   "minerality"
+  ],
+  "confidence": "medium",
+  "notes": "Input vintage 2026 has no published notes; producer notes are for 2024. Producer lists awards (e.g. Tasting Panel 93 points, 2023) without clear vintage, so not recorded as critic scores."
+ },
+ {
+  "id": "ks-nobilo-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": "Ripe passionfruit, pineapple, zesty citrus and fresh green herbs; crisp, vibrant tropical fruit.",
+   "finish": "Clean and generous.",
+   "summary": "Retailer (67 Wine) relays these as producer notes for the 2025 Marlborough wine.",
+   "source_url": "https://67wine.com/products/nobilo-sauvignon-blanc-marlborough-2025-750ml"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://67wine.com/products/nobilo-sauvignon-blanc-marlborough-2025-750ml"
+  },
+  "flavor_terms": [
+   "passionfruit",
+   "pineapple",
+   "citrus",
+   "green herbs",
+   "tropical fruit"
+  ],
+  "confidence": "low",
+  "notes": "Vintage 2025. Only retailer-relayed producer text found; no critic reviews within budget."
+ },
+ {
+  "id": "ks-infamous-goose-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Wine 365 (Vesselina Stoyanova)",
+    "source_url": "https://wine365.com/infamous-goose-sauvignon-blanc/",
+    "score": null,
+    "scale": null,
+    "nose": "Kaffir lime, passionfruit pulp and lemon zest.",
+    "palate": "Concentrated citrus and tropical fruit with salivating acidity.",
+    "finish": null,
+    "summary": "Pale lime-straw. Article from 2021; vintage not stated.",
+    "year": 2021
+   },
+   {
+    "source": "Ward on Wine",
+    "source_url": "https://wardonwine.com/uncategorized/tuesday-unscrewed-infamous-goose-sauvignon-blanc/",
+    "score": null,
+    "scale": null,
+    "nose": "Citrus up front: gooseberry, grapefruit, lemon zest, lime, pear, tropical fruit, lemongrass.",
+    "palate": "Medium-bodied, high acid, crisp and fruity.",
+    "finish": "Nice minerality balanced by acid.",
+    "summary": "2016 review of an older vintage (page appears to say 2015); not the 2025.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc",
+   "cask": null,
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://wine365.com/infamous-goose-sauvignon-blanc/"
+  },
+  "flavor_terms": [
+   "kaffir lime",
+   "passionfruit",
+   "lemon zest",
+   "citrus",
+   "tropical fruit",
+   "gooseberry",
+   "grapefruit",
+   "lemongrass",
+   "minerality"
+  ],
+  "confidence": "medium",
+  "notes": "No critic or producer notes for the 2025 vintage; critic notes are from older/unspecified vintages."
+ },
+ {
+  "id": "ks-sea-pearl-sauvignon-blanc",
+  "producer": {
+   "nose": "Pungent sweet grass, nettles, blackcurrant and gooseberry.",
+   "palate": "Light-bodied.",
+   "finish": "Long, fine, appetizing mineral finish with ripe greens, gooseberry and currant.",
+   "summary": "Retailer (BuyWinesOnline) relays these as producer notes for the 2025; pale straw with green hues.",
+   "source_url": "https://buywinesonline.com/products/sea-pearl-sauvignon-blanc-2025-750-ml"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://buywinesonline.com/products/sea-pearl-sauvignon-blanc-2025-750-ml"
+  },
+  "flavor_terms": [
+   "sweet grass",
+   "nettles",
+   "blackcurrant",
+   "gooseberry",
+   "mineral",
+   "currant"
+  ],
+  "confidence": "low",
+  "notes": "Vintage 2025. Only retailer-relayed producer notes; no critic reviews found."
+ },
+ {
+  "id": "ks-ant-moore-sauvignon-blanc-estate-series",
+  "producer": {
+   "nose": "Fresh passion fruit, lime zest and gooseberry with bright intensity.",
+   "palate": "Crisp citrus with tropical mango and grapefruit.",
+   "finish": null,
+   "summary": "US importer (Vintage Imports) sheet for the Estate Marlborough Sauvignon Blanc: cool-morning harvest, temperature-controlled stainless fermentation, brief lees ageing.",
+   "source_url": "https://vntgimports.com/download/?id=76469"
+  },
+  "critics": [
+   {
+    "source": "Cameron Douglas MS",
+    "source_url": "https://www.camdouglasms.com/reviews/2025/11/29/ant-moore-sauvignon-blanc-2025-marlborough",
+    "score": 90,
+    "scale": "100",
+    "nose": "Passionfruit and green herb baseline.",
+    "palate": "Apple and citrus with pith and peel.",
+    "finish": "Steely, salivating, crisp and dry.",
+    "summary": "2025 vintage; drink 2025-2027.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": 12.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Stainless steel, brief fine-lees ageing",
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://vntgimports.com/download/?id=76469"
+  },
+  "flavor_terms": [
+   "passion fruit",
+   "lime zest",
+   "gooseberry",
+   "citrus",
+   "mango",
+   "grapefruit",
+   "green herb",
+   "apple"
+  ],
+  "confidence": "high",
+  "notes": "Critic review is titled 'Ant Moore Sauvignon Blanc 2025' without 'Estate Series'; assumed to be the core Estate bottling (Signature Series is labeled separately). Importer sheet gives 12.5% ABV vs label 12% and no vintage."
+ },
+ {
+  "id": "ks-girard-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": "Crisp acidity, nuanced herbaceous character and an interplay of citrus and tropical fruit.",
+   "finish": null,
+   "summary": "Retailer (CocoVino) product description for the 2023 Sonoma County bottling; not clearly attributed to the winery.",
+   "source_url": "https://www.cocovinola.com/girard-sauvignon-blanc-2023-sonoma-county.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Sonoma County, California",
+   "source_url": "https://www.cocovinola.com/girard-sauvignon-blanc-2023-sonoma-county.html"
+  },
+  "flavor_terms": [
+   "herbaceous",
+   "citrus",
+   "tropical fruit"
+  ],
+  "confidence": "low",
+  "notes": "Vintage 2023. Winery site gave no Sauvignon Blanc page. Another retailer (Blackwell's) listing titled 2023 Sonoma County shows Napa Valley estate notes and a Suckling review of the 2022 Napa wine, so not used due to appellation conflict."
+ },
+ {
+  "id": "ks-sunny-with-a-chance-of-flowers-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": "Ripe guava, crushed pineapple, ruby grapefruit and fresh-cut grass; light and refreshing.",
+   "finish": null,
+   "summary": "Retailer (Empire Wine) relays producer description for the 2024; low-calorie, zero-sugar, low-alcohol wine from Scheid Family Wines.",
+   "source_url": "https://www.empirewine.com/wine/sunny-with-a-chance-of-flowers-sauvignon-blanc-2024-h72975/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 9,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Monterey County, California",
+   "source_url": "https://www.empirewine.com/wine/sunny-with-a-chance-of-flowers-sauvignon-blanc-2024-h72975/"
+  },
+  "flavor_terms": [
+   "guava",
+   "pineapple",
+   "grapefruit",
+   "cut grass"
+  ],
+  "confidence": "low",
+  "notes": "Vintage 2024. Retailer lists 85 calories per 5 oz. No critic reviews found."
+ },
+ {
+  "id": "ks-raeburn-sauvignon-blanc",
+  "producer": {
+   "nose": "White flowers and citrus.",
+   "palate": "Bright, round mouthfeel with tropical guava, Meyer lemon and key lime.",
+   "finish": "Crisp.",
+   "summary": "Winery page shows these notes for the 2023 vintage; a retailer (Empire Wine) relays the same notes for the 2025. Light straw color.",
+   "source_url": "https://www.raeburnwinery.com/sustainable-sauvignon-blanc/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc",
+   "cask": null,
+   "region": "North Coast, California",
+   "source_url": "https://www.raeburnwinery.com/sustainable-sauvignon-blanc/"
+  },
+  "flavor_terms": [
+   "white flowers",
+   "citrus",
+   "guava",
+   "meyer lemon",
+   "key lime",
+   "tropical"
+  ],
+  "confidence": "medium",
+  "notes": "Input vintage 2025; winery notes are for 2023 (retailer shows identical text for 2025). Winery cites James Suckling 90 (2023) and Tasting Panel 93 (2022), not recorded since critic pages weren't fetched and vintages differ."
+ },
+ {
+  "id": "ks-la-crema-sauvignon-blanc",
+  "producer": {
+   "nose": "Nectarine, lime, melon with subtle wet stone and flint.",
+   "palate": "Grapefruit and white peach with tropical mango and guava; crisp, vibrant acidity.",
+   "finish": "Juicy and lingering.",
+   "summary": "Winery notes for the 2024 Sonoma County Sauvignon Blanc; some barrel fermentation adds body and texture.",
+   "source_url": "https://www.lacrema.com/la-crema-sonoma-county-sauvignon-blanc-2024-750-ml/0502470.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc",
+   "cask": "Partial barrel fermentation",
+   "region": "Sonoma County, California",
+   "source_url": "https://www.lacrema.com/la-crema-sonoma-county-sauvignon-blanc-2024-750-ml/0502470.html"
+  },
+  "flavor_terms": [
+   "nectarine",
+   "lime",
+   "melon",
+   "wet stone",
+   "flint",
+   "grapefruit",
+   "white peach",
+   "mango",
+   "guava"
+  ],
+  "confidence": "medium",
+  "notes": "Vintage 2024. A Wine Enthusiast review of the 2024 exists but the page failed (redirect loop), so no critic data recorded."
+ },
+ {
+  "id": "ks-domaine-fouassier-sauvignon-blanc-les-grous",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Sancerre, Loire, France",
+   "source_url": "https://vinovoss.com/wine/domaine-fouassier-sancerre-les-grous/"
+  },
+  "flavor_terms": [
+   "flinty",
+   "minerality",
+   "citrus zest",
+   "white blossom",
+   "green apple",
+   "lime",
+   "herbaceous",
+   "saline",
+   "pear",
+   "gooseberry"
+  ],
+  "confidence": "low",
+  "notes": "Vintage 2023. Only a retailer's in-house note (VinoVoss 'Voss Experts', 4.5/5): flinty minerality, citrus zest and white blossom; green apple, lime, subtle herbs; crisp saline mineral finish. Importer (Winebow) page timed out."
+ },
+ {
+  "id": "ks-joseph-mellot-sauvignon-blanc",
+  "producer": {
+   "nose": "Fresh and inviting.",
+   "palate": "Crisp and refreshing with grapefruit and lemon, hints of tropical fruit and a subtle herbaceous note; light-bodied.",
+   "finish": null,
+   "summary": "Retailer (Onshore Cellars) description of Joseph Mellot 'Sincérité' Sauvignon Blanc (listed as IGP Val de Loire, 2023/2024, 13.5%); not clearly attributed to the producer.",
+   "source_url": "https://onshorecellars.com/products/joseph-mellot-sincerite-sauvignon-blanc-igp-val-de-loire"
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator",
+    "source_url": "https://www.winespectator.com/wine/wine-detail/id/1313248/name/joseph-mellot-sauvignon-blanc-vin-de-france-sincerite-2023/guest",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Lush, with citrus and lychee and a bitter note (excerpt only).",
+    "finish": null,
+    "summary": "2023 Vin de France Sincérité; score and full note paywalled. Published 2025.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Loire Valley, France (Vin de France)",
+   "source_url": "https://www.winespectator.com/wine/wine-detail/id/1313248/name/joseph-mellot-sauvignon-blanc-vin-de-france-sincerite-2023/guest"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "lemon",
+   "tropical fruit",
+   "herbaceous",
+   "citrus",
+   "lychee"
+  ],
+  "confidence": "low",
+  "notes": "Assumed to be the 'Sincérité' bottling (the producer's Vin de France Sauvignon Blanc per Wine Spectator). Input is 2021 at 12%; sources cover 2023/2024 and the retailer lists 13.5%."
+ },
+ {
+  "id": "ks-weingut-tement-sauvignon-blanc-kalk-kreide",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Opening a Bottle",
+    "source_url": "https://www.openingabottle.com/weingut-tement-crazy-good-sauvignon-blanc/",
+    "score": 5,
+    "scale": "5",
+    "nose": "Tarragon and fennel.",
+    "palate": "Bright peach and grapefruit with semi-bitter herbal and spice notes.",
+    "finish": "Focused minerality.",
+    "summary": "Reviewed the 2021 vintage (not 2020) in 2023; intense and focused for an entry-level estate bottling.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 12.5,
+   "proof": null,
+   "age": "Six months on lees",
+   "mash_bill": "100% Sauvignon Blanc from ~55 plots; limestone and clay soils",
+   "cask": "Stainless steel",
+   "region": "Südsteiermark DAC, Austria",
+   "source_url": "https://www.openingabottle.com/weingut-tement-crazy-good-sauvignon-blanc/"
+  },
+  "flavor_terms": [
+   "tarragon",
+   "fennel",
+   "peach",
+   "grapefruit",
+   "herbaceous",
+   "spice",
+   "minerality"
+  ],
+  "confidence": "medium",
+  "notes": "Input vintage 2020; only critic note found is for 2021. Producer site (tement.at) unreachable. Facts relayed by the reviewer and may be vintage-specific; certified organic/biodynamic per reviewer."
+ },
+ {
+  "id": "ks-maker-s-mark-no-46-french-oaked-cask-strength-ksbw",
+  "producer": {
+   "nose": "Strong caramel and almond with dark fruit and figs.",
+   "palate": "Heavy dark fruit and tobacco rounded by caramel.",
+   "finish": "Long, dry and warming.",
+   "summary": "Barrel-proof Maker's 46 (proof varies roughly 107-114 by batch); fully matured Maker's finished with ten seared virgin French oak staves (Stave Profile No. 46).",
+   "source_url": "https://www.makersmark.com/en-us/bourbons/makers-mark-46-cask-strength"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/makers-mark-46-cask-strength-2021-release",
+    "score": 3,
+    "scale": "5",
+    "nose": "Graham cracker, toasted oak and marshmallow, then toffee, caramel and bold cinnamon.",
+    "palate": "Sweet cinnamon, vanilla, light oak, wheat grain and honey; bold but balanced.",
+    "finish": "Heat, then cinnamon, honey and dry oak, settling to light oak.",
+    "summary": "2021 release at 110.3 proof; competent but less distinctive than the 2015 original.",
+    "year": 2021
+   },
+   {
+    "source": "Bourbon Culture",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/makers-46-cask-strength-review/",
+    "score": 8,
+    "scale": "10",
+    "nose": "Deeper, dessert-like French oak character: vanilla, toffee, chocolate, fig, cherry.",
+    "palate": "Woody with white pepper, cinnamon, allspice and chai; chocolate and coffee bean, little fruit.",
+    "finish": "Oak-led and tannic with tobacco leaf, coffee bean and vanilla.",
+    "summary": "Compares favorably to other wheaters; proof of bottle not stated.",
+    "year": 2023
+   },
+   {
+    "source": "The Whiskey Wash (John Dover)",
+    "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-makers-mark-46-cask-strength/",
+    "score": 5,
+    "scale": "10",
+    "nose": "Soft caramel then strong vanilla, baking spice and oak.",
+    "palate": "Plastic note at first, then caramel, banana bread and cinnamon with sharp heat and a medicinal edge.",
+    "finish": "Medicinal notes linger.",
+    "summary": "Reviewed a 109.6-proof bottling; better as a mixer than a sipper.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 55.3,
+   "proof": 110.6,
+   "age": "NAS",
+   "mash_bill": "70% corn, 16% red winter wheat, 14% malted barley",
+   "cask": "Finished with 10 seared virgin French oak staves inserted into matured barrels",
+   "region": "Kentucky, USA",
+   "source_url": "https://www.breakingbourbon.com/review/makers-mark-46-cask-strength-2021-release"
+  },
+  "flavor_terms": [
+   "caramel",
+   "almond",
+   "dark fruit",
+   "fig",
+   "tobacco",
+   "cinnamon",
+   "vanilla",
+   "toffee",
+   "oak",
+   "honey"
+  ],
+  "confidence": "high",
+  "notes": "Batch-variable proof; label is 110.6 but critics reviewed 110.3, 109.6 and an unstated proof. Mash bill from Breaking Bourbon."
+ },
+ {
+  "id": "ks-old-grand-dad-old-grand-dad-ksbw",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/old-grand-dad-bourbon",
+    "score": 2.5,
+    "scale": "5",
+    "nose": "Light cinnamon with vanilla, caramel and baking spice; fleeting oak and green apple.",
+    "palate": "Spicy baking-spice and cinnamon base balanced by caramel and light apple.",
+    "finish": "Brown sugar, apricot and oak with lingering light spice.",
+    "summary": "80 proof; solid budget value, though the low proof limits flavor.",
+    "year": 2022
+   },
+   {
+    "source": "The Whiskey Jug",
+    "source_url": "https://thewhiskeyjug.com/bourbon-whiskey/old-grand-dad-80-proof-review/",
+    "score": 76,
+    "scale": "100",
+    "nose": "Raw corn, vanilla and caramel with faint citrus, spice and strawberry; waterlogged wood.",
+    "palate": "Dusty corn and vanilla with caramel and light spice; some astringent wood.",
+    "finish": "Medium, corn-forward with vanilla, spice and wet wood.",
+    "summary": "Light and simple; suggests the Bottled-in-Bond instead.",
+    "year": 2015
+   },
+   {
+    "source": "Thirty One Whiskey",
+    "source_url": "https://www.thirtyonewhiskey.com/whiskey-review-old-grand-dad-80-proof-kentucky-straight-bourbon-whiskey/",
+    "score": 3,
+    "scale": "5",
+    "nose": "Heavy vanilla with caramel and rye bread.",
+    "palate": "Vanilla-forward with peppery spice and hints of toffee; better on ice.",
+    "finish": "Smooth and peppery with lingering spice.",
+    "summary": "Good value; high-rye mash shows in peppery notes, works in cocktails.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "NAS (min. 4 years)",
+   "mash_bill": "63% corn, 27% rye, 10% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.breakingbourbon.com/review/old-grand-dad-bourbon"
+  },
+  "flavor_terms": [
+   "cinnamon",
+   "vanilla",
+   "caramel",
+   "baking spice",
+   "green apple",
+   "brown sugar",
+   "corn",
+   "pepper",
+   "rye bread",
+   "toffee"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site unreachable; no producer notes recorded."
+ },
+ {
+  "id": "ks-jefferson-s-8-yo-ksbw",
+  "producer": {
+   "nose": "Dark fruit, vanilla and green apple.",
+   "palate": "Oak, toasted almond and toffee.",
+   "finish": "Bold, spicy and rich.",
+   "summary": "Jefferson's Reserve, now carrying an 8-year minimum age statement at 96 proof; blended from selected mature barrels.",
+   "source_url": "https://jeffersonsbourbon.com/whiskeys/jeffersons-reserve/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 48,
+   "proof": 96,
+   "age": "8 years minimum",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://jeffersonsbourbon.com/whiskeys/jeffersons-reserve/"
+  },
+  "flavor_terms": [
+   "dark fruit",
+   "vanilla",
+   "green apple",
+   "oak",
+   "toasted almond",
+   "toffee",
+   "spicy"
+  ],
+  "confidence": "medium",
+  "notes": "Identified as Jefferson's Reserve 8 Year. Critic reviews found (Distiller, Thirty One Whiskey) cover the older NAS 90.2-proof Jefferson's Reserve, so not used."
+ },
+ {
+  "id": "ks-hardin-s-creek-ksbw-middle-distillation",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": 54.5,
+   "proof": 109,
+   "age": "8 years",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.onlydrams.app/blog/2026-bourbon-whiskey-release-calendar"
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Likely Hardin's Creek 8 Year 'Middle Distillation Profile' (2026 release calendar lists it at 115 proof, plus TTB-filed 700 mL versions at 109 proof). No producer or critic tasting notes found."
+ },
+ {
+  "id": "ks-jack-daniel-s-10-years-old-tennessee-whiskey",
+  "producer": {
+   "nose": "Cooked apple and caramel with soft oak.",
+   "palate": "Rich molasses, chocolate and barrel spice, coating the mouth.",
+   "finish": "Very long and warm.",
+   "summary": "First age-stated Jack Daniel's in over a century, released in batches since 2021; aged in handmade American white oak barrels.",
+   "source_url": "https://www.jackdaniels.com/en-us/whiskey/jack-daniels-10-year-old-tennessee-whiskey"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/jack-daniels-10-year-tennessee-whiskey-batch-5",
+    "score": 3,
+    "scale": "5",
+    "nose": "Charred oak, light maple candy, baking spice, banana flambé, a hint of clove.",
+    "palate": "Rye and black peppercorn spice, banana, charred oak, dried tobacco, browned butter.",
+    "finish": "Peppery, dry charred oak, leather, tobacco, burnt caramel; noticeably dry.",
+    "summary": "Batch 5, 97 proof; solid but drier and less appealing than Batch 4.",
+    "year": 2026
+   },
+   {
+    "source": "Drinkhacker",
+    "source_url": "https://www.drinkhacker.com/2026/03/30/review-jack-daniels-10-years-old/",
+    "score": null,
+    "scale": null,
+    "nose": "Batch 5: apple pie with cinnamon, clove and ginger.",
+    "palate": "Batch 5: menthol-tinged gingerbread cake, rum raisin and apple butter.",
+    "finish": "Batch 5: sweet with balanced oak and tannin.",
+    "summary": "Covers all batches (all 97 proof); Batch 5 graded A (letter grade) and called the best of the series; earlier batches graded A- to B.",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 48.5,
+   "proof": 97,
+   "age": "10 years",
+   "mash_bill": "80% corn, 12% rye, 8% malted barley",
+   "cask": "American white oak",
+   "region": "Tennessee, USA",
+   "source_url": "https://www.breakingbourbon.com/review/jack-daniels-10-year-tennessee-whiskey-batch-5"
+  },
+  "flavor_terms": [
+   "cooked apple",
+   "caramel",
+   "oak",
+   "molasses",
+   "chocolate",
+   "baking spice",
+   "banana",
+   "black pepper",
+   "tobacco",
+   "cinnamon"
+  ],
+  "confidence": "high",
+  "notes": "Batch of the Kansas bottle unknown; critic notes are for Batch 5 (2026)."
+ }
+]

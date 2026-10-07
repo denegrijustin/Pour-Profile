@@ -1,0 +1,616 @@
+[
+ {
+  "id": "charles-krug-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Decanter (Clive Pursehouse)",
+    "source_url": "https://www.decanter.com/wine-reviews/usa/california/charles-krug-sauvignon-blanc-napa-valley-california-2022-69259/",
+    "score": 90,
+    "scale": "100",
+    "nose": "Steely, with cut grass, green apple, lemon zest and a wet-stone note",
+    "palate": "Crisp and mineral, with peach, nectarine and apricot fruit; lean, angular, flinty",
+    "finish": null,
+    "summary": null,
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [
+   "cut grass",
+   "green apple",
+   "lemon zest",
+   "wet slate",
+   "peach",
+   "nectarine",
+   "apricot",
+   "flinty"
+  ],
+  "confidence": "medium",
+  "notes": "One critic review (2022 vintage, Decanter); no producer notes found. Wine Enthusiast 2023 page was rate limited (429), not read. Decanter page ABV (12%) looked odd; not recorded. Search budget exhausted."
+ },
+ {
+  "id": "freemark-abbey-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer page (2024 vintage) describes a blend from Freemark Abbey, Wilson Ranch, Oakville and Yount Mill vineyards, picked late August, fermented cool in stainless steel plus neutral French oak, aiming to keep acidity and vibrancy. No aroma/palate notes on the page.",
+   "source_url": "https://www.freemarkabbey.com/wine/napa-valley/napa-valley-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Decanter (Clive Pursehouse)",
+    "source_url": "https://www.decanter.com/wine-reviews/usa/california/freemark-abbey-sauvignon-blanc-napa-valley-2022-69261/",
+    "score": 91,
+    "scale": "100",
+    "nose": "Smoky flint, tart green apple and lemon zest",
+    "palate": "Lively, fruit-forward; citrus balanced by flinty minerality",
+    "finish": null,
+    "summary": null,
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc",
+   "cask": "Stainless steel with neutral French oak (2024 vintage per producer)",
+   "region": "Napa Valley",
+   "source_url": "https://www.freemarkabbey.com/wine/napa-valley/napa-valley-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "smoky flint",
+   "green apple",
+   "lemon zest",
+   "citrus",
+   "mineral"
+  ],
+  "confidence": "medium",
+  "notes": "Critic note is 2022 vintage, producer page is 2024 vintage. ABV differs between sources (14.1 vs 14.2); left null. Producer page had no tasting notes. Search budget exhausted."
+ },
+ {
+  "id": "peju-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "elizabeth-spencer-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "long-meadow-ranch-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "sinegal-estate-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "illumination-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "chalk-hill-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "quivira-fig-tree-vineyard-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "capture-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "matthiasson-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "domaine-vacheron-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "alphonse-mellot-la-moussi-re-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "alphonse-mellot-edmond-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "pascal-jolivet-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "henri-bourgeois-les-baronnes-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "henri-bourgeois-jadis-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "domaine-delaporte-sancerre-chavignol",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "domaine-laporte-le-rochoy-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "lucien-crochet-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "fran-ois-crochet-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "fran-ois-cotat-sancerre-les-monts-damn-s",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "pascal-cotat-sancerre-la-grande-c-te",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "domaine-vincent-pinard-floril-ge-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ },
+ {
+  "id": "domaine-vincent-pinard-ch-ne-marchand-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Not researched: WebSearch budget exhausted (200/200) and WebFetch proxy returned HTTP 429 rate limits; no sources opened."
+ }
+]

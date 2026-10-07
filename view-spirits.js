@@ -1,3 +1,4 @@
+import { autoBottlePhotos } from "./image-tools.js";
 import { api } from "./api.js";
 import { el, bottleCardHtml, emptyStateHtml } from "./ui.js";
 import { CATEGORIES, STATUS_TAGS } from "./spirit-taxonomy.js";
@@ -18,7 +19,7 @@ export async function renderSpirits() {
       <button class="filter-chip" data-tab="pours">Pours</button>
     </div>
     <div class="search-bar">
-      <input type="search" id="spiritsSearch" placeholder="Search your spirits…" value="${state.q}">
+      <input type="search" id="spiritsSearch" placeholder="Search all your bottles…" value="${state.q}">
     </div>
     <div class="filter-bar" id="spiritsCategoryFilter">
       <button class="filter-chip${state.category === "" ? " active" : ""}" data-cat="">All</button>
@@ -43,6 +44,7 @@ export async function renderSpirits() {
   document.getElementById("spiritsSort").value = state.sort;
   await loadResults();
   wire();
+  autoBottlePhotos().then(changed=>{ if (changed && view.classList.contains("active") && state.tab === "bottles") loadResults(); });
 }
 
 async function loadResults() {
@@ -103,7 +105,7 @@ function wire() {
     loadResults();
   });
   document.getElementById("spiritsSort").addEventListener("change", (e) => { state.sort = e.target.value; loadResults(); });
-  document.getElementById("spiritsAddBtn").addEventListener("click", () => openBottlePickerSheet());
+  document.getElementById("spiritsAddBtn").addEventListener("click", () => document.dispatchEvent(new CustomEvent("pourprofile:navigate", {detail:{view:"scan"}})));
 }
 
 let debounceTimer;

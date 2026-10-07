@@ -1,0 +1,650 @@
+[
+ {
+  "id": "domaine-fouassier-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "domaine-roger-champault-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "domaine-hippolyte-reverdy-sancerre",
+  "producer": {
+   "nose": "Spring flowers, ripe gooseberry and grapefruit zest, with pineapple, white peach and a mineral undertone.",
+   "palate": "Fresh and fairly full; almond, white peach and citrus minerality, zesty acidity balanced by roundness, melon and apple fruit.",
+   "finish": "Taut acidity, faint honey, lemony mineral aftertaste of medium length with a late pithy bitterness.",
+   "summary": "100% Sauvignon Blanc from Kimmeridgian limestone soils in the Upper Loire.",
+   "source_url": "https://www.blackwellswines.com/products/hippolyte-reverdy-sancerre"
+  },
+  "critics": [
+   {
+    "source": "Ken's Wine Guide",
+    "source_url": "https://www.kenswineguide.com/wine_review/Hippolyte-Reverdy-2019-Sancerre",
+    "score": 92,
+    "scale": "100",
+    "nose": "White peach and soft gooseberry with lime, pretzel and flint hints.",
+    "palate": "Light-plus body, smooth; ginger, gooseberry, honeydew melon, stony minerality, with green tea and white peach.",
+    "finish": "Dry, long, refreshing.",
+    "summary": "Rated Very Good+ (92) for the 2019 vintage.",
+    "year": 2019
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc",
+   "cask": null,
+   "region": "Sancerre, Upper Loire (Kimmeridgian limestone)",
+   "source_url": "https://www.blackwellswines.com/products/hippolyte-reverdy-sancerre"
+  },
+  "flavor_terms": [
+   "gooseberry",
+   "grapefruit zest",
+   "white peach",
+   "melon",
+   "flint",
+   "minerality",
+   "citrus",
+   "almond",
+   "honey",
+   "pineapple"
+  ],
+  "confidence": "medium",
+  "notes": "Producer-style notes come via a retailer page for the 2025 vintage (not the producer site); critic note is for 2019. Input ABV 13 not confirmed by sources. Wine-Searcher aggregate scores (90-91, 2021-2024) quoted on the retailer page not recorded as critic entries."
+ },
+ {
+  "id": "domaine-thomas-fils-sancerre",
+  "producer": {
+   "nose": "Exotic aromas with smoky and licorice touches.",
+   "palate": "Peach and watermelon, citrus zest, chalky minerality.",
+   "finish": "Long and elegant.",
+   "summary": "Importer description of the Sancerre Blanc, a Sauvignon Blanc blend from three terroirs (Caillottes, Grosses Terres, Silex).",
+   "source_url": "https://www.kysela.com/wine/thomas-sancerre-blanc.html"
+  },
+  "critics": [
+   {
+    "source": "Decanter (as cited by Kysela importer page)",
+    "source_url": "https://www.kysela.com/wine/thomas-sancerre-blanc.html",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Described as fresh and grassy with energetic poise; 2019 vintage.",
+    "year": 2019
+   },
+   {
+    "source": "Jeb Dunnuck (as cited by Kysela importer page)",
+    "source_url": "https://www.kysela.com/wine/thomas-sancerre-blanc.html",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Described as nicely textured with obvious minerality; 2017 vintage.",
+    "year": 2017
+   },
+   {
+    "source": "Wine Enthusiast (as cited by Kysela importer page)",
+    "source_url": "https://www.kysela.com/wine/thomas-sancerre-blanc.html",
+    "score": 89,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "2015 vintage score only.",
+    "year": 2015
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "100% Sauvignon Blanc (three terroirs)",
+   "cask": null,
+   "region": "Sancerre",
+   "source_url": "https://www.kysela.com/wine/thomas-sancerre-blanc.html"
+  },
+  "flavor_terms": [
+   "peach",
+   "watermelon",
+   "citrus zest",
+   "chalk",
+   "smoke",
+   "licorice",
+   "grassy"
+  ],
+  "confidence": "medium",
+  "notes": "Single importer page; critic scores are second-hand citations across different vintages (2015-2019), original reviews not opened. Importer page is for \"Thomas Sancerre Blanc\", assumed to be Domaine Thomas & Fils entry-level Sancerre; not independently verified."
+ },
+ {
+  "id": "domaine-de-la-villaudi-re-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "ch-teau-de-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "jean-reverdy-la-reine-blanche-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "baron-de-ladoucette-pouilly-fum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "baron-de-l-pouilly-fum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "didier-dagueneau-silex",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "didier-dagueneau-pur-sang",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "didier-dagueneau-blanc-etc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "jonathan-didier-pabiot-pouilly-fum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "domaine-des-berthiers-pouilly-fum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "ch-teau-de-tracy-pouilly-fum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "domaine-de-ladoucette-pouilly-fum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "patient-cottat-anciennes-vignes-sancerre",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "ch-teau-bonnet-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "ch-teau-carbonnieux-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "pavillon-blanc-du-ch-teau-margaux",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "smith-haut-lafitte-blanc",
+  "producer": {
+   "nose": "Roasted apricot and rich dense citrus, with rosemary and a hint of sage.",
+   "palate": "Medium-bodied with phenolic structure; ripe stone fruit, restrained vibrant acidity.",
+   "finish": "Light mineral note at the end, crisp and persistent.",
+   "summary": "Estate describes its whites as subtly smoky with flint notes.",
+   "source_url": "https://www.smith-haut-lafitte.com/les-vins/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Bordeaux white blend (percentages not given on page)",
+   "cask": null,
+   "region": "Pessac-Léognan",
+   "source_url": "https://www.smith-haut-lafitte.com/les-vins/"
+  },
+  "flavor_terms": [
+   "roasted apricot",
+   "citrus",
+   "rosemary",
+   "sage",
+   "stone fruit",
+   "flint",
+   "mineral"
+  ],
+  "confidence": "medium",
+  "notes": "Producer page only (vintage not pinned; generic Blanc page). No critic note retrieved. ABV not stated; input value unconfirmed."
+ },
+ {
+  "id": "ch-teau-de-fieuzal-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "ch-teau-olivier-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "ch-teau-latour-martillac-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ },
+ {
+  "id": "ch-teau-brown-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "No usable source retrieved: WebSearch session budget was exhausted mid-batch and winemag/wineenthusiast fetches failed with redirect errors; no data filled from memory."
+ }
+]

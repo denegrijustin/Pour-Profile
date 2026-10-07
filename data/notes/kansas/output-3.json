@@ -1,0 +1,1330 @@
+[
+ {
+  "id": "ks-fortaleza-blanco-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Distiller (Amanda Schuster)",
+    "source_url": "https://distiller.com/spirits/fortaleza-blanco-still-strength-tequila",
+    "score": 96,
+    "scale": "100",
+    "nose": "Bright and citrusy, lime and grapefruit with a hint of green pepper.",
+    "palate": "Turns tropical and herbal: pineapple, mint, thyme, oregano.",
+    "finish": "Clean, with earthy dark chocolate and mushroom plus a tangy tangerine note.",
+    "summary": "Expert review of the 92-proof Still Strength blanco.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% agave, Tequila Valley; brick/stone oven cooked, tahona extraction, wood-tank fermentation without fibers; NOM 1493",
+   "cask": "None; double distilled in copper pot stills",
+   "region": "Tequila Valley, Jalisco, Mexico",
+   "source_url": "https://www.agavematchmaker.com/agave_spirits/5902-fortaleza-blanco-still-strength"
+  },
+  "flavor_terms": [
+   "cooked agave",
+   "black pepper",
+   "citrus",
+   "olive",
+   "earth",
+   "lime",
+   "grapefruit",
+   "pineapple",
+   "mint",
+   "dark chocolate"
+  ],
+  "confidence": "medium",
+  "notes": "92 proof/46% identifies this as Fortaleza Blanco Still Strength, not the standard 40% blanco. Producer site is age-gated; no producer notes for the Still Strength found. Flavor terms partly from Agave Matchmaker community aroma tallies."
+ },
+ {
+  "id": "ks-fortaleza-reposado-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Distiller (Omari Wheat)",
+    "source_url": "https://distiller.com/spirits/fortaleza-reposado-tequila",
+    "score": 92,
+    "scale": "100",
+    "nose": "Roasted pear, vanilla, toast and citrus.",
+    "palate": null,
+    "finish": null,
+    "summary": "Expert rating; only the opening of the tasting note was retrievable.",
+    "year": null
+   },
+   {
+    "source": "88 Bamboo (@CharsiuCharlie)",
+    "source_url": "https://88bamboo.co/blogs/tequila-mezcal-reviews/taste-testing-tequila-fortaleza-blanco-reposado",
+    "score": null,
+    "scale": null,
+    "nose": "Mellow but notably sweeter, caster sugar and mild baking spice.",
+    "palate": "Mild baking spices, a spicy root character and light apple and pear fruit.",
+    "finish": "Spicier and a bit fiery with mace and fresh ginger, fading to roasted vegetables.",
+    "summary": "Side-by-side tasting with the 40% blanco.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Reposado; Distiller cites roughly 7 months",
+   "mash_bill": "100% agave, Tequila Valley; stone/brick oven cooked, tahona extraction, open-air wood-tank fermentation; NOM 1493",
+   "cask": "American white oak, used bourbon barrels; copper pot distilled",
+   "region": "Tequila Valley, Jalisco, Mexico",
+   "source_url": "https://www.agavematchmaker.com/agave_spirits/2326-fortaleza-reposado"
+  },
+  "flavor_terms": [
+   "cooked agave",
+   "vanilla",
+   "caramel",
+   "oak",
+   "black pepper",
+   "roasted pear",
+   "baking spice",
+   "ginger",
+   "apple",
+   "citrus"
+  ],
+  "confidence": "medium",
+  "notes": "Standard reposado (not Winter Blend). Producer site age-gated; no producer notes captured. Aging length (~7 months) per Distiller only."
+ },
+ {
+  "id": "ks-g4-blanco-premium-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Tequila Report (Jay Baer)",
+    "source_url": "https://www.tequilareport.com/p/g4-high-proof-blanco-tequila-review",
+    "score": 91,
+    "scale": "100",
+    "nose": "Rather muted for the strength; refined, nearly elegant.",
+    "palate": "House-style black pepper and earth with light citrus and herbal undertones.",
+    "finish": "Cinnamon-led spicy burn typical of overproof bottlings.",
+    "summary": "Called it an excellent blanco and a standout value among overproof tequilas.",
+    "year": 2025
+   },
+   {
+    "source": "The Whiskey Shelf (Alex Wang)",
+    "source_url": "https://www.thewhiskeyshelf.com/g4-blanco-108-proof-tequila-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Lime and agave up front, then simple syrup, minerality, black pepper and lime peel; full without excess heat.",
+    "palate": "Rich simple syrup, toasted lime peel, vegetal agave and minerality, with a custard-like and herbal, rye-ish side.",
+    "finish": "Drier, with lime peel, vegetal notes, syrup sweetness, minerality and grassy dryness.",
+    "summary": "Given the site's 'Top Shelf' rating (not numeric); a must-try verdict.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 54,
+   "proof": 108,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% agave, Los Altos; stone/brick ovens, tahona extraction, open-air stainless-steel fermentation with spring water and rainwater; El Pandillo, NOM 1579, master distiller Felipe Camarena",
+   "cask": "None; copper pot still",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://www.tequilareport.com/p/g4-high-proof-blanco-tequila-review"
+  },
+  "flavor_terms": [
+   "cooked agave",
+   "black pepper",
+   "citrus",
+   "minerality",
+   "lime peel",
+   "simple syrup",
+   "earth",
+   "herbal",
+   "cinnamon",
+   "grassy"
+  ],
+  "confidence": "medium",
+  "notes": "108 proof identifies this as G4 Blanco 108 (High Proof). No producer tasting notes found; facts corroborated by Agave Matchmaker."
+ },
+ {
+  "id": "ks-siete-leguas-blanco-tequila-7",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/siete-leguas-blanco-tequila",
+    "score": 93,
+    "scale": "100",
+    "nose": "Intensely sweet agave with earthy, possibly smoky tones.",
+    "palate": "Rich but not oily; rustic earthiness with some pepper and restrained sweetness.",
+    "finish": null,
+    "summary": "Described as a blanco with real substance.",
+    "year": null
+   },
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/1323/7-siete-leguas-blanco",
+    "score": null,
+    "scale": null,
+    "nose": "Tropical fruit candy, fresh dill, lemon/lime/grapefruit zest, faint yeast, pastry and wet-cement notes.",
+    "palate": "Fresh, fruity and zesty with herbal and clay-like earth, buttery pastry, bright acidity; mid-palate stewed vegetables, cinnamon, green apple, pear.",
+    "finish": "Long and zesty with spiced pear, raw almond and lingering dill.",
+    "summary": "Difford's own tasting notes (2011).",
+    "year": 2011
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% blue Weber agave, Highlands; blend from two distilleries: one mule-drawn tahona with fiber fermentation, the other roller mill; brick-oven cooking at both",
+   "cask": "None; copper pot stills",
+   "region": "Atotonilco El Alto, Jalisco, Mexico",
+   "source_url": "https://www.diffordsguide.com/beer-wine-spirits/1323/7-siete-leguas-blanco"
+  },
+  "flavor_terms": [
+   "sweet agave",
+   "earthy",
+   "pepper",
+   "tropical fruit",
+   "dill",
+   "citrus zest",
+   "green apple",
+   "pear",
+   "cinnamon",
+   "almond"
+  ],
+  "confidence": "medium",
+  "notes": "Standard 40% Siete Leguas Blanco. Producer site page not reachable; still type and town per Distiller. Wine Enthusiast review exists but page failed (redirect loop)."
+ },
+ {
+  "id": "ks-tapatio-blanco-tequila",
+  "producer": {
+   "nose": null,
+   "palate": "Clean citrus and anise with a strong burst of cinnamon.",
+   "finish": "Cooked agave giving way to a lasting white-pepper finish.",
+   "summary": "Official notes from Charbay, the brand's US importer site; blanco rested in stainless steel about 6 months.",
+   "source_url": "https://charbay.com/tapatio-tequila/tapatio-blanco-tequila/"
+  },
+  "critics": [
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/en-au/beer-wine-spirits/18/tapatio-blanco",
+    "score": null,
+    "scale": null,
+    "nose": "Pronounced pepper and spice with faint wet cement and damp hay.",
+    "palate": "Full, lightly toasted, spicy earthiness with charred vegetal notes and cracked black pepper.",
+    "finish": "Sweet cinnamon spice rising into a salty finish.",
+    "summary": "Difford's notes (sampled 2011) on the 38% UK bottling, not the 40% US version.",
+    "year": 2011
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Blanco, rested ~6 months in stainless steel (importer)",
+   "mash_bill": "100% blue Weber agave, Highlands (Los Altos); brick ovens, roller mill and tahona, open-air wood-tank fermentation with fibers; La Alteña, NOM 1139",
+   "cask": "None (stainless steel rest); copper pot still",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://www.agavematchmaker.com/agave_spirits/2384-tapatio-blanco"
+  },
+  "flavor_terms": [
+   "citrus",
+   "anise",
+   "cinnamon",
+   "cooked agave",
+   "white pepper",
+   "black pepper",
+   "earthy",
+   "wet hay",
+   "vegetal",
+   "minerals"
+  ],
+  "confidence": "high",
+  "notes": "Critic note is for the UK 38% ABV bottling of the same blanco (flagged); no critic found for the 40% US bottling. Stainless-steel rest from importer site."
+ },
+ {
+  "id": "ks-el-tesoro-blanco-tequila",
+  "producer": {
+   "nose": "Fresh agave with honey and a hint of green olive.",
+   "palate": "Sweet, balanced by agave, white pepper and subtle green notes.",
+   "finish": "Sweet with touches of white pepper.",
+   "summary": "Unaged, bottled right after distillation to showcase highland agave and minerality; brand cites SFWSC 2022 Double Gold and 96 pts/Chairman's Trophy at Ultimate Spirits Challenge 2022.",
+   "source_url": "https://www.eltesorotequila.com/tequilas/el-tesoro-blanco"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Omari Wheat)",
+    "source_url": "https://distiller.com/spirits/el-tesoro-platinum-tequila",
+    "score": 92,
+    "scale": "100",
+    "nose": "Green-smoothie aromas: cut cabbage, romaine, kiwi, pear, aloe, plus brown butter.",
+    "palate": null,
+    "finish": null,
+    "summary": "Expert rating; only the nose portion of the note was retrievable.",
+    "year": null
+   },
+   {
+    "source": "Agave Spirits+ Journey",
+    "source_url": "https://agavespiritsjourney.com/2024/09/08/review-el-tesoro-blanco-tequila/",
+    "score": null,
+    "scale": null,
+    "nose": "Cooked agave, cinnamon and sweet spice, minerals, light spiced vanilla, vegetal and herbal tones.",
+    "palate": "Cooked agave and sweet spice, white pepper bite, hint of vanilla, some fruit and earthiness.",
+    "finish": null,
+    "summary": "Tasted batch B-009 in 2024; called it a great-value pour neat or mixed.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% estate-grown blue Weber agave; ~3-day brick-oven cook, tahona crushing, juice and fibers fermented and distilled together with no added water; La Alteña, NOM 1139",
+   "cask": "None",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://distiller.com/spirits/el-tesoro-platinum-tequila"
+  },
+  "flavor_terms": [
+   "fresh agave",
+   "honey",
+   "green olive",
+   "white pepper",
+   "cooked agave",
+   "cinnamon",
+   "minerals",
+   "vanilla",
+   "pear",
+   "brown butter"
+  ],
+  "confidence": "high",
+  "notes": "Distiller lists it under the legacy 'Platinum' URL. Producer page gives no ABV; 40% per Distiller."
+ },
+ {
+  "id": "ks-el-tesoro-reposado-tequila",
+  "producer": {
+   "nose": "Smoky oak with fruit, vanilla and dill.",
+   "palate": "Robust oak and agave with smoke and pepper.",
+   "finish": "Pepper-forward with oak.",
+   "summary": "Aged 9-11 months in American oak ex-bourbon barrels for a sweet, smoky profile with vanilla and oak; brand cites SFWSC 2021 Double Gold and 94 pts at Ultimate Spirits Challenge 2021.",
+   "source_url": "https://www.eltesorotequila.com/tequilas/el-tesoro-reposado"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/el-tesoro-reposado-tequila",
+    "score": 91,
+    "scale": "100",
+    "nose": "Mild cinnamon, lime and chocolate with a little char smoke and mint.",
+    "palate": "Lightly sweet with vanilla and some vegetal agave.",
+    "finish": null,
+    "summary": "Expert review.",
+    "year": null
+   },
+   {
+    "source": "Agave Spirits+ Journey",
+    "source_url": "https://agavespiritsjourney.com/2024/09/13/review-el-tesoro-reposado-tequila/",
+    "score": null,
+    "scale": null,
+    "nose": "Cooked agave, cinnamon and baking spice, citrus fruit, vegetal notes, pepper, oak, vanilla, caramel, earth, minerals.",
+    "palate": "Cooked agave sweetness, vanilla, caramel, cinnamon, peppery warmth and an anise-like bitterness; buttery, full texture.",
+    "finish": "Medium length with lingering pepper heat.",
+    "summary": "Tasted batch R-022 in 2024; positive verdict.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "9-11 months",
+   "mash_bill": "100% estate-grown blue Weber agave, La Alteña distillery (NOM 1139)",
+   "cask": "American oak ex-bourbon barrels",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://distiller.com/spirits/el-tesoro-reposado-tequila"
+  },
+  "flavor_terms": [
+   "smoky oak",
+   "vanilla",
+   "dill",
+   "pepper",
+   "cinnamon",
+   "chocolate",
+   "caramel",
+   "cooked agave",
+   "baking spice",
+   "lime"
+  ],
+  "confidence": "high",
+  "notes": "Standard reposado (not single barrel). ABV 40% per Distiller; producer page omits ABV."
+ },
+ {
+  "id": "ks-tequila-ocho-plata-tequila-corralillos",
+  "producer": {
+   "nose": "Cooked agave, citrus, black pepper, earth and grass.",
+   "palate": "Cooked agave, black pepper, mint and tropical fruit; very fresh with a touch of earth.",
+   "finish": "Long, gradual fade; light viscosity.",
+   "summary": "Notes for the 2023 Corralillos Plata as relayed by retailer Hi-Proof (presented as producer notes), not fetched from the Ocho site.",
+   "source_url": "https://www.hiproof.com/products/tequila-ocho-tequila-plata-corralillos"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/tequila-ocho-plata-corralillos-2023",
+    "score": 91,
+    "scale": "100",
+    "nose": "Green herbs and a near-smoky green pepper note.",
+    "palate": "Soft and creamy entry.",
+    "finish": "Lingering, ranging from herbal to earthy to sweet-tart.",
+    "summary": "Called it complex and sip-worthy. 2023 Corralillos release.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (plata)",
+   "mash_bill": "100% blue Weber agave from the single Corralillos estate (~5,100 ft, lowest altitude Ocho has used); overripe agave, slow brick-oven roast, natural-yeast fermentation, double distilled at low temperature; no additives",
+   "cask": "None",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://distiller.com/spirits/tequila-ocho-plata-corralillos-2023"
+  },
+  "flavor_terms": [
+   "cooked agave",
+   "citrus",
+   "black pepper",
+   "earth",
+   "grass",
+   "mint",
+   "tropical fruit",
+   "green herbs",
+   "green pepper",
+   "sweet-tart"
+  ],
+  "confidence": "high",
+  "notes": "Ocho Plata is a single-estate vintage release; input gives no year, so data is for the 2023 Corralillos bottling (the one found). Producer notes are retailer-relayed; official Ocho site blocked."
+ },
+ {
+  "id": "ks-cascahuin-anejo-tequila",
+  "producer": {
+   "nose": "Cooked agave, vanilla, caramel, toasted oak, dried fruit and light baking spice over an earthy base.",
+   "palate": "Roasted agave, butterscotch, cinnamon, cocoa, oak spice, black pepper and light citrus; rich and naturally sweet.",
+   "finish": "Long and warming with oak, caramel, spice, mineral earth and mature agave.",
+   "summary": "Retailer (Old Town Tequila) product description, not confirmed as producer text; describes an additive-free añejo from Destilería Cascahuín, El Arenal.",
+   "source_url": "https://www.oldtowntequila.com/cascahuin-anejo-tequila-750ml/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 44,
+   "proof": 88,
+   "age": null,
+   "mash_bill": "100% blue Weber agave; Destilería Cascahuín, El Arenal; additive-free, traditionally produced",
+   "cask": null,
+   "region": "El Arenal, Jalisco, Mexico",
+   "source_url": "https://www.oldtowntequila.com/cascahuin-anejo-tequila-750ml/"
+  },
+  "flavor_terms": [
+   "cooked agave",
+   "vanilla",
+   "caramel",
+   "toasted oak",
+   "dried fruit",
+   "butterscotch",
+   "cinnamon",
+   "cocoa",
+   "black pepper",
+   "baking spice"
+  ],
+  "confidence": "low",
+  "notes": "44% ABV matches the 'Añejo 44' bottling (distinct from the 40% export añejo and the 55-25 special edition). Only a retailer description found; Agave Matchmaker page blocked by robots; no critic review of this ABV located. Age/barrel not confirmed."
+ },
+ {
+  "id": "ks-arette-artesanal-suave-blanco-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Tequila Report (Kellen Wilson)",
+    "source_url": "https://www.tequilareport.com/p/arette-artesanal-suave-blanco-tequila-review",
+    "score": 91,
+    "scale": "100",
+    "nose": "Strong cooked agave with sweet florals, a hint of petrichor and subtle green pepper.",
+    "palate": "Cooked agave and florals, then green pepper, mint and cracked black pepper warmth.",
+    "finish": "Clean, with lingering sweet florals and mint, closing on black pepper and anise.",
+    "summary": "Enjoyable, traditionally made sipper, though not the best value at its price.",
+    "year": 2025
+   },
+   {
+    "source": "Wine Enthusiast (via K&L Wines)",
+    "source_url": "https://www.klwines.com/products/details/1038292",
+    "score": 90,
+    "scale": "100",
+    "nose": "Zesty and lemony with an unexpected fresh-tomato note.",
+    "palate": "Dried oregano and green pepper.",
+    "finish": "Light, with lemon zest; mouthwatering with moderate warmth.",
+    "summary": "Wine Enthusiast review (April 2014) as quoted on the K&L retailer page.",
+    "year": 2014
+   },
+   {
+    "source": "Long Island Lou Tequila",
+    "source_url": "https://longislandloutequila.com/arettes-top-line-is-solid/",
+    "score": null,
+    "scale": null,
+    "nose": "Light smoke, herbs, lime/orange, mint, anise, spice, vegetal, pear/apple/melon fruit and sugary cooked agave.",
+    "palate": "Thin-to-medium oils, silky; spice, pepper, minerals, vegetal notes, melon and natural sweetness.",
+    "finish": "Pepper, spice and earth; medium length and smooth.",
+    "summary": "Called it a standout blanco, preferred over Arette's Classic blanco.",
+    "year": 2017
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% agave, Tequila Valley; stone/brick ovens, roller mill, open-air cement-tank fermentation; El Llano distillery, NOM 1109",
+   "cask": "None; stainless pot still with copper coil",
+   "region": "Tequila Valley, Jalisco, Mexico",
+   "source_url": "https://www.tequilareport.com/p/arette-artesanal-suave-blanco-tequila-review"
+  },
+  "flavor_terms": [
+   "cooked agave",
+   "floral",
+   "green pepper",
+   "mint",
+   "black pepper",
+   "anise",
+   "lemon",
+   "oregano",
+   "melon",
+   "petrichor"
+  ],
+  "confidence": "medium",
+  "notes": "No producer tasting notes found. Wine Enthusiast score is retailer-relayed."
+ },
+ {
+  "id": "ks-don-julio-blanco-tequila",
+  "producer": {
+   "nose": "Crisp agave with lemon, lime and grapefruit citrus.",
+   "palate": "Light, sweet agave flavor.",
+   "finish": null,
+   "summary": "Unaged, double distilled in pot stills from 100% blue Weber agave; made with water, a proprietary yeast strain and agave; positioned for margaritas or sipping.",
+   "source_url": "https://www.donjulio.com/our-tequilas/don-julio-blanco-tequila"
+  },
+  "critics": [
+   {
+    "source": "The Rum Howler Blog (Chip Dykstra)",
+    "source_url": "https://therumhowlerblog.com/tequila-reviews-2/don-julio-blanco-tequila/",
+    "score": 87.5,
+    "scale": "100",
+    "nose": "Soft pepper, then lemon and lime juice, muted fruity agave and a hint of vanilla.",
+    "palate": "Soft agave and warm citrus with a herbal cucumber/squash-like vegetal character turning to white pepper.",
+    "finish": "Warm agave and citrus, then spicy zest and white pepper; crisp and smooth.",
+    "summary": "Soft and refined; good for shots and cocktails, though agave purists may want more.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% blue Weber agave from Los Altos; stone/brick ovens, roller mill, stainless-steel fermentation; NOM 1449",
+   "cask": "None; double distilled in stainless pot still with copper coil",
+   "region": "Jalisco, Mexico",
+   "source_url": "https://www.agavematchmaker.com/agave_spirits/2389-don-julio-blanco"
+  },
+  "flavor_terms": [
+   "agave",
+   "lemon",
+   "lime",
+   "grapefruit",
+   "citrus",
+   "white pepper",
+   "vanilla",
+   "cucumber",
+   "herbaceous",
+   "black pepper"
+  ],
+  "confidence": "high",
+  "notes": "Producer page summary repeated the palate text for the finish, so producer finish left null. Distiller page only showed a 38% variant without expert notes; not used."
+ },
+ {
+  "id": "ks-don-julio-1942-anejo-tequila",
+  "producer": {
+   "nose": "Rich caramel and chocolate.",
+   "palate": "Warm oak, vanilla and roasted agave.",
+   "finish": "Lingering oak and rich vanilla.",
+   "summary": "Small-batch añejo aged 24+ months in ex-bourbon American white oak; tribute to the year Don Julio González began making tequila.",
+   "source_url": "https://www.donjulio.com/our-tequilas/don-julio-1942-tequila"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/don-julio-1942-tequila",
+    "score": 92,
+    "scale": "100",
+    "nose": "Butterscotch, dried grass and old wood.",
+    "palate": "Full and creamy; white pepper, mint and cinnamon over sweet caramel, with a slick texture that softens the alcohol.",
+    "finish": "Long, evoking churros dipped in Mexican chocolate.",
+    "summary": "Expert review.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "24+ months (producer); Distiller lists 2.5 years",
+   "mash_bill": "100% blue Weber agave from Los Altos; stone/brick ovens, roller mill, stainless-steel fermentation; NOM 1449",
+   "cask": "Ex-bourbon American white oak",
+   "region": "Jalisco, Mexico",
+   "source_url": "https://www.donjulio.com/our-tequilas/don-julio-1942-tequila"
+  },
+  "flavor_terms": [
+   "caramel",
+   "chocolate",
+   "oak",
+   "vanilla",
+   "roasted agave",
+   "butterscotch",
+   "white pepper",
+   "cinnamon",
+   "mint",
+   "dried grass"
+  ],
+  "confidence": "high",
+  "notes": "Agave Matchmaker community reviewers frequently flag additives and find it very sweet; process details from Agave Matchmaker (https://www.agavematchmaker.com/agave_spirits/2500-don-julio-1942)."
+ },
+ {
+  "id": "ks-patron-silver-tequila",
+  "producer": {
+   "nose": "Fresh agave and fruit with citrus.",
+   "palate": "Smooth, with cooked agave, honeydew, lemongrass and citrus peel.",
+   "finish": "Clean and crisp with light pepper.",
+   "summary": "Unaged, made only from blue Weber agave, yeast and water; billed as the first super-premium silver tequila.",
+   "source_url": "https://www.patrontequila.com/products/patron-silver.html"
+  },
+  "critics": [
+   {
+    "source": "The Rum Howler Blog (Chip Dykstra)",
+    "source_url": "https://therumhowlerblog.com/tequila-reviews-2/patron-silver-tequila/",
+    "score": 88,
+    "scale": "100",
+    "nose": "Light funky agave, mild white pepper, lemon and lime zest, gentle smoke.",
+    "palate": "White pepper, lime and funky agave with light smoke, honey sweetness and a trace of mint.",
+    "finish": "Spicy white pepper and hot citrus with faint earthy agave and honey.",
+    "summary": "A classic highland-style blanco, excellent in margaritas; tasted 2012, re-scored 2015.",
+    "year": 2015
+   },
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/patron-silver-tequila",
+    "score": 80,
+    "scale": "100",
+    "nose": "Leans toward powdered sugar with some green agave leaf.",
+    "palate": "Clean but sharp, slightly sweet, not very plush.",
+    "finish": null,
+    "summary": "Expert review.",
+    "year": null
+   },
+   {
+    "source": "Master of Malt",
+    "source_url": "https://www.masterofmalt.com/tequila/patron-silver/",
+    "score": null,
+    "scale": null,
+    "nose": "Nearly earthy with soft spice and bright zesty citrus.",
+    "palate": "Dark sugar, hints of butterscotch, nutmeg, cedar and pepper.",
+    "finish": "White pepper and agave.",
+    "summary": "Retailer's in-house tasting note (UK 70cl, 40%).",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% blue Weber agave from Los Altos; slow oven-roasted, half tahona and half roller-mill crushed, wooden-vat fermentation",
+   "cask": "None",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://distiller.com/spirits/patron-silver-tequila"
+  },
+  "flavor_terms": [
+   "agave",
+   "citrus",
+   "honeydew",
+   "lemongrass",
+   "white pepper",
+   "lime zest",
+   "honey",
+   "powdered sugar",
+   "butterscotch",
+   "mint"
+  ],
+  "confidence": "high",
+  "notes": "Distillation count conflicts between sources (Rum Howler relays twice-distilled copper pot; Master of Malt says triple-distilled); omitted from facts."
+ },
+ {
+  "id": "ks-casamigos-reposado-tequila",
+  "producer": {
+   "nose": "Caramel with hints of cocoa.",
+   "palate": "Dried fruit and spicy oak with a touch of sweet agave.",
+   "finish": "Medium to long and smooth.",
+   "summary": "Slow roasted, double distilled, rested at least six months in American white oak for a silky caramel-cocoa-oak profile.",
+   "source_url": "https://www.casamigos.com/en-us/our-tequilas/reposado"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Stephanie Moreno)",
+    "source_url": "https://distiller.com/spirits/casamigos-reposado-tequila",
+    "score": 92,
+    "scale": "100",
+    "nose": "Light smoky char and peanut shell, vanilla-maple and spiced barrel, with lively agave.",
+    "palate": "Deep spice with tobacco and leather; sweet and rich.",
+    "finish": "Pepper and bitter notes, ending on the sweet side.",
+    "summary": "Versatile reposado for neat, rocks or cocktails.",
+    "year": null
+   },
+   {
+    "source": "12x75 (Vim)",
+    "source_url": "https://www.12x75.com/casamigos-tequila-reviews/",
+    "score": null,
+    "scale": null,
+    "nose": "Cinnamon and nutmeg over caramel with persistent vanilla.",
+    "palate": "Caramel, cocoa and soft spice; smooth but very sweet.",
+    "finish": "Medium and soft with an odd cooling mint note, little refinement after the sweetness fades.",
+    "summary": "Best balanced of the Casamigos range but still dessert-sweet.",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "At least 6 months (producer); Distiller says 7 months",
+   "mash_bill": "100% agave from the Jalisco Highlands; slow roasted, double distilled",
+   "cask": "American white oak (Distiller: reconditioned whiskey barrels)",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://www.casamigos.com/en-us/our-tequilas/reposado"
+  },
+  "flavor_terms": [
+   "caramel",
+   "cocoa",
+   "dried fruit",
+   "spicy oak",
+   "sweet agave",
+   "vanilla",
+   "maple",
+   "tobacco",
+   "leather",
+   "cinnamon"
+  ],
+  "confidence": "high",
+  "notes": "Aging length differs: producer says 6 months, Distiller 7 months."
+ },
+ {
+  "id": "ks-clase-azul-reposado-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Distiller (Brock Schulte)",
+    "source_url": "https://distiller.com/spirits/clase-azul-reposado-tequila",
+    "score": 97,
+    "scale": "100",
+    "nose": "Very subtle and floral: jasmine, apple cider, honey, cinnamon.",
+    "palate": null,
+    "finish": null,
+    "summary": "Says everything in the plata is amplified in the reposado; only the opening of the note was retrievable.",
+    "year": null
+   },
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/622/clase-azul-reposado",
+    "score": null,
+    "scale": null,
+    "nose": "Lightly smoked fatty bacon with a hint of cigar box.",
+    "palate": "Sweet, with boiled-sweet fruit, eucalyptus and smoky vanilla cedar spice.",
+    "finish": "Smooth, caramel with eucalyptus and light cinnamon.",
+    "summary": "Difford's own notes, sampled 2010.",
+    "year": 2010
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Minimum 8 months",
+   "mash_bill": "100% agave; Casa Tradición, NOM 1416",
+   "cask": "Second-use oak (Difford's: mix of ex-bourbon, cognac and sherry casks)",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://www.diffordsguide.com/beer-wine-spirits/622/clase-azul-reposado"
+  },
+  "flavor_terms": [
+   "jasmine",
+   "apple cider",
+   "honey",
+   "cinnamon",
+   "smoked bacon",
+   "cigar box",
+   "eucalyptus",
+   "vanilla",
+   "cedar",
+   "caramel"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site is age-gated; no producer notes captured. Difford's notes are from 2010 and may predate formula changes."
+ },
+ {
+  "id": "ks-herradura-reposado-tequila",
+  "producer": {
+   "nose": "Herbal agave, warm wood and hints of vanilla.",
+   "palate": "Roasted agave balanced by a hint of anise and dried fruit.",
+   "finish": "Smooth butterscotch with an autumn-spice aftertaste.",
+   "summary": "Bright amber; aged 11 months in charred American white oak, well beyond the reposado minimum.",
+   "source_url": "https://www.herradura.com/blog/product/reposado/"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Distiller Staff)",
+    "source_url": "https://distiller.com/spirits/herradura-reposado-tequila",
+    "score": 89,
+    "scale": "100",
+    "nose": "Classic agave, vanilla and caramel with some alcohol bite, light orange peel and cedar.",
+    "palate": "Medium-bodied, lightly coating; mixed spice, light oak, agave, vanilla and a little earth.",
+    "finish": "Light, with baking spice and vanilla, ending on agave.",
+    "summary": "Expert review.",
+    "year": null
+   },
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/1119/herradura-reposado-tequila",
+    "score": null,
+    "scale": null,
+    "nose": "Cider, boiled sweets, cinnamon, toffee apple, vanilla, marmalade and a white-wine-vinegar note.",
+    "palate": "Full, rich in caramel and vanilla, with dark chocolate, almond, smoky cinnamon and black pepper.",
+    "finish": "Spicy, oily, slightly milky walnut.",
+    "summary": "Difford's own notes, sampled before May 2011.",
+    "year": 2011
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "11 months",
+   "mash_bill": "100% blue Weber agave; clay-oven roasted, wild-yeast fermentation (Distiller); Casa Herradura, NOM 1119",
+   "cask": "Charred American white oak",
+   "region": "Tequila Valley, Jalisco, Mexico",
+   "source_url": "https://www.herradura.com/blog/product/reposado/"
+  },
+  "flavor_terms": [
+   "herbal",
+   "agave",
+   "vanilla",
+   "anise",
+   "dried fruit",
+   "butterscotch",
+   "caramel",
+   "orange peel",
+   "cedar",
+   "cinnamon"
+  ],
+  "confidence": "high",
+  "notes": "Process details (clay ovens, wild yeast) from Distiller; NOM from Difford's."
+ },
+ {
+  "id": "ks-espolon-blanco-tequila",
+  "producer": {
+   "nose": "Sweet agave, tropical fruit and lemon zest.",
+   "palate": "Soft, light-to-medium body with a hint of pepper.",
+   "finish": "Vanilla bean and grilled pineapple; clean.",
+   "summary": "Unaged blanco from 100% blue Weber agave.",
+   "source_url": "https://www.espolontequila.com/en-us/our-tequilas/tequila-blanco/"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Duncan McRoberts)",
+    "source_url": "https://distiller.com/spirits/espolon-blanco-tequila",
+    "score": 80,
+    "scale": "100",
+    "nose": "Bright cayenne and terra-cotta notes.",
+    "palate": "Lean, slightly fruity and mellow; light-bodied, sweet and zesty, no brininess.",
+    "finish": null,
+    "summary": "Pleasant and smooth, lacking intensity, but a good value.",
+    "year": null
+   },
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/30/espolon-blanco",
+    "score": null,
+    "scale": null,
+    "nose": "Salty and herbal with wet cement, cracked white pepper, faint chocolate and passion fruit.",
+    "palate": "Faintly sweet chocolaty agave, vanilla, cracked black pepper, light herbs, faint overripe pineapple.",
+    "finish": "Light chocolaty agave with lingering pepper.",
+    "summary": "Difford's own notes, sampled 2014 (lot produced 2013).",
+    "year": 2014
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% blue Weber agave; Destiladora San Nicolás, NOM 1440",
+   "cask": "None",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://www.diffordsguide.com/beer-wine-spirits/30/espolon-blanco"
+  },
+  "flavor_terms": [
+   "sweet agave",
+   "tropical fruit",
+   "lemon zest",
+   "pepper",
+   "vanilla",
+   "grilled pineapple",
+   "cayenne",
+   "herbal",
+   "chocolate",
+   "passion fruit"
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "id": "ks-cimarron-blanco-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Tequila Report (Kellen Wilson)",
+    "source_url": "https://www.tequilareport.com/p/cimarron-blanco-tequila-review",
+    "score": 84,
+    "scale": "100",
+    "nose": "Cooked agave, olive brine, light fruit, green pepper.",
+    "palate": "Cooked agave into lactic fruit and olive brine with lemongrass and anise hints.",
+    "finish": "Lingering olive and pepper with a light floral sweetness.",
+    "summary": "Bold, somewhat polarizing value blanco that shines in cocktails.",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% blue Weber agave; low-pressure autoclave, screw and roller mill, stainless-steel fermentation; Tequileña, NOM 1146",
+   "cask": "None; column still",
+   "region": "Jalisco, Mexico",
+   "source_url": "https://www.tequilareport.com/p/cimarron-blanco-tequila-review"
+  },
+  "flavor_terms": [
+   "cooked agave",
+   "olive brine",
+   "green pepper",
+   "lactic",
+   "lemongrass",
+   "anise",
+   "floral",
+   "light fruit"
+  ],
+  "confidence": "medium",
+  "notes": "No producer notes found. Sources disagree on location: Tequila Report lists Los Valles; Distiller says estate-grown agave, Los Altos, with water-free crushing and no additives, so region kept generic."
+ },
+ {
+  "id": "ks-lalo-blanco-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Thirty One Whiskey (Nick Leghorn)",
+    "source_url": "https://www.thirtyonewhiskey.com/review-lalo-blanco-tequila/",
+    "score": 4,
+    "scale": "5",
+    "nose": "Warmer than most blancos; herbal agave with lemon and black pepper.",
+    "palate": "Lemon first, then agave sweetness, grassy botanicals and black pepper.",
+    "finish": "Lemon citrus with a slight sour edge.",
+    "summary": "Smooth, sippable blanco the reviewer compared favorably with Casamigos.",
+    "year": 2023
+   },
+   {
+    "source": "Mezcalistas (Tess Rose Lampert)",
+    "source_url": "https://www.mezcalistas.com/lalo-tequila-blanco-tasting-notes/",
+    "score": null,
+    "scale": null,
+    "nose": "Clean, green and fresh with fruit, florals and yellow bell pepper.",
+    "palate": "Soft entry; lily-like florals, airy freshness, crisp texture with light floral and citrus.",
+    "finish": "Juicy; an easy all-purpose tequila.",
+    "summary": "2026 tasting notes.",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% blue Weber agave from Los Altos; brick-oven roast 20-32 hours, roller mill, Champagne-yeast fermentation in stainless steel; NOM 1468 (Arandas); maestro Eduardo 'Lalo' González",
+   "cask": "None; double distilled in copper pot",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://www.agavematchmaker.com/agave_spirits/6681-lalo-tequila-blanco"
+  },
+  "flavor_terms": [
+   "herbal agave",
+   "lemon",
+   "black pepper",
+   "grassy",
+   "floral",
+   "citrus",
+   "bell pepper",
+   "cooked agave"
+  ],
+  "confidence": "medium",
+  "notes": "No producer tasting notes found. Roast duration from Thirty One Whiskey; NOM/process from Agave Matchmaker and Mezcalistas."
+ },
+ {
+  "id": "ks-teremana-reposado-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Drinkhacker",
+    "source_url": "https://www.drinkhacker.com/2026/07/30/review-teremana-tequila-complete-lineup-updated-2026/",
+    "score": null,
+    "scale": null,
+    "nose": "Vegetal funk tamed by oak; light brown sugar, butterscotch, white pepper and subtle lime zest.",
+    "palate": "Measured wood-driven sweetness with silky caramelized sugar and hints of citrus.",
+    "finish": "Warm and lingering, cracked pepper and agave syrup.",
+    "summary": "Letter grade B in the 2026 update (B- in 2020); notes above are from the 2026 retasting.",
+    "year": 2026
+   },
+   {
+    "source": "Thirty One Whiskey (Nick Leghorn)",
+    "source_url": "https://www.thirtyonewhiskey.com/review-teremana-reposado-tequila/",
+    "score": 4,
+    "scale": "5",
+    "nose": "Vanilla, caramel and brown sugar over herbal agave, black pepper and lemon.",
+    "palate": "Enough brown sugar and vanilla without masking the rest; smoother than the blanco.",
+    "finish": "On ice mostly herbal agave and citrus; balances well in a margarita.",
+    "summary": "A solid, good-value reposado with a light barrel influence.",
+    "year": 2021
+   },
+   {
+    "source": "Distiller (Jake Emen)",
+    "source_url": "https://distiller.com/spirits/teremana-tequila-reposado",
+    "score": 80,
+    "scale": "100",
+    "nose": "Toffee over herbal hay, clover honey and jasmine.",
+    "palate": null,
+    "finish": null,
+    "summary": "Expert rating; only the opening of the note was retrievable.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "2 to 12 months",
+   "mash_bill": "Blue Weber agave from the Jalisco Highlands; brick ovens ~3 days, open-tank fermentation",
+   "cask": "Ex-bourbon barrels; copper pot distilled",
+   "region": "Los Altos, Jalisco, Mexico",
+   "source_url": "https://distiller.com/spirits/teremana-tequila-reposado"
+  },
+  "flavor_terms": [
+   "brown sugar",
+   "butterscotch",
+   "caramel",
+   "vanilla",
+   "white pepper",
+   "lime zest",
+   "herbal agave",
+   "toffee",
+   "honey",
+   "agave syrup"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site product page not reachable; no producer notes captured."
+ },
+ {
+  "id": "ks-codigo-1530-rosa-blanco-tequila",
+  "producer": {
+   "nose": "Red wine.",
+   "palate": "Bright agave.",
+   "finish": "Bright and lightly floral.",
+   "summary": "Rose-pink blanco rested one month in uncharred French white oak ex-Napa Cabernet barrels; 100% lowlands agave, single NOM, no added sweeteners, flavoring or color.",
+   "source_url": "https://codigo1530.com/en-us/products/codigo-1530-rosa-blanco-tequila/"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Jack Robertiello)",
+    "source_url": "https://distiller.com/spirits/codigo-1530-rosa-tequila",
+    "score": 91,
+    "scale": "100",
+    "nose": "Valley-style aromatics: green olive, pickle brine, green beans.",
+    "palate": "Same savory notes carry through with slight tannic bite and fruit.",
+    "finish": null,
+    "summary": "Expert review.",
+    "year": null
+   },
+   {
+    "source": "Bourbon Banter (Brent Joseph)",
+    "source_url": "https://www.bourbonbanter.com/codigo-1530-tequila-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Like the blanco but much more intense.",
+    "palate": "Very smooth, flavors more muted than the blanco.",
+    "finish": null,
+    "summary": "Good entry point for tequila newcomers.",
+    "year": 2018
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Rested 1 month",
+   "mash_bill": "100% lowland (Tequila Valley) agave, single NOM; Distiller lists Amatitán",
+   "cask": "Uncharred French white oak ex-Napa Valley Cabernet Sauvignon barrels",
+   "region": "Amatitán, Jalisco, Mexico",
+   "source_url": "https://distiller.com/spirits/codigo-1530-rosa-tequila"
+  },
+  "flavor_terms": [
+   "red wine",
+   "bright agave",
+   "floral",
+   "green olive",
+   "pickle brine",
+   "green beans",
+   "tannic",
+   "fruity"
+  ],
+  "confidence": "high",
+  "notes": "Producer page did not state ABV; 40% per Distiller and Difford's."
+ },
+ {
+  "id": "ks-fuenteseca-cosecha-blanco-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer quote relayed by retailer Old Town Tequila: the high-elevation La Tuna de Arriba agave gave a jammier, fruit-forward tequila recalling earlier vintages; retailer adds fruit with petrichor-like minerality.",
+   "source_url": "https://www.oldtowntequila.com/fuenteseca-cosecha-tequila-blanco-2020/"
+  },
+  "critics": [
+   {
+    "source": "Tequila Report (Lauren Castano)",
+    "source_url": "https://www.tequilareport.com/p/fuenteseca-cosecha-2020-la-tuna-de-arriba-tequila-review",
+    "score": 95,
+    "scale": "100",
+    "nose": "Pronounced brine with subtle savory notes.",
+    "palate": "Builds slowly: tobacco, black pepper undertones, creamy tropical fruit, plenty of cooked agave.",
+    "finish": "Where it opens up; gentle lingering heat on the palate rather than the throat.",
+    "summary": "Worth the price; a special bottle to seek out.",
+    "year": 2026
+   }
+  ],
+  "facts": {
+   "abv": 45.7,
+   "proof": 91.4,
+   "age": "Rested several years in stainless steel (Tequila Report)",
+   "mash_bill": "100% agave from La Tuna de Arriba, San Ignacio (~5,000 ft, near Cerro Gordo, north of Arandas); low-pressure autoclave, roller and screw mill, open-air stainless fermentation; Tequileña, NOM 1146",
+   "cask": "None (stainless steel rest); copper pot still",
+   "region": "Los Altos, Jalisco, Mexico (agave origin)",
+   "source_url": "https://www.tequilareport.com/p/fuenteseca-cosecha-2020-la-tuna-de-arriba-tequila-review"
+  },
+  "flavor_terms": [
+   "brine",
+   "savory",
+   "tobacco",
+   "black pepper",
+   "tropical fruit",
+   "cooked agave",
+   "jammy",
+   "fruit-forward",
+   "minerality",
+   "citrus"
+  ],
+  "confidence": "high",
+  "notes": "Matched to Cosecha 2020 'La Tuna de Arriba' at 45.7% (input vintage 2020 and ABV agree). Producer content is a one-line retailer-relayed quote, not full tasting notes."
+ },
+ {
+  "id": "ks-cazcanes-anejo-tequila-no-7",
+  "producer": {
+   "nose": "Crisp apple, almond cream, maple, toffee, vanilla, citrus, cherry, cigar box, nutmeg, anise and chocolate.",
+   "palate": "Warm spice and vanilla with sweet coconut undertones.",
+   "finish": "Long and lush: soft oak, baking spice, vanilla, dark chocolate and deep agave.",
+   "summary": "Blend of barrels aged from one to over two years ('aged to taste, rather than time') in reworked, recharred used American oak; organic and kosher.",
+   "source_url": "https://cazcanes.com/products/no-8"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": "1 to 2+ years (blend)",
+   "mash_bill": "100% agave; 24-hour low-pressure autoclave, four-pass roller mill, stainless-steel fermentation with proprietary yeast, Navichi volcanic spring water",
+   "cask": "Used American oak, reworked and recharred; double distilled in stainless pots with copper coils",
+   "region": null,
+   "source_url": "https://cazcanes.com/products/no-8"
+  },
+  "flavor_terms": [
+   "apple",
+   "almond",
+   "maple",
+   "toffee",
+   "vanilla",
+   "cherry",
+   "cigar box",
+   "coconut",
+   "baking spice",
+   "dark chocolate"
+  ],
+  "confidence": "medium",
+  "notes": "No critic review of the No. 7 Añejo found (only podcast/retail). Producer page omits ABV; input lists 40%. Retailer Sip Tequila gives NOM 1614, Amatitán, and different notes it attributes to the producer (barrel spice, wet earth, raw mosto); not used. Producer URL slug reads 'no-8' but page is the No. 7 Añejo."
+ },
+ {
+  "id": "ks-siembra-valles-blanco-tequila",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Distiller (Amanda Schuster)",
+    "source_url": "https://distiller.com/spirits/siembra-valles-blanco-tequila",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": "Fresh yet rich, soft velvety weight, opening with tart vegetal flavors.",
+    "finish": null,
+    "summary": "Expert rating; only the opening of the note was retrievable.",
+    "year": null
+   },
+   {
+    "source": "K&L Wines (staff)",
+    "source_url": "https://www.klwines.com/products/details/1197889",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Round, fruity and plump; sweet agave, creamy roasted flavor, balancing pepper.",
+    "finish": null,
+    "summary": "Retailer staff note, not an independent publication.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (blanco)",
+   "mash_bill": "100% ~7-year-old lowland (Valles) agave, single estate; slow-roasted up to 72 hours, roller mill, fermentation with fibers (mampostería and stainless tanks per Distiller); Destilería Cascahuín, NOM 1123; created by David Suro",
+   "cask": "None; distilled first in stainless pot with copper coil, then in small copper pot stills",
+   "region": "Tequila Valley, Jalisco, Mexico",
+   "source_url": "https://distiller.com/spirits/siembra-valles-blanco-tequila"
+  },
+  "flavor_terms": [
+   "tart",
+   "vegetal",
+   "sweet agave",
+   "roasted",
+   "pepper",
+   "fruity",
+   "cooked agave",
+   "citrus",
+   "mineral"
+  ],
+  "confidence": "medium",
+  "notes": "Standard 40% blanco (not High Proof). No producer tasting notes found; NOM/agave age from Agave Matchmaker and K&L."
+ },
+ {
+  "id": "ks-del-maguey-vida-de-muertos-single-village-mezcal",
+  "producer": {
+   "nose": "Tropical fruit with hints of warming spice.",
+   "palate": "Creamy, with floral notes, green herbs and poblano pepper.",
+   "finish": "Long and complex.",
+   "summary": "From a ReserveBar (retailer) blog article by Jordhan Woods; likely brand-supplied but not confirmed as producer text. Twice distilled, limited center cut, mature espadín.",
+   "source_url": "https://www.reservebar.com/blogs/spirits-explained/celebrate-dia-de-los-muertos-with-del-maguey-vida-de-muertos"
+  },
+  "critics": [
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/7860/del-maguey-vida-de-muertos",
+    "score": null,
+    "scale": null,
+    "nose": "Medicinal smoked wood with basil, ancho pepper and char-grilled pineapple.",
+    "palate": "Herbal, salty and smoky; cracked black pepper, mild chili, roasted pineapple, blood orange.",
+    "finish": "Salty, smoky, gently spicy with roasted pineapple and sage.",
+    "summary": "Difford's own notes (sampled 2024); found it fuller and smokier than the original Vida.",
+    "year": 2024
+   },
+   {
+    "source": "Mezcalistas (Susan Coss)",
+    "source_url": "https://www.mezcalistas.com/introducing-vida-de-muertos-from-del-maguey/",
+    "score": null,
+    "scale": null,
+    "nose": "More pronounced roasted and smoked-wood aromatics than the 42% Vida.",
+    "palate": null,
+    "finish": null,
+    "summary": "2021 launch write-up; noted it gives more balance in cocktails such as a Paloma.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": "Unaged (joven)",
+   "mash_bill": "100% espadín (A. angustifolia), 7-8 years; San Luis del Río; roasted 3-8 days with mesquite and other woods, 8-10 day fermentation in 1,400 L tinas; mezcaleros Paciano Cruz Nolasco and Marcos Cruz Mendez",
+   "cask": "None; twice distilled in a 350 L copper still",
+   "region": "San Luis del Río, Valles Centrales, Oaxaca, Mexico",
+   "source_url": "https://www.diffordsguide.com/beer-wine-spirits/7860/del-maguey-vida-de-muertos"
+  },
+  "flavor_terms": [
+   "smoke",
+   "tropical fruit",
+   "poblano",
+   "green herbs",
+   "floral",
+   "roasted pineapple",
+   "black pepper",
+   "blood orange",
+   "sage",
+   "orange peel"
+  ],
+  "confidence": "medium",
+  "notes": "Input lists 80 proof/40%, but every source gives 45% (90 proof) for Vida de Muertos; facts use 45%. Producer site page not reachable; producer fields are retailer-relayed."
+ }
+]

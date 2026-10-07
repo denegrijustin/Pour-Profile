@@ -1,3 +1,24 @@
+# Pour Profile — Lady and JDAD
+
+Track bourbon, wine, tequila, rum and scotch with a personal, persistent pour profile for Lady or JDAD. Every pour has an overall 0–10 rating and ten category-specific sensory questions. Each question records an observed intensity (0–10) and enjoyment (1–5); skipped questions stay unknown. Select the variety/style to strengthen matching within the same type.
+
+The Profile tab shows category counts, average ratings and enjoyed flavor levels across all categories. Discover ranks the reference catalog using the selected person's actual preferences. Photo recommendations identify up to 30 readable bottles in a single-bottle or shelf photo, then rank them against that person's taste evidence. Same-category evidence is stronger than shared flavor carryover from other categories; disliked intensities reduce matches. Unknown flavors remain unscored. Photos and estimated bottle descriptors never become tasting answers automatically.
+
+## Deployment of this upgrade
+
+1. Back up the existing D1 database using Cloudflare D1 Time Travel/export.
+2. Apply **only** `migrations/0010_full_pour_profiles.sql` to the existing database. It preserves profile IDs, tastings, statuses and wine preferences. JDAD keeps profile 1; Lady keeps profile 2. Old `spirits`, `wine` and `justin` client values are mapped to their corresponding person.
+3. Set the existing Worker's `OPENAI_API_KEY` secret to enable photo analysis. This key is server-side only. Image analysis uses the OpenAI Responses API with `store: false`; images are not persisted in D1/R2 by this feature. Photos require internet connectivity and can be sent to OpenAI when requested from Discover.
+4. Run `npm install`, `npm test`, `npm run build`, then `npx wrangler deploy`. The GitHub-connected production build can deploy the code after the migration is applied.
+
+Offline tasting queues retain the original person and request ID, so switching profiles cannot change attribution and retries do not duplicate a saved pour. Existing questionnaires are stored with their version and visible in the bottle timeline and pour history. Unknown profile slugs and attempts to edit another person's tasting are rejected. The person switcher is for this shared household app; it is not an authentication system.
+
+Tests include database migration preservation, five-category persistence, person isolation, retry deduplication, cross-category scoring, invalid sensory data, and mocked multi-bottle photo analysis. A real photo smoke test additionally requires the production AI secret and a bottle/shelf photo.
+
+---
+
+The original architecture and historical notes follow. Their earlier family-based profile descriptions have been superseded by this upgrade.
+
 # Pour Decisions
 
 A personal bourbon and spirits tracker: log every pour, learn your palate, and get

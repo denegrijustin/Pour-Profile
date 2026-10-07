@@ -1,0 +1,1124 @@
+[
+ {
+  "id": "woodford-reserve-master-s-collection",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Master's Collection is an annual limited series with a different expression each year; no single release identified, so no notes attached. Specify the release year to research."
+ },
+ {
+  "id": "wild-turkey-master-s-keep",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Master's Keep is a series of distinct limited releases (age/finish/proof vary); input does not identify which release, so nothing matched."
+ },
+ {
+  "id": "little-book",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Little Book is an annual 'Chapter' series of blends with varying proof; input spec (NAS, 90 proof) does not match a specific chapter. Specify the chapter to research."
+ },
+ {
+  "id": "high-west-cask-collection-bourbon",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Search shows Cask Collection is a series of bourbons with different finishes (Cabernet, Chardonnay, Barbados rum, red blend, etc.); input does not name the finish, so no single expression matched."
+ },
+ {
+  "id": "new-riff-bottled-in-bond-bourbon",
+  "producer": {
+   "nose": "Butterscotch rounding out into fresh oak, with touches of vanilla and rye spice.",
+   "palate": "Broad, full mouthfeel; a sweeter vanilla note precedes rye spices (clove, cinnamon, mint, dark berry) building into the finish.",
+   "finish": "Long and rye-driven, with bramble red and black fruit, white pepper and clove.",
+   "summary": "Bottled-in-bond, non-chill-filtered bourbon from a high-rye mash, aged in toasted and charred new oak.",
+   "source_url": "https://newriffdistilling.com/spirits/new-riff-bottled-in-bond-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Whiskey Consensus (Eric)",
+    "source_url": "https://whiskeyconsensus.com/new-riff-bottled-in-bond-bourbon-review/",
+    "score": 8.2,
+    "scale": "10",
+    "nose": null,
+    "palate": "Cinnamon, raisin, caramel, toasted bread, orange peel, toffee and a vanilla cream pie note.",
+    "finish": "Longer than expected, with musty oak and licorice.",
+    "summary": "Rated 'Very Good'; framed as the distillery's successful move from sourced whiskey to its own distillate.",
+    "year": null
+   },
+   {
+    "source": "The Whiskey Ramble (Xenoraiser)",
+    "source_url": "https://thewhiskeyramble.com/2021/10/01/new-riff-bottled-in-bond-bourbon-scoresheet-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Plenty of caramel and cherry with orange accents; prickly rye shows up over time.",
+    "palate": "Moderate body; balanced pepper, grass, caramel, orange, vanilla and clove.",
+    "finish": "Lengthy; caramel, orange, spice and rickhouse oak.",
+    "summary": "Reviewer felt it drinks older than its age and is worth trying around $40; no numeric score given.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "At least 4 years (bottled in bond)",
+   "mash_bill": "65% corn / 30% rye / 5% malted barley",
+   "cask": "Toasted and charred new oak (53-gallon)",
+   "region": "Kentucky, USA",
+   "source_url": "https://newriffdistilling.com/spirits/new-riff-bottled-in-bond-bourbon/"
+  },
+  "flavor_terms": [
+   "butterscotch",
+   "vanilla",
+   "rye spice",
+   "clove",
+   "cinnamon",
+   "caramel",
+   "orange peel",
+   "toffee",
+   "white pepper",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Mash bill confirmed by producer page and Whiskey Consensus."
+ },
+ {
+  "id": "new-riff-rye",
+  "producer": {
+   "nose": "Spicy and detailed: mint, black pepper and vanilla with hints of orange and oak.",
+   "palate": "Cinnamon spice, vanilla and sweet toffee building to a bold mouthfeel of rye spice, caramel and toasted oak.",
+   "finish": "Bold rye spice with vanilla buttercream and lingering brown sugar; a mineral, grassy rye tone fades slowly.",
+   "summary": "Bottled-in-bond, non-chill-filtered Kentucky straight rye.",
+   "source_url": "https://www.newriffdistilling.com/spirits/kentucky-straight-rye-whiskey/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/new-riff-kentucky-straight-rye",
+    "score": null,
+    "scale": null,
+    "nose": "Unexpectedly smoky: charred oak, flamed orange peel and oats with vanilla and burnt caramel.",
+    "palate": "Light, silky body; orange zest, black pepper, tobacco leaf, honey, vanilla and waves of rye spice.",
+    "finish": "Hot and fiery with lingering peppery rye; shows some youth.",
+    "summary": "Solid first rye from New Riff; finish called the weakest part. Rated 3 on the site's scale (scale not captured, so score left null).",
+    "year": null
+   },
+   {
+    "source": "The Whisky Study (Chris Ellis)",
+    "source_url": "https://thewhiskystudy.com/ryereviews/new-riff-bottled-in-bond-rye-review",
+    "score": 88,
+    "scale": "100",
+    "nose": "Lively: honeysuckle, toffee, green apple, pear and toasted crème brûlée sugar over herbal and floral tones.",
+    "palate": "Minty and herbaceous up front, moving to cocoa, Angostura bitters, chocolate orange, earthy rye spice and clove; lighter body.",
+    "finish": "Medium length; pine, bitter chocolate, toasted wood and rye spice with more char.",
+    "summary": null,
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "At least 4 years (bottled in bond)",
+   "mash_bill": "95% rye / 5% malted rye",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.newriffdistilling.com/spirits/kentucky-straight-rye-whiskey/"
+  },
+  "flavor_terms": [
+   "mint",
+   "black pepper",
+   "vanilla",
+   "toffee",
+   "rye spice",
+   "caramel",
+   "orange zest",
+   "tobacco",
+   "honey",
+   "bitter chocolate"
+  ],
+  "confidence": "high",
+  "notes": "Mash bill per producer and Breaking Bourbon (The Whisky Study lists 5% malted barley instead)."
+ },
+ {
+  "id": "new-riff-malted-rye",
+  "producer": {
+   "nose": "Savory, floral fruit, powdered sugar, balanced oak and vanilla, plum skin and pear.",
+   "palate": "Plump, rounded, medium-full body with finely woven spice; saltwater taffy, fruit, clove and a toasty, malty note.",
+   "finish": "Focused spice of clove and pink peppercorn; elegant.",
+   "summary": "6-year-old bottled-in-bond straight malted rye, non-chill filtered.",
+   "source_url": "https://newriffdistilling.com/spirits/new-riff-6-year-old-malted-rye/"
+  },
+  "critics": [
+   {
+    "source": "The Whisky Study (Chris Ellis)",
+    "source_url": "https://thewhiskystudy.com/ryereviews/new-riff-6-year-malted-rye",
+    "score": 89,
+    "scale": "100",
+    "nose": "Coffee grounds, smoked meat and heavy barrel char over an oaky backbone and spiced milk chocolate; settles with time.",
+    "palate": "Spearmint, chocolate and cream (mint-chocolate-ice-cream feel) plus tobacco leaf, coffee and cinnamon sugar; good mouthfeel.",
+    "finish": "Medium; turns sweeter with vanilla, stewed fruit and warming cinnamon stick.",
+    "summary": null,
+    "year": 2024
+   },
+   {
+    "source": "The Whiskey Reviewer (Richard Thomas)",
+    "source_url": "https://whiskeyreviewer.com/2021/07/new-riff-6-year-old-malted-rye-whiskey-070221/",
+    "score": null,
+    "scale": null,
+    "nose": "Wildflower honey, pear and vanilla seasoned with nutmeg.",
+    "palate": "Delicate and spice-forward; clove and dill with vanilla, malty honey, apple and pear.",
+    "finish": "Clove and dill spice lead.",
+    "summary": "Graded A- (letter grade); reviewer's favorite New Riff release at the time.",
+    "year": 2021
+   },
+   {
+    "source": "Dramface (Broddy Balfour)",
+    "source_url": "https://www.dramface.com/all-reviews/new-riff-malted-rye",
+    "score": 7,
+    "scale": "10",
+    "nose": "Richly spiced like a fresh cinnamon loaf, with vanilla and restrained virgin oak.",
+    "palate": "Savory peppery warmth, then toasted rye and sourdough bread, honey, clove and demerara sugar.",
+    "finish": "Light and fairly quick, without dill funk.",
+    "summary": "Co-reviewer Aengus McCloud scored it 6/10 on the same page.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "6 years",
+   "mash_bill": "100% malted rye",
+   "cask": "New charred oak",
+   "region": "Kentucky, USA",
+   "source_url": "https://newriffdistilling.com/spirits/new-riff-6-year-old-malted-rye/"
+  },
+  "flavor_terms": [
+   "pear",
+   "plum skin",
+   "clove",
+   "pink peppercorn",
+   "vanilla",
+   "honey",
+   "chocolate",
+   "spearmint",
+   "cinnamon",
+   "malty"
+  ],
+  "confidence": "high",
+  "notes": "Sources describe a 6-year, 100-proof bottled-in-bond malted rye; input lists NAS/90 proof/undisclosed mash, which looks wrong. Check which bottle the user has (New Riff also sells sherry-finish and 8-yr malted ryes)."
+ },
+ {
+  "id": "bardstown-bourbon-co-origin-series-bourbon",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Billed as a high-rye bourbon with a burst of rye spice; estate distilled; IWSC 2023 gold. Page has no stage-by-stage tasting notes.",
+   "source_url": "https://bardstownbourbon.com/products/origin-series-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "The Whiskey Wash (Jeffrey Nitschke)",
+    "source_url": "https://thewhiskeywash.com/reviews/whiskey-review-bardstown-bourbon-origin-series-bourbon/",
+    "score": 8,
+    "scale": "10",
+    "nose": "Tangerine, vanilla and eggnog up front, with pine at the edges.",
+    "palate": "Smooth and round; coconut and toasted walnut, a dusting of anise, lighter pine/cedar wood rather than oak.",
+    "finish": "Strong vanilla with surprising sherry and grape notes.",
+    "summary": null,
+    "year": 2023
+   },
+   {
+    "source": "The Whisky Study (Chris Ellis)",
+    "source_url": "https://thewhiskystudy.com/reviews-1/bardstown-bourbon-company-origin-series-straight-bourbon-review",
+    "score": 87,
+    "scale": "100",
+    "nose": "Somewhat closed; sweet and earthy with malty corn, wood shavings and caramel popcorn.",
+    "palate": "Thick, syrupy and gentle; apple peel, custard, vanilla and crème brûlée, well balanced.",
+    "finish": "Medium; rye bursts, drying oak and honey.",
+    "summary": null,
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 48,
+   "proof": 96,
+   "age": "6 years",
+   "mash_bill": "60% corn / 36% rye / 4% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://bardstownbourbon.com/products/origin-series-bourbon/"
+  },
+  "flavor_terms": [
+   "rye spice",
+   "vanilla",
+   "tangerine",
+   "coconut",
+   "toasted walnut",
+   "caramel popcorn",
+   "custard",
+   "crème brûlée",
+   "honey",
+   "oak"
+  ],
+  "confidence": "medium",
+  "notes": "Producer page gives specs and a marketing summary but no nose/palate/finish notes; critic notes are for the exact 6yr 96-proof expression."
+ },
+ {
+  "id": "bardstown-bourbon-co-origin-high-wheat",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Estate-distilled bourbon with an unusually high 39% wheat mash, said to draw a lot of wood sugar; SFWSC 2025 gold. No stage-by-stage tasting notes on page.",
+   "source_url": "https://bardstownbourbon.com/products/high-wheat/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/bardstown-bourbon-company-origin-series-high-wheat-bourbon",
+    "score": 3,
+    "scale": "5",
+    "nose": "Apricot, orange zest, vanilla cream, white pepper.",
+    "palate": "Buttercream frosting, dried apricot, butterscotch candy, toffee.",
+    "finish": "Warming; cinnamon, allspice, light leather.",
+    "summary": "Sweet, flavorful wheater; considered good value at ~$50 MSRP.",
+    "year": 2024
+   },
+   {
+    "source": "The Whiskey Wash (Nino Kilgore-Marchetti)",
+    "source_url": "https://thewhiskeywash.com/whiskey-styles/bourbon/whiskey-review-bardstown-bourbon-origin-high-wheat-bourbon-3/",
+    "score": 8,
+    "scale": "10",
+    "nose": "Layers of vanilla, amaretti cookie, bright orange and oak with brown sugar and toffee.",
+    "palate": "Baked bread and apricot jam, then vanilla, light baking spice, cherry, oak, a touch of maple and orange.",
+    "finish": "Warm and juicy, slightly sweet, moderate length.",
+    "summary": null,
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 53,
+   "proof": 106,
+   "age": "6 years",
+   "mash_bill": "53% corn / 39% wheat / 8% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://bardstownbourbon.com/products/high-wheat/"
+  },
+  "flavor_terms": [
+   "apricot",
+   "orange zest",
+   "vanilla",
+   "butterscotch",
+   "toffee",
+   "buttercream",
+   "cinnamon",
+   "brown sugar",
+   "cherry",
+   "oak"
+  ],
+  "confidence": "medium",
+  "notes": "Producer page lacks stage-by-stage notes; mash bill matches producer and Breaking Bourbon."
+ },
+ {
+  "id": "bardstown-bourbon-co-origin-rye",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Straight rye finished in custom hybrid barrels with alternating toasted cherry wood and oak staves; pitched for classic cocktails. No stage-by-stage notes on page.",
+   "source_url": "https://bardstownbourbon.com/products/origin-series-rye/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/bardstown-origin-series-rye",
+    "score": 3.5,
+    "scale": "5",
+    "nose": "Nougat, marzipan, aged oak, barrel char, rye spice, leather.",
+    "palate": "Rye grain, charred oak, leather, baking and Mexican chocolate, dried fig.",
+    "finish": "Bold rye spice, dry oak, Mexican chocolate, a little leather, lingering heat.",
+    "summary": "Well-made first in-house rye; the cherry-wood barrel adds distinctive flavor for rye fans.",
+    "year": 2023
+   },
+   {
+    "source": "The Whiskey Wash (Jeffrey Nitschke)",
+    "source_url": "https://thewhiskeywash.com/whiskey-styles/american-whiskey/whiskey-review-bardstown-bourbon-origin-series-rye-whiskey/",
+    "score": 7,
+    "scale": "10",
+    "nose": "Grassy juniper and fern with nutmeg, black pepper and apricot.",
+    "palate": "Dried apricot and cherry, prominent oak, anise, lavender, corn and clove.",
+    "finish": null,
+    "summary": null,
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 48,
+   "proof": 96,
+   "age": "6 years (producer); Breaking Bourbon lists its 2023 sample at 5 years 8 months",
+   "mash_bill": "95% rye / 5% malted barley",
+   "cask": "Finished in toasted cherry wood and oak hybrid barrels",
+   "region": "Kentucky, USA",
+   "source_url": "https://bardstownbourbon.com/products/origin-series-rye/"
+  },
+  "flavor_terms": [
+   "rye spice",
+   "charred oak",
+   "leather",
+   "chocolate",
+   "dried fig",
+   "apricot",
+   "cherry",
+   "anise",
+   "clove",
+   "black pepper"
+  ],
+  "confidence": "medium",
+  "notes": "Mash bill per producer and Breaking Bourbon; cherry-wood finish confirmed by producer and Whiskey Wash. Age statement differs slightly between sources."
+ },
+ {
+  "id": "bardstown-bourbon-co-discovery-series",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Discovery Series is a numbered run of distinct blends (producer lists proofs from roughly 110.8 to 118.1, not 90); input does not name the release, so no expression matched."
+ },
+ {
+  "id": "bardstown-bourbon-co-collaborative-series",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": null
+  },
+  "flavor_terms": [],
+  "confidence": "none",
+  "notes": "Collaborative/Barrel Finish series covers many different partner finishes; input does not name one, so no expression matched."
+ },
+ {
+  "id": "wilderness-trail-high-rye-bourbon",
+  "producer": {
+   "nose": "Sweet baking spice, oak and dark fruit.",
+   "palate": "Smooth and sweet, moving to tobacco and bramble red-black fruit with a hint of leather and smoke.",
+   "finish": "Long and rye-led with warm, oaky sweetness that lasts.",
+   "summary": "Deep amber, unfiltered; positioned as a spicier counterpart to the distillery's wheated bourbon.",
+   "source_url": "https://www.wildernesstraildistillery.com/whiskeys/high-rye-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/wilderness-trail-high-rye-bourbon-bottled-in-bond",
+    "score": 2.5,
+    "scale": "5",
+    "nose": "Strong caramel with candy corn, fresh grass, cinnamon roll and raspberry cream, ending on oak.",
+    "palate": "Rich caramel, butterscotch, brown sugar, vanilla extract and raspberry; faint mint late.",
+    "finish": "Turns to cinnamon, bitter chocolate, rye spice, char and black pepper, then nutty almond; dries out with lingering mint.",
+    "summary": "Delivers on the high-rye promise but the sharp, peppery close may not suit everyone; value questioned.",
+    "year": 2023
+   },
+   {
+    "source": "VinePair (Tim McKirdy)",
+    "source_url": "https://vinepair.com/review/wilderness-trail-small-batch-bourbon-bottled-in-bond/",
+    "score": 93,
+    "scale": "100",
+    "nose": "Very herbaceous with a distinct mint note.",
+    "palate": "Gentle spice and a menthol lift while staying balanced.",
+    "finish": null,
+    "summary": "Praised the integration of flavor and alcohol; calls the distillery one to watch.",
+    "year": 2022
+   },
+   {
+    "source": "Paste Magazine (Jim Vorel)",
+    "source_url": "https://www.pastemagazine.com/drink/whiskey/wilderness-trail-bourbon-rye-review-bottled-in-bond-small-batch-flavors",
+    "score": null,
+    "scale": null,
+    "nose": "Caramel candy, pronounced herbal rye, pepper, floral vanilla and a trace of wood smoke.",
+    "palate": "Honeyed sweetness with assertive rye spice, peppercorn, brown sugar and mint, developing charred astringency.",
+    "finish": null,
+    "summary": null,
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "At least 4 years (bottled in bond)",
+   "mash_bill": "64% corn / 24% rye / 12% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.pastemagazine.com/drink/whiskey/wilderness-trail-bourbon-rye-review-bottled-in-bond-small-batch-flavors"
+  },
+  "flavor_terms": [
+   "baking spice",
+   "dark fruit",
+   "tobacco",
+   "caramel",
+   "mint",
+   "rye spice",
+   "black pepper",
+   "brown sugar",
+   "vanilla",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Producer site shows identical tasting copy on its high-rye bourbon and rye pages. Mash bill per Paste and The Whiskey Jug (Breaking Bourbon lists 25% rye). Proof/BIB per producer whiskeys page."
+ },
+ {
+  "id": "wilderness-trail-wheated-bourbon",
+  "producer": {
+   "nose": "Sweet vanilla and charred oak.",
+   "palate": "Caramel and vanilla leading into oak, cinnamon and blood orange, with a palate-coating texture.",
+   "finish": "Long and sweet; oak spice, toffee and dark fruit.",
+   "summary": "Sweet-mash wheated bourbon with reduced corn and more 'middle grains'; billed as the first bottled-in-bond wheated sweet-mash bourbon since Prohibition.",
+   "source_url": "https://www.wildernesstraildistillery.com/whiskeys/wheated-bourbon/"
+  },
+  "critics": [
+   {
+    "source": "Paste Magazine (Jim Vorel)",
+    "source_url": "https://www.pastemagazine.com/drink/whiskey/wilderness-trail-bourbon-rye-review-bottled-in-bond-small-batch-flavors",
+    "score": null,
+    "scale": null,
+    "nose": "Cherry and slightly tart blackberry with gingerbread, cinnamon and molasses cookie.",
+    "palate": "Soft entry; brown sugar, cinnamon, toasted oak, cherry cordial, clove and cola spice.",
+    "finish": null,
+    "summary": null,
+    "year": 2023
+   },
+   {
+    "source": "The Whiskey Reviewer (Richard Thomas)",
+    "source_url": "https://whiskeyreviewer.com/2024/06/wilderness-trail-bottled-in-bond-wheated-bourbon-review-061024/",
+    "score": null,
+    "scale": null,
+    "nose": "Toasted graham cracker with apricot jam, brown sugar, cinnamon, clove and musty oak.",
+    "palate": "Sweet and fruity with honey and caramel; punches above its age.",
+    "finish": "Warm and honeyed with more wood, though it fades a bit early.",
+    "summary": "Letter grade B+ (no numeric scale).",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "At least 4 years (bottled in bond)",
+   "mash_bill": "64% corn / 24% wheat / 12% malted barley",
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.wildernesstraildistillery.com/whiskeys/"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "charred oak",
+   "caramel",
+   "cinnamon",
+   "blood orange",
+   "toffee",
+   "dark fruit",
+   "cherry",
+   "brown sugar",
+   "honey"
+  ],
+  "confidence": "high",
+  "notes": "Mash bill per Paste and The Whiskey Reviewer; proof/BIB per producer whiskeys page."
+ },
+ {
+  "id": "wilderness-trail-rye",
+  "producer": {
+   "nose": "Sweet baking spice, oak and dark fruit.",
+   "palate": "Smooth and sweet, moving to tobacco and bramble red-black fruit with a hint of leather and smoke.",
+   "finish": "Long and rye-led with warm, oaky sweetness that lasts.",
+   "summary": "Marketed as 'the bourbon drinker's rye': lower-rye, higher-corn custom mash entered at a low 100-105 barrel proof.",
+   "source_url": "https://www.wildernesstraildistillery.com/whiskeys/rye-whiskey/"
+  },
+  "critics": [
+   {
+    "source": "Paste Magazine (Jim Vorel)",
+    "source_url": "https://www.pastemagazine.com/drink/whiskey/wilderness-trail-bourbon-rye-review-bottled-in-bond-small-batch-flavors",
+    "score": null,
+    "scale": null,
+    "nose": "Caraway rye bread, peppermint, florals, dark chocolate and spicy oak.",
+    "palate": "Bold rye with caraway, pepper, rye bread, honey and herbal notes, with modest corn sweetness.",
+    "finish": null,
+    "summary": null,
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "At least 4 years (bottled in bond)",
+   "mash_bill": null,
+   "cask": null,
+   "region": "Kentucky, USA",
+   "source_url": "https://www.wildernesstraildistillery.com/whiskeys/rye-whiskey/"
+  },
+  "flavor_terms": [
+   "baking spice",
+   "dark fruit",
+   "tobacco",
+   "leather",
+   "caraway",
+   "peppermint",
+   "dark chocolate",
+   "rye bread",
+   "honey",
+   "oak"
+  ],
+  "confidence": "medium",
+  "notes": "Producer tasting copy is identical to its high-rye bourbon page, so it may not be specific to the rye. Mash bill 56/33/11 appears only in Paste (one source), so left null."
+ },
+ {
+  "id": "still-630-due-process-bourbon",
+  "producer": {
+   "nose": "Sweet creamed corn, caramel, vanilla, soft cherry fudge, light spice.",
+   "palate": "Candy corn, caramel and vanilla, with brown sugar toward the finish.",
+   "finish": null,
+   "summary": "Single-barrel cask-strength Missouri straight bourbon from 100% Missouri-grown corn, honoring a 40-year police career; distillery-only release.",
+   "source_url": "https://www.still630.com/products/due-process-cask-strength-missouri-straight-bourbon-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": 130.6,
+   "age": "Over 5 years",
+   "mash_bill": "70% corn / 20% rye / 10% malted barley",
+   "cask": "New charred oak",
+   "region": "St. Louis, Missouri",
+   "source_url": "https://www.still630.com/products/due-process-cask-strength-missouri-straight-bourbon-whiskey"
+  },
+  "flavor_terms": [
+   "creamed corn",
+   "caramel",
+   "vanilla",
+   "cherry fudge",
+   "candy corn",
+   "brown sugar"
+  ],
+  "confidence": "low",
+  "notes": "MISMATCH: the only Due Process the producer lists is 130.6-proof cask strength, 5+ years, not the 92-proof/4-year spec in input. Producer data is for that version; mash bill from one source. No critic reviews found."
+ },
+ {
+  "id": "unshackled-sauvignon-blanc",
+  "producer": {
+   "nose": "Melon, peach, fresh citrus, lime and tropical fruit.",
+   "palate": "Chenin Blanc and Roussanne in the blend add brightness and texture.",
+   "finish": null,
+   "summary": "Winemaker notes for the 2020 vintage (via wine.com).",
+   "source_url": "https://www.wine.com/product/the-prisoner-wine-company-unshackled-sauvignon-blanc-2020/724343"
+  },
+  "critics": [
+   {
+    "source": "Connoisseurs' Guide (via wine.com)",
+    "source_url": "https://www.wine.com/product/the-prisoner-wine-company-unshackled-sauvignon-blanc-2020/724343",
+    "score": 91,
+    "scale": "100",
+    "nose": "Dried herbs and ripe fruit.",
+    "palate": "Full-bodied and weighty.",
+    "finish": null,
+    "summary": "Suggests pairing with goat cheeses.",
+    "year": null
+   },
+   {
+    "source": "The Chalk Report (Andrew Chalk)",
+    "source_url": "https://www.thechalkreport.com/post/wine-review-the-prisoner-unshackled-2020-sauvignon-blanc-ca-27",
+    "score": null,
+    "scale": null,
+    "nose": "Meyer lemon, white peach, white flowers, herbaceous.",
+    "palate": "Herbaceous and lemony with rich texture and medium-plus acidity, less sharp than NZ examples.",
+    "finish": null,
+    "summary": "Well made; suits Chardonnay drinkers; works with white fish and poultry. Unscored.",
+    "year": 2021
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc with Chenin Blanc and Roussanne",
+   "cask": null,
+   "region": "California",
+   "source_url": "https://www.wine.com/product/the-prisoner-wine-company-unshackled-sauvignon-blanc-2020/724343"
+  },
+  "flavor_terms": [
+   "melon",
+   "peach",
+   "citrus",
+   "lime",
+   "tropical fruit",
+   "meyer lemon",
+   "white flowers",
+   "herbaceous",
+   "dried herbs"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2020. Producer notes came via a retailer copy of winemaker notes. wine.com lists 14.5% ABV (single source, left null; input says 13%). Blend is not 100% Sauvignon Blanc."
+ },
+ {
+  "id": "kim-crawford-sauvignon-blanc",
+  "producer": {
+   "nose": "Lifted citrus, tropical fruit and crushed herbs.",
+   "palate": "Fresh and juicy, ripe passion fruit, melon and stone fruit with vibrant acidity.",
+   "finish": null,
+   "summary": "Winemaker notes for the 2024 vintage (via wine.com).",
+   "source_url": "https://www.wine.com/product/kim-crawford-sauvignon-blanc-2024/3039933"
+  },
+  "critics": [
+   {
+    "source": "Tastings.com (Beverage Testing Institute)",
+    "source_url": "https://www.tastings.com/Wine-Review/Kim-Crawford-2024-Sauvignon-Blanc-Marlborough-New-Zealand-11-18-2025.aspx",
+    "score": 90,
+    "scale": "100",
+    "nose": "Passion fruit, grapefruit, Meyer lemon and yellow pepper.",
+    "palate": "Similar fruit plus grapefruit sorbet and peach; bright, fruity, medium-to-full body.",
+    "finish": "Smooth, medium-long.",
+    "summary": "Balanced, versatile crowd-pleaser.",
+    "year": 2025
+   },
+   {
+    "source": "James Suckling (via wine.com)",
+    "source_url": "https://www.wine.com/product/kim-crawford-sauvignon-blanc-2024/3039933",
+    "score": 90,
+    "scale": "100",
+    "nose": "Green melon and apple.",
+    "palate": "Medium body, slightly sweet, crisp.",
+    "finish": "Crisp.",
+    "summary": "Easy-drinking, crunchy style.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://www.wine.com/product/kim-crawford-sauvignon-blanc-2024/3039933"
+  },
+  "flavor_terms": [
+   "passion fruit",
+   "melon",
+   "stone fruit",
+   "citrus",
+   "crushed herbs",
+   "grapefruit",
+   "meyer lemon",
+   "peach",
+   "green apple"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2024. Producer notes came via retailer; the brand's own page 404'd. ABV conflicts (wine.com 12.5%, Tastings.com 13.5%), so left null."
+ },
+ {
+  "id": "whitehaven-sauvignon-blanc",
+  "producer": {
+   "nose": "Classic Marlborough from a warm summer: grapefruit, lemongrass, white currant, peach, exotic fruit and crushed herbs.",
+   "palate": "Pure and concentrated, medium-bodied: grapefruit, white peach, lemongrass, passionfruit and citrus with a saline edge.",
+   "finish": "Lingering and precise.",
+   "summary": "Stainless-steel fermented, about two months on light lees; best young.",
+   "source_url": "https://whitehaven.co.nz/products/2024-whitehaven-marlborough-sauvignon-blanc"
+  },
+  "critics": [
+   {
+    "source": "Wine Enthusiast (via wine.com)",
+    "source_url": "https://www.wine.com/product/whitehaven-sauvignon-blanc-2024/3173057",
+    "score": 91,
+    "scale": "100",
+    "nose": "Heady lime, lemongrass and pink grapefruit with a hint of dried herbs.",
+    "palate": "Limey acidity on a slightly slippery texture.",
+    "finish": null,
+    "summary": "Lively, exuberant style; named a Best Buy.",
+    "year": null
+   },
+   {
+    "source": "Wine Spectator (via wine.com)",
+    "source_url": "https://www.wine.com/product/whitehaven-sauvignon-blanc-2024/3173057",
+    "score": 90,
+    "scale": "100",
+    "nose": null,
+    "palate": "Passion fruit, guava, mango and dried pineapple with sea salt, lemon and orange blossom, neroli and wild fennel.",
+    "finish": null,
+    "summary": "Fresh and mouthwatering.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 13,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Stainless steel",
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://whitehaven.co.nz/products/2024-whitehaven-marlborough-sauvignon-blanc"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "lemongrass",
+   "white peach",
+   "passionfruit",
+   "citrus",
+   "crushed herbs",
+   "lime",
+   "guava",
+   "sea salt",
+   "saline"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2024. ABV 13% per producer and wine.com."
+ },
+ {
+  "id": "matua-sauvignon-blanc",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Pure classic Marlborough style: ripe lemon citrus with hints of passion fruit and basil (2024 winemaker notes via wine.com).",
+   "source_url": "https://www.wine.com/product/matua-sauvignon-blanc-2024/4123885"
+  },
+  "critics": [
+   {
+    "source": "Wine Spectator (via wine.com)",
+    "source_url": "https://www.wine.com/product/matua-sauvignon-blanc-2024/4123885",
+    "score": 90,
+    "scale": "100",
+    "nose": "Hints of mango, lemon verbena and lemon balm.",
+    "palate": "Fresh and zesty; Key lime, tangerine and Meyer lemon.",
+    "finish": "Sea salt on a mouthwatering finish.",
+    "summary": null,
+    "year": null
+   },
+   {
+    "source": "Ken's Wine Guide (tasting panel)",
+    "source_url": "https://www.kenswineguide.com/wine_review/Matua-2024-Sauvignon-Blanc",
+    "score": 89.5,
+    "scale": "100",
+    "nose": "White grapefruit and guava with hints of white peach and limestone.",
+    "palate": null,
+    "finish": null,
+    "summary": "Rated 'Very Good'.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://www.wine.com/product/matua-sauvignon-blanc-2024/4123885"
+  },
+  "flavor_terms": [
+   "lemon",
+   "passion fruit",
+   "basil",
+   "key lime",
+   "tangerine",
+   "mango",
+   "sea salt",
+   "grapefruit",
+   "guava",
+   "white peach"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2024. Producer notes came via retailer. wine.com lists 13% ABV (single source, left null)."
+ },
+ {
+  "id": "dog-point-sauvignon-blanc",
+  "producer": {
+   "nose": "Pure, bright perfume of grapefruit, lemon, lime and mandarin, layered with subtle gravelly tones.",
+   "palate": null,
+   "finish": null,
+   "summary": "Hand-picked, whole-cluster pressed, fermented in stainless steel with indigenous and cultured yeasts, about four months in tank, bottled unfined (2024; winemaking per US importer Vintus).",
+   "source_url": "https://www.wine.com/product/dog-point-vineyard-sauvignon-blanc-2024/3323773"
+  },
+  "critics": [
+   {
+    "source": "Robert Parker's Wine Advocate (via wine.com)",
+    "source_url": "https://www.wine.com/product/dog-point-vineyard-sauvignon-blanc-2024/3323773",
+    "score": 95,
+    "scale": "100",
+    "nose": "Curry leaf, crushed shells, lemon zest, asphalt, mustard and coriander seed, white orchard fruit.",
+    "palate": null,
+    "finish": null,
+    "summary": null,
+    "year": null
+   },
+   {
+    "source": "James Suckling (via wine.com)",
+    "source_url": "https://www.wine.com/product/dog-point-vineyard-sauvignon-blanc-2024/3323773",
+    "score": 93,
+    "scale": "100",
+    "nose": "Flint, sliced lemon, green melon, some Thai basil.",
+    "palate": "Medium body, crisp acidity, fruity but focused and tense.",
+    "finish": null,
+    "summary": null,
+    "year": null
+   },
+   {
+    "source": "Wine Enthusiast (via wine.com)",
+    "source_url": "https://www.wine.com/product/dog-point-vineyard-sauvignon-blanc-2024/3323773",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": null,
+    "finish": null,
+    "summary": "Says the producer's trademark flinty, reductive style is now well balanced.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 13.5,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": "Stainless steel",
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://vintus.com/wines/sauvignon-blanc-2/dog-point-vineyard-sauvignon-blanc-2024/"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "lemon",
+   "lime",
+   "mandarin",
+   "gravel",
+   "flint",
+   "green melon",
+   "lemon zest",
+   "curry leaf",
+   "white peach"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2024. Producer notes came via retailer; importer Vintus has a slightly different version (grapefruit, white peach, smoke). ABV 13.5% per wine.com and Vintus. Vintus also lists Halliday 97 and Wine Spectator 92."
+ },
+ {
+  "id": "greywacke-sauvignon-blanc",
+  "producer": {
+   "nose": "Cassis, lemon sorbet and green mango with a light dusting of white pepper.",
+   "palate": null,
+   "finish": null,
+   "summary": "2024 winemaker notes via wine.com.",
+   "source_url": "https://www.wine.com/product/greywacke-sauvignon-blanc-2024/2527076"
+  },
+  "critics": [
+   {
+    "source": "Robert Parker's Wine Advocate (via wine.com)",
+    "source_url": "https://www.wine.com/product/greywacke-sauvignon-blanc-2024/2527076",
+    "score": 93,
+    "scale": "100",
+    "nose": "Passion fruit, white pineapple, green apple, beeswax and brine.",
+    "palate": "Salty, fine and calm.",
+    "finish": null,
+    "summary": null,
+    "year": null
+   },
+   {
+    "source": "Wine Spectator (via wine.com)",
+    "source_url": "https://www.wine.com/product/greywacke-sauvignon-blanc-2024/2527076",
+    "score": 93,
+    "scale": "100",
+    "nose": "Lemon blossom, ripe peach, kumquat and lime sherbet.",
+    "palate": null,
+    "finish": null,
+    "summary": "Vibrant, focused and intense.",
+    "year": null
+   },
+   {
+    "source": "Vinous (via wine.com)",
+    "source_url": "https://www.wine.com/product/greywacke-sauvignon-blanc-2024/2527076",
+    "score": 91,
+    "scale": "100",
+    "nose": null,
+    "palate": "Open and richly fruited with mid-palate weight, tropical fruit and elderflower.",
+    "finish": null,
+    "summary": null,
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://www.wine.com/product/greywacke-sauvignon-blanc-2024/2527076"
+  },
+  "flavor_terms": [
+   "cassis",
+   "lemon sorbet",
+   "green mango",
+   "white pepper",
+   "passion fruit",
+   "pineapple",
+   "beeswax",
+   "brine",
+   "peach",
+   "elderflower"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2024. Producer notes came via retailer. ABV 13.4% per wine.com (single source, left null). Ken's Wine Guide also rated it 93.5."
+ },
+ {
+  "id": "greywacke-wild-sauvignon",
+  "producer": {
+   "nose": null,
+   "palate": "Complex and textural: quince, yellow apple, gooseberry, caramelized lemon, vanilla custard and toasted fennel seed, like a shortcrust pie.",
+   "finish": "Crisp and long.",
+   "summary": "2021 winemaker notes via wine.com.",
+   "source_url": "https://www.wine.com/product/greywacke-wild-sauvignon-2021/1297629"
+  },
+  "critics": [
+   {
+    "source": "Robert Parker's Wine Advocate (via wine.com)",
+    "source_url": "https://www.wine.com/product/greywacke-wild-sauvignon-2021/1297629",
+    "score": 95,
+    "scale": "100",
+    "nose": null,
+    "palate": "Broad and textural; saffron, lemongrass, yellow peach, white pepper and minerality, with oak and fruit in balance.",
+    "finish": null,
+    "summary": null,
+    "year": null
+   },
+   {
+    "source": "Wine Enthusiast (via wine.com)",
+    "source_url": "https://www.wine.com/product/greywacke-wild-sauvignon-2021/1297629",
+    "score": 93,
+    "scale": "100",
+    "nose": null,
+    "palate": "Sulfur and salted-nut notes balanced with passion fruit and lime; lovely texture.",
+    "finish": null,
+    "summary": null,
+    "year": null
+   },
+   {
+    "source": "Wine Spectator (via wine.com)",
+    "source_url": "https://www.wine.com/product/greywacke-wild-sauvignon-2021/1297629",
+    "score": 93,
+    "scale": "100",
+    "nose": "Honeysuckle, candied ginger and wildflower honey.",
+    "palate": "Melon, dried fennel and yellow apple.",
+    "finish": "Citrus.",
+    "summary": "Distinctive, aromatic and complex.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": "Sauvignon Blanc",
+   "cask": null,
+   "region": "Marlborough, New Zealand",
+   "source_url": "https://www.wine.com/product/greywacke-wild-sauvignon-2021/1297629"
+  },
+  "flavor_terms": [
+   "quince",
+   "yellow apple",
+   "gooseberry",
+   "lemon",
+   "vanilla",
+   "fennel",
+   "saffron",
+   "lemongrass",
+   "honeysuckle",
+   "passion fruit"
+  ],
+  "confidence": "high",
+  "notes": "Vintage 2021. K&L's 2022 page lists Wine Spectator 94 and describes wild fermentation in oak barrels with partial malolactic, but that is a different vintage so cask was left null. Wine Spectator's 2024 review is paywalled."
+ }
+]

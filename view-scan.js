@@ -1,7 +1,8 @@
-import { api } from "./api.js";
-import { el, escapeHtml, decisionBannerHtml, whyConcernsHtml, toast, matchBadgeHtml } from "./ui.js";
+import { api, downscaleImage } from "./api.js";
+import { el, escapeHtml, decisionBannerHtml, whyConcernsHtml, toast, matchBadgeHtml, bottleThumbHtml } from "./ui.js";
 import { CATEGORIES } from "./spirit-taxonomy.js";
 import { openLogPourSheet } from "./log-pour.js";
+import { parseBarcode } from "./barcode.js";
 
 // Barcode decoding has two paths on purpose:
 //   1. BarcodeDetector — native, fast, no download. Chrome/Android, some others.
@@ -22,13 +23,23 @@ export async function renderScan(dispatchNav) {
   handlingCode = false;
   const view = el("view-scan");
   view.innerHTML = `
-    <label style="margin-top:0">Add a bottle</label>
+    <div class="add-flow-heading"><span class="eyebrow">BUILD YOUR POUR PROFILE</span><h2>Add & rate a drink</h2><p>Find your bottle, then answer ten questions tailored to your drink.</p><div class="flow-steps"><span class="active">01 · Find drink</span><span>02 · Rate your pour</span></div></div>
+    <div class="add-methods">
+      <button class="btn btn-primary" id="chooseManual">Manual</button>
+      <button class="btn btn-secondary" id="chooseBarcode">Barcode</button>
+      <button class="btn btn-secondary" id="chooseLabel">Label photo</button>
+    </div>
+    <label class="add-intent"><input type="checkbox" id="rateAfterAdd" checked> Rate this drink after adding <span>10 tasting questions</span></label>
+    <div id="labelPanel" hidden><label>Photograph or upload one bottle label</label>
+      <input id="labelPhoto" type="file" accept="image/*" capture="environment">
+      <p id="labelStatus" class="field-hint">We’ll read the label, then let you confirm the drink.</p></div>
+    <div id="manualPanel"><label style="margin-top:0">Find a drink in the database</label>
     <input type="search" id="catalogSearch" placeholder="Type any bottle name…" autocomplete="off">
     <div id="catalogResults"></div>
-    <p class="field-hint" style="margin-top:10px">We'll check the reference catalog as you type — but you're not limited to it. Anything not listed, you can add yourself in a few taps.</p>
+    <p class="field-hint" style="margin-top:10px">We'll check the reference catalog as you type — but you're not limited to it. Curated ratings cover 10 publishers across the catalog. Scores apply only to the listed bottle and vintage. Anything not listed can be added manually.</p>
     <button class="btn btn-primary btn-block" id="manualNewTopBtn" style="margin-top:10px">✍️ Add a bottle myself</button>
 
-    <details style="margin-top:14px">
+    </div><details style="margin-top:14px" id="barcodePanel" hidden>
       <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--accent-deep)">Scan a barcode instead</summary>
     <div class="scan-frame" id="scanFrame" style="margin-top:10px">
       <video id="scanVideo" playsinline muted autoplay></video>
@@ -44,19 +55,32 @@ export async function renderScan(dispatchNav) {
     <div id="scanResult"></div>
   `;
 
-  document.getElementById("manualNewTopBtn").addEventListener("click", () => renderDraftForm(null, dispatchNav));
+  document.getElementById("manualNewTopBtn").addEventListener("click", () => renderDraftForm(null, dispatchNav, null, document.getElementById("rateAfterAdd").checked));
 
   document.getElementById("manualBarcodeBtn").addEventListener("click", () => {
     const code = document.getElementById("manualBarcode").value.trim();
-    if (code) handleBarcode(code, dispatchNav);
+    if (code) handleBarcode(code, dispatchNav, { manual: true });
   });
   document.getElementById("manualBarcode").addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       const code = e.target.value.trim();
-      if (code) handleBarcode(code, dispatchNav);
+      if (code) handleBarcode(code, dispatchNav, { manual: true });
     }
   });
 
+  document.getElementById("chooseManual").onclick = () => { stopScan(); document.getElementById("manualPanel").hidden = false; document.getElementById("labelPanel").hidden = true; document.getElementById("barcodePanel").open = false; document.getElementById("barcodePanel").hidden = true; };
+  document.getElementById("chooseBarcode").onclick = () => { document.getElementById("manualPanel").hidden = true; document.getElementById("labelPanel").hidden = true; const panel = document.getElementById("barcodePanel"); panel.hidden = false; panel.open = true; };
+  document.getElementById("chooseLabel").onclick = () => { stopScan(); document.getElementById("manualPanel").hidden = true; document.getElementById("barcodePanel").open = false; document.getElementById("barcodePanel").hidden = true; document.getElementById("labelPanel").hidden = false; };
+  document.getElementById("labelPhoto").onchange = async (event) => {
+    const file = event.target.files?.[0]; if (!file) return;
+    const status = document.getElementById("labelStatus"); status.textContent = "Reading the label…";
+    try {
+      const imageDataUrl = await downscaleImage(file, 1600, .85);
+      const result = await api.analyzeImage({ imageDataUrl, mimeType: "image/jpeg" });
+      if (!result.brand && !result.expression) throw new Error("No drink identified. Try a clearer label or use Manual.");
+      renderDraftForm({ name: [result.brand, result.expression].filter(Boolean).join(" "), brand: result.brand, category: result.category }, dispatchNav, null, document.getElementById("rateAfterAdd").checked);
+    } catch (err) { status.textContent = `${err.message} You can still add this drink using Manual.`; }
+  };
   wireCatalogSearch(dispatchNav);
   // The camera only starts if the user opens the barcode section, so we don't
   // grab it (or prompt for permission) on every visit to this screen.
@@ -77,28 +101,33 @@ function wireCatalogSearch(dispatchNav) {
       const q = input.value.trim();
       if (q.length < 2) { results.innerHTML = ""; return; }
       let res;
-      try { res = await api.catalogSearch(q); } catch { results.innerHTML = `<p class="field-hint">Search unavailable offline.</p>`; return; }
+      try { res = await api.drinkSearch(q); } catch { results.innerHTML = `<p class="field-hint">Search unavailable offline.</p>`; return; }
+      if (input.value.trim() !== q || !results.isConnected) return;
       const rows = res.results || [];
       results.innerHTML = rows.length ? rows.map((r) => `
-        <div class="bottle-row" data-adopt='${escapeHtml(JSON.stringify({ id: r.id, name: r.name }))}'>
-          <div class="thumb-sm">${r.category === "sauvignon_blanc" ? "🍷" : "🥃"}</div>
+        <div class="bottle-row" data-adopt='${escapeHtml(JSON.stringify({ id: r.id, name: r.name, kind: r.kind }))}'>
+          <div class="thumb-sm">${bottleThumbHtml(r)}</div>
           <div class="info">
             <div class="name">${escapeHtml(r.name)}</div>
-            <div class="sub">${escapeHtml([r.producer, r.region, r.proof ? r.proof + " proof" : null].filter(Boolean).join(" · "))}</div>
+            <div class="sub">${escapeHtml([r.kind === "kansas" ? null : r.producer, r.region, r.proof ? r.proof + " proof" : null, r.kind === "kansas" && r.vintage ? r.vintage : null].filter(Boolean).join(" · "))}</div>
           </div>
+          ${r.kind === "reference" ? `<span class="field-hint">${r.ratings.length} sourced rating${r.ratings.length === 1 ? "" : "s"}</span>` : ""}
+          ${r.kind === "kansas" ? `<span class="field-hint" title="${escapeHtml((r.distributors || []).join(", "))}">${r.store_pick ? "Store pick · " : ""}Sold in KS</span>` : ""}
           ${r.jd_fit != null ? `<div style="text-align:right"><div style="font-weight:800;color:var(--accent-deep)">${r.jd_fit}</div><div class="field-hint" style="font-size:10px">${escapeHtml(r.fit_label || "")}</div></div>` : ""}
-        </div>`).join("") : `<p class="field-hint">Not in the catalog — that's fine. Tap “Add a bottle myself” to enter it.</p>`;
+        </div>`).join("") : `<p class="field-hint">Not in the database — that's fine. Tap “Add a bottle myself” to enter it.</p>`;
     }, 220);
   });
 
   results.addEventListener("click", async (e) => {
     const row = e.target.closest("[data-adopt]");
     if (!row) return;
-    const { id, name } = JSON.parse(row.dataset.adopt);
+    const { id, name, kind } = JSON.parse(row.dataset.adopt);
     try {
-      const res = await api.catalogAdopt({ catalog_id: id, status_tags: ["want_to_try"] });
+      const res = await api.drinkAdopt({ id, kind });
       toast(res.already_present ? `${name} is already in your collection.` : `Added ${name} to Want to Try.`);
-      dispatchNav("bottle", res.bottle_id);
+      const shouldRate = document.getElementById("rateAfterAdd")?.checked;
+      await dispatchNav("bottle", res.bottle_id);
+      if (shouldRate) { const detail = await api.bottle(res.bottle_id); await openLogPourSheet(detail.bottle, { fromAdd:true }); }
     } catch (err) { toast(`Couldn't add: ${err.message}`); }
   });
 }
@@ -259,32 +288,137 @@ async function startZxingDetection(video, dispatchNav) {
   }
 }
 
-async function handleBarcode(code, dispatchNav) {
+async function handleBarcode(code, dispatchNav, { manual = false } = {}) {
   if (handlingCode) return;
+  // A camera misread fails the checksum; keep scanning silently. A typed code gets told why.
+  const check = parseBarcode(code);
+  if (!check.ok) { if (manual) toast(check.error); return; }
   handlingCode = true;
+  const shouldRate = document.getElementById("rateAfterAdd")?.checked ?? true;
   stopScan();
   if (navigator.vibrate) navigator.vibrate(40);
   const status = el("scanStatus");
   if (status) status.textContent = `Looking up ${code}…`;
   let result;
-  try { result = await api.barcode(code); } catch (err) { toast(`Lookup failed: ${err.message}`); return; }
+  try { result = await api.barcodeLookup(check.normalized); } catch (err) { handlingCode = false; toast(`Lookup failed: ${err.message}`); return; }
+  await showBarcodeResult(check.normalized, result, dispatchNav, shouldRate);
+}
 
-  if (result.found && result.source === "internal") {
+// Every outcome of a lookup ends somewhere useful: a known bottle, a catalog item to
+// add, an external product to confirm, or (unknown) a choice between adding it as new
+// and linking the code to a bottle that already exists.
+async function showBarcodeResult(code, result, dispatchNav, shouldRate) {
+  if (result.match === "bottle" && result.bottle) {
     const detail = await api.bottle(result.bottle.id);
-    renderStoreModeResult(detail, dispatchNav);
-  } else if (result.found && result.draft) {
-    renderDraftForm({ ...result.draft, barcode: code }, dispatchNav, { source: result.source, sourceUrl: result.sourceUrl, confidence: result.confidence });
+    if (shouldRate) { await dispatchNav("bottle", detail.bottle.id); await openLogPourSheet(detail.bottle, { fromAdd: true }); } else renderStoreModeResult(detail, dispatchNav);
+  } else if (result.match === "catalog" && result.catalog) {
+    renderCatalogMatch(code, result, dispatchNav, shouldRate);
+  } else if (result.match === "product" && result.product) {
+    const p = result.product;
+    renderDraftForm({ name: p.name, brand: p.brand, image_url: p.image_url, image_source: "barcode_api", image_confidence: "low", barcode: code },
+      dispatchNav, { source: result.source, sourceUrl: result.sourceUrl, confidence: result.confidence }, shouldRate, { offerLink: true });
   } else {
-    toast("No match found — add it manually.");
-    renderDraftForm({ barcode: code }, dispatchNav);
+    renderUnknownBarcode(code, result, dispatchNav, shouldRate);
   }
+}
+
+function renderCatalogMatch(code, result, dispatchNav, shouldRate) {
+  const view = el("view-scan");
+  const rec = result.catalog;
+  view.innerHTML = `
+    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Add Drink</button>
+    <span class="eyebrow">BARCODE ${escapeHtml(code)}</span>
+    <h2>${escapeHtml(rec.name)}</h2>
+    <p class="field-hint">${escapeHtml([rec.producer, rec.category, rec.proof ? rec.proof + " proof" : null].filter(Boolean).join(" · "))} — matched from the reference catalog.</p>
+    ${rec.summary ? `<p>${escapeHtml(rec.summary)}</p>` : ""}
+    <button class="btn btn-primary btn-block" id="barcodeAdoptBtn" style="margin-top:16px">Add to my bottles</button>
+  `;
+  view.querySelector("[data-action='rescan']").addEventListener("click", () => renderScan(dispatchNav));
+  document.getElementById("barcodeAdoptBtn").addEventListener("click", async () => {
+    try {
+      const res = await api.drinkAdopt({ id: rec.id, kind: "catalog" });
+      toast(res.already_present ? `${rec.name} is already in your collection.` : `Added ${rec.name} to Want to Try.`);
+      await dispatchNav("bottle", res.bottle_id);
+      if (shouldRate) { const detail = await api.bottle(res.bottle_id); await openLogPourSheet(detail.bottle, { fromAdd: true }); }
+    } catch (err) { toast(`Couldn't add: ${err.message}`); }
+  });
+}
+
+function renderUnknownBarcode(code, result, dispatchNav, shouldRate) {
+  const view = el("view-scan");
+  const unavailable = result.lookup === "unavailable";
+  view.innerHTML = `
+    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Add Drink</button>
+    <span class="eyebrow">BARCODE ${escapeHtml(code)}</span>
+    <h2>New barcode</h2>
+    <p class="field-hint">${unavailable ? "The product lookup is unavailable right now, so this code couldn't be checked." : "We don't have this code yet."} Add it as a new bottle, or link it to a bottle you already know — either way it will be recognised next time.</p>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px">
+      <button class="btn btn-primary btn-block" id="barcodeNewBtn">Add to my bottles</button>
+      <button class="btn btn-secondary btn-block" id="barcodeLinkBtn">Link this barcode to a bottle</button>
+    </div>
+  `;
+  view.querySelector("[data-action='rescan']").addEventListener("click", () => renderScan(dispatchNav));
+  document.getElementById("barcodeNewBtn").addEventListener("click", () => renderDraftForm({ barcode: code }, dispatchNav, null, shouldRate));
+  document.getElementById("barcodeLinkBtn").addEventListener("click", () => renderLinkPicker(code, dispatchNav, shouldRate));
+}
+
+function renderLinkPicker(code, dispatchNav, shouldRate) {
+  const view = el("view-scan");
+  view.innerHTML = `
+    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Add Drink</button>
+    <span class="eyebrow">BARCODE ${escapeHtml(code)}</span>
+    <h2>Link to a bottle</h2>
+    <p class="field-hint">Search for the bottle this barcode belongs to.</p>
+    <input type="text" id="linkSearch" placeholder="Search bottles and the catalog" autocomplete="off">
+    <div id="linkResults" style="margin-top:10px"></div>
+  `;
+  view.querySelector("[data-action='rescan']").addEventListener("click", () => renderScan(dispatchNav));
+  const input = document.getElementById("linkSearch");
+  const results = document.getElementById("linkResults");
+  let timer;
+  input.addEventListener("input", () => {
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      const q = input.value.trim();
+      if (q.length < 2) { results.innerHTML = ""; return; }
+      let res;
+      try { res = await api.drinkSearch(q); } catch { results.innerHTML = `<p class="field-hint">Search unavailable offline.</p>`; return; }
+      if (input.value.trim() !== q || !results.isConnected) return;
+      const rows = res.results || [];
+      results.innerHTML = rows.length ? rows.map((r) => `
+        <div class="bottle-row" data-link='${escapeHtml(JSON.stringify({ id: r.id, name: r.name, kind: r.kind }))}'>
+          <div class="thumb-sm">${bottleThumbHtml(r)}</div>
+          <div class="info"><div class="name">${escapeHtml(r.name)}</div>
+            <div class="sub">${escapeHtml([r.producer, r.kind === "bottle" ? "in your bottles" : "catalog"].filter(Boolean).join(" · "))}</div></div>
+        </div>`).join("") : `<p class="field-hint">No matches. Go back and add it as a new bottle instead.</p>`;
+    }, 220);
+  });
+  results.addEventListener("click", async (e) => {
+    const row = e.target.closest("[data-link]");
+    if (!row || row.dataset.busy) return;
+    row.dataset.busy = "1";
+    const { id, name, kind } = JSON.parse(row.dataset.link);
+    try {
+      let payload;
+      if (kind === "bottle") payload = { barcode: code, bottle_id: id };
+      else if (kind === "catalog") payload = { barcode: code, catalog_id: id };
+      else payload = { barcode: code, bottle_id: (await api.drinkAdopt({ id, kind })).bottle_id };
+      try { await api.saveBarcode(payload); }
+      catch (err) {
+        if (err.status !== 409 || !confirm("This barcode is already linked to a different bottle. Replace that link?")) throw err;
+        await api.saveBarcode({ ...payload, replace: true });
+      }
+      toast(`Barcode linked to ${name}.`);
+      await showBarcodeResult(code, await api.barcodeLookup(code), dispatchNav, shouldRate);
+    } catch (err) { delete row.dataset.busy; toast(`Couldn't link: ${err.message}`); }
+  });
 }
 
 function renderStoreModeResult(detail, dispatchNav) {
   const view = el("view-scan");
   const { bottle, match } = detail;
   view.innerHTML = `
-    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Scan another</button>
+    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Add Drink</button>
     <h2>${escapeHtml(bottle.name)}</h2>
     <p class="field-hint">${escapeHtml([bottle.brand, bottle.category].filter(Boolean).join(" · "))} — already in your collection</p>
     ${decisionBannerHtml(match)}
@@ -300,26 +434,29 @@ function renderStoreModeResult(detail, dispatchNav) {
   document.getElementById("storeViewBtn").addEventListener("click", () => dispatchNav("bottle", bottle.id));
 }
 
-function renderDraftForm(draft, dispatchNav, provenance) {
+function renderDraftForm(draft, dispatchNav, provenance, shouldRate = true, { offerLink = false } = {}) {
   draft = draft || {};
   const view = el("view-scan");
   view.innerHTML = `
-    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Scan another</button>
-    <h2>Confirm Bottle</h2>
+    <button class="btn-ghost" data-action="rescan" style="padding-left:0">← Add Drink</button>
+    <span class="eyebrow">STEP 01 · FIND DRINK</span><h2>Confirm your drink</h2>
     ${provenance ? `<p class="field-hint">Pulled from ${escapeHtml(provenance.source)} (${escapeHtml(provenance.confidence)} confidence) — <a href="${escapeHtml(provenance.sourceUrl || "#")}" target="_blank" rel="noopener">source</a>. Double-check everything below before saving.</p>` : `<p class="field-hint">No external match — fill in what you know. Everything else can be added later.</p>`}
     ${draft.image_url ? `<img src="${escapeHtml(draft.image_url)}" alt="" style="width:100px;border-radius:10px;margin-bottom:10px">` : ""}
     <label>Name</label><input type="text" id="draftName" value="${escapeHtml(draft.name || "")}" placeholder="Bottle name">
     <label>Brand</label><input type="text" id="draftBrand" value="${escapeHtml(draft.brand || "")}">
     <label>Category</label>
-    <select id="draftCategory">${CATEGORIES.map((c) => `<option value="${c.id}">${c.label}</option>`).join("")}</select>
+    <select id="draftCategory">${draft.category === "unknown" ? `<option value="" selected>Choose category</option>` : ""}${CATEGORIES.map((c) => `<option value="${c.id}" ${c.id === draft.category ? "selected" : ""}>${c.label}</option>`).join("")}</select>
     <label>Barcode</label><input type="text" id="draftBarcode" value="${escapeHtml(draft.barcode || "")}" readonly>
     ${draft.description ? `<label>Description (from source)</label><textarea id="draftDescription">${escapeHtml(draft.description)}</textarea>` : ""}
-    <button class="btn btn-primary btn-block" id="draftSaveBtn" style="margin-top:16px">Save Bottle</button>
+    <button class="btn btn-primary btn-block" id="draftSaveBtn" style="margin-top:16px">${shouldRate ? "Continue to 10 tasting questions →" : "Save to collection"}</button>
+    ${offerLink && draft.barcode ? `<button class="btn btn-secondary btn-block" id="draftLinkBtn" style="margin-top:8px">This is a bottle I already have — link barcode</button>` : ""}
   `;
+  document.getElementById("draftLinkBtn")?.addEventListener("click", () => renderLinkPicker(draft.barcode, dispatchNav, shouldRate));
   view.querySelector("[data-action='rescan']").addEventListener("click", () => renderScan(dispatchNav));
   document.getElementById("draftSaveBtn").addEventListener("click", async () => {
     const name = document.getElementById("draftName").value.trim();
     if (!name) { toast("Name is required."); return; }
+    if (!document.getElementById("draftCategory").value) { toast("Choose a category."); return; }
     try {
       const res = await api.createBottle({
         name,
@@ -332,10 +469,14 @@ function renderDraftForm(draft, dispatchNav, provenance) {
         description: document.getElementById("draftDescription")?.value.trim() || null,
         data_source: provenance ? provenance.source : "manual",
         source_confidence: provenance ? provenance.confidence : "medium",
-        status_tags: ["tried"]
+        status_tags: ["want_to_try"]
       });
       toast("Bottle saved.");
-      dispatchNav("bottle", res.bottle.id);
+      // Remember the code so the next scan of this product resolves instantly.
+      const code = document.getElementById("draftBarcode").value.trim();
+      if (code) await api.saveBarcode({ barcode: code, bottle_id: res.bottle.id, product_name: draft.name || null, brand: draft.brand || null, image_url: draft.image_url || null }).catch(() => {});
+      await dispatchNav("bottle", res.bottle.id);
+      if (shouldRate) await openLogPourSheet(res.bottle, { fromAdd:true });
     } catch (err) { toast(`Couldn't save: ${err.message}`); }
   });
 }

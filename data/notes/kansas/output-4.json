@@ -1,0 +1,1377 @@
+[
+ {
+  "id": "ks-del-maguey-chichicapa-single-village-mezcal",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer page gives no formal nose/palate/finish; calls it the classic archetype of a broad-valley Oaxacan mezcal, made by Faustino Garcia Vasquez in San Baltazar Chichicapam.",
+   "source_url": "https://delmaguey.com/chichicapa/"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Omari Wheat)",
+    "source_url": "https://distiller.com/spirits/del-maguey-chichicapa-mezcal",
+    "score": 94,
+    "scale": "100",
+    "nose": "Intense; butterscotch, burnt sugar, fireworks, pine, grilled pineapple and green bean.",
+    "palate": "Tamarind, butterscotch, smoky bacon and sea salt.",
+    "finish": null,
+    "summary": "Expert rating; flavor profile listed as rich and sweet. Listing shows 46% ABV.",
+    "year": null
+   },
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/5158/del-maguey-chichicapa",
+    "score": null,
+    "scale": null,
+    "nose": "Mineral sea air, delicate cigar smoke, plantain and toasted almond.",
+    "palate": "Green bell and chili pepper, smoked salted almond, meaty leather and cedar.",
+    "finish": "Lingering green pepper with gentle smoke, mint, basil and cedar.",
+    "summary": "Green, vegetal, delicately smoky and spicy. Difford's tasting (2024) lists 47.8% ABV, so likely a different lot than the 46% label.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 48,
+   "proof": 96,
+   "age": "Unaged (joven)",
+   "mash_bill": "100% Espadin agave; palenquero Faustino Garcia Vasquez",
+   "cask": "Twice distilled in wood-fired copper pot stills",
+   "region": "San Baltazar Chichicapam, Oaxaca, Mexico",
+   "source_url": "https://delmaguey.com/chichicapa/"
+  },
+  "flavor_terms": [
+   "butterscotch",
+   "burnt sugar",
+   "pine",
+   "grilled pineapple",
+   "tamarind",
+   "smoky bacon",
+   "sea salt",
+   "green pepper",
+   "toasted almond",
+   "cedar"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site gives facts only (no structured tasting notes). ABV varies by lot: producer site 48%, Distiller 46% (matches label), Difford's 47.8%."
+ },
+ {
+  "id": "ks-banhez-cushie-mezcal",
+  "producer": {
+   "nose": "Tropical fruit, floral notes, fresh herbs and spice.",
+   "palate": "Tropical fruit, eucalyptus, cinnamon and honey.",
+   "finish": null,
+   "summary": "Retailer-relayed notes (Cool Chile Co., attribution not stated as producer). The Whisky Exchange describes plentiful tropical fruit and herbaceous character, with Cuishe noted for dry, herbal, mineral qualities.",
+   "source_url": "https://www.coolchile.co.uk/products/banhez-mezcal-70cl-cuishe"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": "Unaged (joven)",
+   "mash_bill": "100% Cuishe (Agave karwinskii); wild-yeast fermentation 5-6 days in open wooden tanks",
+   "cask": "Wood-fired pit oven, tahona crush, copper pot still with refrescador",
+   "region": "San Miguel Ejutla (La Noria), Oaxaca, Mexico",
+   "source_url": "https://www.coolchile.co.uk/products/banhez-mezcal-70cl-cuishe"
+  },
+  "flavor_terms": [
+   "tropical fruit",
+   "floral",
+   "fresh herbs",
+   "eucalyptus",
+   "cinnamon",
+   "honey",
+   "herbaceous",
+   "mineral"
+  ],
+  "confidence": "low",
+  "notes": "Only retailer descriptions found (Cool Chile, The Whisky Exchange); no producer page or professional critic review located. A user review on mezcalpro.com (4/5, guava/papaya, cinnamon, creamy chocolate) was not counted as a critic."
+ },
+ {
+  "id": "ks-ilegal-joven-mezcal",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "No producer page fetched. Retailer Sip Tequila (its own notes) describes smoke over ripe tropical fruit and roasted agave, charred citrus peel, vanilla and herbs, with a clean mineral finish.",
+   "source_url": "https://siptequila.com/products/ilegal-mezcal-joven"
+  },
+  "critics": [
+   {
+    "source": "Tequila.net",
+    "source_url": "https://www.tequila.net/mezcal-reviews/blancos/ilegal-mezcal-joven.html",
+    "score": 92,
+    "scale": "100",
+    "nose": "Sweet smoked agave, light floral, ash, tobacco and eucalyptus.",
+    "palate": "Sweet, tangy agave with a hint of raisin; floral and smoky body.",
+    "finish": "Medium length with smoke and ash.",
+    "summary": "Editor review; subscores in low 90s across aroma, taste, body and finish.",
+    "year": null
+   },
+   {
+    "source": "Distiller (Amanda Schuster)",
+    "source_url": "https://distiller.com/spirits/ilegal-mezcal-joven",
+    "score": 82,
+    "scale": "100",
+    "nose": null,
+    "palate": "Earthy and vegetal: green bell, chili and sweet pepper against pineapple, grapefruit and blood orange.",
+    "finish": null,
+    "summary": "Expert rating; flavor profile listed as smoky.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (joven)",
+   "mash_bill": "100% Espadin agave",
+   "cask": "Earthen pit oven (mesquite and eucalyptus wood), double distilled in copper stills",
+   "region": "Oaxaca, Mexico",
+   "source_url": "https://www.tequila.net/mezcal-reviews/blancos/ilegal-mezcal-joven.html"
+  },
+  "flavor_terms": [
+   "smoked agave",
+   "floral",
+   "ash",
+   "tobacco",
+   "eucalyptus",
+   "raisin",
+   "green pepper",
+   "pineapple",
+   "grapefruit",
+   "blood orange"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site not reachable; producer fields left null. Wine Enthusiast review page failed (redirect loop)."
+ },
+ {
+  "id": "ks-400-conejos-joven-mezcal",
+  "producer": {
+   "nose": "Campfire and ash with faint ripe fruit and light herbal notes.",
+   "palate": "Soft, with fresh wood subtly joined to sweet cooked-agave notes.",
+   "finish": "Pleasant and smoky.",
+   "summary": "Producer notes as relayed by retailer wine.com (also echoed as winery notes on SaratogaWine.com).",
+   "source_url": "https://www.wine.com/product/400-conejos-joven-espadin-mezcal/993002"
+  },
+  "critics": [
+   {
+    "source": "Beverage Testing Institute (via SaratogaWine.com)",
+    "source_url": "https://www.saratogawine.com/product/400-conejos-mezcal-joven-espadin-750ml/",
+    "score": 93,
+    "scale": "100",
+    "nose": "Fennel seed, sourdough, heavy cream and roasted corn.",
+    "palate": "Velvety, vibrant, dry medium body.",
+    "finish": "Long and nuanced: grilled corn, drawn butter, smoked herbs, grilled asparagus.",
+    "summary": "BTI review relayed by retailer; calls it a benchmark entry mezcal with lighter smoke.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "Unaged (joven), bottled within two months of distillation",
+   "mash_bill": "100% Espadin agave",
+   "cask": "Agave cooked in underground conical oven fired with mesquite and encino oak (per Distiller listing)",
+   "region": "Oaxaca, Mexico",
+   "source_url": "https://www.wine.com/product/400-conejos-joven-espadin-mezcal/993002"
+  },
+  "flavor_terms": [
+   "campfire",
+   "ash",
+   "ripe fruit",
+   "herbal",
+   "cooked agave",
+   "fresh wood",
+   "fennel seed",
+   "roasted corn",
+   "heavy cream",
+   "smoked herbs"
+  ],
+  "confidence": "high",
+  "notes": "Both producer notes and the BTI review are retailer-relayed, not fetched from primary pages. Distiller lists 38% ABV for its entry (community rating only, not used); label here is 40%."
+ },
+ {
+  "id": "ks-montelobos-tobala-mezcal",
+  "producer": {
+   "nose": "Lemon, liquorice, green pepper, pear and peppery spice.",
+   "palate": "Basil, roasted fig, macadamia and garden herbs.",
+   "finish": null,
+   "summary": "Product description on The Whisky Exchange (retailer; likely brand-supplied but not attributed). No producer page fetched.",
+   "source_url": "https://www.thewhiskyexchange.com/p/67230/montelobos-tobala-mezcal"
+  },
+  "critics": [
+   {
+    "source": "Drinkhacker (Christopher Null)",
+    "source_url": "https://www.drinkhacker.com/2021/09/13/review-montelobos-mezcal-joven-tobala/",
+    "score": null,
+    "scale": null,
+    "nose": "Pungent, mildly smoky and vegetal, but led by solvent-like notes (furniture polish, paint thinner) and sharp lemon oil.",
+    "palate": "Earthy and vegetal; funky veggie notes return to solvent, lacking fruit.",
+    "finish": "Dull, ruddy earthiness rather than smoke.",
+    "summary": "Graded B-; quirky but outclassed at its price, per the reviewer. Reviewed at 93.6 proof.",
+    "year": 2021
+   },
+   {
+    "source": "88 Bamboo",
+    "source_url": "https://88bamboo.co/blogs/tequila-mezcal-reviews/entering-the-wolf-pack-with-montelobos-espadin-vs-ensamble-vs-tobala-vs-pechuga",
+    "score": null,
+    "scale": null,
+    "nose": "Gentle smoke, poached pear and plenty of dried herbs.",
+    "palate": "Fresh and vegetal with cucumber and clay, a fleeting cotton-candy note, creamy texture.",
+    "finish": "Clean and brief with subtle herbs.",
+    "summary": "Called clean, approachable and beginner friendly. ABV not stated in article.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 46.8,
+   "proof": 93.6,
+   "age": "Unaged (joven)",
+   "mash_bill": "100% Tobala agave; fermented in wooden tanks",
+   "cask": "Roasted in underground pit",
+   "region": "Puebla, Mexico (per Drinkhacker)",
+   "source_url": "https://www.thewhiskyexchange.com/p/67230/montelobos-tobala-mezcal"
+  },
+  "flavor_terms": [
+   "lemon",
+   "liquorice",
+   "green pepper",
+   "pear",
+   "basil",
+   "roasted fig",
+   "macadamia",
+   "herbs",
+   "vegetal",
+   "earthy"
+  ],
+  "confidence": "medium",
+  "notes": "Producer-style notes only via retailer (unattributed). Critics split sharply: Drinkhacker negative (B-), 88 Bamboo positive. Region Puebla per Drinkhacker only."
+ },
+ {
+  "id": "ks-mezcal-rey-campero-joven-espadin-vicente-agave-angustfolia",
+  "producer": {
+   "nose": "Tepache, straw and olive brine.",
+   "palate": "Orange peel, marshmallow and hoja santa.",
+   "finish": "Oregano, tobacco and clay.",
+   "summary": "Notes from retailer Flaviar's listing (attribution to brand not stated). Made by Romulo Sanchez Parada in Candelaria Yegole, Oaxaca, at a family palenque dating to 1870.",
+   "source_url": "https://flaviar.com/rey-campero/rey-campero-espadin"
+  },
+  "critics": [
+   {
+    "source": "Mezcalistas (Tess Rose Lampert)",
+    "source_url": "https://www.mezcalistas.com/rey-campero-espadin-tasting-notes/",
+    "score": null,
+    "scale": null,
+    "nose": "Seemingly endless clay, wet earth, charred cinnamon and sweet spicy smoke.",
+    "palate": "Blistered pineapple, bright acidity, fresh aloe and hay; piquant texture.",
+    "finish": "Delicate white florals; slightly sweet and earthy.",
+    "summary": "Reviewed bottle at 48.5% ABV, distilled August 2019.",
+    "year": null
+   },
+   {
+    "source": "Distiller (Amanda Schuster)",
+    "source_url": "https://distiller.com/spirits/rey-campero-espadin-mezcal",
+    "score": 92,
+    "scale": "100",
+    "nose": "Lily of the valley, grapefruit rind and green pepper.",
+    "palate": null,
+    "finish": null,
+    "summary": "Surprisingly floral and delicate for the style; profile listed as fruity. Listing shows 48% ABV.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 48.5,
+   "proof": 97,
+   "age": "Unaged (joven); rested in glass",
+   "mash_bill": "Espadin (A. angustifolia), 7-10 years old; tahona crushed, open-air fermentation with natural yeasts up to 12 days",
+   "cask": "In-ground oven up to 5 days; double distilled in small copper pot stills",
+   "region": "Oaxaca, Mexico (Mezcalistas gives Zoquitlan; Flaviar gives Candelaria Yegole)",
+   "source_url": "https://www.mezcalistas.com/rey-campero-espadin-tasting-notes/"
+  },
+  "flavor_terms": [
+   "clay",
+   "wet earth",
+   "cinnamon",
+   "smoke",
+   "pineapple",
+   "aloe",
+   "hay",
+   "white floral",
+   "grapefruit rind",
+   "green pepper"
+  ],
+  "confidence": "high",
+  "notes": "Label names 'Vicente', but every source found credits Romulo Sanchez Parada; could be a different lot/mezcalero not covered by these sources. ABV varies by lot (48 vs 48.5%); Mezcalistas lot matches 48.5%."
+ },
+ {
+  "id": "ks-vago-el-manantial-by-hijos-de-barriga-mezcal",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "No producer notes found. Retailer Wooden Cork (own description) cites earthy roasted agave, layered smoke and minerality with a long finish; Mission Liquor notes the Tapanala spring water used for fermentation and proofing.",
+   "source_url": "https://woodencork.com/products/vago-mezcal-el-manantial-by-hijos-de-barriga-750ml"
+  },
+  "critics": [
+   {
+    "source": "Mezcal Report",
+    "source_url": "https://mezcal.report/r/vago-el-manantial",
+    "score": 3.5,
+    "scale": "5",
+    "nose": "Wet stone over cooked agave with green herbs.",
+    "palate": "Mid-weight and clean, with a distinct mineral signature from the spring water.",
+    "finish": "Mineral, faintly sweet and long.",
+    "summary": "Reviewed at 43% ABV.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": "Unaged (joven)",
+   "mash_bill": "Espadin (A. angustifolia); mezcaleros Adan and Joelito Barriga; proofed with local Sierra Sur spring water",
+   "cask": "Tahona mill, copper still",
+   "region": "Hacienda Tapanala, Oaxaca, Mexico",
+   "source_url": "https://www.mezcalreviews.com/mezcal/vago-el-manantial/"
+  },
+  "flavor_terms": [
+   "wet stone",
+   "cooked agave",
+   "green herbs",
+   "mineral",
+   "roasted agave",
+   "smoke",
+   "earthy"
+  ],
+  "confidence": "medium",
+  "notes": "Sources list 43% ABV vs 42% on the Kansas label (batch variation likely). Mezcal Report's editorial standing is unclear. Community reviews on mezcalreviews.com not used as critics."
+ },
+ {
+  "id": "ks-planteray-xaymaca-special-dry-pot-still-rum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "Beverage Testing Institute (Tastings.com)",
+    "source_url": "https://www.tastings.com/Spirits-Review/Planteray-Xaymaca-Special-Dry-Rum-Jamaica-86-Proof-05-01-2024.aspx",
+    "score": 92,
+    "scale": "100",
+    "nose": "Grilled ripe pineapple, smoked banana peel, toffee, cardamom and peanut brittle.",
+    "palate": "Velvety yet crisp and dry, light-to-medium body; dunder, umami smoke, grilled fruit, roasted spiced nuts, cedar shavings.",
+    "finish": "Tingling medium length with smoke and spice.",
+    "summary": "Gold medal; vibrant, tropical-fruit-forward Jamaican rum. Reviewed at 43% ABV under the Planteray name.",
+    "year": 2024
+   },
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/6512/plantation-xaymaca-rum",
+    "score": null,
+    "scale": null,
+    "nose": "Pungent buttery pastry, vanilla, baked banana, pineapple, zesty orange and faint smoke.",
+    "palate": "Full-bodied and dry; ripe pear amid tropical fruit with peppery pot-still spice.",
+    "finish": "Pot-still spice with mellowing vanilla, buttery pastry and a little smoke.",
+    "summary": "Big, characterful rum. Sampled 2020 (Plantation label), 43% ABV.",
+    "year": 2020
+   },
+   {
+    "source": "The Fat Rum Pirate",
+    "source_url": "https://thefatrumpirate.com/plantation-xaymaca-special-dry",
+    "score": 2.5,
+    "scale": "5",
+    "nose": "Sweet and oaky with cognac influence; pineapple juice, black banana, spicy oak, lemon zest.",
+    "palate": "Spicy (white pepper, ginger, allspice) with fruit and toffee, but thin mid-palate.",
+    "finish": "Woody and fairly short.",
+    "summary": "Found it too soft and polite, lacking typical Jamaican pot-still funk. Reviewed Plantation-labelled 43% bottling.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": "No age statement; 1-3 years in ex-bourbon casks in Jamaica plus about 1 year in ex-cognac French oak",
+   "mash_bill": "100% pot still Jamaican rum from Long Pond and Clarendon distilleries; 0 g/L dosage (per Fat Rum Pirate)",
+   "cask": "Ex-bourbon American oak, finished in cognac-seasoned French oak",
+   "region": "Jamaica",
+   "source_url": "https://www.diffordsguide.com/beer-wine-spirits/6512/plantation-xaymaca-rum"
+  },
+  "flavor_terms": [
+   "pineapple",
+   "banana",
+   "toffee",
+   "cardamom",
+   "smoke",
+   "vanilla",
+   "buttery pastry",
+   "orange",
+   "white pepper",
+   "cedar"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site (planteray.com) unreachable; no producer notes. Two of three critics reviewed the pre-2023 'Plantation' label of the same 43% expression."
+ },
+ {
+  "id": "ks-planteray-o-f-t-d-overproof-rum",
+  "producer": {
+   "nose": "Intense, precise coffee, orange, plum, jam and truffle.",
+   "palate": "Caramel cream, chocolate and vanilla, then cinnamon, raisin, nutmeg, oak and molasses with smoky touches.",
+   "finish": "Long, with dark chocolate, clove and caramel.",
+   "summary": "Maison Ferrand/Plantation notes as relayed by retailer InternetWines.com. Blend developed by Alexandre Gabriel with a group of rum experts; name stands for Old Fashioned Traditional Dark.",
+   "source_url": "https://internetwines.com/products/plantation-o-f-t-d-overproof-rum"
+  },
+  "critics": [
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/6049/plantation-overproof-oftd-rum",
+    "score": null,
+    "scale": null,
+    "nose": "Pungent burnt currant, caramelised brown sugar, orange zest, vanilla, coffee, chocolate, overripe banana.",
+    "palate": "Spicy and fruity: plum, currant, molasses, vanilla, dry oak, charcoal, warming baking spice and black pepper.",
+    "finish": "Clove, cinnamon, black pepper and burnt currant.",
+    "summary": "Powerful and characterful. Sampled 2017 (Plantation label) at 69%.",
+    "year": 2017
+   },
+   {
+    "source": "Spirits Review",
+    "source_url": "https://spiritsreview.com/reviews/planteray-69-overproof-o-f-t-d-old-fashioned-traditional-dark-rum-1/",
+    "score": 8,
+    "scale": "10",
+    "nose": "Heavy molasses with cane/grassy notes and earthy funk; cinnamon, nutmeg, allspice, tropical fruit, a touch of brine.",
+    "palate": "Molasses and baking spice against fruit, with brine, citrus and slight Jamaican funk.",
+    "finish": "Drying with only a touch of burn.",
+    "summary": "Navy-style overproof; value rated 9/10. Reviewed at 138 proof.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": 69,
+   "proof": 138,
+   "age": "No age statement (blend)",
+   "mash_bill": "Molasses rums from Barbados (WIRD), Jamaica (Long Pond) and Guyana (Demerara Distillers); 0 g/L dosage",
+   "cask": null,
+   "region": "Barbados, Jamaica, Guyana",
+   "source_url": "https://www.diffordsguide.com/beer-wine-spirits/6049/plantation-overproof-oftd-rum"
+  },
+  "flavor_terms": [
+   "coffee",
+   "orange",
+   "plum",
+   "molasses",
+   "chocolate",
+   "vanilla",
+   "burnt currant",
+   "clove",
+   "cinnamon",
+   "black pepper"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are retailer-relayed (planteray.com unreachable). Difford's sampled the earlier Plantation-labelled release of the same 69% blend."
+ },
+ {
+  "id": "ks-planteray-3-stars-rum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "No producer notes fetched. Retailer InternetWines.com relays brand framing: a tribute to historic Caribbean rums, with Barbados giving richness, Trinidad finesse and Jamaica structure.",
+   "source_url": "https://internetwines.com/products/plantation-3-stars-rum"
+  },
+  "critics": [
+   {
+    "source": "Spirits Review (Chris Carlsson)",
+    "source_url": "https://spiritsreview.com/reviews/planteray-3-stars-white-rum/",
+    "score": 8,
+    "scale": "10",
+    "nose": "Tropical fruit, vanilla, minerals and cardamom.",
+    "palate": "Lush, fruity and raw, with cane, spice, vanilla, grass and mineral notes.",
+    "finish": null,
+    "summary": "Holds its presence in cocktails without dominating; value rated 9/10. Reviewed at 41.2%.",
+    "year": 2025
+   },
+   {
+    "source": "The Daily Pour",
+    "source_url": "https://thedailypour.com/spirit/plantation-3-stars-rum/",
+    "score": 80,
+    "scale": "100",
+    "nose": "Bright and fruity: coconut meat, confectioners sugar, sawdust, mango.",
+    "palate": "Good mouthfeel; honey, coconut, lightly lactic, lots of caramel, restrained funk.",
+    "finish": "Short but flavorful: coconut cream, lemon, mango, pencil shavings, honey.",
+    "summary": "Cocktail workhorse that also works neat or on ice. Reviewed Plantation-labelled bottle at 41.2%.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 41.2,
+   "proof": 82.4,
+   "age": "Blend: Barbados unaged, Trinidad 2-3 years, Jamaica unaged with a small 10-year portion",
+   "mash_bill": "Molasses rums from Barbados, Trinidad and Jamaica; twin column, column and pot stills",
+   "cask": null,
+   "region": "Barbados, Trinidad, Jamaica",
+   "source_url": "https://internetwines.com/products/plantation-3-stars-rum"
+  },
+  "flavor_terms": [
+   "tropical fruit",
+   "vanilla",
+   "mineral",
+   "cardamom",
+   "cane",
+   "grass",
+   "coconut",
+   "mango",
+   "honey",
+   "caramel"
+  ],
+  "confidence": "medium",
+  "notes": "No producer tasting notes (planteray.com unreachable). Daily Pour reviewed the earlier Plantation label of the same 41.2% blend."
+ },
+ {
+  "id": "ks-diplomatico-reserva-exclusiva-rum",
+  "producer": {
+   "nose": "Toffee, orange peel and licorice.",
+   "palate": "Complex and balanced, with oak and vanilla.",
+   "finish": "Long-lasting, carried by the oak and vanilla notes.",
+   "summary": "Amber; producer stresses its signature smoothness and balance as a super-premium sipping rum.",
+   "source_url": "https://www.rondiplomatico.com/product/reserva-exclusiva/"
+  },
+  "critics": [
+   {
+    "source": "Natalie MacLean",
+    "source_url": "https://www.nataliemaclean.com/wine-reviews/diplomatico-reserva-exclusiva-rum/349336",
+    "score": 96,
+    "scale": "100",
+    "nose": null,
+    "palate": "Rich, velvety and full-bodied; caramelized toffee, orange zest, cinnamon-dusted cocoa.",
+    "finish": "Lingering hint of cinnamon and cocoa.",
+    "summary": "Smooth, sweet-profile sipper; reviewed at 40%.",
+    "year": 2025
+   },
+   {
+    "source": "Distiller (Amanda Schuster)",
+    "source_url": "https://distiller.com/spirits/ron-diplomatico-reserva-exclusiva-rum",
+    "score": 94,
+    "scale": "100",
+    "nose": null,
+    "palate": "Bold, dark, fruity and full-bodied.",
+    "finish": null,
+    "summary": "A rum that really tastes of something; profile listed as sweet and rich.",
+    "year": null
+   },
+   {
+    "source": "The Fat Rum Pirate",
+    "source_url": "https://thefatrumpirate.com/diplomatico-reserva-exclusiva",
+    "score": 3,
+    "scale": "5",
+    "nose": "Very sweet: orange, grape, raisin, chocolate and a syrupy note.",
+    "palate": "Smooth and viscous; vanilla, fudge/toffee sauce, slightly bitter cocoa, liqueur-like.",
+    "finish": "Fairly short with some oak.",
+    "summary": "Enjoyable and easy but reviewer suspects added sugar/liqueur, which lowered the rating.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "No age statement; blend of rums up to 12 years (per Distiller)",
+   "mash_bill": "Molasses and sugarcane honey; copper pot-still rums (per Distiller)",
+   "cask": "Ex-bourbon barrels (per Distiller)",
+   "region": "Venezuela",
+   "source_url": "https://distiller.com/spirits/ron-diplomatico-reserva-exclusiva-rum"
+  },
+  "flavor_terms": [
+   "toffee",
+   "orange peel",
+   "licorice",
+   "oak",
+   "vanilla",
+   "cocoa",
+   "cinnamon",
+   "raisin",
+   "fudge",
+   "chocolate"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gives nose/palate only; finish line paraphrases its palate sentence. Age/still/cask facts from Distiller, not the producer."
+ },
+ {
+  "id": "ks-el-dorado-aged-12-years-finest-demerara-rum",
+  "producer": {
+   "nose": "Lush tropical fruit and spice with hints of honey and dark sugar.",
+   "palate": "Mellow and full-bodied, rich in fruit and spice.",
+   "finish": "Elegant and dry.",
+   "summary": "Estery richness credited to wooden and metal Coffey stills.",
+   "source_url": "https://theeldoradorum.com/blended-rums/12-year-old"
+  },
+  "critics": [
+   {
+    "source": "Difford's Guide",
+    "source_url": "https://www.diffordsguide.com/beer-wine-spirits/1788/el-dorado-12-year-old",
+    "score": null,
+    "scale": null,
+    "nose": "Prunes, dates, banoffee pie and toffee apple, with hints of tar, coffee and vanilla.",
+    "palate": "Slightly sweet: mocha, dark chocolate, sherry trifle, cooked apple and cinnamon.",
+    "finish": "Drier; dark chocolate and espresso with lingering spice.",
+    "summary": "Sampled 2010 at 40% ABV.",
+    "year": 2010
+   },
+   {
+    "source": "The Fat Rum Pirate",
+    "source_url": "https://thefatrumpirate.com/el-dorado-aged-12-years-finest-demerara-rum",
+    "score": 3,
+    "scale": "5",
+    "nose": "Sweet raisin, plum and caramel; lighter and fruitier than typical Demerara, some strawberry.",
+    "palate": "Raisin and caramel, then milk chocolate and berries; a little underpowered, dries quickly.",
+    "finish": "Short; oak and white pepper with an astringent aftertaste.",
+    "summary": "Good but only just; notes additive level cut to about 6 g/L from 39 g/L in 2014. Reviewed at 40%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "12 years",
+   "mash_bill": "Molasses rum blended from Enmore wooden Coffey, Diamond metal Coffey and Port Mourant double wooden pot stills (per Fat Rum Pirate)",
+   "cask": null,
+   "region": "Guyana (Demerara Distillers, Diamond)",
+   "source_url": "https://thefatrumpirate.com/el-dorado-aged-12-years-finest-demerara-rum"
+  },
+  "flavor_terms": [
+   "tropical fruit",
+   "honey",
+   "dark sugar",
+   "spice",
+   "prune",
+   "toffee apple",
+   "dark chocolate",
+   "espresso",
+   "raisin",
+   "caramel"
+  ],
+  "confidence": "high",
+  "notes": "Difford's tasting is old (2010) and may predate the reduced-sugar reformulation noted by Fat Rum Pirate. Still lists differ slightly between sources."
+ },
+ {
+  "id": "ks-el-dorado-aged-15-years-finest-demerara-rum",
+  "producer": {
+   "nose": "Full nose of dark coffee, candied orange, almond, dark chocolate, pepper and vanilla.",
+   "palate": "Grilled tropical fruit with smooth oaky spice; moderately full-bodied.",
+   "finish": "Earthy, peat-like, attributed to the Port Mourant still.",
+   "summary": "Blend from EHP wooden Coffey, metal Coffey, Port Mourant double wooden pot and Versailles single wooden pot stills.",
+   "source_url": "https://theeldoradorum.com/blended-rums/15-year-old"
+  },
+  "critics": [
+   {
+    "source": "The Fat Rum Pirate",
+    "source_url": "https://thefatrumpirate.com/el-dorado-15",
+    "score": null,
+    "scale": null,
+    "nose": "Very sweet at first: apple, banana and rum-soaked raisins.",
+    "palate": "Sweet stone fruit, then oak with slightly bitter dark chocolate and cocoa; coating and intense.",
+    "finish": "Long, spicy and fruity with oak and bittersweetness.",
+    "summary": "Very high praise (top star rating); notes it uses different still components than the 12, not just longer aging. Reviewed at 43% (UK).",
+    "year": null
+   },
+   {
+    "source": "The Whisky Exchange (Stuart P, retailer staff)",
+    "source_url": "https://www.thewhiskyexchange.com/p/4478/el-dorado-rum-15-year-old-special-reserve",
+    "score": null,
+    "scale": null,
+    "nose": "Christmas-cake character: candied peel, allspice, cinnamon, dried fruit, golden syrup.",
+    "palate": "Spicy dried fruit layered with honey, gingerbread and toasty oak.",
+    "finish": "Persistent, honeyed and spicy.",
+    "summary": "Retailer staff tasting note; 43% UK bottling, colouring listed.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": "15 years",
+   "mash_bill": "Molasses rum from EHP wooden Coffey, metal Coffey, Port Mourant and Versailles wooden pot stills",
+   "cask": null,
+   "region": "Guyana",
+   "source_url": "https://theeldoradorum.com/blended-rums/15-year-old"
+  },
+  "flavor_terms": [
+   "dark coffee",
+   "candied orange",
+   "almond",
+   "dark chocolate",
+   "vanilla",
+   "tropical fruit",
+   "oak",
+   "raisin",
+   "dried fruit",
+   "gingerbread"
+  ],
+  "confidence": "high",
+  "notes": "ABV mismatch: Kansas record says 40% (80 proof) but both critic sources list 43%; facts.abv is the 43% from those sources (producer page gave no ABV). Fat Rum Pirate star score not recorded because the exact value was unclear."
+ },
+ {
+  "id": "ks-mount-gay-xo-cask-strength-limited-edition-barbados-rum",
+  "producer": {
+   "nose": null,
+   "palate": "Ripe banana and toasted almond.",
+   "finish": "Smooth, with vanilla and spice.",
+   "summary": "Master blender (Allen Smith) notes as relayed in a Chilled Magazine release article (2016); nose described only in general terms. Limited to 3,000 bottles for Barbados' 50th independence anniversary.",
+   "source_url": "https://chilledmagazine.com/mount-gay-releases-limited-edition-xo-cask-strength/"
+  },
+  "critics": [
+   {
+    "source": "Drinkhacker (Christopher Null)",
+    "source_url": "https://www.drinkhacker.com/2016/11/24/review-mount-gay-xo-cask-strength/",
+    "score": null,
+    "scale": null,
+    "nose": "Heavy barrel char, licorice and coffee bean, with dark chocolate and clove.",
+    "palate": "Dusky notes carry through neat; with water, wood, baking spice, sweet coffee, molasses cookie and ginger.",
+    "finish": null,
+    "summary": "Graded A-. Reviewed at 126 proof.",
+    "year": 2016
+   },
+   {
+    "source": "The Fat Rum Pirate",
+    "source_url": "https://thefatrumpirate.com/mount-gay-xo-cask-strength",
+    "score": 4.5,
+    "scale": "5",
+    "nose": "Pronounced spicy oak with bourbon-cask influence; vanilla, creamy nuttiness, hint of banana, toffee and caramel.",
+    "palate": "Spicy and oaky, then toffee, caramel, chocolate, peach and banana.",
+    "finish": "Long, spicy and tingly.",
+    "summary": "A concentrated version of standard XO; can lean dry/oaky; best with a little water. Reviewed at 63%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 63,
+   "proof": 126,
+   "age": "Blend of rums aged 8-15 years",
+   "mash_bill": "Molasses; pot and column still blend (per Fat Rum Pirate)",
+   "cask": null,
+   "region": "Barbados",
+   "source_url": "https://chilledmagazine.com/mount-gay-releases-limited-edition-xo-cask-strength/"
+  },
+  "flavor_terms": [
+   "banana",
+   "toasted almond",
+   "vanilla",
+   "spice",
+   "barrel char",
+   "licorice",
+   "coffee bean",
+   "dark chocolate",
+   "toffee",
+   "caramel"
+  ],
+  "confidence": "high",
+  "notes": "Sources describe the November 2016 limited release (3,000 bottles); if the Kansas registration is a later edition, details may differ. Producer notes are press-relayed; not listed on mountgayrum.com."
+ },
+ {
+  "id": "ks-mount-gay-black-barrel-double-cask-blend-barbados-rum",
+  "producer": {
+   "nose": "Toasted oak and butter balanced by dried fruit and spice.",
+   "palate": "Bold and aromatic: orange zest, black pepper, toasted vanilla and toffee.",
+   "finish": "Warm, medium-bodied and long.",
+   "summary": "Column and double-retort pot still rum, matured in ex-American whiskey casks and finished six months in heavily charred ex-bourbon casks.",
+   "source_url": "https://www.mountgayrum.com/rum/black-barrel/"
+  },
+  "critics": [
+   {
+    "source": "The Fat Rum Pirate",
+    "source_url": "https://thefatrumpirate.com/mount-gay-black-barrel-double-cask-blend",
+    "score": 8,
+    "scale": "10",
+    "nose": "Lighter, softer and more balanced; char and smoke with toffee/caramel and vanilla ice cream.",
+    "palate": "Icing sugar, banana, pineapple, green apple and gooseberry, then dry, slightly bourbon-like spice and char.",
+    "finish": "Good length; spicy, easy-going Barbadian mix of char, vanilla and soft fruit.",
+    "summary": "Reviewed the 2020 Double Cask reformulation (3-7 year blend, more pot still) at 43%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": "Blend of rums aged 3-7 years",
+   "mash_bill": "Molasses; traditional column and double retort pot stills",
+   "cask": "Ex-American whiskey casks, finished 6 months in heavily charred ex-bourbon casks",
+   "region": "Barbados",
+   "source_url": "https://www.thewhiskyexchange.com/p/53561/mount-gay-black-barrel-double-cask-blend"
+  },
+  "flavor_terms": [
+   "toasted oak",
+   "butter",
+   "dried fruit",
+   "orange zest",
+   "black pepper",
+   "vanilla",
+   "toffee",
+   "caramel",
+   "banana",
+   "char"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gives no ABV; 43% and 3-7 year age from The Whisky Exchange and Fat Rum Pirate."
+ },
+ {
+  "id": "ks-appleton-estate-aged-12-years-rare-blend-rum",
+  "producer": {
+   "nose": "Toasted oak, dried fruit and hazelnut, then dark cocoa, molasses, orange peel, vanilla and a hint of coffee.",
+   "palate": null,
+   "finish": "Long, bittersweet and luscious.",
+   "summary": "Deep bronze with gold and mahogany glints; blended by Joy Spence from pot and column still rums, limestone-filtered water, no added flavours. Producer page labels the expression 'Rare Casks'.",
+   "source_url": "https://www.appletonestate.com/rums/12-year-old/"
+  },
+  "critics": [
+   {
+    "source": "Got Rum? (Paul Senft)",
+    "source_url": "https://www.gotrum.com/rumreviews/angels-share-rum-reviews/appleton-estate-12-year-old-rare-casks-rum/",
+    "score": null,
+    "scale": null,
+    "nose": "Wood spice, tobacco, caramel, bitter orange zest, ripe banana, dried apricot and anise.",
+    "palate": "Caramelized vanilla, orange zest and oak spice, then hazelnut, dark chocolate, brown sugar and char.",
+    "finish": "Long; dried apricot and anise as oak tannins take over.",
+    "summary": "Mahogany color; reviewed at 43%.",
+    "year": 2026
+   },
+   {
+    "source": "Thirty One Whiskey (Nick Leghorn)",
+    "source_url": "https://www.thirtyonewhiskey.com/review-appleton-estate-12-year-old-rare-casks-rum/",
+    "score": 4,
+    "scale": "5",
+    "nose": "Pineapple, coconut, banana and mango over brown sugar and toffee.",
+    "palate": "Vanilla, brown sugar and dark chocolate lead, with banana and pineapple behind.",
+    "finish": "Pineapple with restrained Jamaican funk.",
+    "summary": "Smooth and balanced mix of barrel character and tropical fruit. Reviewed at 43%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": "12 years minimum",
+   "mash_bill": "Jamaican molasses rum; pot and column still blend",
+   "cask": "Used bourbon barrels (per Got Rum?)",
+   "region": "Nassau Valley, Jamaica",
+   "source_url": "https://www.appletonestate.com/rums/12-year-old/"
+  },
+  "flavor_terms": [
+   "toasted oak",
+   "dried fruit",
+   "hazelnut",
+   "dark cocoa",
+   "molasses",
+   "orange peel",
+   "vanilla",
+   "coffee",
+   "banana",
+   "pineapple"
+  ],
+  "confidence": "high",
+  "notes": "Kansas label says 'Rare Blend'; current producer and critic naming is 'Rare Casks' (same 12-year, 43% expression). Producer page gives appearance in place of a palate note."
+ },
+ {
+  "id": "ks-hampden-estate-aged-8-years-rum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Producer description relayed by retailer Berry Bros. & Rudd: overripe banana, mango, vanilla and red apple with nutmeg and cinnamon. Producer claims 8 tropical years equal almost 25 in a European climate.",
+   "source_url": "https://www.bbr.com/products-10008123985-hampden-estate-8-year-old-rum-jamaica-46%"
+  },
+  "critics": [
+   {
+    "source": "The Rum Barrel (Alexandru Sandu)",
+    "source_url": "https://therumbarrel.co.uk/2021/11/05/hampden-estate-8-year-old-46-abv/",
+    "score": 86,
+    "scale": "100",
+    "nose": "Easy-going and tropical: vanilla pod, guava, ripe pineapple, pear, clove, cardamom, mint, tobacco, varnish and polish.",
+    "palate": "Spicier: charred oak, cocoa nibs, mint chocolate, peat-like smoke, pineapple juice, cinnamon, ginger, black pepper, lemon zest.",
+    "finish": "Long, with vanilla and fresh pineapple.",
+    "summary": "Score combines flavour, value and transparency subscores. Reviewed at 46%.",
+    "year": 2021
+   },
+   {
+    "source": "88 Bamboo",
+    "source_url": "https://88bamboo.co/blogs/rum-reviews/rum-review-two-classic-hampden-estate-bottlings",
+    "score": null,
+    "scale": null,
+    "nose": "Ripe banana, tropical fruit, banana bread.",
+    "palate": "Banana, pineapple, banana bread, vanilla, caramelised apple, slight savouriness, light spice.",
+    "finish": "Savoury with a light vegetal note.",
+    "summary": "Good introduction to estery, funky Jamaican rum; strong daiquiri base. Reviewed at 46%.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": "8 years minimum, tropically aged in Jamaica",
+   "mash_bill": "Molasses; extended open-vat fermentation; OWH marque (per The Rum Barrel); pot still",
+   "cask": "Ex-bourbon casks",
+   "region": "Jamaica",
+   "source_url": "https://therumbarrel.co.uk/2021/11/05/hampden-estate-8-year-old-46-abv/"
+  },
+  "flavor_terms": [
+   "overripe banana",
+   "mango",
+   "vanilla",
+   "red apple",
+   "nutmeg",
+   "cinnamon",
+   "pineapple",
+   "guava",
+   "cocoa",
+   "banana bread"
+  ],
+  "confidence": "high",
+  "notes": "Producer notes are a single retailer-relayed sentence (put in summary, not split into nose/palate)."
+ },
+ {
+  "id": "ks-worthy-park-109-jamaica-rum",
+  "producer": {
+   "nose": "Heady dried fruit, cocoa and green plantain.",
+   "palate": "Banana, pineapple and orange, then creme brulee, cacao and coffee with high-ester Jamaican funk.",
+   "finish": null,
+   "summary": "Official notes via US importer Back Bar Project; appearance dark chocolate with deep copper flashes.",
+   "source_url": "https://backbarproject.com/our-products/worthy-park-jamaican-rum/worthy-park-109-jamaica-rum/"
+  },
+  "critics": [
+   {
+    "source": "Rum Runner Labs (Will)",
+    "source_url": "https://rumrunnerlabs.com/reviews/worthy-park-109/",
+    "score": 7.9,
+    "scale": "10",
+    "nose": "Chocolate, cola, banana, toasted sugar and oak with background fruit.",
+    "palate": "Oak and banana with orange, bubble gum, allspice and vanilla.",
+    "finish": "Moderate length, echoing chocolate and spice.",
+    "summary": "Neat 7.8, mixer 8.1; rated an incredible value. Notes no added sugar but added color. Reviewed at 54.5%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 54.5,
+   "proof": 109,
+   "age": "Light-ester rum aged 3 years blended with unaged higher-ester rum",
+   "mash_bill": "Estate molasses; 100% copper pot still (double retort per Rum Runner Labs)",
+   "cask": "Ex-bourbon casks (once-used per Difford's)",
+   "region": "Worthy Park Estate, Jamaica",
+   "source_url": "https://backbarproject.com/our-products/worthy-park-jamaican-rum/worthy-park-109-jamaica-rum/"
+  },
+  "flavor_terms": [
+   "dried fruit",
+   "cocoa",
+   "green plantain",
+   "banana",
+   "pineapple",
+   "orange",
+   "creme brulee",
+   "coffee",
+   "chocolate",
+   "cola"
+  ],
+  "confidence": "high",
+  "notes": "Difford's page had facts only, no tasting notes. Rum Runner Labs lists minimum age 0 (reflecting the unaged component)."
+ },
+ {
+  "id": "ks-foursquare-epliogue-single-blended-rum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Official description via US importer Skurnik: rich and unctuous, with grapefruit, caramelized orange, toffee, nougat, butterscotch and brown butter over leather, tobacco and tropical fruit. Oldest Foursquare release; final Exceptional Cask Series bottling (Mark XXXI).",
+   "source_url": "https://www.skurnik.com/sku/exceptional-cask-series-epilogue-mark-xxxi-foursquare-rum-distillery/"
+  },
+  "critics": [
+   {
+    "source": "The Fat Rum Pirate",
+    "source_url": "https://thefatrumpirate.com/foursquare-epilogue",
+    "score": 5,
+    "scale": "5",
+    "nose": "Oak-driven rather than fruity; oak, leather and tobacco lead.",
+    "palate": "Dark toffee and orange peel, then roasted hazelnut and cracked pepper, with clove and cinnamon.",
+    "finish": "Long, dry and clean: leathery tobacco, dark cocoa, dry blackberry.",
+    "summary": "Top rating; a refined conclusion to the ECS series. Reviewed at 57%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 57,
+   "proof": 114,
+   "age": "19 years (tropically aged)",
+   "mash_bill": "Molasses; blend of double-retort copper pot still and twin Coffey column still rum; no added sugar or colouring",
+   "cask": "Ex-bourbon barrels",
+   "region": "Barbados",
+   "source_url": "https://www.skurnik.com/sku/exceptional-cask-series-epilogue-mark-xxxi-foursquare-rum-distillery/"
+  },
+  "flavor_terms": [
+   "grapefruit",
+   "caramelized orange",
+   "toffee",
+   "nougat",
+   "butterscotch",
+   "leather",
+   "tobacco",
+   "hazelnut",
+   "black pepper",
+   "dark cocoa"
+  ],
+  "confidence": "high",
+  "notes": "Kansas name misspells 'Epilogue'. Rumporter (2026) covered the release and reports an IWSC 2026 gold but gave no tasting notes."
+ },
+ {
+  "id": "ks-ron-zacapa-centerario-23-year-old-rum-ron-zacapa-centerario-23-year-old-rum",
+  "producer": {
+   "nose": "Soft and sweet: caramel, vanilla, cacao and butterscotch, then sherried dried fruit.",
+   "palate": "Complex, generous and full-bodied; dried fruit, oak, spice and coffee with cinnamon and ginger.",
+   "finish": "Intricate; honeyed butterscotch, spiced oak and dried fruit.",
+   "summary": "Solera blend of rums aged 6 to 23 years in casks that held American whiskey, sherry and Pedro Ximenez.",
+   "source_url": "https://www.zacaparum.com/en-us/rums/zacapa-23-centenario"
+  },
+  "critics": [
+   {
+    "source": "Distiller (Amanda Schuster)",
+    "source_url": "https://distiller.com/spirits/ron-zacapa-centenario-sistema-solera-23-rum",
+    "score": 92,
+    "scale": "100",
+    "nose": null,
+    "palate": "Roasted coffee, butterscotch, vanilla and dark chocolate, refreshed by citrus, apricot, herbal notes, nutmeg and ginger.",
+    "finish": "Long: caramel, pipe tobacco, cedar and roasted nuts.",
+    "summary": "One of the most pleasurable dark rums to sip neat; profile listed as sweet and rich.",
+    "year": null
+   },
+   {
+    "source": "The Fat Rum Pirate",
+    "source_url": "https://thefatrumpirate.com/ron-zacapa-23",
+    "score": 3.5,
+    "scale": "5",
+    "nose": "Sweet brown sugar like caramel/toffee sauce, with oak and cocoa.",
+    "palate": "Surprisingly dry and oaky; cocoa and tropical fruit develop; very smooth.",
+    "finish": "Smooth with little burn or aftertaste.",
+    "summary": "Complex, works neat or mixed. Reviewed at 40%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "No age statement; solera blend of rums aged 6-23 years",
+   "mash_bill": "Virgin sugarcane honey; pineapple-derived yeast; copper-lined column still (per Distiller)",
+   "cask": "Ex-American whiskey, sherry and Pedro Ximenez casks (solera)",
+   "region": "Guatemala",
+   "source_url": "https://www.zacaparum.com/en-us/rums/zacapa-23-centenario"
+  },
+  "flavor_terms": [
+   "caramel",
+   "vanilla",
+   "cacao",
+   "butterscotch",
+   "dried fruit",
+   "coffee",
+   "oak",
+   "cinnamon",
+   "ginger",
+   "tobacco"
+  ],
+  "confidence": "high",
+  "notes": "Kansas record misspells 'Centenario' and duplicates the name in the producer field. '23' is a solera designation, not a true 23-year age statement."
+ },
+ {
+  "id": "ks-flor-de-cana-aged-12-years-rum",
+  "producer": {
+   "nose": "Red fruit, honey and toasted nuts.",
+   "palate": "Wood, vanilla and baked apple.",
+   "finish": "Smooth and well balanced.",
+   "summary": "Reddish amber single-estate rum aged in bourbon barrels at the foot of an active volcano; no additives.",
+   "source_url": "https://www.flordecana.com/portfolio/12-year"
+  },
+  "critics": [
+   {
+    "source": "Flavor Camp",
+    "source_url": "https://flavorcamp.org/flor-de-cana-12/",
+    "score": 85,
+    "scale": "100",
+    "nose": "Orange zest and vanilla, then caramel, honey, light molasses, cooked apple, allspice, nutmeg and a faint floral lift.",
+    "palate": "Creamy and layered: caramel, nougat, nutmeg, allspice and orange peel.",
+    "finish": "Medium-long: honey, dried orange peel, gentle spice, oak, roasted almond, vanilla, tobacco leaf.",
+    "summary": "Elegant and approachable. Reviewed at 40% (2025 pricing).",
+    "year": 2025
+   },
+   {
+    "source": "The Lone Caner (Ruminsky)",
+    "source_url": "https://thelonecaner.com/r1049/",
+    "score": 80,
+    "scale": "100",
+    "nose": "Gentle molasses, brown sugar, honey, almond, cinnamon and light florals with vanilla, leather and smoke.",
+    "palate": "Caramel, bonbons, light molasses, honey, white chocolate, orange peel and nougat.",
+    "finish": "Brief and simple.",
+    "summary": "Found it unremarkable next to El Dorado 12 and Appleton 12. Reviewed at 40%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "12 years",
+   "mash_bill": "Molasses; column still (per critics)",
+   "cask": "Ex-bourbon barrels",
+   "region": "Nicaragua (San Cristobal volcano)",
+   "source_url": "https://www.flordecana.com/portfolio/12-year"
+  },
+  "flavor_terms": [
+   "red fruit",
+   "honey",
+   "toasted nuts",
+   "vanilla",
+   "baked apple",
+   "orange zest",
+   "caramel",
+   "nougat",
+   "molasses",
+   "almond"
+  ],
+  "confidence": "high",
+  "notes": "Producer page combines palate and finish in one sentence; ABV not on producer page (40% from critics). Wine Enthusiast page failed (redirect loop)."
+ },
+ {
+  "id": "ks-doorly-s-xo-rum-fine-old-barbados-rum",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "No producer tasting notes found; The Rum Howler quotes only label marketing from the house of Martin Doorly.",
+   "source_url": "https://therumhowlerblog.com/rum-reviews/dark-rums/doorlys-xo/"
+  },
+  "critics": [
+   {
+    "source": "The Rum Howler",
+    "source_url": "https://therumhowlerblog.com/rum-reviews/dark-rums/doorlys-xo/",
+    "score": 88,
+    "scale": "100",
+    "nose": "Oak spice, caramel, maple, banana, orange peel, dark tobacco, marmalade and apricot jam; subtle sherry.",
+    "palate": "Sweet fruit and caramel, then tobacco and tart oak; apricot brandy, marzipan, walnut, light smokiness.",
+    "finish": "Peppery spice with caramel, orange zest and a last wisp of smoke.",
+    "summary": "Silver-level; recommended for sipping or quality mixing. Reviewed at 40%.",
+    "year": null
+   },
+   {
+    "source": "The Fat Rum Pirate",
+    "source_url": "https://thefatrumpirate.com/doorlys-xo",
+    "score": 4,
+    "scale": "5",
+    "nose": "Subtle tropical fruit and vanilla with sweet toffee.",
+    "palate": "Sweet toffee, banana, orange and citrus; smooth, slightly dry Bajan style.",
+    "finish": "Long and spicy with a hint of oak.",
+    "summary": "Reviewed at 40%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": "No age statement; blend reportedly 6-10 or 6-12 years (sources differ)",
+   "mash_bill": "Molasses; Foursquare Distillery (R.L. Seale)",
+   "cask": "American oak, then finished in oloroso sherry casks",
+   "region": "Barbados",
+   "source_url": "https://therumhowlerblog.com/rum-reviews/dark-rums/doorlys-xo/"
+  },
+  "flavor_terms": [
+   "oak spice",
+   "caramel",
+   "banana",
+   "orange peel",
+   "tobacco",
+   "apricot",
+   "marzipan",
+   "toffee",
+   "vanilla",
+   "tropical fruit"
+  ],
+  "confidence": "medium",
+  "notes": "ABV mismatch: Kansas label is 43% but both critics reviewed 40% bottlings (facts reflect sources); may be a different market strength. No producer notes."
+ },
+ {
+  "id": "ks-rhum-j-m-v-o-rum",
+  "producer": {
+   "nose": "Heavy wood and vanilla with dried fruit and coconut, opening toward grilled tropical fruit.",
+   "palate": "Lush and spicy (winter baking spice), turning to toasted wood and vanilla with hints of dried and exotic fruit.",
+   "finish": null,
+   "summary": "Robust, spirited agricole pitched as an entry to premium rum; suggested neat or in an Old Fashioned or Manhattan. Notes from Rhum J.M USA site.",
+   "source_url": "https://rhumjmusa.com/rhum-j-m-vo-aged-rum-vieux-agricole/"
+  },
+  "critics": [
+   {
+    "source": "The Rum Howler",
+    "source_url": "https://therumhowlerblog.com/rum-reviews/rhum-j-m-vo/",
+    "score": 85,
+    "scale": "100",
+    "nose": "Richer than expected: maple, caramel, leathery oak, vanilla, almond, cinnamon, wood sap.",
+    "palate": "Light caramel and maple with leathery oak, herbal grassiness, vanilla, baking spice and praline.",
+    "finish": "Fairly short; leathery, grassy, butterscotch, mild heat.",
+    "summary": "Silver-level; pleasant but not highly complex. Reviewed at 43%.",
+    "year": null
+   },
+   {
+    "source": "Rum Runner Labs (Will)",
+    "source_url": "https://rumrunnerlabs.com/reviews/rhum-j-m-v-o/",
+    "score": 7.5,
+    "scale": "10",
+    "nose": "Clean: apple, maple syrup, smoke, toasted sugar, oak, dried fruit.",
+    "palate": "Sweet with ginger, caramel, apple and late grassiness.",
+    "finish": "Moderately strong; nutmeg-led baking spice and orange peel.",
+    "summary": "Neat 7.2, mixer 8.3; strong agricole entry point that shines in cocktails. Reviewed at 43%.",
+    "year": 2025
+   },
+   {
+    "source": "Drinkhacker (Christopher Null)",
+    "source_url": "https://www.drinkhacker.com/2016/05/16/review-rums-of-rhum-j-m-2016/",
+    "score": null,
+    "scale": null,
+    "nose": "Cola and Madeira over vanilla and brown sugar.",
+    "palate": "Wine-forward with red berry, then smoldering, ashy molasses.",
+    "finish": "Raisin-sweet but drying, with lingering molasses.",
+    "summary": "Graded A-. Reviewed at 86 proof.",
+    "year": 2016
+   }
+  ],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": "3 years",
+   "mash_bill": "AOC Martinique rhum agricole from estate-grown fresh cane juice; single column still (per Rum Runner Labs)",
+   "cask": "Toasted new American oak",
+   "region": "Macouba, Martinique",
+   "source_url": "https://rhumjmusa.com/rhum-j-m-vo-aged-rum-vieux-agricole/"
+  },
+  "flavor_terms": [
+   "wood",
+   "vanilla",
+   "dried fruit",
+   "coconut",
+   "tropical fruit",
+   "baking spice",
+   "maple",
+   "caramel",
+   "grassy",
+   "apple"
+  ],
+  "confidence": "high",
+  "notes": "Producer page gives nose and palate only. Region detail (Macouba) from The Rum Howler."
+ },
+ {
+  "id": "ks-hendrick-s-gin",
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": null,
+   "source_url": null
+  },
+  "critics": [
+   {
+    "source": "The Gin Is In (Aaron Knoll)",
+    "source_url": "https://theginisin.com/gin-reviews/hendricks/",
+    "score": 4.5,
+    "scale": "5",
+    "nose": "Juniper lightened by musky rose, with sweet orange, lime zest and elderflower.",
+    "palate": "Classic juniper, coriander and angelica, with candy-like orange and lime mid-palate.",
+    "finish": "Long and astringent: soaked rose petal, lime, cucumber, Earl Grey and some bitterness.",
+    "summary": "Reviewed the 44% US bottling.",
+    "year": null
+   },
+   {
+    "source": "88 Bamboo",
+    "source_url": "https://88bamboo.co/blogs/gin/hendricks-gin-44-abv",
+    "score": null,
+    "scale": null,
+    "nose": "Floral and fresh: musky rose, perfumed elderflower, cucumber; subtle juniper, orange zest.",
+    "palate": "Light and delicate; cucumber juice, frangipani, white tea tannin, mild coriander, white pepper, angelica.",
+    "finish": "Medium; cooling mint and cucumber fading to juniper, potpourri, angelica.",
+    "summary": "Elegant and gentle; best in martinis or G&Ts. Reviewed at 44%.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 44,
+   "proof": 88,
+   "age": null,
+   "mash_bill": "Botanicals: angelica, caraway, chamomile, coriander, cubeb, elderflower, juniper, lemon, orange, orris, yarrow; plus rose and cucumber essences added after distillation",
+   "cask": "Carter-head still and pot (Bennett) still distillates blended",
+   "region": "United Kingdom (William Grant & Sons)",
+   "source_url": "https://theginisin.com/gin-reviews/hendricks/"
+  },
+  "flavor_terms": [
+   "juniper",
+   "rose",
+   "cucumber",
+   "orange",
+   "lime",
+   "elderflower",
+   "coriander",
+   "angelica",
+   "earl grey",
+   "mint"
+  ],
+  "confidence": "medium",
+  "notes": "Producer site behind age gate; no producer notes. facts.cask holds still info (gin is unaged); botanical list from The Gin Is In."
+ },
+ {
+  "id": "ks-the-botanist-islay-cask-aged-gin",
+  "producer": {
+   "nose": "Ripe fruit, candied orange and light juniper; apple, watermelon, mango, peach, dried banana, sugared almond and light toasted oak.",
+   "palate": "Creamy and viscous; fresh fruit with vanilla ice cream and toasted oak, gentle earthy spice.",
+   "finish": "Lingering tropical fruit; oaky vanilla fades to grilled pineapple and mango with coriander, candied orange, juniper and cassia.",
+   "summary": "Bruichladdich gin with 22 hand-foraged Islay botanicals, matured at least 3 years in oak.",
+   "source_url": "https://www.thebotanist.com/en-us/products/the-botanist-cask-aged-gin"
+  },
+  "critics": [
+   {
+    "source": "Paste Magazine (Jim Vorel)",
+    "source_url": "https://www.pastemagazine.com/drink/gin/the-botanist-cask-matured-gin-review-barrel-aged-price-flavors-cocktails",
+    "score": null,
+    "scale": null,
+    "nose": "Earthy, peppery and woody with cardamom, florals and orange slices.",
+    "palate": "Candied orange, toffee, pepper, spicy oak and vanilla with subtle juniper.",
+    "finish": "Subtle mixed spice and pepper.",
+    "summary": "Reviewed alongside the younger Cask Rested gin; Cask Aged is the 3+ year, 46% release.",
+    "year": 2024
+   },
+   {
+    "source": "InsideHook (Kirk Miller)",
+    "source_url": "https://www.insidehook.com/spirits/botanist-gin-cask-matured-series-review",
+    "score": null,
+    "scale": null,
+    "nose": null,
+    "palate": "Prominent wood with vanilla sweetness and a distinctive grilled pineapple note.",
+    "finish": null,
+    "summary": "Well balanced between gin and brown spirit. Reviewed at 46%.",
+    "year": 2024
+   }
+  ],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": "Minimum 3 years",
+   "mash_bill": "Gin with 22 wild Islay botanicals",
+   "cask": "Blend of oak casks incl. bourbon, Amarone, Sauternes, Pauillac, rum and St. Emilion",
+   "region": "Islay, Scotland (Bruichladdich Distillery)",
+   "source_url": "https://www.thebotanist.com/en-us/products/the-botanist-cask-aged-gin"
+  },
+  "flavor_terms": [
+   "candied orange",
+   "juniper",
+   "tropical fruit",
+   "toasted oak",
+   "vanilla",
+   "grilled pineapple",
+   "mango",
+   "toffee",
+   "pepper",
+   "cardamom"
+  ],
+  "confidence": "high",
+  "notes": "Distinct from the Islay Cask Rested gin (6+ months). Wine Enthusiast page failed (redirect loop)."
+ }
+]
