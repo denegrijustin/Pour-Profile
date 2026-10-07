@@ -35,6 +35,8 @@ export async function renderScan(dispatchNav) {
       <p id="labelStatus" class="field-hint">We’ll read the label, then let you confirm the drink.</p></div>
     <div id="manualPanel"><label style="margin-top:0">Find a drink in the database</label>
     <input type="search" id="catalogSearch" placeholder="Type any bottle name…" autocomplete="off">
+    <button class="btn btn-secondary btn-block" id="webResearchBtn" style="margin-top:8px">Search the web for this bottle</button>
+    <p id="webResearchStatus" class="field-hint" role="status">Find sourced details and a bottle image, then review before saving.</p>
     <div id="catalogResults"></div>
     <p class="field-hint" style="margin-top:10px">We'll check the reference catalog as you type — but you're not limited to it. Curated ratings cover 10 publishers across the catalog. Scores apply only to the listed bottle and vintage. Anything not listed can be added manually.</p>
     <button class="btn btn-primary btn-block" id="manualNewTopBtn" style="margin-top:10px">✍️ Add a bottle myself</button>
@@ -80,6 +82,19 @@ export async function renderScan(dispatchNav) {
       if (!result.brand && !result.expression) throw new Error("No drink identified. Try a clearer label or use Manual.");
       renderDraftForm({ name: [result.brand, result.expression].filter(Boolean).join(" "), brand: result.brand, category: result.category }, dispatchNav, null, document.getElementById("rateAfterAdd").checked);
     } catch (err) { status.textContent = `${err.message} You can still add this drink using Manual.`; }
+  };
+  document.getElementById("webResearchBtn").onclick = async () => {
+    const q = document.getElementById("catalogSearch").value.trim();
+    if(q.length < 3) { toast("Enter the brand and bottle name first."); return; }
+    const btn=document.getElementById("webResearchBtn"), status=document.getElementById("webResearchStatus");
+    btn.disabled=true; status.textContent="Searching sources and finding a matching image…";
+    try {
+      const result=await api.researchBottle(q);
+      if(!btn.isConnected) return;
+      if(!result.found) { status.textContent=result.message; return; }
+      renderDraftForm({...result.draft,research_id:result.research_id,image_note:result.image_note},dispatchNav,{source:"web research",confidence:"medium",sourceUrl:result.sources[0].url},document.getElementById("rateAfterAdd").checked);
+    } catch(err) { if(status.isConnected) status.textContent=err.message; }
+    finally { btn.disabled=false; }
   };
   wireCatalogSearch(dispatchNav);
   // The camera only starts if the user opens the barcode section, so we don't
@@ -442,6 +457,8 @@ function renderDraftForm(draft, dispatchNav, provenance, shouldRate = true, { of
     <span class="eyebrow">STEP 01 · FIND DRINK</span><h2>Confirm your drink</h2>
     ${provenance ? `<p class="field-hint">Pulled from ${escapeHtml(provenance.source)} (${escapeHtml(provenance.confidence)} confidence) — <a href="${escapeHtml(provenance.sourceUrl || "#")}" target="_blank" rel="noopener">source</a>. Double-check everything below before saving.</p>` : `<p class="field-hint">No external match — fill in what you know. Everything else can be added later.</p>`}
     ${draft.image_url ? `<img src="${escapeHtml(draft.image_url)}" alt="" style="width:100px;border-radius:10px;margin-bottom:10px">` : ""}
+    ${draft.research_id ? `<p class="field-hint">${escapeHtml(draft.image_note)}</p>${draft.image_url ? `<label><input type="checkbox" id="saveResearchImage" checked> Save this bottle image</label>` : ""}<p class="field-hint">${escapeHtml([draft.expression,draft.origin_country,draft.origin_state,draft.age_statement,draft.proof ? draft.proof + " proof" : null,draft.abv ? draft.abv + "% ABV" : null,draft.mash_bill,draft.barrel_finish].filter(Boolean).join(" · "))}</p>` : ""}
+    ${draft.sources ? `<div class="field-hint">Sources: ${draft.sources.map(s=>`<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a>`).join(" · ")}</div>` : ""}
     <label>Name</label><input type="text" id="draftName" value="${escapeHtml(draft.name || "")}" placeholder="Bottle name">
     <label>Brand</label><input type="text" id="draftBrand" value="${escapeHtml(draft.brand || "")}">
     <label>Category</label>
@@ -457,7 +474,16 @@ function renderDraftForm(draft, dispatchNav, provenance, shouldRate = true, { of
     const name = document.getElementById("draftName").value.trim();
     if (!name) { toast("Name is required."); return; }
     if (!document.getElementById("draftCategory").value) { toast("Choose a category."); return; }
+    const saveBtn=document.getElementById("draftSaveBtn");
+    saveBtn.disabled=true;
     try {
+      if(draft.research_id) {
+        const result=await api.adoptResearch({research_id:draft.research_id,name,brand:document.getElementById("draftBrand").value.trim(),category:document.getElementById("draftCategory").value,description:document.getElementById("draftDescription")?.value.trim() || "",save_image:document.getElementById("saveResearchImage")?.checked !== false});
+        toast(result.image_saved ? "Bottle and image saved." : result.image_expected ? "Bottle saved. Image was not replaced or could not be saved." : "Bottle saved.");
+        await dispatchNav("bottle",result.bottle_id);
+        if(shouldRate) { const detail=await api.bottle(result.bottle_id); await openLogPourSheet(detail.bottle,{fromAdd:true}); }
+        return;
+      }
       const res = await api.createBottle({
         name,
         brand: document.getElementById("draftBrand").value.trim() || null,
@@ -477,6 +503,6 @@ function renderDraftForm(draft, dispatchNav, provenance, shouldRate = true, { of
       if (code) await api.saveBarcode({ barcode: code, bottle_id: res.bottle.id, product_name: draft.name || null, brand: draft.brand || null, image_url: draft.image_url || null }).catch(() => {});
       await dispatchNav("bottle", res.bottle.id);
       if (shouldRate) await openLogPourSheet(res.bottle, { fromAdd:true });
-    } catch (err) { toast(`Couldn't save: ${err.message}`); }
+    } catch (err) { toast(`Couldn't save: ${err.message}`); } finally { saveBtn.disabled=false; }
   });
 }

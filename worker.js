@@ -1,3 +1,4 @@
+import { researchBottle, researchFetch } from "./bottle-research.js";
 import { withBottleImage } from "./bottle-images.js";
 import { VERIFIED_DRINKS } from "./verified-ratings.js";
 import { QUESTIONS, AXES, AXIS_LABELS, validateAnswers, parseAnswers, observations, scorePour, tastingEvidence } from "./pour-model.js";
@@ -65,6 +66,8 @@ async function routeApi(request, url, env) {
   const { pathname } = url;
   const method = request.method;
 
+  if (pathname === "/api/drinks/research" && method === "POST") return webBottleResearch(request, env);
+  if (pathname === "/api/drinks/research/adopt" && method === "POST") return adoptWebBottle(request, env, url);
   if (pathname === "/api/drinks/search" && method === "GET") return drinkSearch(url, env);
   if (pathname === "/api/drinks/adopt" && method === "POST") return drinkAdopt(request, url, env);
   if (pathname === "/api/kansas/search" && method === "GET") return kansasSearchRoute(url, env);
@@ -522,7 +525,7 @@ async function computeProfile(env, profileId) {
 }
 
 function fieldsFromBody(b) {
-  const fields = ["name", "brand", "expression", "category", "subcategory", "distillery_id", "origin_country", "origin_state", "age_statement", "proof", "abv", "mash_bill", "barrel_finish", "msrp", "street_price", "release_type", "bottle_size_ml", "barcode", "image_url", "image_source", "image_confidence", "producer_url", "description"];
+  const fields = ["name", "brand", "expression", "category", "subcategory", "distillery_id", "origin_country", "origin_state", "age_statement", "proof", "abv", "mash_bill", "barrel_finish", "msrp", "street_price", "release_type", "bottle_size_ml", "barcode", "image_url", "image_source", "image_confidence", "producer_url", "description", "varietal", "vintage"];
   const out = {};
   for (const f of fields) if (b[f] !== undefined) out[f] = b[f];
   return out;
@@ -2136,4 +2139,49 @@ async function drinkAdopt(request, url, env) {
     if (!found) await run(env,"INSERT INTO external_ratings (bottle_id,source,source_url,score,scale,descriptors,is_manual) VALUES (?,?,?,?,?,?,0)",detail.bottle.id,rating.source,rating.source_url,rating.score,rating.scale,JSON.stringify({review_scope:rating.scope,verified_at:"2026-10-02"}));
   }
   return json({bottle_id:detail.bottle.id,already_present:!!existed});
+}
+
+// Research drafts and image bytes remain server-side until the user confirms.
+async function webBottleResearch(request, env) {
+  const b = await body(request);
+  const q = typeof b.q === "string" ? b.q.trim() : "";
+  if (q.length < 3 || q.length > 160) return json({error:"Enter a bottle name between 3 and 160 characters."},400);
+  if (!env.OPENAI_API_KEY) return json({error:"Web bottle lookup needs the OPENAI_API_KEY secret on the Worker."},503);
+  if (!env.PHOTOS) return json({error:"Web bottle lookup needs the bottle photo storage binding."},503);
+  try {
+    const draft = await researchBottle(q,env);
+    if (!draft) return json({found:false, message:"No specific bottle verified. Include the brand, expression and vintage or age."});
+    const id = crypto.randomUUID();
+    const image = await enrichOne({id,name:draft.name,producer:draft.brand,sources:[{url:draft.producer_url}]},{fetchImpl:researchFetch});
+    let preview = null;
+    if (image.status === "ok") {
+      await env.PHOTOS.put(`research/${id}/image`,image.buf,{httpMetadata:{contentType:image.mime}});
+      preview = `data:${image.mime};base64,${bytesToBase64(image.buf)}`;
+    }
+    await env.PHOTOS.put(`research/${id}/draft`,JSON.stringify({draft,image: image.status === "ok" ? {mime:image.mime,source_page:image.source_page} : null,created:Date.now()}));
+    return json({found:true,research_id:id,draft:{...draft,image_url:preview},sources:draft.sources,image_status:image.status,image_note:image.status === "ok" ? "Confirm the image matches your bottle." : "No confident bottle image found. You can add your own photo after saving."});
+  } catch { return json({error:"Bottle research could not finish. Check the Worker OpenAI key and billing, or try a more specific name."},502); }
+}
+async function adoptWebBottle(request, env, url) {
+  const b=await body(request);
+  if (!/^[0-9a-f-]{36}$/.test(b.research_id || "")) return json({error:"Invalid research draft"},400);
+  const object=await env.PHOTOS?.get(`research/${b.research_id}/draft`);
+  if(!object) return json({error:"Research draft expired. Search again."},404);
+  const saved=await object.json();
+  if(Date.now()-saved.created>86400000) return json({error:"Research draft expired. Search again."},410);
+  // Permit confirmed identity edits; all other fields come from the server draft.
+  const draft={...saved.draft};
+  for(const key of ['name','brand','category','description']) if(typeof b[key]==='string') draft[key]=b[key].slice(0,key==='description'?4000:200);
+  const response=await createBottle(new Request(request.url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({...draft,data_source:"web_research",source_confidence:"medium",status_tags:["want_to_try"]})}),env,url);
+  if(!response.ok) return response;
+  const detail=await response.json();
+  let imageSaved=false;
+  if(saved.image && b.save_image !== false && saved.draft.name.trim().toLowerCase() === draft.name.trim().toLowerCase()) {
+    const image=await env.PHOTOS.get(`research/${b.research_id}/image`);
+    if(image) try {
+      await storeSubjectImage(env,{kind:"bottle",id:detail.bottle.id},saved.image.mime,new Uint8Array(await image.arrayBuffer()));
+      imageSaved=true;
+    } catch { /* Existing user photo wins; saving the bottle still succeeds. */ }
+  }
+  return json({bottle_id:detail.bottle.id,image_saved:imageSaved,image_expected:!!saved.image});
 }
