@@ -118,7 +118,7 @@ export async function renderBottleDetail(id, dispatchNav) {
 
     ${isWine ? wineMatchHtml(data.wineMatch) : `${decisionBannerHtml(match)}${whyConcernsHtml(match)}${sourcedNote}`}
 
-    <button class="btn btn-secondary btn-block" id="researchExistingBottle">Find details & image on Bottle Blue Book</button>
+    <button class="btn btn-secondary btn-block" id="researchExistingBottle">Find details & image online</button>
     <p class="field-hint" id="researchExistingStatus" role="status"></p>
     <div class="section-title"><h2>Details</h2></div>
     <div class="card"><dl class="spec-grid">${specs.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(String(v))}</dd></div>`).join("")}</dl></div>
@@ -161,14 +161,14 @@ export async function renderBottleDetail(id, dispatchNav) {
       const confirm=async selected=>{
         if(selected.draft.name.trim().toLowerCase()!==bottle.name.trim().toLowerCase()) {status.textContent='This entry has a different expression or year. Use Add Drink to review it separately.';return;}
         await currentDispatchNav('scan');
-        renderDraftForm({...selected.draft,research_id:selected.research_id,image_note:selected.image_note},currentDispatchNav,{source:'Bottle Blue Book',confidence:'medium',sourceUrl:selected.sources[0].url},false);
+        renderDraftForm({...selected.draft,research_id:selected.research_id,image_note:selected.image_note},currentDispatchNav,{source:selected.draft.lookup_source || 'Bottle source',confidence:'medium',sourceUrl:selected.sources[0].url},false);
       };
       if(!result.found) {
         status.textContent=result.message;
         document.getElementById('existingBookCandidates')?.remove();
         const list=document.createElement('div');list.id='existingBookCandidates';
         for(const candidate of result.candidates || []) {
-          const choice=document.createElement('button');choice.className='btn btn-secondary btn-block';choice.textContent=[candidate.name,candidate.proof?candidate.proof+' proof':null,candidate.size].filter(Boolean).join(' · ');
+          const choice=document.createElement('button');choice.className='btn btn-secondary btn-block';choice.textContent=[candidate.name,candidate.proof?candidate.proof+' proof':null,candidate.size,candidate.source].filter(Boolean).join(' · ');
           choice.onclick=async()=>{choice.disabled=true;try {const selected=await api.researchBottle(bottle.name,candidate.url);if(selected.found) await confirm(selected);}catch(err){status.textContent=err.message;}finally{choice.disabled=false;}};
           list.append(choice);
         }

@@ -35,7 +35,7 @@ export async function renderScan(dispatchNav) {
       <p id="labelStatus" class="field-hint">We’ll read the label, then let you confirm the drink.</p></div>
     <div id="manualPanel"><label style="margin-top:0">Find a drink in the database</label>
     <input type="search" id="catalogSearch" placeholder="Type any bottle name…" autocomplete="off">
-    <button class="btn btn-secondary btn-block" id="webResearchBtn" style="margin-top:8px">Search Bottle Blue Book</button>
+    <button class="btn btn-secondary btn-block" id="webResearchBtn" style="margin-top:8px">Search bottle sources</button>
     <p id="webResearchStatus" class="field-hint" role="status">Find details, reviews and a photo. A Blue Book bottle-page link works too.</p>
     <div id="catalogResults"></div>
     <p class="field-hint" style="margin-top:10px">Catalog results appear as you type. Can't find it? Add it manually.</p>
@@ -87,7 +87,7 @@ export async function renderScan(dispatchNav) {
     const q = document.getElementById("catalogSearch").value.trim();
     if(q.length < 3) { toast("Enter the brand and bottle name first."); return; }
     const btn=document.getElementById("webResearchBtn"), status=document.getElementById("webResearchStatus");
-    btn.disabled=true; status.textContent="Searching Bottle Blue Book…";
+    btn.disabled=true; status.textContent="Searching bottle sources…";
     try {
       const result=await api.researchBottle(q);
       if(!btn.isConnected) return;
@@ -97,18 +97,18 @@ export async function renderScan(dispatchNav) {
         const list=document.createElement('div'); list.id='bookCandidates';
         for(const candidate of result.candidates || []) {
           const choice=document.createElement('button'); choice.className='btn btn-secondary btn-block';
-          choice.style.marginTop='8px'; choice.textContent=[candidate.name,candidate.proof?candidate.proof+' proof':null,candidate.size].filter(Boolean).join(' · ');
+          choice.style.marginTop='8px'; choice.textContent=[candidate.name,candidate.proof?candidate.proof+' proof':null,candidate.size,candidate.source].filter(Boolean).join(' · ');
           choice.onclick=async()=>{
-            choice.disabled=true; status.textContent='Loading Bottle Blue Book details and image…';
+            choice.disabled=true; status.textContent='Loading bottle details and image…';
             try { const selected=await api.researchBottle(q,candidate.url);
               if(!selected.found) {status.textContent=selected.message;return;}
-              renderDraftForm({...selected.draft,research_id:selected.research_id,image_note:selected.image_note},dispatchNav,{source:'Bottle Blue Book',confidence:'medium',sourceUrl:selected.sources[0].url},document.getElementById('rateAfterAdd').checked);
+              renderDraftForm({...selected.draft,research_id:selected.research_id,image_note:selected.image_note},dispatchNav,{source:selected.draft.lookup_source || 'Bottle source',confidence:'medium',sourceUrl:selected.sources[0].url},document.getElementById('rateAfterAdd').checked);
             } catch(err) {status.textContent=err.message;} finally {choice.disabled=false;}
           }; list.append(choice);
         }
         status.after(list); return;
       }
-      renderDraftForm({...result.draft,research_id:result.research_id,image_note:result.image_note},dispatchNav,{source:"Bottle Blue Book",confidence:"medium",sourceUrl:result.sources[0].url},document.getElementById("rateAfterAdd").checked);
+      renderDraftForm({...result.draft,research_id:result.research_id,image_note:result.image_note},dispatchNav,{source:result.draft.lookup_source || "Bottle source",confidence:"medium",sourceUrl:result.sources[0].url},document.getElementById("rateAfterAdd").checked);
     } catch(err) { if(status.isConnected) status.textContent=err.message; }
     finally { btn.disabled=false; }
   };
