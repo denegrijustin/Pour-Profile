@@ -2172,7 +2172,10 @@ async function webBottleResearch(request, env) {
     }
     await env.PHOTOS.put(`research/${id}/draft`,JSON.stringify({draft,image: image.status === "ok" ? {mime:image.mime,source_page:image.source_page} : null,created:Date.now()}));
     return json({found:true,research_id:id,draft:{...draft,image_url:preview},sources:draft.sources,image_status:image.status,image_note:image.status === "ok" ? "Confirm the image matches your bottle." : "No confident bottle image found. You can add your own photo after saving."});
-  } catch { return json({error:"Bottle research could not finish. Check the Worker OpenAI key and billing, or try a more specific name."},502); }
+  } catch (error) {
+    const safe=/^(Web lookup|No verifiable sources)/.test(error?.message || "");
+    return json({error:safe ? error.message : "Bottle research could not finish. Please try again."},502);
+  }
 }
 async function adoptWebBottle(request, env, url) {
   const b=await body(request);
