@@ -6,7 +6,7 @@ const entries = [
  [['Johnny Drum Private Stock'], 'https://www.kentuckybourbonwhiskey.com/wp-content/uploads/2023/12/JDPS.png', 'https://www.kentuckybourbonwhiskey.com/whiskey/johnny-drum-private-stock/'],
  [['Penelope Architect'], 'https://shop.penelopebourbon.com/cdn/shop/products/bottle_544x.png?v=1641190991', 'https://shop.penelopebourbon.com/products/architect-series'],
  [['Rabbit Hole Dareringer'], 'https://www.rabbitholedistillery.com/cdn/shop/products/dareringer-204807_1024x1024.png?v=1708376543', 'https://www.rabbitholedistillery.com/products/dareringer-straight-bourbon-whiskey-finished-in-px-sherry-casks'],
- [['Evan Williams Bottled-in-Bond','Evan Williams Bottled in Bond'], 'https://www.evanwilliams.com/images/bottles/ew-bottleinbond.png?ver=2', 'https://www.evanwilliams.com/bottled-in-bond-bourbon'],
+ [['Evan Williams Bottled-in-Bond','Evan Williams Bottled in Bond'], '/bottle-photo-assets/evan-williams-bottled-in-bond.png', 'https://www.evanwilliams.com/bottled-in-bond-bourbon'],
  [['J. Rieger Kansas City Whiskey','Rieger Kansas City Whiskey'], 'https://static.wixstatic.com/media/3c2d51_2715166bd1d94191b49b19698b61bb0c~mv2.png/v1/fit/w_320,h_800,q_85/25_JRC_KCW_COB.png', 'https://www.jriegerco.com/our-spirits/kansas-city-whiskey'],
  [['J. Rieger Rye','Rieger Straight Rye Whiskey'], 'https://static.wixstatic.com/media/3c2d51_b5b09f269c0142cc9814153a55cf180b~mv2.png/v1/fit/w_320,h_800,q_85/rye.png', 'https://www.jriegerco.com/our-spirits'],
  [['Rittenhouse Rye','Rittenhouse Rye Bottled in Bond'], 'https://heavenhilldistillery.com/images/brands/detail/rittenhouse.png', 'https://heavenhilldistillery.com/rittenhouse-rye.php'],

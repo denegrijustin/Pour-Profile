@@ -30,8 +30,8 @@ export async function enrichBookImage(subject,{fetchImpl=researchFetch,fallback=
     return {subject_id:subject.id,status:'ok',confidence:1,source_page:exact[0].url,image_url:draft.source_image_url,mime,buf,bytes:buf.length,candidates:[],match_reason:'Blue Book: exact expression image saved'};
    }
   }
-  note=exact.length>1?'multiple editions need confirmation':'no unique exact expression image';
- } catch(err) { note=String(err.message || err); }
+  note+=exact.length>1?'multiple editions need confirmation':'no unique exact expression image';
+ } catch(err) { note+=String(err.message || err); }
  const result=await fallback(subject,{fetchImpl});
  result.match_reason=`Blue Book: ${note}; ${result.match_reason || ''}`;
  return result;

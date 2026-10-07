@@ -37,3 +37,6 @@ test('image batches retry older failures, persist verified bytes and leave perso
   const again=await call('/api/images/enrich',{limit:1,bottle_id:subject.id,bottles_only:true});assert.equal(again.data.processed,0);
  } finally {globalThis.fetch=orig;}
 });
+test('verified source failures are visible when fallback also fails',async()=>{
+ const r=await enrichBookImage({name:'Johnny Drum Private Stock'},{fetchImpl:async()=>new Response('',{status:403}),fallback:async()=>({status:'failed',match_reason:'no other photo'})});assert.match(r.match_reason,/image 403/);assert.match(r.match_reason,/no other photo/);
+});

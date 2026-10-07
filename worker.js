@@ -1315,9 +1315,9 @@ async function enrichImages(request, env) {
 
   const attempted = await all(env, "SELECT subject_kind, subject_id, status, match_reason FROM image_lookups");
   // Keep saved photos. Recheck older unresolved lookups once with verified sources;
-  // subsequent ambiguous matches wait for confirmation unless explicitly retried.
+  // Explicit retry also rechecks unresolved review candidates after source fixes.
   const skip = new Set(
-    attempted.filter((r) => !(retryFailed && r.status === "failed") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Image lookup v3:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
+    attempted.filter((r) => !(retryFailed && r.status !== "ok") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Image lookup v3:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
   );
   const queue = (await imageSubjects(env, scope))
     .filter((s) => !skip.has(`${s.kind}:${s.id}`) && (!b.bottles_only || s.kind === "bottle") && (!b.bottle_id || (s.kind === "bottle" && Number(s.id) === Number(b.bottle_id))))
