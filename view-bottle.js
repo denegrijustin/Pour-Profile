@@ -158,9 +158,23 @@ export async function renderBottleDetail(id, dispatchNav) {
     try {
       const result=await api.researchBottle(bottle.name);
       if(!btn.isConnected) return;
-      if(!result.found) {status.textContent=result.message;return;}
-      if(result.draft.name.trim().toLowerCase()!==bottle.name.trim().toLowerCase()) {status.textContent="Research found a different bottle. Use Add Drink to review it separately.";return;}
-      renderDraftForm({...result.draft,research_id:result.research_id,image_note:result.image_note},currentDispatchNav,{source:"Bottle Blue Book",confidence:"medium",sourceUrl:result.sources[0].url},false);
+      const confirm=async selected=>{
+        if(selected.draft.name.trim().toLowerCase()!==bottle.name.trim().toLowerCase()) {status.textContent='This entry has a different expression or year. Use Add Drink to review it separately.';return;}
+        await currentDispatchNav('scan');
+        renderDraftForm({...selected.draft,research_id:selected.research_id,image_note:selected.image_note},currentDispatchNav,{source:'Bottle Blue Book',confidence:'medium',sourceUrl:selected.sources[0].url},false);
+      };
+      if(!result.found) {
+        status.textContent=result.message;
+        document.getElementById('existingBookCandidates')?.remove();
+        const list=document.createElement('div');list.id='existingBookCandidates';
+        for(const candidate of result.candidates || []) {
+          const choice=document.createElement('button');choice.className='btn btn-secondary btn-block';choice.textContent=[candidate.name,candidate.proof?candidate.proof+' proof':null,candidate.size].filter(Boolean).join(' · ');
+          choice.onclick=async()=>{choice.disabled=true;try {const selected=await api.researchBottle(bottle.name,candidate.url);if(selected.found) await confirm(selected);}catch(err){status.textContent=err.message;}finally{choice.disabled=false;}};
+          list.append(choice);
+        }
+        status.after(list);return;
+      }
+      await confirm(result);
     } catch(err) {if(status.isConnected) status.textContent=err.message;}
     finally {btn.disabled=false;}
   };
