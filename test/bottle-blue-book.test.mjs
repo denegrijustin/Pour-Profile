@@ -21,3 +21,15 @@ test('lookup fetches a public bottle page without an OpenAI key or provider call
   let calls=0;const result=await lookupBottleBook(url,null,async requested=>{calls++;assert.equal(requested,url);return new Response(detail);});
   assert.equal(result.draft.name,"Blanton's Single Barrel");assert.equal(calls,1);
 });
+test('Worker lookup and adoption persist Bottle Blue Book image and review without an AI key',async()=>{
+  const {setup}=await import('./harness.mjs');const {env,call,db}=setup();delete env.OPENAI_API_KEY;
+  const files=new Map();env.PHOTOS={get:async key=>files.has(key)?{json:async()=>JSON.parse(files.get(key)),arrayBuffer:async()=>files.get(key).buffer}:null,put:async(key,value)=>files.set(key,value)};
+  const original=globalThis.fetch;const calls=[];
+  globalThis.fetch=async requested=>{calls.push(String(requested));return String(requested)===url?new Response(detail):new Response(new Uint8Array([137,80,78,71]),{headers:{'content-type':'image/png'}});};
+  try {
+    const result=await call('/api/drinks/research',{q:url});assert.equal(result.status,200);assert.equal(result.data.image_status,'ok');assert.match(result.data.draft.image_url,/^data:image\/png/);
+    const saved=await call('/api/drinks/research/adopt',{research_id:result.data.research_id});assert.equal(saved.status,200);assert.equal(saved.data.image_saved,true);
+    const review=db.prepare('SELECT * FROM external_ratings WHERE bottle_id=?').get(saved.data.bottle_id);assert.equal(review.source,'bottle_blue_book');assert.equal(review.score,74);
+    assert.equal(calls.length,2);assert.ok(calls.every(u=>u.startsWith('https://bottlebluebook.com/')));
+  } finally {globalThis.fetch=original;}
+});
