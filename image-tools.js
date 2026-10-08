@@ -18,7 +18,7 @@ export function imagesCardHtml() {
   return `
     <div class="section-title"><h2>Bottle Photos</h2></div>
     <div class="card" id="imagesCard">
-      <p class="field-hint">Your bottles and the reference catalog both shipped without photos. This looks each one up in Open Food Facts and only keeps a photo when the product name matches that exact expression — anything less certain waits for you to confirm it.</p>
+      <p class="field-hint">Missing photos are searched across producer pages, Bottle Blue Book, retailer catalogs and public image sources. Only matching expressions are saved.</p>
       <div id="imagesStatus" style="margin-top:10px"><p class="field-hint">Checking…</p></div>
       <label for="imagesScope" style="margin-top:12px">What to look up</label>
       <select id="imagesScope">
@@ -180,9 +180,9 @@ export async function autoBottlePhotos(onUpdate) {
     let changed=false;
     // Continue through small batches so later bottles do not wait for another visit.
     for(let batch=0;batch<8;batch++) {
-      const result=await api.enrichImages({limit:3,bottles_only:true});
+      const result=await api.enrichImages({limit:1,bottles_only:true});
       if(result.results?.some(r=>r.status === "ok")) { changed=true; await onUpdate?.(); }
-      if(result.processed<3) break;
+      if(!result.processed) break;
     }
     return changed;
   }

@@ -1,7 +1,7 @@
 import { REACTIONS, sourcePreferences, sourcePreferenceFit } from "./source-preferences.js";
-import { enrichBookImage } from "./book-images.js";
 import { lookupBottleSources } from "./bottle-search.js";
 import { researchFetch } from "./bottle-research.js";
+import { enrichPersistentImage } from "./persistent-photos.js";
 import { withBottleImage, verifiedBottleImage } from "./bottle-images.js";
 import { VERIFIED_DRINKS } from "./verified-ratings.js";
 import { QUESTIONS, AXES, AXIS_LABELS, validateAnswers, parseAnswers, observations, scorePour, tastingEvidence } from "./pour-model.js";
@@ -1180,11 +1180,11 @@ const OFF_SEARCH_SPACING_MS = 6000;   // Open Food Facts asks for ~10 lookups/mi
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 /** Bottles still missing a photo — the ones actually showing "No photo yet". */
-async function bottleSubjects(env) {
+async function bottleSubjects(env, targetId) {
   const rows = await all(env,
     `SELECT id, name, brand, category, catalog_id FROM bottles
-     WHERE image_url IS NULL OR image_url = '' OR image_source = 'auto_lookup'
-     ORDER BY id`);
+     WHERE image_url IS NULL OR image_url = '' OR image_source = 'auto_lookup'${targetId ? " OR (id = ? AND COALESCE(image_source,'') != 'user_photo')" : ''}
+     ORDER BY id`, ...(targetId ? [Number(targetId)] : []));
   const records=await catalog(env);
   return rows.map(r => {
     const link=linkCatalogRecord(records,r);
@@ -1220,8 +1220,8 @@ async function catalogSubjects(env, scope) {
   }));
 }
 
-async function imageSubjects(env, scope) {
-  return [...await bottleSubjects(env), ...await catalogSubjects(env, scope)];
+async function imageSubjects(env, scope, targetId) {
+  return [...await bottleSubjects(env,targetId), ...await catalogSubjects(env, scope)];
 }
 
 async function imageStatus(env, scope = "visible") {
@@ -1331,17 +1331,17 @@ async function enrichImages(request, env) {
   // Keep saved photos. Recheck older unresolved lookups once with verified sources;
   // Explicit retry also rechecks unresolved review candidates after source fixes.
   const skip = new Set(
-    attempted.filter((r) => !(retryFailed && r.status !== "ok") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Image lookup v4:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
+    attempted.filter((r) => !(retryFailed && r.status !== "ok") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Image lookup v5:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
   );
-  const queue = (await imageSubjects(env, scope))
-    .filter((s) => !skip.has(`${s.kind}:${s.id}`) && (!b.bottles_only || s.kind === "bottle") && (!b.bottle_id || (s.kind === "bottle" && Number(s.id) === Number(b.bottle_id))))
-    .slice(0, limit);
+  const queue = (await imageSubjects(env, scope,b.bottle_id))
+    .filter((s) => (b.bottle_id && retryFailed || !skip.has(`${s.kind}:${s.id}`)) && (!b.bottles_only || s.kind === "bottle") && (!b.bottle_id || (s.kind === "bottle" && Number(s.id) === Number(b.bottle_id))))
+    .slice(0, 1);
 
   const results = [];
   for (const [i, subject] of queue.entries()) {
     if (i > 0 && !verifiedBottleImage(subject)) await sleep(OFF_SEARCH_SPACING_MS);
-    const r = await enrichBookImage(subject,{assetFetch:(path,options)=>env.ASSETS.fetch(new Request(new URL(path,env._origin),options))});
-    r.match_reason=`Image lookup v4: ${r.match_reason || ''}`;
+    const r = await enrichPersistentImage(subject,{assetFetch:(path,options)=>env.ASSETS.fetch(new Request(new URL(path,env._origin),options))});
+    r.match_reason=`Image lookup v5: ${r.match_reason || ''}`;
     if (r.status === "ok") {
       try {
         r.r2_key = await storeSubjectImage(env, subject, r.mime, r.buf);
@@ -1352,7 +1352,7 @@ async function enrichImages(request, env) {
     }
     delete r.buf;
     await recordLookup(env, subject, r);
-    results.push({ kind: subject.kind, id: subject.id, name: subject.name, status: r.status, confidence: r.confidence, reason: r.match_reason });
+    results.push({ kind: subject.kind, id: subject.id, name: subject.name, status: r.status, confidence: r.confidence, reason: r.match_reason, exhausted:r.exhausted === true, retryable:r.retryable === true, queries_tried:r.queries_tried || 0 });
   }
 
   const status = await imageStatus(env, scope).then((res) => res.json());

@@ -1,4 +1,5 @@
 import { questionnaireHtml, readQuestionnaire, wireQuestionnaire } from "./questionnaire-form.js";
+import { ratingPhotoToolsHtml, wireRatingPhoto } from "./rating-photo.js";
 import { api, getActiveProfile } from "./api.js";
 import { openSheet, closeSheet, toast, escapeHtml, bottleThumbHtml, verdictPickerHtml, VERDICTS, flavorTagPickerHtml } from "./ui.js";
 import { SERVING_STYLES, VENUE_TYPES } from "./spirit-taxonomy.js";
@@ -71,12 +72,12 @@ export async function openLogPourSheet(bottle, { onSaved, fromAdd = false } = {}
 
   openSheet(`
     <div class="sheet-header"><div>${fromAdd ? `<span class="eyebrow">STEP 02 · YOUR REACTION</span>` : ""}<h2>${fromAdd ? "How was your drink?" : "Rate a pour"}</h2></div><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
-    <div class="rating-bottle-card"><div class="rating-photo">${bottleThumbHtml(bottle)}</div><div>
+    <div class="rating-bottle-card"><div class="rating-photo" id="ratingBottlePhoto">${bottleThumbHtml(bottle)}</div><div>
       <strong>${escapeHtml(bottle.name)}</strong>
       ${bottle.brand ? `<div class="field-hint">${escapeHtml(bottle.brand)}</div>` : ""}
     </div>
 
-    </div><p class="field-hint">Saving this tasting for <strong>${pourProfile === "lady" ? "Lady" : "JDAD"}</strong></p>
+    </div>${ratingPhotoToolsHtml()}<p class="field-hint">Saving this tasting for <strong>${pourProfile === "lady" ? "Lady" : "JDAD"}</strong></p>
     <details><summary>Describe tasting details (optional)</summary>${questionnaireHtml(bottle.category)}</details>
 
     <label>Overall impression</label>
@@ -135,6 +136,7 @@ export async function openLogPourSheet(bottle, { onSaved, fromAdd = false } = {}
 }
 
 function wireSheet() {
+  wireRatingPhoto(selectedBottle);
   wireQuestionnaire();
   const fine = document.getElementById("verdictFine");
   const fineInput = document.getElementById("ratingFine");
