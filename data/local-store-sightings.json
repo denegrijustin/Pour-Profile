@@ -1,0 +1,184 @@
+{
+  "store_id": "local-store",
+  "store_name": "Local store",
+  "batches": [
+    {
+      "id": "2026-10-07-upload",
+      "uploaded_on": "2026-10-07",
+      "coverage": "partial",
+      "sightings": [
+        {
+          "catalog_id": "photo-ben-holladay-bottled-in-bond",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-ben-holladay-rickhouse-proof",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "elijah-craig-small-batch",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "four-roses-single-barrel",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "four-roses-small-batch",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "four-roses-small-batch-select",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-gunnars-honey",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "henry-mckenna-10-year-single-barrel",
+          "photos": [
+            2
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-high-west-barbados-rum-finish",
+          "photos": [
+            2
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "ks-holladay-soft-red-wheat-bottled-in-bond-missouri-straight-bourbon-whiskey-2",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-holladay-soft-red-wheat-rickhouse-proof",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "maker-s-mark-101",
+          "photos": [
+            7
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "maker-s-mark-46",
+          "photos": [
+            7,
+            8
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "maker-s-mark",
+          "photos": [
+            7,
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-nulu-amburana",
+          "photos": [
+            3
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-nulu-french-oak",
+          "photos": [
+            3
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-1870-original-batch",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-1897-bottled-in-bond",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-1910",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-1920",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-statesman",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "ks-old-grand-dad-114-ksbw",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-old-grand-dad-bonded",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "ks-old-grand-dad-old-grand-dad-ksbw",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        }
+      ]
+    }
+  ]
+}

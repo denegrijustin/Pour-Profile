@@ -45,7 +45,7 @@ function pickCardHtml(r) {
         ${r.concern ? `<p class="pick-concern">⚠ ${escapeHtml(r.concern)}</p>` : ""}
         <div class="pick-meta">
           ${r.price != null ? `<span>~$${Math.round(r.price)}</span>` : ""}
-          ${r.kansas ? `<span title="${escapeHtml("Kansas distributor: " + (r.kansas.distributors || []).join(", "))}">Sold in KS</span>` : r.availability ? `<span>${escapeHtml(r.availability)}</span>` : ""}
+          ${r.local_store ? `<span>Seen in store photos · uploaded ${escapeHtml(r.local_store.last_seen_upload)}</span>` : r.kansas ? `<span title="${escapeHtml("Kansas distributor: " + (r.kansas.distributors || []).join(", "))}">Sold in KS</span>` : r.availability ? `<span>${escapeHtml(r.availability)}</span>` : ""}
           ${r.serving ? `<span>${escapeHtml(r.serving)}</span>` : ""}
         </div>
         <div class="pick-actions">
@@ -63,7 +63,7 @@ export async function renderDiscover(dispatchNav) {
   view.innerHTML = `<p class="field-hint">Finding bottles for you…</p>`;
 
   const [picksRes, mineRes] = await Promise.all([
-    (state.mode === "picks" ? api.catalogRecommended() : api.catalogBrowse({ category: state.category, sort: state.sort, limit: 60 }))
+    (state.mode === "picks" ? api.catalogRecommended() : api.catalogBrowse({ category: state.category, sort: state.sort, limit: 60, scope: "local" }))
       .catch(() => ({ results: [], categories: [] })),
     api.bottles({ status: "want_to_try", sort: "highest_match" }).catch(() => ({ bottles: [] }))
   ]);
@@ -73,10 +73,11 @@ export async function renderDiscover(dispatchNav) {
   const categories = picksRes.categories || [];
 
   view.innerHTML = `
+    <p class="field-hint">Your local catalog grows from store photos. Dates show when evidence was uploaded; current stock may change. Spirits and wine are added as labels are confirmed.</p>
     ${photoRecommendationHtml()}
     <div class="filter-bar">
       <button class="filter-chip${state.mode === "picks" ? " active" : ""}" data-mode="picks">For you</button>
-      <button class="filter-chip${state.mode === "browse" ? " active" : ""}" data-mode="browse">Browse all</button>
+      <button class="filter-chip${state.mode === "browse" ? " active" : ""}" data-mode="browse">Local store</button>
       <button class="filter-chip" data-action="tab-map">Map</button>
       <button class="filter-chip" data-action="tab-compare">Compare${compareList.length ? ` (${compareList.length})` : ""}</button>
     </div>
@@ -95,13 +96,13 @@ export async function renderDiscover(dispatchNav) {
           <option value="alphabetical"${state.sort === "alphabetical" ? " selected" : ""}>A–Z</option>
         </select>
       </div>` : `
-      <p class="field-hint" style="margin:2px 0 12px">Scored against your palate — what you've rated, and what you've said you dislike.${picksRes.already_have ? ` ${picksRes.already_have} more you already have ${picksRes.already_have === 1 ? "is" : "are"} hidden; they're under Browse all.` : ""}</p>`}
+      <p class="field-hint" style="margin:2px 0 12px">Scored against your palate — what you've rated, and what you've said you dislike.${picksRes.already_have ? ` ${picksRes.already_have} more you already have ${picksRes.already_have === 1 ? "is" : "are"} hidden; they're under Local store.` : ""}</p>`}
 
     ${picks.length
       ? `<div class="pick-list">${picks.map(pickCardHtml).join("")}</div>`
       : emptyStateHtml("✨", state.mode === "picks" ? "No strong picks yet" : "Nothing in this category",
           state.mode === "picks"
-            ? "Log a few more pours and recommendations will sharpen up. Or tap Browse all to look through the whole catalog."
+            ? "Log a few more pours and recommendations will sharpen up. Or tap Local store to look through bottles seen in your store photos."
             : "Try a different category or sort order.")}
 
     ${mine.length ? `

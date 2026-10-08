@@ -30,3 +30,13 @@ test('local catalog search and adoption carry researched details without a web l
  const saved=(await t.call('/api/bottles/'+add.data.bottle_id)).data;
  assert.equal(saved.bottle.proof,100);assert.equal(saved.bottle.abv,50);assert.equal(saved.bottle.age_statement,'At least 4 years');assert.equal(saved.bottle.barrel_finish,'New charred oak');assert.ok(saved.bottle.producer_url.includes('beamdistilling'));assert.ok(saved.expert);
 });
+
+test('store evidence limits discovery and excludes home photos',async()=>{
+ const local=all.filter(r=>r.local_store);
+ assert.equal(local.length,24);
+ for(const r of local){assert.equal(r.local_store.last_seen_upload,'2026-10-07');assert.ok(r.local_store.sightings.every(s=>!s.photos.includes(1)));}
+ const t=setup();const browse=await t.call('/api/catalog/browse?scope=local&limit=200');
+ assert.equal(browse.data.total,24);assert.ok(browse.data.results.every(r=>r.local_store));
+ const picks=await t.call('/api/catalog/recommended?scope=local');assert.ok(picks.data.results.every(r=>r.local_store));
+ const wine=await t.call('/api/catalog/browse?scope=local&category=sauvignon_blanc');assert.equal(wine.data.total,0);
+});

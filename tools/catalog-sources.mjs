@@ -109,6 +109,20 @@ export function fullCatalog() {
       photo_reference: { photos: sel.photos, identification: sel.identification, batch_confirmed: false }
     });
   }
+  const evidence = readJson("data/local-store-sightings.json", { batches: [] });
+  for (const batch of evidence.batches) {
+    for (const sighting of batch.sightings) {
+      const rec = records.get(sighting.catalog_id);
+      if (!rec || sighting.identification !== "expression_confirmed") continue;
+      const history = [...(rec.local_store?.sightings || []), {
+        batch_id: batch.id, uploaded_on: batch.uploaded_on, photos: sighting.photos
+      }].sort((a, b) => a.uploaded_on.localeCompare(b.uploaded_on));
+      records.set(rec.id, { ...rec, local_store: {
+        store_id: evidence.store_id, store_name: evidence.store_name,
+        last_seen_upload: history.at(-1).uploaded_on, sightings: history
+      }});
+    }
+  }
   return [...records.values()];
 }
 

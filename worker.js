@@ -994,6 +994,7 @@ function catalogPublic(r) {
     jd_fit: r.ratings.jd_fit, fit_label: r.ratings.fit_label,
     summary: r.tasting_profile?.summary || null,
     profile_source: r.tasting_profile?.profile_source || null,
+    local_store: r.local_store || null,
     availability: r.regional_availability?.label || null,
     availability_confidence: r.regional_availability?.confidence ?? null,
     recommended: r.recommendation?.recommended || false,
@@ -1048,11 +1049,15 @@ async function catalogSearch(url, env) {
   return json({ results: await withCatalogImages(env, results), catalog_size: (await catalog(env)).length });
 }
 
+function catalogScope(url, records) {
+  return url.searchParams.get("scope") === "local" ? records.filter(r => r.local_store) : records;
+}
+
 async function catalogRecommended(url, env) {
   const profile = await resolveProfile(url, env);
   // The catalog asset and the one D1 trip are independent, so they overlap.
   const [records, ctx] = await Promise.all([catalog(env), catalogContext(env, profile.id)]);
-  const scored = markAdoptedFrom(await personalizedCatalog(url, env, records, ctx), ctx.owned);
+  const scored = markAdoptedFrom(await personalizedCatalog(url, env, catalogScope(url, records), ctx), ctx.owned);
   const results = scored.filter(r => !r.adopted_bottle_id && r.jd_fit != null && r.jd_fit >= 65)
     .sort((a,b) => b.jd_fit-a.jd_fit).slice(0,30);
   return json({results:withImagesFrom(results, ctx.have), already_have:scored.filter(r => r.adopted_bottle_id).length});
@@ -1074,7 +1079,8 @@ async function catalogBrowse(url, env) {
   const limit = Math.min(Math.max(Number(url.searchParams.get("limit")) || 40, 1), 200);
   const profile = await resolveProfile(url, env);
   const [everything, ctx] = await Promise.all([catalog(env), catalogContext(env, profile.id)]);
-  let records = everything;
+  const scoped = catalogScope(url, everything);
+  let records = scoped;
   if (category) records = records.filter(r => r.category === category);
   const results = await personalizedCatalog(url, env, records, ctx);
   const sorters = {
@@ -1086,7 +1092,7 @@ async function catalogBrowse(url, env) {
   };
   results.sort(sorters[sort] || sorters.best_fit);
   const page = markAdoptedFrom(results.slice(0,limit), ctx.owned);
-  return json({results:withImagesFrom(page, ctx.have),categories:[...new Set(everything.map(r=>r.category))].sort(),total:records.length});
+  return json({results:withImagesFrom(page, ctx.have),categories:[...new Set(scoped.map(r=>r.category))].sort(),total:records.length});
 }
 
 /**
