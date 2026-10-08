@@ -109,6 +109,10 @@ export function fullCatalog() {
       photo_reference: { photos: sel.photos, identification: sel.identification, batch_confirmed: false }
     });
   }
+  for (const [id, profile] of Object.entries(readJson("data/flavor-profiles/local-store.json", {}))) {
+    const rec = records.get(id);
+    if (rec) records.set(id, { ...rec, flavor_profile: profile });
+  }
   const evidence = readJson("data/local-store-sightings.json", { batches: [] });
   for (const batch of evidence.batches) {
     for (const sighting of batch.sightings) {

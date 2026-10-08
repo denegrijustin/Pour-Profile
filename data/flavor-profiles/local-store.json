@@ -1,0 +1,747 @@
+{
+  "photo-ben-holladay-bottled-in-bond": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 6,
+      "oak": 7,
+      "fruit": 4,
+      "spice": 7,
+      "grain": 4,
+      "richness": 6,
+      "smoke": 3,
+      "body": 7,
+      "warmth": 6,
+      "finish": 7,
+      "herbal": 1
+    },
+    "confidence": "medium",
+    "rationale": "Dark caramel, full texture, tannic wood and lingering cinnamon; grain and herbal levels are less supported.",
+    "sources": [
+      "https://shop.holladaydistillery.com/products/ben-holladay-6-year-bourbon-750ml",
+      "https://www.breakingbourbon.com/review/ben-holladay-bottled-in-bond-missouri-straight-bourbon-batch-1"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "photo-ben-holladay-rickhouse-proof": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 7,
+      "oak": 7,
+      "fruit": 5,
+      "spice": 8,
+      "grain": 4,
+      "richness": 7,
+      "smoke": 3,
+      "body": 8,
+      "warmth": 8,
+      "finish": 8,
+      "herbal": 1
+    },
+    "confidence": "medium",
+    "rationale": "Sweet baking spice, cherry and nuts, then pepper, char and a long warming finish; reviewed batch is representative.",
+    "sources": [
+      "https://shop.holladaydistillery.com/products/ben-holladay-rickhouse-proof-bourbon-750ml",
+      "https://reviews.whiskeyfellow.net/2023/12/ben-holladay-missouri-straight.html"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "elijah-craig-small-batch": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 6,
+      "oak": 7,
+      "fruit": 4,
+      "spice": 5,
+      "grain": 4,
+      "richness": 6,
+      "smoke": 3,
+      "body": 6,
+      "warmth": 4,
+      "finish": 7,
+      "herbal": 3
+    },
+    "confidence": "medium",
+    "rationale": "Recurring vanilla, caramel, oak and nuts with moderate spice, mint and subtle smoke; producer and critics describe a long finish.",
+    "sources": [
+      "https://elijahcraig.com/small-batch",
+      "https://thewhiskeyjug.com/bourbon-whiskey/elijah-craig-small-batch-review/",
+      "https://www.thewhiskeyshelf.com/elijah-craig-small-batch-bourbon-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "four-roses-single-barrel": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 6,
+      "oak": 5,
+      "fruit": 6,
+      "spice": 6,
+      "grain": 3,
+      "richness": 5,
+      "smoke": 1,
+      "body": 6,
+      "warmth": 5,
+      "finish": 7,
+      "herbal": 3
+    },
+    "confidence": "medium",
+    "rationale": "Pear, plum, cherry and honey with spice, gentle wood, cocoa and mint; single barrels vary.",
+    "sources": [
+      "https://www.fourrosesbourbon.com/bourbon/single-barrel",
+      "https://www.breakingbourbon.com/review/four-roses-single-barrel-2025-obsv",
+      "https://www.thewhiskeyshelf.com/four-roses-single-barrel-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "four-roses-small-batch": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 6,
+      "oak": 5,
+      "fruit": 5,
+      "spice": 5,
+      "grain": 3,
+      "richness": 5,
+      "smoke": 2,
+      "body": 5,
+      "warmth": 4,
+      "finish": 5,
+      "herbal": 2
+    },
+    "confidence": "medium",
+    "rationale": "Caramel and berries with baking spice; moderate texture and wood, with critics disagreeing on finish length.",
+    "sources": [
+      "https://www.fourrosesbourbon.com/bourbon/small-batch",
+      "https://thebourbonculture.com/whiskey-reviews/four-roses-small-batch-bourbon-review/",
+      "https://bourbonobsessed.com/four-roses-small-batch-bourbon-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "four-roses-small-batch-select": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 6,
+      "oak": 4,
+      "fruit": 6,
+      "spice": 6,
+      "grain": 3,
+      "richness": 5,
+      "smoke": 2,
+      "body": 6,
+      "warmth": 5,
+      "finish": 6,
+      "herbal": 4
+    },
+    "confidence": "medium",
+    "rationale": "Apricot and berries, clove and nutmeg with light oak and mint; finish ranges from short to lingering across reviews.",
+    "sources": [
+      "https://www.fourrosesbourbon.com/bourbon/small-batch-select",
+      "https://thewhiskeywash.com/reviews/whiskey-review-four-roses-small-batch-select/",
+      "https://www.bourbonbanter.com/four-roses-small-batch-select-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "photo-gunnars-honey": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 9,
+      "oak": 3,
+      "fruit": 2,
+      "spice": 2,
+      "grain": 3,
+      "richness": 5,
+      "smoke": 1,
+      "body": 6,
+      "warmth": 2,
+      "finish": 4,
+      "herbal": 1
+    },
+    "confidence": "low",
+    "rationale": "Raw honey dominates a 70-proof wheated-bourbon base. Other axes are lower-confidence style estimates: detailed independent tasting notes are unavailable.",
+    "sources": [
+      "https://gunnarsbourbon.com/our-story"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal",
+      "body",
+      "warmth",
+      "finish"
+    ]
+  },
+  "henry-mckenna-10-year-single-barrel": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 6,
+      "oak": 7,
+      "fruit": 3,
+      "spice": 6,
+      "grain": 3,
+      "richness": 5,
+      "smoke": 2,
+      "body": 6,
+      "warmth": 5,
+      "finish": 7,
+      "herbal": 2
+    },
+    "confidence": "medium",
+    "rationale": "Mature oak, vanilla and caramel with spice, faint herbs and a moderate-to-long finish; barrel variation is substantial.",
+    "sources": [
+      "https://heavenhilldistillery.com/henry-mckenna-single-barrel.php",
+      "https://www.breakingbourbon.com/review/henry-mckenna-single-barrel"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "photo-high-west-barbados-rum-finish": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 8,
+      "oak": 4,
+      "fruit": 7,
+      "spice": 4,
+      "grain": 3,
+      "richness": 7,
+      "smoke": 2,
+      "body": 7,
+      "warmth": 5,
+      "finish": 6,
+      "herbal": 2
+    },
+    "confidence": "medium",
+    "rationale": "Coconut, banana and peach over custard, molasses and caramel with ginger and a soft tobacco accent; batch dependent.",
+    "sources": [
+      "https://adultbeveragesolutions.com/gallery/1718037029_High_West_Cask_Collection_Barbados_Rum_Barrel-Finished_Tasting_Note.pdf",
+      "https://savwaywines.com/barrel-picks/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "ks-holladay-soft-red-wheat-bottled-in-bond-missouri-straight-bourbon-whiskey-2": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 7,
+      "oak": 6,
+      "fruit": 6,
+      "spice": 4,
+      "grain": 5,
+      "richness": 7,
+      "smoke": 3,
+      "body": 7,
+      "warmth": 5,
+      "finish": 6,
+      "herbal": 2
+    },
+    "confidence": "medium",
+    "rationale": "Pastry, honey, toffee and fruit in a creamy texture, balanced by wood, char and gentle dryness.",
+    "sources": [
+      "https://holladaybourbon.com/holladay-soft-red-wheat-bourbon/",
+      "https://breakingbourbon.com/review/ben-holladay-soft-red-wheat-bottled-in-bond-bourbon",
+      "https://bourboninspector.com/holladay-soft-red-wheat-bottled-in-bond-bourbon/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "photo-holladay-soft-red-wheat-rickhouse-proof": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 7,
+      "oak": 8,
+      "fruit": 7,
+      "spice": 6,
+      "grain": 4,
+      "richness": 7,
+      "smoke": 4,
+      "body": 8,
+      "warmth": 8,
+      "finish": 8,
+      "herbal": 1
+    },
+    "confidence": "medium",
+    "rationale": "Dark fruit and molasses meet leathery oak, pepper and tannic wood; strength and balance vary by batch.",
+    "sources": [
+      "https://shop.holladaydistillery.com/products/ben-holladay-rickhouse-proof-soft-red-wheat-750ml",
+      "https://www.breakingbourbon.com/review/holliday-soft-red-wheat-rickhouse-proof-bourbon-oct-2024-batch"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "maker-s-mark-101": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 7,
+      "oak": 6,
+      "fruit": 6,
+      "spice": 6,
+      "grain": 4,
+      "richness": 6,
+      "smoke": 2,
+      "body": 6,
+      "warmth": 6,
+      "finish": 7,
+      "herbal": 1
+    },
+    "confidence": "medium",
+    "rationale": "Fruit, butterscotch and vanilla, with assertive cinnamon, dry wood and a lengthy warming finish.",
+    "sources": [
+      "https://www.makersmark.com/en-us/bourbons/makers-mark-101",
+      "https://thebourbonculture.com/whiskey-reviews/makers-mark-101-review/",
+      "https://bourbonobsessed.com/makers-mark-101-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "maker-s-mark-46": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 7,
+      "oak": 8,
+      "fruit": 3,
+      "spice": 6,
+      "grain": 4,
+      "richness": 6,
+      "smoke": 4,
+      "body": 6,
+      "warmth": 5,
+      "finish": 6,
+      "herbal": 2
+    },
+    "confidence": "medium",
+    "rationale": "French oak and vanilla sweetness with cinnamon and char; wood dominates, while finish and fruit vary across reviews.",
+    "sources": [
+      "https://www.makersmark.com/en-us/bourbons/makers-mark-46",
+      "https://www.breakingbourbon.com/review/makers-mark-46-bourbon",
+      "https://www.breakingbourbon.com/review/makers-46-bourbon",
+      "https://www.whiskeyinmyweddingring.com/reviews/makers-mark-46"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "maker-s-mark": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 6,
+      "oak": 4,
+      "fruit": 4,
+      "spice": 4,
+      "grain": 5,
+      "richness": 4,
+      "smoke": 2,
+      "body": 4,
+      "warmth": 3,
+      "finish": 4,
+      "herbal": 1
+    },
+    "confidence": "medium",
+    "rationale": "Caramel, vanilla, soft wheat and orchard fruit; lighter body and heat, with cinnamon and dry wood late.",
+    "sources": [
+      "https://www.makersmark.com/en-us/bourbons/makers-mark",
+      "https://www.breakingbourbon.com/review/makers-mark-bourbon",
+      "https://bourbonobsessed.com/makers-mark-bourbon-whisky-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "photo-nulu-amburana": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 8,
+      "oak": 5,
+      "fruit": 3,
+      "spice": 9,
+      "grain": 3,
+      "richness": 7,
+      "smoke": 1,
+      "body": 6,
+      "warmth": 6,
+      "finish": 5,
+      "herbal": 1
+    },
+    "confidence": "low",
+    "rationale": "Dominant cinnamon icing, vanilla, cacao, ginger and burnt sugar; shorter finish in the reviewed barrel. Texture and heat are less certain.",
+    "sources": [
+      "https://nuluwhiskies.com/whiskeys/amburana-finished-bourbon",
+      "https://thebourbonculture.com/whiskey-reviews/nulu-experimental-finish-series-bourbon-finished-in-amburana-barrels-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal",
+      "body",
+      "warmth",
+      "finish"
+    ]
+  },
+  "photo-nulu-french-oak": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 7,
+      "oak": 8,
+      "fruit": 3,
+      "spice": 5,
+      "grain": 3,
+      "richness": 7,
+      "smoke": 2,
+      "body": 7,
+      "warmth": 6,
+      "finish": 7,
+      "herbal": 1
+    },
+    "confidence": "low",
+    "rationale": "Toasted French oak with maple, chocolate and mocha. Body, warmth and length are representative barrel/style estimates.",
+    "sources": [
+      "https://nuluwhiskies.com/whiskeys/nulu-french-oak",
+      "https://seelbachs.com/products/nulu-french-oak-finished-single-barrel-bourbon"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal",
+      "body",
+      "warmth",
+      "finish"
+    ]
+  },
+  "old-forester-1870-original-batch": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 6,
+      "oak": 4,
+      "fruit": 6,
+      "spice": 4,
+      "grain": 3,
+      "richness": 4,
+      "smoke": 1,
+      "body": 4,
+      "warmth": 3,
+      "finish": 5,
+      "herbal": 2
+    },
+    "confidence": "medium",
+    "rationale": "Apple, citrus and honey, with restrained spice, shortbread and soft texture; moderate finish.",
+    "sources": [
+      "https://www.oldforester.com/products/old-forester-1870-original-batch-whisky/",
+      "https://thewhiskeyjug.com/bourbon-whiskey/old-forester-1870-original-batch-review/",
+      "https://modernthirst.com/2014/12/29/bourbon-review-old-forester-1870-original-batch/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "old-forester-1897-bottled-in-bond": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 7,
+      "oak": 6,
+      "fruit": 6,
+      "spice": 5,
+      "grain": 3,
+      "richness": 6,
+      "smoke": 4,
+      "body": 6,
+      "warmth": 5,
+      "finish": 6,
+      "herbal": 2
+    },
+    "confidence": "medium",
+    "rationale": "Caramel, dried fruit and toffee, with smoke, leather and wood; some reviewers find sweeter banana notes.",
+    "sources": [
+      "https://www.oldforester.com/products/old-forester-1897-bottled-in-bond-whisky/",
+      "https://thewhiskeywash.com/bourbon/whiskey-review-old-forester-1897-bottled-bond/",
+      "https://thewhiskeyjug.com/bourbon-whiskey/old-forester-1897-bottled-in-bond-review/",
+      "https://www.thewhiskeyshelf.com/old-forester-1897-bottled-in-bond-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "old-forester-1910": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 8,
+      "oak": 8,
+      "fruit": 5,
+      "spice": 5,
+      "grain": 3,
+      "richness": 8,
+      "smoke": 5,
+      "body": 8,
+      "warmth": 4,
+      "finish": 7,
+      "herbal": 2
+    },
+    "confidence": "medium",
+    "rationale": "Dessert sweetness, dark cocoa, buttercream and thick texture contrast with pronounced charred oak and a dry close.",
+    "sources": [
+      "https://www.oldforester.com/products/old-forester-1910-old-fine-whisky/",
+      "https://www.breakingbourbon.com/review/old-forester-1910-old-fine-whisky",
+      "https://thewhiskeywash.com/bourbon/whiskey-review-old-forester-1910-old-fine-whisky/",
+      "https://thewhiskeyjug.com/bourbon-whiskey/old-forester-1910-old-fine-whisky-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "old-forester-1920": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 7,
+      "oak": 7,
+      "fruit": 7,
+      "spice": 6,
+      "grain": 4,
+      "richness": 8,
+      "smoke": 4,
+      "body": 8,
+      "warmth": 7,
+      "finish": 8,
+      "herbal": 1
+    },
+    "confidence": "medium",
+    "rationale": "Dark cherry, chocolate, caramel and nuts with char, rye spice and long warmth at 115 proof.",
+    "sources": [
+      "https://www.oldforester.com/products/old-forester-1920-style-prohibition-whisky/",
+      "https://www.breakingbourbon.com/review/old-forester-1920-prohibition-style-bourbon",
+      "https://thewhiskeywash.com/whiskey-styles/bourbon/whisky-review-old-forester-1920-prohibition-style-bourbon/",
+      "https://thewhiskeyjug.com/bourbon-whiskey/old-forester-1920-prohibition-style-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "old-forester-statesman": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 6,
+      "oak": 6,
+      "fruit": 5,
+      "spice": 7,
+      "grain": 3,
+      "richness": 6,
+      "smoke": 3,
+      "body": 6,
+      "warmth": 5,
+      "finish": 5,
+      "herbal": 2
+    },
+    "confidence": "medium",
+    "rationale": "Apple, vanilla and caramel with bold pepper, cinnamon, wood and leather; quick spice close per producer.",
+    "sources": [
+      "https://www.oldforester.com/products/old-forester-statesman-bourbon/",
+      "https://www.pastemagazine.com/drink/old-forester-statesman-bourbon/old-forester-statesman-bourbon-review"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "ks-old-grand-dad-114-ksbw": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 6,
+      "oak": 6,
+      "fruit": 4,
+      "spice": 8,
+      "grain": 5,
+      "richness": 6,
+      "smoke": 3,
+      "body": 7,
+      "warmth": 8,
+      "finish": 8,
+      "herbal": 3
+    },
+    "confidence": "medium",
+    "rationale": "Rye and cinnamon lead caramel and apple; thick but hot, with pepper, herbs, char and lingering warmth.",
+    "sources": [
+      "https://www.breakingbourbon.com/review/old-grand-dad-114-bourbon-2025",
+      "https://thebourbonculture.com/whiskey-reviews/old-grand-dad-114-review/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "photo-old-grand-dad-bonded": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 5,
+      "oak": 5,
+      "fruit": 4,
+      "spice": 8,
+      "grain": 4,
+      "richness": 4,
+      "smoke": 2,
+      "body": 5,
+      "warmth": 6,
+      "finish": 6,
+      "herbal": 1
+    },
+    "confidence": "medium",
+    "rationale": "Rye-forward cinnamon and pepper with citrus, vanilla, dark fruit and persistent warmth; medium body.",
+    "sources": [
+      "https://www.beamdistilling.com/old-grand-dad-bourbon/our-bourbons/old-grand-dad-bottled-in-bond",
+      "https://www.breakingbourbon.com/review/old-grand-dad-bonded-bourbon"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  },
+  "ks-old-grand-dad-old-grand-dad-ksbw": {
+    "version": 1,
+    "reviewed_on": "2026-10-07",
+    "basis": "research_synthesis_estimate",
+    "scale": "0-10 sensory intensity; not enjoyment or critic quality",
+    "dimensions": {
+      "sweetness": 5,
+      "oak": 3,
+      "fruit": 3,
+      "spice": 6,
+      "grain": 6,
+      "richness": 3,
+      "smoke": 1,
+      "body": 3,
+      "warmth": 3,
+      "finish": 5,
+      "herbal": 1
+    },
+    "confidence": "medium",
+    "rationale": "Light-bodied 80-proof bourbon, led by corn, vanilla and cinnamon with moderate pepper and a grainy close.",
+    "sources": [
+      "https://www.breakingbourbon.com/review/old-grand-dad-bourbon",
+      "https://thewhiskeyjug.com/bourbon-whiskey/old-grand-dad-80-proof-review/",
+      "https://www.thirtyonewhiskey.com/whiskey-review-old-grand-dad-80-proof-kentucky-straight-bourbon-whiskey/"
+    ],
+    "batch_scope": "representative expression; pictured batch not established",
+    "low_confidence_axes": [
+      "grain",
+      "herbal"
+    ]
+  }
+}

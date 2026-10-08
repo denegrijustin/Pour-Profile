@@ -1927,8 +1927,20 @@ function evidenceStatement(profileId) {
   return [`SELECT t.*, b.category AS bottle_category, b.varietal, b.subcategory, b.name AS bottle_name, b.brand, b.catalog_id, b.category_attrs
     FROM tastings t JOIN bottles b ON b.id=t.bottle_id WHERE t.profile_id=? AND t.rating IS NOT NULL`, profileId];
 }
-function evidenceFromRows(rows) {
-  return rows.map(tastingEvidence).filter(e => Object.keys(e.dimensions).length);
+function evidenceFromRows(rows, records = []) {
+  const observed = rows.map(tastingEvidence).filter(e => Object.keys(e.dimensions).length);
+  const observedBottles = new Set(rows.filter(r => Object.keys(tastingEvidence(r).dimensions).length).map(r=>r.bottle_id));
+  const latest = new Map();
+  for (const row of rows) if (!latest.has(row.bottle_id) || row.id > latest.get(row.bottle_id).id) latest.set(row.bottle_id, row);
+  for (const row of latest.values()) {
+    if (observedBottles.has(row.bottle_id) || row.rating == null) continue;
+    const linked = linkCatalogRecord(records, {name:row.bottle_name,brand:row.bottle_brand,catalog_id:row.catalog_id});
+    const rec = records.find(r=>r.id===row.catalog_id) || (linked?.how !== 'close' ? linked?.record : null);
+    if (!rec?.flavor_profile) continue;
+    const candidate = referenceCandidate(rec);
+    observed.push({...candidate,rating:row.rating,enjoyment:{},basis:'research_synthesis_estimate'});
+  }
+  return observed;
 }
 async function pourEvidence(env, profileId) {
   const [rows] = await batch(env, [evidenceStatement(profileId)]);
@@ -1948,7 +1960,7 @@ async function scoringContext(env, profileId, extra = []) {
     ["SELECT * FROM wine_palate_dimensions WHERE profile_id = ?", profileId],
     ...extra
   ]);
-  return { sourcePreferences: sourcePreferences(res[0],await catalog(env).catch(()=>[])), evidence: evidenceFromRows(res[0]), legacy: palateFromRows(res.slice(1, 5)), wineRows: res[5], extras: res.slice(6) };
+  return { sourcePreferences: sourcePreferences(res[0],await catalog(env).catch(()=>[])), evidence: evidenceFromRows(res[0],await catalog(env).catch(()=>[])), legacy: palateFromRows(res.slice(1, 5)), wineRows: res[5], extras: res.slice(6) };
 }
 
 /**
@@ -1975,20 +1987,21 @@ async function fullPourProfile(url, env) {
     [`SELECT b.category, COUNT(*) AS pours, ROUND(AVG(t.rating),1) AS average
     FROM tastings t JOIN bottles b ON b.id=t.bottle_id WHERE t.profile_id=? AND t.rating IS NOT NULL GROUP BY b.category`, person.id]
   ]);
-  const evidence = evidenceFromRows(evidenceRows);
+  const evidence = evidenceFromRows(evidenceRows, await catalog(env));
   const axes = AXES.map(axis => {
     const positives = evidence.filter(e => Number.isFinite(e.dimensions[axis]) && (e.enjoyment[axis] ?? e.rating/2) >= 3.5);
     return { axis, label:AXIS_LABELS[axis], target:positives.length ? Math.round(positives.reduce((s,e) => s+e.dimensions[axis],0)/positives.length*10)/10 : null,
       samples:positives.length, categories:[...new Set(positives.map(e => e.category))] };
   });
-  return json({person:person.display_name, counts, axes, detailed_pours:evidence.length});
+  return json({person:person.display_name, counts, axes, detailed_pours:evidenceRows.map(tastingEvidence).filter(e=>Object.keys(e.dimensions).length).length, researched_rated_bottles:evidence.filter(e=>e.basis==='research_synthesis_estimate').length});
 }
 function referenceCandidate(r) {
   const tp = r.tasting_profile || {};
-  const category = r.category === 'sauvignon_blanc' ? 'wine' : r.category;
+  const category = r.category === 'sauvignon_blanc' ? 'wine' : ['rye','american_whiskey'].includes(r.category) ? 'bourbon' : r.category;
   const dimensions = {};
   const map = {sweetness:'sweetness',oak:'oak',fruit:'fruit',spice:'spice',body:'body',finish_intensity:'finish',acidity:'acidity',grassy_herbal:'herbal',minerality:'minerality'};
   for (const [key,axis] of Object.entries(map)) if (typeof tp[key] === 'number') dimensions[axis] = tp[key];
+  Object.assign(dimensions, r.flavor_profile?.dimensions || {});
   return { name:r.name, category, style:category === 'wine' ? 'Sauvignon Blanc' : r.subcategory, dimensions };
 }
 /** Full cited notes for one catalog record (dist/notes/<id>.json), or null. */
@@ -2012,7 +2025,11 @@ async function catalogItem(id, url, env) {
     summary: rec.tasting_profile?.summary, serving: rec.research?.serving
   }, flavor_profile: {
     dimensions: candidate.dimensions,
-    basis: rec.tasting_profile?.profile_source || "unknown",
+    basis: rec.flavor_profile?.basis || rec.tasting_profile?.profile_source || "unknown",
+    confidence: rec.flavor_profile?.confidence || "unknown",
+    rationale: rec.flavor_profile?.rationale || null,
+    sources: rec.flavor_profile?.sources || [],
+    low_confidence_axes: rec.flavor_profile?.low_confidence_axes || [],
     targets: axisTargets(ctx.evidence, candidate.category),
     descriptors: (expert?.flavor_terms || []).map(term => classifyTerm(term))
   }});
@@ -2042,7 +2059,7 @@ async function personalizedCatalog(url,env,records,ctx = null) {
     }
     const sourceFit=sourcePreferenceFit(r,preferences);
     if(sourceFit) {
-      score=sourceFit.score;
+      score=r.flavor_profile && score != null ? Math.round(score * 0.8 + sourceFit.score * 0.2) : sourceFit.score;
       if(sourceFit.reason) why=sourceFit.reason;
       if(sourceFit.concern) concern=sourceFit.concern;
     }
