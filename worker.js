@@ -1210,10 +1210,12 @@ async function bottleSubjects(env, targetId) {
  */
 async function catalogSubjects(env, scope) {
   let records = await catalog(env);
-  if (scope !== "all") {
+  if (scope === "local") {
+    records = records.filter(r => r.local_store?.sightings?.length);
+  } else if (scope !== "all") {
     const adopted = await all(env, "SELECT DISTINCT catalog_id FROM bottles WHERE catalog_id IS NOT NULL").catch(() => []);
     const ids = new Set(adopted.map((r) => r.catalog_id));
-    records = records.filter((r) => ids.has(r.id) || r.recommendation?.recommended || r.user_state?.tasted);
+    records = records.filter((r) => r.local_store?.sightings?.length || ids.has(r.id) || r.recommendation?.recommended || r.user_state?.tasted);
   }
   // `page` is the producer's own product page, from the cited expert notes. It is
   // what makes image enrichment work at all: every `image.lookup_url` in the
@@ -1228,7 +1230,7 @@ async function catalogSubjects(env, scope) {
 }
 
 async function imageSubjects(env, scope, targetId) {
-  return [...await bottleSubjects(env,targetId), ...await catalogSubjects(env, scope)];
+  return [...(scope === "local" ? [] : await bottleSubjects(env,targetId)), ...await catalogSubjects(env, scope)];
 }
 
 async function imageStatus(env, scope = "visible") {
@@ -1332,7 +1334,7 @@ async function enrichImages(request, env) {
   // subject costs two fetches, and the run is paced. The UI loops until done.
   const limit = Math.min(Math.max(Number(b.limit) || 6, 1), 12);
   const retryFailed = b.retry_failed === true;
-  const scope = b.scope === "all" ? "all" : "visible";
+  const scope = ["all", "local"].includes(b.scope) ? b.scope : "visible";
 
   const attempted = await all(env, "SELECT subject_kind, subject_id, status, match_reason FROM image_lookups");
   // Keep saved photos. Recheck older unresolved lookups once with verified sources;
@@ -1341,7 +1343,7 @@ async function enrichImages(request, env) {
     attempted.filter((r) => !(retryFailed && r.status !== "ok") && !(r.status !== "ok" && !String(r.match_reason || "").startsWith("Image lookup v5:"))).map((r) => `${r.subject_kind}:${r.subject_id}`)
   );
   const queue = (await imageSubjects(env, scope,b.bottle_id))
-    .filter((s) => (b.bottle_id && retryFailed || !skip.has(`${s.kind}:${s.id}`)) && (!b.bottles_only || s.kind === "bottle") && (!b.bottle_id || (s.kind === "bottle" && Number(s.id) === Number(b.bottle_id))))
+    .filter((s) => (!b.catalog_id || (s.kind === "catalog" && s.id === b.catalog_id)) && (b.catalog_id && retryFailed || b.bottle_id && retryFailed || !skip.has(`${s.kind}:${s.id}`)) && (!b.bottles_only || s.kind === "bottle") && (!b.bottle_id || (s.kind === "bottle" && Number(s.id) === Number(b.bottle_id))))
     .slice(0, 1);
 
   const results = [];
