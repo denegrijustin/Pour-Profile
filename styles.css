@@ -654,3 +654,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { 
 .bottle-marker {top:1px;color:#18372b}
 .ideal-marker {bottom:-7px;color:#832854}
 @media(max-width:420px){.flavor-map-row{grid-template-columns:72px minmax(0,1fr)}.flavor-map{padding:10px}}
+
+.catalog-detail-photo {height:160px;text-align:center;margin:8px 0}
+.catalog-detail-photo img {height:100%;max-width:100%;width:auto;object-fit:contain}

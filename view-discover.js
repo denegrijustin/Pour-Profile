@@ -176,7 +176,7 @@ async function openCatalogDetail(id, dispatchNav) {
   const concerns = (r.concern || "").split(/\.\s+/).filter(Boolean);
   openSheet(`
     <div class="sheet-header"><h2>${escapeHtml(r.name)}</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
-    ${bottleThumbHtml(r)}
+    <div class="catalog-detail-photo">${bottleThumbHtml(r)}</div>
     ${sub ? `<p class="field-hint">${escapeHtml(sub)}</p>` : ""}
     <div style="display:flex;align-items:center;gap:10px;margin:10px 0">
       <span class="fit-chip ${band.cls}">${r.jd_fit != null ? r.jd_fit : "—"}</span>
