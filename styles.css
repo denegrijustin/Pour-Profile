@@ -667,3 +667,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { 
 
 .flavor-chart {max-width:420px;max-height:none;height:auto;margin:0 auto}
 .catalog-detail-photo {height:96px}
+.flavor-chart {max-width:340px}
+.flavor-axis-controls label,.flavor-point-controls label {margin:0;display:flex;flex-direction:column;gap:4px}
+.flavor-axis-controls select,.flavor-point-controls input {margin:0}
