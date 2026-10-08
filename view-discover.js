@@ -69,12 +69,14 @@ export async function renderDiscover(dispatchNav) {
     api.bottles({ status: "want_to_try", sort: "highest_match" }).catch(() => ({ bottles: [] }))
   ]);
 
+  const mapRes = await api.flavorMap().catch(()=>({}));
   const picks = picksRes.results || [];
   const mine = mineRes.bottles || [];
   const categories = picksRes.categories || [];
 
   view.innerHTML = `
     <p class="field-hint">Your local catalog grows from store photos. Dates show when evidence was uploaded; current stock may change. Spirits and wine are added as labels are confirmed.</p>
+    ${mapRes.flavor_profile ? flavorHeatmapHtml(mapRes.flavor_profile) : ""}
     ${photoRecommendationHtml()}
     <div class="filter-bar">
       <button class="filter-chip${state.mode === "picks" ? " active" : ""}" data-mode="picks">For you</button>
@@ -112,6 +114,7 @@ export async function renderDiscover(dispatchNav) {
   `;
 
   wirePhotoRecommendations(view);
+  wireFlavorHeatmap(view, mapRes.flavor_profile || {}, id=>openCatalogDetail(id,dispatchNav));
   wire(view, dispatchNav);
 }
 
@@ -164,7 +167,7 @@ function wire(view, dispatchNav) {
   });
 }
 
-async function openCatalogDetail(id, dispatchNav) {
+export async function openCatalogDetail(id, dispatchNav) {
   openSheet(`<div class="sheet-header"><h2>Loading…</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>`);
   let data;
   try { data = await api.catalogItem(id); }

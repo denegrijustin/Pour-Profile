@@ -1,3 +1,5 @@
+import { flavorHeatmapHtml, wireFlavorHeatmap } from "./flavor-heatmap.js";
+import { openCatalogDetail } from "./view-discover.js";
 import { api, downscaleImage } from "./api.js";
 import { el, escapeHtml, decisionBannerHtml, whyConcernsHtml, toast, matchBadgeHtml, bottleThumbHtml } from "./ui.js";
 import { CATEGORIES } from "./spirit-taxonomy.js";
@@ -37,7 +39,7 @@ export async function renderScan(dispatchNav) {
     <input type="search" id="catalogSearch" placeholder="Type any bottle name…" autocomplete="off">
     <button class="btn btn-secondary btn-block" id="webResearchBtn" style="margin-top:8px">Search bottle sources</button>
     <p id="webResearchStatus" class="field-hint" role="status">Find details, reviews and a photo. A Blue Book bottle-page link works too.</p>
-    <div id="catalogResults"></div>
+    <div id="catalogResults"></div><div id="searchFlavorMap"></div>
     <p class="field-hint" style="margin-top:10px">Catalog results appear as you type. Can't find it? Add it manually.</p>
     <button class="btn btn-primary btn-block" id="manualNewTopBtn" style="margin-top:10px">✍️ Add a bottle myself</button>
 
@@ -130,7 +132,7 @@ function wireCatalogSearch(dispatchNav) {
     clearTimeout(timer);
     timer = setTimeout(async () => {
       const q = input.value.trim();
-      if (q.length < 2) { results.innerHTML = ""; return; }
+      if (q.length < 2) { results.innerHTML = ""; document.getElementById("searchFlavorMap").innerHTML=""; return; }
       let res;
       try { res = await api.drinkSearch(q); } catch { results.innerHTML = `<p class="field-hint">Search unavailable offline.</p>`; return; }
       if (input.value.trim() !== q || !results.isConnected) return;
@@ -142,14 +144,25 @@ function wireCatalogSearch(dispatchNav) {
             <div class="name">${escapeHtml(r.name)}</div>
             <div class="sub">${escapeHtml([r.kind === "kansas" ? null : r.producer, r.region, r.proof ? r.proof + " proof" : null, r.kind === "kansas" && r.vintage ? r.vintage : null].filter(Boolean).join(" · "))}</div>
           </div>
+          ${r.kind === "catalog" ? `<button class="btn btn-secondary btn-sm" data-compare-catalog="${escapeHtml(r.id)}">Compare to ideal</button>` : ""}
           ${r.kind === "reference" ? `<span class="field-hint">${r.ratings.length} sourced rating${r.ratings.length === 1 ? "" : "s"}</span>` : ""}
           ${r.kind === "kansas" ? `<span class="field-hint" title="${escapeHtml((r.distributors || []).join(", "))}">${r.store_pick ? "Store pick · " : ""}Sold in KS</span>` : ""}
           ${r.jd_fit != null ? `<div style="text-align:right"><div style="font-weight:800;color:var(--accent-deep)">${r.jd_fit}</div><div class="field-hint" style="font-size:10px">${escapeHtml(r.fit_label || "")}</div></div>` : ""}
         </div>`).join("") : `<p class="field-hint">Not in the database — that's fine. Tap “Add a bottle myself” to enter it.</p>`;
+      const candidate=rows.find(r=>r.kind==='catalog');
+      const map=document.getElementById('searchFlavorMap');
+      if(candidate && map){
+        const data=await api.flavorMap({catalog_id:candidate.id}).catch(()=>({}));
+        if(input.value.trim()!==q || !map.isConnected)return;
+        map.innerHTML=data.flavor_profile ? flavorHeatmapHtml(data.flavor_profile) : '';
+        wireFlavorHeatmap(map,data.flavor_profile || {},id=>openCatalogDetail(id,dispatchNav));
+      }else if(map)map.innerHTML='<p class="field-hint">A researched numeric profile is needed to plot this bottle.</p>';
     }, 220);
   });
 
   results.addEventListener("click", async (e) => {
+    const compare=e.target.closest("[data-compare-catalog]");
+    if(compare){openCatalogDetail(compare.dataset.compareCatalog,dispatchNav);return;}
     const row = e.target.closest("[data-adopt]");
     if (!row) return;
     const { id, name, kind } = JSON.parse(row.dataset.adopt);
@@ -411,7 +424,7 @@ function renderLinkPicker(code, dispatchNav, shouldRate) {
     clearTimeout(timer);
     timer = setTimeout(async () => {
       const q = input.value.trim();
-      if (q.length < 2) { results.innerHTML = ""; return; }
+      if (q.length < 2) { results.innerHTML = ""; document.getElementById("searchFlavorMap").innerHTML=""; return; }
       let res;
       try { res = await api.drinkSearch(q); } catch { results.innerHTML = `<p class="field-hint">Search unavailable offline.</p>`; return; }
       if (input.value.trim() !== q || !results.isConnected) return;

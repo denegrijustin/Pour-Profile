@@ -77,6 +77,7 @@ async function routeApi(request, url, env) {
   if (pathname === "/api/profile/full" && method === "GET") return fullPourProfile(url, env);
   if (pathname === "/api/recommendations/photo" && method === "POST") return recommendPhoto(request, url, env);
   if (pathname === "/api/profiles" && method === "GET") return listProfiles(env);
+  if (pathname === "/api/flavor-map" && method === "GET") return flavorMap(url, env);
   if (pathname === "/api/catalog/search" && method === "GET") return catalogSearch(url, env);
   if (pathname === "/api/catalog/recommended" && method === "GET") return catalogRecommended(url, env);
   if (pathname === "/api/catalog/browse" && method === "GET") return catalogBrowse(url, env);
@@ -2011,6 +2012,18 @@ async function expertNotes(env, id) {
   if (!res || !res.ok) return null;
   return res.json().catch(() => null);
 }
+async function flavorMap(url, env) {
+  const records = await catalog(env);
+  const id = url.searchParams.get("catalog_id");
+  const name = url.searchParams.get("name");
+  const requested = id ? records.find(r=>r.id===id) : name ? records.find(r=>nameKey(r.name)===nameKey(name)) : null;
+  const base = requested || records.find(r=>r.local_store && r.flavor_profile);
+  if (!base) return json({flavor_profile:null});
+  const response = await catalogItem(base.id, url, env);
+  const data = await response.json();
+  if (!requested) {data.flavor_profile.current_id = null;data.flavor_profile.current_name = null;}
+  return json({flavor_profile:data.flavor_profile, comparison_found:!!requested});
+}
 async function catalogItem(id, url, env) {
   const records = await catalog(env);
   const rec = records.find((r) => r.id === id);
@@ -2021,6 +2034,7 @@ async function catalogItem(id, url, env) {
   const expert = await expertNotes(env, rec.id);
   const mapCategory = referenceCandidate(rec).category;
   const localCandidates = records.filter(r => r.local_store && r.flavor_profile && referenceCandidate(r).category === mapCategory);
+  if (!localCandidates.some(r => r.id === rec.id)) localCandidates.push(rec);
   const candidates = withImagesFrom(markAdoptedFrom(localCandidates.map(r => ({...catalogPublic(r), dimensions:referenceCandidate(r).dimensions})), ctx.owned), ctx.have);
   const candidate = referenceCandidate(rec);
   return json({ item: withImage, expert, details: {
@@ -2033,7 +2047,7 @@ async function catalogItem(id, url, env) {
     rationale: rec.flavor_profile?.rationale || null,
     sources: rec.flavor_profile?.sources || [],
     low_confidence_axes: rec.flavor_profile?.low_confidence_axes || [],
-    candidates, current_id:rec.id,
+    candidates, current_id:rec.id, current_name:rec.name, profile_key:await resolveProfileId(url, env), category:mapCategory,
     targets: axisTargets(ctx.evidence, candidate.category),
     descriptors: (expert?.flavor_terms || []).map(term => classifyTerm(term))
   }});

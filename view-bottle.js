@@ -1,3 +1,5 @@
+import { flavorHeatmapHtml, wireFlavorHeatmap } from "./flavor-heatmap.js";
+import { openCatalogDetail } from "./view-discover.js";
 import { renderDraftForm } from "./view-scan.js";
 import { savedAnswersHtml } from "./questionnaire-form.js";
 import { api, downscaleImage } from "./api.js";
@@ -33,6 +35,7 @@ export async function renderBottleDetail(id, dispatchNav) {
     const placeholder = hero?.querySelector(".hero-photo-empty");
     if (placeholder) { const image = document.createElement("img"); image.src = fresh.bottle.image_url; image.alt = fresh.bottle.name; placeholder.replaceWith(image); }
   }).catch(()=>{});
+  const mapData = await api.flavorMap(bottle.catalog_id ? {catalog_id:bottle.catalog_id} : {name:bottle.name}).catch(()=>({}));
   const external = await api.externalRatings(id).then((r) => r.external_ratings || []).catch(() => []);
 
   const hundredReviews=external.filter(r=>String(r.scale)==="100" && r.score!=null);
@@ -125,6 +128,7 @@ export async function renderBottleDetail(id, dispatchNav) {
     ${bottle.image_source_url ? `<p class="field-hint"><a href="${escapeHtml(bottle.image_source_url)}" target="_blank" rel="noopener noreferrer">Producer bottle photo</a> · Packaging may vary by release.</p>` : ""}
     ${bottle.description ? `<div class="card"><strong>Notes on this bottle</strong><p style="margin-top:6px">${escapeHtml(bottle.description)}</p></div>` : ""}
 
+    ${mapData.comparison_found ? flavorHeatmapHtml(mapData.flavor_profile) : `<p class="field-hint">This bottle needs a researched numeric profile before it can be plotted against your ideal.</p>`}
     ${expertNotesHtml(expert, notesMatch)}
     ${expert && catalogLink && catalogLink.how === "close" ? `<p class="field-hint">Notes shown are for <strong>${escapeHtml(catalogLink.name)}</strong>, the closest catalog match to this bottle's name.</p>` : ""}
 
@@ -240,6 +244,7 @@ function wineMatchHtml(wm) {
 
 function wireBottleDetail(bottle) {
   const view = el("view-bottle");
+  wireFlavorHeatmap(view, mapData.flavor_profile || {}, id=>openCatalogDetail(id,currentDispatchNav));
   view.querySelector("[data-action='back']").addEventListener("click", () => currentDispatchNav("spirits"));
 
   const photoInput = view.querySelector("#bottlePhotoInput");

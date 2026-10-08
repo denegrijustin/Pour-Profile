@@ -7,7 +7,7 @@ test('singular map retains full profile and supports movable ideal controls',()=
  assert.equal((html.match(/<svg/g)||[]).length,1);assert.ok(html.includes('data-map-reset'));assert.ok(html.includes('data-point-x'));assert.ok(html.includes('&lt;honey&gt;'));assert.ok(html.includes('Full flavor profile'));
 });
 test('moving the ideal changes nearest recommendation and excludes owned bottles',()=>{
- const candidates=[{id:'sweet',name:'Sweet',dimensions:{sweetness:9,spice:1,oak:5}},{id:'spicy',name:'Spicy',dimensions:{sweetness:1,spice:9,oak:5}},{id:'owned',name:'Owned',adopted_bottle_id:1,dimensions:{sweetness:9,spice:1,oak:5}}];
+ const candidates=[{id:'sweet',name:'Sweet',local_store:true,dimensions:{sweetness:9,spice:1,oak:5}},{id:'spicy',name:'Spicy',local_store:true,dimensions:{sweetness:1,spice:9,oak:5}},{id:'owned',name:'Owned',local_store:true,adopted_bottle_id:1,dimensions:{sweetness:9,spice:1,oak:5}}];
  assert.equal(mapRecommendation(candidates,{oak:{target:5}},'sweetness','spice',{x:9,y:1}).id,'sweet');
  assert.equal(mapRecommendation(candidates,{oak:{target:5}},'sweetness','spice',{x:1,y:9}).id,'spicy');
  assert.equal(mapRecommendation([candidates[2]],{},'sweetness','spice',{x:9,y:1}),null);
@@ -35,4 +35,21 @@ test('reaction-only ratings learn ideal levels without inventing tasting observa
  assert.equal(detail.data.flavor_profile.targets.spice.target,9);
  const saved=(await t.call('/api/bottles/'+adopted.data.bottle_id)).data;
  assert.deepEqual(saved.tastings[0].questionnaire_answers,{});
+});
+
+test('global map and searched comparison retain store-only recommendations',async()=>{
+ const t=setup();const home=await t.call('/api/flavor-map');
+ assert.equal(home.status,200);assert.equal(home.data.comparison_found,false);assert.equal(home.data.flavor_profile.current_id,null);
+ const {fullCatalog}=await import('../tools/catalog-sources.mjs');
+ const outside=fullCatalog().find(r=>!r.local_store && Object.keys(r.tasting_profile?.dimensions||{}).length>=2) || fullCatalog().find(r=>!r.local_store);
+ const searched=await t.call('/api/flavor-map?catalog_id='+outside.id);
+ assert.equal(searched.data.comparison_found,true);
+ assert.ok(searched.data.flavor_profile.candidates.some(r=>r.id===outside.id));
+ assert.equal(mapRecommendation([{id:'outside',name:'Outside',dimensions:{sweetness:5,spice:5}}],{},'sweetness','spice',{x:5,y:5}),null);
+});
+test('moved chart position outweighs remaining learned dimensions',()=>{
+ const rest=Object.fromEntries(['oak','fruit','grain','richness','smoke','body','warmth','finish','herbal'].map(a=>[a,0]));
+ const targets=Object.fromEntries(Object.keys(rest).map(a=>[a,{target:0}]));
+ const candidates=[{id:'near',name:'Near',local_store:true,dimensions:{...Object.fromEntries(Object.keys(rest).map(a=>[a,10])),sweetness:9,spice:1}},{id:'far',name:'Far',local_store:true,dimensions:{...rest,sweetness:1,spice:9}}];
+ assert.equal(mapRecommendation(candidates,targets,'sweetness','spice',{x:9,y:1}).id,'near');
 });

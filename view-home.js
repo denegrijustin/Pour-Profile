@@ -1,3 +1,5 @@
+import { flavorHeatmapHtml, wireFlavorHeatmap } from "./flavor-heatmap.js";
+import { openCatalogDetail } from "./view-discover.js";
 import { FEATURE_BOTTLES } from "./bottle-images.js";
 import { api } from "./api.js";
 import { el, escapeHtml, bottleCardHtml, emptyStateHtml } from "./ui.js";
@@ -10,14 +12,15 @@ export async function renderHome() {
   const view = el("view-home");
   view.innerHTML = `<p class="field-hint">Loading your dashboard…</p>`;
 
-  const [bottlesRes, statsRes, palateRes, tastingsRes, picksRes] = await Promise.all([
+  const [bottlesRes, statsRes, palateRes, tastingsRes, picksRes, mapRes] = await Promise.all([
     api.bottles({ sort: "newest" }).catch(() => ({ bottles: [] })),
     api.stats().catch(() => null),
     api.palate().catch(() => null),
     // The pours themselves, not the bottles they belong to — this is the answer
     // to "I logged a sip, where did it go?".
     api.tastings().catch(() => ({ tastings: [] })),
-    api.catalogRecommended().catch(() => ({ results: [] }))
+    api.catalogRecommended().catch(() => ({ results: [] })),
+    api.flavorMap().catch(()=>({flavor_profile:null}))
   ]);
   const bottles = bottlesRes.bottles || [];
   const tastings = (tastingsRes.tastings || []).slice(0, 5);
@@ -32,6 +35,7 @@ export async function renderHome() {
 
   view.innerHTML = `
     ${bottlesRes._stale ? `<p class="field-hint">Showing your last saved data.</p>` : ""}
+    ${mapRes.flavor_profile ? flavorHeatmapHtml(mapRes.flavor_profile) : ""}
     <section class="home-hero">
       <div class="hero-copy"><button class="btn btn-primary" data-action="nav-scan">Add & rate a drink <span aria-hidden="true">↗</span></button></div>
       <div class="hero-bottles">${FEATURE_BOTTLES.map(b=>`<img src="${escapeHtml(b.image_url)}" alt="${escapeHtml(b.name)}" fetchpriority="high">`).join('')}</div>
@@ -72,9 +76,12 @@ export async function renderHome() {
       </div>
     </div>` : ""}
   `;
+  wireFlavorHeatmap(view, mapRes.flavor_profile || {}, id=>openCatalogDetail(id, homeDispatch));
 }
 
+let homeDispatch;
 export function wireHomeActions(dispatchNav) {
+  homeDispatch=dispatchNav;
   el("view-home").addEventListener("click", (e) => {
     // A tasting row navigates to its bottle; global delegation handles that, so
     // it must not be swallowed by the card-level "nav-discover" handler.
