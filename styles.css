@@ -670,3 +670,43 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { 
 .flavor-chart {max-width:340px}
 .flavor-axis-controls label,.flavor-point-controls label {margin:0;display:flex;flex-direction:column;gap:4px}
 .flavor-axis-controls select,.flavor-point-controls input {margin:0}
+
+/* A soft flavor landscape, with one clear action and secondary controls tucked away. */
+.flavor-map {background:linear-gradient(135deg,#fff,#f6f9fb);border:1px solid var(--border-soft);border-radius:22px;padding:20px;box-shadow:0 8px 28px -20px #36556d;margin:16px 0 22px}
+.flavor-map-heading {display:flex;align-items:center;justify-content:space-between;gap:12px}
+.flavor-map-heading h3 {font-size:25px;margin:3px 0 0}
+.flavor-eyebrow {display:block;font-size:9px;letter-spacing:.12em;font-weight:700;color:var(--ink-faint)}
+.flavor-reset {background:transparent;border:1px solid var(--border);border-radius:20px;padding:8px 11px;font-size:11px;color:var(--accent-deep);cursor:pointer;white-space:nowrap;min-height:36px}
+.flavor-instruction,.flavor-comparison {font-size:12px;color:var(--ink-soft);margin:7px 0}
+.flavor-axis-controls {display:grid;grid-template-columns:1fr 18px 1fr;align-items:end;gap:8px;margin:16px 0 8px}
+.flavor-axis-controls label {display:flex;flex-direction:column;gap:3px;font-size:10px;color:var(--ink-faint);margin:0;min-width:0}
+.flavor-axis-controls select {margin:0;width:100%;min-width:0;border:1px solid var(--border-soft);border-radius:12px;background:#fff;font-size:13px;font-weight:600;color:var(--ink);padding:9px 28px 9px 11px;min-height:40px}
+.flavor-axis-cross {align-self:center;text-align:center;color:var(--silver);padding-top:14px}
+.flavor-map-workspace {display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-items:center}
+.flavor-chart {max-width:420px;width:100%;height:auto;margin:0 auto;font-family:var(--font-ui);font-size:10px;cursor:grab;touch-action:none}
+.flavor-chart:active {cursor:grabbing}
+.flavor-map-canvas {min-width:0}
+.flavor-legend {display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-size:10px;color:var(--ink-soft);margin:4px 0 10px}
+.flavor-legend span {display:inline-flex;align-items:center;gap:5px}
+.flavor-legend i {display:inline-block;width:8px;height:8px;border-radius:50%}
+.legend-ideal {background:#1d5878;box-shadow:0 0 0 3px #dceaf3}
+.legend-match {background:#b76b25}
+.legend-bottle {background:white;border:1px solid #607f92}
+.legend-bottle.legend-current {background:#765284;border-color:#765284}
+.flavor-heat-key {display:flex;align-items:center;justify-content:center;gap:8px;color:var(--ink-faint);font-size:9px}
+.flavor-heat-key i {width:80px;height:5px;border-radius:8px;background:linear-gradient(90deg,#edf3f7,#d4e5df,#d8b26e)}
+.flavor-map-result {padding:16px;border-radius:16px;background:#edf3f7;margin:0;font-size:14px;min-width:0}
+.flavor-match-bottle {display:flex;align-items:center;gap:12px;margin:12px 0}
+.flavor-match-bottle img {height:72px;width:42px;object-fit:contain;flex-shrink:0;mix-blend-mode:multiply}
+.flavor-match-bottle strong {display:block;font-family:var(--font-display);font-size:20px;line-height:1.2}
+.flavor-match-score {display:inline-block;font-size:11px;font-weight:600;color:var(--pine);margin-top:7px}
+.flavor-map-result .flavor-coordinate {font-size:11px;color:var(--ink-soft);margin:8px 0 12px}
+.flavor-map-result .btn {width:100%;border-radius:10px;min-height:40px}
+.flavor-map-result .flavor-compare-note {font-size:11px;color:#765284;line-height:1.5;margin-bottom:12px}
+.flavor-fine-tune,.flavor-method,.flavor-full-profile {border-top:1px solid var(--border-soft);margin-top:13px;padding-top:12px;font-size:11px;color:var(--ink-soft)}
+.flavor-map summary {cursor:pointer;min-height:24px}
+.flavor-map details .field-hint {font-size:11px;line-height:1.6;margin-top:8px}
+.flavor-point-controls input {accent-color:var(--accent-deep);height:24px}
+.flavor-point-controls label {font-size:11px}
+@media(min-width:600px){.flavor-map-workspace {grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px}.flavor-map-result {padding:18px}.flavor-match-bottle {flex-direction:column;align-items:flex-start}.flavor-match-bottle img {height:95px;width:55px}}
+@media(max-width:420px){.flavor-map {padding:14px;border-radius:18px}.flavor-map-heading h3 {font-size:23px}.flavor-legend {gap:11px}.flavor-map-workspace {gap:12px}.flavor-chart {max-width:100%}}
