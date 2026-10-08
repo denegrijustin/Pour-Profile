@@ -9,7 +9,7 @@ import { photoRecommendationHtml, wirePhotoRecommendations } from "./photo-recom
 
 import { api } from "./api.js";
 import { el, escapeHtml, bottleCardHtml, bottleThumbHtml, emptyStateHtml, toast, openSheet, closeSheet, expertChipsHtml, expertNotesHtml } from "./ui.js";
-import { flavorHeatmapHtml } from "./flavor-heatmap.js";
+import { flavorHeatmapHtml, wireFlavorHeatmap } from "./flavor-heatmap.js";
 import { compareList } from "./view-bottle.js";
 
 const state = { category: "", sort: "best_fit", mode: "picks" };
@@ -182,6 +182,7 @@ async function openCatalogDetail(id, dispatchNav) {
       <span class="fit-chip ${band.cls}">${r.jd_fit != null ? r.jd_fit : "—"}</span>
       <strong class="pick-band ${band.cls}" style="margin:0">${band.label}</strong>
     </div>
+    ${flavorHeatmapHtml(data.flavor_profile)}
     ${why.length || concerns.length ? `<div class="notes-match-list" style="margin-bottom:6px">
       ${why.map((w) => `<div>✓ ${escapeHtml(w.replace(/\.$/, ""))}</div>`).join("")}
       ${concerns.map((c) => `<div>⚠ ${escapeHtml(c.replace(/\.$/, ""))}</div>`).join("")}
@@ -190,8 +191,7 @@ async function openCatalogDetail(id, dispatchNav) {
     <p>${escapeHtml(data.details?.summary || "")}</p>
     <dl class="spec-grid">${[["ABV",r.abv != null ? `${r.abv}%` : null],["Proof",r.proof],["Age",data.details?.age],["Mash bill",data.details?.mash_bill],["Finish",data.details?.finish],["Serving",data.details?.serving]].filter(([,v])=>v!=null && v!=="").map(([k,v])=>`<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(String(v))}</dd></div>`).join("")}</dl>
     ${r.local_store ? `<p class="field-hint">Seen in your store photos · uploaded ${escapeHtml(r.local_store.last_seen_upload)}</p>` : ""}
-    ${flavorHeatmapHtml(data.flavor_profile)}
-    ${data.expert ? expertNotesHtml(data.expert) : `<p class="field-hint" style="margin-top:14px">No cited tasting notes found for this bottle yet.</p>`}
+    ${data.expert ? `<details><summary>Producer notes and external reviews</summary>${expertNotesHtml(data.expert)}</details>` : `<p class="field-hint" style="margin-top:14px">No cited tasting notes found for this bottle yet.</p>`}
     <div class="pick-actions" style="margin-top:14px">
       ${r.adopted_bottle_id
         ? `<button class="btn btn-secondary btn-block" data-sheet-open-bottle="${r.adopted_bottle_id}">Open on your list →</button>`
@@ -201,6 +201,7 @@ async function openCatalogDetail(id, dispatchNav) {
   `, {
     onOpen: () => {
       const sheet = document.getElementById("sheetContent");
+      wireFlavorHeatmap(sheet, data.flavor_profile, id => openCatalogDetail(id, dispatchNav));
       sheet.querySelector("[data-sheet-open-bottle]")?.addEventListener("click", (e) => { closeSheet(); dispatchNav("bottle", Number(e.currentTarget.dataset.sheetOpenBottle)); });
       sheet.querySelectorAll("[data-sheet-adopt]").forEach((btn) => btn.addEventListener("click", async () => {
         const tried = btn.dataset.sheetAdopt === "tried";

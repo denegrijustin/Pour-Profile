@@ -2019,6 +2019,9 @@ async function catalogItem(id, url, env) {
   const [item] = markAdoptedFrom(await personalizedCatalog(url, env, [rec], ctx), ctx.owned);
   const [withImage] = withImagesFrom([item], ctx.have);
   const expert = await expertNotes(env, rec.id);
+  const mapCategory = referenceCandidate(rec).category;
+  const localCandidates = records.filter(r => r.local_store && r.flavor_profile && referenceCandidate(r).category === mapCategory);
+  const candidates = withImagesFrom(markAdoptedFrom(localCandidates.map(r => ({...catalogPublic(r), dimensions:referenceCandidate(r).dimensions})), ctx.owned), ctx.have);
   const candidate = referenceCandidate(rec);
   return json({ item: withImage, expert, details: {
     age: rec.age_statement, mash_bill: rec.mash_bill, finish: rec.barrel_finish,
@@ -2030,6 +2033,7 @@ async function catalogItem(id, url, env) {
     rationale: rec.flavor_profile?.rationale || null,
     sources: rec.flavor_profile?.sources || [],
     low_confidence_axes: rec.flavor_profile?.low_confidence_axes || [],
+    candidates, current_id:rec.id,
     targets: axisTargets(ctx.evidence, candidate.category),
     descriptors: (expert?.flavor_terms || []).map(term => classifyTerm(term))
   }});

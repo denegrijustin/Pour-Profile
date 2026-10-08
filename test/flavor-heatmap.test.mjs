@@ -1,10 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {flavorHeatmapHtml} from '../flavor-heatmap.js';
+import {flavorHeatmapHtml,mapRecommendation} from '../flavor-heatmap.js';
 import {setup} from './harness.mjs';
-test('heat map overlays ideal levels and keeps unknown intensity unplotted',()=>{
- const html=flavorHeatmapHtml({dimensions:{sweetness:7},targets:{sweetness:{target:6,samples:3}},descriptors:[{term:'<honey>',axes:['sweetness']},{term:'oak',axes:['oak']}],basis:'model_estimated'});
- assert.ok(html.includes('Bottle 7/10'));assert.ok(html.includes('Ideal 6/10'));assert.ok(html.includes('ideal-marker'));assert.ok(html.includes('&lt;honey&gt;'));assert.ok(html.includes('Bottle intensity unknown'));assert.equal((html.match(/bottle-marker/g)||[]).length,1);
+test('singular map retains full profile and supports movable ideal controls',()=>{
+ const html=flavorHeatmapHtml({dimensions:{sweetness:7,oak:4},targets:{sweetness:{target:6,samples:3}},rationale:'<honey>'});
+ assert.equal((html.match(/<svg/g)||[]).length,1);assert.ok(html.includes('data-map-reset'));assert.ok(html.includes('data-point-x'));assert.ok(html.includes('&lt;honey&gt;'));assert.ok(html.includes('Full flavor profile'));
+});
+test('moving the ideal changes nearest recommendation and excludes owned bottles',()=>{
+ const candidates=[{id:'sweet',name:'Sweet',dimensions:{sweetness:9,spice:1,oak:5}},{id:'spicy',name:'Spicy',dimensions:{sweetness:1,spice:9,oak:5}},{id:'owned',name:'Owned',adopted_bottle_id:1,dimensions:{sweetness:9,spice:1,oak:5}}];
+ assert.equal(mapRecommendation(candidates,{oak:{target:5}},'sweetness','spice',{x:9,y:1}).id,'sweet');
+ assert.equal(mapRecommendation(candidates,{oak:{target:5}},'sweetness','spice',{x:1,y:9}).id,'spicy');
+ assert.equal(mapRecommendation([candidates[2]],{},'sweetness','spice',{x:9,y:1}),null);
 });
 test('detail endpoint returns research facts, flavor evidence and personal targets',async()=>{
  const t=setup();const res=await t.call('/api/catalog/item/photo-nulu-french-oak');
