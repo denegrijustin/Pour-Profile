@@ -37,6 +37,9 @@ test('store evidence limits discovery and excludes home photos',async()=>{
  for(const r of local){assert.equal(r.local_store.last_seen_upload,'2026-10-07');assert.ok(r.local_store.sightings.every(s=>!s.photos.includes(1)));}
  const t=setup();const browse=await t.call('/api/catalog/browse?scope=local&limit=200');
  assert.equal(browse.data.total,24);assert.ok(browse.data.results.every(r=>r.local_store));
- const picks=await t.call('/api/catalog/recommended?scope=local');assert.ok(picks.data.results.every(r=>r.local_store));
+ for(const query of ['', '?scope=local', '?scope=reference']){
+  const picks=await t.call('/api/catalog/recommended'+query);
+  assert.ok(picks.data.results.every(r=>r.local_store?.sightings?.length));
+ }
  const wine=await t.call('/api/catalog/browse?scope=local&category=sauvignon_blanc');assert.equal(wine.data.total,0);
 });

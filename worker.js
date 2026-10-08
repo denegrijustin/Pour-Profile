@@ -1057,7 +1057,7 @@ async function catalogRecommended(url, env) {
   const profile = await resolveProfile(url, env);
   // The catalog asset and the one D1 trip are independent, so they overlap.
   const [records, ctx] = await Promise.all([catalog(env), catalogContext(env, profile.id)]);
-  const scored = markAdoptedFrom(await personalizedCatalog(url, env, catalogScope(url, records), ctx), ctx.owned);
+  const scored = markAdoptedFrom(await personalizedCatalog(url, env, records.filter(r => r.local_store?.sightings?.length), ctx), ctx.owned);
   const results = scored.filter(r => !r.adopted_bottle_id && r.jd_fit != null && r.jd_fit >= 65)
     .sort((a,b) => b.jd_fit-a.jd_fit).slice(0,30);
   return json({results:withImagesFrom(results, ctx.have), already_have:scored.filter(r => r.adopted_bottle_id).length});
