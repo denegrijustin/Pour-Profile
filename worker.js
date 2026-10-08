@@ -1020,10 +1020,10 @@ function catalogPublic(r) {
  * image URLs at all, so a record's picture only ever comes from the enrichment
  * table — which means one lookup keyed by the ids actually being returned.
  */
-const CATALOG_IMAGES_SQL = "SELECT subject_id AS catalog_id FROM image_lookups WHERE subject_kind = 'catalog' AND status = 'ok'";
+const CATALOG_IMAGES_SQL = "SELECT subject_id AS catalog_id, updated_at FROM image_lookups WHERE subject_kind = 'catalog' AND status = 'ok'";
 
 function withImagesFrom(results, have) {
-  return results.map((r) => withBottleImage(have.has(r.id) ? { ...r, image_url: `/api/catalog/images/${r.id}` } : r));
+  return results.map((r) => withBottleImage(have.has(r.id) ? { ...r, image_url: `/api/catalog/images/${r.id}?v=${encodeURIComponent(have.get(r.id) || "1")}` } : r));
 }
 
 // The set of catalog entries with a stored image is bounded by the catalog size
@@ -1033,7 +1033,7 @@ async function withCatalogImages(env, results, have = null) {
   if (!env || !results.length) return results;
   if (!have) {
     const rows = await all(env, CATALOG_IMAGES_SQL).catch(() => []);
-    have = new Set(rows.map((r) => r.catalog_id));
+    have = new Map(rows.map((r) => [r.catalog_id, r.updated_at]));
   }
   return withImagesFrom(results, have);
 }
@@ -1960,12 +1960,12 @@ async function scoringContext(env, profileId, extra = []) {
 async function catalogContext(env, profileId) {
   try {
     const ctx = await scoringContext(env, profileId, [[ADOPTED_SQL], [CATALOG_IMAGES_SQL]]);
-    return { ...ctx, owned: ctx.extras[0], have: new Set(ctx.extras[1].map((r) => r.catalog_id)) };
+    return { ...ctx, owned: ctx.extras[0], have: new Map(ctx.extras[1].map((r) => [r.catalog_id, r.updated_at])) };
   } catch {
     const ctx = await scoringContext(env, profileId);
     const owned = await all(env, ADOPTED_SQL).catch(() => []);
     const imgs = await all(env, CATALOG_IMAGES_SQL).catch(() => []);
-    return { ...ctx, owned, have: new Set(imgs.map((r) => r.catalog_id)) };
+    return { ...ctx, owned, have: new Map(imgs.map((r) => [r.catalog_id, r.updated_at])) };
   }
 }
 async function fullPourProfile(url, env) {
