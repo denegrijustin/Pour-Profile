@@ -643,3 +643,14 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { 
 .rating-photo .photo-placeholder { height:100%; }
 .rating-photo .photo-placeholder svg { width:28px; height:56px; }
 .rating-photo .photo-placeholder span { display:none; }
+.pick-card-clickable {cursor:pointer}
+.pick-card-clickable:focus-visible {outline:3px solid var(--accent);outline-offset:3px}
+.flavor-map {margin:20px 0;padding:14px;background:var(--paper-sunk);border-radius:12px}
+.flavor-map-row {display:grid;grid-template-columns:90px minmax(0,1fr);gap:7px 10px;margin:16px 0;font-size:13px}
+.flavor-map-row small {grid-column:2;color:var(--ink-soft);line-height:1.5}
+.flavor-scale {position:relative;display:flex;height:28px;border-radius:5px;overflow:visible}
+.flavor-scale>span {flex:1;min-width:0;border-right:1px solid rgba(255,255,255,.5)}
+.flavor-marker {position:absolute;transform:translateX(-50%);font-size:17px;line-height:18px;text-shadow:0 0 2px white}
+.bottle-marker {top:1px;color:#18372b}
+.ideal-marker {bottom:-7px;color:#832854}
+@media(max-width:420px){.flavor-map-row{grid-template-columns:72px minmax(0,1fr)}.flavor-map{padding:10px}}

@@ -13,7 +13,7 @@ import { refreshCatalog, computeFit, isVisible } from "./catalog-engine.js";
 import { enrichOne, downloadImage, isSameBottle } from "./image-enrich.js";
 import { parseBarcode, lookupOpenFoodFacts as fetchOffProduct } from "./barcode.js";
 import { openKansas, kansasRow, kansasById, searchRows, rowFlags, searchKey } from "./kansas-pack.js";
-import { expertBrief, explainFromNotes, axisTargets, linkCatalogRecord, nameKey } from "./expert-match.js";
+import { expertBrief, explainFromNotes, axisTargets, classifyTerm, linkCatalogRecord, nameKey } from "./expert-match.js";
 
 // The reference catalog is read-only data. It used to be compiled into this script
 // (~700 KB of literals parsed on every cold start); it now ships as the static
@@ -2005,7 +2005,17 @@ async function catalogItem(id, url, env) {
   const ctx = await catalogContext(env, await resolveProfileId(url, env));
   const [item] = markAdoptedFrom(await personalizedCatalog(url, env, [rec], ctx), ctx.owned);
   const [withImage] = withImagesFrom([item], ctx.have);
-  return json({ item: withImage, expert: await expertNotes(env, rec.id) });
+  const expert = await expertNotes(env, rec.id);
+  const candidate = referenceCandidate(rec);
+  return json({ item: withImage, expert, details: {
+    age: rec.age_statement, mash_bill: rec.mash_bill, finish: rec.barrel_finish,
+    summary: rec.tasting_profile?.summary, serving: rec.research?.serving
+  }, flavor_profile: {
+    dimensions: candidate.dimensions,
+    basis: rec.tasting_profile?.profile_source || "unknown",
+    targets: axisTargets(ctx.evidence, candidate.category),
+    descriptors: (expert?.flavor_terms || []).map(term => classifyTerm(term))
+  }});
 }
 async function personalizedCatalog(url,env,records,ctx = null) {
   const { evidence, legacy, wineRows, sourcePreferences: preferences = [] } = ctx || await catalogContext(env, await resolveProfileId(url, env));

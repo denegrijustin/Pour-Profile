@@ -9,6 +9,7 @@ import { photoRecommendationHtml, wirePhotoRecommendations } from "./photo-recom
 
 import { api } from "./api.js";
 import { el, escapeHtml, bottleCardHtml, bottleThumbHtml, emptyStateHtml, toast, openSheet, closeSheet, expertChipsHtml, expertNotesHtml } from "./ui.js";
+import { flavorHeatmapHtml } from "./flavor-heatmap.js";
 import { compareList } from "./view-bottle.js";
 
 const state = { category: "", sort: "best_fit", mode: "picks" };
@@ -27,7 +28,7 @@ function pickCardHtml(r) {
   const band = fitBand(r.jd_fit);
   const sub = [r.producer, r.subcategory].filter(Boolean).join(" · ");
   return `
-    <article class="pick-card" data-catalog-id="${escapeHtml(r.id)}">
+    <article class="pick-card pick-card-clickable" data-catalog-id="${escapeHtml(r.id)}" data-catalog-detail="${escapeHtml(r.id)}" tabindex="0" aria-label="View details for ${escapeHtml(r.name)}">
       <div class="pick-thumb">
         ${bottleThumbHtml(r)}
       </div>
@@ -136,11 +137,11 @@ function wire(view, dispatchNav) {
   const openDetail = (target) => openCatalogDetail(target.dataset.catalogDetail, dispatchNav);
   view.addEventListener("keydown", (e) => {
     const t = e.target.closest("[data-catalog-detail]");
-    if (t && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openDetail(t); }
+    if (t && !e.target.closest("button") && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openDetail(t); }
   });
   view.addEventListener("click", async (e) => {
     const detail = e.target.closest("[data-catalog-detail]");
-    if (detail) { openDetail(detail); return; }
+    if (detail && !e.target.closest("button, a")) { openDetail(detail); return; }
     const add = e.target.closest("[data-adopt]");
     const tried = e.target.closest("[data-adopt-tried]");
     if (!add && !tried) return;
@@ -175,6 +176,7 @@ async function openCatalogDetail(id, dispatchNav) {
   const concerns = (r.concern || "").split(/\.\s+/).filter(Boolean);
   openSheet(`
     <div class="sheet-header"><h2>${escapeHtml(r.name)}</h2><button class="icon-btn" data-action="close-sheet" aria-label="Close">✕</button></div>
+    ${bottleThumbHtml(r)}
     ${sub ? `<p class="field-hint">${escapeHtml(sub)}</p>` : ""}
     <div style="display:flex;align-items:center;gap:10px;margin:10px 0">
       <span class="fit-chip ${band.cls}">${r.jd_fit != null ? r.jd_fit : "—"}</span>
@@ -185,6 +187,10 @@ async function openCatalogDetail(id, dispatchNav) {
       ${concerns.map((c) => `<div>⚠ ${escapeHtml(c.replace(/\.$/, ""))}</div>`).join("")}
     </div>` : ""}
     ${r.kansas ? `<p class="field-hint">Registered for sale in Kansas · orderable through ${escapeHtml((r.kansas.distributors || []).join(", ") || "a Kansas distributor")}. Ask your store if it's not on the shelf.</p>` : ""}
+    <p>${escapeHtml(data.details?.summary || "")}</p>
+    <dl class="spec-grid">${[["ABV",r.abv != null ? `${r.abv}%` : null],["Proof",r.proof],["Age",data.details?.age],["Mash bill",data.details?.mash_bill],["Finish",data.details?.finish],["Serving",data.details?.serving]].filter(([,v])=>v!=null && v!=="").map(([k,v])=>`<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(String(v))}</dd></div>`).join("")}</dl>
+    ${r.local_store ? `<p class="field-hint">Seen in your store photos · uploaded ${escapeHtml(r.local_store.last_seen_upload)}</p>` : ""}
+    ${flavorHeatmapHtml(data.flavor_profile)}
     ${data.expert ? expertNotesHtml(data.expert) : `<p class="field-hint" style="margin-top:14px">No cited tasting notes found for this bottle yet.</p>`}
     <div class="pick-actions" style="margin-top:14px">
       ${r.adopted_bottle_id
