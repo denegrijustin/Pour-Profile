@@ -21,7 +21,8 @@ const readJson = (rel, fallback) => {
 };
 
 export function selectionIds() {
-  return readJson("data/kansas/research-selection.json", []).map((s) => s.id);
+  return [...new Set([...readJson("data/kansas/research-selection.json", []),
+    ...readJson("data/photo-bourbon-selection.json", [])].map((s) => s.id))];
 }
 
 const COUNTRY = {
@@ -75,7 +76,40 @@ export function catalogAdditions() {
 
 /** The whole catalog the build ships and the tests serve. */
 export function fullCatalog() {
-  return [...RESEARCH_CATALOG, ...catalogAdditions()];
+  const records = new Map([...RESEARCH_CATALOG, ...catalogAdditions()].map((r) => [r.id, r]));
+  const notes = readJson("data/expert-notes.json", {});
+  for (const sel of readJson("data/photo-bourbon-selection.json", [])) {
+    const expert = notes[sel.id];
+    const facts = expert?.facts || {};
+    const existing = records.get(sel.id);
+    // Photo presence establishes neither ownership nor Kansas registration.
+    const rec = existing || {
+      id: sel.id, name: sel.name, producer: sel.brand, category: sel.category,
+      country: "USA", region: facts.region || null, subcategory: facts.cask || null,
+      proof: facts.proof ?? null, abv: facts.abv ?? null,
+      age_statement: facts.age || null, mash_bill: facts.mash_bill || null,
+      ratings: {}, research: {}, typical_price_usd: {}, regional_availability: {},
+      recommendation: { recommended: false }, image: {},
+      last_verified: "2026-10-07", data_source: "photo_research"
+    };
+    records.set(sel.id, {
+      ...rec,
+      proof: facts.proof ?? rec.proof ?? null,
+      abv: facts.abv ?? rec.abv ?? null,
+      age_statement: facts.age || rec.age_statement || null,
+      mash_bill: facts.mash_bill || rec.mash_bill || null,
+      barrel_finish: facts.cask || null,
+      producer_url: expert?.producer?.source_url || null,
+      tasting_profile: expert?.producer || expert?.critics?.length ? {
+        ...rec.tasting_profile,
+        summary: expert.producer?.summary || expert.critics.find((c) => c.summary)?.summary || null,
+        profile_source: rec.tasting_profile?.profile_source || "cited_notes",
+        summary_source: "cited_notes"
+      } : rec.tasting_profile,
+      photo_reference: { photos: sel.photos, identification: sel.identification, batch_confirmed: false }
+    });
+  }
+  return [...records.values()];
 }
 
 // ---------- Kansas registration for existing catalog records ----------

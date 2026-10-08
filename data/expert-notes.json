@@ -7401,7 +7401,19 @@
    "summary": "Extra-aged bottled-in-bond single barrel bourbon (about 40 Kentucky seasons); warm golden amber color.",
    "source_url": "https://heavenhilldistillery.com/henry-mckenna-single-barrel.php"
   },
-  "critics": [],
+  "critics": [
+   {
+    "source": "Breaking Bourbon (barrel 2068)",
+    "source_url": "https://www.breakingbourbon.com/review/henry-mckenna-single-barrel",
+    "score": null,
+    "scale": null,
+    "nose": "Sweet vanilla and caramel with mature wood.",
+    "palate": "Oak and vanilla balanced by spice and dark sugar.",
+    "finish": "Moderate length with a leathery oak note.",
+    "summary": "A classic bourbon profile. This review is of barrel 2068; the photo does not identify a barrel, so its numeric score is not applied.",
+    "year": 2016
+   }
+  ],
   "facts": {
    "abv": null,
    "proof": 100,
@@ -7419,8 +7431,8 @@
    "spice",
    "honey"
   ],
-  "confidence": "medium",
-  "notes": "Producer notes only; WebFetch session limit prevented fetching critic reviews. Single barrel, so bottles vary."
+  "confidence": "high",
+  "notes": "The photograph confirms the ten-year bonded expression, not the barrel number. Single barrels differ; supporting review notes are not an exact-barrel score."
  },
  "bernheim-original-wheat-whiskey": {
   "producer": {
@@ -22593,5 +22605,316 @@
   ],
   "confidence": "high",
   "notes": "Used the producer's 50% sheet and critics explicitly reviewing 50%. The older producer sheet specifying 49% was excluded. Current producer descriptors are not separated into nose, palate and finish; exact batch identifiers were unavailable."
+ },
+ "photo-ben-holladay-bottled-in-bond": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The original Ben Holladay bourbon uses rye as its secondary grain, unlike Soft Red Wheat. The bonded release is bottled at 100 proof.",
+   "source_url": "https://shop.holladaydistillery.com/products/ben-holladay-6-year-bourbon-750ml"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (Batch 1)",
+    "source_url": "https://www.breakingbourbon.com/review/ben-holladay-bottled-in-bond-missouri-straight-bourbon-batch-1",
+    "score": null,
+    "scale": null,
+    "nose": "Dark caramel and leather with dry spice.",
+    "palate": "Full texture, oak and dark fruit.",
+    "finish": "Walnut and cinnamon with lingering warmth.",
+    "summary": "Batch 1 showed considerable spice and tannic wood alongside its substantial texture. Batch 1 is not established by the photo.",
+    "year": 2022
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": "73% corn / 15% rye / 12% malted barley",
+   "cask": "New charred oak",
+   "region": "Holladay Distillery, Weston, Missouri",
+   "source_url": "https://shop.holladaydistillery.com/products/ben-holladay-6-year-bourbon-750ml"
+  },
+  "flavor_terms": [
+   "caramel",
+   "leather",
+   "cinnamon",
+   "oak",
+   "dark fruit",
+   "walnut"
+  ],
+  "confidence": "high",
+  "notes": "Recipe and strength corroborated by the Batch 1 review. Its six-year age describes that release; no pictured batch age or numeric review score is inferred."
+ },
+ "photo-ben-holladay-rickhouse-proof": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Ben Holladay’s original rye-containing bourbon recipe at natural Rickhouse Proof. Kept separate from the Soft Red Wheat expression; batch strength is not fixed.",
+   "source_url": "https://shop.holladaydistillery.com/products/ben-holladay-rickhouse-proof-bourbon-750ml"
+  },
+  "critics": [
+   {
+    "source": "Whiskeyfellow (August 2023 batch)",
+    "source_url": "https://reviews.whiskeyfellow.net/2023/12/ben-holladay-missouri-straight.html",
+    "score": null,
+    "scale": null,
+    "nose": "Sweet baking spice with cherry and toasted nuts.",
+    "palate": "Vanilla and caramel give way to pepper and char.",
+    "finish": "Long and warming, retaining spice and nutty oak.",
+    "summary": "A favorable review of the August 2023, 120.1-proof batch. No numeric score is assigned; the reviewer uses a buy/try/leave verdict.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": "At least 6 years; exact batch age unconfirmed",
+   "mash_bill": "73% corn / 15% rye / 12% malted barley",
+   "cask": "New charred oak",
+   "region": "Holladay Distillery, Weston, Missouri",
+   "source_url": "https://shop.holladaydistillery.com/products/ben-holladay-rickhouse-proof-bourbon-750ml"
+  },
+  "flavor_terms": [
+   "cinnamon",
+   "vanilla",
+   "caramel",
+   "cherry",
+   "almond",
+   "black pepper",
+   "oak"
+  ],
+  "confidence": "high",
+  "notes": "Recipe corroborated by the Bottled-in-Bond original review. Proof and age are not assigned from another batch."
+ },
+ "photo-gunnars-honey": {
+  "producer": {
+   "nose": null,
+   "palate": "Honey sweetness over a wheated-bourbon base.",
+   "finish": null,
+   "summary": "Gunnar’s Honey blends Heritage wheated bourbon with raw Kansas honey from T-Creek Bees & Honey. It is a 70-proof honey-flavored spirit, rather than an unflavored straight bourbon.",
+   "source_url": "https://gunnarsbourbon.com/our-story"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 35,
+   "proof": 70,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": "Gunnar’s, Kansas; pictured production site not established",
+   "source_url": "https://gunnarsbourbon.com/our-story"
+  },
+  "flavor_terms": [
+   "honey"
+  ],
+  "confidence": "medium",
+  "notes": "Only producer information was found. No independent critic score or tasting consensus is claimed. Natural honey can settle; the producer suggests shaking gently or chilling."
+ },
+ "photo-high-west-barbados-rum-finish": {
+  "producer": {
+   "nose": "Coconut, banana bread and custard with darker sugar beneath.",
+   "palate": "Pastry-like peach, caramel and ginger sweetness.",
+   "finish": "Soft peach and dark sugar with a tobacco-paper accent.",
+   "summary": "High West producer tasting sheet, relayed by a distributor: straight bourbon blend finished in Barbados rum barrels. A sweet fruit and coconut profile with molasses and baking spice.",
+   "source_url": "https://adultbeveragesolutions.com/gallery/1718037029_High_West_Cask_Collection_Barbados_Rum_Barrel-Finished_Tasting_Note.pdf"
+  },
+  "critics": [
+   {
+    "source": "SavWay (retailer selection)",
+    "source_url": "https://savwaywines.com/barrel-picks/",
+    "score": null,
+    "scale": null,
+    "nose": "Roasted nuts and sweet baking spice.",
+    "palate": "Vanilla and maple with a root-beer note.",
+    "finish": "Cardamom moves into molasses.",
+    "summary": "Retailer describes its own selection; used as supporting tasting context, not proof of the pictured batch.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "Base blend: 4–9 years in the cited release",
+   "mash_bill": null,
+   "cask": "Barbados rum barrels; 10 months in cited release",
+   "region": "Blended and finished in Utah; base distillers not established",
+   "source_url": "https://adultbeveragesolutions.com/gallery/1718037029_High_West_Cask_Collection_Barbados_Rum_Barrel-Finished_Tasting_Note.pdf"
+  },
+  "flavor_terms": [
+   "coconut",
+   "banana",
+   "vanilla",
+   "caramel",
+   "molasses",
+   "peach",
+   "ginger"
+  ],
+  "confidence": "high",
+  "notes": "Photo 2 confirms the finish; blend ages and finishing time describe the cited release, not a verified batch in the photo."
+ },
+ "photo-holladay-soft-red-wheat-rickhouse-proof": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The wheated Holladay recipe bottled at Rickhouse Proof rather than diluted to the bonded release’s strength. Proof depends on the batch; the producer combines barrels at their natural strength.",
+   "source_url": "https://shop.holladaydistillery.com/products/ben-holladay-rickhouse-proof-soft-red-wheat-750ml"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon (October 2024 batch)",
+    "source_url": "https://www.breakingbourbon.com/review/holliday-soft-red-wheat-rickhouse-proof-bourbon-oct-2024-batch",
+    "score": null,
+    "scale": null,
+    "nose": "Fruit and caramel with charred wood.",
+    "palate": "Dark fruit, molasses and leathery oak.",
+    "finish": "Pepper and baking spice meet dry, tannic wood.",
+    "summary": "An intense wheated bourbon balancing substantial fruit against assertive oak. The pictured batch is unknown, so this review supplies context rather than a transferable score.",
+    "year": 2025
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": "At least 6 years; exact batch age unconfirmed",
+   "mash_bill": "73% corn / 15% wheat / 12% malted barley",
+   "cask": "New charred oak",
+   "region": "Holladay Distillery, Weston, Missouri",
+   "source_url": "https://shop.holladaydistillery.com/products/ben-holladay-rickhouse-proof-soft-red-wheat-750ml"
+  },
+  "flavor_terms": [
+   "caramel",
+   "apple",
+   "dark cherry",
+   "molasses",
+   "oak",
+   "baking spice"
+  ],
+  "confidence": "high",
+  "notes": "Mash bill corroborated by Breaking Bourbon; its six-year age and 121.5 proof describe October 2024 only. The photographed batch is not known."
+ },
+ "photo-nulu-amburana": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Amburana finishing makes this a strongly aromatic bourbon with dessert-like spice. NuLu describes the wood as contributing vanilla, cacao, cinnamon icing, ginger and burnt sugar.",
+   "source_url": "https://nuluwhiskies.com/whiskeys/amburana-finished-bourbon"
+  },
+  "critics": [
+   {
+    "source": "Bourbon Culture (2023 single barrel sample)",
+    "source_url": "https://thebourbonculture.com/whiskey-reviews/nulu-experimental-finish-series-bourbon-finished-in-amburana-barrels-review/",
+    "score": null,
+    "scale": null,
+    "nose": "Cookie-like cinnamon and vanilla over sweet wood.",
+    "palate": "Sweet cinnamon with a little dried fruit and citrus.",
+    "finish": "Spiced cake and sugared fruit; less lingering than expected.",
+    "summary": "The reviewer found the finish enjoyable but dominant enough to obscure much of the base bourbon. The sampled barrel was not established in the photo.",
+    "year": 2023
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "Amburana wood finish",
+   "region": "NuLu / PCS Distilling, Louisville; base distiller depends on release",
+   "source_url": "https://nuluwhiskies.com/whiskeys/amburana-finished-bourbon"
+  },
+  "flavor_terms": [
+   "vanilla",
+   "cocoa",
+   "cinnamon",
+   "ginger",
+   "brown sugar"
+  ],
+  "confidence": "high",
+  "notes": "Proof, age, mash bill and the reviewer’s numeric score are deliberately unset: the photographed batch is unknown. Amburana is commonly called Brazilian oak but is not botanically oak."
+ },
+ "photo-nulu-french-oak": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "NuLu describes its French Oak release as straight bourbon finished with toasted French oak staves. The finish adds toasted-wood character; single barrel releases can differ.",
+   "source_url": "https://nuluwhiskies.com/whiskeys/nulu-french-oak"
+  },
+  "critics": [
+   {
+    "source": "Seelbach’s (retailer; barrel C289)",
+    "source_url": "https://seelbachs.com/products/nulu-french-oak-finished-single-barrel-bourbon",
+    "score": null,
+    "scale": null,
+    "nose": "Maple and toasted wood with a little cherry.",
+    "palate": "Rich sweetness with chocolate and oak.",
+    "finish": "Mocha and toasted vanilla.",
+    "summary": "These notes are from the C289 French oak barrel selection; the photo does not establish that selection.",
+    "year": null
+   }
+  ],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": "French oak finish; stave/barrel method varies by release",
+   "region": "NuLu / PCS Distilling, Louisville; base distiller not verified for pictured bottle",
+   "source_url": "https://nuluwhiskies.com/whiskeys/nulu-french-oak"
+  },
+  "flavor_terms": [
+   "toasted oak",
+   "vanilla",
+   "maple",
+   "chocolate"
+  ],
+  "confidence": "high",
+  "notes": "French Oak wording is supported by the photo’s sign. Exact barrel, finishing method, proof and age remain unconfirmed; supporting retailer notes are not an exact-batch review."
+ },
+ "photo-old-grand-dad-bonded": {
+  "producer": {
+   "nose": "Citrus peel and cinnamon over toasted wood.",
+   "palate": "Moderate body, vanilla and dried fruit with rye spice.",
+   "finish": "Persistent peppery warmth.",
+   "summary": "Old Grand-Dad’s bonded bourbon is at least four years old and bottled at 100 proof. Its rye-forward character pairs sweet vanilla with dried fruit and pepper.",
+   "source_url": "https://www.beamdistilling.com/old-grand-dad-bourbon/our-bourbons/old-grand-dad-bottled-in-bond"
+  },
+  "critics": [
+   {
+    "source": "Breaking Bourbon",
+    "source_url": "https://www.breakingbourbon.com/review/old-grand-dad-bonded-bourbon",
+    "score": null,
+    "scale": null,
+    "nose": "Cinnamon leads sweeter caramel and vanilla.",
+    "palate": "Concentrated spice with some dark fruit.",
+    "finish": "Caramel sweetness gives way to gentle oak and spice.",
+    "summary": "The review praises its flavor and value while noting that cinnamon dominates the profile.",
+    "year": 2020
+   }
+  ],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": "At least 4 years",
+   "mash_bill": null,
+   "cask": "New charred oak",
+   "region": "James B. Beam Distilling Co., Kentucky",
+   "source_url": "https://www.beamdistilling.com/old-grand-dad-bourbon/our-bourbons/old-grand-dad-bottled-in-bond"
+  },
+  "flavor_terms": [
+   "cinnamon",
+   "orange peel",
+   "toasted oak",
+   "vanilla",
+   "dried fruit",
+   "black pepper",
+   "caramel"
+  ],
+  "confidence": "high",
+  "notes": null
  }
 }

@@ -1,0 +1,153 @@
+[
+  {
+    "brand": "1792",
+    "label": "Multiple expressions \u2014 unreadable",
+    "photos": [
+      9,
+      10
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Bardstown Bourbon Company",
+    "label": "Expression unreadable",
+    "photos": [
+      10
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Bulleit",
+    "label": "Bourbon \u2014 expression unreadable",
+    "photos": [
+      10,
+      12
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Elijah Craig",
+    "label": "Other expressions \u2014 unreadable",
+    "photos": [
+      10
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Evan Williams",
+    "label": "Multiple expressions \u2014 unreadable",
+    "photos": [
+      9,
+      10
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Garrison Brothers",
+    "label": "Multiple expressions \u2014 unreadable",
+    "photos": [
+      10
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Gunnar\u2019s",
+    "label": "Bourbon \u2014 expression unreadable",
+    "photos": [
+      10
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Jack Daniel\u2019s",
+    "label": "Multiple expressions \u2014 unreadable",
+    "photos": [
+      12
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Jim Beam",
+    "label": "Multiple expressions \u2014 unreadable",
+    "photos": [
+      9,
+      10
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Knob Creek",
+    "label": "Multiple expressions \u2014 unreadable",
+    "photos": [
+      1,
+      9,
+      12
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "NuLu",
+    "label": "Other expressions \u2014 unreadable",
+    "photos": [
+      3
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Penelope",
+    "label": "Multiple expressions \u2014 unreadable",
+    "photos": [
+      11
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Rebel",
+    "label": "Bourbon \u2014 expression unreadable",
+    "photos": [
+      10
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Smoke Wagon",
+    "label": "Straight Bourbon \u2014 partial label",
+    "photos": [
+      2
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Tom\u2019s Town",
+    "label": "Bourbon \u2014 expression unreadable",
+    "photos": [
+      10
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  },
+  {
+    "brand": "Woodford Reserve",
+    "label": "Expression unreadable",
+    "photos": [
+      1,
+      11
+    ],
+    "status": "needs_expression_confirmation",
+    "reason": "Photo does not establish an exact expression. Do not apply an expression-specific proof, mash bill, review or image."
+  }
+]

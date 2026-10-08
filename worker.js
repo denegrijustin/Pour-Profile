@@ -1154,13 +1154,14 @@ async function catalogAdopt(request, env, url) {
   const res = await run(env,
     `INSERT INTO bottles (name, brand, category, subcategory, varietal, origin_country, origin_state, proof, abv,
        description, wine_dimensions, status_tags, data_source, source_confidence, catalog_id,
-       image_url, image_source, image_confidence)
-     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+       image_url, image_source, image_confidence, age_statement, mash_bill, barrel_finish, producer_url)
+     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
     rec.name, rec.producer, category, rec.subcategory,
     rec.category === "sauvignon_blanc" ? "sauvignon_blanc" : null,
     rec.country, rec.region, rec.proof, rec.abv,
     tp.summary, JSON.stringify(wineDims), "[]", "catalog", "medium", rec.id,
-    imageUrl, imageUrl ? "catalog_enrichment" : null, imageUrl ? "medium" : null);
+    imageUrl, imageUrl ? "catalog_enrichment" : null, imageUrl ? "medium" : null,
+    rec.age_statement || null, rec.mash_bill || null, rec.barrel_finish || null, rec.producer_url || null);
 
   const id = res.meta.last_row_id;
   await setBottleStatus(env, profileId, id, b.status_tags || ["want_to_try"]);

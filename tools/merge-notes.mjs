@@ -56,7 +56,9 @@ export function mergeNotes(dir = path.join(root, "data/notes")) {
     ...fs.readdirSync(dir).filter((f) => /^batch-\d+\.json$/.test(f)).sort().map((f) => path.join(dir, f)),
     ...(fs.existsSync(path.join(dir, "redo")) ? fs.readdirSync(path.join(dir, "redo")).filter((f) => /^output-\d+\.json$/.test(f)).sort().map((f) => path.join(dir, "redo", f)) : []),
     // Research for Kansas-registered additions (later files win ties, so re-runs replace placeholders).
-    ...(fs.existsSync(path.join(dir, "kansas")) ? fs.readdirSync(path.join(dir, "kansas")).filter((f) => /^output-\d+\.json$/.test(f)).sort((a, b) => parseInt(a.slice(7)) - parseInt(b.slice(7))).map((f) => path.join(dir, "kansas", f)) : [])
+    ...(fs.existsSync(path.join(dir, "kansas")) ? fs.readdirSync(path.join(dir, "kansas")).filter((f) => /^output-\d+\.json$/.test(f)).sort((a, b) => parseInt(a.slice(7)) - parseInt(b.slice(7))).map((f) => path.join(dir, "kansas", f)) : []),
+    ...(fs.existsSync(path.join(dir, "photos")) ? fs.readdirSync(path.join(dir, "photos"))
+      .filter((f) => /^output-\d+\.json$/.test(f)).sort().map((f) => path.join(dir, "photos", f)) : [])
   ];
   const issues = [];
   for (const f of files) for (const raw of load(f)) {
@@ -65,7 +67,7 @@ export function mergeNotes(dir = path.join(root, "data/notes")) {
     const prev = best.get(raw.id);
     if (!prev || RANK[entry.confidence] >= RANK[prev.confidence]) best.set(raw.id, entry);
   }
-  const allIds = [...RESEARCH_CATALOG.map((r) => r.id), ...selectionIds()];
+  const allIds = [...new Set([...RESEARCH_CATALOG.map((r) => r.id), ...selectionIds()])];
   const ids = new Set(allIds);
   const out = {};
   for (const id of allIds) out[id] = best.get(id) || { producer: null, critics: [], facts: null, flavor_terms: [], confidence: "none", notes: "not researched" };
