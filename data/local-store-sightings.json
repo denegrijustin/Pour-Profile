@@ -1,6 +1,6 @@
 {
   "store_id": "local-store",
-  "store_name": "Local store",
+  "store_name": "Kinsale Wine & Spirits",
   "batches": [
     {
       "id": "2026-10-07-upload",
@@ -175,6 +175,400 @@
           "catalog_id": "ks-old-grand-dad-old-grand-dad-ksbw",
           "photos": [
             10
+          ],
+          "identification": "expression_confirmed"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09-kinsale",
+      "uploaded_on": "2026-10-09",
+      "coverage": "partial",
+      "photo_count": 33,
+      "unique_photo_count": 30,
+      "video_count": 1,
+      "sightings": [
+        {
+          "catalog_id": "angel-s-envy-rye",
+          "photos": [
+            1
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "knob-creek-bourbon-x-rye",
+          "photos": [
+            1
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "high-west-double-rye",
+          "photos": [
+            1,
+            2
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "high-west-rendezvous-rye",
+          "photos": [
+            1,
+            2
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "willett-family-estate-4-year-rye",
+          "photos": [
+            1
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "michter-s-us-1-rye",
+          "photos": [
+            1
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "basil-hayden-dark-rye",
+          "photos": [
+            2
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "green-river-rye",
+          "photos": [
+            2,
+            3
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "green-river-wheated-bourbon",
+          "photos": [
+            3,
+            4
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "green-river-bourbon",
+          "photos": [
+            3,
+            4
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "sazerac-rye",
+          "photos": [
+            2,
+            3,
+            4
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "peerless-small-batch-rye",
+          "photos": [
+            3,
+            4
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "penelope-four-grain",
+          "photos": [
+            3,
+            4
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "penelope-wheated-bourbon",
+          "photos": [
+            3,
+            4
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "penelope-ros-cask-finish",
+          "photos": [
+            4,
+            5
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "penelope-architect",
+          "photos": [
+            4,
+            5
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "penelope-barrel-strength-bourbon",
+          "photos": [
+            4,
+            5
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "penelope-toasted-bourbon",
+          "photos": [
+            4,
+            5
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "woodford-reserve-bourbon",
+          "photos": [
+            4
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "heaven-hill-bottled-in-bond-7-year",
+          "photos": [
+            6,
+            16,
+            17,
+            18
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "new-riff-single-barrel-bourbon",
+          "photos": [
+            6,
+            7
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "russell-s-reserve-10-year",
+          "photos": [
+            5,
+            6
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "henry-mckenna-10-year-single-barrel",
+          "photos": [
+            6,
+            7
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "bernheim-original-wheat-whiskey",
+          "photos": [
+            6,
+            7
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-100-proof",
+          "photos": [
+            6
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-holladay-soft-red-wheat-rickhouse-proof",
+          "photos": [
+            7,
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-ben-holladay-rickhouse-proof",
+          "photos": [
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-ben-holladay-bottled-in-bond",
+          "photos": [
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-1870-original-batch",
+          "photos": [
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-1897-bottled-in-bond",
+          "photos": [
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-1910",
+          "photos": [
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-statesman",
+          "photos": [
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "old-forester-1920",
+          "photos": [
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "michter-s-us-1-bourbon",
+          "photos": [
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "michter-s-us-1-american-whiskey",
+          "photos": [
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "four-roses-small-batch",
+          "photos": [
+            8,
+            9,
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "four-roses-small-batch-select",
+          "photos": [
+            9,
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "four-roses-bourbon",
+          "photos": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "j-rieger-kansas-city-whiskey",
+          "photos": [
+            8,
+            9
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "photo-gunnars-honey",
+          "photos": [
+            9,
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "elijah-craig-small-batch",
+          "photos": [
+            8,
+            9,
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "jim-beam-black-7-year",
+          "photos": [
+            10,
+            11,
+            12
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "basil-hayden-bourbon",
+          "photos": [
+            10,
+            11,
+            12
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "willett-pot-still-reserve",
+          "photos": [
+            10
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "rombauer-sauvignon-blanc",
+          "photos": [],
+          "videos": [
+            {
+              "asset": "IMG_7025.mov",
+              "frames": [
+                1,
+                5,
+                6
+              ]
+            }
+          ],
+          "identification": "expression_confirmed"
+        },
+        {
+          "catalog_id": "round-pond-sauvignon-blanc",
+          "photos": [],
+          "videos": [
+            {
+              "asset": "IMG_7025.mov",
+              "frames": [
+                1,
+                5,
+                6
+              ]
+            }
           ],
           "identification": "expression_confirmed"
         }

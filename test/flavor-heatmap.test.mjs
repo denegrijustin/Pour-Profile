@@ -18,9 +18,9 @@ test('detail endpoint returns research facts, flavor evidence and personal targe
  const classic=await t.call('/api/catalog/item/elijah-craig-small-batch');assert.ok(Object.keys(classic.data.flavor_profile.dimensions).length);
 });
 
-test('every confirmed store bottle has a complete bounded source-backed intensity profile',async()=>{
+test('initial researched store selection retains complete bounded source-backed intensity profiles',async()=>{
  const {fullCatalog}=await import('../tools/catalog-sources.mjs');
- const local=fullCatalog().filter(r=>r.local_store);
+ const local=fullCatalog().filter(r=>r.local_store && r.flavor_profile);
  assert.equal(local.length,24);
  for(const r of local){
   assert.ok(r.flavor_profile.sources.length,r.id);

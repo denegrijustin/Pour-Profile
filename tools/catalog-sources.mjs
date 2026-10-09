@@ -119,7 +119,7 @@ export function fullCatalog() {
       const rec = records.get(sighting.catalog_id);
       if (!rec || sighting.identification !== "expression_confirmed") continue;
       const history = [...(rec.local_store?.sightings || []), {
-        batch_id: batch.id, uploaded_on: batch.uploaded_on, photos: sighting.photos
+        batch_id: batch.id, uploaded_on: batch.uploaded_on, photos: sighting.photos, ...(sighting.videos ? { videos: sighting.videos } : {})
       }].sort((a, b) => a.uploaded_on.localeCompare(b.uploaded_on));
       records.set(rec.id, { ...rec, local_store: {
         store_id: evidence.store_id, store_name: evidence.store_name,

@@ -33,13 +33,15 @@ test('local catalog search and adoption carry researched details without a web l
 
 test('store evidence limits discovery and excludes home photos',async()=>{
  const local=all.filter(r=>r.local_store);
- assert.equal(local.length,24);
- for(const r of local){assert.equal(r.local_store.last_seen_upload,'2026-10-07');assert.ok(r.local_store.sightings.every(s=>!s.photos.includes(1)));}
+ assert.ok(local.length>24);
+ assert.ok(local.some(r=>r.id==='rombauer-sauvignon-blanc'));
+ assert.ok(local.some(r=>r.id==='round-pond-sauvignon-blanc'));
+ for(const r of local){assert.ok(r.local_store.sightings.length);assert.ok(r.local_store.sightings.filter(s=>s.batch_id==='2026-10-07-upload').every(s=>!s.photos.includes(1)));}
  const t=setup();const browse=await t.call('/api/catalog/browse?scope=local&limit=200');
- assert.equal(browse.data.total,24);assert.ok(browse.data.results.every(r=>r.local_store));
+ assert.equal(browse.data.total,local.length);assert.ok(browse.data.results.every(r=>r.local_store));
  for(const query of ['', '?scope=local', '?scope=reference']){
   const picks=await t.call('/api/catalog/recommended'+query);
   assert.ok(picks.data.results.every(r=>r.local_store?.sightings?.length));
  }
- const wine=await t.call('/api/catalog/browse?scope=local&category=sauvignon_blanc');assert.equal(wine.data.total,0);
+ const wine=await t.call('/api/catalog/browse?scope=local&category=sauvignon_blanc');assert.equal(wine.data.total,2);assert.ok(wine.data.results.every(r=>r.local_store.sightings.some(s=>s.videos?.length)));
 });
