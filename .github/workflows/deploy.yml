@@ -65,6 +65,20 @@ jobs:
           fi
           echo "Credentials present."
 
+      # Migrations named *.auto.sql are written to be safe to run on every deploy (INSERT ... WHERE NOT EXISTS,
+      # CREATE ... IF NOT EXISTS), and test/auto-migrations.test.mjs proves they are. They are applied before the
+      # code goes out, so a new version never runs ahead of the data it expects. Every other migration is still
+      # applied by hand (see README).
+      - name: Apply safe-to-repeat migrations
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          for f in migrations/*.auto.sql; do
+            [ -e "$f" ] || continue
+            echo "Applying $f"
+            npx wrangler d1 execute pour-profile-db --remote --file="$f"
+          done
+
       - name: Deploy to Cloudflare
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
