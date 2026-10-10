@@ -52,17 +52,31 @@ async function navigate(view, param) {
 
   const load = VIEWS[view];
   if (!load) return;
-  const mod = await load();
-  if (view !== currentView) return; // user navigated away while the view was loading
-  if (view === "home") return mod.renderHome();
-  if (view === "spirits") return mod.renderSpirits();
-  if (view === "scan") { scanModule = mod; return mod.renderScan(navigate); }
-  if (view === "discover") return mod.renderDiscover(navigate);
-  if (view === "map") return mod.renderMapView(navigate);
-  if (view === "profile") return mod.renderProfile();
-  if (view === "bottle") return mod.renderBottleDetail(param, navigate);
-  if (view === "compare") return mod.renderCompare(navigate);
-  if (view === "wine") return mod.renderWinePalate();
+  // A view that has never rendered shows a placeholder while its code downloads.
+  if (target && !target.firstElementChild) target.innerHTML = `<p class="field-hint" role="status">Loading…</p>`;
+  let loadFailed = false;
+  try {
+    const mod = await load().catch((e) => { loadFailed = true; throw e; });
+    if (view !== currentView) return; // user navigated away while the view was loading
+    if (view === "home") return await mod.renderHome();
+    if (view === "spirits") return await mod.renderSpirits();
+    if (view === "scan") { scanModule = mod; return await mod.renderScan(navigate); }
+    if (view === "discover") return await mod.renderDiscover(navigate);
+    if (view === "map") return await mod.renderMapView(navigate);
+    if (view === "profile") return await mod.renderProfile();
+    if (view === "bottle") return await mod.renderBottleDetail(param, navigate);
+    if (view === "compare") return await mod.renderCompare(navigate);
+    if (view === "wine") return await mod.renderWinePalate();
+  } catch (err) {
+    // A chunk that failed to download (a weak connection) or a view that threw: say so and offer a retry
+    // instead of leaving a blank screen.
+    console.error(`Could not show the ${view} view`, err);
+    if (view !== currentView || !target) return;
+    target.innerHTML = `<div class="empty-state" role="alert"><p>This view could not load.</p><button type="button" class="btn btn-secondary" data-retry-view>Try again</button></div>`;
+    // A module that failed to download stays failed for this page, so retrying it means reloading; a view that
+    // merely threw can simply be rendered again.
+    target.querySelector("[data-retry-view]").addEventListener("click", () => (loadFailed ? location.reload() : navigate(view, param)));
+  }
 }
 
 function wireNav() {

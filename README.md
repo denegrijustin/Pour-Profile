@@ -15,6 +15,13 @@ Offline tasting queues retain the original person and request ID, so switching p
 
 Tests include database migration preservation, five-category persistence, person isolation, retry deduplication, cross-category scoring, invalid sensory data, and mocked multi-bottle photo analysis. A real photo smoke test additionally requires the production AI secret and a bottle/shelf photo.
 
+## Checks and performance
+
+- `npm run check` (after `npm run build`) runs `tools/check-dist.mjs` (the shell, service worker precache list, `catalog.json` and `kansas.tsv` exist and parse) and `tools/check-budget.mjs` (gzip budgets for each script and the stylesheet). Both run in `deploy.yml` before the deploy, and in `check.yml` on every pull request and on pushes to other branches.
+- A failed deploy opens (or comments on) one "Deploy failed" issue; the next good deploy closes it.
+- A view whose code fails to download, or that throws while rendering, shows "This view could not load" with a retry button instead of a blank screen.
+- The font stylesheet no longer blocks the first paint; bottle rows use `content-visibility`; taps skip the double-tap-zoom delay.
+
 ---
 
 The original architecture and historical notes follow. Their earlier family-based profile descriptions have been superseded by this upgrade.
