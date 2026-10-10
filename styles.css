@@ -50,7 +50,7 @@ img { max-width: 100%; display: block; }
 ::selection { background: var(--accent-tint); }
 
 @media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
 
 /* ---------- app shell ---------- */
@@ -723,3 +723,47 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { 
 .optional-flavor-map > summary { cursor: pointer; font-weight: 600; }
 .optional-flavor-map[open] > summary { margin-bottom: 16px; }
 .home-picks .pick-why { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+/* Taps respond at once, with no double-tap-zoom delay */
+button, summary, select, [role="button"] { touch-action: manipulation; }
+
+/* Long lists of rows skip layout and paint until they scroll near the viewport */
+.bottle-row { content-visibility: auto; contain-intrinsic-size: auto 72px; }
+
+/* ---------- loading, failure and polish ---------- */
+
+/* Placeholder blocks while a view's data loads */
+.skeleton-list { display: grid; gap: 12px; padding-top: 4px; }
+.skeleton-block {
+  height: 84px; border-radius: var(--radius-md, 14px);
+  background: linear-gradient(90deg, var(--paper-sunk, #ecece4), rgba(255, 255, 255, 0.7), var(--paper-sunk, #ecece4));
+  background-size: 200% 100%; animation: skeleton-shimmer 1.4s linear infinite;
+}
+@keyframes skeleton-shimmer { to { background-position: -200% 0; } }
+
+/* A photo that failed to load leaves its box, not its alt text */
+img.img-failed { visibility: hidden; }
+
+/* The page fades in when you change views */
+.view.active { animation: view-in 0.18s ease-out; }
+@keyframes view-in { from { opacity: 0; transform: translateY(4px); } }
+
+/* Press feedback on the navigation and quick actions */
+.nav-btn:active .nav-icon, .nav-btn:active .nav-icon-circle { transform: scale(0.92); }
+.quick-action:active { transform: scale(0.97); background: var(--paper-sunk, #ecece4); }
+.nav-btn .nav-icon, .nav-btn .nav-icon-circle, .quick-action { transition: transform 0.12s ease; }
+
+/* The current tab is marked with a bar as well as a color */
+.nav-btn { position: relative; }
+.nav-btn.active:not(.scan-btn)::before {
+  content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 3px; border-radius: 0 0 3px 3px; background: var(--accent-deep);
+}
+
+/* On a wide screen the navigation is a centered bar the width of the content, not edge to edge */
+@media (min-width: 720px) {
+  .bottom-nav {
+    left: 50%; right: auto; width: min(720px, calc(100vw - 32px)); transform: translateX(-50%);
+    bottom: calc(10px + var(--safe-bottom)); height: var(--nav-h); padding-bottom: 0;
+    border: 1px solid var(--border); border-radius: 20px; box-shadow: 0 10px 30px rgba(22, 34, 46, 0.12);
+  }
+  .nav-btn.active:not(.scan-btn)::before { top: -1px; }
+}

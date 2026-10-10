@@ -1,5 +1,5 @@
 import { api, getActiveProfile } from './api.js';
-import { el, escapeHtml, emptyStateHtml } from './ui.js';
+import { el, escapeHtml, emptyStateHtml, skeletonHtml, errorStateHtml } from './ui.js';
 import { getFocus, focusHtml, wireFocus, focusLabel } from './recommendation-focus.js';
 import { pickCardHtml, openCatalogDetail } from './view-discover.js';
 import { flavorHeatmapHtml, wireFlavorHeatmap } from './flavor-heatmap.js';
@@ -9,12 +9,13 @@ let homeDispatch;
 let renderSequence=0;
 export async function renderHome() {
   const view=el('view-home'), sequence=++renderSequence, focus=getFocus();
-  view.innerHTML='<p class="field-hint">Finding your next bottle…</p>';
+  view.innerHTML=skeletonHtml(3);
   const [picksRes,palateRes]=await Promise.all([
     api.catalogRecommended(focus).catch(()=>({results:[],failed:true})),
     focus.category==='wine'?api.winePalate().catch(()=>null):api.palate().catch(()=>null)
   ]);
   if(sequence!==renderSequence) return;
+  if (picksRes.failed) { view.innerHTML=errorStateHtml(); return; }
   const lady=getActiveProfile()==='lady';
   const targets=palateRes?.byVarietal?.[focus.varietal]?.filter(d=>d.target_value!=null) || [];
   const insight=focus.category==='wine'

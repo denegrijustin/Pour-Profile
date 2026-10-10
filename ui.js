@@ -88,7 +88,7 @@ export function whyConcernsHtml(match) {
 
 export function bottleThumbHtml(bottle) {
   bottle = withBottleImage(bottle);
-  if (bottle.image_url) return `<img src="${escapeHtml(bottle.image_url)}" alt="${escapeHtml(bottle.name)} bottle" loading="lazy">`;
+  if (bottle.image_url) return `<img src="${escapeHtml(bottle.image_url)}" alt="${escapeHtml(bottle.name)} bottle" loading="lazy" decoding="async">`;
   return `<div class="photo-placeholder"><svg viewBox="0 0 32 64" aria-hidden="true"><path d="M12 3h8v17l6 9v29H6V29l6-9V3Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 36h12v14H10z" fill="none" stroke="currentColor"/></svg><span>Photo pending</span></div>`;
 }
 
@@ -166,6 +166,16 @@ export function ratingPickerHtml(selected) {
   const values = [];
   for (let v = 0; v <= 10; v += 0.5) values.push(v);
   return `<div class="rating-picker">${values.map((v) => `<button type="button" data-rating="${v}" class="${selected === v ? "selected" : ""}">${v.toFixed(1)}</button>`).join("")}</div>`;
+}
+
+/** Placeholder blocks shown while a view's data loads, in place of a bare "Loading…" line. */
+export function skeletonHtml(rows = 3) {
+  return `<div class="skeleton-list" role="status" aria-label="Loading">${Array.from({ length: rows }, () => `<div class="skeleton-block"></div>`).join("")}</div>`;
+}
+
+/** Shown when a view's data could not be fetched; the button re-renders the current view. */
+export function errorStateHtml(message = "Couldn't load this right now. Check your connection and try again.") {
+  return `<div class="empty-state" role="alert"><div class="ee-icon">📡</div><h3>Can't reach the server</h3><p>${escapeHtml(message)}</p><button type="button" class="btn btn-secondary" data-action="retry-view">Try again</button></div>`;
 }
 
 export function emptyStateHtml(icon, title, body, actionHtml = "") {

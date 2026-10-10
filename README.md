@@ -15,6 +15,17 @@ Offline tasting queues retain the original person and request ID, so switching p
 
 Tests include database migration preservation, five-category persistence, person isolation, retry deduplication, cross-category scoring, invalid sensory data, and mocked multi-bottle photo analysis. A real photo smoke test additionally requires the production AI secret and a bottle/shelf photo.
 
+## Brands you don't like
+
+`brand_signals` rows with sentiment `negative` (first profile only) keep every bottle from that brand out of recommendations: `brand-avoid.js` caps its fit at 40 (the threshold is 65), replaces the explanation with "You've said you don't like <brand>", and leaves it out of "best match" for a bottle photo. `migrations/0012_jack_daniels_dislike.auto.sql` records the Jack Daniel's dislike. Migrations named `*.auto.sql` are applied automatically on every deploy, before the code goes out, so they must be safe to repeat (`INSERT … WHERE NOT EXISTS`, `CREATE … IF NOT EXISTS`); `test/auto-migrations.test.mjs` runs each one twice to prove it. Any other migration is still applied by hand. Four Roses was already a negative signal, so it follows the same rule. To add another brand, insert another `negative` row.
+
+## Checks and performance
+
+- `npm run check` (after `npm run build`) runs `tools/check-dist.mjs` (the shell, service worker precache list, `catalog.json` and `kansas.tsv` exist and parse) and `tools/check-budget.mjs` (gzip budgets for each script and the stylesheet). Both run in `deploy.yml` before the deploy, and in `check.yml` on every pull request and on pushes to other branches.
+- A failed deploy opens (or comments on) one "Deploy failed" issue; the next good deploy closes it.
+- A view whose code fails to download, or that throws while rendering, shows "This view could not load" with a retry button instead of a blank screen.
+- The font stylesheet no longer blocks the first paint; bottle rows use `content-visibility`; taps skip the double-tap-zoom delay.
+
 ---
 
 The original architecture and historical notes follow. Their earlier family-based profile descriptions have been superseded by this upgrade.

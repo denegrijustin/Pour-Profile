@@ -1,4 +1,4 @@
-import { el, closeSheet, toast, escapeHtml } from "./ui.js";
+import { el, closeSheet, toast, escapeHtml, skeletonHtml } from "./ui.js";
 import { api, flushQueue, pendingQueueCount, getActiveProfile, setActiveProfile } from "./api.js";
 import { wireHomeActions } from "./view-home.js";
 
@@ -52,17 +52,31 @@ async function navigate(view, param) {
 
   const load = VIEWS[view];
   if (!load) return;
-  const mod = await load();
-  if (view !== currentView) return; // user navigated away while the view was loading
-  if (view === "home") return mod.renderHome();
-  if (view === "spirits") return mod.renderSpirits();
-  if (view === "scan") { scanModule = mod; return mod.renderScan(navigate); }
-  if (view === "discover") return mod.renderDiscover(navigate);
-  if (view === "map") return mod.renderMapView(navigate);
-  if (view === "profile") return mod.renderProfile();
-  if (view === "bottle") return mod.renderBottleDetail(param, navigate);
-  if (view === "compare") return mod.renderCompare(navigate);
-  if (view === "wine") return mod.renderWinePalate();
+  // A view that has never rendered shows a placeholder while its code downloads.
+  if (target && !target.firstElementChild) target.innerHTML = skeletonHtml();
+  let loadFailed = false;
+  try {
+    const mod = await load().catch((e) => { loadFailed = true; throw e; });
+    if (view !== currentView) return; // user navigated away while the view was loading
+    if (view === "home") return await mod.renderHome();
+    if (view === "spirits") return await mod.renderSpirits();
+    if (view === "scan") { scanModule = mod; return await mod.renderScan(navigate); }
+    if (view === "discover") return await mod.renderDiscover(navigate);
+    if (view === "map") return await mod.renderMapView(navigate);
+    if (view === "profile") return await mod.renderProfile();
+    if (view === "bottle") return await mod.renderBottleDetail(param, navigate);
+    if (view === "compare") return await mod.renderCompare(navigate);
+    if (view === "wine") return await mod.renderWinePalate();
+  } catch (err) {
+    // A chunk that failed to download (a weak connection) or a view that threw: say so and offer a retry
+    // instead of leaving a blank screen.
+    console.error(`Could not show the ${view} view`, err);
+    if (view !== currentView || !target) return;
+    target.innerHTML = `<div class="empty-state" role="alert"><p>This view could not load.</p><button type="button" class="btn btn-secondary" data-retry-view>Try again</button></div>`;
+    // A module that failed to download stays failed for this page, so retrying it means reloading; a view that
+    // merely threw can simply be rendered again.
+    target.querySelector("[data-retry-view]").addEventListener("click", () => (loadFailed ? location.reload() : navigate(view, param)));
+  }
 }
 
 function wireNav() {
@@ -76,9 +90,19 @@ function wireGlobalDelegation() {
     const bottleCard = e.target.closest("[data-open-bottle]");
     if (bottleCard) { navigate("bottle", Number(bottleCard.dataset.openBottle)); return; }
 
+    if (e.target.closest("[data-action='retry-view']")) { navigate(currentView); return; }
     if (e.target.closest("[data-action='close-sheet']")) { closeSheet(); return; }
     if (e.target.closest("#sheetBackdrop")) { closeSheet(); return; }
   });
+
+  // A bottle photo that fails to load (offline, or a dead link) is hidden instead of showing its alt text in a box.
+  document.addEventListener("error", (e) => {
+    const img = e.target;
+    if (img instanceof HTMLImageElement && !img.dataset.failed) {
+      img.dataset.failed = "1";
+      img.classList.add("img-failed");
+    }
+  }, true);
 
   document.addEventListener("pourprofile:navigate", (e) => navigate(e.detail.view, e.detail.param));
   document.addEventListener("pourprofile:refresh", () => navigate(currentView));
@@ -136,7 +160,9 @@ async function wireProfileSwitcher() {
 
   const paint = () => {
     const active = profiles.find((p) => p.slug === getActiveProfile());
-    el("profileChipName").textContent = active ? active.display_name : getActiveProfile();
+    const slug = getActiveProfile();
+    // Offline, before the profile list arrives: still show the person's name, not the raw slug.
+    el("profileChipName").textContent = active ? active.display_name : slug === "jdad" ? "JDAD" : slug.charAt(0).toUpperCase() + slug.slice(1);
   };
   paint();
 
