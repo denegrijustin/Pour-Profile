@@ -1,4 +1,4 @@
-import { getFocus, focusHtml, wireFocus, focusLabel } from './recommendation-focus.js';
+import { getFocus, focusHtml, wireFocus } from './recommendation-focus.js';
 import { photoRecommendationHtml, wirePhotoRecommendations } from "./photo-recommendations.js";
 // Discover is the recommendation surface.
 //
@@ -79,9 +79,7 @@ export async function renderDiscover(dispatchNav) {
 
 
   view.innerHTML = `
-    <p class="field-hint">Your local catalog grows from store photos. Dates show when evidence was uploaded; current stock may change. Spirits and wine are added as labels are confirmed.</p>
     ${focusHtml()}
-    <div class="section-title"><h2>${escapeHtml(focusLabel())} for you</h2></div>
     <details class="optional-flavor-map"><summary>Find bottles from a shelf photo</summary>${photoRecommendationHtml()}</details>
     <div class="filter-bar">
       <button class="filter-chip${state.mode === "picks" ? " active" : ""}" data-mode="picks">For you</button>
@@ -100,7 +98,7 @@ export async function renderDiscover(dispatchNav) {
           <option value="alphabetical"${state.sort === "alphabetical" ? " selected" : ""}>A–Z</option>
         </select>
       </div>` : `
-      <p class="field-hint" style="margin:2px 0 12px">Scored against your palate — what you've rated, and what you've said you dislike.${picksRes.already_have ? ` ${picksRes.already_have} more you already have ${picksRes.already_have === 1 ? "is" : "are"} hidden; they're under Local store.` : ""}</p>`}
+      <p class="field-hint" style="margin:2px 0 12px">${picksRes.already_have ? ` ${picksRes.already_have} more you already have ${picksRes.already_have === 1 ? "is" : "are"} hidden; they're under Local store.` : ""}</p>`}
 
     ${picks.length
       ? `<div class="pick-list">${picks.map(pickCardHtml).join("")}</div>`
