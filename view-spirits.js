@@ -5,7 +5,7 @@ import { CATEGORIES, STATUS_TAGS } from "./spirit-taxonomy.js";
 import { openBottlePickerSheet } from "./log-pour.js";
 import { tastingFeedHtml } from "./tasting-feed.js";
 
-const state = { category: "", status: "", q: "", sort: "newest", tab: "bottles" };
+const state = { category: "", status: "", q: "", sort: "personal_rating", tab: "bottles" };
 
 /** Jump straight to the pour history — used by "See all" on Home. */
 export function showPoursTab() { state.tab = "pours"; }
@@ -31,10 +31,11 @@ export async function renderSpirits() {
     </div>
     <div class="field-row" style="margin:10px 0">
       <select id="spiritsSort">
+        <option value="personal_rating">Your ratings · best first</option>
         <option value="newest">Newest</option>
         <option value="alphabetical">Alphabetical</option>
         <option value="highest_rated">Highest external reviews</option>
-        <option value="highest_match">Highest Match</option>
+        <option value="highest_match">Highest estimated match</option>
         <option value="proof">Proof</option>
       </select>
       <button class="btn btn-secondary" id="spiritsAddBtn" type="button">+ Add</button>

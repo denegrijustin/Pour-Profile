@@ -1,3 +1,4 @@
+import { personalRating } from "./personal-ranking.js";
 import { withBottleImage } from "./bottle-images.js";
 import { STATUS_TAGS, categoryLabel, titleize } from "./spirit-taxonomy.js";
 
@@ -94,17 +95,18 @@ export function bottleThumbHtml(bottle) {
 
 export function bottleCardHtml(bottle) {
   const sub = [bottle.brand, categoryLabel(bottle.category)].filter(Boolean).join(" · ");
+  const rating = personalRating(bottle);
   return `
     <article class="bottle-card" data-open-bottle="${bottle.id}" tabindex="0" role="button" aria-label="${escapeHtml(bottle.name)}">
       <div class="thumb">
         ${bottleThumbHtml(bottle)}
-        ${bottle.palate_match != null ? `<span class="match-pill">${bottle.palate_match}%</span>` : ""}
+        ${rating != null ? `<span class="match-pill">${formatRating(rating)}</span>` : bottle.palate_match != null ? `<span class="match-pill">Est. fit ${bottle.palate_match}%</span>` : ""}
       </div>
       <div class="body">
         <div class="name">${escapeHtml(bottle.name)}</div>
         <div class="sub">${escapeHtml(sub)}</div>
         <div class="meta-row">
-          <span>${bottle.external_review_score != null ? `Reviews: ${Math.round(bottle.external_review_score)}/100 · ` : ""}${bottle.avg_rating != null ? `You: ${formatRating(bottle.avg_rating)}` : "Not tried"}</span>
+          <span>${bottle.external_review_score != null ? `Reviews: ${Math.round(bottle.external_review_score)}/100 · ` : ""}${rating != null ? `You: ${formatRating(rating)}` : "Not rated"}</span>
           ${(bottle.status_tags || []).includes("favorite") ? '<span title="Favorite">❤️</span>' : ""}
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { comparePersonalRank } from "./personal-ranking.js";
 import { matchesCatalogFocus, catalogVarietal } from './catalog-focus.js';
 import { REACTIONS, sourcePreferences, sourcePreferenceFit } from "./source-preferences.js";
 import { lookupBottleSources } from "./bottle-search.js";
@@ -381,7 +382,7 @@ async function listBottles(url, env) {
   const category = url.searchParams.get("category");
   const status = url.searchParams.get("status");
   const q = url.searchParams.get("q");
-  const sort = url.searchParams.get("sort") || "newest";
+  const sort = url.searchParams.get("sort") || "personal_rating";
   const distilleryId = url.searchParams.get("distillery_id");
 
   const activeProfile = await resolveProfile(url, env);
@@ -439,6 +440,8 @@ async function listBottles(url, env) {
     return { ...b, palate_match: matchForBottle(b, profile, brandSignals, []).matchPercent };
   });
   if (sort === "highest_match") bottles.sort((a, b) => (b.palate_match ?? -1) - (a.palate_match ?? -1));
+
+  if (sort === "personal_rating") bottles.sort(comparePersonalRank);
 
   return json({ bottles: bottles.map(withBottleImage) });
 }
