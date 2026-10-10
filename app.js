@@ -1,4 +1,4 @@
-import { el, closeSheet, toast, escapeHtml } from "./ui.js";
+import { el, closeSheet, toast, escapeHtml, skeletonHtml } from "./ui.js";
 import { api, flushQueue, pendingQueueCount, getActiveProfile, setActiveProfile } from "./api.js";
 import { wireHomeActions } from "./view-home.js";
 
@@ -53,7 +53,7 @@ async function navigate(view, param) {
   const load = VIEWS[view];
   if (!load) return;
   // A view that has never rendered shows a placeholder while its code downloads.
-  if (target && !target.firstElementChild) target.innerHTML = `<p class="field-hint" role="status">Loading…</p>`;
+  if (target && !target.firstElementChild) target.innerHTML = skeletonHtml();
   let loadFailed = false;
   try {
     const mod = await load().catch((e) => { loadFailed = true; throw e; });
@@ -90,9 +90,19 @@ function wireGlobalDelegation() {
     const bottleCard = e.target.closest("[data-open-bottle]");
     if (bottleCard) { navigate("bottle", Number(bottleCard.dataset.openBottle)); return; }
 
+    if (e.target.closest("[data-action='retry-view']")) { navigate(currentView); return; }
     if (e.target.closest("[data-action='close-sheet']")) { closeSheet(); return; }
     if (e.target.closest("#sheetBackdrop")) { closeSheet(); return; }
   });
+
+  // A bottle photo that fails to load (offline, or a dead link) is hidden instead of showing its alt text in a box.
+  document.addEventListener("error", (e) => {
+    const img = e.target;
+    if (img instanceof HTMLImageElement && !img.dataset.failed) {
+      img.dataset.failed = "1";
+      img.classList.add("img-failed");
+    }
+  }, true);
 
   document.addEventListener("pourprofile:navigate", (e) => navigate(e.detail.view, e.detail.param));
   document.addEventListener("pourprofile:refresh", () => navigate(currentView));
@@ -150,7 +160,9 @@ async function wireProfileSwitcher() {
 
   const paint = () => {
     const active = profiles.find((p) => p.slug === getActiveProfile());
-    el("profileChipName").textContent = active ? active.display_name : getActiveProfile();
+    const slug = getActiveProfile();
+    // Offline, before the profile list arrives: still show the person's name, not the raw slug.
+    el("profileChipName").textContent = active ? active.display_name : slug === "jdad" ? "JDAD" : slug.charAt(0).toUpperCase() + slug.slice(1);
   };
   paint();
 

@@ -168,6 +168,16 @@ export function ratingPickerHtml(selected) {
   return `<div class="rating-picker">${values.map((v) => `<button type="button" data-rating="${v}" class="${selected === v ? "selected" : ""}">${v.toFixed(1)}</button>`).join("")}</div>`;
 }
 
+/** Placeholder blocks shown while a view's data loads, in place of a bare "Loading…" line. */
+export function skeletonHtml(rows = 3) {
+  return `<div class="skeleton-list" role="status" aria-label="Loading">${Array.from({ length: rows }, () => `<div class="skeleton-block"></div>`).join("")}</div>`;
+}
+
+/** Shown when a view's data could not be fetched; the button re-renders the current view. */
+export function errorStateHtml(message = "Couldn't load this right now. Check your connection and try again.") {
+  return `<div class="empty-state" role="alert"><div class="ee-icon">📡</div><h3>Can't reach the server</h3><p>${escapeHtml(message)}</p><button type="button" class="btn btn-secondary" data-action="retry-view">Try again</button></div>`;
+}
+
 export function emptyStateHtml(icon, title, body, actionHtml = "") {
   return `<div class="empty-state"><div class="ee-icon">${icon}</div><h3>${escapeHtml(title)}</h3><p>${escapeHtml(body)}</p>${actionHtml}</div>`;
 }
