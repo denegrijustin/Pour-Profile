@@ -3,6 +3,13 @@
 // Source pages and image labels checked against the expression, not brand alone.
 // Names without batch/year get representative expression photography only.
 const entries = [
+ [["Honig Napa Valley Sauvignon Blanc", "Honig Sauvignon Blanc"], "/bottle-photo-assets/wine-more-0.png", "https://www.wineonsale.com/products/honig-sauvignon-blanc-2024-750-ml", "retailer"],
+ [["Saint Supéry Napa Valley Sauvignon Blanc", "St. Supéry Sauvignon Blanc"], "/bottle-photo-assets/wine-more-1.jpg", "https://www.wineonsale.com/products/st-supery-sauvignon-blanc-2023-750-ml", "retailer"],
+ [["Loveblock Marlborough Sauvignon Blanc", "Loveblock Sauvignon Blanc"], "/bottle-photo-assets/wine-more-2.jpg", "https://www.wineonsale.com/products/loveblock-sauvignon-blanc-2023-750-ml", "retailer"],
+ [["Henri Bourgeois Les Baronnes Sancerre"], "/bottle-photo-assets/wine-more-3.jpg", "https://www.wineonsale.com/products/henri-bourgeois-sancerre-les-baronnes-blanc-2025-750-ml", "retailer"],
+ [["Kim Crawford Marlborough Sauvignon Blanc", "Kim Crawford Sauvignon Blanc"], "/bottle-photo-assets/wine-more-4.png", "https://www.kimcrawfordwines.com/products/sauvignon-blanc", "producer"],
+ [["Chateau Ste. Michelle Columbia Valley Sauvignon Blanc", "Chateau Ste. Michelle Sauvignon Blanc"], "/bottle-photo-assets/wine-more-5.jpg", "https://www.ste-michelle.com/sauvignon-blanc-columbia-valley", "producer"],
+ [["Greywacke Marlborough Sauvignon Blanc", "Greywacke Sauvignon Blanc"], "/bottle-photo-assets/wine-more-6.jpg", "https://thebottleshops.com/products/greywacke-sauvignon-blanc", "retailer"],
  [["Dry Creek Vineyard Sauvignon Blanc"], "/bottle-photo-assets/dry-creek-vineyard-sauvignon-blanc.png", "https://drycreekvineyard.com/trade/", "producer"],
  [["Bread & Butter Sauvignon Blanc"], "/bottle-photo-assets/bread-butter-sauvignon-blanc.png", "https://trade.wxbrands.com/brand/bread-butter/", "producer"],
  [["Cakebread Cellars Napa Valley Sauvignon Blanc", "Cakebread Cellars Sauvignon Blanc"], "/bottle-photo-assets/cakebread-cellars-napa-valley-sauvignon-blanc.png", "https://kegnbottle.com/products/cakebread-cellars-sauvignon-blanc-750-ml", "retailer"],
