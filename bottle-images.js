@@ -3,6 +3,16 @@
 // Source pages and image labels checked against the expression, not brand alone.
 // Names without batch/year get representative expression photography only.
 const entries = [
+ [["Russell's Reserve 10", "Russell's Reserve 10 Year", "Russell's Reserve 10 Year Bourbon"], "/bottle-photo-assets/russells-reserve-10.png", "https://kegnbottle.com/products/russells-reserve-10-year-old-bourbon-750-ml", "retailer"],
+ [["Four Roses Small Batch Select"], "/bottle-photo-assets/four-roses-small-batch-select.jpg", "https://kegnbottle.com/products/four-roses-small-batch-select-750ml", "retailer"],
+ [["Old Forester 1920", "Old Forester 1920 Prohibition Style"], "/bottle-photo-assets/old-forester-1920.jpg", "https://kegnbottle.com/products/old-forester-1920-prohibition-style-whisky-750-ml", "retailer"],
+ [["Old Forester 1897", "Old Forester 1897 Bottled in Bond", "Old Forester 1897 Bottled-in-Bond"], "/bottle-photo-assets/old-forester-1897.png", "https://kegnbottle.com/products/old-forester-1897-bottled-in-bond-bourbon-750-ml", "retailer"],
+ [["Knob Creek 9", "Knob Creek 9 Year", "Knob Creek 9 Year Bourbon"], "/bottle-photo-assets/knob-creek-9.png", "https://kegnbottle.com/products/knob-creek-9-year-bourbon-whiskey-750-ml", "retailer"],
+ [["Wild Turkey Rare Breed", "Wild Turkey Rare Breed Bourbon"], "/bottle-photo-assets/wild-turkey-rare-breed.png", "https://kegnbottle.com/products/wild-turkey-rare-breed-750-ml", "retailer"],
+ [["Henry McKenna 10", "Henry McKenna 10 Year", "Henry McKenna 10 Year Single Barrel"], "/bottle-photo-assets/henry-mckenna-10.png", "https://kegnbottle.com/products/henry-mckenna-10-yr-single-barrel-750-ml", "retailer"],
+ [["Elijah Craig Small Batch"], "/bottle-photo-assets/elijah-craig-small-batch.jpg", "https://kegnbottle.com/products/elijah-craig-small-batch-750-ml", "retailer"],
+ [["1792 Small Batch"], "/bottle-photo-assets/1792-small-batch.png", "https://kegnbottle.com/products/copy-of-1792-small-batch-750-ml", "retailer"],
+ [["New Riff Bourbon", "New Riff Bottled-in-Bond Bourbon", "New Riff Bottled in Bond Bourbon"], "/bottle-photo-assets/new-riff-bourbon.webp", "https://kegnbottle.com/products/new-riff-bottled-in-bond-kentucky-bourbon-whiskey-750-ml", "retailer"],
  [["Honig Napa Valley Sauvignon Blanc", "Honig Sauvignon Blanc"], "/bottle-photo-assets/wine-more-0.png", "https://www.wineonsale.com/products/honig-sauvignon-blanc-2024-750-ml", "retailer"],
  [["Saint Supéry Napa Valley Sauvignon Blanc", "St. Supéry Sauvignon Blanc"], "/bottle-photo-assets/wine-more-1.jpg", "https://www.wineonsale.com/products/st-supery-sauvignon-blanc-2023-750-ml", "retailer"],
  [["Loveblock Marlborough Sauvignon Blanc", "Loveblock Sauvignon Blanc"], "/bottle-photo-assets/wine-more-2.jpg", "https://www.wineonsale.com/products/loveblock-sauvignon-blanc-2023-750-ml", "retailer"],

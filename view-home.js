@@ -1,5 +1,6 @@
+import { rateCatalogBottle } from './catalog-actions.js';
 import { api } from './api.js';
-import { el, emptyStateHtml, skeletonHtml, errorStateHtml } from './ui.js';
+import { el, toast, emptyStateHtml, skeletonHtml, errorStateHtml } from './ui.js';
 import { getFocus, focusHtml, wireFocus } from './recommendation-focus.js';
 import { pickCardHtml, openCatalogDetail } from './view-discover.js';
 import { flavorHeatmapHtml, wireFlavorHeatmap } from './flavor-heatmap.js';
@@ -44,6 +45,9 @@ export function wireHomeActions(dispatchNav) {
   el('view-home').addEventListener('click',async e=>{
     const button=e.target.closest('[data-adopt],[data-adopt-tried]'); if(!button)return;
     button.disabled=true;
-    try {const tried=button.hasAttribute('data-adopt-tried');const res=await api.catalogAdopt({catalog_id:button.dataset.adopt||button.dataset.adoptTried,status_tags:[tried?'tried':'want_to_try']});if(tried)dispatchNav('bottle',res.bottle_id);else renderHome();}catch{button.disabled=false;button.textContent='Try again';}
+    try {
+      if(button.hasAttribute('data-adopt-tried')) await rateCatalogBottle(button.dataset.adoptTried,dispatchNav);
+      else {await api.catalogAdopt({catalog_id:button.dataset.adopt,status_tags:['want_to_try']});await renderHome();}
+    }catch(err){toast(err.message || 'Could not open this bottle');}finally{button.disabled=false;}
   });
 }

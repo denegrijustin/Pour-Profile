@@ -1,3 +1,4 @@
+import { rateCatalogBottle } from './catalog-actions.js';
 import { getFocus, focusHtml, wireFocus } from './recommendation-focus.js';
 import { photoRecommendationHtml, wirePhotoRecommendations } from "./photo-recommendations.js";
 // Discover is the recommendation surface.
@@ -144,12 +145,12 @@ function wire(view, dispatchNav) {
     btn.disabled = true;
     btn.textContent = "Adding…";
     try {
-      const res = await api.catalogAdopt({ catalog_id: id, status_tags: tried ? ["tried"] : ["want_to_try"] });
+      if (tried) { await rateCatalogBottle(id, dispatchNav); btn.disabled=false; btn.textContent="I've had this"; return; }
+      await api.catalogAdopt({ catalog_id: id, status_tags: ["want_to_try"] });
       toast(tried ? "Added — log how it was" : "Added to your shortlist");
       // Landing straight on the bottle is the point when you've already had it:
       // the next thing you want is to record the pour, not scroll back.
-      if (tried) dispatchNav("bottle", res.bottle_id);
-      else renderDiscover(dispatchNav);
+      renderDiscover(dispatchNav);
     } catch (err) {
       btn.disabled = false;
       btn.textContent = tried ? "I've had this" : "+ Want to try";
@@ -201,10 +202,11 @@ export async function openCatalogDetail(id, dispatchNav) {
         const tried = btn.dataset.sheetAdopt === "tried";
         btn.disabled = true;
         try {
-          const res = await api.catalogAdopt({ catalog_id: r.id, status_tags: tried ? ["tried"] : ["want_to_try"] });
+          if (tried) { await rateCatalogBottle(r.id, dispatchNav); return; }
+          await api.catalogAdopt({ catalog_id: r.id, status_tags: ["want_to_try"] });
           closeSheet();
           toast(tried ? "Added — log how it was" : "Added to your shortlist");
-          if (tried) dispatchNav("bottle", res.bottle_id); else renderDiscover(dispatchNav);
+          renderDiscover(dispatchNav);
         } catch (err) { btn.disabled = false; toast(err.message || "Couldn't add that bottle"); }
       }));
     }
