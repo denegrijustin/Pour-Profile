@@ -18781,65 +18781,26 @@
   "notes": "No producer tasting notes found. Roast duration from Thirty One Whiskey; NOM/process from Agave Matchmaker and Mezcalistas."
  },
  "ks-teremana-reposado-tequila": {
-  "producer": null,
-  "critics": [
-   {
-    "source": "Drinkhacker",
-    "source_url": "https://www.drinkhacker.com/2026/07/30/review-teremana-tequila-complete-lineup-updated-2026/",
-    "score": null,
-    "scale": null,
-    "nose": "Vegetal funk tamed by oak; light brown sugar, butterscotch, white pepper and subtle lime zest.",
-    "palate": "Measured wood-driven sweetness with silky caramelized sugar and hints of citrus.",
-    "finish": "Warm and lingering, cracked pepper and agave syrup.",
-    "summary": "Letter grade B in the 2026 update (B- in 2020); notes above are from the 2026 retasting.",
-    "year": 2026
-   },
-   {
-    "source": "Thirty One Whiskey (Nick Leghorn)",
-    "source_url": "https://www.thirtyonewhiskey.com/review-teremana-reposado-tequila/",
-    "score": 4,
-    "scale": "5",
-    "nose": "Vanilla, caramel and brown sugar over herbal agave, black pepper and lemon.",
-    "palate": "Enough brown sugar and vanilla without masking the rest; smoother than the blanco.",
-    "finish": "On ice mostly herbal agave and citrus; balances well in a margarita.",
-    "summary": "A solid, good-value reposado with a light barrel influence.",
-    "year": 2021
-   },
-   {
-    "source": "Distiller (Jake Emen)",
-    "source_url": "https://distiller.com/spirits/teremana-tequila-reposado",
-    "score": 80,
-    "scale": "100",
-    "nose": "Toffee over herbal hay, clover honey and jasmine.",
-    "palate": null,
-    "finish": null,
-    "summary": "Expert rating; only the opening of the note was retrievable.",
-    "year": null
-   }
-  ],
-  "facts": {
-   "abv": 40,
-   "proof": 80,
-   "age": "2 to 12 months",
-   "mash_bill": "Blue Weber agave from the Jalisco Highlands; brick ovens ~3 days, open-tank fermentation",
-   "cask": "Ex-bourbon barrels; copper pot distilled",
-   "region": "Los Altos, Jalisco, Mexico",
-   "source_url": "https://distiller.com/spirits/teremana-tequila-reposado"
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The producer emphasizes oak and vanilla with a rich finish from whiskey-barrel aging.",
+   "source_url": "https://teremana.com/pages/tequila"
   },
-  "flavor_terms": [
-   "brown sugar",
-   "butterscotch",
-   "caramel",
-   "vanilla",
-   "white pepper",
-   "lime zest",
-   "herbal agave",
-   "toffee",
-   "honey",
-   "agave syrup"
-  ],
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://teremana.com/pages/tequila"
+  },
+  "flavor_terms": [],
   "confidence": "medium",
-  "notes": "Producer site product page not reachable; no producer notes captured."
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
  },
  "ks-codigo-1530-rosa-blanco-tequila": {
   "producer": {
@@ -22916,5 +22877,4163 @@
   ],
   "confidence": "high",
   "notes": null
+ },
+ "photo-old-bones-10-year-reserve-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Orange peel and vanilla lead into peppery mint, honey and butterscotch toffee with a full body and long finish. Notes represent the producer's cited batch, not a verified shelf batch.",
+   "source_url": "https://backbonebourbon.com/old-bones-rye-10-year-reserve/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://backbonebourbon.com/old-bones-rye-10-year-reserve/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-old-ezra-7-barrel-strength-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Gentle sweetness and oak accompany vanilla and honey, with warm spice and tobacco afterward.",
+   "source_url": "https://www.luxco.com/lux-row-distillers-introduces-old-ezra-7-year-straight-rye-whiskey/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 57,
+   "proof": 114,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.luxco.com/lux-row-distillers-introduces-old-ezra-7-year-straight-rye-whiskey/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-barrell-seagrass": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Tropical and orchard fruit, including apricot, accompany grassy rye, herbs and spice. Finishing in rum, Madeira and apricot-brandy casks adds a rich texture and persistent fruit; proof varies.",
+   "source_url": "https://www.barrellbourbon.com/seagrass"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.barrellbourbon.com/seagrass"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-heaven-hill-grain-to-glass-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The second edition offers toasted oak and almond, creamy orange, chocolate, nutmeg, pepper and honey, ending with rye spice and charred oak. Shelf edition is unconfirmed.",
+   "source_url": "https://heavenhilldistillery.com/kentucky-straight-rye-whiskey.php"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://heavenhilldistillery.com/kentucky-straight-rye-whiskey.php"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-whistlepig-piggyback-6-year-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cinnamon, pepper and citrus lead into cocoa, cardamom and leather; the long finish carries vanilla and baking spice.",
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/piggyback-rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 48.28,
+   "proof": 96.56,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/piggyback-rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-whistlepig-piggyback-6-year-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Caramel corn and oak precede creamy maple and vanilla; herbal tea and honey linger afterward.",
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/piggyback-bourbon"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/piggyback-bourbon"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-whistlepig-campstock": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "A wheat-and-rye blend finished in toasted barrels, with maple and citrus followed by orange peel, bread crust and vanilla.",
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/campstock-wheat-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/campstock-wheat-whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-smoke-wagon-malted-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Malted barley adds a creamy combination of caramel, cereal and malt before intense cinnamon, pepper and smoky notes at cask strength.",
+   "source_url": "https://www.smokewagon.com/rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.smokewagon.com/rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-sagamore-small-batch-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla, honey and baking spice lead into apple, caramel and brown sugar, with mild oak and a spiced honey finish.",
+   "source_url": "https://sagamorespirit.com/spirits/sagamore-small-batch-rye-whiskey/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46.5,
+   "proof": 93,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://sagamorespirit.com/spirits/sagamore-small-batch-rye-whiskey/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-sagamore-cask-strength-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Dark chocolate, pepper, honey and brown sugar meet citrus, hazelnut and molasses. Barrel-strength releases vary in proof and age.",
+   "source_url": "https://sagamorespirit.com/spirits/cask-strength-rye-whiskey/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://sagamorespirit.com/spirits/cask-strength-rye-whiskey/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jefferson-s-ocean-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Maple and toasted marshmallow precede toffee, vanilla and tobacco; cinnamon and baking spice finish with a saline note. Voyages vary.",
+   "source_url": "https://jeffersonsbourbon.com/whiskeys/jeffersons-ocean-rye/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://jeffersonsbourbon.com/whiskeys/jeffersons-ocean-rye/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-castle-key-restoration-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The 2025 release combines candied citrus, apple, toasted oak and baking spice with sugar, nuts and pastry, ending with vanilla and pepper. Shelf release is unconfirmed.",
+   "source_url": "https://castleandkey.com/products/2025-restoration-rye-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://castleandkey.com/products/2025-restoration-rye-whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-james-gang-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Bark spice and balanced caramel, with sweetness on entry and a slowly warming finish.",
+   "source_url": "https://www.westbottomswhiskey.co/whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.westbottomswhiskey.co/whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-west-bottoms-maple-cask-finished-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "A 95% rye recipe rested in maple-seasoned casks. The producer describes maple sweetness and camp spice; no syrup is added.",
+   "source_url": "https://www.westbottomswhiskey.co/whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.westbottomswhiskey.co/whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-widow-jane-paradigm-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Lemon meringue, flowers, grass and lychee aromas. Buttered rye toast, mandarin marmalade, cedar and white pepper; thyme, tea, sandalwood and peach finish.",
+   "source_url": "https://widowjane.com/whiskey/paradigm-rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://widowjane.com/whiskey/paradigm-rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-new-riff-8-year-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Apple, grassy rye, cinnamon and clove lead into mint, a sweet center and restrained oak with a medium body.",
+   "source_url": "https://newriffdistilling.com/the-aquifer/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://newriffdistilling.com/the-aquifer/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-old-pepper-distillery-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The producer's bonded rye centers on chocolate, peppermint and floral honey. Single-barrel and finished releases are distinct; the shelf bottle's release is not established.",
+   "source_url": "https://jamesepepper.com/old-pepper-rye/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://jamesepepper.com/old-pepper-rye/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-templeton-rye-6-year": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Floral spice, vanilla and butterscotch accompany cherry and green apple; fruit and toasted oak lead to persistent spice.",
+   "source_url": "https://templetonamericanwhiskey.com/products/6-year-rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45.75,
+   "proof": 91.5,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://templetonamericanwhiskey.com/products/6-year-rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-wild-turkey-rare-breed-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Caramel, apple and honey lead into vanilla, rye spice and charred oak, ending warmly with wood and dried fruit.",
+   "source_url": "https://www.wildturkeybourbon.com/en-us/products/rare-breed-rye/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 56.1,
+   "proof": 112.2,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.wildturkeybourbon.com/en-us/products/rare-breed-rye/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-town-branch-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Spicy aromas with vanilla, dried and tropical fruit, rich oak and pepper; a warm dry finish. Current expression notes; photographed release not established.",
+   "source_url": "https://lexingtonbrewingco.com/whiskey-spirits/town-branch/town-branch-small-batch-straight-rye-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://lexingtonbrewingco.com/whiskey-spirits/town-branch/town-branch-small-batch-straight-rye-whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-redwood-empire-emerald-giant": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Brown sugar, cinnamon and pepper develop into honey and orange with persistent spice.",
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/emerald-giant-rye/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/emerald-giant-rye/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-redwood-empire-emerald-giant-cask-strength": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Tea, cinnamon and orange lead to a coating texture, chocolate, coffee and warming spice. Proof varies by release.",
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/cask-strength-uncut-unfiltered/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/cask-strength-uncut-unfiltered/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-redwood-empire-rocket-top": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The current bonded release combines pine and maple with savory meat and mushroom notes. These notes describe the producer's current release, not a confirmed shelf batch.",
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/rocket-top-straight-rye-whisky/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/rocket-top-straight-rye-whisky/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-russell-s-reserve-single-barrel-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Lemon, vanilla and spicy oak lead into orange, ginger, pepper and tobacco, with pear and peppercorn on the finish. Individual barrels vary.",
+   "source_url": "https://www.russellsreserve.com/our-products/single-barrel-rye/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 52,
+   "proof": 104,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.russellsreserve.com/our-products/single-barrel-rye/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jack-daniel-s-single-barrel-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Grain and dried fruit accompany toasted oak and rich rye spice with a lingering finish; individual barrels vary.",
+   "source_url": "https://pressroom.jackdaniels.com/products/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://pressroom.jackdaniels.com/products/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-rossville-union-5-year-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Caramel aromas precede fruit and a smoky, spicy body with a clean finish.",
+   "source_url": "https://www.rossvilleunion.com/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.rossvilleunion.com/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-rossville-union-6-year-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The producer's six-year bonded release has caramel and mocha, candied fruit, green apple, malted chocolate and cinnamon.",
+   "source_url": "https://www.rossvilleunion.com/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.rossvilleunion.com/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-templeton-rye-10-year": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Chocolate, vanilla and toasted oak accompany orchard fruit; honey, floral notes and rye spice finish with lingering butterscotch.",
+   "source_url": "https://templetonamericanwhiskey.com/products/10-year-rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://templetonamericanwhiskey.com/products/10-year-rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-bone-snapper-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Representative producer notes describe cinnamon, rye bread and leather, followed by anise, orange peel and marmalade, with a bold warm finish.",
+   "source_url": "https://backbonebourbon.com/wp-content/themes/backbone/assets/backbone-bourbon-bone-snapper.pdf?version=2021002"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 54,
+   "proof": 108,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://backbonebourbon.com/wp-content/themes/backbone/assets/backbone-bourbon-bone-snapper.pdf?version=2021002"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jim-beam-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Peppery rye spice with vanilla, caramel sweetness and smoky oak accents; a warming finish.",
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-redemption-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Toasted oak, caramel and allspice lead into peppery rye, floral citrus and a mint finish. Notes describe the current expression; older bottlings may differ.",
+   "source_url": "https://www.redemptionwhiskey.com/whiskeys/rye/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.redemptionwhiskey.com/whiskeys/rye/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-redemption-high-rye-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla, red berry and oak lead into corn, spice and woody caramel with persistent spice. Notes describe the current expression; older bottlings may differ.",
+   "source_url": "https://www.redemptionwhiskey.com/whiskeys/high-rye-bourbon/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.redemptionwhiskey.com/whiskeys/high-rye-bourbon/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-rossville-union-barrel-proof-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Spicy vanilla leads into wood and caramel, followed by oak and spice. The current producer release is seven years old; photographed release and proof remain unconfirmed.",
+   "source_url": "https://www.rossvilleunion.com/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.rossvilleunion.com/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-reunion-straight-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Butterscotch and caramel are joined by cinnamon and ginger.",
+   "source_url": "https://www.unionhorse.com/reunion-straight-rye-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46.5,
+   "proof": 93,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.unionhorse.com/reunion-straight-rye-whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-reunion-rye-whiskey-6-year": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Representative Reunion rye notes include butterscotch, caramel, cinnamon and ginger; the photographed six-year release was not separately reviewed.",
+   "source_url": "https://www.unionhorse.com/reunion-straight-rye-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.unionhorse.com/reunion-straight-rye-whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-ezra-brooks-99-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Chocolate, leather and vanilla with spicy grain; gentle sweetness balances the oak.",
+   "source_url": "https://ezrabrooks.com/whiskey/ezra-99-rye/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 49.5,
+   "proof": 99,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://ezrabrooks.com/whiskey/ezra-99-rye/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-knobel-tennessee-whiskey": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Caramel and spicy orange aromas with vanilla, almond and oak. Sugar cookie, ginger and autumn spice; long sweet apple-pie finish.",
+   "source_url": "https://shop.knobelspirits.com/products/just-the-juice"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://shop.knobelspirits.com/products/just-the-juice"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-whistlepig-farmstock-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla and cherry aromatics develop into toffee, baking spice, creme brulee and oak, with a warm rye finish.",
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/farmstock"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/farmstock"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-whistlepig-snout-to-tail-10-year-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Honey and brown sugar meet toasted nuts and cornbread; butterscotch, wheat crust and cedar complete the profile.",
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/snout-to-tail-bourbon-aged-10-years"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 44,
+   "proof": 88,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/snout-to-tail-bourbon-aged-10-years"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-whistlepig-10-year-small-batch-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Orange, anise, allspice and oak precede sweet caramel and vanilla, rye spice and mint; butterscotch lingers warmly.",
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/10-year"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/10-year"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-whistlepig-12-year-old-world-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Wine-cask finishing brings dried stone fruit, raisin and honey around rye spice, with chocolate, caramel and vanilla afterward.",
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/12-year"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/12-year"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-whistlepig-15-year-estate-oak-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Caramel, oak and vanilla frame orange and allspice; creamy butterscotch, leather and tobacco accompany a very long, warm finish.",
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/15-year"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.whistlepigwhiskey.com/whiskeys/15-year"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-whistlepig-18-year-double-malt-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The fourth edition combines toasted almond, caramel and smoky maple with grassy spice, honey and lingering dried fruit. Edition-specific finishing and flavor may differ from the photographed bottle.",
+   "source_url": "https://tastingroom.whistlepigwhiskey.com/products/double-malt-rye-aged-18-years-4th-edition-750ml"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://tastingroom.whistlepigwhiskey.com/products/double-malt-rye-aged-18-years-4th-edition-750ml"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-j-rieger-straight-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cherry blossom, eucalyptus and sandalwood aromas; creamy cherry cola, spearmint, cocoa and ginger with a long finish and little noticeable burn.",
+   "source_url": "https://www.jriegerco.com/our-spirits/rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jriegerco.com/our-spirits/rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-basil-hayden-malted-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Floral and dill aromas accompany oak and caramel; cinnamon, vanilla and toasted rye bread finish with gentle chocolate and warming spice.",
+   "source_url": "https://www.basilhaydenbourbon.com/whiskies/basil-hayden-malted-rye-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.basilhaydenbourbon.com/whiskies/basil-hayden-malted-rye-whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-deerhammer-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Raisin-oat cookie, vanilla, cardamom and blueberry aromas. Caramel, coffee, cinnamon toast and caraway flavors, finishing with bran, nuts, alfalfa and pepper.",
+   "source_url": "https://www.deerhammer.com/whiskey---straight-rye.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.deerhammer.com/whiskey---straight-rye.html"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-deerhammer-single-malt": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Nut brittle, cocoa, caramel and oat-cookie aromas. Cereal, dark chocolate, coffee and tobacco flavors, finishing dry and fruity with hazelnut and substantial body.",
+   "source_url": "https://www.deerhammer.com/whiskey---american-single-malt.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.deerhammer.com/whiskey---american-single-malt.html"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-deerhammer-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Molasses, plum, coffee and pecan-pie aromas. Roasted corn, chocolate, cinnamon and orange peel lead to a savory, full-bodied finish with hickory, peach and oats.",
+   "source_url": "https://www.deerhammer.com/whiskey---four-grain-bourbon.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.deerhammer.com/whiskey---four-grain-bourbon.html"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-green-river-honey": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Warm honey and vanilla aromas, soft caramel mid-palate and oak on the finish. Kentucky bourbon finished with locally sourced honey.",
+   "source_url": "https://greenriverwhiskey.com/honey-whiskey-vs-straight-bourbon/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://greenriverwhiskey.com/honey-whiskey-vs-straight-bourbon/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-elijah-craig-toasted-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Toasted oak, crème brûlée and nut aromas. A creamy palate carries milk chocolate and subtle baking spices; softly warming, lingering spices finish.",
+   "source_url": "https://elijahcraig.com/toasted-rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://elijahcraig.com/toasted-rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-clyde-may-s-straight-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Honeysuckle, apricot, leather, anise and vanilla wafer lead into citrus, cinnamon and shortbread, with soft tannins, black pepper and wood on the finish.",
+   "source_url": "https://clydemays.com/straight-rye-whiskey/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://clydemays.com/straight-rye-whiskey/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-old-overholt-bottled-in-bond-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Robust oak and caramel aromas with vanilla. Char, spice and fresh oak on the palate; lingering char, spice and light fruit finish.",
+   "source_url": "https://www.beamdistilling.com/old-overholt/whiskies/old-overholt-bonded-rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.beamdistilling.com/old-overholt/whiskies/old-overholt-bonded-rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-widow-jane-baby-jane": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Green grape, honeycomb and cream-soda aromas. Creamy strawberry, salted caramel, fig and allspice; peach, anise, hay and milk chocolate finish.",
+   "source_url": "https://widowjane.com/whiskey/baby-jane"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45.5,
+   "proof": 91,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://widowjane.com/whiskey/baby-jane"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-widow-jane-10-year": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Creamy vanilla, cinnamon and nutmeg aromas. Orange, maple, cherry and almond flavors end with charred oak and spice.",
+   "source_url": "https://widowjane.com/whiskey/10-year"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://widowjane.com/whiskey/10-year"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-augusta-buckners-10-year": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Honeyed vanilla, antique wood, earth and dry corn on the palate. Spice and caramel with buttery cream and tea leaf on the finish. Barrel proof varies.",
+   "source_url": "https://augustakydistillery.com/collections/bourbon/products/buckners-single-barrel-10-year"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://augustakydistillery.com/collections/bourbon/products/buckners-single-barrel-10-year"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-augusta-old-route-8": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Graham cracker, vanilla, salted caramel, cedar and oak aromas. Brown sugar and vanilla layers; long, warming oak and baking spice finish. Barrel proof varies.",
+   "source_url": "https://augustakydistillery.com/products/old-route-8"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://augustakydistillery.com/products/old-route-8"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-blue-run-reflection-i-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Tart cherry, butterscotch and a light firewood aroma lead to buttery pancakes, maple, nuts and rosemary. Nutmeg and woody sweetness linger.",
+   "source_url": "https://www.bluerunspirits.com/whiskeys/core/reflection-i-kentucky-straight-bourbon"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 47.5,
+   "proof": 95,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.bluerunspirits.com/whiskeys/core/reflection-i-kentucky-straight-bourbon"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-blue-run-high-rye-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Praline, orange, cherry and tobacco aromas. Brown sugar, nuts and white pepper move to stone fruit and apricot; long herbal tea, peach and clove finish.",
+   "source_url": "https://www.bluerunspirits.com/whiskeys/core/kentucky-straight-high-rye-bourbon"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 55.5,
+   "proof": 111,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.bluerunspirits.com/whiskeys/core/kentucky-straight-high-rye-bourbon"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-blue-run-emerald-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Butterscotch and caramel aromas with toasted oak and pepper. Creamy sweetness, apple, pear, clove and rye spice give way to leather and browned butter.",
+   "source_url": "https://www.bluerunspirits.com/whiskeys/core/emerald-1"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 58.35,
+   "proof": 116.7,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.bluerunspirits.com/whiskeys/core/emerald-1"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-buzzard-s-roost-toasted-barrel-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Rich dessert-like notes of pumpkin pie, bread pudding and caramelized custard, with toasted wood, creaminess and a sharper spice contrast.",
+   "source_url": "https://shop.buzzardsroostwhiskey.com/RYE004_prod.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://shop.buzzardsroostwhiskey.com/RYE004_prod.html"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-buzzard-s-roost-signature-double-oak-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Roasted nuts and cinnamon aromas; vanilla, almonds and gentle spice on the palate. A lasting, warming cinnamon finish.",
+   "source_url": "https://shop.buzzardsroostwhiskey.com/BRB009_prod.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://shop.buzzardsroostwhiskey.com/BRB009_prod.html"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-penelope-straight-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Spearmint, citrus, baking spice and light toasted oak aromas. Rye spice, pepper, caramel sugar and herbal mint; lingering almond, oak and mint-caramel finish.",
+   "source_url": "https://shop.penelopebourbon.com/products/straight-rye-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://shop.penelopebourbon.com/products/straight-rye-whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-woodford-reserve-malt": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Nutty caramel and milk chocolate aromas with apple, dried fruit, brown spice, mint and toasted oak. A rich, complex malt whiskey.",
+   "source_url": "https://www.woodfordreserve.com/whiskey/malt-whiskey/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45.2,
+   "proof": 90.4,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.woodfordreserve.com/whiskey/malt-whiskey/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-switchgrass-bottled-in-bond-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Sweet pear, spicy pepper, cola and fresh bread. Sweet mashed rye aged at least four years in Missouri white oak.",
+   "source_url": "https://switchgrassspirits.com/bottled-in-bond-rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://switchgrassspirits.com/bottled-in-bond-rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-switchgrass-bottled-in-bond-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Citrus and vanilla on the nose, with warm citrus, honey and cornbread on the palate. Aged at least six years in Missouri oak.",
+   "source_url": "https://switchgrassspirits.com/bottled-in-bond-bourbon"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://switchgrassspirits.com/bottled-in-bond-bourbon"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-nelson-bros-reserve-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cherry, maple, mint and cinnamon roll aromas. Caramel, allspice, cherry and hazelnut lead to earthy cocoa and cherry cobbler.",
+   "source_url": "https://greenbrierdistillery.com/pages/nelson-brothers-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 53.9,
+   "proof": 107.8,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://greenbrierdistillery.com/pages/nelson-brothers-whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-wheel-horse-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Butterscotch and toasted-almond aromas; citrus, toffee and dark fruit flavors. A rich, lasting cherry-and-chocolate finish.",
+   "source_url": "https://wheelhorsewhiskey.com/products/wheel-horse-bourbon"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50.5,
+   "proof": 101,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://wheelhorsewhiskey.com/products/wheel-horse-bourbon"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-wheel-horse-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Sour-mash rye made with 95% rye and 5% malted barley, matured in charred American oak for three to four years. Producer page does not provide detailed sensory notes.",
+   "source_url": "https://wheelhorsewhiskey.com/products/wheel-horse-rye"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50.5,
+   "proof": 101,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://wheelhorsewhiskey.com/products/wheel-horse-rye"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-george-dickel-bourbon-8-year": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla sweetness leads to cherry and orange accents, with a lasting almond-toffee and oak finish.",
+   "source_url": "https://www.georgedickel.com/whiskies/dickel-bourbon"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.georgedickel.com/whiskies/dickel-bourbon"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-george-dickel-no-12": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The producer's Signature Recipe profile describes dark fruit and subtle vanilla, with a long finish carrying maple, butter and rich oak.",
+   "source_url": "https://www.georgedickel.com/en-US/whiskies/signature-recipe"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.georgedickel.com/en-US/whiskies/signature-recipe"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-old-elk-wheated-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Toffee, vanilla ice cream, caramel and floral aromas. Creamy toffee, almond and clove flavors; a soft, sweet finish.",
+   "source_url": "https://www.oldelk.com/lineup/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.oldelk.com/lineup/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-old-elk-straight-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla, caramel, clove and nutty aromas. Maple, chocolate, bran, wood and coconut flavors with a coating texture and rich finish.",
+   "source_url": "https://www.oldelk.com/lineup/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 44,
+   "proof": 88,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.oldelk.com/lineup/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-barrell-vantage": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Custard, coconut and chocolate aromas with nutmeg and incense. Rich oily espresso, maple and oak spice; grape, plum and ginger on the finish. Batch proof varies.",
+   "source_url": "https://www.barrellbourbon.com/vantage"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.barrellbourbon.com/vantage"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-garrison-brothers-honeydew": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Caramel, oak, brown sugar and molasses aromas. Elderberry, peach, apricot, wildflower honey and white chocolate lead to lingering warm oak and honey.",
+   "source_url": "https://www.garrisonbros.com/our-babies/honeydew/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.garrisonbros.com/our-babies/honeydew/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-uncle-nearest-1884": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Honey, brown sugar, cedar, orange and pepper aromas; caramel, wood tannin, chocolate and cinnamon on the palate. Long cinnamon, dark chocolate and maple finish.",
+   "source_url": "https://unclenearest.com/1884-small-batch-whiskey/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46.5,
+   "proof": 93,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://unclenearest.com/1884-small-batch-whiskey/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-chicken-cock-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Oak and dried fruit accompany caramel and vanilla in the producer's standard straight bourbon.",
+   "source_url": "https://chickencockwhiskey.com/our-whiskey-copy/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://chickencockwhiskey.com/our-whiskey-copy/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-chicken-cock-wheated-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "A velvety texture carries cherry, cream soda and caramel, then baked dough, brown sugar, dried fruit and gentle baking spice.",
+   "source_url": "https://chickencockwhiskey.com/whiskey/wheated-bourbon/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://chickencockwhiskey.com/whiskey/wheated-bourbon/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-new-riff-8-year-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cherry and mint accompany dark berry, cedar and savory rye spice, with tannic oak balanced by a creamy finish.",
+   "source_url": "https://newriffdistilling.com/spirits/new-riff-8-year-old-bourbon/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://newriffdistilling.com/spirits/new-riff-8-year-old-bourbon/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-bowman-brothers-small-batch": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla, spice and oak in a triple-distilled Virginia bourbon.",
+   "source_url": "https://asmithbowman.com/bowman-brothers/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://asmithbowman.com/bowman-brothers/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-isaac-bowman-port-barrel-finished-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Jam-like fruit flavors with caramel and spice from a port-barrel finish.",
+   "source_url": "https://asmithbowman.com/isaac-bowman/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://asmithbowman.com/isaac-bowman/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-barrell-bourbon-foundation": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Honey and red fruit accompany cocoa, butter, maple and nuts, then cinnamon and vanilla with a full texture.",
+   "source_url": "https://www.barrellbourbon.com/foundation"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.barrellbourbon.com/foundation"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-old-forester-86-proof": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Citrus, tropical fruit, floral and pound cake aromas with clove and toasted oak. Citrus zest, ripe pear and mint lead to a spearmint, clove and warm oak finish.",
+   "source_url": "https://www.oldforester.com/products/old-forester-86-proof/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.oldforester.com/products/old-forester-86-proof/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-michter-s-us-1-sour-mash": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "A rich cinnamon entry with butter and almond notes, ending in pepper spice.",
+   "source_url": "https://michters.com/whiskeys/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://michters.com/whiskeys/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-j-rieger-straight-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Candied citrus and baked bread aromas lead to orange marmalade, pepper and toasted coconut; a long tobacco and toffee finish.",
+   "source_url": "https://www.jriegerco.com/our-spirits/bourbon"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jriegerco.com/our-spirits/bourbon"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-west-bottoms-kansas-city-whiskey": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Bourbon and rye blend with Oloroso sherry. Upfront spice, caramel and leather lead to a stone fruit finish.",
+   "source_url": "https://www.westbottomswhiskey.co/whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.westbottomswhiskey.co/whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-west-bottoms-convergence": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Rye and malt whiskeys finished in wine casks, with balanced spice, sweet malt and a dark fruit finish.",
+   "source_url": "https://www.westbottomswhiskey.co/whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 47.5,
+   "proof": 95,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.westbottomswhiskey.co/whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-murdock-s-opus": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "A blend of high rye bourbon, rye and Spanish sherries. Sherry fruit, bold rye spice and caramel oak lead to a long, warm finish.",
+   "source_url": "https://www.westbottomswhiskey.co/whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.westbottomswhiskey.co/whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-rebel-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Honey and butter aromas, raisin accents and a warm spicy finish.",
+   "source_url": "https://rebelbourbon.com/whiskey/kentucky-straight-bourbon/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://rebelbourbon.com/whiskey/kentucky-straight-bourbon/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-rebel-100": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Sweet aromas lead to bold caramel and vanilla, substantial tongue warmth and a dry finish.",
+   "source_url": "https://rebelbourbon.com/whiskey/100-proof-bourbon/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://rebelbourbon.com/whiskey/100-proof-bourbon/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-rebel-100-6-year": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Dark fruit, citrus and oak, with a velvety finish and a touch of spice.",
+   "source_url": "https://rebelbourbon.com/whiskey/rebel-100-aged-6-years/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://rebelbourbon.com/whiskey/rebel-100-aged-6-years/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-rebel-small-batch-reserve": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Honey-forward flavors with vanilla and caramel in a stronger wheated bourbon.",
+   "source_url": "https://rebelbourbon.com/whiskey/small-batch-reserve/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 55,
+   "proof": 110,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://rebelbourbon.com/whiskey/small-batch-reserve/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jim-beam-vanilla": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "A sweet vanilla liqueur with creamy texture, caramel and restrained oak beneath the bourbon character.",
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-vanilla"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-vanilla"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jim-beam-devil-s-cut": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Deep char and smoky aromas; a full body with intense oak and vanilla.",
+   "source_url": "https://www.jimbeam.com/en-us/bourbons/jim-beam-devils-cut"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/en-us/bourbons/jim-beam-devils-cut"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jim-beam-white-label": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla and caramel sweetness alongside grain and oak notes.",
+   "source_url": "https://www.jimbeam.com/en-au/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/en-au/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jim-beam-honey": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Floral honey sweetness over mellow bourbon, with woody aromas and a little vanilla.",
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-honey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-honey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jim-beam-pineapple": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Sweet pineapple liqueur meets caramel and vanilla bourbon notes, light oak and a warming finish.",
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-pineapple"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-pineapple"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jim-beam-red-stag": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Black cherry liqueur blended with Kentucky bourbon; a fruit-flavored whiskey rather than a straight bourbon.",
+   "source_url": "https://www.jimbeam.com/en-au/our-story/beam-history"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/en-au/our-story/beam-history"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-knob-creek-single-barrel-select": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Retailer-selected barrels mature in heavily charred white oak, contributing vanilla and caramel. Exact barrel age, proof and sensory character require the bottle's selection label.",
+   "source_url": "https://www.knobcreek.com/single-barrel-experience"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.knobcreek.com/single-barrel-experience"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jim-beam-peach": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Sweet ripe peach dominates, supported by vanilla and woody bourbon flavors.",
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-peach"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-peach"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jim-beam-apple": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Green apple leads this sweet whiskey liqueur, with light oak and bourbon warmth.",
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-apple"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-apple"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jim-beam-kentucky-fire": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cinnamon-flavored whiskey liqueur with a sweet, spicy character.",
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-kentucky-fire"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.jimbeam.com/bourbons/jim-beam-kentucky-fire"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-benchmark-old-no-8": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Caramel aromas with light stone fruit. Leather, dry tobacco, oak and dried cherry flavors with a gentle finish.",
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/benchmark/benchmark-old-no-8-brand/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.buffalotracedistillery.com/our-brands/benchmark/benchmark-old-no-8-brand/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-evan-williams-black-label": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla and mint aromas; caramel, brown sugar and oak on the palate with a moderately lasting finish.",
+   "source_url": "https://evanwilliams.com/ew-blacklabel"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 43,
+   "proof": 86,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://evanwilliams.com/ew-blacklabel"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-evan-williams-peach": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Sweet fresh peach aromas; peach, honey and caramel on the palate with a lasting soft sweetness.",
+   "source_url": "https://evanwilliams.com/family-of-bourbons"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://evanwilliams.com/family-of-bourbons"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-tx-blended-whiskey": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla bean and pear aromas with fig, honey butter, banana and caramel on the palate.",
+   "source_url": "https://shop-us.frdistilling.com/products/375ml-tx-blended-whiskey"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 41,
+   "proof": 82,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://shop-us.frdistilling.com/products/375ml-tx-blended-whiskey"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-tincup-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla and tobacco aromas, bold even spice, lingering caramel and a silky tannic texture.",
+   "source_url": "https://www.tincupwhiskey.com/tincup-rye/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.tincupwhiskey.com/tincup-rye/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jack-daniel-s-bonded-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Dried fruit opens into lingering toffee, with a balanced rye spice finish. Charcoal mellowed before aging in new American oak.",
+   "source_url": "https://pressroom.jackdaniels.com/jack-daniels-introduces-new-bottled-in-bond-rye-whiskey-as-permanent-extension-of-its-bonded-series/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://pressroom.jackdaniels.com/jack-daniels-introduces-new-bottled-in-bond-rye-whiskey-as-permanent-extension-of-its-bonded-series/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jack-daniel-s-triple-mash": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Honey, malt and gentle oak notes lead to a long, rounded finish. Blends bonded rye, Tennessee whiskey and American malt.",
+   "source_url": "https://pressroom.jackdaniels.com/jack-daniels-launches-first-super-premium-line-extension-in-25-years-jack-daniels-bonded-and-jack-daniels-triple-mash/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://pressroom.jackdaniels.com/jack-daniels-launches-first-super-premium-line-extension-in-25-years-jack-daniels-bonded-and-jack-daniels-triple-mash/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jack-daniel-s-single-barrel-select": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "A full-bodied single barrel whiskey emphasizing toasted oak, vanilla and caramel; individual barrels vary.",
+   "source_url": "https://pressroom.jackdaniels.com/products/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 47,
+   "proof": 94,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://pressroom.jackdaniels.com/products/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-gentleman-jack": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "A soft texture carries caramel, blackcurrant, mandarin, vanilla and smoke, ending gently after double charcoal mellowing.",
+   "source_url": "https://pressroom.jackdaniels.com/products/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://pressroom.jackdaniels.com/products/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jack-daniel-s-old-no-7": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "A balanced whiskey centered on caramel, vanilla and wood.",
+   "source_url": "https://pressroom.jackdaniels.com/products/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://pressroom.jackdaniels.com/products/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-wild-turkey-81": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla, pear and spice meet caramel, honey and orange, with lingering mild oak and dried fruit.",
+   "source_url": "https://www.wildturkeybourbon.com/en-us/products/wild-turkey-bourbon/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40.5,
+   "proof": 81,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.wildturkeybourbon.com/en-us/products/wild-turkey-bourbon/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-wyoming-whiskey-small-batch-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Floral vanilla and caramel pudding aromas. Baking spices, browned butter, vanilla cream and cinnamon; medium toffee, spice and vanilla finish.",
+   "source_url": "https://wyomingwhiskey.com/small-batch/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 44,
+   "proof": 88,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://wyomingwhiskey.com/small-batch/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-hirsch-the-horizon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Sweet cornbread and vanilla aromas, warm cinnamon and oak on a balanced palate, and lingering sweetness. Blend proportions vary by batch.",
+   "source_url": "https://hirschwhiskey.com/products/the-horizon"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://hirschwhiskey.com/products/the-horizon"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-five-trail": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Caramel, pecan, biscuit and anise aromas. Apple, white cherry, smoke, leather, sage, ginger and allspice; lingering oak and ginger finish.",
+   "source_url": "https://www.fivetrail.com/whiskey/flagship-blend"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.fivetrail.com/whiskey/flagship-blend"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-yellow-rose-outlaw-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Rich caramel and vanilla aromas with a floral hint; slightly sweet, very rich palate and a long caramel-vanilla finish.",
+   "source_url": "https://yellowrosedistilling.com/products/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://yellowrosedistilling.com/products/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-yellow-rose-premium-american-whiskey": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Light banana and caramel aromas, sweet banana flavor and a medium finish.",
+   "source_url": "https://yellowrosedistilling.com/products/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://yellowrosedistilling.com/products/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-remus-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla and maple aromas with sweetness balanced by characteristic rye spice.",
+   "source_url": "https://remusbourbon.com/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://remusbourbon.com/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-redwood-empire-lost-monarch": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Clove, cinnamon, vanilla and orange lead into butterscotch, maple and sandalwood with pepper afterward.",
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/small-batch-craft-whiskey-blend/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/small-batch-craft-whiskey-blend/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-redwood-empire-pipe-dream": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Maple, vanilla and honey introduce roasted pecan and lingering woody char, ending with pepper.",
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/pipe-dream-bourbon/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/pipe-dream-bourbon/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-redwood-empire-pipe-dream-cask-strength": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Toffee, cherry and leather lead into cherry-cola fruit, honey, butterscotch and pecan. Barrel-strength proof varies by release.",
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/pipe-dream-cask-strength-uncut-unfiltered/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/pipe-dream-cask-strength-uncut-unfiltered/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-redwood-empire-devil-s-tower": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The producer's current release emphasizes hay, licorice, eucalyptus and berry, then grapefruit pith, cardamom, mint and tobacco. Pictured batch is unresolved.",
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/devils-tower-high-rye-bourbon-whiskey/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://redwoodempirewhiskey.com/whiskey/devils-tower-high-rye-bourbon-whiskey/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-del-bac-classic": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Bright stone fruit aromas with a sweet caramel and oak finish. An American single malt made from barley in Arizona.",
+   "source_url": "https://whiskeydelbac.com/whiskey/classic/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://whiskeydelbac.com/whiskey/classic/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-del-bac-dorado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Tobacco and chocolate aromas, campfire embers, soft tannins and sweet toffee. Mesquite-smoked American single malt.",
+   "source_url": "https://whiskeydelbac.com/home-old/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 46,
+   "proof": 92,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://whiskeydelbac.com/home-old/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-la-adelita-extra-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Honey, heather, sassafras, marzipan and apricot accompany milk chocolate, white pepper and orange blossom.",
+   "source_url": "https://www.laadelitatequila.com/product-extra-anejo"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.laadelitatequila.com/product-extra-anejo"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-espolon-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Spiced caramel and vanilla accompany tropical fruit and roasted agave, with a medium-to-full texture and warm spice afterward.",
+   "source_url": "https://www.espolontequila.com/our-tequilas/tequila-reposado/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.espolontequila.com/our-tequilas/tequila-reposado/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-mijenta-blanco": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cooked agave, vanilla and caramel meet melon and peach; the rich palate adds fresh fruit and cinnamon.",
+   "source_url": "https://mijenta-tequila.com/products/mijenta-blanco"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://mijenta-tequila.com/products/mijenta-blanco"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-mijenta-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla, bergamot, honey and preserved fruit lead into cooked agave and cocoa with a generous finish.",
+   "source_url": "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-7041e940-bb7e-465c-85fc-a094cd344a71/8b7ce124-e110-427f-b579-84b4211639f2.pdf"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-7041e940-bb7e-465c-85fc-a094cd344a71/8b7ce124-e110-427f-b579-84b4211639f2.pdf"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-alma-del-jaguar-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla, honey, caramel and orange zest characterize the rested expression.",
+   "source_url": "https://almadeljaguar.com/collections/coleccion-cuadricula"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://almadeljaguar.com/collections/coleccion-cuadricula"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-alma-del-jaguar-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Banana, vanilla, cooked agave and oak define this blended oak-aged expression. Component lots add caramel corn, faint smoke and mineral notes; exact lot is unknown.",
+   "source_url": "https://almadeljaguar.com/products/alma-del-jaguar-anejo"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://almadeljaguar.com/products/alma-del-jaguar-anejo"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-don-julio-70-cristalino": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Charcoal-filtered aged tequila carries vanilla, honey and toasted oak, ending cleanly with warm, persistent wood.",
+   "source_url": "https://www.donjulio.com/es-mx/nuestros-tequilas/don-julio-70-cristalino-tequila"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.donjulio.com/es-mx/nuestros-tequilas/don-julio-70-cristalino-tequila"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-gran-centenario-plata": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Pear, lime and citrus accompany black pepper and restrained wood.",
+   "source_url": "https://grancentenario.com/our-tequilas/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://grancentenario.com/our-tequilas/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-gran-centenario-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Fruit and cooked agave accompany light oak, toasted almond, vanilla and clove.",
+   "source_url": "https://grancentenario.com/our-tequilas/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://grancentenario.com/our-tequilas/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-gran-centenario-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Toasted oak, chocolate, caramel and nuts form a soft, slightly sweet profile.",
+   "source_url": "https://grancentenario.com/our-tequilas/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://grancentenario.com/our-tequilas/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-818-blanco": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cooked agave, grass and white-flower aromas. Tropical and citrus fruit with mineral accents, medium body and a smooth floral-agave finish.",
+   "source_url": "https://drink818.com/products/818-blanco"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://drink818.com/products/818-blanco"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-818-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cooked agave, pecan and caramel aromas with apricot and sweet spice. Honey, almonds, toffee and dried fruit; medium body and a warm vanilla-pecan finish.",
+   "source_url": "https://drink818.com/products/818-reposado"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://drink818.com/products/818-reposado"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-818-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Sweet cooked agave, caramel, cocoa and toasted-nut aromas. Spiced vanilla, pecan and almond flavors with full body and a silky lasting finish.",
+   "source_url": "https://drink818.com/products/818-anejo"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://drink818.com/products/818-anejo"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-teremana-blanco": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The producer emphasizes bright citrus and a fresh finish.",
+   "source_url": "https://teremana.com/pages/tequila"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://teremana.com/pages/tequila"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-teremana-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Warm oak and vanilla complement roasted agave with a lightly sweet finish.",
+   "source_url": "https://teremana.com/pages/tequila"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://teremana.com/pages/tequila"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-don-julio-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Lemon, spice and stone fruit lead into dark chocolate, vanilla and cinnamon, then a silky warm finish of dried fruit, nuts and caramel apple.",
+   "source_url": "https://www.donjulio.com/our-tequilas/don-julio-reposado-tequila"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.donjulio.com/our-tequilas/don-julio-reposado-tequila"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-don-julio-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Citrus and caramel lead into a full texture with cooked agave, honey and oaky butterscotch; mild spice persists afterward.",
+   "source_url": "https://www.donjulio.com/our-tequilas/don-julio-anejo-tequila"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.donjulio.com/our-tequilas/don-julio-anejo-tequila"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-casamigos-blanco": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Fresh citrus, sweet agave and mild vanilla define this unaged tequila.",
+   "source_url": "https://www.casamigos.com/en-us/our-tequilas"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.casamigos.com/en-us/our-tequilas"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-casamigos-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Twelve months in American oak contributes caramel and vanilla around sweet agave, restrained spice and wood.",
+   "source_url": "https://www.casamigos.com/en-us/our-tequilas"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.casamigos.com/en-us/our-tequilas"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-casamigos-cristalino": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Charcoal-filtered reposado combines oaky vanilla, dried fig and raisin with a silky texture.",
+   "source_url": "https://www.casamigos.com/en-us/our-tequilas"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.casamigos.com/en-us/our-tequilas"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-casamigos-mezcal": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Espadin mezcal combines smoke, tamarind and pomegranate with herbs, pepper and a long silky finish.",
+   "source_url": "https://www.casamigos.com/en-us/our-tequilas"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.casamigos.com/en-us/our-tequilas"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-patron-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cooked agave, honey, vanilla and tropical fruit are balanced by restrained oak from at least four months of maturation.",
+   "source_url": "https://www.patrontequila.com/products/patron-reposado.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.patrontequila.com/products/patron-reposado.html"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-patron-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cooked agave, vanilla and caramel lead into a rich, velvety combination of oak, chocolate and spice, ending with persistent sweet wood.",
+   "source_url": "https://www.patrontequila.com/products/patron-anejo.html"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.patrontequila.com/products/patron-anejo.html"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-1800-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Agave and oak accompany caramel, mild spice and restrained smoke, ending with orange peel, pepper and almond sweetness.",
+   "source_url": "https://www.1800tequila.com/products/reposado"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.1800tequila.com/products/reposado"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-1800-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Oaky vanilla leads into nuts and toffee with peppery spice afterward.",
+   "source_url": "https://www.1800tequila.com/products/anejo"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.1800tequila.com/products/anejo"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-1800-silver": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "The producer's current Blanco expression has fruit and pepper, including sweet prune and roasted pepper, with a medium body and finish. The photographed older Silver label may differ.",
+   "source_url": "https://www.1800tequila.com/products/blanco"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.1800tequila.com/products/blanco"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-1800-coconut": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "A flavored tequila with tropical, sweet agave aromas and a medium texture, ending with lingering coconut sweetness.",
+   "source_url": "https://www.1800tequila.com/products/coconut"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 35,
+   "proof": 70,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.1800tequila.com/products/coconut"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-el-mayor-blanco": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Floral and pepper notes frame clean agave; a light texture ends dry with gentle warmth.",
+   "source_url": "https://elmayor.com/blanco/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://elmayor.com/blanco/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-el-mayor-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Fruit, vanilla and caramel accompany perfumed agave and gentle spice, with a medium body and balanced finish.",
+   "source_url": "https://elmayor.com/reposado/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://elmayor.com/reposado/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-el-mayor-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Caramel, sweet fruit and restrained oak lead into grilled tropical fruit and baking spice, with a medium-to-full texture.",
+   "source_url": "https://elmayor.com/anejo/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://elmayor.com/anejo/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-el-mayor-cristalino": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Filtered aged tequila retains oak, dried fruit and vanilla, ending with herbal and citrus notes.",
+   "source_url": "https://elmayor.com/lets-be-clear-el-mayor-cristalino-is-here-3/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://elmayor.com/lets-be-clear-el-mayor-cristalino-is-here-3/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-el-mayor-rose": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Rosado Reposado: lightly sweet berry aromas and gentle spice. Medium-bodied, relatively dry palate with dried fruit, toasted agave and nutty vanilla, ending in spiced fruit.",
+   "source_url": "https://elmayor.com/rosado-reposado/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://elmayor.com/rosado-reposado/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-corralejo-blanco": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Peppercorn and mint aromas, sweet spearmint and agave flavors, with a light, crisp finish.",
+   "source_url": "https://corralejotequila.com/products/corralejo-silver"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://corralejotequila.com/products/corralejo-silver"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-corralejo-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cooked agave with grapefruit and lime aromas. Gentle citrus flavors lead to persistent wood and vanilla notes.",
+   "source_url": "https://casacorralejo.com/products/tequila-corralejo-reposado"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://casacorralejo.com/products/tequila-corralejo-reposado"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-corralejo-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Oak, cocoa, vanilla and pepper aromas; caramel, wood, white pepper and cardamom flavors with a full-bodied finish.",
+   "source_url": "https://corralejotequila.com/products/corralejo-anejo"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://corralejotequila.com/products/corralejo-anejo"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jose-cuervo-especial-silver": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Fresh, clean agave aromas and subtle agave flavor; crisp palate with a warm finish.",
+   "source_url": "https://cuervo.com/products/especial-silver/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://cuervo.com/products/especial-silver/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jose-cuervo-especial-gold": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Sweet agave aromas and flavor with hints of oak and vanilla; a short, smooth finish.",
+   "source_url": "https://cuervo.com/products/especial-gold/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://cuervo.com/products/especial-gold/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jose-cuervo-tradicional-plata": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Herbaceous agave and citrus aromas; sweet fruit and spice balance on the palate, with a refreshing finish.",
+   "source_url": "https://cuervo.com/products/tradicional-blanco/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://cuervo.com/products/tradicional-blanco/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-jose-cuervo-tradicional-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Herbaceous agave, vanilla, caramel and toasted oak aromas. Cooked agave and stewed tropical fruit with clove, cinnamon and toffee; a warm spicy finish.",
+   "source_url": "https://cuervo.com/products/tradicional-reposado/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://cuervo.com/products/tradicional-reposado/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-tromba-blanco": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Fresh agave, citrus, green apple and mint aromas. Pepper, mint and caramelized pineapple lead to a clean, refreshing mineral finish.",
+   "source_url": "https://www.tequilatromba.com/products/blanco-tequila"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.tequilatromba.com/products/blanco-tequila"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-herradura-silver": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Crisp, agave-led flavor with hints of vanilla from 45 days of barrel aging.",
+   "source_url": "https://www.herradura.com/our-products/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.herradura.com/our-products/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-herradura-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Slow-roasted agave, aged wood, toasted almond and spices; barrel aged for 25 months.",
+   "source_url": "https://www.herradura.com/our-products/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.herradura.com/our-products/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-pantalones-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Cooked agave and vanilla with a gentle oak accent, after nine months in American whiskey barrels.",
+   "source_url": "https://pantalonestequila.com/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://pantalonestequila.com/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-pantalones-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla, butterscotch and brown sugar with a velvety finish, following fifteen months in American oak.",
+   "source_url": "https://pantalonestequila.com/products/pantalones-tequila-anejo"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://pantalonestequila.com/products/pantalones-tequila-anejo"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-tanteo-habanero": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Mango, passion fruit and pineapple aromas with agave sweetness. Intense habanero heat builds through the palate into a long pepper burn.",
+   "source_url": "https://tanteotequila.com/products/habanero"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://tanteotequila.com/products/habanero"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-tanteo-jalapeno": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Green pepper, minerals and faint agave sweetness. Jalapeño, cucumber, peas and honeysuckle with spicy heat; medium zesty finish.",
+   "source_url": "https://tanteotequila.com/products/jalapeno"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://tanteotequila.com/products/jalapeno"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-camarena-silver": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Herbal and citrus aromas with sweet vanilla flavors. Gentle warmth, baking spices and black pepper on the finish.",
+   "source_url": "https://www.tequilacamarena.com/our-tequila/silver/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.tequilacamarena.com/our-tequila/silver/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-camarena-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Toasted agave sweetness with mild spice, sweet potato and fruit hints; soft vanilla and caramel linger.",
+   "source_url": "https://www.tequilacamarena.com/our-tequila/reposado/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.tequilacamarena.com/our-tequila/reposado/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-el-jimador-blanco": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Crisp citrus, herbal undertones and a hint of spice in this unaged agave tequila.",
+   "source_url": "https://www.eljimador.com/en-us/product/silver/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.eljimador.com/en-us/product/silver/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-el-jimador-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Bright agave, American oak, vanilla, a hint of caramel and spices; rested two months.",
+   "source_url": "https://www.eljimador.com/product/reposado/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.eljimador.com/product/reposado/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-cabo-wabo-blanco": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Bold unaged agave character with a spicy kick and a clean finish.",
+   "source_url": "https://www.cabowabo.com/tequilas/blanco/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.cabowabo.com/tequilas/blanco/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-cabo-wabo-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Citrus aromas, fruit flavors and lingering peppery spice.",
+   "source_url": "https://www.cabowabo.com/tequilas/reposado/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.cabowabo.com/tequilas/reposado/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-del-maguey-vida-clasico": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Mango and tangerine with roasted agave, ginger, cinnamon and charred sandalwood notes.",
+   "source_url": "https://delmaguey.com/wp-content/uploads/2024/01/VIDA_Clasico_NewBA_Sell_sheet_Del_Maguey.pdf"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 42,
+   "proof": 84,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://delmaguey.com/wp-content/uploads/2024/01/VIDA_Clasico_NewBA_Sell_sheet_Del_Maguey.pdf"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-del-maguey-vida-puebla": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Roasted agave with citrus, white peach and candied-pine notes.",
+   "source_url": "https://delmaguey.com/wp-content/uploads/2024/01/VIDA_Puebla_NewBA_Sell_sheet_Del_Maguey.pdf"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://delmaguey.com/wp-content/uploads/2024/01/VIDA_Puebla_NewBA_Sell_sheet_Del_Maguey.pdf"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-milagro-silver": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Fresh, bright agave character in an unaged tequila.",
+   "source_url": "https://milagrotequila.com/our-tequilas"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://milagrotequila.com/our-tequilas"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-milagro-reposado": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Caramel and vanilla from American oak, ending with a restrained spicy note.",
+   "source_url": "https://milagrotequila.com/our-tequilas"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://milagrotequila.com/our-tequilas"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-milagro-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "An agave-led tequila matured fourteen months in American oak; producer describes a refined, smooth character.",
+   "source_url": "https://milagrotequila.com/our-tequilas"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://milagrotequila.com/our-tequilas"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-milagro-cristalino": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Charcoal-filtered añejo matured in French and American oak for eighteen to twenty-four months. Producer describes depth and a clear appearance; detailed sensory notes are unavailable.",
+   "source_url": "https://milagrotequila.com/our-tequilas"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://milagrotequila.com/our-tequilas"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-cabo-wabo-anejo": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Vanilla aromas with honey accents in a richer, American-oak-aged tequila.",
+   "source_url": "https://www.cabowabo.com/tequilas/anejo/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.cabowabo.com/tequilas/anejo/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-chicken-cock-kentucky-straight-rye": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Apple, citrus and toasted oak accompany pear, vanilla, spearmint and pepper; a buttery texture ends with persistent spice and honey.",
+   "source_url": "https://chickencockwhiskey.com/whiskey/kentucky-straight-rye-whiskey/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 45,
+   "proof": 90,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://chickencockwhiskey.com/whiskey/kentucky-straight-rye-whiskey/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-joseph-magnus-bourbon": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Rich flavors of orange citrus, dried dark fruit and vanilla; the bourbon is finished in sherry and cognac casks.",
+   "source_url": "https://josephmagnus.com/spirits/joseph-magnus-bourbon/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 50,
+   "proof": 100,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://josephmagnus.com/spirits/joseph-magnus-bourbon/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-murray-hill-club": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Toasty, buttery vanilla and char with spiced dried fruit. Butterscotch, honey, toffee and baking spice lead to a softly toasted, peppery finish.",
+   "source_url": "https://josephmagnus.com/spirits/murray-hill-club/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 51.5,
+   "proof": 103,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://josephmagnus.com/spirits/murray-hill-club/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-el-mayor-cafe": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Earthy and floral aromas with coffee and vanilla; silky cooked-agave flavors, mineral accents and a soft roasted-coffee finish.",
+   "source_url": "https://elmayor.com/cafe/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": 40,
+   "proof": 80,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://elmayor.com/cafe/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-casa-dragones-blanco": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Herbal aromas with grapefruit and green apple. Light agave sweetness, pepper and clove, with a fresh almond finish.",
+   "source_url": "https://www.casadragones.com.mx/tequila/casa-dragones-blanco"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://www.casadragones.com.mx/tequila/casa-dragones-blanco"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
+ },
+ "photo-casa-dragones-joven": {
+  "producer": {
+   "nose": null,
+   "palate": null,
+   "finish": null,
+   "summary": "Floral and citrus aromas with cooked agave. Gentle vanilla, spice and pear flavors; silky body and a clean, warm hazelnut finish.",
+   "source_url": "https://casadragones.com.mx/tequila/casa-dragones-joven/"
+  },
+  "critics": [],
+  "facts": {
+   "abv": null,
+   "proof": null,
+   "age": null,
+   "mash_bill": null,
+   "cask": null,
+   "region": null,
+   "source_url": "https://casadragones.com.mx/tequila/casa-dragones-joven/"
+  },
+  "flavor_terms": [],
+  "confidence": "medium",
+  "notes": "Producer expression profile; photographed batch and barrel are not established. Researched 2026-10-09."
  }
 }

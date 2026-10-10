@@ -22,7 +22,8 @@ const readJson = (rel, fallback) => {
 
 export function selectionIds() {
   return [...new Set([...readJson("data/kansas/research-selection.json", []),
-    ...readJson("data/photo-bourbon-selection.json", [])].map((s) => s.id))];
+    ...readJson("data/photo-bourbon-selection.json", []),
+    ...readJson("data/photo-research-selection.json", [])].map((s) => s.id))];
 }
 
 const COUNTRY = {
@@ -78,19 +79,19 @@ export function catalogAdditions() {
 export function fullCatalog() {
   const records = new Map([...RESEARCH_CATALOG, ...catalogAdditions()].map((r) => [r.id, r]));
   const notes = readJson("data/expert-notes.json", {});
-  for (const sel of readJson("data/photo-bourbon-selection.json", [])) {
+  for (const sel of [...readJson("data/photo-bourbon-selection.json", []), ...readJson("data/photo-research-selection.json", [])]) {
     const expert = notes[sel.id];
     const facts = expert?.facts || {};
     const existing = records.get(sel.id);
     // Photo presence establishes neither ownership nor Kansas registration.
     const rec = existing || {
       id: sel.id, name: sel.name, producer: sel.brand, category: sel.category,
-      country: "USA", region: facts.region || null, subcategory: facts.cask || null,
+      country: COUNTRY[sel.category] || null, region: facts.region || null, subcategory: facts.cask || null,
       proof: facts.proof ?? null, abv: facts.abv ?? null,
       age_statement: facts.age || null, mash_bill: facts.mash_bill || null,
       ratings: {}, research: {}, typical_price_usd: {}, regional_availability: {},
       recommendation: { recommended: false }, image: {},
-      last_verified: "2026-10-07", data_source: "photo_research"
+      last_verified: sel.reviewed_on || "2026-10-07", data_source: "photo_research"
     };
     records.set(sel.id, {
       ...rec,
@@ -106,7 +107,7 @@ export function fullCatalog() {
         profile_source: rec.tasting_profile?.profile_source || "cited_notes",
         summary_source: "cited_notes"
       } : rec.tasting_profile,
-      photo_reference: { photos: sel.photos, identification: sel.identification, batch_confirmed: false }
+      photo_reference: { photos: [...new Set([...(existing?.photo_reference?.photos || []), ...sel.photos])].sort((a,b)=>a-b), identification: sel.identification, batch_confirmed: false }
     });
   }
   for (const [id, profile] of Object.entries(readJson("data/flavor-profiles/local-store.json", {}))) {

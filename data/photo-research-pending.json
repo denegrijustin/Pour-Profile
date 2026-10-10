@@ -1,0 +1,2075 @@
+{
+  "reviewed_on": "2026-10-09",
+  "candidates": [
+    {
+      "label_name": "15 Stars First West Rye",
+      "type": "rye whiskey",
+      "photos": [
+        1
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Duke Double Barrel Founder's Reserve",
+      "type": "whiskey",
+      "photos": [
+        1
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Deadwood Tumblin' Dice Rye",
+      "type": "rye whiskey",
+      "photos": [
+        1
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Templeton Rye 4 Year",
+      "type": "rye whiskey",
+      "photos": [
+        1,
+        2
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Middle West Dark Pumpernickel Rye",
+      "type": "rye whiskey",
+      "photos": [
+        1
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Brother's Bond Rye",
+      "type": "rye whiskey",
+      "photos": [
+        1,
+        2
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Still Austin Smog & Old Moss Rye",
+      "type": "rye whiskey",
+      "photos": [
+        1,
+        2
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "label_corrected_from_visual_review",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Old Carter Bourbon",
+      "type": "bourbon",
+      "photos": [
+        2,
+        3
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Bardstown Origin Double Barreled Rye",
+      "type": "rye whiskey",
+      "photos": [
+        2
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "H.K. Young Wheated Bourbon",
+      "type": "bourbon",
+      "photos": [
+        2,
+        3,
+        4
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "H.K. Young Single Barrel Bourbon",
+      "type": "bourbon",
+      "photos": [
+        2,
+        3,
+        4
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "H.K. Young Barrel Strength Bourbon",
+      "type": "bourbon",
+      "photos": [
+        3,
+        4
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "H.K. Young Toasted Bourbon",
+      "type": "bourbon",
+      "photos": [
+        3,
+        4
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "19th Hole Bourbon",
+      "type": "bourbon",
+      "photos": [
+        2
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Green River Full Proof Bourbon",
+      "type": "bourbon",
+      "photos": [
+        3,
+        4
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Malone's Texas Rye",
+      "type": "rye whiskey",
+      "photos": [
+        2
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Ballotin Whiskey",
+      "type": "flavored whiskey",
+      "photos": [
+        2
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Old Overholt 114 Proof Rye",
+      "type": "rye whiskey",
+      "photos": [
+        2,
+        3,
+        4
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "George Dickel Leopold Bros Collaboration Rye",
+      "type": "rye whiskey",
+      "photos": [
+        2,
+        3,
+        4
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Old Fitzgerald 7 Year Bottled-in-Bond",
+      "type": "bourbon",
+      "photos": [
+        3,
+        4
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Buzzard's Roost Bottled-in-Bond Double Oak Rye",
+      "type": "rye whiskey",
+      "photos": [
+        3,
+        4
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Buzzard's Roost Cigar Rye",
+      "type": "finished rye whiskey",
+      "photos": [
+        3,
+        4
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Amador Double Barrel Bourbon",
+      "type": "finished bourbon",
+      "photos": [
+        3,
+        4
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Amador Whiskey Co Chardonnay Barrel Finish",
+      "type": "finished bourbon",
+      "photos": [
+        3,
+        4
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Jefferson's Bourbon",
+      "type": "bourbon",
+      "photos": [
+        4,
+        5
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "George Dickel No. 8",
+      "type": "Tennessee whiskey",
+      "photos": [
+        4
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Old Elk Straight Wheat Whiskey",
+      "type": "wheat whiskey",
+      "photos": [
+        5
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Old Elk Straight Rye",
+      "type": "rye whiskey",
+      "photos": [
+        5
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Old Elk Bottled-in-Bond Bourbon",
+      "type": "bourbon",
+      "photos": [
+        5
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Barrell Bourbon",
+      "type": "bourbon",
+      "photos": [
+        5,
+        6
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "High West Campfire",
+      "type": "blended whiskey",
+      "photos": [
+        6,
+        7,
+        15,
+        16
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "High West High Country",
+      "type": "American single malt",
+      "photos": [
+        6,
+        7
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Yellowstone Toasted",
+      "type": "bourbon",
+      "photos": [
+        6
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Yellowstone Special Finishes",
+      "type": "finished bourbon",
+      "photos": [
+        6
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Yellowstone Hand Picked Collection",
+      "type": "bourbon",
+      "photos": [
+        6
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Duck Club Bourbon",
+      "type": "bourbon",
+      "photos": [
+        5,
+        6
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Henry McKenna Bourbon",
+      "type": "bourbon",
+      "photos": [
+        6,
+        7,
+        8
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "2XO American Oak",
+      "type": "bourbon",
+      "photos": [
+        6,
+        7
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "2XO French Oak",
+      "type": "bourbon",
+      "photos": [
+        6,
+        7
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Moonlight Mayhem",
+      "type": "bourbon",
+      "photos": [
+        6,
+        7
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Moonlight Mayhem Cask Strength",
+      "type": "bourbon",
+      "photos": [
+        6,
+        7
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Moonlight Mayhem Extended Cask Strength",
+      "type": "bourbon",
+      "photos": [
+        6,
+        7
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Carmen 1873",
+      "type": "bourbon",
+      "photos": [
+        6,
+        7
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Monogram Whiskey",
+      "type": "American whiskey",
+      "photos": [
+        8,
+        9
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "West Bottoms Malted Rye",
+      "type": "American whiskey",
+      "photos": [
+        8,
+        9
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "label_corrected_from_visual_review"
+    },
+    {
+      "label_name": "Baldwin City Royals Whiskey with Wheat",
+      "type": "American whiskey",
+      "photos": [
+        8,
+        9,
+        10
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Gunnar's Wheated Bourbon",
+      "type": "bourbon",
+      "photos": [
+        8,
+        9,
+        10
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Gunnar's Wheated Bourbon Barrel Proof",
+      "type": "bourbon",
+      "photos": [
+        9,
+        10
+      ],
+      "identification": "label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Jim Beam J.E. Schuster",
+      "type": "bourbon",
+      "photos": [
+        10,
+        11,
+        12
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Ironroot Harbinger",
+      "type": "bourbon",
+      "photos": [
+        10
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Ironroot Esoteric",
+      "type": "American whiskey",
+      "photos": [
+        10
+      ],
+      "identification": "needs_expression_review",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Bulleit Barrel Strength Bourbon",
+      "type": "bourbon",
+      "photos": [
+        11,
+        12,
+        13
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Seagram's 7 Crown",
+      "type": "blended American whiskey",
+      "photos": [
+        11,
+        12,
+        13
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Southern Comfort",
+      "type": "whiskey liqueur",
+      "photos": [
+        12,
+        13
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Ancient Age",
+      "type": "bourbon",
+      "photos": [
+        12,
+        13
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Evan Williams Green Label",
+      "type": "bourbon",
+      "photos": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Kentucky Gentleman",
+      "type": "whiskey blend",
+      "photos": [
+        16,
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Early Times",
+      "type": "whiskey",
+      "photos": [
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Cardinal Spirits Straight Bourbon",
+      "type": "bourbon",
+      "photos": [
+        13,
+        14
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Maker's Mark Private Selection",
+      "type": "finished bourbon",
+      "photos": [
+        15,
+        16
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "TX Straight Bourbon",
+      "type": "bourbon",
+      "photos": [
+        13,
+        14,
+        15
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Tincup American Whiskey",
+      "type": "American whiskey",
+      "photos": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "True North Bourbon",
+      "type": "bourbon",
+      "photos": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Jack Daniel's Tennessee Travelers Bold & Spicy",
+      "type": "Tennessee whiskey",
+      "photos": [
+        16,
+        17
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Heaven's Door Tennessee Straight Bourbon",
+      "type": "bourbon",
+      "photos": [
+        15,
+        16
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Heaven's Door Exploration",
+      "type": "whiskey",
+      "photos": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Heaven's Door Double Barrel Whiskey",
+      "type": "blended whiskey",
+      "photos": [
+        16,
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Heaven's Door Straight Rye",
+      "type": "rye whiskey",
+      "photos": [
+        16,
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Heaven's Door Revival",
+      "type": "bourbon",
+      "photos": [
+        16,
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Broken Barrel Small Batch Bourbon",
+      "type": "bourbon",
+      "photos": [
+        16,
+        17
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Broken Barrel Cask Strength Bourbon",
+      "type": "bourbon",
+      "photos": [
+        16,
+        17
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Herd & Bear Bourbon",
+      "type": "bourbon",
+      "photos": [
+        16,
+        17
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Doc Swinson's Alter Ego",
+      "type": "bourbon",
+      "photos": [
+        16,
+        17
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Savage & Cooke Lip Service Rye",
+      "type": "rye whiskey",
+      "photos": [
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Savage & Cooke American Whiskey",
+      "type": "American whiskey",
+      "photos": [
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Montana Whiskey Co. Bourbon",
+      "type": "bourbon",
+      "photos": [
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Remus Highest Rye",
+      "type": "bourbon",
+      "photos": [
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Ben Holladay One Barrel Bourbon",
+      "type": "bourbon",
+      "photos": [
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Old Bardstown Estate Bottled",
+      "type": "bourbon",
+      "photos": [
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Very Old Barton",
+      "type": "bourbon",
+      "photos": [
+        17,
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Redwood Empire Grizzly Beast",
+      "type": "bourbon",
+      "photos": [
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "George Remus Gatsby Reserve",
+      "type": "bourbon",
+      "photos": [
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Daviess County Bourbon",
+      "type": "bourbon",
+      "photos": [
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Revelton Whiskey",
+      "type": "whiskey",
+      "photos": [
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "McCormick Blended Whiskey",
+      "type": "blended whiskey",
+      "photos": [
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Ten High",
+      "type": "whiskey",
+      "photos": [
+        18
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Casa Azul Reposado",
+      "type": "tequila",
+      "photos": [
+        19
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Casa Azul A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        19
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Flecha Azul A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        19
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Espol\u00f2n A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        20
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Espol\u00f2n Cristalino",
+      "type": "tequila",
+      "photos": [
+        20
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Tapatio A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        19
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "TC Craft Blanco",
+      "type": "tequila",
+      "photos": [
+        19,
+        20
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "TC Craft Reposado",
+      "type": "tequila",
+      "photos": [
+        19,
+        20
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Yeyo Blanco",
+      "type": "tequila",
+      "photos": [
+        19,
+        20
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Tres Agaves Reposado",
+      "type": "tequila",
+      "photos": [
+        20,
+        29
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Tres Agaves A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        20,
+        29
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Avi\u00f3n Reposado",
+      "type": "tequila",
+      "photos": [
+        19,
+        20
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Avi\u00f3n A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        19,
+        20
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Arette Reposado",
+      "type": "tequila",
+      "photos": [
+        24
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Don Fulano Blanco",
+      "type": "tequila",
+      "photos": [
+        24,
+        25
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Don Fulano Reposado",
+      "type": "tequila",
+      "photos": [
+        24,
+        25
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Don Fulano A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        24,
+        25
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Cazcanes Blanco",
+      "type": "tequila",
+      "photos": [
+        25,
+        26
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "label_corrected_from_visual_review",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Cazcanes Reposado",
+      "type": "tequila",
+      "photos": [
+        25,
+        26
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "label_corrected_from_visual_review",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Cazcanes A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        25,
+        26
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "label_corrected_from_visual_review",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Primo Blanco",
+      "type": "tequila",
+      "photos": [
+        25
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Primo Reposado",
+      "type": "tequila",
+      "photos": [
+        25
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "El Buho Blanco",
+      "type": "tequila",
+      "photos": [
+        26
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "El Buho Reposado",
+      "type": "tequila",
+      "photos": [
+        26
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "El Buho A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        26
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Cambio Blanco",
+      "type": "tequila",
+      "photos": [
+        26
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Patr\u00f3n XO Cafe",
+      "type": "coffee liqueur",
+      "photos": [
+        27
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Patr\u00f3n El Cielo",
+      "type": "tequila",
+      "photos": [
+        27,
+        28
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Patr\u00f3n El Alto",
+      "type": "tequila",
+      "photos": [
+        27
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Corralejo Extra A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        28
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Astral Blanco",
+      "type": "tequila",
+      "photos": [
+        28
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Astral Reposado",
+      "type": "tequila",
+      "photos": [
+        28
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Astral A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        28
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Tres Agaves Blanco",
+      "type": "tequila",
+      "photos": [
+        29
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "El Jimador A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        30
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Olmeca Altos Plata",
+      "type": "tequila",
+      "photos": [
+        30
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Olmeca Altos Reposado",
+      "type": "tequila",
+      "photos": [
+        30
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Sauza Silver",
+      "type": "tequila",
+      "photos": [
+        30,
+        32,
+        33
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Sauza Gold",
+      "type": "tequila",
+      "photos": [
+        30
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Del Maguey mezcal, blue-label variant",
+      "type": "mezcal",
+      "photos": [
+        31,
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "La Pulga mezcal",
+      "type": "mezcal",
+      "photos": [
+        31,
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Amaras Espadin",
+      "type": "mezcal",
+      "photos": [
+        31,
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Amaras Cupreata",
+      "type": "mezcal",
+      "photos": [
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Ocho Plata",
+      "type": "tequila",
+      "photos": [
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "Ocho Reposado",
+      "type": "tequila",
+      "photos": [
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "C\u00f3digo 1530 Blanco",
+      "type": "tequila",
+      "photos": [
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "C\u00f3digo 1530 Reposado",
+      "type": "tequila",
+      "photos": [
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "C\u00f3digo 1530 A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "transcribed_from_photo; research_and_catalog_matching_pending"
+    },
+    {
+      "label_name": "G4 Blanco High Proof",
+      "type": "tequila",
+      "photos": [
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Tres Generaciones Reposado",
+      "type": "tequila",
+      "photos": [
+        31,
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Tres Generaciones A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        31,
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "LALO Blanco",
+      "type": "tequila",
+      "photos": [
+        32,
+        33
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Don Nacho Blanco",
+      "type": "tequila",
+      "photos": [
+        33
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Don Nacho Reposado",
+      "type": "tequila",
+      "photos": [
+        33
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Don Nacho A\u00f1ejo",
+      "type": "tequila",
+      "photos": [
+        33
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Don Nacho Extra Premium",
+      "type": "tequila",
+      "photos": [
+        33
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Don Ram\u00f3n, boxed expression",
+      "type": "tequila",
+      "photos": [
+        33
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Casa Noble Blanco",
+      "type": "tequila",
+      "photos": [
+        32,
+        33
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Casa Noble Reposado",
+      "type": "tequila",
+      "photos": [
+        32,
+        33
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Bandero Blanco",
+      "type": "tequila",
+      "photos": [
+        31,
+        32
+      ],
+      "identification": "draft_label_transcription",
+      "research_status": "not_researched_in_this_batch",
+      "catalog_id": null,
+      "recommendation_eligible": false,
+      "audit_status": "hold_exact_expression_or_identity",
+      "reason": "Exact expression or release is not established from the photo."
+    },
+    {
+      "label_name": "Eagle Porker 8 Year Rye",
+      "photos": [
+        1
+      ],
+      "audit_status": "additional_label_read_from_photo",
+      "catalog_id": null,
+      "research_status": "pending",
+      "recommendation_eligible": false
+    },
+    {
+      "label_name": "ArteNOM Selecci\u00f3n 1579 Blanco",
+      "photos": [
+        19,
+        20
+      ],
+      "audit_status": "additional_label_read_from_photo",
+      "catalog_id": null,
+      "research_status": "pending",
+      "recommendation_eligible": false
+    },
+    {
+      "label_name": "ArteNOM Selecci\u00f3n 1414 Reposado",
+      "photos": [
+        19,
+        20
+      ],
+      "audit_status": "additional_label_read_from_photo",
+      "catalog_id": null,
+      "research_status": "pending",
+      "recommendation_eligible": false
+    },
+    {
+      "label_name": "ArteNOM Selecci\u00f3n 1146 A\u00f1ejo",
+      "photos": [
+        19,
+        20
+      ],
+      "audit_status": "additional_label_read_from_photo",
+      "catalog_id": null,
+      "research_status": "pending",
+      "recommendation_eligible": false
+    },
+    {
+      "label_name": "Amatite\u00f1a Blanco",
+      "photos": [
+        19,
+        20
+      ],
+      "audit_status": "additional_label_read_from_photo",
+      "catalog_id": null,
+      "research_status": "pending",
+      "recommendation_eligible": false
+    },
+    {
+      "label_name": "G4 Madera Blanco",
+      "photos": [
+        32
+      ],
+      "audit_status": "additional_label_read_from_photo",
+      "catalog_id": null,
+      "research_status": "pending",
+      "recommendation_eligible": false
+    },
+    {
+      "label_name": "Casa Dragones Reposado",
+      "photos": [
+        19
+      ],
+      "audit_status": "additional_label_read_from_photo",
+      "catalog_id": null,
+      "research_status": "pending",
+      "recommendation_eligible": false
+    }
+  ],
+  "clarifications": [
+    {
+      "id": "Q1",
+      "subject": "Barrell releases",
+      "location": "First upload, Photo 5, top shelf",
+      "question": "Which expressions are the blue and pale-yellow labels? Batch numbers are optional; the release names matter.",
+      "crop": "05-barrell-labels.jpg"
+    },
+    {
+      "id": "Q2",
+      "subject": "Four Gate and Good Times",
+      "location": "Second upload, Photos 2\u20133, top shelf",
+      "question": "Can you identify the Four Gate releases and the finishes on the three Good Times bottles?",
+      "crop": "12-row-1.jpg"
+    },
+    {
+      "id": "Q3",
+      "subject": "Moonlight Mayhem neighbors",
+      "location": "First upload, Photo 6, third shelf, right side",
+      "question": "What are the names of the illustrated bottles beside the two 2XO bottles? The middle label differs from the others.",
+      "crop": "06-row-3.jpg"
+    },
+    {
+      "id": "Q4",
+      "subject": "Unclear premium bourbon labels",
+      "location": "Second upload, Photo 1, top shelf",
+      "question": "What are the purple decanter and the tall black/maroon bottles next to Black Ridge?",
+      "crop": "11-row-1.jpg"
+    },
+    {
+      "id": "Q5",
+      "subject": "Mezcal expressions",
+      "location": "Fourth upload, Photo 1, top visible full shelf",
+      "question": "What is the blue-label Del Maguey expression, and the names/expressions on the four bottles immediately to its right?",
+      "crop": "31-row-2.jpg"
+    },
+    {
+      "id": "Q6",
+      "subject": "Premium tequila / blurred labels",
+      "location": "Third upload, Photo 2, top shelf",
+      "question": "Can you confirm the illustrated-face bottles and the numbered expressions on the Cazcanes bottles?",
+      "crop": "25-row-2.jpg"
+    }
+  ]
+}

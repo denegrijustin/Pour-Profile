@@ -10,8 +10,8 @@ const all=fullCatalog();
 test('photo research uses canonical records without duplicating bourbon expressions',()=>{
  assert.equal(selection.length,24);
  assert.equal(new Set(all.map(r=>r.id)).size,all.length);
- for(const s of selection){const r=all.find(r=>r.id===s.id);assert.ok(r,s.id);assert.deepEqual(r.photo_reference.photos,s.photos);assert.equal(r.photo_reference.batch_confirmed,false);assert.equal(r.tasting_profile.summary_source,'cited_notes');assert.ok(r.tasting_profile.summary);assert.ok(!r.user_state?.tasted);}
- const fresh=all.filter(r=>r.data_source==='photo_research');assert.equal(fresh.length,8);
+ for(const s of selection){const r=all.find(r=>r.id===s.id);assert.ok(r,s.id);assert.ok(s.photos.every(p=>r.photo_reference.photos.includes(p)));assert.equal(r.photo_reference.batch_confirmed,false);assert.equal(r.tasting_profile.summary_source,'cited_notes');assert.ok(r.tasting_profile.summary);assert.ok(!r.user_state?.tasted);}
+ const fresh=all.filter(r=>r.data_source==='photo_research');assert.ok(fresh.length>=8);
  for(const r of fresh){assert.equal(r.regional_availability.score,undefined);assert.equal(r.ratings.general,undefined);}
  assert.equal(pending.length,16);assert.ok(pending.every(r=>!r.id&&r.status==='needs_expression_confirmation'));
 });
@@ -44,4 +44,19 @@ test('store evidence limits discovery and excludes home photos',async()=>{
   assert.ok(picks.data.results.every(r=>r.local_store?.sightings?.length));
  }
  const wine=await t.call('/api/catalog/browse?scope=local&category=sauvignon_blanc');assert.equal(wine.data.total,2);assert.ok(wine.data.results.every(r=>r.local_store.sightings.some(s=>s.videos?.length)));
+});
+
+const expanded=JSON.parse(readFileSync(new URL('../data/photo-research-selection.json',import.meta.url)));
+test('expanded shelf research is cited, canonical and never treated as a personal tasting',()=>{
+ assert.ok(expanded.length>250);
+ assert.equal(new Set(expanded.map(r=>r.id)).size,expanded.length);
+ const {notes,unknown}=mergeNotes();assert.deepEqual(unknown,[]);
+ for(const s of expanded){
+  const r=all.find(r=>r.id===s.id);assert.ok(r,s.id);
+  assert.ok(notes[s.id]?.producer?.source_url || notes[s.id]?.critics?.length,s.id);
+  assert.ok(r.local_store);assert.equal(r.photo_reference.batch_confirmed,false);
+  assert.ok(!r.user_state?.tasted);assert.notEqual(r.category,'american-whiskey');
+ }
+ assert.ok(!all.find(r=>r.id==='knob-creek-18-year')?.local_store);
+ assert.ok(!expanded.some(r=>r.name.includes('Smog & Old Moss')));
 });
