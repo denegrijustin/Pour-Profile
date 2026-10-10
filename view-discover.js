@@ -1,3 +1,4 @@
+import { getFocus, focusHtml, wireFocus, focusLabel } from './recommendation-focus.js';
 import { photoRecommendationHtml, wirePhotoRecommendations } from "./photo-recommendations.js";
 // Discover is the recommendation surface.
 //
@@ -12,7 +13,8 @@ import { el, escapeHtml, bottleCardHtml, bottleThumbHtml, emptyStateHtml, toast,
 import { flavorHeatmapHtml, wireFlavorHeatmap } from "./flavor-heatmap.js";
 import { compareList } from "./view-bottle.js";
 
-const state = { category: "", sort: "best_fit", mode: "picks" };
+const state = { sort: "best_fit", mode: "picks" };
+let renderSequence = 0;
 
 // Fit bands are named, not just numbered, because a bare percentage invites
 // false precision. "No profile yet" is deliberately distinct from a low score.
@@ -24,7 +26,7 @@ function fitBand(fit) {
   return { cls: "fit-weak", label: "Probably not for you" };
 }
 
-function pickCardHtml(r) {
+export function pickCardHtml(r) {
   const band = fitBand(r.jd_fit);
   const sub = [r.producer, r.subcategory].filter(Boolean).join(" · ");
   return `
@@ -61,23 +63,26 @@ function pickCardHtml(r) {
 
 export async function renderDiscover(dispatchNav) {
   const view = el("view-discover");
+  const sequence = ++renderSequence;
   view.innerHTML = `<p class="field-hint">Finding bottles for you…</p>`;
 
   const [picksRes, mineRes] = await Promise.all([
-    (state.mode === "picks" ? api.catalogRecommended() : api.catalogBrowse({ category: state.category, sort: state.sort, limit: 60, scope: "local" }))
+    (state.mode === "picks" ? api.catalogRecommended(getFocus()) : api.catalogBrowse({ ...getFocus(), sort: state.sort, limit: 60, scope: "local" }))
       .catch(() => ({ results: [], categories: [] })),
     api.bottles({ status: "want_to_try", sort: "highest_match" }).catch(() => ({ bottles: [] }))
   ]);
 
-  const mapRes = await api.flavorMap().catch(()=>({}));
+
+  if (sequence !== renderSequence) return;
   const picks = picksRes.results || [];
-  const mine = mineRes.bottles || [];
-  const categories = picksRes.categories || [];
+  const mine = (mineRes.bottles || []).filter(b => b.category === getFocus().category && (!getFocus().varietal || b.varietal === getFocus().varietal));
+
 
   view.innerHTML = `
     <p class="field-hint">Your local catalog grows from store photos. Dates show when evidence was uploaded; current stock may change. Spirits and wine are added as labels are confirmed.</p>
-    ${mapRes.flavor_profile ? flavorHeatmapHtml(mapRes.flavor_profile) : ""}
-    ${photoRecommendationHtml()}
+    ${focusHtml()}
+    <div class="section-title"><h2>${escapeHtml(focusLabel())} for you</h2></div>
+    <details class="optional-flavor-map"><summary>Find bottles from a shelf photo</summary>${photoRecommendationHtml()}</details>
     <div class="filter-bar">
       <button class="filter-chip${state.mode === "picks" ? " active" : ""}" data-mode="picks">For you</button>
       <button class="filter-chip${state.mode === "browse" ? " active" : ""}" data-mode="browse">Local store</button>
@@ -86,10 +91,6 @@ export async function renderDiscover(dispatchNav) {
     </div>
 
     ${state.mode === "browse" ? `
-      <div class="filter-bar" id="discoverCategories">
-        <button class="filter-chip${state.category === "" ? " active" : ""}" data-cat="">All</button>
-        ${categories.map((c) => `<button class="filter-chip${state.category === c ? " active" : ""}" data-cat="${escapeHtml(c)}">${escapeHtml(c.replace(/_/g, " "))}</button>`).join("")}
-      </div>
       <div class="field-row" style="margin:10px 0">
         <select id="discoverSort">
           <option value="external_reviews"${state.sort === "external_reviews" ? " selected" : ""}>Highest external reviews</option>
@@ -114,7 +115,7 @@ export async function renderDiscover(dispatchNav) {
   `;
 
   wirePhotoRecommendations(view);
-  wireFlavorHeatmap(view, mapRes.flavor_profile || {}, id=>openCatalogDetail(id,dispatchNav));
+  wireFocus(view, () => renderDiscover(dispatchNav));
   wire(view, dispatchNav);
 }
 
@@ -124,14 +125,6 @@ function wire(view, dispatchNav) {
 
   view.querySelectorAll("[data-mode]").forEach((btn) => {
     btn.addEventListener("click", () => { state.mode = btn.dataset.mode; renderDiscover(dispatchNav); });
-  });
-
-  const cats = view.querySelector("#discoverCategories");
-  if (cats) cats.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-cat]");
-    if (!btn) return;
-    state.category = btn.dataset.cat;
-    renderDiscover(dispatchNav);
   });
 
   const sortSel = view.querySelector("#discoverSort");
@@ -185,7 +178,7 @@ export async function openCatalogDetail(id, dispatchNav) {
       <span class="fit-chip ${band.cls}">${r.jd_fit != null ? r.jd_fit : "—"}</span>
       <strong class="pick-band ${band.cls}" style="margin:0">${band.label}</strong>
     </div>
-    ${flavorHeatmapHtml(data.flavor_profile)}
+    <details class="optional-flavor-map"><summary>Explore the flavor map</summary>${flavorHeatmapHtml(data.flavor_profile)}</details>
     ${why.length || concerns.length ? `<div class="notes-match-list" style="margin-bottom:6px">
       ${why.map((w) => `<div>✓ ${escapeHtml(w.replace(/\.$/, ""))}</div>`).join("")}
       ${concerns.map((c) => `<div>⚠ ${escapeHtml(c.replace(/\.$/, ""))}</div>`).join("")}

@@ -710,3 +710,16 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { 
 .flavor-point-controls label {font-size:11px}
 @media(min-width:600px){.flavor-map-workspace {grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px}.flavor-map-result {padding:18px}.flavor-match-bottle {flex-direction:column;align-items:flex-start}.flavor-match-bottle img {height:95px;width:55px}}
 @media(max-width:420px){.flavor-map {padding:14px;border-radius:18px}.flavor-map-heading h3 {font-size:23px}.flavor-legend {gap:11px}.flavor-map-workspace {gap:12px}.flavor-chart {max-width:100%}}
+
+/* Recommendations lead; exploration stays optional. */
+.recommendation-intro { padding: 14px 0 8px; }
+.recommendation-intro h2 { font-size: clamp(26px, 5vw, 38px); line-height: 1.15; margin: 6px 0 10px; }
+.recommendation-intro p { color: var(--muted, #aaa); }
+.recommendation-focus { display: flex; gap: 12px; margin: 18px 0; flex-wrap: wrap; }
+.recommendation-focus label { flex: 1; min-width: 150px; font-size: 13px; font-weight: 600; }
+.recommendation-focus select { display: block; width: 100%; margin-top: 6px; min-height: 48px; }
+.focus-insight p { margin-top: 8px; line-height: 1.5; }
+.optional-flavor-map { margin: 24px 0; padding: 16px; border: 1px solid var(--border, #444); border-radius: 14px; }
+.optional-flavor-map > summary { cursor: pointer; font-weight: 600; }
+.optional-flavor-map[open] > summary { margin-bottom: 16px; }
+.home-picks .pick-why { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }

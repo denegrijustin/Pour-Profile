@@ -1,3 +1,4 @@
+import { matchesCatalogFocus, catalogVarietal } from './catalog-focus.js';
 import { REACTIONS, sourcePreferences, sourcePreferenceFit } from "./source-preferences.js";
 import { lookupBottleSources } from "./bottle-search.js";
 import { researchFetch } from "./bottle-research.js";
@@ -1058,7 +1059,7 @@ async function catalogRecommended(url, env) {
   const profile = await resolveProfile(url, env);
   // The catalog asset and the one D1 trip are independent, so they overlap.
   const [records, ctx] = await Promise.all([catalog(env), catalogContext(env, profile.id)]);
-  const scored = markAdoptedFrom(await personalizedCatalog(url, env, records.filter(r => r.local_store?.sightings?.length), ctx), ctx.owned);
+  const scored = markAdoptedFrom(await personalizedCatalog(url, env, (url.searchParams.get("scope") === "all" ? records : records.filter(r => r.local_store?.sightings?.length)).filter(r => matchesCatalogFocus(r, url.searchParams.get("category") || "", url.searchParams.get("varietal") || "")), ctx), ctx.owned);
   const results = scored.filter(r => !r.adopted_bottle_id && r.jd_fit != null && r.jd_fit >= 65)
     .sort((a,b) => b.jd_fit-a.jd_fit).slice(0,30);
   return json({results:withImagesFrom(results, ctx.have), already_have:scored.filter(r => r.adopted_bottle_id).length});
@@ -1082,7 +1083,7 @@ async function catalogBrowse(url, env) {
   const [everything, ctx] = await Promise.all([catalog(env), catalogContext(env, profile.id)]);
   const scoped = catalogScope(url, everything);
   let records = scoped;
-  if (category) records = records.filter(r => r.category === category);
+  records = records.filter(r => matchesCatalogFocus(r, category, url.searchParams.get("varietal") || ""));
   const results = await personalizedCatalog(url, env, records, ctx);
   const sorters = {
     external_reviews:(a,b) => (b.expert?.critic_avg ?? -1)-(a.expert?.critic_avg ?? -1),
@@ -1998,12 +1999,12 @@ async function fullPourProfile(url, env) {
 }
 function referenceCandidate(r) {
   const tp = r.tasting_profile || {};
-  const category = r.category === 'sauvignon_blanc' ? 'wine' : ['rye','american_whiskey'].includes(r.category) ? 'bourbon' : r.category;
+  const category = catalogVarietal(r) || r.category === 'wine' ? 'wine' : ['rye','american_whiskey'].includes(r.category) ? 'bourbon' : r.category;
   const dimensions = {};
   const map = {sweetness:'sweetness',oak:'oak',fruit:'fruit',spice:'spice',body:'body',finish_intensity:'finish',acidity:'acidity',grassy_herbal:'herbal',minerality:'minerality',citrus:'citrus_intensity',tropical:'ripe_fruit'};
   for (const [key,axis] of Object.entries(map)) if (typeof tp[key] === 'number') dimensions[axis] = tp[key];
   Object.assign(dimensions, r.flavor_profile?.dimensions || {});
-  return { name:r.name, category, style:category === 'wine' ? 'Sauvignon Blanc' : r.subcategory, dimensions };
+  return { name:r.name, category, style:category === 'wine' ? catalogVarietal(r) : r.subcategory, dimensions };
 }
 /** Full cited notes for one catalog record (dist/notes/<id>.json), or null. */
 async function expertNotes(env, id) {
@@ -2061,8 +2062,8 @@ async function personalizedCatalog(url,env,records,ctx = null) {
     // Cited producer/critic descriptors: what the bottle actually tastes like per its sources.
     const notes = explainFromNotes(r.expert, { palate: legacy, targets: axisTargets(evidence, candidate.category), category: candidate.category });
     // Existing explicitly stated tastes remain useful before the first questionnaire.
-    if (score == null && candidate.category === 'wine') {
-      const result = scoreWine({varietal:'sauvignon_blanc',dimensions:{fruit_intensity:candidate.dimensions.fruit, ...candidate.dimensions, herbal_green:candidate.dimensions.herbal}},wineRows,[]);
+    if (candidate.category === 'wine') {
+      const result = scoreWine({varietal:catalogVarietal(r),dimensions:{fruit_intensity:candidate.dimensions.fruit, ...candidate.dimensions, herbal_green:candidate.dimensions.herbal}},wineRows,[]);
       score = result.score;
       why = score != null ? 'Based on your saved wine preferences; rate a pour to refine this estimate.' : '';
     } else if (score == null && candidate.category !== 'wine') {
@@ -2077,8 +2078,8 @@ async function personalizedCatalog(url,env,records,ctx = null) {
     }
     const sourceFit=sourcePreferenceFit(r,preferences);
     if(sourceFit) {
-      score=r.flavor_profile && score != null ? Math.round(score * 0.8 + sourceFit.score * 0.2) : sourceFit.score;
-      if(sourceFit.reason) why=sourceFit.reason;
+      score=(r.flavor_profile || candidate.category === "wine") && score != null ? Math.round(score * 0.8 + sourceFit.score * 0.2) : sourceFit.score;
+      if(sourceFit.reason) why=candidate.category === "wine" && score != null ? [why, sourceFit.reason].filter(Boolean).join(" ") : sourceFit.reason;
       if(sourceFit.concern) concern=sourceFit.concern;
     }
     const joinSentences = (parts) => parts.filter(Boolean).map((t) => String(t).replace(/\.\s*$/, '')).join('. ');

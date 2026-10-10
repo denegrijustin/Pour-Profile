@@ -132,7 +132,7 @@ export const api = {
   drinkAdopt: (payload) => request("/api/drinks/adopt", { method: "POST", body: payload }),
   analyzeImage: (payload) => request("/api/analyze-image", { method: "POST", body: payload }),
   catalogSearch: (q) => request(`/api/catalog/search?${new URLSearchParams({ q })}`),
-  catalogRecommended: () => request("/api/catalog/recommended?scope=local"),
+  catalogRecommended: (params = {}) => request(`/api/catalog/recommended?${new URLSearchParams({scope:"all",...params})}`),
   catalogBrowse: (params = {}) => request(`/api/catalog/browse?${new URLSearchParams(params)}`),
   flavorMap: (params = {}) => request(`/api/flavor-map?${new URLSearchParams(params)}`),
   catalogItem: (id) => request(`/api/catalog/item/${encodeURIComponent(id)}`),
