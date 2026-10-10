@@ -2000,7 +2000,7 @@ function referenceCandidate(r) {
   const tp = r.tasting_profile || {};
   const category = r.category === 'sauvignon_blanc' ? 'wine' : ['rye','american_whiskey'].includes(r.category) ? 'bourbon' : r.category;
   const dimensions = {};
-  const map = {sweetness:'sweetness',oak:'oak',fruit:'fruit',spice:'spice',body:'body',finish_intensity:'finish',acidity:'acidity',grassy_herbal:'herbal',minerality:'minerality'};
+  const map = {sweetness:'sweetness',oak:'oak',fruit:'fruit',spice:'spice',body:'body',finish_intensity:'finish',acidity:'acidity',grassy_herbal:'herbal',minerality:'minerality',citrus:'citrus_intensity',tropical:'ripe_fruit'};
   for (const [key,axis] of Object.entries(map)) if (typeof tp[key] === 'number') dimensions[axis] = tp[key];
   Object.assign(dimensions, r.flavor_profile?.dimensions || {});
   return { name:r.name, category, style:category === 'wine' ? 'Sauvignon Blanc' : r.subcategory, dimensions };

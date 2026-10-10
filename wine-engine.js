@@ -12,6 +12,9 @@
 
 // All dimensions run 0-10. Direction is documented because it is not always obvious.
 export const WINE_DIMENSIONS = [
+  { id: "citrus_intensity", label: "Citrus", low: "Muted", high: "Lime / grapefruit" },
+  { id: "ripe_fruit", label: "Ripe fruit", low: "Tart / restrained", high: "Passionfruit / peach" },
+  { id: "body_oak", label: "Body & oak", low: "Light / lean", high: "Round / creamy" },
   { id: "fruit_intensity", label: "Fruit intensity", low: "Subtle", high: "Intense" },
   { id: "fruit_character", label: "Fruit character", descriptive: true },
   { id: "sweetness", label: "Sweetness", low: "Bone dry", high: "Dessert sweet" },
