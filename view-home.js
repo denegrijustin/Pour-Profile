@@ -2,7 +2,7 @@ import { flavorHeatmapHtml, wireFlavorHeatmap } from "./flavor-heatmap.js";
 import { openCatalogDetail } from "./view-discover.js";
 import { FEATURE_BOTTLES } from "./bottle-images.js";
 import { api } from "./api.js";
-import { el, escapeHtml, bottleCardHtml, emptyStateHtml } from "./ui.js";
+import { el, escapeHtml, bottleCardHtml, emptyStateHtml, skeletonHtml, errorStateHtml } from "./ui.js";
 import { openBottlePickerSheet } from "./log-pour.js";
 import { titleize } from "./spirit-taxonomy.js";
 import { tastingFeedHtml } from "./tasting-feed.js";
@@ -10,18 +10,22 @@ import { showPoursTab } from "./view-spirits.js";
 
 export async function renderHome() {
   const view = el("view-home");
-  view.innerHTML = `<p class="field-hint">Loading your dashboard…</p>`;
+  view.innerHTML = skeletonHtml(4);
+  let failures = 0;
+  const soft = (fallback) => () => { failures++; return fallback; };
 
   const [bottlesRes, statsRes, palateRes, tastingsRes, picksRes, mapRes] = await Promise.all([
-    api.bottles({ sort: "newest" }).catch(() => ({ bottles: [] })),
-    api.stats().catch(() => null),
-    api.palate().catch(() => null),
+    api.bottles({ sort: "newest" }).catch(soft({ bottles: [] })),
+    api.stats().catch(soft(null)),
+    api.palate().catch(soft(null)),
     // The pours themselves, not the bottles they belong to — this is the answer
     // to "I logged a sip, where did it go?".
-    api.tastings().catch(() => ({ tastings: [] })),
-    api.catalogRecommended().catch(() => ({ results: [] })),
-    api.flavorMap().catch(()=>({flavor_profile:null}))
+    api.tastings().catch(soft({ tastings: [] })),
+    api.catalogRecommended().catch(soft({ results: [] })),
+    api.flavorMap().catch(soft({flavor_profile:null}))
   ]);
+  // Every request failed: say so, rather than showing an empty collection that looks like real data.
+  if (failures === 6) { view.innerHTML = errorStateHtml(); return; }
   const bottles = bottlesRes.bottles || [];
   const tastings = (tastingsRes.tastings || []).slice(0, 5);
   const tried = bottles.filter((b) => (b.status_tags || []).includes("tried"));

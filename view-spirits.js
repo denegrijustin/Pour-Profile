@@ -1,6 +1,6 @@
 import { autoBottlePhotos } from "./image-tools.js";
 import { api } from "./api.js";
-import { el, bottleCardHtml, emptyStateHtml } from "./ui.js";
+import { el, bottleCardHtml, emptyStateHtml, skeletonHtml, errorStateHtml } from "./ui.js";
 import { CATEGORIES, STATUS_TAGS } from "./spirit-taxonomy.js";
 import { openBottlePickerSheet } from "./log-pour.js";
 import { tastingFeedHtml } from "./tasting-feed.js";
@@ -39,7 +39,7 @@ export async function renderSpirits() {
       </select>
       <button class="btn btn-secondary" id="spiritsAddBtn" type="button">+ Add</button>
     </div>
-    <div id="spiritsResults"><p class="field-hint">Loading…</p></div>
+    <div id="spiritsResults">${skeletonHtml(4)}</div>
   `;
   document.getElementById("spiritsSort").value = state.sort;
   await loadResults();
@@ -54,7 +54,8 @@ async function loadResults() {
   if (state.status) params.status = state.status;
   if (state.q) params.q = state.q;
   params.sort = state.sort;
-  const res = await api.bottles(params);
+  let res;
+  try { res = await api.bottles(params); } catch { results.innerHTML = errorStateHtml(); return; }
   const bottles = res.bottles || [];
   results.innerHTML = bottles.length
     ? `<div class="bottle-grid">${bottles.map(bottleCardHtml).join("")}</div>`
@@ -68,7 +69,7 @@ async function renderPours(view) {
       <button class="filter-chip" data-tab="bottles">Bottles</button>
       <button class="filter-chip active" data-tab="pours">Pours</button>
     </div>
-    <div id="poursResults"><p class="field-hint">Loading your pours…</p></div>`;
+    <div id="poursResults">${skeletonHtml(4)}</div>`;
   wireTabs(view);
 
   const res = await api.tastings().catch(() => ({ tastings: [] }));
