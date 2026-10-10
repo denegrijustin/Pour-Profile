@@ -3,6 +3,15 @@
 // Source pages and image labels checked against the expression, not brand alone.
 // Names without batch/year get representative expression photography only.
 const entries = [
+ [["Dry Creek Vineyard Sauvignon Blanc"], "/bottle-photo-assets/dry-creek-vineyard-sauvignon-blanc.png", "https://drycreekvineyard.com/trade/", "producer"],
+ [["Bread & Butter Sauvignon Blanc"], "/bottle-photo-assets/bread-butter-sauvignon-blanc.png", "https://trade.wxbrands.com/brand/bread-butter/", "producer"],
+ [["Cakebread Cellars Napa Valley Sauvignon Blanc", "Cakebread Cellars Sauvignon Blanc"], "/bottle-photo-assets/cakebread-cellars-napa-valley-sauvignon-blanc.png", "https://kegnbottle.com/products/cakebread-cellars-sauvignon-blanc-750-ml", "retailer"],
+ [["Round Pond Estate Rutherford Sauvignon Blanc", "Round Pond Estate Sauvignon Blanc"], "/bottle-photo-assets/round-pond-estate-rutherford-sauvignon-blanc.png", "https://www.roundpond.com/trade/estate-sauvignon-blanc/", "producer"],
+ [["Cloudy Bay Marlborough Sauvignon Blanc", "Cloudy Bay Sauvignon Blanc"], "/bottle-photo-assets/cloudy-bay-marlborough-sauvignon-blanc.png", "https://kegnbottle.com/products/cloudy-bay-new-zealand-sauvignon-blanc", "retailer"],
+ [["Oyster Bay Marlborough Sauvignon Blanc", "Oyster Bay Sauvignon Blanc"], "/bottle-photo-assets/oyster-bay-marlborough-sauvignon-blanc.png", "https://kegnbottle.com/products/oyster-bay-marlborough-sauvignon-blanc-750ml", "retailer"],
+ [["Whitehaven Marlborough Sauvignon Blanc", "Whitehaven Sauvignon Blanc"], "/bottle-photo-assets/whitehaven-marlborough-sauvignon-blanc.png", "https://kegnbottle.com/products/whitehaven-marlborough-sauvignon-blanc-2021-750ml", "retailer"],
+ [["Emmolo Napa Valley Sauvignon Blanc", "Emmolo Sauvignon Blanc"], "/bottle-photo-assets/emmolo-napa-valley-sauvignon-blanc.jpg", "https://kegnbottle.com/products/emmolo-sauvignon-blanc-napa-valley", "retailer"],
+ [["Kendall-Jackson Vintner's Reserve California Sauvignon Blanc", "Kendall-Jackson Vintner\u2019s Reserve Sauvignon Blanc", "Kendall-Jackson Vintner's Reserve Sauvignon Blanc"], "/bottle-photo-assets/kendall-jackson-vintner-s-reserve-california-sauvignon-blanc.png", "https://kegnbottle.com/products/kendall-jackson-vintners-reserve-sauvignon-blanc", "retailer"],
  [["Gunnar's Honey"], 'https://images.squarespace-cdn.com/content/v1/66cf8b191408943366983247/f99e616f-9753-4a70-a5d4-dfa8dc57e0b2/HONEY2.png?format=750w', 'https://gunnarsbourbon.com/our-story'],
  [['High West Cask Collection Barbados Rum Barrel Finish'], 'https://seelbachs.com/cdn/shop/files/high-west-blended-bourbon-finished-in-barbados-rum-barrels-std-99b42d33d34c-f23c1.jpg?v=1790966708', 'https://seelbachs.com/products/high-west-blended-bourbon-finished-in-barbados-rum-barrels', 'retailer'],
  [["Jim Beam Devil's Cut","Jim Beam Devil’s Cut","Jim Beam Devil's Cut Kentucky Straight Bourbon"], 'https://www.jimbeam.com/sites/default/files/styles/original/public/2025-02/devils-cut-whisky-jim-beam.png.webp?itok=KXMLyD2H', 'https://www.jimbeam.com/en-au/bourbons/jim-beam-devils-cut'],

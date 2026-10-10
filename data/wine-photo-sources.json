@@ -1,0 +1,91 @@
+[
+  {
+    "names": [
+      "Dry Creek Vineyard Sauvignon Blanc"
+    ],
+    "url": "https://drycreekvineyard.com/wp-content/uploads/2021/07/2020_SauvignonBlanc_Bottle_RGB_2048x2048-1024x1024.png",
+    "source": "https://drycreekvineyard.com/trade/",
+    "kind": "producer",
+    "path": "/bottle-photo-assets/dry-creek-vineyard-sauvignon-blanc.png"
+  },
+  {
+    "names": [
+      "Bread & Butter Sauvignon Blanc"
+    ],
+    "url": "https://trade.wxbrands.com/wp-content/uploads/sites/123/2025/08/BreadAndButter_SauvignonBlanc_Bottleshot_NV_coloradjusted-1-scaled.png",
+    "source": "https://trade.wxbrands.com/brand/bread-butter/",
+    "kind": "producer",
+    "path": "/bottle-photo-assets/bread-butter-sauvignon-blanc.png"
+  },
+  {
+    "names": [
+      "Cakebread Cellars Napa Valley Sauvignon Blanc",
+      "Cakebread Cellars Sauvignon Blanc"
+    ],
+    "url": "https://cdn.shopify.com/s/files/1/0045/4967/3089/files/cakebread-cellars-sauvignon-blanc-napa-valley-750ml-keg-n-bottle-7201824.png?v=1784254089",
+    "source": "https://kegnbottle.com/products/cakebread-cellars-sauvignon-blanc-750-ml",
+    "kind": "retailer",
+    "path": "/bottle-photo-assets/cakebread-cellars-napa-valley-sauvignon-blanc.png"
+  },
+  {
+    "names": [
+      "Round Pond Estate Rutherford Sauvignon Blanc",
+      "Round Pond Estate Sauvignon Blanc"
+    ],
+    "url": "https://www.roundpond.com/wp-content/uploads/2025/02/2024-Estate-SB-C7.png",
+    "source": "https://www.roundpond.com/trade/estate-sauvignon-blanc/",
+    "kind": "producer",
+    "path": "/bottle-photo-assets/round-pond-estate-rutherford-sauvignon-blanc.png"
+  },
+  {
+    "names": [
+      "Cloudy Bay Marlborough Sauvignon Blanc",
+      "Cloudy Bay Sauvignon Blanc"
+    ],
+    "url": "https://cdn.shopify.com/s/files/1/0045/4967/3089/files/cloudy-bay-new-zealand-sauvignon-blanc-750ml-keg-n-bottle-417687.png?v=1746210733",
+    "source": "https://kegnbottle.com/products/cloudy-bay-new-zealand-sauvignon-blanc",
+    "kind": "retailer",
+    "path": "/bottle-photo-assets/cloudy-bay-marlborough-sauvignon-blanc.png"
+  },
+  {
+    "names": [
+      "Oyster Bay Marlborough Sauvignon Blanc",
+      "Oyster Bay Sauvignon Blanc"
+    ],
+    "url": "https://cdn.shopify.com/s/files/1/0045/4967/3089/products/oyster-bay-marlborough-sauvignon-blanc-750ml-keg-n-bottle-217034.png?v=1741211346",
+    "source": "https://kegnbottle.com/products/oyster-bay-marlborough-sauvignon-blanc-750ml",
+    "kind": "retailer",
+    "path": "/bottle-photo-assets/oyster-bay-marlborough-sauvignon-blanc.png"
+  },
+  {
+    "names": [
+      "Whitehaven Marlborough Sauvignon Blanc",
+      "Whitehaven Sauvignon Blanc"
+    ],
+    "url": "https://cdn.shopify.com/s/files/1/0045/4967/3089/files/whitehaven-sauvignon-blanc-marlborough-keg-n-bottle-457855.png?v=1741199429",
+    "source": "https://kegnbottle.com/products/whitehaven-marlborough-sauvignon-blanc-2021-750ml",
+    "kind": "retailer",
+    "path": "/bottle-photo-assets/whitehaven-marlborough-sauvignon-blanc.png"
+  },
+  {
+    "names": [
+      "Emmolo Napa Valley Sauvignon Blanc",
+      "Emmolo Sauvignon Blanc"
+    ],
+    "url": "https://cdn.shopify.com/s/files/1/0045/4967/3089/products/emmolo-sauvignon-blanc-napa-valley-keg-n-bottle-360507.jpg?v=1750884942",
+    "source": "https://kegnbottle.com/products/emmolo-sauvignon-blanc-napa-valley",
+    "kind": "retailer",
+    "path": "/bottle-photo-assets/emmolo-napa-valley-sauvignon-blanc.jpg"
+  },
+  {
+    "names": [
+      "Kendall-Jackson Vintner's Reserve California Sauvignon Blanc",
+      "Kendall-Jackson Vintner\u2019s Reserve Sauvignon Blanc",
+      "Kendall-Jackson Vintner's Reserve Sauvignon Blanc"
+    ],
+    "url": "https://cdn.shopify.com/s/files/1/0045/4967/3089/products/kendall-jackson-vintners-reserve-sauvignon-blanc-keg-n-bottle-725032.png?v=1741214922",
+    "source": "https://kegnbottle.com/products/kendall-jackson-vintners-reserve-sauvignon-blanc",
+    "kind": "retailer",
+    "path": "/bottle-photo-assets/kendall-jackson-vintner-s-reserve-california-sauvignon-blanc.png"
+  }
+]
