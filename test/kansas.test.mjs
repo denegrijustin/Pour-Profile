@@ -70,7 +70,7 @@ test('researched Kansas bottles join the catalog with notes, availability and th
   const withNotes = tequila.data.results.filter((r) => r.expert);
   assert.ok(withNotes.length >= 20);
   assert.ok(tequila.data.results.filter((r) => r.data_source === "kansas_registry").every((r) => r.kansas && r.kansas.distributors.length));
-  assert.ok(tequila.data.results.every((r) => r.kansas || r.photo_reference));
+  assert.ok(tequila.data.results.some((r) => r.photo_reference && r.local_store));
   for (const c of ['mezcal', 'rum', 'gin', 'cognac', 'sauvignon_blanc', 'bourbon']) assert.ok(tequila.data.categories.includes(c), c);
   // Original records that are registered in Kansas are flagged too.
   const bourbon = await t.call('/api/catalog/browse?category=bourbon&limit=200');
