@@ -7,6 +7,7 @@ import { VERIFIED_DRINKS } from "./verified-ratings.js";
 import { QUESTIONS, AXES, AXIS_LABELS, validateAnswers, parseAnswers, observations, scorePour, tastingEvidence } from "./pour-model.js";
 import { buildPalateProfile, scoreMatch } from "./palate-engine.js";
 import { scoreWine, learnFromTasting } from "./wine-engine.js";
+import { applyBrandDislike, dislikedBrandInName, DISLIKED_BRAND_FIT_CAP } from "./brand-avoid.js";
 import { RATING_SOURCES } from "./rating-sources.js";
 import { hydrateCatalog } from "./catalog-pack.js";
 import { refreshCatalog, computeFit, isVisible } from "./catalog-engine.js";
@@ -1970,15 +1971,19 @@ async function scoringContext(env, profileId, extra = []) {
  * Those two tables are optional on an un-migrated database, so if the combined
  * trip fails the fallback reads them separately and treats a missing one as empty.
  */
+const AVOID_BRANDS_SQL = "SELECT brand FROM brand_signals WHERE sentiment = 'negative'";
 async function catalogContext(env, profileId) {
+  // Brand signals belong to the first profile only (see the brandSignals reads above). The read rides in the same
+  // D1 round trip as the rest; for anyone else it is a harmless empty read of the same query.
   try {
-    const ctx = await scoringContext(env, profileId, [[ADOPTED_SQL], [CATALOG_IMAGES_SQL]]);
-    return { ...ctx, owned: ctx.extras[0], have: new Map(ctx.extras[1].map((r) => [r.catalog_id, r.updated_at])) };
+    const ctx = await scoringContext(env, profileId, [[ADOPTED_SQL], [CATALOG_IMAGES_SQL], [AVOID_BRANDS_SQL]]);
+    return { ...ctx, avoidBrands: profileId === 1 ? ctx.extras[2].map((r) => r.brand) : [], owned: ctx.extras[0], have: new Map(ctx.extras[1].map((r) => [r.catalog_id, r.updated_at])) };
   } catch {
     const ctx = await scoringContext(env, profileId);
     const owned = await all(env, ADOPTED_SQL).catch(() => []);
     const imgs = await all(env, CATALOG_IMAGES_SQL).catch(() => []);
-    return { ...ctx, owned, have: new Map(imgs.map((r) => [r.catalog_id, r.updated_at])) };
+    const avoid = profileId === 1 ? await all(env, AVOID_BRANDS_SQL).catch(() => []) : [];
+    return { ...ctx, avoidBrands: avoid.map((r) => r.brand), owned, have: new Map(imgs.map((r) => [r.catalog_id, r.updated_at])) };
   }
 }
 async function fullPourProfile(url, env) {
@@ -2053,8 +2058,9 @@ async function catalogItem(id, url, env) {
   }});
 }
 async function personalizedCatalog(url,env,records,ctx = null) {
-  const { evidence, legacy, wineRows, sourcePreferences: preferences = [] } = ctx || await catalogContext(env, await resolveProfileId(url, env));
-  return records.map(r => {
+  const { evidence, legacy, wineRows, sourcePreferences: preferences = [], avoidBrands = [] } = ctx || await catalogContext(env, await resolveProfileId(url, env));
+  return records.map(r => applyBrandDislike(scoreCatalogRecord(r), r, avoidBrands));
+  function scoreCatalogRecord(r) {
     const candidate = referenceCandidate(r);
     const fit = scorePour(candidate,evidence);
     let score=fit.score, why=fit.reasons.join('. '), concern=fit.concerns.join('. ');
@@ -2085,7 +2091,7 @@ async function personalizedCatalog(url,env,records,ctx = null) {
     if (notes.reasons.length) why = joinSentences([why, ...notes.reasons]);
     if (notes.concerns.length) concern = joinSentences([concern, ...notes.concerns]);
     return {...catalogPublic(r), jd_fit:score, why:why || 'No matching taste evidence yet. Rate this category to learn your preferences.', concern:concern || null, summary:null, fit_label:fit.confidence, notes_reasons:notes.reasons, notes_concerns:notes.concerns};
-  });
+  }
 }
 function candidateTags(candidate) {
   const tags = {sweetness:['caramel','vanilla'],oak:['toasted_oak'],fruit:['tropical_fruit'],spice:['baking_spice'],body:['rich_mouthfeel'],warmth:['hot_ethanol'],smoke:['smoke','peat'],herbal:['herbal'],richness:['chocolate'],grain:['malt'],finish:['rounded_finish']};
@@ -2110,7 +2116,8 @@ async function recommendPhoto(request,url,env) {
   let identified;
   try { identified = JSON.parse(output); } catch { return json({error:'Could not read this photo. Try a closer, sharper shot.'},502); }
   if (!Array.isArray(identified.bottles)) return json({error:'Could not read bottles in this photo.'},502);
-  const { evidence, legacy, wineRows } = await scoringContext(env, person.id);
+  const { evidence, legacy, wineRows, extras = [] } = await scoringContext(env, person.id, [[AVOID_BRANDS_SQL]]);
+  const avoidBrands = person.id === 1 ? (extras[0] ?? []).map((r) => r.brand) : [];
   const seen = new Set();
   const bottles = identified.bottles.slice(0,30).filter(b => {
     if (!QUESTIONS[b.category] || typeof b.name !== 'string' || !b.name.trim() || seen.has(b.name.toLowerCase())) return false;
@@ -2128,10 +2135,12 @@ async function recommendPhoto(request,url,env) {
         if (candidateTags(b).some(t => legacy[t])) fit = {...fit,score:r.matchPercent,confidence:'Saved flavor preferences',reasons:r.whyItFits.map(r => `You have enjoyed ${r.tag.replaceAll('_',' ')} in previous pours`),concerns:r.possibleConcerns.map(r => `Possible concern: ${r.tag.replaceAll('_',' ')}`)};
       }
     }
+    const disliked = dislikedBrandInName(b.name, avoidBrands);
+    if (disliked) fit = {...fit, score:Math.min(fit.score ?? DISLIKED_BRAND_FIT_CAP, DISLIKED_BRAND_FIT_CAP), confidence:'Brand you dislike', reasons:[], concerns:[`You've said you don't like ${disliked}.`]};
     const readable = Number.isFinite(b.identity_confidence) && b.identity_confidence >= 0.7;
     return {...b, fit:readable ? fit : {...fit,score:null,confidence:'Confirm bottle identity'},needs_confirmation:!readable};
   }).sort((a,b) => (b.fit.score ?? -1)-(a.fit.score ?? -1));
-  const best = ranked.find(b => b.fit.score != null && !b.needs_confirmation);
+  const best = ranked.find(b => b.fit.score != null && !b.needs_confirmation && b.fit.confidence !== 'Brand you dislike');
   return json({person:person.display_name,bottles:ranked,best:best?.name || null,notes:identified.notes || '', evidence_pours:evidence.length,
     guidance:best ? 'Ranked only among bottles identified in your photo. Flavor descriptions are estimates; check the exact label before choosing.' : 'No confident personalized match yet. Log some pours or take a closer photo of readable labels.'});
 }
