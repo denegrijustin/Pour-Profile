@@ -50,7 +50,7 @@ img { max-width: 100%; display: block; }
 ::selection { background: var(--accent-tint); }
 
 @media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
 
 /* ---------- app shell ---------- */
@@ -710,3 +710,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { 
 .flavor-point-controls label {font-size:11px}
 @media(min-width:600px){.flavor-map-workspace {grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px}.flavor-map-result {padding:18px}.flavor-match-bottle {flex-direction:column;align-items:flex-start}.flavor-match-bottle img {height:95px;width:55px}}
 @media(max-width:420px){.flavor-map {padding:14px;border-radius:18px}.flavor-map-heading h3 {font-size:23px}.flavor-legend {gap:11px}.flavor-map-workspace {gap:12px}.flavor-chart {max-width:100%}}
+
+/* Taps respond at once, with no double-tap-zoom delay */
+button, summary, select, [role="button"] { touch-action: manipulation; }
+
+/* Long lists of rows skip layout and paint until they scroll near the viewport */
+.bottle-row { content-visibility: auto; contain-intrinsic-size: auto 72px; }

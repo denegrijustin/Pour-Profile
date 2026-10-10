@@ -95,7 +95,7 @@ export async function renderBottleDetail(id, dispatchNav) {
     <button class="btn-ghost" data-action="back" style="padding-left:0">← Back</button>
     <div class="hero-photo">
       ${bottle.image_url
-        ? `<img src="${escapeHtml(bottle.image_url)}" alt="${escapeHtml(bottle.name)}">`
+        ? `<img src="${escapeHtml(bottle.image_url)}" alt="${escapeHtml(bottle.name)}" decoding="async">`
         : `<div class="hero-photo-empty"><span style="font-size:46px" aria-hidden="true">${bottle.category === "wine" ? "🍷" : "🥃"}</span><span class="field-hint">No photo yet</span></div>`}
       <button class="hero-photo-btn" data-action="photo" type="button">${bottle.image_url ? "Change photo" : "📷 Add photo"}</button>
     </div>

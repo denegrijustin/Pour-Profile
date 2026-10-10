@@ -20,6 +20,10 @@ concurrency:
   group: deploy-production
   cancel-in-progress: false
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -44,6 +48,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      # The built shell, service worker and the two files the Worker reads must all exist, and the
+      # front end must stay inside its size budget.
+      - name: Check the build
+        run: npm run check
+
       # Wrangler's own failure for a missing token is a bare exit code in a log
       # that is awkward to reach from a phone. Say it in one line instead.
       - name: Check deploy credentials
@@ -60,3 +69,23 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: npx wrangler deploy
+
+      # A failed deploy opens (or updates) one issue, so it is noticed the same day; the next good deploy closes it.
+      - name: Open an issue when the deploy fails
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Deploy failed"
+          body="Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          n=$(gh issue list --repo "${{ github.repository }}" --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$n" ]; then gh issue comment "$n" --repo "${{ github.repository }}" --body "$body"
+          else gh issue create --repo "${{ github.repository }}" --title "$title" --body "$body"; fi
+
+      - name: Close the failure issue after a good deploy
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh issue list --repo "${{ github.repository }}" --state open --search "\"Deploy failed\" in:title" --json number --jq '.[0].number // empty')
+          [ -z "$n" ] || gh issue close "$n" --repo "${{ github.repository }}" --comment "The latest deploy succeeded."
